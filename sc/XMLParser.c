@@ -6,12 +6,12 @@
 
 void query_Def(xmlNode *node);
 void query_Length(xmlNode *node);
+void hit_Iteration(xmlNode *node);
 
 int main(int argc,char **argv){
 
     xmlDoc *fichier;
     xmlNode *root, *child, *node;
-
     char *filename;
 
     //condition pour savoir si il y'a un argument
@@ -21,9 +21,7 @@ int main(int argc,char **argv){
     }
    
     printf("File : %s\n\n",argv[1]);
-
     filename= argv[1];
-    
     char *compare;
     compare = strstr(filename,".xml");
 
@@ -69,15 +67,15 @@ int main(int argc,char **argv){
                 //il faut rentrer dans iteration et ensuite on parcourt avec les autres fonctions.
                 iteration = "Iteration";
                 if(strcmp(iteration,(const char *)child->name)==0){
+                    //fonction qui permet de rentrer dans le noeud iteration et hit 
                     fprintf(stdout, "child is <%s> \n", child->name);
+                    hit_Iteration(child);
+                    //mettre les différentes fonctions ici
                 }
             }           
         }
     }
 
-
-
-    //renvoie du résultat dans un autre fichier sous forme de tableau ou de liste (à voir).
     return 0;
 }
 
@@ -104,7 +102,45 @@ void query_Length(xmlNode *node){
     }
 } 
 
+//entrer dans le noeud hit
+void hit_enter(xmlNode *node){
+    const char *name;
+    name = "BlastOutput_query-len";
+    
+    if(strcmp(name, (const char *)node->name)==0){
+        //affichage        
+        fprintf(stdout, "Length : %s\n", xmlNodeGetContent(node));
+    }
+}
+
 //récupérer le hit
+void hit_Iteration(xmlNode *node){
+    fprintf(stdout,"Je suis dans la fonction hit iteration \n");
+    xmlNode *child, *childNode;
+    const char *iteration, *hit; 
+    child = node->children;
+    iteration = "Iteration_hits";
+    hit= "Hit";
+    
+    for(node = child; node; node =node->next){
+        //fprintf(stdout, "Here i am <%s>\n", node->name);
+        if(strcmp(iteration, (const char *)node->name)==0){
+            printf("Je suis la encore\n");
+            childNode = child->children; 
+            for(child=childNode; child; child=child->next){
+                fprintf(stdout, "Here i am <%s>\n", child->name);
+                if(strcmp(hit, (const char *)child->name)==0){
+                    fprintf(stdout,"On est enfin arrivé !");
+                }
+
+            }
+
+        }
+    }
+
+
+
+}
 
 //identifier le score
 
