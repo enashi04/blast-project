@@ -1,0 +1,66 @@
+Ballast 1.0 command line version - Feb 2000
+===========================================
+
+################################################################################
+Installation
+--------------------------------------------------------------------------------
+
+1) Download the file ballast.tar.Z
+
+2) Extract the source code from the compressed tar file:
+
+        zcat ballast.tar.Z | tar -xvf -
+
+
+3) Edit the line specifying the HELPDIR variable in makefile:
+
+        HELPDIR    =  /us1/user/ballast
+
+   Replace the current value by the directory where you intend to leave the
+   help file ballast.hlp.
+
+
+4) Build the executables:
+
+        make
+
+--------------------------------------------------------------------------------
+Note: In order to optimise portability the compilation has not been optimised
+      for speed. The performance should be better if you optimise compilation
+      for your site.
+
+
+
+
+################################################################################
+Usage
+--------------------------------------------------------------------------------
+
+You may now run Ballast:
+
+        ballast -p xxxxx.blastp -n xxxxx.tblastn -o yyyyyy
+
+where:
+   xxxxx.blastp is the result file from a BlastP search you have performed earlier
+
+   xxxxx.tblastn (optional) is the result file from a TBlastN search you have
+                 performed earlier with the SAME QUERY SEQUENCE as the BlastP search.
+
+   yyyyyy is the file name for your Ballast results. All files produced by Ballast
+          will have this name followed by different extensions.
+
+
+
+Ballast can read Blast results from the following source:
+
+        - blastall (gapped blast program)
+        - GCG blast programs
+        - NCBI Blast mail server
+
+Ballast cannot read the HTML output from the NCBI Blast web server.
+
+Examples of Blast results files are included in the distribution:
+
+        SYY_HAEIN.blastp
+        SYY_HAEIN.tblastn
+        SYY_HAEIN.ncbi_mail_blastp
