@@ -52,13 +52,32 @@ int main(int argc,char **argv){
     //for query
     for(node=child; node; node=node->next){
          //fprintf(stdout, "\t Child is <%s> (%i)\n", node->name, node->type);
-         query_Def(node);
-         query_Length(node);
+        query_Def(node);
+        query_Length(node);
+        break;
     }
 
-    //renvoie du résultat dans un autre fichier sous forme de tableau ou de liste (à voir).
+    //entrer dans blastoutIteration
+    const char *nodeName, *iteration; 
+    nodeName = "BlastOutput_iterations";
 
-    //fermeture du fichier
+    for(node=child; node; node=node->next){
+        if(strcmp(nodeName,(const char *)node->name)==0){
+            xmlNode *childnode;
+            childnode = node->children;
+            for(child=childnode; child; child=child->next){
+                //il faut rentrer dans iteration et ensuite on parcourt avec les autres fonctions.
+                iteration = "Iteration";
+                if(strcmp(iteration,(const char *)child->name)==0){
+                    fprintf(stdout, "child is <%s> \n", child->name);
+                }
+            }           
+        }
+    }
+
+
+
+    //renvoie du résultat dans un autre fichier sous forme de tableau ou de liste (à voir).
     return 0;
 }
 
@@ -84,7 +103,8 @@ void query_Length(xmlNode *node){
         fprintf(stdout, "Length : %s\n", xmlNodeGetContent(node));
     }
 } 
-//déterminer la longueur blastoutputquerylengh
+
+//récupérer le hit
 
 //identifier le score
 
