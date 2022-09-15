@@ -4,15 +4,16 @@
 #include <libxml2/libxml/tree.h>
 #include <string.h>
 
-void query_Def(xmlNode *node);
-void query_Length(xmlNode *node);
-void hit_Iteration(xmlNode *node);
-void hit_ID(xmlNode *node);
-void HSP_Enter(xmlNode *node);
-void getHSP(xmlNode *node, const char *name);
+void query_Def(xmlNode *node, FILE *fp);
+void query_Length(xmlNode *node, FILE *fp);
+void hit_Iteration(xmlNode *node, FILE *fp);
+void hit_ID(xmlNode *node, FILE *fp);
+void HSP_Enter(xmlNode *node, FILE *fp);
+void getHSP(xmlNode *node, const char *name, FILE *fp);
 
 int main(int argc,char **argv){
-
+    FILE *fp;
+    fp=fopen("result.csv", "w");
     xmlDoc *fichier;
     xmlNode *root, *child, *node;
     char *filename;
@@ -49,8 +50,8 @@ int main(int argc,char **argv){
     
     //for query
     for(node=child; node; node=node->next){
-        query_Def(node);
-        query_Length(node);
+        query_Def(node, fp);
+        query_Length(node,fp);
     }
 
     //entrer dans blastoutIteration
@@ -65,7 +66,7 @@ int main(int argc,char **argv){
                 //il faut rentrer dans iteration et ensuite on parcourt avec les autres fonctions.
                 iteration = "Iteration";
                 if(strcmp(iteration,(const char *)child->name)==0){
-                    hit_Iteration(child);
+                    hit_Iteration(child,fp);
                 }
             }           
         }
@@ -74,41 +75,41 @@ int main(int argc,char **argv){
 }
 
 //query def 
-void query_Def(xmlNode *node){
+void query_Def(xmlNode *node, FILE *fp){
 
     const char *name;
     name = "BlastOutput_query-def";
     
     if(strcmp(name, (const char *)node->name)==0){
         //affichage        
-        fprintf(stdout, "Query def : %s\n", xmlNodeGetContent(node));
+        fprintf(fp, "Query def : %s\n", xmlNodeGetContent(node));
     }
 }
 
 //query length
-void query_Length(xmlNode *node){
+void query_Length(xmlNode *node, FILE *fp){
     const char *name;
     name = "BlastOutput_query-len";
     
     if(strcmp(name, (const char *)node->name)==0){
         //affichage        
-        fprintf(stdout, "Length : %s\n", xmlNodeGetContent(node));
+        fprintf(fp, "Length : %s\n", xmlNodeGetContent(node));
     }
 } 
 
 //entrer dans le noeud hit
-void hit_enter(xmlNode *node){
+void hit_enter(xmlNode *node, FILE *fp){
     const char *name;
     name = "BlastOutput_query-len";
     
     if(strcmp(name, (const char *)node->name)==0){
         //affichage        
-        fprintf(stdout, "Length : %s\n", xmlNodeGetContent(node));
+        fprintf(fp, "Length : %s\n", xmlNodeGetContent(node));
     }
 }
 
 //récupérer le hit
-void hit_Iteration(xmlNode *node){
+void hit_Iteration(xmlNode *node, FILE *fp){
     xmlNode *child;
     const char *iteration, *hit; 
     child = node->children;
@@ -123,9 +124,9 @@ void hit_Iteration(xmlNode *node){
                 if(strcmp(hit, (const char *)child->name)==0){
                    i++;
                     //on met les fonctions qui va permettre de récupérer les données qu'on veut
-                    fprintf(stdout, "%u : ", i);
-                    hit_ID(child);
-                    HSP_Enter(child);
+                    fprintf(fp, "%u : ", i);
+                    hit_ID(child,fp);
+                    HSP_Enter(child, fp);
                     //break;
                 }
             }
@@ -134,20 +135,20 @@ void hit_Iteration(xmlNode *node){
 }
 
 //identifier le hit id (hit id or hit def???)
-void hit_ID(xmlNode *node){
+void hit_ID(xmlNode *node, FILE *fp){
     xmlNode *child;
     const char *name; 
     child = node ->children;
     name= "Hit_id";
     for(node = child; node; node=node->next){
         if(strcmp(name, ( const char *)node->name)==0){
-            fprintf(stdout, "Hit id : %s\n", xmlNodeGetContent(node));
-            fprintf(stdout, "bit-score | score | evalue | query-from | query-to | target-from | target-to | identity | positive | gaps | align-length \n");
+            fprintf(fp, "Hit id : %s\n", xmlNodeGetContent(node));
+            fprintf(fp, "bit-score,score,evalue,query-from,query-to,target-from,target-to,identity,positive,gaps,align-length \n");
         }
     }
 }
 //rentrer dans hsp
-void HSP_Enter(xmlNode *node){
+void HSP_Enter(xmlNode *node, FILE *fp){
     xmlNode *child;
     const char *name, *name2; 
     child = node ->children;
@@ -170,30 +171,30 @@ void HSP_Enter(xmlNode *node){
                     for(childNode=lastchild; childNode; childNode=childNode->next){
 
                         //les méthodes pour chercher les infos qu'on veut 
-                        getHSP(childNode, "Hsp_identity");
-                        getHSP(childNode, "Hsp_align-len");
-                        getHSP(childNode, "Hsp_gaps");
-                        getHSP(childNode, "Hsp_query-from");
-                        getHSP(childNode, "Hsp_query-to");
-                        getHSP(childNode, "Hsp_hit-from");
-                        getHSP(childNode, "Hsp_hit-to");
-                        getHSP(childNode, "Hsp_positive");
-                        getHSP(childNode, "Hsp_evalue");
-                        getHSP(childNode, "Hsp_score");
-                        getHSP(childNode, "Hsp_bit-score");
+                        getHSP(childNode, "Hsp_identity", fp);
+                        getHSP(childNode, "Hsp_align-len", fp);
+                        getHSP(childNode, "Hsp_gaps", fp);
+                        getHSP(childNode, "Hsp_query-from",fp);
+                        getHSP(childNode, "Hsp_query-to",fp);
+                        getHSP(childNode, "Hsp_hit-from",fp);
+                        getHSP(childNode, "Hsp_hit-to",fp);
+                        getHSP(childNode, "Hsp_positive",fp);
+                        getHSP(childNode, "Hsp_evalue",fp);
+                        getHSP(childNode, "Hsp_score",fp);
+                        getHSP(childNode, "Hsp_bit-score",fp);
                    
                     }
                 }
             }
         }
     }
-    fprintf(stdout, "\n \n");
+    fprintf(fp, "\n \n");
 
 }
 //identifier l'identité
-void getHSP(xmlNode *node, const char *name){
+void getHSP(xmlNode *node, const char *name, FILE *fp){
     if(strcmp(name, (const char *)node->name)==0){
-        fprintf(stdout," %s |",xmlNodeGetContent(node));
+        fprintf(fp," %s,",xmlNodeGetContent(node));
     }
    
 }
