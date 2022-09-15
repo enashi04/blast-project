@@ -116,17 +116,20 @@ void hit_enter(xmlNode *node){
 //récupérer le hit
 void hit_Iteration(xmlNode *node){
     fprintf(stdout,"Je suis dans la fonction hit iteration \n");
-    xmlNode *child, *childNode;
+    xmlNode *child;
     const char *iteration, *hit; 
     child = node->children;
     iteration = "Iteration_hits";
     hit= "Hit";
     
     for(node = child; node; node =node->next){
-        //fprintf(stdout, "Here i am <%s>\n", node->name);
+        fprintf(stdout, "Here i am <%s>\n", node->name);
+
         if(strcmp(iteration, (const char *)node->name)==0){
-            printf("Je suis la encore\n");
+            printf("Je suis la encore\n, %s", child->name);
+            xmlNode *childNode;
             childNode = child->children; 
+
             for(child=childNode; child; child=child->next){
                 fprintf(stdout, "Here i am <%s>\n", child->name);
                 if(strcmp(hit, (const char *)child->name)==0){
@@ -137,8 +140,6 @@ void hit_Iteration(xmlNode *node){
 
         }
     }
-
-
 
 }
 
