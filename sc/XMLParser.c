@@ -7,6 +7,9 @@
 void query_Def(xmlNode *node);
 void query_Length(xmlNode *node);
 void hit_Iteration(xmlNode *node);
+void hit_ID(xmlNode *node);
+void hit_Identity(xmlNode *node);
+void HSP_Enter(xmlNode *node);
 
 int main(int argc,char **argv){
 
@@ -39,17 +42,13 @@ int main(int argc,char **argv){
         return 1;
     }
 
-    root = xmlDocGetRootElement(fichier);//là on est au premier noeud //donc en pure logique on doit etre au noeud  BlastOutput 
-
-    //afficher le root
-   // fprintf(stdout, "Root is <%s> (%i)\n", root->name, root->type);
+    root = xmlDocGetRootElement(fichier);
 
     //boucle qui va parcourir le fichier 
     child = root->children;
     
     //for query
     for(node=child; node; node=node->next){
-         //fprintf(stdout, "\t Child is <%s> (%i)\n", node->name, node->type);
         query_Def(node);
         query_Length(node);
         break;
@@ -67,15 +66,11 @@ int main(int argc,char **argv){
                 //il faut rentrer dans iteration et ensuite on parcourt avec les autres fonctions.
                 iteration = "Iteration";
                 if(strcmp(iteration,(const char *)child->name)==0){
-                    //fonction qui permet de rentrer dans le noeud iteration et hit 
-                    fprintf(stdout, "child is <%s> \n", child->name);
                     hit_Iteration(child);
-                    //mettre les différentes fonctions ici
                 }
             }           
         }
     }
-
     return 0;
 }
 
@@ -115,32 +110,71 @@ void hit_enter(xmlNode *node){
 
 //récupérer le hit
 void hit_Iteration(xmlNode *node){
-    fprintf(stdout,"Je suis dans la fonction hit iteration \n");
     xmlNode *child;
     const char *iteration, *hit; 
     child = node->children;
     iteration = "Iteration_hits";
     hit= "Hit";
-    
+    int i=0; 
     for(node = child; node; node =node->next){
-        fprintf(stdout, "Here i am <%s>\n", node->name);
-
         if(strcmp(iteration, (const char *)node->name)==0){
-            printf("Je suis la encore\n, %s", child->name);
             xmlNode *childNode;
-            childNode = child->children; 
-
+            childNode = node->children; 
             for(child=childNode; child; child=child->next){
-                fprintf(stdout, "Here i am <%s>\n", child->name);
                 if(strcmp(hit, (const char *)child->name)==0){
-                    fprintf(stdout,"On est enfin arrivé !");
+                   i++;
+                    //on met les fonctions qui va permettre de récupérer les données qu'on veut
+                    hit_ID(child);
+                    HSP_Enter(child);
+                    break;
                 }
-
             }
-
         }
     }
+   // fprintf(stdout, "iteration %u\n", i);
+}
 
+//identifier le hit id (hit id or hit def???)
+void hit_ID(xmlNode *node){
+    xmlNode *child;
+    const char *name; 
+    child = node ->children;
+    name= "Hit_id";
+    for(node = child; node; node=node->next){
+        if(strcmp(name, ( const char *)node->name)==0){
+            fprintf(stdout, "Hit id : %s\n", xmlNodeGetContent(node));
+        }
+    }
+}
+//rentrer dans hsp
+void HSP_Enter(xmlNode *node){
+    xmlNode *child;
+    const char *name, *name2; 
+    child = node ->children;
+    name= "Hit_hsps";
+    name2 = "Hsp";
+
+
+    for(node = child; node; node=node->next){
+        if(strcmp(name, ( const char *)node->name)==0){ 
+            xmlNode *childNode;
+            childNode = child->children;
+            fprintf(stdout, "nom du noeud : %s\n",( const char *)node->name );
+           
+            for(child = childNode; child; child=child->next){
+                fprintf(stdout, "child : %s \n", child->name);
+                if(strcmp(name2, (const char *)child->name)==0){
+                    //mettre les fonctions qu'il faut 
+                    fprintf(stdout, "On est enfin arrivé au noeud HSP!");
+                }
+            }
+        }
+    }
+}
+//identifier l'identité
+void hit_Identity(xmlNode *node){
+  //  fprintf(stdout,"Node name %s \n", node->name);
+   
 }
 
 //identifier le score
@@ -160,7 +194,3 @@ void hit_Iteration(xmlNode *node){
 //identifier le début de la target 
 
 //identifier la fin de la target
-
-//identifier le numéro du hit 
-
-//identifier l'id de la target
