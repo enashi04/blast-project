@@ -93,7 +93,7 @@ void query_Length(xmlNode *node, FILE *fp){
     
     if(strcmp(name, (const char *)node->name)==0){
         //affichage        
-        fprintf(fp, "Length : %s\n", xmlNodeGetContent(node));
+        fprintf(fp, "Length : %s\n\n", xmlNodeGetContent(node));
     }
 } 
 
@@ -104,7 +104,7 @@ void hit_enter(xmlNode *node, FILE *fp){
     
     if(strcmp(name, (const char *)node->name)==0){
         //affichage        
-        fprintf(fp, "Length : %s\n", xmlNodeGetContent(node));
+        fprintf(fp, "Length : %s\n\n", xmlNodeGetContent(node));
     }
 }
 
@@ -124,7 +124,7 @@ void hit_Iteration(xmlNode *node, FILE *fp){
                 if(strcmp(hit, (const char *)child->name)==0){
                    i++;
                     //on met les fonctions qui va permettre de récupérer les données qu'on veut
-                    fprintf(fp, "%u : ", i);
+                   // fprintf(fp, "%u.\n", i);
                     hit_ID(child,fp);
                     HSP_Enter(child, fp);
                     //break;
@@ -142,8 +142,8 @@ void hit_ID(xmlNode *node, FILE *fp){
     name= "Hit_id";
     for(node = child; node; node=node->next){
         if(strcmp(name, ( const char *)node->name)==0){
-            fprintf(fp, "Hit id : %s\n", xmlNodeGetContent(node));
-            fprintf(fp, "bit-score,score,evalue,query-from,query-to,target-from,target-to,identity,positive,gaps,align-length \n");
+            fprintf(fp, "hit id ,bit-score,score,evalue,query-from,query-to,target-from,target-to,identity,positive,gaps,align-length \n");
+            fprintf(fp, "%s,", xmlNodeGetContent(node));
         }
     }
 }
