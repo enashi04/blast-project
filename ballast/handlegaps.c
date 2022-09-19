@@ -102,6 +102,8 @@ while (querynext || seqhspnext)
 		simprf->aln        = (char *) (ptr + gaplen);
 		simprf->hsp     = (char *) (seqhspnext + gaplen);
 		}
+	//fprintf(stdout, "next sens : %s\n", simprf->next->sens);
+
 #ifdef DEBUG
 	printf ("Query: %s\n       %s\nSbjct: %s\n\n",queryseq,aln,seqhsp);
 #endif
@@ -126,6 +128,7 @@ printf ("Query: %s\n       %s\nSbjct: %s\n\n",queryseq,aln,seqhsp);
 simprf->end = simprf->begin + qnogap - 1;
 simprf->enddb = simprf->begdb + qnogap - 1;
 simprf->next = NULL;
+//fprintf(stdout, "%d %d %u %u %u %u %u %u\n", simprf->score, simprf->maxscore, simprf->begin, simprf->begdb, simprf->end, simprf->enddb, simprf->begmot, simprf->endmot);
 
 return simprf;
 }

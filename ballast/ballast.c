@@ -69,677 +69,677 @@
 #include "types.h"
 #include "prototypes.h"
 
-
-main (int argc, char *argv[])
+main(int argc, char *argv[])
 {
-SeqHSP *seqres, *first;
-Motif  *motif, *motifptr;
-Sbjmot *motifdb, *firstmotdb,*firstalnmotdb;
+	SeqHSP *seqres, *first;
+	Motif *motif, *motifptr;
+	Sbjmot *motifdb, *firstmotdb, *firstalnmotdb;
 
-double *maxprofile;
-double *maxprofile2;
-double *profiltotal;
-double *profiltotal2;
-double *smoothed;
-double *smoothed2;
-double *trimmed;
-double *trimmed2;
-double *contribution;
-double  maxvalue;
-double  maxscore=0.0;
-double  maxmotifscore = 0.0;
-double *ptrdbl;
-float   weight;
-int     length;
-int     length2;
+	double *maxprofile;
+	double *maxprofile2;
+	double *profiltotal;
+	double *profiltotal2;
+	double *smoothed;
+	double *smoothed2;
+	double *trimmed;
+	double *trimmed2;
+	double *contribution;
+	double maxvalue;
+	double maxscore = 0.0;
+	double maxmotifscore = 0.0;
+	double *ptrdbl;
+	float weight;
+	int length;
+	int length2;
 
-float   msfseuil;
+	float msfseuil;
 
-float   tableseuil;
+	float tableseuil;
 
-int	mismatches, prevn;
-int     nmotifs=0;
+	int mismatches, prevn;
+	int nmotifs = 0;
 
-char   *conserved;
-char   *conserved2;
-char   *ptrstr;
-char   *ptrseq;
-char   *lastchar;
+	char *conserved;
+	char *conserved2;
+	char *ptrstr;
+	char *ptrseq;
+	char *lastchar;
 
-BlastHeader blhd1;
-BlastHeader blhd2;
+	BlastHeader blhd1;
+	BlastHeader blhd2;
 
-int i, f;
+	int i, f;
 
-char *infilename;
-char *infilename2;
-char *outfilename;
-char *outfilename2;
-char *msffilename;
-char *tablefilename;
-char *anchorfilename;
-char *motifsfilename;
-char *maskfilename;
-char *queryname;
-char *nomprofil;
-char *mask;
-char   curline[256];
-FILE   *infile, *outfile, *msffile, *tablefile, *anchorfile, *motifsfile;
-int   tblastnsearch=0;
+	char *infilename;
+	char *infilename2;
+	char *outfilename;
+	char *outfilename2;
+	char *msffilename;
+	char *tablefilename;
+	char *anchorfilename;
+	char *motifsfilename;
+	char *maskfilename;
+	char *queryname;
+	char *nomprofil;
+	char *mask;
+	char curline[256];
+	FILE *infile, *outfile, *msffile, *tablefile, *anchorfile, *motifsfile;
+	int tblastnsearch = 0;
 
 #define NUMARGS 20
 
-Argdef	arg_def [NUMARGS] = {
-	{"-anchors"  , 'b' , 0 , NULL },
-	{"-both"     , 'b' , 0 , NULL },
-	{"-mask"     , 's' , 1 , NULL },
-	{"-maxp"     , 'f' , 1 , NULL },
-	{"-maxtab"   , 'f' , 1 , NULL },
-	{"-n"        , 's' , 1 , NULL },
-	{"-nmaxp"    , 'f' , 1 , NULL },
-	{"-noext"    , 'b' , 0 , NULL },
-	{"-nosort"   , 'b' , 0 , NULL },
-	{"-o"        , 's' , 1 , 'y'  },
-	{"-p"        , 's' , 1 , 'y'  },
-	{"-plotn"    , 'b' , 0 , NULL },
-	{"-profil"   , 's' , 1 , NULL },
-	{"-queryname", 's' , 1 , NULL },
-	{"-S"        , 'f' , 1 , NULL },
-	{"-s"        , 'b' , 0 , NULL },
-	{"-sens"     , 'f' , 1 , NULL },
-	{"-smooth"   , 'd' , 1 , NULL },
-	{"-t"        , 'f' , 1 , NULL },
-	{"-table"    , 'b' , 0 , NULL }
-	};
+	Argdef arg_def[NUMARGS] = {
+		{"-anchors", 'b', 0, NULL},
+		{"-both", 'b', 0, NULL},
+		{"-mask", 's', 1, NULL},
+		{"-maxp", 'f', 1, NULL},
+		{"-maxtab", 'f', 1, NULL},
+		{"-n", 's', 1, NULL},
+		{"-nmaxp", 'f', 1, NULL},
+		{"-noext", 'b', 0, NULL},
+		{"-nosort", 'b', 0, NULL},
+		{"-o", 's', 1, 'y'},
+		{"-p", 's', 1, 'y'},
+		{"-plotn", 'b', 0, NULL},
+		{"-profil", 's', 1, NULL},
+		{"-queryname", 's', 1, NULL},
+		{"-S", 'f', 1, NULL},
+		{"-s", 'b', 0, NULL},
+		{"-sens", 'f', 1, NULL},
+		{"-smooth", 'd', 1, NULL},
+		{"-t", 'f', 1, NULL},
+		{"-table", 'b', 0, NULL}};
 
-/*****************************************************************/
-/*** Initialisation                                           ****/
-/*****************************************************************/
-if (initargs (argv,argc,arg_def,NUMARGS) == -1) {
-	printusage(argv[0],HELPDIR); 
-	//fprintf(stdout, "C'est la fonction printusage\n");
-	exit(1);
-}
-
-tablefile  = NULL;
-anchorfile = NULL;
-
-getargchar ("-o",&outfilename);
-
-/*
-if (getargfloat ("-msf",&msfseuil) == NULL) msfseuil = MSFSEUIL;
-*/
-if (getargfloat ("-maxp",&msfseuil) == NULL) msfseuil = DEFMAXP;
-
-if (getargfloat ("-maxtab",&tableseuil) == NULL) tableseuil = msfseuil;
-
-blhd1.prog = NULL;
-blhd1.query= NULL; 
-blhd1.dbase= NULL;
-blhd2.prog = NULL;
-blhd2.query= NULL;
-blhd2.dbase= NULL;
-
-seqres = (SeqHSP *) malloc (sizeof (SeqHSP));
-first  = seqres;
-seqres->prev = NULL;
-seqres->next = NULL;
-
-getargchar ("-p",&infilename);
-if (!(infile = fopen(infilename,"r"))) {
-	printf ("\n*** ERROR: %s file not found ***\n\n",infilename);
-	exit(1);
-}
-
-//permet d'identifier la longueur de la query
-length = initresfile (infile,curline,&blhd1);
-fprintf(stdout,"la longueur de la query est de : %u\n", length);
-
-conserved = (char *) malloc (length+1);
-maxprofile = (double *) malloc (sizeof(double) * length);
-
-for (i=0;i<length;i++)
+	/*****************************************************************/
+	/*** Initialisation                                           ****/
+	/*****************************************************************/
+	if (initargs(argv, argc, arg_def, NUMARGS) == -1)
 	{
-	ptrstr = (char *)(conserved +i);
-	*ptrstr = '.';
-	ptrdbl = (double *) (maxprofile +i);
-	*ptrdbl = 0.0;
-	}
-ptrstr = (char *) (conserved + length);
-*ptrstr = '\0';
-
-
-/*****************************************************************/
-
-
-
-/*****************************************************************/
-/*** Builds 'profile' from BlastP search                      ****/
-/*****************************************************************/
-
-if (length != 0)
-	{
-	i=1;
-	profiltotal  = loadHSP (seqres,infile,curline,length,conserved,maxprofile,'p');
-	fprintf("le profiltotal en double est de %d", profiltotal);
-	while (curline[0] != '\0')
-		{
-		seqres->rank=i++;
-		seqres->next = (SeqHSP *) malloc (sizeof (SeqHSP));
-		(seqres->next)->prev = seqres;
-		seqres = seqres->next;
-		seqres->next = NULL;
-		contribution = loadHSP (seqres,infile,curline,length,conserved,maxprofile,'p');
-		if (strcmp(seqres->prev->sim->hsp,seqres->sim->hsp) != 0 ) addprofils (profiltotal,contribution,length);
-		}
-	seqres->rank=i++;
-	}
-else
-	{
-#ifdef WWW
-        outfile = fopen(outfilename,"w");
-#else
-	outfile = stdout;
-#endif
-        fprintf (outfile,"\n *********************************");
-        fprintf (outfile,"\n ***     FATAL BLASTP error    ***");
-        fprintf (outfile,"\n ***                           ***");
-        fprintf (outfile,"\n *** No HSP to build \'profile\' ***");
-        fprintf (outfile,"\n *********************************\n\n");
-        if (outfile != stdout) fclose (outfile);
-	exit (1);
+		printusage(argv[0], HELPDIR);
+		// fprintf(stdout, "C'est la fonction printusage\n");
+		exit(1);
 	}
 
-fclose (infile);
+	tablefile = NULL;
+	anchorfile = NULL;
 
-/*****************************************************************/
+	getargchar("-o", &outfilename);
 
+	/*
+	if (getargfloat ("-msf",&msfseuil) == NULL) msfseuil = MSFSEUIL;
+	*/
+	if (getargfloat("-maxp", &msfseuil) == NULL)
+		msfseuil = DEFMAXP;
 
+	if (getargfloat("-maxtab", &tableseuil) == NULL)
+		tableseuil = msfseuil;
 
-/*****************************************************************/
-/*** Builds 'profile' from TBlastN search (if any)            ****/
-/*****************************************************************/
+	blhd1.prog = NULL;
+	blhd1.query = NULL;
+	blhd1.dbase = NULL;
+	blhd2.prog = NULL;
+	blhd2.query = NULL;
+	blhd2.dbase = NULL;
 
-if (getargchar ("-n",&infilename2) != NULL)
+	seqres = (SeqHSP *)malloc(sizeof(SeqHSP));
+	first = seqres;
+	seqres->prev = NULL;
+	seqres->next = NULL;
+
+	getargchar("-p", &infilename);
+	if (!(infile = fopen(infilename, "r")))
 	{
-	if (!(infile = fopen(infilename2,"r"))) 
-		{
-		printf ("\n*****************************************\n");	
-		printf ("***            WARNING                ***\n");	
-		printf ("***                                   ***\n");	
-		printf ("***        TBLASTN file not found     ***\n");   
-		printf ("***  Only BLASTP search will be used  ***\n");	
-		printf ("*****************************************\n\n");	
-		}
-	else
-		{
-		tblastnsearch = 1;
-		}
+		printf("\n*** ERROR: %s file not found ***\n\n", infilename);
+		exit(1);
 	}
 
-if (tblastnsearch == 1)
+	// permet d'identifier la longueur de la query
+	length = initresfile(infile, curline, &blhd1);
+	//fprintf(stdout, "la longueur de la query est de : %u\n", length);
+
+	conserved = (char *)malloc(length + 1);
+	maxprofile = (double *)malloc(sizeof(double) * length);
+
+	for (i = 0; i < length; i++)
 	{
-	length2 = initresfile (infile,curline,&blhd2);
-	conserved2 = (char *) malloc (length2);
-	maxprofile2 = (double *) malloc (sizeof(double) * length2);
-	for (i=0;i<length2;i++)
-		{
-		ptrstr = (char *)(conserved2 +i);
+		ptrstr = (char *)(conserved + i);
 		*ptrstr = '.';
-		ptrdbl  = (double *) (maxprofile2 +i);
+		ptrdbl = (double *)(maxprofile + i);
 		*ptrdbl = 0.0;
-		}
+	}
+	ptrstr = (char *)(conserved + length);
+	*ptrstr = '\0';
 
-	if (length2 != 0)
-		{
-		i=1;
-		
-		profiltotal2  = loadHSP (seqres,infile,curline,length2,conserved2,maxprofile2,'n');
+	/*****************************************************************/
 
+	/*****************************************************************/
+	/*** Builds 'profile' from BlastP search                      ****/
+	/*****************************************************************/
+
+	if (length != 0)
+	{
+		i = 1;
+		profiltotal = loadHSP(seqres, infile, curline, length, conserved, maxprofile, 'p');
+		// fprintf(stdout,"le profiltotal en double est de %d", *profiltotal);//il est de 0 ici
 		while (curline[0] != '\0')
-			{
-			seqres->rank=i++;
-			seqres->next = (SeqHSP *) malloc (sizeof (SeqHSP));
+		{
+			seqres->rank = i++;
+			seqres->next = (SeqHSP *)malloc(sizeof(SeqHSP));
 			(seqres->next)->prev = seqres;
 			seqres = seqres->next;
 			seqres->next = NULL;
-			contribution = loadHSP (seqres,infile,curline,length2,conserved2,maxprofile2,'n');
-			addprofils (profiltotal2,contribution,length2);
-			if (getargbool ("-both") == 1 ) 
-				{
-				if (strcmp(seqres->prev->sim->hsp,seqres->sim->hsp) != 0) addprofils (profiltotal,contribution,length);
-				}
-			}
-		seqres->rank=i++;
+			contribution = loadHSP(seqres, infile, curline, length, conserved, maxprofile, 'p');
+			if (strcmp(seqres->prev->sim->hsp, seqres->sim->hsp) != 0)
+				addprofils(profiltotal, contribution, length);
 		}
+		seqres->rank = i++;
+	}
 	else
-		{
-		printf ("\n*****************************************");	
-		printf ("\n***            WARNING                ***");	
-		printf ("\n***                                   ***\n");	
-		printf ("*** No HSP produced by TBLASTN search ***\n");	
-		printf ("***  Only BLASTP search will be used  ***");	
-		printf ("\n*****************************************\n\n");	
-		}
-
-	fclose (infile);
-	}
-
-/*****************************************************************/
-
-
-/*****************************************************************/
-/*** Reads an already existing profile if required            ****/
-/*****************************************************************/
-
-if (getargchar ("-profil",&nomprofil) != NULL)
-	{
-	readprofil (nomprofil, profiltotal);
-	}
-
-/*****************************************************************/
-
-
-/*****************************************************************/
-/*** Masks profile if required                  ******************/
-/*** otherwise treats and uses the full profile ******************/
-/*****************************************************************/
-
-if (getargchar ("-mask",&maskfilename) != NULL)
-	{
-	readmask (maskfilename, &mask);
-	trimmed = maskprofil (profiltotal,length,mask);
-	}
-else
-	{
-	/*****************************************************************/
-	/*** Smoothes 'profiles'                                      ****/
-	/*****************************************************************/
-
-	smoothed = smoothprofil (profiltotal, length,conserved);
-	if ((getargbool("-plotn") == 1 ) && (tblastnsearch == 1))
-		{smoothed2 = smoothprofil (profiltotal2, length2,conserved2);}
-
-	/*****************************************************************/
-	/*****************************************************************/
-	/*** Trims 'profiles'                                         ****/
-	/*****************************************************************/
-
-	if (getargbool ("-noext") == 0)
-		{
-		trimmed = trimprofilext (profiltotal, smoothed, length,conserved);
-		}
-	else
-		{
-		trimmed = trimprofil (profiltotal, smoothed, length,conserved);
-		}
-
-	if ((getargbool("-plotn") == 1 ) && (tblastnsearch == 1))
-		{trimmed2 = trimprofil (profiltotal2, smoothed2, length2,conserved);}
-
-	/*****************************************************************/
-	}
-
-/*****************************************************************/
-
-
-/*****************************************************************/
-/*** Extracts motifs *********************************************/
-/*****************************************************************/
-
-motif = extractmotifs (trimmed,length,conserved);
-
-if (motif == NULL)
 	{
 #ifdef WWW
-        outfile = fopen(outfilename,"w");
+		outfile = fopen(outfilename, "w");
 #else
-	outfile = stdout;
+		outfile = stdout;
 #endif
-        fprintf (outfile,"\n *********************************");
-        fprintf (outfile,"\n ***      FATAL Error          ***");
-        fprintf (outfile,"\n ***                           ***");
-        fprintf (outfile,"\n ***    Words too short        ***");
-        fprintf (outfile,"\n *** could not extract motifs  ***");
-        fprintf (outfile,"\n ***                           ***");
-        fprintf (outfile,"\n *********************************\n\n");
-        if (outfile != stdout) fclose (outfile);
-
-/*** Tester ici trimmed : si somme = 0 => exit(1) sinon continuer avec MINWORD = 0 ***/
-
-        exit (1);
+		fprintf(outfile, "\n *********************************");
+		fprintf(outfile, "\n ***     FATAL BLASTP error    ***");
+		fprintf(outfile, "\n ***                           ***");
+		fprintf(outfile, "\n *** No HSP to build \'profile\' ***");
+		fprintf(outfile, "\n *********************************\n\n");
+		if (outfile != stdout)
+			fclose(outfile);
+		exit(1);
 	}
 
-/*****************************************************************/
+	fclose(infile);
 
+	/*****************************************************************/
 
-/*****************************************************************/
-/*** Determine maximum possible score ****************************/
-/*****************************************************************/
+	/*****************************************************************/
+	/*** Builds 'profile' from TBlastN search (if any)            ****/
+	/*****************************************************************/
 
-motifptr = motif;
-
-while (motifptr != NULL)
+	if (getargchar("-n", &infilename2) != NULL)
 	{
-	maxscore += motifptr->maxscore;
-	if (motifptr->maxscore > maxmotifscore) maxmotifscore = motifptr->maxscore;
-	motifptr = motifptr->next;
-	}
-
-/*****************************************************************/
-
-motifsfilename = (char *) malloc (strlen (outfilename) + 8);
-strcpy (motifsfilename, outfilename);
-strcat (motifsfilename,".motifs");
-
-if (!(motifsfile = fopen (motifsfilename,"w")))
-	{
-	motifsfile = stdout;
-	printf ("****************** W A R N I N G **********************\n");
-	printf ("Cannot write %s file, printing suggested words to Standard Output\n\n", motifsfilename);
-	printf ("*******************************************************\n");
-	}
-
-fprintf (motifsfile,"\nSuggested Words : \n\n");
-
-motifptr = motif;
-
-while (motifptr != NULL)
-	{
-	fprintf (motifsfile,"\t%4d - %4d\t: ",motifptr->begin+1,motifptr->end);
-	for (i = motifptr->begin; i< motifptr->end+1;i++)
+		if (!(infile = fopen(infilename2, "r")))
 		{
-		fprintf (motifsfile,"%c",*(conserved+i));
+			printf("\n*****************************************\n");
+			printf("***            WARNING                ***\n");
+			printf("***                                   ***\n");
+			printf("***        TBLASTN file not found     ***\n");
+			printf("***  Only BLASTP search will be used  ***\n");
+			printf("*****************************************\n\n");
 		}
-	fprintf (motifsfile,"  \t:%8.2f\n\n",motifptr->maxscore);
-	motifptr = motifptr->next;
-	}
-
-if (motifsfile != stdout) fclose (motifsfile);
-
-
-/*****************************************************************/
-/*** Plots main 'profile' to *.prof file                      ****/
-/*****************************************************************/
-
-maxvalue = profilplot (profiltotal,trimmed,length,outfilename,conserved,first,maxprofile); 
-
-/*****************************************************************/
-
-
-/*****************************************************************/
-/*** Plots 'profile' from TBlastN if required                 ****/
-/*****************************************************************/
-
-if ((getargbool("-plotn") == 1) && (tblastnsearch == 1))
-	{
-	outfilename2 = (char *) malloc (strlen (outfilename) + 4);
-	strcpy (outfilename2,outfilename);
-	strcat (outfilename2,"-nt");
-	profilplot (profiltotal2,trimmed2,length2,outfilename2,conserved2,first,maxprofile2);
-	}
-
-/*****************************************************************/
-
-
-/*****************************************************************/
-/*** Writes consensus sequence in FastA format                ****/
-/*****************************************************************/
-
-if (getargbool("-s") == 1) consseq (profiltotal,length,outfilename,conserved);
-
-/*****************************************************************/
-
-
-/*****************************************************************/
-/*** Rescores each of the sequences producing HSPs            ****/
-/*****************************************************************/
-
-if (getargbool ("-anchors") == 1) 
-	{
-	anchorfilename = (char *) malloc (strlen (outfilename) + 9);
-	strcpy (anchorfilename, outfilename);
-	strcat (anchorfilename,".anchors");
-
-	if (!(anchorfile = fopen (anchorfilename,"w")))
+		else
 		{
-		printf ("****************** W A R N I N G **********************\n");
-		printf ("*** Cannot write %s anchors file ***\n\n",anchorfilename);
-		printf ("*******************************************************\n");
-		anchorfile = NULL;
+			tblastnsearch = 1;
 		}
-	if (anchorfile) fprintf (anchorfile,"Ballast %f\n",maxmotifscore);
-
 	}
 
-if (getargbool ("-table") ==1 )
+	if (tblastnsearch == 1)
 	{
-	tablefilename = (char *) malloc (strlen (outfilename) + 7);
-	strcpy (tablefilename, outfilename);
-	strcat (tablefilename, ".table");
-	if (!(tablefile = fopen (tablefilename,"w")))
+		length2 = initresfile(infile, curline, &blhd2);
+		conserved2 = (char *)malloc(length2);
+		maxprofile2 = (double *)malloc(sizeof(double) * length2);
+		for (i = 0; i < length2; i++)
 		{
-		printf ("****************** W A R N I N G **********************\n");
-		printf ("*** Cannot write %s table file ***\n\n",tablefilename);
-		printf ("*******************************************************\n");
-		tablefile = NULL;
+			ptrstr = (char *)(conserved2 + i);
+			*ptrstr = '.';
+			ptrdbl = (double *)(maxprofile2 + i);
+			*ptrdbl = 0.0;
 		}
-	else
+
+		if (length2 != 0)
 		{
-		for(motifptr = motif; motifptr != NULL; motifptr = motifptr->next)
+			i = 1;
+
+			profiltotal2 = loadHSP(seqres, infile, curline, length2, conserved2, maxprofile2, 'n');
+
+			while (curline[0] != '\0')
 			{
-			fprintf(tablefile,"%d ",motifptr->n);
-			nmotifs = motifptr->n;
+				seqres->rank = i++;
+				seqres->next = (SeqHSP *)malloc(sizeof(SeqHSP));
+				(seqres->next)->prev = seqres;
+				seqres = seqres->next;
+				seqres->next = NULL;
+				contribution = loadHSP(seqres, infile, curline, length2, conserved2, maxprofile2, 'n');
+				addprofils(profiltotal2, contribution, length2);
+				if (getargbool("-both") == 1)
+				{
+					if (strcmp(seqres->prev->sim->hsp, seqres->sim->hsp) != 0)
+						addprofils(profiltotal, contribution, length);
+				}
 			}
+			seqres->rank = i++;
 		}
+		else
+		{
+			printf("\n*****************************************");
+			printf("\n***            WARNING                ***");
+			printf("\n***                                   ***\n");
+			printf("*** No HSP produced by TBLASTN search ***\n");
+			printf("***  Only BLASTP search will be used  ***");
+			printf("\n*****************************************\n\n");
+		}
+
+		fclose(infile);
+	}
+
+	/*****************************************************************/
+
+	/*****************************************************************/
+	/*** Reads an already existing profile if required            ****/
+	/*****************************************************************/
+
+	if (getargchar("-profil", &nomprofil) != NULL)
+	{
+		readprofil(nomprofil, profiltotal);
+	}
+
+	/*****************************************************************/
+
+	/*****************************************************************/
+	/*** Masks profile if required                  ******************/
+	/*** otherwise treats and uses the full profile ******************/
+	/*****************************************************************/
+
+	if (getargchar("-mask", &maskfilename) != NULL)
+	{
+		readmask(maskfilename, &mask);
+		trimmed = maskprofil(profiltotal, length, mask);
+	}
+	else
+	{
+		/*****************************************************************/
+		/*** Smoothes 'profiles'                                      ****/
+		/*****************************************************************/
+		//printf("conserved %s\n", conserved);
+		//printf("conserved2 %s\n", conserved2);
+		smoothed = smoothprofil(profiltotal, length, conserved);
+		if ((getargbool("-plotn") == 1) && (tblastnsearch == 1))
+		{
+			smoothed2 = smoothprofil(profiltotal2, length2, conserved2);
+		}
+
+		/*****************************************************************/
+		/*****************************************************************/
+		/*** Trims 'profiles'                                         ****/
+		/*****************************************************************/
+		//printf("le profil total est : %lf", *profiltotal); //valeur de 1
+		if (getargbool("-noext") == 0)
+		{
+			trimmed = trimprofilext(profiltotal, smoothed, length, conserved);
+		}
+		else
+		{
+			//printf("SCHNAPPI");
+			trimmed = trimprofil(profiltotal, smoothed, length, conserved);
+		}
+
+		if ((getargbool("-plotn") == 1) && (tblastnsearch == 1))
+		{
+			trimmed2 = trimprofil(profiltotal2, smoothed2, length2, conserved);
+		}
+
+		/*****************************************************************/
+	}
+
+	/*****************************************************************/
+
+	/*****************************************************************/
+	/*** Extracts motifs *********************************************/
+	/*****************************************************************/
+	//printf("trimmed value = %lf \n", *trimmed); //=>0
+	motif = extractmotifs(trimmed, length, conserved);
+	
+	if (motif == NULL)
+	{
+#ifdef WWW
+		outfile = fopen(outfilename, "w");
+#else
+		outfile = stdout;
+#endif
+		fprintf(outfile, "\n *********************************");
+		fprintf(outfile, "\n ***      FATAL Error          ***");
+		fprintf(outfile, "\n ***                           ***");
+		fprintf(outfile, "\n ***    Words too short        ***");
+		fprintf(outfile, "\n *** could not extract motifs  ***");
+		fprintf(outfile, "\n ***                           ***");
+		fprintf(outfile, "\n *********************************\n\n");
+		if (outfile != stdout)
+			fclose(outfile);
+
+		/*** Tester ici trimmed : si somme = 0 => exit(1) sinon continuer avec MINWORD = 0 ***/
+
+		exit(1);
+	}
+
+	/*****************************************************************/
+
+	/*****************************************************************/
+	/*** Determine maximum possible score ****************************/
+	/*****************************************************************/
+
+	motifptr = motif;
+
+	while (motifptr != NULL)
+	{
+		maxscore += motifptr->maxscore;
+		if (motifptr->maxscore > maxmotifscore)
+			maxmotifscore = motifptr->maxscore;
+		motifptr = motifptr->next;
+	}
+
+	/*****************************************************************/
+
+	motifsfilename = (char *)malloc(strlen(outfilename) + 8);
+	strcpy(motifsfilename, outfilename);
+	strcat(motifsfilename, ".motifs");
+
+	if (!(motifsfile = fopen(motifsfilename, "w")))
+	{
+		motifsfile = stdout;
+		printf("****************** W A R N I N G **********************\n");
+		printf("Cannot write %s file, printing suggested words to Standard Output\n\n", motifsfilename);
+		printf("*******************************************************\n");
 	}
 	
-seqres = first;
-while (seqres != NULL)
+	fprintf(motifsfile, "\nSuggested Words : \n\n");
+
+	motifptr = motif;
+
+	while (motifptr != NULL)
 	{
-	seqres->aligned = NULL;
+		fprintf(motifsfile, "\t%4d - %4d\t: ", motifptr->begin + 1, motifptr->end);
+		for (i = motifptr->begin; i < motifptr->end + 1; i++)
+		{
+			fprintf(motifsfile, "%c", *(conserved + i));
+		}
+		fprintf(motifsfile, "  \t:%8.2f\n\n", motifptr->maxscore);
+		motifptr = motifptr->next;
+	}
 
-#ifdef DEBUG
-	printf ("***%s\n",seqres->desc);
-#endif
+	if (motifsfile != stdout)
+		fclose(motifsfile);
 
 	/*****************************************************************/
-	/*** Identifies overlapping motifs/HSPs **************************/
+	/*** Plots main 'profile' to *.prof file                      ****/
 	/*****************************************************************/
 
-	motifdb = getsbjmotifs (motif,seqres->sim,trimmed,seqres->type);
+	maxvalue = profilplot(profiltotal, trimmed, length, outfilename, conserved, first, maxprofile);
 
+	/*****************************************************************/
 
-	if (motifdb != NULL)
+	/*****************************************************************/
+	/*** Plots 'profile' from TBlastN if required                 ****/
+	/*****************************************************************/
+
+	if ((getargbool("-plotn") == 1) && (tblastnsearch == 1))
+	{
+		outfilename2 = (char *)malloc(strlen(outfilename) + 4);
+		strcpy(outfilename2, outfilename);
+		strcat(outfilename2, "-nt");
+		profilplot(profiltotal2, trimmed2, length2, outfilename2, conserved2, first, maxprofile2);
+	}
+
+	/*****************************************************************/
+
+	/*****************************************************************/
+	/*** Writes consensus sequence in FastA format                ****/
+	/*****************************************************************/
+
+	if (getargbool("-s") == 1)
+		consseq(profiltotal, length, outfilename, conserved);
+
+	/*****************************************************************/
+
+	/*****************************************************************/
+	/*** Rescores each of the sequences producing HSPs            ****/
+	/*****************************************************************/
+
+	if (getargbool("-anchors") == 1)
+	{
+		anchorfilename = (char *)malloc(strlen(outfilename) + 9);
+		strcpy(anchorfilename, outfilename);
+		strcat(anchorfilename, ".anchors");
+
+		if (!(anchorfile = fopen(anchorfilename, "w")))
 		{
+			printf("****************** W A R N I N G **********************\n");
+			printf("*** Cannot write %s anchors file ***\n\n", anchorfilename);
+			printf("*******************************************************\n");
+			anchorfile = NULL;
+		}
+		if (anchorfile)
+			fprintf(anchorfile, "Ballast %f\n", maxmotifscore);
+	}
 
-		/********************************************************/
-		/*** Sorts HSPs by order of position                 ****/
-		/********************************************************/
+	if (getargbool("-table") == 1)
+	{
+		tablefilename = (char *)malloc(strlen(outfilename) + 7);
+		strcpy(tablefilename, outfilename);
+		strcat(tablefilename, ".table");
+		if (!(tablefile = fopen(tablefilename, "w")))
+		{
+			printf("****************** W A R N I N G **********************\n");
+			printf("*** Cannot write %s table file ***\n\n", tablefilename);
+			printf("*******************************************************\n");
+			tablefile = NULL;
+		}
+		else
+		{
+			for (motifptr = motif; motifptr != NULL; motifptr = motifptr->next)
+			{
+				fprintf(tablefile, "%d ", motifptr->n);
+				nmotifs = motifptr->n;
+			}
+		}
+	}
 
-		firstmotdb = sortbybegdb (motifdb);
-
+	seqres = first;
+	while (seqres != NULL)
+	{
+		seqres->aligned = NULL;
 
 #ifdef DEBUG
-		motifdb= firstmotdb;
-		while (motifdb!= NULL)
+		printf("***%s\n", seqres->desc);
+#endif
+
+		/*****************************************************************/
+		/*** Identifies overlapping motifs/HSPs **************************/
+		/*****************************************************************/
+
+		motifdb = getsbjmotifs(motif, seqres->sim, trimmed, seqres->type);
+
+		if (motifdb != NULL)
+		{
+
+			/********************************************************/
+			/*** Sorts HSPs by order of position                 ****/
+			/********************************************************/
+
+			firstmotdb = sortbybegdb(motifdb);
+
+#ifdef DEBUG
+			motifdb = firstmotdb;
+			while (motifdb != NULL)
 			{
-			printf ("%5d-%5d (%d|%d) <=> %5d-%5d : %f/%f\n",motifdb->begdb,motifdb->enddb,motifdb->begin,motifdb->end,motifdb->motif->begin,motifdb->motif->end,motifdb->score,motifdb->motif->maxscore);
-			motifdb = motifdb->sortednext;
+				printf("%5d-%5d (%d|%d) <=> %5d-%5d : %f/%f\n", motifdb->begdb, motifdb->enddb, motifdb->begin, motifdb->end, motifdb->motif->begin, motifdb->motif->end, motifdb->score, motifdb->motif->maxscore);
+				motifdb = motifdb->sortednext;
 			}
 #endif
 
-		/*******************************************************/
-		/*** Align motifs and HSPs and rescores the sequence ***/
-		/*******************************************************/
+			/*******************************************************/
+			/*** Align motifs and HSPs and rescores the sequence ***/
+			/*******************************************************/
 
-		seqres->sc = MHalign (motif,firstmotdb,trimmed,seqres->type,&firstalnmotdb);
+			seqres->sc = MHalign(motif, firstmotdb, trimmed, seqres->type, &firstalnmotdb);
 
-		
-	if (seqres->type=='p')
-		{
-		if ((tablefile) && (seqres->p < tableseuil))
+			if (seqres->type == 'p')
 			{
-			prevn = 0;
-			fprintf (tablefile,"\n%-15s ",seqres->name);
-			}
-
-		seqres->aligned = (char *) malloc (length+1);
-		for (i=0;i<length;i++)
-			{
-			ptrseq = (char *) (seqres->aligned + i);
-			*ptrseq = '.';
-			}
-		ptrseq = (char *) (seqres->aligned + length );
-		*ptrseq = '\0';
-
-		motifdb= firstalnmotdb;
-		while (motifdb!= NULL)
-			{
-			ptrstr = (char *) malloc (motifdb->enddb-motifdb->begdb + 2);
-			strncpy (ptrstr,motifdb->hsp->hsp + motifdb->begdb - motifdb->hsp->begdb ,motifdb->enddb-motifdb->begdb+1); 
-			lastchar = (char *) (ptrstr + motifdb->enddb-motifdb->begdb+1);
-			*lastchar = '\0';
-			/*weight = MAX (0,1-motifdb->hsp->p);*/
-			weight = motifdb->hsp->score;
-			consmotif (motifdb->motif,ptrstr,motifdb->begin - motifdb->motif->begin, weight, weight);
-			if (((seqres->p) < msfseuil))
+				if ((tablefile) && (seqres->p < tableseuil))
 				{
-				if (anchorfile)
+					prevn = 0;
+					fprintf(tablefile, "\n%-15s ", seqres->name);
+				}
+
+				seqres->aligned = (char *)malloc(length + 1);
+				for (i = 0; i < length; i++)
+				{
+					ptrseq = (char *)(seqres->aligned + i);
+					*ptrseq = '.';
+				}
+				ptrseq = (char *)(seqres->aligned + length);
+				*ptrseq = '\0';
+
+				motifdb = firstalnmotdb;
+				while (motifdb != NULL)
+				{
+					ptrstr = (char *)malloc(motifdb->enddb - motifdb->begdb + 2);
+					strncpy(ptrstr, motifdb->hsp->hsp + motifdb->begdb - motifdb->hsp->begdb, motifdb->enddb - motifdb->begdb + 1);
+					lastchar = (char *)(ptrstr + motifdb->enddb - motifdb->begdb + 1);
+					*lastchar = '\0';
+					/*weight = MAX (0,1-motifdb->hsp->p);*/
+					weight = motifdb->hsp->score;
+					consmotif(motifdb->motif, ptrstr, motifdb->begin - motifdb->motif->begin, weight, weight);
+					if (((seqres->p) < msfseuil))
 					{
-					if (getargchar ("-queryname",&queryname))
+						if (anchorfile)
 						{
-						fprintf (anchorfile,"seq: %15s %15s\tpos: %10d\tbeg: %10d %10d\tlen: %6d\tweight: %6.2f\n",queryname,seqres->name,motifdb->motif->peak,motifdb->begin+1,motifdb->begdb+1,motifdb->enddb-motifdb->begdb+1,100.0*motifdb->score/maxmotifscore);
-						}
-					else
-						{
-						if (seqres != first) {
-							fprintf (anchorfile,"seq: %15s %15s\tpos: %10d\tbeg: %10d %10d\tlen: %6d\tweight: %6.2f\n",first->name,seqres->name,motifdb->motif->peak,motifdb->begin+1,motifdb->begdb+1,motifdb->enddb-motifdb->begdb+1,100.0*motifdb->score/maxmotifscore);
+							if (getargchar("-queryname", &queryname))
+							{
+								fprintf(anchorfile, "seq: %15s %15s\tpos: %10d\tbeg: %10d %10d\tlen: %6d\tweight: %6.2f\n", queryname, seqres->name, motifdb->motif->peak, motifdb->begin + 1, motifdb->begdb + 1, motifdb->enddb - motifdb->begdb + 1, 100.0 * motifdb->score / maxmotifscore);
+							}
+							else
+							{
+								if (seqres != first)
+								{
+									fprintf(anchorfile, "seq: %15s %15s\tpos: %10d\tbeg: %10d %10d\tlen: %6d\tweight: %6.2f\n", first->name, seqres->name, motifdb->motif->peak, motifdb->begin + 1, motifdb->begdb + 1, motifdb->enddb - motifdb->begdb + 1, 100.0 * motifdb->score / maxmotifscore);
+								}
 							}
 						}
+						for (i = 0; i < (motifdb->enddb - motifdb->begdb + 1); i++)
+						{
+							ptrseq = (char *)(seqres->aligned + motifdb->begin + i);
+							*ptrseq = *(ptrstr + i);
+						}
 					}
-				for (i=0;i<(motifdb->enddb-motifdb->begdb+1);i++)
-					{
-					ptrseq = (char *) (seqres->aligned + motifdb->begin + i);
-					*ptrseq=*(ptrstr+i);
-					}
-				}
-			free (ptrstr);
+					free(ptrstr);
 
-			if ((tablefile) && (seqres->p < tableseuil))
-				{
-				mismatches = motifdb->motif->n - prevn - 1;
-				for (i=0; i<mismatches;i++)
+					if ((tablefile) && (seqres->p < tableseuil))
 					{
-					fprintf (tablefile,"-1.00 ");
+						mismatches = motifdb->motif->n - prevn - 1;
+						for (i = 0; i < mismatches; i++)
+						{
+							fprintf(tablefile, "-1.00 ");
+						}
+						fprintf(tablefile, "%5.2f ", motifdb->score / motifdb->motif->maxscore);
+						prevn = motifdb->motif->n;
 					}
-				fprintf (tablefile,"%5.2f ",motifdb->score/motifdb->motif->maxscore);
-				prevn = motifdb->motif->n;
+
+					motifdb = motifdb->alnnext;
 				}
 
-			motifdb = motifdb->alnnext;
-			}
-			
 #ifdef DEBUG
-			if ((seqres->type=='p') && (seqres->p < msfseuil))
+				if ((seqres->type == 'p') && (seqres->p < msfseuil))
 				{
-			printf ("%14s %s\n",seqres->name,seqres->aligned);
+					printf("%14s %s\n", seqres->name, seqres->aligned);
+				}
+#endif
 			}
-#endif	
+			freesbjmotifs(firstmotdb);
 
-		}
-		freesbjmotifs (firstmotdb);
-
-		if ((tablefile) && (seqres->p < tableseuil) && (prevn < nmotifs))
+			if ((tablefile) && (seqres->p < tableseuil) && (prevn < nmotifs))
 			{
-			mismatches = nmotifs - prevn ;
+				mismatches = nmotifs - prevn;
 
-			for (i=0; i<mismatches;i++)
+				for (i = 0; i < mismatches; i++)
 				{
-				fprintf (tablefile,"-1.00 ");
+					fprintf(tablefile, "-1.00 ");
 				}
 			}
 
-		seqres->nmatch = countmatches(seqres->sim);
+			seqres->nmatch = countmatches(seqres->sim);
 		}
 
-        seqres->twins = NULL;
-        seqres=seqres->next;
-        }
+		seqres->twins = NULL;
+		seqres = seqres->next;
+	}
 
-if (anchorfile) fclose (anchorfile);
+	if (anchorfile)
+		fclose(anchorfile);
 
-if (tablefile) {
-	fprintf (tablefile,"\n");
-	fclose (tablefile);
+	if (tablefile)
+	{
+		fprintf(tablefile, "\n");
+		fclose(tablefile);
 	}
 
 #ifdef DEBUG
-	printf ("         Query %s\n",conserved);
+	printf("         Query %s\n", conserved);
 #endif
 
-/*****************************************************************/
-/*** Writes MSF file                                          ****/
-/*****************************************************************/
+	/*****************************************************************/
+	/*** Writes MSF file                                          ****/
+	/*****************************************************************/
 
-msffilename = (char *) malloc (strlen (outfilename) + 5);
-strcpy (msffilename, outfilename);
-strcat (msffilename,".msf");
+	msffilename = (char *)malloc(strlen(outfilename) + 5);
+	strcpy(msffilename, outfilename);
+	strcat(msffilename, ".msf");
 
-if (!(msffile = fopen (msffilename,"w")))
+	if (!(msffile = fopen(msffilename, "w")))
 	{
-	printf ("**** Could not write %s MSF file ****\n\n",msffilename);
+		printf("**** Could not write %s MSF file ****\n\n", msffilename);
 	}
-else
+	else
 	{
-	printmsf (conserved, length, first, msfseuil, msffile);
-	fclose (msffile);
-	}
-
-/*****************************************************************/
-
-
-/*****************************************************************/
-/*** Writes results to output file                            ****/
-/*****************************************************************/
-
-
-if (!(outfile = fopen(outfilename,"w")))
-	{
-	printf ("**** Could not write %s MSF file ****\n",msffilename);
-	printf ("**** Sending results to Standard Output\n\n");
-	outfile = stdout;
+		printmsf(conserved, length, first, msfseuil, msffile);
+		fclose(msffile);
 	}
 
-printheader (blhd1, blhd2, outfile, outfilename);
+	/*****************************************************************/
 
-printstats (first, maxvalue, outfile);
+	/*****************************************************************/
+	/*** Writes results to output file                            ****/
+	/*****************************************************************/
+
+	if (!(outfile = fopen(outfilename, "w")))
+	{
+		printf("**** Could not write %s MSF file ****\n", msffilename);
+		printf("**** Sending results to Standard Output\n\n");
+		outfile = stdout;
+	}
+
+	printheader(blhd1, blhd2, outfile, outfilename);
+
+	printstats(first, maxvalue, outfile);
 
 #ifndef WWW
-printqueryseq (outfile, conserved, profiltotal, length);
- 
-printqueryseq (outfile, conserved, trimmed, length);
+	printqueryseq(outfile, conserved, profiltotal, length);
+
+	printqueryseq(outfile, conserved, trimmed, length);
 #endif
 
-first  = (SeqHSP *) sortbysc(first); 
+	first = (SeqHSP *)sortbysc(first);
 
-redundout (first);
+	redundout(first);
 
-if (getargchar ("-mask",&maskfilename) == NULL)
+	if (getargchar("-mask", &maskfilename) == NULL)
 	{
-	riseup (&first);
+		riseup(&first);
 	}
 
-printresout (first,outfile,maxscore);
+	printresout(first, outfile, maxscore);
 
-fprintf (outfile,"Done...\n");
-if (outfile != stdout) fclose (outfile);
+	fprintf(outfile, "Done...\n");
+	if (outfile != stdout)
+		fclose(outfile);
 
-showmotifs (motif,'p', 0.75, 0.10);
+	showmotifs(motif, 'p', 0.75, 0.10);
 
-printf ("Done...\n");
+	printf("Done...\n");
 
-/*****************************************************************/
+	/*****************************************************************/
 
-return(0);
+	return (0);
 }

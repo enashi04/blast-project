@@ -30,172 +30,202 @@
 #define SEUIL seuil
 #define DEMIFEN 4
 
-
-
 double *trimprofil(double *profiltotal, double *profil, int length, char *cons)
 {
-double *dprof,*d2prof;
-double *smoothed,*trimmed;
-double *ptr,pr1,pr2;
-int i,j,n;
-int i1, i2;
-double m;
-float seuil;
+	double *dprof, *d2prof;
+	double *smoothed, *trimmed;
+	double *ptr, pr1, pr2;
+	int i, j, n;
+	int i1, i2;
+	double m;
+	float seuil;
 
-if (getargfloat ("-S",&seuil) == NULL) seuil = DEFSEUIL;
-seuil = -seuil;
+	if (getargfloat("-S", &seuil) == NULL)
+		seuil = DEFSEUIL;
+	seuil = -seuil;
 
+	/*****************************************************************/
+	/**** derives the smoothed profile *******************************/
+	/*****************************************************************/
 
-/*****************************************************************/
-/**** derives the smoothed profile *******************************/
-/*****************************************************************/
+	dprof = (double *)malloc(length * sizeof(double));
+	d2prof = (double *)malloc(length * sizeof(double));
 
-dprof = (double *) malloc (length * sizeof (double));
-d2prof = (double *) malloc (length * sizeof (double));
+	*dprof = 0;
+	*d2prof = 0;
+	ptr = (double *)(dprof + length - 1);
+	*ptr = 0;
+	ptr = (double *)(d2prof + length - 1);
+	*ptr = 0;
 
-*dprof = 0;
-*d2prof = 0;
-ptr = (double *) (dprof+length-1);
-*ptr = 0;
-ptr = (double *) (d2prof+length-1);
-*ptr = 0;
-
-
-for (i=1;i<length-1;i++)
+	for (i = 1; i < length - 1; i++)
 	{
-	ptr = (double *) (dprof+i);
-	if (*(cons + i) != '.')
+		ptr = (double *)(dprof + i);
+		if (*(cons + i) != '.')
 		{
-		i1 = -1;
-		i2 = +1;
-		if (*(cons + i + 1) == '.') {pr2 = *(profil +i); i2 = 0;} else {pr2 = *(profil +i+1);}
-		if (*(cons + i - 1) == '.') {pr1 = *(profil +i); i1 = 0;} else {pr1 = *(profil +i-1);}
-		*ptr = (pr2 - pr1)*3.0/(double)(i2 - i1 + 1);
+			i1 = -1;
+			i2 = +1;
+			if (*(cons + i + 1) == '.')
+			{
+				pr2 = *(profil + i);
+				i2 = 0;
+			}
+			else
+			{
+				pr2 = *(profil + i + 1);
+			}
+			if (*(cons + i - 1) == '.')
+			{
+				pr1 = *(profil + i);
+				i1 = 0;
+			}
+			else
+			{
+				pr1 = *(profil + i - 1);
+			}
+			*ptr = (pr2 - pr1) * 3.0 / (double)(i2 - i1 + 1);
+			//formule
+			printf("La formule de trim est %lf\n", *ptr);
 		}
-	else
+		else
 		{
-		*ptr = 0.0;
-		}
-	}
-/*****************************************************************/
-	
-/*****************************************************************/
-/**** smoothes the derived profile *******************************/
-/*****************************************************************/
-
-smoothed = (double *) malloc (length * sizeof (double));
-
-for (i=0;i<length;i++)
-        {
-	m=0;
-        n=0;
-        for (j=i-DEMIFEN;j<i+DEMIFEN+1;j++)
-                {
-                if((j>=0) && (j<length))
-                        {
-			if(*(cons+j) != '.')
-				{
-				m+=*(dprof+j);
-				n++;
-				}
-                        }
-                }
-        ptr = (double *) (smoothed + i);
-        if ((n!= 0) && (*(cons+i) != '.'))
-                {
-                m = m /(double) n;
-                }
-        else
-                {
-                m = 0;
-                }
-        *ptr = m;
-        }
-
-
-/*****************************************************************/
-
-/*****************************************************************/
-/**** derives the derived profile ********************************/
-/*****************************************************************/
-
-for (i=1;i<length-1;i++)
-        {
-	ptr = (double *) (d2prof+i);
-	if (*(cons + i) != '.')
-		{
-		i1 = -1;
-		i2 = +1;
-		if (*(cons + i + 1) == '.') {pr2 = *(smoothed+i); i2 = 0;} else {pr2 = *(smoothed+i+1);}
-		if (*(cons + i - 1) == '.') {pr1 = *(smoothed+i); i1 = 0;} else {pr1 = *(smoothed+i-1);}
-		*ptr = (pr2 - pr1)*3.0/(double)(i2 - i1 + 1);
-		}
-	else
-		{
-		*ptr = 0.0;
+			*ptr = 0.0;
 		}
 	}
+	/*****************************************************************/
 
-/* Est-ce que ca peut aider ?
+	/*****************************************************************/
+	/**** smoothes the derived profile *******************************/
+	/*****************************************************************/
 
-for (i=0;i<length;i++)
-        {
-	m=0;
-        n=0;
-        for (j=i-DEMIFEN;j<i+DEMIFEN+1;j++)
-                {
-                if((j>=0) && (j<length))
-                        {
-			if(*(cons+j) != '.')
+	smoothed = (double *)malloc(length * sizeof(double));
+
+	for (i = 0; i < length; i++)
+	{
+		m = 0;
+		n = 0;
+		for (j = i - DEMIFEN; j < i + DEMIFEN + 1; j++)
+		{
+			if ((j >= 0) && (j < length))
+			{
+				if (*(cons + j) != '.')
 				{
-				m+=*(d2prof+j);
-				n++;
+					m += *(dprof + j);
+					n++;
 				}
-                        }
-                }
-        ptr = (double *) (smoothed + i);
-        if ((n!= 0) && (*(cons+i) != '.'))
-                {
-                m = m /(double) n;
-                }
-        else
-                {
-                m = 0;
-                }
-        *ptr = m;
-        }
-
-d2prof = smoothed;
-*/
- 
-/*****************************************************************/
-	
-/*****************************************************************/
-/**** keeps only negative second derivative regions (= peaks) ****/
-/*****************************************************************/
-
-trimmed = (double *) malloc (length * sizeof (double));
-
-for (i=0;i<length;i++) 
-        { 
-        ptr = (double *) (trimmed+i); 
-	if ( *(d2prof + i) >= SEUIL) 
-		{
-		*ptr = 0;
+			}
 		}
-	else
+		ptr = (double *)(smoothed + i);
+		if ((n != 0) && (*(cons + i) != '.'))
 		{
-		*ptr = *(profiltotal + i);
+			m = m / (double)n;
 		}
-/*
-printf ("%d %c : %f %f (%f) %f\n",i,*(cons +i),*(profil+i),*(smoothed+i),*(dprof+i),*(d2prof+i));
-*/
-        } 
+		else
+		{
+			m = 0;
+		}
+		*ptr = m;
+	}
 
-/*****************************************************************/
-	
-free (dprof);
-free (d2prof);
-free (smoothed);
-return trimmed;
-}	
+	/*****************************************************************/
+
+	/*****************************************************************/
+	/**** derives the derived profile ********************************/
+	/*****************************************************************/
+
+	for (i = 1; i < length - 1; i++)
+	{
+		ptr = (double *)(d2prof + i);
+		if (*(cons + i) != '.')
+		{
+			i1 = -1;
+			i2 = +1;
+			if (*(cons + i + 1) == '.')
+			{
+				pr2 = *(smoothed + i);
+				i2 = 0;
+			}
+			else
+			{
+				pr2 = *(smoothed + i + 1);
+			}
+			if (*(cons + i - 1) == '.')
+			{
+				pr1 = *(smoothed + i);
+				i1 = 0;
+			}
+			else
+			{
+				pr1 = *(smoothed + i - 1);
+			}
+			*ptr = (pr2 - pr1) * 3.0 / (double)(i2 - i1 + 1);
+		}
+		else
+		{
+			*ptr = 0.0;
+		}
+	}
+
+	/* Est-ce que ca peut aider ?
+
+	for (i=0;i<length;i++)
+			{
+		m=0;
+			n=0;
+			for (j=i-DEMIFEN;j<i+DEMIFEN+1;j++)
+					{
+					if((j>=0) && (j<length))
+							{
+				if(*(cons+j) != '.')
+					{
+					m+=*(d2prof+j);
+					n++;
+					}
+							}
+					}
+			ptr = (double *) (smoothed + i);
+			if ((n!= 0) && (*(cons+i) != '.'))
+					{
+					m = m /(double) n;
+					}
+			else
+					{
+					m = 0;
+					}
+			*ptr = m;
+			}
+
+	d2prof = smoothed;
+	*/
+
+	/*****************************************************************/
+
+	/*****************************************************************/
+	/**** keeps only negative second derivative regions (= peaks) ****/
+	/*****************************************************************/
+
+	trimmed = (double *)malloc(length * sizeof(double));
+
+	for (i = 0; i < length; i++)
+	{
+		ptr = (double *)(trimmed + i);
+		if (*(d2prof + i) >= SEUIL)
+		{
+			*ptr = 0;
+		}
+		else
+		{
+			*ptr = *(profiltotal + i);
+		}
+		/*
+		printf ("%d %c : %f %f (%f) %f\n",i,*(cons +i),*(profil+i),*(smoothed+i),*(dprof+i),*(d2prof+i));
+		*/
+	}
+
+	/*****************************************************************/
+
+	free(dprof);
+	free(d2prof);
+	free(smoothed);
+	return trimmed;
+}

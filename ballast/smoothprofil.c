@@ -24,53 +24,54 @@
 /*#define DEMIFEN 4*/
 #define DEMIFEN demifen
 
-extern void    profilplot  (double *profil, double *profil2, int length, char *filename, char *conserved, SeqHSP *first);
-
-
+extern void profilplot(double *profil, double *profil2, int length, char *filename, char *conserved, SeqHSP *first);
 
 double *smoothprofil(double *profil, int length, char *cons)
 {
-int demifen;
-double *smoothed,*ptr;
-double  m;
-int i,j,n;
+	int demifen;
+	double *smoothed, *ptr;
+	double m;
+	int i, j, n;
 
-if (getargint ("-smooth",&demifen) == NULL ) demifen = 4;
+	if (getargint("-smooth", &demifen) == NULL)
+		demifen = 4;
 
+	/*****************************************************************/
+	/*** Smooth 'profile'                                         ****/
+	/*****************************************************************/
 
-/*****************************************************************/
-/*** Smooth 'profile'                                         ****/
-/*****************************************************************/
-
-smoothed = (double *) malloc (length * sizeof (double));
-
-for (i=0;i<length;i++)
+	smoothed = (double *)malloc(length * sizeof(double));
+	for (i = 0; i < length; i++)
 	{
-	m = 0;
-	n=0;
-	for (j=i-DEMIFEN;j<i+DEMIFEN+1;j++)
+		m = 0;
+		n = 0;
+		for (j = i - DEMIFEN; j < i + DEMIFEN + 1; j++)
 		{
-		if((j>=0) && (j<length))
+			if ((j >= 0) && (j < length))
 			{
-			if(*(cons+j) != '.')
+				if (*(cons + j) != '.')
 				{
-				m+=*(profil+j);
-				n++;
+					m += *(profil + j);
+					n++;
 				}
 			}
 		}
-	ptr = (double *) (smoothed + i);
-	if ((n!= 0) && (*(cons+i) != '.'))
-		{
-		m = m /(double) n;
-		}
-	else
-		{
-		m = 0;
-		}
-	*ptr = m;
-	}
-/*****************************************************************/
+		ptr = (double *)(smoothed + i);
+		//printf("lisse : %lf\n", *smoothed);
 
-return smoothed;
-}	
+		if ((n != 0) && (*(cons + i) != '.'))
+		{
+			m = m / (double)n;
+			// printf("La valeur de m et n sont  : %lf - %u\n", m, n);
+		}
+		else
+		{
+			m = 0;
+		}
+		*ptr = m;
+		//printf("ptr : %lf\n", *ptr);
+	}
+	/*****************************************************************/
+	//printf("lissage : %lf", *smoothed);
+	return smoothed;
+}

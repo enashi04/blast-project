@@ -508,8 +508,9 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
 		for (i = begin - 1; i < end; i++)
 		{
 			ptr = (double *)(maxprofile + i);
-			if ((taux == 100) && (naas > (length / 10)))
+			if ((taux == 100) && (naas > (length / 10))){
 				identique = 0;
+			}
 			*ptr += facteur * identique;
 
 			ptr = (double *)(profil + i);
@@ -556,6 +557,7 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
 		}
 		/**************************************************************************/
 	}
+	//fprintf(stdout, "le smptr est de : %lf\n", *simptr);
 	/**************************************************************************/
 
 	/**********************************************************************************/
@@ -569,6 +571,7 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
 	simprf->hsp = seqhsp;
 	simprf->next = NULL;
 	*/
+	//printf("Le profil est : %lf\n", *profil);
 	return profil;
 }
 /**********************************************************************************/
