@@ -155,11 +155,8 @@ Argdef	arg_def [NUMARGS] = {
 /*****************************************************************/
 /*** Initialisation                                           ****/
 /*****************************************************************/
-if (initargs (argv,argc,arg_def,NUMARGS) == -1) {
-	printusage(argv[0],HELPDIR); 
-	//fprintf(stdout, "C'est la fonction printusage\n");
-	exit(1);
-}
+
+if (initargs (argv,argc,arg_def,NUMARGS) == -1) {printusage(argv[0],HELPDIR); exit(1);}
 
 tablefile  = NULL;
 anchorfile = NULL;
@@ -186,14 +183,9 @@ seqres->prev = NULL;
 seqres->next = NULL;
 
 getargchar ("-p",&infilename);
-if (!(infile = fopen(infilename,"r"))) {
-	printf ("\n*** ERROR: %s file not found ***\n\n",infilename);
-	exit(1);
-}
+if (!(infile = fopen(infilename,"r"))) {printf ("\n*** ERROR: %s file not found ***\n\n",infilename); exit(1);}
 
-//permet d'identifier la longueur de la query
 length = initresfile (infile,curline,&blhd1);
-fprintf(stdout,"la longueur de la query est de : %u\n", length);
 
 conserved = (char *) malloc (length+1);
 maxprofile = (double *) malloc (sizeof(double) * length);
@@ -208,7 +200,6 @@ for (i=0;i<length;i++)
 ptrstr = (char *) (conserved + length);
 *ptrstr = '\0';
 
-
 /*****************************************************************/
 
 
@@ -221,7 +212,7 @@ if (length != 0)
 	{
 	i=1;
 	profiltotal  = loadHSP (seqres,infile,curline,length,conserved,maxprofile,'p');
-	fprintf("le profiltotal en double est de %d", profiltotal);
+	
 	while (curline[0] != '\0')
 		{
 		seqres->rank=i++;
@@ -428,7 +419,7 @@ while (motifptr != NULL)
 
 /*****************************************************************/
 
-motifsfilename = (char *) malloc (strlen (outfilename) + 8);
+motifsfilename = (char *) malloc (strlen (outfilename) + 7);
 strcpy (motifsfilename, outfilename);
 strcat (motifsfilename,".motifs");
 
@@ -497,7 +488,7 @@ if (getargbool("-s") == 1) consseq (profiltotal,length,outfilename,conserved);
 
 if (getargbool ("-anchors") == 1) 
 	{
-	anchorfilename = (char *) malloc (strlen (outfilename) + 9);
+	anchorfilename = (char *) malloc (strlen (outfilename) + 8);
 	strcpy (anchorfilename, outfilename);
 	strcat (anchorfilename,".anchors");
 
@@ -514,7 +505,7 @@ if (getargbool ("-anchors") == 1)
 
 if (getargbool ("-table") ==1 )
 	{
-	tablefilename = (char *) malloc (strlen (outfilename) + 7);
+	tablefilename = (char *) malloc (strlen (outfilename) + 6);
 	strcpy (tablefilename, outfilename);
 	strcat (tablefilename, ".table");
 	if (!(tablefile = fopen (tablefilename,"w")))

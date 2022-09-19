@@ -1,9 +1,9 @@
 
 CC       = cc $(FLAGS)
-HELPDIR  = /biolo/ballast
+HELPDIR  = /us1/user/ballast/ballast1.0
 LDFLAGS   =
 LIBS      = -lm
-FLAGS     = -g
+FLAGS     = 
 
 
 all: ballast

@@ -1,0 +1,18 @@
+USAGE
+ Usage : ballast -p blastp_file [-n tblastn_file] -o output_file [options]
+
+ Options:
+      -anchors        : creates an anchor file from top blast hits which may be used by DbClustal
+      -both           : uses both profiles (from blastp AND tblastn) for computation
+      -mask           : uses a selection mask to sort hits accordingly
+      -maxp x.xx      : only sequences with Expect < x.xx are included into profile (default is 0.1)
+      -maxtab         : threshold for output of sequences vs LSMs table
+      -nosort         : does not sort the USPs by start position
+      -plotn          : gives a plot of nucleotide "profile" in output_file-nt.prf
+      -profil file    : uses file a precomputed profile to rescore the Blast hits
+      -queryname name : specifies the query name for the anchor file
+      -s              : produces a FastA formatted sequence from profile
+      -table          : produces a sequences vs LSMs table
+      -t xx.x         : sets the threshold for output to xx.x (default is 0.0)
+      -help           : this help
+END
