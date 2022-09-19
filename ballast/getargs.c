@@ -4,131 +4,135 @@
 #include <string.h>
 #include "readargs.h"
 
-
-int initargs (char *argv[], int argc, Argdef *arg_def, int numargs)
+int initargs(char *argv[], int argc, Argdef *arg_def, int numargs)
 {
-int i, j, s;
-int found;
-Argument *ptr;
+	int i, j, s;
+	int found;
+	Argument *ptr;
 
-if (args != NULL) free(args);
-args = NULL;
+	if (args != NULL)
+		free(args);
+	args = NULL;
 
-for (i = 0; i < numargs ; i++)
+	for (i = 0; i < numargs; i++)
 	{
-	found = 0;
-	for (j = 0; j < argc ; j++)
+		found = 0;
+		for (j = 0; j < argc; j++)
 		{
-		if (strcmp(argv[j],arg_def[i].flag) == 0)
+			if (strcmp(argv[j], arg_def[i].flag) == 0)
 			{
-			found = 1;
-			if (args == NULL)
+				found = 1;
+				if (args == NULL)
 				{
-				args = (Argument *) malloc (sizeof(Argument));
-				args->prev = NULL;
-				args->next = NULL;
-				ptr = args;
+					args = (Argument *)malloc(sizeof(Argument));
+					args->prev = NULL;
+					args->next = NULL;
+					ptr = args;
 				}
-			else
+				else
 				{
-				ptr->next = (Argument *) malloc ( sizeof(Argument) );
-				(ptr->next)->prev = ptr;
-				ptr = ptr->next;
-				ptr->next = NULL;
+					ptr->next = (Argument *)malloc(sizeof(Argument));
+					(ptr->next)->prev = ptr;
+					ptr = ptr->next;
+					ptr->next = NULL;
 				}
 
-			ptr->flag = argv[j];
+				ptr->flag = argv[j];
 
-			if ((arg_def[i].nval) == 0)
+				if ((arg_def[i].nval) == 0)
 				{
-				ptr->val = ptr->flag;
+					ptr->val = ptr->flag;
 				}
-			else
+				else
 				{
-				ptr->val = argv[j+1];
+					ptr->val = argv[j + 1];
 				}
 			}
 		}
-	if ((arg_def[i].compulsory != NULL) && (found == 0)) return (-1);
+		if ((arg_def[i].compulsory != NULL) && (found == 0))
+			return (-1);
 	}
-return (1);
+	return (1);
 }
 
-
-char *getargchar (char *flag, char **val)
+char *getargchar(char *flag, char **val)
 {
-Argument *ptr;
+	Argument *ptr;
 
-ptr = args;
-while (ptr != NULL)
-        {
-        if (strcmp(ptr->flag,flag) == 0 ) {*val = ptr->val; return (*val);}
-	ptr = ptr->next;
-	}
-return (NULL);
-}
-
-int *getargint (char *flag, int *i)
-{
-Argument *ptr;                   
-
-ptr = args;
-while (ptr != NULL)
-        {
-	if (strcmp(ptr->flag,flag) == 0 )
+	ptr = args;
+	while (ptr != NULL)
+	{
+		if (strcmp(ptr->flag, flag) == 0)
 		{
-		sscanf (ptr->val,"%d",i);
-		return (i);
+			*val = ptr->val;
+			return (*val);
 		}
-	ptr = ptr->next;
+		ptr = ptr->next;
 	}
-return (NULL);
+	return (NULL);
 }
 
-float *getargfloat (char *flag, float *f)
+int *getargint(char *flag, int *i)
 {
-Argument *ptr;                   
+	Argument *ptr;
 
-ptr = args;
-while (ptr != NULL)
-        {
-	if (strcmp(ptr->flag,flag) == 0 )
+	ptr = args;
+	while (ptr != NULL)
+	{
+		if (strcmp(ptr->flag, flag) == 0)
 		{
-		sscanf (ptr->val,"%f",f);
-		return (f);
+			sscanf(ptr->val, "%d", i);
+			return (i);
 		}
-	ptr = ptr->next;
+		ptr = ptr->next;
 	}
-return (NULL);
+	return (NULL);
 }
 
-double *getargdouble (char *flag, double *f)
+float *getargfloat(char *flag, float *f)
 {
-Argument *ptr;                   
+	Argument *ptr;
 
-ptr = args;
-while (ptr != NULL)
-        {
-	if (strcmp(ptr->flag,flag) == 0 )
+	ptr = args;
+	while (ptr != NULL)
+	{
+		if (strcmp(ptr->flag, flag) == 0)
 		{
-		sscanf (ptr->val,"%lf",f);
-		return (f);
+			sscanf(ptr->val, "%f", f);
+			return (f);
 		}
-	ptr = ptr->next;
+		ptr = ptr->next;
 	}
-return (NULL);
+	return (NULL);
 }
 
-int getargbool (char *flag)
+double *getargdouble(char *flag, double *f)
 {
-Argument *ptr;                    
- 
-ptr = args; 
-while (ptr != NULL)
-        { 
-        if (strcmp(ptr->flag,flag) == 0 ) return (TRUE);
-        ptr = ptr->next; 
-        }
-return (FALSE);
+	Argument *ptr;
+
+	ptr = args;
+	while (ptr != NULL)
+	{
+		if (strcmp(ptr->flag, flag) == 0)
+		{
+			sscanf(ptr->val, "%lf", f);
+			return (f);
+		}
+		ptr = ptr->next;
+	}
+	return (NULL);
 }
 
+int getargbool(char *flag)
+{
+	Argument *ptr;
+
+	ptr = args;
+	while (ptr != NULL)
+	{
+		if (strcmp(ptr->flag, flag) == 0)
+			return (TRUE);
+		ptr = ptr->next;
+	}
+	return (FALSE);
+}

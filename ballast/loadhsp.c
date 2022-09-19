@@ -525,6 +525,7 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
 			{
 				*ptr = facteur * identique;
 				*simptr = ID * fctr;
+				//printf("le facteur de similitude est : %u\n", fctr);
 
 				ptrstr = (char *)(conserved + i);
 				*ptrstr = *(seq + i - begin + 1);

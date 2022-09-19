@@ -31,7 +31,7 @@ Motif *extractmotifs(double *profil, int length, char *conserved)
 	Motif *firstmotif, *motif;
 	int i, j, n, begin, end;
 	double score;
-	
+
 	firstmotif = NULL;
 	motif = NULL;
 
@@ -86,7 +86,7 @@ Motif *extractmotifs(double *profil, int length, char *conserved)
 			motif->profile = NULL;
 
 #ifndef WWW
-			printf("\t%4d - %4d\t: ", begin + 1, end);
+			printf("\t%4d - %4d\t: ", begin +1, end);
 			for (j = begin; j < end; j++)
 			{
 				printf("%c", *(conserved + j));

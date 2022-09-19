@@ -199,7 +199,6 @@ main(int argc, char *argv[])
 
 	conserved = (char *)malloc(length + 1);
 	maxprofile = (double *)malloc(sizeof(double) * length);
-
 	for (i = 0; i < length; i++)
 	{
 		ptrstr = (char *)(conserved + i);
@@ -209,6 +208,7 @@ main(int argc, char *argv[])
 	}
 	ptrstr = (char *)(conserved + length);
 	*ptrstr = '\0';
+	
 
 	/*****************************************************************/
 
@@ -220,7 +220,8 @@ main(int argc, char *argv[])
 	{
 		i = 1;
 		profiltotal = loadHSP(seqres, infile, curline, length, conserved, maxprofile, 'p');
-		// fprintf(stdout,"le profiltotal en double est de %d", *profiltotal);//il est de 0 ici
+		
+		 fprintf(stdout,"le profiltotal en double est de %d", *profiltotal);//il est de 0 ici
 		while (curline[0] != '\0')
 		{
 			seqres->rank = i++;
@@ -433,7 +434,7 @@ main(int argc, char *argv[])
 	/*****************************************************************/
 
 	motifsfilename = (char *)malloc(strlen(outfilename) + 8);
-	strcpy(motifsfilename, outfilename);
+	strcpy(motifsfilename, outfilename);//d'ou viens le outfilename
 	strcat(motifsfilename, ".motifs");
 
 	if (!(motifsfile = fopen(motifsfilename, "w")))
@@ -447,15 +448,20 @@ main(int argc, char *argv[])
 	fprintf(motifsfile, "\nSuggested Words : \n\n");
 
 	motifptr = motif;
-
+	//printf("mots conservés %s\n", *conserved);
+//ici a lieu l'écriture dans le fichier .motif
 	while (motifptr != NULL)
 	{
-		fprintf(motifsfile, "\t%4d - %4d\t: ", motifptr->begin + 1, motifptr->end);
+		//ici on écrit direct dans le motifsfile fichier .motif (j'ai ajouté le +1 de end parce que pas trop cohérent)
+		fprintf(motifsfile, "\t%4d - %4d\t: ", motifptr->begin+1 , motifptr->end+1);
 		for (i = motifptr->begin; i < motifptr->end + 1; i++)
 		{
 			fprintf(motifsfile, "%c", *(conserved + i));
+			//on va afficher ici ce qu'il y'a dans conserved 
+			// et d'ici on peut avoir les positions de chaque acide aminé conservé
 		}
 		fprintf(motifsfile, "  \t:%8.2f\n\n", motifptr->maxscore);
+		//fprintf(stdout,"Le max score est : %lf\n", motifptr->maxscore);
 		motifptr = motifptr->next;
 	}
 
