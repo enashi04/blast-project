@@ -155,11 +155,10 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
 	}
 
 	line[85] = '\0';
-        fprintf(stdout, "des length %ld\n", strlen(line) + 1);
 
-	seqres->desc = (char *)malloc(strlen(line) + 1);
+	seqres->desc = (char *)malloc(strlen(line)+1 );
 	strcpy(seqres->desc, line);
-	//fprintf(stdout, "seqres->desc est :%s\n", seqres->desc);
+	fprintf(stdout, "seqres->desc est :%s\n", seqres->desc);
 
 	ptrstr = strtok(line, " ");
 	seqres->name = (char *)malloc(strlen(ptrstr) + 1);

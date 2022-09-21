@@ -101,9 +101,12 @@ int main(int argc, char *argv[])
     getargchar("-o", &outfilename);
 
     if (getargfloat("-maxp", &msfseuil) == NULL)
+    {
         msfseuil = DEFMAXP;
-    if (getargfloat("-maxtab", &tableseuil) == NULL)
+    }
+    if (getargfloat("-maxtab", &tableseuil) == NULL){
         tableseuil = msfseuil;
+    }
 
     blhd1.prog = NULL;
     blhd1.query = NULL;
@@ -137,8 +140,6 @@ int main(int argc, char *argv[])
         ptrdbl = (double *)(maxprofile + i);
         *ptrdbl = 0.0;
     }
-    //fprintf(stdout,"la séquence est %s\n", *conserved);
-
 
     ptrstr = (char *)(conserved + length);
     *ptrstr = '\0';
@@ -149,14 +150,15 @@ int main(int argc, char *argv[])
     if(length!=0){
         i=1; 
         profiltotal=loadHSP(seqres, infile, curline, length, conserved, maxprofile, 'p');
-       // fprintf(stdout, "le profil est : %s\n", seqres->desc);    
-
+        int j =0;
         while(curline[0]!='\0'){
             seqres->rank = i++; 
             seqres->next = (SeqHSP *)malloc(sizeof(SeqHSP));
             (seqres->next)->prev = seqres;
 			seqres = seqres->next;
 			seqres->next = NULL;
+            j++;
+            printf("Tour : %u\n", j);
             contribution = loadHSP(seqres, infile, curline, length,conserved, maxprofile,'p');
             
             if(strcmp(seqres->prev->sim->hsp, seqres->sim->hsp)!=0){

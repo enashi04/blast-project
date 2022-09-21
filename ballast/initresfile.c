@@ -4,8 +4,6 @@
 #include "types.h"
 #include <ctype.h>
 
-char *substr(const char *src, int m, int n);
-
 int initresfile(FILE *file, char *line, BlastHeader *blhd)
 {
     int length;
@@ -46,7 +44,6 @@ int initresfile(FILE *file, char *line, BlastHeader *blhd)
     }
     return length;
 }
-
 
 /*
  Substring
@@ -119,6 +116,7 @@ void jumpAlignment(char *line, FILE *file)
         }
     }
 }
+
 /*
  Get Length
 */
