@@ -123,7 +123,7 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
 	{
 		ptr = (double *)(profil + i);
 		*ptr = 0;
-		// printf("ptr : %d\n", ptr);
+		//printf("ptr : %d\n", ptr);
 	}
 	seqres->p = 1;
 	seqres->prob = maxp;
@@ -132,30 +132,30 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
 	/**********************************************************************************/
 	/**** Read description of database sequence ***************************************/
 
-	if (strncmp(line, "[to_Entrez] [to_Related][to_SRS] ", 33) == 0)
-	{
-		strcpy(line, &line[33]);
-		fprintf(stdout, strcpy(line, &line[33]));
-	}
+	// if (strncmp(line, "[to_Entrez] [to_Related][to_SRS] ", 33) == 0)
+	// {
+	// 	strcpy(line, &line[33]);
+	// }
 
 	outtext = (char *)realloc(outtext, strlen(line) + 1);
 	strcpy(outtext, line);
+        fprintf(stdout, "la contribution est : %s", outtext);
 
 	if (line[0] == '>')
 	{
 		strcpy(line, &line[1]);
 	}
 
-	if (strlen(line) <= 61)
+	if (strlen(line) <= 85)
 	{
-		for (i = strlen(line) - 1; i < 61; i++)
+		for (i = strlen(line) - 1; i < 85; i++)
 		{
 			line[i] = ' ';
 		}
 	}
 
-	line[61] = '\0';
-
+	line[85] = '\0';
+        fprintf(stdout, "des length %ld\n", strlen(line) + 1);
 
 	seqres->desc = (char *)malloc(strlen(line) + 1);
 	strcpy(seqres->desc, line);

@@ -1,9 +1,8 @@
-
-		/****** Maximum length for file name *******/
+/****** Maximum length for file name *******/
 #define MAXPATHLEN 132
 
 
-#define ID     2 
+#define ID     2
 #define SIM    0.2
 #define RIEN   -1
 #define OUTOFHSP 0

@@ -1,167 +1,67 @@
+# L'exécutable à générer :
 
-CC       = cc $(FLAGS)
-HELPDIR  = /biolo/ballast
-LDFLAGS   =
-LIBS      = -lm
-FLAGS     = -g
+EXEC=ballast
+
+# Les fichiers .o a générer si nécessaire
+
+DEP=printusage.o getargs.o initresfile.o loadhsp.o addprofils.o handlegaps.o filter.o
 
 
-all: ballast
+all: $(EXEC)
 
-touch:
-	touch *.c
+
+#Variables personnalisées
+
+CC=gcc
+
+CFLAGS=-Wall
+
+LDFLAGS=
+
+
+
+%.o: %.c 
+
+	$(CC) -c $^ $(CFLAGS)
+
+
+#Générer les commandes demandées une après l'autre
+
+$(EXEC): %: %.c $(DEP)
+
+	$(CC) $(CFLAGS) -o $@  $^ $(LDFLAGS)
+
+
+#### RAPPEL ################
+
+
+#   $@    Nom de la cible
+
+#   $<     Nom de la première dépendance pour la cible
+
+#   $ˆ      Liste des dépendances pour la cible
+
+#   $?     Liste des dépendances plus récentes que la cible Nom du fichier (sans son suffixe)
+
+#   $*      Nom du fichier (sans son suffixe)
+
+#    % : permet de prendre un élément après l'autre dans une liste de cibles
+
+##################
+
+
+#supprimer les fichier *.o 
 
 clean:
-	rm *.o
 
-OBJ = 	ballast.o	\
-	addprofils.o    \
-	consseq.o	\
-	consmotif.o	\
-	countmatches.o  \
-	extractmotifs.o	\
-	filter.o	\
-	freesbjmotifs.o \
-	gcgcheck.o      \
-	getsbjmotifs.o  \
-	handlegaps.o 	\
-	initresfile.o	\
-	loadhsp.o	\
-	maskprofil.o	\
-	mhalign.o   	\
-	overlap.o	\
-	printheader.o	\
-	printmsf.o   	\
-	printnicedouble.o \
-	printqueryseq.o \
-	printresout.o	\
-	printstats.o 	\
-	printusage.o	\
-	profilplot.o	\
-	readmask.o	\
-	readprofil.o	\
-	redundout.o	\
-	riseup.o   	\
-	scalaire.o	\
-	showmotifs.o	\
-	smoothprofil.o	\
-	sortbybegdb.o	\
-	sortbysc.o	\
-	trimprofil.o	\
-	trimprofilext.o	\
-	getargs.o
+	rm -rf *.o 
 
 
+#supprimer les fichiers *.o et les exécutables
 
-ballast.o: global.h macros.h types.h prototypes.h readargs.h
-	$(CC) -DHELPDIR=\"$(HELPDIR)\" -c ballast.c
+mrproper: clean
 
-addprofils.o:
-	$(CC) -c addprofils.c
-
-consseq.o:
-	$(CC) -c consseq.c
-
-consmotif.o: types.h
-	$(CC) -c consmotif.c
-
-countmatches.o: types.h
-	$(CC) -c countmatches.c
-
-extractmotifs.o: types.h macros.h
-	$(CC) -c extractmotifs.c
-
-filter.o:
-	$(CC) -c filter.c
-
-freesbjmotifs.o: types.h
-	$(CC) -c freesbjmotifs.c
-
-gcgcheck.o: 
-	$(CC) -c gcgcheck.c
-
-getsbjmotifs.o: types.h macros.h
-	$(CC) -c getsbjmotifs.c
-
-handlegaps.o: types.h
-	$(CC) -c handlegaps.c
-
-initresfile.o: types.h
-	$(CC) -c initresfile.c
-
-loadhsp.o: global.h macros.h types.h readargs.h
-	$(CC) -c loadhsp.c
-
-maskprofil.o: macros.h
-	$(CC) -c maskprofil.c
-
-mhalign.o: types.h macros.h
-	$(CC) -c mhalign.c
-
-overlap.o: macros.h types.h
-	$(CC) -c overlap.c
-
-printmsf.o: types.h
-	$(CC) -c printmsf.c
-
-printheader.o: readargs.h types.h
-	$(CC) -c printheader.c
-
-printnicedouble.o: readargs.h types.h
-	$(CC) -c printnicedouble.c
-
-printqueryseq.o: readargs.h types.h
-	$(CC) -c printqueryseq.c
-
-printresout.o: readargs.h macros.h types.h 
-	$(CC) -c printresout.c
-
-printstats.o: readargs.h
-	$(CC) -c printstats.c
-
-printusage.o:
-	$(CC) -c printusage.c
-
-profilplot.o: readargs.h types.h 
-	$(CC) -c profilplot.c
-
-readmask.o: 
-	$(CC) -c readmask.c
-
-readprofil.o:
-	$(CC) -c readprofil.c
-
-redundout.o: readargs.h types.h
-	$(CC) -c redundout.c
-
-riseup.o: macros.h types.h
-	$(CC) -c riseup.c
-
-scalaire.o: macros.h types.h 
-	$(CC) -c scalaire.c
-
-showmotifs.o: types.h 
-	$(CC) -c showmotifs.c
-
-smoothprofil.o: readargs.h types.h
-	$(CC) -c smoothprofil.c
-
-sortbybegdb.o: types.h
-	$(CC) -c sortbybegdb.c
-
-sortbysc.o: types.h
-	$(CC) -c sortbysc.c
-
-trimprofil.o: global.h readargs.h
-	$(CC) -c trimprofil.c
-
-trimprofilext.o: global.h readargs.h
-	$(CC) -c trimprofilext.c
-
-getargs.o: readargs.h
-	$(CC) -c getargs.c
+	rm -rf $(EXEC) 
 
 
-ballast: $(OBJ) 
-	$(CC) -o ballast $(OBJ) $(LDFLAGS) $(LIBS)
 
