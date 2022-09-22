@@ -114,6 +114,7 @@ printf ("Query: %s\n       %s\nSbjct: %s\n\n",queryseq,aln,seqhsp);
 simprf->end = simprf->begin + qnogap - 1;
 simprf->enddb = simprf->begdb + qnogap - 1;
 simprf->next = NULL;
+printf("Nous avons terminé le handlegaps\n");
 
 return simprf;
 }

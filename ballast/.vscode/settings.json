@@ -1,10 +1,5 @@
 {
-  "files.associations": {
-    "parser.h": "c",
-    "tree.h": "c",
-    "global.h": "c"
-  },
-  "C_Cpp_Runner.cCompilerPath": "",
+  "C_Cpp_Runner.cCompilerPath": "gcc",
   "C_Cpp_Runner.cppCompilerPath": "g++",
   "C_Cpp_Runner.debuggerPath": "gdb",
   "C_Cpp_Runner.cStandard": "",
@@ -17,7 +12,7 @@
     "-Wpedantic"
   ],
   "C_Cpp_Runner.enableWarnings": true,
-  "C_Cpp_Runner.warningsAsError": true,
+  "C_Cpp_Runner.warningsAsError": false,
   "C_Cpp_Runner.compilerArgs": [],
   "C_Cpp_Runner.linkerArgs": [],
   "C_Cpp_Runner.includePaths": [],
@@ -32,6 +27,5 @@
     "**/.*/**",
     "**/.vscode",
     "**/.vscode/**"
-  ],
-  "C_Cpp.errorSquiggles": "Disabled"
+  ]
 }

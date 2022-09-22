@@ -85,7 +85,7 @@ int main(int argc, char *argv[])
         {"-t", 'f', 1, '\0'},
         {"-table", 'b', 0, '\0'}};
 
-    printf(("Déclaration des variables : ok \n"));
+    //printf(("Déclaration des variables : ok \n"));
 
     // initialisation des variables
 
@@ -128,7 +128,7 @@ int main(int argc, char *argv[])
     }
 
     length = initresfile(infile, curline, &blhd1);
-    //fprintf(stdout, "la longueur du fichier est de : %u \n", length);
+    fprintf(stdout, "la longueur du fichier est de : %u \n", length);
 
     conserved = (char *)malloc(length + 1);
     maxprofile = (double *)malloc(sizeof(double) * length);
@@ -144,7 +144,7 @@ int main(int argc, char *argv[])
     ptrstr = (char *)(conserved + length);
     *ptrstr = '\0';
 
-    fprintf(stdout, "Initialisation : ok\n");
+   // fprintf(stdout, "Initialisation : ok\n");
 
     //construction du profil BlastP
     if(length!=0){

@@ -4,9 +4,16 @@
 #include "types.h"
 #include <ctype.h>
 
+char *substr(const char *src, int m, int n);
+void blastVersion(BlastHeader *blhd, char *line);
+void queryName(BlastHeader *blhd, char *line, FILE *file);
+void databaseName(BlastHeader *blhd, char *line, FILE *file);
+void jumpAlignment(char *line, FILE *file);
+int getLength(char *line, int length);
+
 int initresfile(FILE *file, char *line, BlastHeader *blhd)
 {
-    int length;
+    int length=0;
 
     fgets(line, 256, file);
 
@@ -112,7 +119,6 @@ void jumpAlignment(char *line, FILE *file)
         if (!fgets(line, 256, file))
         {
             line = NULL;
-            return (0);
         }
     }
 }
@@ -138,7 +144,9 @@ int getLength(char *line, int length)
                 length = atoi(newquery);
                 break;
             }
+            
         }
     }
+    return length;
 }
 /**************************************************************************/
