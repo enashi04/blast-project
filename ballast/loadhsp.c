@@ -1,7 +1,7 @@
 /**
  * @file loadhspv2.c
  * @author Ihsane E.
- * @brief AVEC LE MOINS DE POINTEURS POSSIBLES Y'EN A MARRE DES ALLOCATIONS MEMOIRES
+ * @brief 
  * @version 0.1
  * @date 2022-09-21
  * 
@@ -101,15 +101,15 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
 		strcpy(line, &line[1]);
 	}
 
-	if (strlen(line) <= 60)
+	if (strlen(line) <= 80)
 	{
-		for (i = strlen(line) - 1; i < 60; i++)
+		for (i = strlen(line) - 1; i < 80; i++)
 		{
 			line[i] = ' ';
 		}
 	}
 
-	line[60] = '\0';
+	line[80] = '\0';
 
 	seqres->desc = (char *)malloc(strlen(line)+1 );
 	strcpy(seqres->desc, line);
@@ -160,7 +160,6 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
 		/*begline = (char *) (line + strcspn (line," ") + 1);*/
 	}
 	seqres->outtext = outtext;
-
 
 	// fprintf(stdout, "outtext est :%s\n", seqres->outtext);
 
