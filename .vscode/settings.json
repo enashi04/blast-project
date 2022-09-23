@@ -4,7 +4,7 @@
     "tree.h": "c",
     "global.h": "c"
   },
-  "C_Cpp_Runner.cCompilerPath": "",
+  "C_Cpp_Runner.cCompilerPath": "/mnt/c/usr/bin/gcc",
   "C_Cpp_Runner.cppCompilerPath": "g++",
   "C_Cpp_Runner.debuggerPath": "gdb",
   "C_Cpp_Runner.cStandard": "",
