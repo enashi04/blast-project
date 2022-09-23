@@ -82,7 +82,7 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
 	simprf->nmatch = 0;
 
 	//on alloue de la mémoire au profil
-	profil = (double *)malloc(sizeof(double) * length);
+	profil = (double *)malloc(sizeof(double)); //pb ici
 
 	for (i = 0; i < length; i++)
 	{
@@ -98,7 +98,7 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
 
 	if (line[0] == '>')
 	{
-		strcpy(line, &line[1]);
+		memcpy(line, &line[1], strlen(line));//strcpy(line, &line[1]);
 	}
 
 	if (strlen(line) <= 80)
@@ -151,6 +151,7 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
 	while (strncmp(begline, "Score", 5) != 0)
 	{
 		outtext = (char *)malloc(strlen(outtext) + strlen(line) + 1);
+		printf("The line is %s\n", line);
 		strcat(outtext, line);
 		fgets(line, 256, file);
 		begline = line;
@@ -226,7 +227,7 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
 
 			ptrstr = (char *)(strrchr(line, ' '));
 			*ptrstr = '\0';
-			strcpy(line, (char *)(line + dline));
+			memcpy(line, (char*)(line+dline), strlen(line)+dline);//strcpy(line, (char *)(line + dline));
 
 			if (ok == 0)
 			{
@@ -473,7 +474,7 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
 				identique = 0;
 			}
 			*ptr += facteur * identique;
-
+			
 			ptr = (double *)(profil + i);
 			simptr = (double *)(simprf->prf + i - begin + 1);
 			*simptr = 0.0;
@@ -501,7 +502,7 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
 
 				if (*(seq + i - begin + 1) == '+')
 				{
-					*ptr = identique * facteur / 2;
+					*ptr = identique * facteur / 2; //ici pb
 					*simptr = SIM * fctr;
 
 					/********************************************************/
@@ -511,7 +512,7 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
 					/************************************************/
 					/*** Well... actually they're different       ***/
 
-					*ptr = identique * NETRA * facteur;
+					*ptr = identique * NETRA * facteur; //pb ici
 					*simptr = RIEN * fctr;
 					/************************************************/
 				}

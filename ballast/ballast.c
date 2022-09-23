@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
     Sbjmot *motifdb, *firstmotdb, *firstalnmotdb;
     BlastHeader blhd1, blhd2;
 
-    double *maxprofile;
+    
     double *maxprofile2;
     double *profiltotal;
     double *profiltotal2;
@@ -26,6 +26,8 @@ int main(int argc, char *argv[])
     double *trimmed;
     double *trimmed2;
     double *contribution;
+    double *maxprofile;
+    char *conserved;
     double maxvalue;
     double maxscore = 0.0;
     double maxmotifscore = 0.0;
@@ -41,7 +43,6 @@ int main(int argc, char *argv[])
     int mismatches, prevn;
     int nmotifs = 0;
 
-    char *conserved;
     char *conserved2;
     char *ptrstr;
     char *ptrseq;
@@ -151,6 +152,7 @@ int main(int argc, char *argv[])
         i=1; 
         profiltotal=loadHSP(seqres, infile, curline, length, conserved, maxprofile, 'p');
         int j =0;
+        printf("maxprofile est %ld\n", *maxprofile);
         while(curline[0]!='\0'){
             seqres->rank = i++; 
             seqres->next = (SeqHSP *)malloc(sizeof(SeqHSP));
@@ -165,10 +167,10 @@ int main(int argc, char *argv[])
                 addprofils(profiltotal, contribution, length);
             }
 
-            //printf("les seqres sont : %u\n", seqres->rank);
+        //     //printf("les seqres sont : %u\n", seqres->rank);
             
-            //printf("la contribution est de : %lf\n", *contribution);
-        }
+        //     //printf("la contribution est de : %lf\n", *contribution);
+         }
         seqres->rank=i++;
 
     }

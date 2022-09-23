@@ -14,7 +14,7 @@ all: $(EXEC)
 
 CC=gcc
 
-CFLAGS=-Wall
+CFLAGS=-Wall -g
 
 LDFLAGS=
 
