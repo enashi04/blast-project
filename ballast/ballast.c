@@ -152,25 +152,25 @@ int main(int argc, char *argv[])
         i=1; 
         profiltotal=loadHSP(seqres, infile, curline, length, conserved, maxprofile, 'p');
         int j =0;
-        printf("maxprofile est %ld\n", *maxprofile);
-        while(curline[0]!='\0'){
-            seqres->rank = i++; 
-            seqres->next = (SeqHSP *)malloc(sizeof(SeqHSP));
-            (seqres->next)->prev = seqres;
-			seqres = seqres->next;
-			seqres->next = NULL;
-            j++;
-            printf("Tour : %u\n", j);
-            contribution = loadHSP(seqres, infile, curline, length,conserved, maxprofile,'p');
+        printf("maxprofile est %f\n", *maxprofile);
+        // while(curline[0]!='\0'){
+        //     seqres->rank = i++; 
+        //     seqres->next = (SeqHSP *)malloc(sizeof(SeqHSP));
+        //     (seqres->next)->prev = seqres;
+		// 	seqres = seqres->next;
+		// 	seqres->next = NULL;
+        //     j++;
+        //     printf("Tour : %u\n", j);
+        //     contribution = loadHSP(seqres, infile, curline, length,conserved, maxprofile,'p');
             
-            if(strcmp(seqres->prev->sim->hsp, seqres->sim->hsp)!=0){
-                addprofils(profiltotal, contribution, length);
-            }
+        //     if(strcmp(seqres->prev->sim->hsp, seqres->sim->hsp)!=0){
+        //         addprofils(profiltotal, contribution, length);
+        //     }
 
-        //     //printf("les seqres sont : %u\n", seqres->rank);
+        // //     //printf("les seqres sont : %u\n", seqres->rank);
             
-        //     //printf("la contribution est de : %lf\n", *contribution);
-         }
+        // //     //printf("la contribution est de : %lf\n", *contribution);
+        //  }
         seqres->rank=i++;
 
     }

@@ -49,7 +49,7 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
 
 	char *begline;
 
-	double maxp;
+	double maxp =0;
 
 	int dline1, dline2;
 	char *startline = NULL;
@@ -61,14 +61,6 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
 	maxp = ValueMaxP(maxp, type);
 
 	initSimprf(seqres, simprf, maxp, type, profil, ptr, length);
-
-	profil = (double *)malloc(sizeof(double) * length);
-	for (i = 0; i < length; i++)
-	{
-		ptr = (double *)(profil + i);
-		*ptr = 0;
-	}
-
 
 	/**** Read description of database sequence ***************************************/
 	readDescOfDB(line);
@@ -112,13 +104,13 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
 		*ptrstr = '1';
 	}
 	sscanf((char *)(strrchr(line, '=') + 1), "%lf", &p);
+	seqres->prob=p;
+	simprf->p=p;
+	printf("On est sortie du score\n");
 
-	seqres->prob = p;
-	simprf->p = p;
-	printf("On eszet sortie du score\n");
-
-	if ((p >= maxp) || (p > 1))
+	if ((p >= maxp) || (p > 1)){
 		p = 1;
+	}
 	facteur = (1.0 - p);
 	fctr = 1;
 
@@ -352,7 +344,6 @@ void endOfBlast(char *line, SimPrf *simprf, int endofdbseq)
 {
 	if ((strncmp(line, "WARNING:", 8) == 0) || (strncmp(line, "  Database:", 11) == 0) || (strncmp(line, "Parameters:", 11) == 0))
 	{
-
 		line[0] = '\0';
 		endofdbseq = 1;
 		simprf->next = NULL;

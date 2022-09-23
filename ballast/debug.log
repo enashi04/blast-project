@@ -1,55 +1,32 @@
-==28125== Memcheck, a memory error detector
-==28125== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==28125== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==28125== Command: ./ballast -p MYCO.blastp -o test
-==28125== Parent PID: 27650
-==28125== 
-==28125== Invalid write of size 8
-==28125==    at 0x10A796: loadHSP (loadhsp.c:90)
-==28125==    by 0x1098A6: main (ballast.c:153)
-==28125==  Address 0x4a54f28 is 0 bytes after a block of size 8 alloc'd
-==28125==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
-==28125==    by 0x10A762: loadHSP (loadhsp.c:85)
-==28125==    by 0x1098A6: main (ballast.c:153)
-==28125== 
-
-valgrind: m_mallocfree.c:280 (mk_plain_bszB): Assertion 'bszB != 0' failed.
-valgrind: This is probably caused by your program erroneously writing past the
-end of a heap block and corrupting heap metadata.  If you fix any
-invalid writes reported by Memcheck, this assertion failure will
-probably go away.  Please try that before reporting this as a bug.
-
-
-host stacktrace:
-==28125==    at 0x58046FFA: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux)
-==28125==    by 0x58047127: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux)
-==28125==    by 0x580472CB: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux)
-==28125==    by 0x580519A4: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux)
-==28125==    by 0x58005BF7: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux)
-==28125==    by 0x580A7204: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux)
-==28125==    by 0x580F5FD4: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux)
-
-sched status:
-  running_tid=1
-
-Thread 1: status = VgTs_Runnable (lwpid 28125)
-==28125==    at 0x483B723: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
-==28125==    by 0x483E017: realloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
-==28125==    by 0x10A7F9: loadHSP (loadhsp.c:96)
-==28125==    by 0x1098A6: main (ballast.c:153)
-client stack range: [0x1FFEFFE000 0x1FFF000FFF] client SP: 0x1FFEFFF880
-valgrind stack range: [0x1002BAA000 0x1002CA9FFF] top usage: 18696 of 1048576
-
-
-Note: see also the FAQ in the source distribution.
-It contains workarounds to several common problems.
-In particular, if Valgrind aborted or crashed after
-identifying problems in your program, there's a good chance
-that fixing those problems will prevent Valgrind aborting or
-crashing, especially if it happened in m_mallocfree.c.
-
-If that doesn't help, please report this bug to: www.valgrind.org
-
-In the bug report, send all the above text, the valgrind
-version, and what OS and version you are using.  Thanks.
-
+==29804== Memcheck, a memory error detector
+==29804== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==29804== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==29804== Command: ./ballast -p MYCO.blastp -o test
+==29804== Parent PID: 28416
+==29804== 
+==29804== Conditional jump or move depends on uninitialised value(s)
+==29804==    at 0x483EC2D: strcat (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==29804==    by 0x10A9E6: loadHSP (loadhsp.c:155)
+==29804==    by 0x1098A6: main (ballast.c:153)
+==29804== 
+==29804== Conditional jump or move depends on uninitialised value(s)
+==29804==    at 0x483EC2D: strcat (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==29804==    by 0x10AE49: loadHSP (loadhsp.c:244)
+==29804==    by 0x1098A6: main (ballast.c:153)
+==29804== 
+==29804== 
+==29804== HEAP SUMMARY:
+==29804==     in use at exit: 12,094 bytes in 32 blocks
+==29804==   total heap usage: 54 allocs, 22 frees, 22,404 bytes allocated
+==29804== 
+==29804== LEAK SUMMARY:
+==29804==    definitely lost: 10,252 bytes in 20 blocks
+==29804==    indirectly lost: 1,762 bytes in 10 blocks
+==29804==      possibly lost: 0 bytes in 0 blocks
+==29804==    still reachable: 80 bytes in 2 blocks
+==29804==         suppressed: 0 bytes in 0 blocks
+==29804== Rerun with --leak-check=full to see details of leaked memory
+==29804== 
+==29804== Use --track-origins=yes to see where uninitialised values come from
+==29804== For lists of detected and suppressed errors, rerun with: -s
+==29804== ERROR SUMMARY: 11 errors from 2 contexts (suppressed: 0 from 0)

@@ -82,7 +82,7 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
 	simprf->nmatch = 0;
 
 	//on alloue de la mémoire au profil
-	profil = (double *)malloc(sizeof(double)); //pb ici
+	profil = (double *)malloc(sizeof(double) * length); //pb ici
 
 	for (i = 0; i < length; i++)
 	{
@@ -153,6 +153,8 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
 		outtext = (char *)malloc(strlen(outtext) + strlen(line) + 1);
 		printf("The line is %s\n", line);
 		strcat(outtext, line);
+		printf("outtext %s\n", outtext);
+
 		fgets(line, 256, file);
 		begline = line;
 		if (*begline == ' ')
