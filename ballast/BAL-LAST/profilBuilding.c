@@ -29,7 +29,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
     int endofdbseq = 0, ok, okhsp, gapped, taux, naas, begin, end, debut, dline, n;
     int debdb, enddb, begdb, dline2, dline1;
 
-    printf("Nous nous trouvons dans la ligne : %s\n", line);
+   // printf("Nous nous trouvons dans la ligne : %s\n", line);
 
     // si on a comme argument lors de l'exécution du programme maxp ou nmaxp
     // pour l'instant pas notre cas
@@ -113,13 +113,13 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
         strcpy(seqres->access, seqres->name);
     }
     fgets(line, 256, file);
-    printf("nous somme à la ligne suivante : %s\n", line);
+   // printf("nous somme à la ligne suivante : %s\n", line);
     begline = line;
     if (*begline == ' ')
     {
         begline++;
     }
-    printf("begline is %s\n", begline);
+  //  printf("begline is %s\n", begline);
     // comparaison entre la ligne où on se trouve actuellement et la ligne finale avant
     // l'analyse
     while (strncmp(begline, "Score", 5) != 0)
@@ -137,7 +137,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
     }
     // on met à jour outtext
     seqres->outtext = outtext;
-    printf("Nous sommes actuellement à la ligne : %s\n", line);
+    //printf("Nous sommes actuellement à la ligne : %s\n", line);
 
     // rechercher la première occurence dans laquelle se trouve =e-
     ptrstr = (char *)(strstr(line, "e-"));
@@ -148,7 +148,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
     }
     // ici on va récupérer la e-value qui va correspondre à p.
     sscanf((char *)(strrchr(line, '=') + 1), "%lf", &p);
-    printf("p est %lf\n", p);
+   // printf("p est %lf\n", p);
     seqres->prob = p;
     simprf->p = p;
 
@@ -217,13 +217,13 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
             // là on recherche d'abord en début de la ligne le numéro de début puis de fin
             sscanf((char *)(strpbrk(line, "0123456789")), "%d", &debut);
             sscanf((char *)(strrchr(line, ' ')), "%d", &end);
-            printf("le début est %d; la fin est %d\n", debut, end);
+            //printf("le début est %d; la fin est %d\n", debut, end);
             // la dline correspond à la longueur de la séquence (autour de 30 normalement)
             dline = strlen(line) - strlen(strpbrk(line + 1, "ABCDEFGHIJKLMNOPQRSTUVWXYZ-"));
             ptrstr = (char *)(strrchr(line, ' '));
             *ptrstr = '\0';
             strcpy(line, (char *)(line + dline));
-            printf("la ligne ici est %s\n", line);
+            //printf("la ligne ici est %s\n", line);
 
             if (ok == 0)
             {
@@ -235,7 +235,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
                 queryseq = (char *)realloc(queryseq,strlen(line) + strlen(queryseq) + 1); // it was 1
             }
             strcpy(queryseq, line);
-            printf("queryseq %s\n", queryseq);
+           // printf("queryseq %s\n", queryseq);
 
             fgets(line, 256, file);
 
@@ -262,8 +262,10 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
         //on va vers la target
          else if(strncmp(line, "Sbjct", 5) == 0)
 		{
+            printf("on est dans la subject\n");
 			sscanf((char *)(strpbrk(line, "0123456789")), "%d", &debdb);
 			sscanf((char *)(strrchr(line, ' ')), "%d", &enddb);
+            printf("end of subject is : %u\n", enddb);
 
 			dline1 = strlen(line);
 			startline = strpbrk(line + 1, "ABCDEFGHIJKLMNOPQRSTUVWXYZ-");
@@ -275,6 +277,8 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
 			}
 			else
 			{
+                printf("on rentre là?");
+
 				dline2 = strlen(startline);
 				dline = dline1 - dline2;
 				ptrstr = (char *)strchr((char *)(line + dline), ' ');
