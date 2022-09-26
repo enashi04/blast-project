@@ -1,0 +1,211 @@
+==14406== Memcheck, a memory error detector
+==14406== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==14406== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==14406== Command: ./ballast -p MYCO.blastp -o test
+==14406== Parent PID: 1699
+==14406== 
+==14406== Source and destination overlap in strcpy(0x1ffefffa00, 0x1ffefffa01)
+==14406==    at 0x483F150: strcpy (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14406==    by 0x10A7ED: loadHSP (loadhsp.c:139)
+==14406==    by 0x109866: main (ballast.c:147)
+==14406== 
+==14406== Source and destination overlap in strcpy(0x1ffefffa00, 0x1ffefffa0c)
+==14406==    at 0x483F150: strcpy (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14406==    by 0x10ADAE: loadHSP (loadhsp.c:249)
+==14406==    by 0x109866: main (ballast.c:147)
+==14406== 
+==14406== Source and destination overlap in strcpy(0x1ffefffa00, 0x1ffefffa01)
+==14406==    at 0x483F150: strcpy (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14406==    by 0x10A7ED: loadHSP (loadhsp.c:139)
+==14406==    by 0x10995B: main (ballast.c:157)
+==14406== 
+==14406== Source and destination overlap in strcpy(0x1ffefffa00, 0x1ffefffa0c)
+==14406==    at 0x483F150: strcpy (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14406==    by 0x10ADAE: loadHSP (loadhsp.c:249)
+==14406==    by 0x10995B: main (ballast.c:157)
+==14406== 
+==14406== Conditional jump or move depends on uninitialised value(s)
+==14406==    at 0x483EB9C: __strchr_sse2 (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14406==    by 0x10BFA9: handlegaps (handlegaps.c:101)
+==14406==    by 0x10B595: loadHSP (loadhsp.c:397)
+==14406==    by 0x10995B: main (ballast.c:157)
+==14406== 
+==14406== Conditional jump or move depends on uninitialised value(s)
+==14406==    at 0x483EBAE: __strchr_sse2 (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14406==    by 0x10BFA9: handlegaps (handlegaps.c:101)
+==14406==    by 0x10B595: loadHSP (loadhsp.c:397)
+==14406==    by 0x10995B: main (ballast.c:157)
+==14406== 
+==14406== Conditional jump or move depends on uninitialised value(s)
+==14406==    at 0x4843E33: strcspn (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14406==    by 0x10BFD5: handlegaps (handlegaps.c:104)
+==14406==    by 0x10B595: loadHSP (loadhsp.c:397)
+==14406==    by 0x10995B: main (ballast.c:157)
+==14406== 
+==14406== Invalid read of size 8
+==14406==    at 0x10B8C4: loadHSP (loadhsp.c:482)
+==14406==    by 0x10995B: main (ballast.c:157)
+==14406==  Address 0x4a54e18 is 0 bytes after a block of size 4,072 alloc'd
+==14406==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14406==    by 0x109768: main (ballast.c:128)
+==14406== 
+==14406== Invalid write of size 8
+==14406==    at 0x10B8DD: loadHSP (loadhsp.c:482)
+==14406==    by 0x10995B: main (ballast.c:157)
+==14406==  Address 0x4a54e18 is 0 bytes after a block of size 4,072 alloc'd
+==14406==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14406==    by 0x109768: main (ballast.c:128)
+==14406== 
+==14406== Invalid write of size 8
+==14406==    at 0x10B9CA: loadHSP (loadhsp.c:492)
+==14406==    by 0x10995B: main (ballast.c:157)
+==14406==  Address 0x4a99b08 is 0 bytes after a block of size 4,072 alloc'd
+==14406==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14406==    by 0x10A718: loadHSP (loadhsp.c:124)
+==14406==    by 0x10995B: main (ballast.c:157)
+==14406== 
+==14406== Invalid write of size 1
+==14406==    at 0x10BA22: loadHSP (loadhsp.c:495)
+==14406==    by 0x10995B: main (ballast.c:157)
+==14406==  Address 0x4a53dee is 0 bytes after a block of size 510 alloc'd
+==14406==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14406==    by 0x10974D: main (ballast.c:127)
+==14406== 
+==14406== Conditional jump or move depends on uninitialised value(s)
+==14406==    at 0x10B95D: loadHSP (loadhsp.c:490)
+==14406==    by 0x10995B: main (ballast.c:157)
+==14406== 
+==14406== Conditional jump or move depends on uninitialised value(s)
+==14406==    at 0x10B98A: loadHSP (loadhsp.c:490)
+==14406==    by 0x10995B: main (ballast.c:157)
+==14406== 
+==14406== Conditional jump or move depends on uninitialised value(s)
+==14406==    at 0x10B9B7: loadHSP (loadhsp.c:490)
+==14406==    by 0x10995B: main (ballast.c:157)
+==14406== 
+==14406== Invalid read of size 1
+==14406==    at 0x10B958: loadHSP (loadhsp.c:490)
+==14406==    by 0x10995B: main (ballast.c:157)
+==14406==  Address 0x4a9d35c is 0 bytes after a block of size 524 alloc'd
+==14406==    at 0x483DFAF: realloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14406==    by 0x10AF46: loadHSP (loadhsp.c:278)
+==14406==    by 0x10995B: main (ballast.c:157)
+==14406== 
+==14406== Invalid read of size 1
+==14406==    at 0x10B985: loadHSP (loadhsp.c:490)
+==14406==    by 0x10995B: main (ballast.c:157)
+==14406==  Address 0x4a9d35c is 0 bytes after a block of size 524 alloc'd
+==14406==    at 0x483DFAF: realloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14406==    by 0x10AF46: loadHSP (loadhsp.c:278)
+==14406==    by 0x10995B: main (ballast.c:157)
+==14406== 
+==14406== Invalid read of size 1
+==14406==    at 0x10B9B2: loadHSP (loadhsp.c:490)
+==14406==    by 0x10995B: main (ballast.c:157)
+==14406==  Address 0x4a9d35c is 0 bytes after a block of size 524 alloc'd
+==14406==    at 0x483DFAF: realloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14406==    by 0x10AF46: loadHSP (loadhsp.c:278)
+==14406==    by 0x10995B: main (ballast.c:157)
+==14406== 
+==14406== Invalid read of size 1
+==14406==    at 0x10BA1B: loadHSP (loadhsp.c:495)
+==14406==    by 0x10995B: main (ballast.c:157)
+==14406==  Address 0x4a9d35c is 0 bytes after a block of size 524 alloc'd
+==14406==    at 0x483DFAF: realloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14406==    by 0x10AF46: loadHSP (loadhsp.c:278)
+==14406==    by 0x10995B: main (ballast.c:157)
+==14406== 
+==14406== Invalid read of size 1
+==14406==    at 0x483EB94: __strchr_sse2 (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14406==    by 0x10BFA9: handlegaps (handlegaps.c:101)
+==14406==    by 0x10B595: loadHSP (loadhsp.c:397)
+==14406==    by 0x10995B: main (ballast.c:157)
+==14406==  Address 0x4abb6af is 2 bytes after a block of size 77 alloc'd
+==14406==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14406==    by 0x10AE0C: loadHSP (loadhsp.c:259)
+==14406==    by 0x10995B: main (ballast.c:157)
+==14406== 
+==14406== Invalid read of size 1
+==14406==    at 0x4843E2B: strcspn (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14406==    by 0x10BFD5: handlegaps (handlegaps.c:104)
+==14406==    by 0x10B595: loadHSP (loadhsp.c:397)
+==14406==    by 0x10995B: main (ballast.c:157)
+==14406==  Address 0x4abb6af is 2 bytes after a block of size 77 alloc'd
+==14406==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14406==    by 0x10AE0C: loadHSP (loadhsp.c:259)
+==14406==    by 0x10995B: main (ballast.c:157)
+==14406== 
+==14406== Invalid write of size 1
+==14406==    at 0x10BF1B: handlegaps (handlegaps.c:86)
+==14406==    by 0x10B595: loadHSP (loadhsp.c:397)
+==14406==    by 0x10995B: main (ballast.c:157)
+==14406==  Address 0x4af0299 is 0 bytes after a block of size 73 alloc'd
+==14406==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14406==    by 0x10AE0C: loadHSP (loadhsp.c:259)
+==14406==    by 0x10995B: main (ballast.c:157)
+==14406== 
+==14406== Invalid write of size 8
+==14406==    at 0x10BA6F: loadHSP (loadhsp.c:505)
+==14406==    by 0x10995B: main (ballast.c:157)
+==14406==  Address 0x4af2c20 is 8 bytes after a block of size 4,072 alloc'd
+==14406==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14406==    by 0x10A718: loadHSP (loadhsp.c:124)
+==14406==    by 0x10995B: main (ballast.c:157)
+==14406== 
+==14406== Invalid write of size 8
+==14406==    at 0x10BAA2: loadHSP (loadhsp.c:512)
+==14406==    by 0x10995B: main (ballast.c:157)
+==14406==  Address 0x4af2c28 is 16 bytes after a block of size 4,072 alloc'd
+==14406==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14406==    by 0x10A718: loadHSP (loadhsp.c:124)
+==14406==    by 0x10995B: main (ballast.c:157)
+==14406== 
+
+valgrind: m_mallocfree.c:305 (get_bszB_as_is): Assertion 'bszB_lo == bszB_hi' failed.
+valgrind: Heap block lo/hi size mismatch: lo = 576, hi = 0.
+This is probably caused by your program erroneously writing past the
+end of a heap block and corrupting heap metadata.  If you fix any
+invalid writes reported by Memcheck, this assertion failure will
+probably go away.  Please try that before reporting this as a bug.
+
+
+host stacktrace:
+==14406==    at 0x58046FFA: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux)
+==14406==    by 0x58047127: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux)
+==14406==    by 0x580472CB: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux)
+==14406==    by 0x580514B4: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux)
+==14406==    by 0x5803DE9A: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux)
+==14406==    by 0x5803CD9F: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux)
+==14406==    by 0x58041F04: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux)
+==14406==    by 0x5803C1D8: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux)
+==14406==    by 0x58017AF4: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux)
+==14406==    by 0x1002D7EA33: ???
+==14406==    by 0x1002CA9F2F: ???
+==14406==    by 0x1002CA9F17: ???
+==14406==    by 0x1002CA9F2F: ???
+==14406==    by 0x1002CA9F3F: ???
+
+sched status:
+  running_tid=1
+
+Thread 1: status = VgTs_Runnable (lwpid 14406)
+==14406==    at 0x483EBA0: __strchr_sse2 (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14406==    by 0x10BFA9: handlegaps (handlegaps.c:101)
+==14406==    by 0x10B595: loadHSP (loadhsp.c:397)
+==14406==    by 0x10995B: main (ballast.c:157)
+client stack range: [0x1FFEFFD000 0x1FFF000FFF] client SP: 0x1FFEFFF5A8
+valgrind stack range: [0x1002BAA000 0x1002CA9FFF] top usage: 18696 of 1048576
+
+
+Note: see also the FAQ in the source distribution.
+It contains workarounds to several common problems.
+In particular, if Valgrind aborted or crashed after
+identifying problems in your program, there's a good chance
+that fixing those problems will prevent Valgrind aborting or
+crashing, especially if it happened in m_mallocfree.c.
+
+If that doesn't help, please report this bug to: www.valgrind.org
+
+In the bug report, send all the above text, the valgrind
+version, and what OS and version you are using.  Thanks.
+
