@@ -9,6 +9,54 @@
  * 
  */
 
+/*** loadHSP *****************************************************/
+/*                                                               */
+/*   Loads HSPs into seqres structure and derives contribution   */
+/*   to profile and similarity profile for rescoring.            */
+/*   Returns contribution to profile pointer.                    */
+/*                                                               */
+/*****************************************************************/
+/* SeqHSP *seqres    : Current result sequence structure         */
+/* FILE   *file      : Current BLAST result file                 */
+/* char   *line      : Current line                              */
+/* int    *length    : Query sequence (i.e. profile) length      */
+/* char   *conserved : Residues of query sequences appearing in  */
+/*                     at least one HSP                          */
+/* char   *type      : 'p' for protein or 'n' for nucleotide     */
+/*                                                               */
+/* double *profil    : contribution to profile                   */
+/* double *ptr       : pointer to profil                         */
+/* double *simptr    : current similarity profile                */
+/* SimPrf *simprf    : whole HSP description                     */
+/* int     debut     : start position of current HSP             */
+/* int     begin     : start position of currently read portion  */
+/*                     of HSP                                    */
+/* int     end       : end position of current HSP               */
+/* int     debdb     : start position of current HSP in DB seq.  */
+/* int     begdb     : start position of currently read portion  */
+/*                     of HSP in DB sequence                     */
+/* int     enddb     : end position of current HSP in DB sequence*/
+/* int     dline     : position in line where sequence actually  */
+/*                     starts in BLAST result files              */
+/* int     ok        : 0 if first part of HSP not yet read,      */
+/*                     1 otherwise                               */
+/* int     okhsp     : 0 if first part of database sequence not  */
+/*                       yet read                                */
+/*                     1 otherwise                               */
+/* double  facteur   : modifying factor for contribution to      */
+/*                     profile = 1 - P(N)                        */
+/* int     fctr      : factor to build similarity profile        */
+/* char   *seq       : HSP alignment description                 */
+/* char   *seqhsp    : database sequence in HSP                  */
+/* char   *outtext   : last part of database sequence description*/
+/* double  p         : read E(N) value                           */
+/*                     sequence into profile                     */
+/* int     identique : 0 if 100% identity, 1 otherwise           */
+/* int     taux      : % identity for HSP                        */
+/* int     naas      : number of amino acid in 100% identical HSP*/
+/*****************************************************************/
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -24,15 +72,13 @@ extern SimPrf *handlegaps(SimPrf *simprf);
 
 double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conserved, double *maxprofile, char type)
 {
-
 	/**********déclaration des variables***********/
 	double *profil, *ptr, *simptr;
 	SimPrf *simprf;
 
-	int i, j, debut, begin, end;
+	int i, debut, begin, end;
 	int debdb, begdb, enddb;
 	int dline; //position in line where sequence actually starts in BLAST result files  
-	int k = 1;
 	int ok = 0;
 	int okhsp = 0;
 	int endofdbseq = 0;
@@ -55,9 +101,6 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
 
 	int dline1, dline2;
 	char *startline;
-
-	
-	/**** Initialisation **************************************************************/
 // concerne les paramètres lors de l'execution du programme
 	if (getargdouble("-maxp", &maxp) == NULL)
 		maxp = DEFMAXP;
@@ -66,14 +109,11 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
 		if (getargdouble("-nmaxp", &maxp) == NULL)
 			maxp = DEFMAXP;
 	}
-//on initialise le résultat de la séquence 
+	//on initialise le seqres
 	seqres->sc = 0;
 	seqres->nmatch = 0;
-
 	seqres->type = type;
-
-	seqres->risedup = ' ';
-
+	seqres->risedup = ' ';	
 	seqres->sim = (SimPrf *)malloc(sizeof(SimPrf));
 	simprf = seqres->sim;
 	simprf->text = NULL;
@@ -87,17 +127,16 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
 	{
 		ptr = (double *)(profil + i);//typecasting double adresse de profil+i
 		*ptr = 0; //valeur de p de base mais changer en 0
-		//printf("ptr : %d\n", ptr);
 	}
 	seqres->p = 1;
 	seqres->prob = maxp;
 
-	outtext = (char *)realloc(outtext, strlen(line) + 1);
+	outtext = (char *)malloc(strlen(line) + 1);
 	strcpy(outtext, line);
 
 	if (line[0] == '>')
 	{
-		memcpy(line, &line[1], strlen(line));//strcpy(line, &line[1]);
+		strcpy(line, &line[1]);
 	}
 
 	if (strlen(line) <= 90)
@@ -113,7 +152,6 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
 
 	seqres->desc = (char *)malloc(strlen(line)+1 );
 	strcpy(seqres->desc, line);
-	fprintf(stdout, "seqres->desc est :%s\n", seqres->desc);
 
 	ptrstr = strtok(line, " ");
 	seqres->name = (char *)malloc(strlen(ptrstr) + 1);
@@ -130,13 +168,11 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
 	{
 		seqres->access = (char *)malloc(strlen(ptrstr) + 1);
 		strcpy(seqres->access, ptrstr);
-		//fprintf(stdout, "seqres->access est :%s\n", seqres->access);
 	}
 	else
 	{
 		seqres->access = (char *)malloc(strlen(seqres->name) + 1);
 		strcpy(seqres->access, seqres->name);
-		//fprintf(stdout, "seqres->access est :%s\n", seqres->access);
 	}
 
 	fgets(line, 256, file);
@@ -144,14 +180,17 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
 	begline = line;
 	if (*begline == ' ')
 		begline++;
-		//fprintf(stdout, "begline %s\n", begline);
 
 	/* begline = (char *) (line + strcspn (line," ") + 1);*/
 
 	while (strncmp(begline, "Score", 5) != 0)
 	{
 		outtext = (char *)malloc(strlen(outtext) + strlen(line) + 1);
+<<<<<<< HEAD
 		strcpy(outtext, line); //au lieu de strcat
+=======
+		strcat(outtext, line);
+>>>>>>> 9ebeb480743f851beb4a9f40fcb9a06b3cae0d4b
 
 		fgets(line, 256, file);
 		begline = line;
@@ -161,20 +200,15 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
 		/*begline = (char *) (line + strcspn (line," ") + 1);*/
 	}
 	seqres->outtext = outtext;
-
-	// fprintf(stdout, "outtext est :%s\n", seqres->outtext);
-
-	/**********************************************************************************/
-
-	/**********************************************************************************/
+	
 	/**** Read 1st HSP probability as given by BLAST **********************************/
-	// fprintf(stdout, "ici on va lire la premiere probabilité de hsp donnée par blast\n");
 	ptrstr = (char *)(strstr(line, "= e-"));
 	if (ptrstr != NULL)
 	{
 		ptrstr = (char *)(ptrstr + 1);
 		*ptrstr = '1';
 	}
+	printf("ptrstr = %s\n", ptrstr);
 	sscanf((char *)(strrchr(line, '=') + 1), "%lf", &p);
 	seqres->prob = p;
 
@@ -189,19 +223,12 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
 
 	while (endofdbseq == 0)
 	{
-
-		/**************************************************************************/
-		/**************************************************************************/
 		/**** Huuhhhh.... t'looks like we've run off the file and should stop *****/
-
 		if (!fgets(line, 256, file) || (feof(file) != 0))
 		{
 			line[0] = '\0';
 			endofdbseq = 1;
 		}
-		/**************************************************************************/
-
-		/**************************************************************************/
 		/**** This is supposed to be the end of the BLAST results, we don't    ****/
 		/**** need to read the file any further and may leave                  ****/
 
@@ -211,9 +238,6 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
 			endofdbseq = 1;
 			simprf->next = NULL;
 		}
-		/**************************************************************************/
-
-		/**************************************************************************/
 		/**** The current line starts with "Query", we are therefore reading  *****/
 		/**** the alignment into *seq                                         *****/
 
@@ -268,7 +292,7 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
 		}
 		/**************************************************************************/
 
-		/**************************************************************************/
+		}
 		/**** The current line starts with "Sbjct", we are therefore reading  *****/
 		/**** the database sequence into seqhsp                               *****/
 
@@ -307,14 +331,11 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
 				}
 
 				strcat(seqhsp, (char *)(line + dline));
-				//fprintf(stdout, "seqhsp : %s\n", seqhsp);
 				okhsp = 1;
 			}
 			printf("fin du subject\n");
 		}
-		/**************************************************************************/
 
-		/**************************************************************************/
 		/**** Don't keep HSPs longer than a tenth of the query sequence length ****/
 		/**** AND presenting a 100% identity                                   ****/
 
@@ -331,27 +352,19 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
 			simprf->text = (char *)realloc(simprf->text, strlen(simprf->text) + strlen(line) + 14);
 			strcat(simprf->text, "             ");
 			strcat(simprf->text, line);
-			//fprintf(stdout, "simprf->text %s \n", simprf->text);
 			sscanf((char *)(strchr(line, '(') + 1), "%d", &taux);
 			sscanf((char *)(strchr(line, '=') + 1), "%d", &naas);
 			simprf->pcid = taux;
-			fprintf(stdout, "La simprftext est : %s\n", simprf->text);
 
-
-			//printf("le taux est de %u\n", simprf->pcid);
 			simprf->nid = naas;
 			printf("We're done\n");
 			//printf("naas est de %u\n", simprf->nid);
 		}
-		/**************************************************************************/
-
-		/**************************************************************************/
 		/**** At this point, we have finished reading the current HSP and are  ****/
 		/**** ready to deal with it                                            ****/
 
 		if (((strchr("[1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz>", *line)) && ((strncmp(line, "Query", 5) != 0) && (strncmp(line, "Sbjct", 5) != 0) && (strncmp(line, "Score", 5) != 0) && (strncmp(line, "Identities", 10) != 0))) || (strncmp(line, "WARNING:", 8) == 0) || (strncmp(line, "  Database:", 11) == 0) || (strncmp(line, "Score", 5) == 0) || (strncmp(line, " Score", 6) == 0) || (strncmp(line, "Parameters:", 11) == 0))
 		{
-			/**************************************************************************/
 			/**** Let's check that the current database sequence doesn't contain   ****/
 			/**** too many low complexity subsequences in the region where the HSP ****/
 			/**** has been found. Otherwise, we simply reject this HSP (p set to 1)****/
@@ -360,7 +373,6 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
 			{
 				p = 1;
 			}
-			/**************************************************************************/
 
 			simprf->hsp = seqhsp;
 			simprf->queryseq = queryseq;
@@ -368,8 +380,6 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
 			simprf->next = NULL;
 			queryseq = NULL;
 			seq = NULL;
-
-			/**************************************************************************/
 
 			if ((p >= maxp) || (p > 1))
 				p = 1;
@@ -396,7 +406,6 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
 				simprf = handlegaps(simprf);
 			}
 
-			/**************************************************************************/
 			/**** The current line starts with " Score", we are therefore starting ****/
 			/**** to read a new HSP                                                ****/
 
@@ -431,7 +440,6 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
 					seqres->prob = p;
 				simprf->p = p;
 			}
-			/**************************************************************************/
 			if (*line == '>')
 				endofdbseq = 1;
 		}
@@ -472,11 +480,8 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
 		printf("Sbjct %6d %s %d\n\n\n", begdb, seqhsp, enddb);
 		fflush(NULL);
 #endif
-
-		/**************************************************************************/
 		/**** Update the profile for this sequence accounting for the current  ****/
 		/**** HSP and create the similarity profile for the current HSP        ****/
-
 		for (i = begin - 1; i < end; i++)
 		{
 			ptr = (double *)(maxprofile + i);
@@ -489,8 +494,6 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
 			ptr = (double *)(profil + i);
 			simptr = (double *)(simprf->prf + i - begin + 1);
 			*simptr = 0.0;
-
-			/****************************************************************/
 			/*** Aligned Aas in Query sequence and Database sequence are ****/
 			/*** identical                                               ****/
 
@@ -498,16 +501,11 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
 			{
 				*ptr = facteur * identique;
 				*simptr = ID * fctr;
-				//printf("le facteur de similitude est : %u\n", fctr);
-
 				ptrstr = (char *)(conserved + i);
 				*ptrstr = *(seq + i - begin + 1);
-
-				/****************************************************************/
 			}
 			else
 			{
-				/********************************************************/
 				/*** Aligned Aas in Query and Database sequences are  ***/
 				/*** similar                                          ***/
 				if (*(seq + i - begin + 1) == '+')
@@ -516,21 +514,16 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
 
 					*ptr = identique * facteur / 2; //ici pb
 					*simptr = SIM * fctr;
-
-					/********************************************************/
 				}
 				else
 				{
-					/************************************************/
 					/*** Well... actually they're different       ***/
 					//printf("différent\n");
 					*ptr = identique * NETRA * facteur; //pb ici
 					*simptr = RIEN * fctr;
-					/************************************************/
 				}
 			}
 		}
-		/**************************************************************************/
 	}
 	fprintf(stdout, "le smptr est de : %lf\n", *simptr);
 	/**************************************************************************/
@@ -540,13 +533,6 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
 	/**********************************************************************************/
 	/**** Bye, bye...  ****************************************************************/
 
-	/*
-	simprf->queryseq = queryseq;
-	simprf->aln = seq;
-	simprf->hsp = seqhsp;
-	simprf->next = NULL;
-	*/
-	//printf("Le profil est : %lf\n", *profil);
 	return profil;
 }
 /**********************************************************************************/

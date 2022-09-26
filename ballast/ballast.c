@@ -18,13 +18,9 @@ int main(int argc, char *argv[])
     BlastHeader blhd1, blhd2;
 
     
-    double *maxprofile2;
     double *profiltotal;
-    double *profiltotal2;
     double *smoothed;
-    double *smoothed2;
     double *trimmed;
-    double *trimmed2;
     double *contribution;
     double *maxprofile;
     char *conserved;
@@ -34,23 +30,20 @@ int main(int argc, char *argv[])
     double *ptrdbl;
     float weight;
     int length;
-    int length2;
     int i;
 
     float msfseuil;
     float tableseuil;
 
-    int mismatches, prevn;
-    int nmotifs = 0;
+    // int mismatches, prevn;
+    // int nmotifs = 0;
 
     char *conserved2;
     char *ptrstr;
     char *ptrseq;
     char *lastchar;
     char *infilename;
-    char *infilename2;
     char *outfilename;
-    char *outfilename2;
     char *msffilename;
     char *tablefilename;
     char *anchorfilename;
@@ -153,19 +146,32 @@ int main(int argc, char *argv[])
         i=1; 
         profiltotal=loadHSP(seqres, infile, curline, length, conserved, maxprofile, 'p');
         printf("maxprofile est %f\n", *maxprofile);
+<<<<<<< HEAD
         while(curline[0]!=-1){
+=======
+         while(curline[0]!='\0'){
+            printf("Tour : %u\n", j);
+>>>>>>> 9ebeb480743f851beb4a9f40fcb9a06b3cae0d4b
             seqres->rank = i++; 
             seqres->next = (SeqHSP *)malloc(sizeof(SeqHSP));
             (seqres->next)->prev = seqres;
 			seqres = seqres->next;
 			seqres->next = NULL;
+<<<<<<< HEAD
             j++;
             printf("Tour : %u\n", j);
+=======
+>>>>>>> 9ebeb480743f851beb4a9f40fcb9a06b3cae0d4b
             contribution = loadHSP(seqres, infile, curline, length,conserved, maxprofile,'p');
             
             if(strcmp(seqres->prev->sim->hsp, seqres->sim->hsp)!=0){
                 addprofils(profiltotal, contribution, length);
             }
+<<<<<<< HEAD
+=======
+            j++;
+        }
+>>>>>>> 9ebeb480743f851beb4a9f40fcb9a06b3cae0d4b
 
         //     //printf("les seqres sont : %u\n", seqres->rank);
             

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ==10535== Memcheck, a memory error detector
 ==10535== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
 ==10535== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
@@ -152,6 +153,182 @@
 ==10535== 
 
 valgrind: m_mallocfree.c:305 (get_bszB_as_is): Assertion 'bszB_lo == bszB_hi' failed.
+=======
+==460== Memcheck, a memory error detector
+==460== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==460== Using Valgrind-3.16.1 and LibVEX; rerun with -h for copyright info
+==460== Command: ./ballast -p MYCO.blastp -o tesst
+==460== Parent PID: 9
+==460== 
+==460== Conditional jump or move depends on uninitialised value(s)
+==460==    at 0x483B969: strcat (vg_replace_strmem.c:308)
+==460==    by 0x10A697: loadHSP (loadhsp.c:138)
+==460==    by 0x1095E7: main (ballast.c:146)
+==460== 
+==460== Source and destination overlap in strcpy(0x1ffefffcb0, 0x1ffefffcbc)
+==460==    at 0x483BE88: strcpy (vg_replace_strmem.c:511)
+==460==    by 0x10AA00: loadHSP (loadhsp.c:195)
+==460==    by 0x1095E7: main (ballast.c:146)
+==460== 
+==460== Conditional jump or move depends on uninitialised value(s)
+==460==    at 0x483B969: strcat (vg_replace_strmem.c:308)
+==460==    by 0x10AA75: loadHSP (loadhsp.c:206)
+==460==    by 0x1095E7: main (ballast.c:146)
+==460== 
+==460== Conditional jump or move depends on uninitialised value(s)
+==460==    at 0x483B969: strcat (vg_replace_strmem.c:308)
+==460==    by 0x10A697: loadHSP (loadhsp.c:138)
+==460==    by 0x1096A9: main (ballast.c:156)
+==460== 
+==460== Source and destination overlap in strcpy(0x1ffefffcb0, 0x1ffefffcbc)
+==460==    at 0x483BE88: strcpy (vg_replace_strmem.c:511)
+==460==    by 0x10AA00: loadHSP (loadhsp.c:195)
+==460==    by 0x1096A9: main (ballast.c:156)
+==460== 
+==460== Conditional jump or move depends on uninitialised value(s)
+==460==    at 0x483B969: strcat (vg_replace_strmem.c:308)
+==460==    by 0x10AA75: loadHSP (loadhsp.c:206)
+==460==    by 0x1096A9: main (ballast.c:156)
+==460== 
+==460== Conditional jump or move depends on uninitialised value(s)
+==460==    at 0x483B938: index (vg_replace_strmem.c:250)
+==460==    by 0x10BB44: handlegaps (handlegaps.c:101)
+==460==    by 0x10B1A8: loadHSP (loadhsp.c:334)
+==460==    by 0x1096A9: main (ballast.c:156)
+==460== 
+==460== Conditional jump or move depends on uninitialised value(s)
+==460==    at 0x483B94E: index (vg_replace_strmem.c:250)
+==460==    by 0x10BB44: handlegaps (handlegaps.c:101)
+==460==    by 0x10B1A8: loadHSP (loadhsp.c:334)
+==460==    by 0x1096A9: main (ballast.c:156)
+==460== 
+==460== Conditional jump or move depends on uninitialised value(s)
+==460==    at 0x4840AF3: strcspn (vg_replace_strmem.c:1735)
+==460==    by 0x10BB70: handlegaps (handlegaps.c:104)
+==460==    by 0x10B1A8: loadHSP (loadhsp.c:334)
+==460==    by 0x1096A9: main (ballast.c:156)
+==460== 
+==460== Invalid read of size 8
+==460==    at 0x10B4BC: loadHSP (loadhsp.c:410)
+==460==    by 0x1096A9: main (ballast.c:156)
+==460==  Address 0x4a28018 is 0 bytes after a block of size 4,072 alloc'd
+==460==    at 0x483877F: malloc (vg_replace_malloc.c:307)
+==460==    by 0x10953B: main (ballast.c:128)
+==460== 
+==460== Invalid write of size 8
+==460==    at 0x10B4D9: loadHSP (loadhsp.c:410)
+==460==    by 0x1096A9: main (ballast.c:156)
+==460==  Address 0x4a28018 is 0 bytes after a block of size 4,072 alloc'd
+==460==    at 0x483877F: malloc (vg_replace_malloc.c:307)
+==460==    by 0x10953B: main (ballast.c:128)
+==460== 
+==460== Invalid write of size 8
+==460==    at 0x10B5AB: loadHSP (loadhsp.c:420)
+==460==    by 0x1096A9: main (ballast.c:156)
+==460==  Address 0x4a5ad28 is 0 bytes after a block of size 4,072 alloc'd
+==460==    at 0x483877F: malloc (vg_replace_malloc.c:307)
+==460==    by 0x10A361: loadHSP (loadhsp.c:76)
+==460==    by 0x1096A9: main (ballast.c:156)
+==460== 
+==460== Invalid write of size 1
+==460==    at 0x10B5FE: loadHSP (loadhsp.c:423)
+==460==    by 0x1096A9: main (ballast.c:156)
+==460==  Address 0x4a26fee is 0 bytes after a block of size 510 alloc'd
+==460==    at 0x483877F: malloc (vg_replace_malloc.c:307)
+==460==    by 0x109526: main (ballast.c:127)
+==460== 
+==460== Conditional jump or move depends on uninitialised value(s)
+==460==    at 0x10B54C: loadHSP (loadhsp.c:418)
+==460==    by 0x1096A9: main (ballast.c:156)
+==460== 
+==460== Conditional jump or move depends on uninitialised value(s)
+==460==    at 0x10B570: loadHSP (loadhsp.c:418)
+==460==    by 0x1096A9: main (ballast.c:156)
+==460== 
+==460== Conditional jump or move depends on uninitialised value(s)
+==460==    at 0x10B594: loadHSP (loadhsp.c:418)
+==460==    by 0x1096A9: main (ballast.c:156)
+==460== 
+==460== Invalid read of size 1
+==460==    at 0x10B547: loadHSP (loadhsp.c:418)
+==460==    by 0x1096A9: main (ballast.c:156)
+==460==  Address 0x4a5d0ec is 0 bytes after a block of size 524 alloc'd
+==460==    at 0x483AD7B: realloc (vg_replace_malloc.c:834)
+==460==    by 0x10AB84: loadHSP (loadhsp.c:223)
+==460==    by 0x1096A9: main (ballast.c:156)
+==460== 
+==460== Invalid read of size 1
+==460==    at 0x10B56B: loadHSP (loadhsp.c:418)
+==460==    by 0x1096A9: main (ballast.c:156)
+==460==  Address 0x4a5d0ec is 0 bytes after a block of size 524 alloc'd
+==460==    at 0x483AD7B: realloc (vg_replace_malloc.c:834)
+==460==    by 0x10AB84: loadHSP (loadhsp.c:223)
+==460==    by 0x1096A9: main (ballast.c:156)
+==460== 
+==460== Invalid read of size 1
+==460==    at 0x10B58F: loadHSP (loadhsp.c:418)
+==460==    by 0x1096A9: main (ballast.c:156)
+==460==  Address 0x4a5d0ec is 0 bytes after a block of size 524 alloc'd
+==460==    at 0x483AD7B: realloc (vg_replace_malloc.c:834)
+==460==    by 0x10AB84: loadHSP (loadhsp.c:223)
+==460==    by 0x1096A9: main (ballast.c:156)
+==460== 
+==460== Invalid read of size 1
+==460==    at 0x10B5F7: loadHSP (loadhsp.c:423)
+==460==    by 0x1096A9: main (ballast.c:156)
+==460==  Address 0x4a5d0ec is 0 bytes after a block of size 524 alloc'd
+==460==    at 0x483AD7B: realloc (vg_replace_malloc.c:834)
+==460==    by 0x10AB84: loadHSP (loadhsp.c:223)
+==460==    by 0x1096A9: main (ballast.c:156)
+==460== 
+==460== Invalid read of size 1
+==460==    at 0x49ABDD0: __strchr_avx2 (strchr-avx2.S:49)
+==460==    by 0x10BB44: handlegaps (handlegaps.c:101)
+==460==    by 0x10B1A8: loadHSP (loadhsp.c:334)
+==460==    by 0x1096A9: main (ballast.c:156)
+==460==  Address 0x4a738df is 2 bytes after a block of size 77 alloc'd
+==460==    at 0x483877F: malloc (vg_replace_malloc.c:307)
+==460==    by 0x10AA5B: loadHSP (loadhsp.c:204)
+==460==    by 0x1096A9: main (ballast.c:156)
+==460== 
+==460== Invalid read of size 1
+==460==    at 0x4840AEB: strcspn (vg_replace_strmem.c:1735)
+==460==    by 0x10BB70: handlegaps (handlegaps.c:104)
+==460==    by 0x10B1A8: loadHSP (loadhsp.c:334)
+==460==    by 0x1096A9: main (ballast.c:156)
+==460==  Address 0x4a738df is 2 bytes after a block of size 77 alloc'd
+==460==    at 0x483877F: malloc (vg_replace_malloc.c:307)
+==460==    by 0x10AA5B: loadHSP (loadhsp.c:204)
+==460==    by 0x1096A9: main (ballast.c:156)
+==460== 
+==460== Invalid write of size 1
+==460==    at 0x10BAB6: handlegaps (handlegaps.c:86)
+==460==    by 0x10B1A8: loadHSP (loadhsp.c:334)
+==460==    by 0x1096A9: main (ballast.c:156)
+==460==  Address 0x4a9a299 is 0 bytes after a block of size 73 alloc'd
+==460==    at 0x483877F: malloc (vg_replace_malloc.c:307)
+==460==    by 0x10AA5B: loadHSP (loadhsp.c:204)
+==460==    by 0x1096A9: main (ballast.c:156)
+==460== 
+==460== Invalid write of size 8
+==460==    at 0x10B646: loadHSP (loadhsp.c:432)
+==460==    by 0x1096A9: main (ballast.c:156)
+==460==  Address 0x4a9cc20 is 8 bytes after a block of size 4,072 alloc'd
+==460==    at 0x483877F: malloc (vg_replace_malloc.c:307)
+==460==    by 0x10A361: loadHSP (loadhsp.c:76)
+==460==    by 0x1096A9: main (ballast.c:156)
+==460== 
+==460== Invalid write of size 8
+==460==    at 0x10B683: loadHSP (loadhsp.c:438)
+==460==    by 0x1096A9: main (ballast.c:156)
+==460==  Address 0x4a9cc28 is 16 bytes after a block of size 4,072 alloc'd
+==460==    at 0x483877F: malloc (vg_replace_malloc.c:307)
+==460==    by 0x10A361: loadHSP (loadhsp.c:76)
+==460==    by 0x1096A9: main (ballast.c:156)
+==460== 
+
+valgrind: m_mallocfree.c:303 (get_bszB_as_is): Assertion 'bszB_lo == bszB_hi' failed.
+>>>>>>> 9ebeb480743f851beb4a9f40fcb9a06b3cae0d4b
 valgrind: Heap block lo/hi size mismatch: lo = 576, hi = 0.
 This is probably caused by your program erroneously writing past the
 end of a heap block and corrupting heap metadata.  If you fix any
@@ -160,6 +337,7 @@ probably go away.  Please try that before reporting this as a bug.
 
 
 host stacktrace:
+<<<<<<< HEAD
 ==10535==    at 0x58046FFA: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux)
 ==10535==    by 0x58047127: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux)
 ==10535==    by 0x580472CB: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux)
@@ -174,10 +352,29 @@ host stacktrace:
 ==10535==    by 0x1002CA9F17: ???
 ==10535==    by 0x1002CA9F2F: ???
 ==10535==    by 0x1002CA9F3F: ???
+=======
+==460==    at 0x58047B6A: show_sched_status_wrk (m_libcassert.c:406)
+==460==    by 0x58047C87: report_and_quit (m_libcassert.c:477)
+==460==    by 0x58047E17: vgPlain_assert_fail (m_libcassert.c:543)
+==460==    by 0x580522E4: get_bszB_as_is (m_mallocfree.c:303)
+==460==    by 0x580522E4: is_inuse_block (m_mallocfree.c:331)
+==460==    by 0x580522E4: vgPlain_describe_arena_addr (m_mallocfree.c:1592)
+==460==    by 0x5803ECEA: vgPlain_describe_addr (m_addrinfo.c:185)
+==460==    by 0x5803DB3F: vgMemCheck_update_Error_extra (mc_errors.c:1185)
+==460==    by 0x58042BF4: vgPlain_maybe_record_error (m_errormgr.c:822)
+==460==    by 0x5803CFA8: vgMemCheck_record_address_error (mc_errors.c:765)
+==460==    by 0x58018504: mc_LOADVn_slow (mc_main.c:1557)
+==460==    by 0x100412784B: ???
+==460==    by 0x1002E8DF2F: ???
+==460==    by 0x1002E8DF17: ???
+==460==    by 0x1002E8DF2F: ???
+==460==    by 0x1002E8DF3F: ???
+>>>>>>> 9ebeb480743f851beb4a9f40fcb9a06b3cae0d4b
 
 sched status:
   running_tid=1
 
+<<<<<<< HEAD
 Thread 1: status = VgTs_Runnable (lwpid 10535)
 ==10535==    at 0x483EBA0: __strchr_sse2 (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
 ==10535==    by 0x10C09C: handlegaps (handlegaps.c:101)
@@ -185,6 +382,15 @@ Thread 1: status = VgTs_Runnable (lwpid 10535)
 ==10535==    by 0x1099A5: main (ballast.c:164)
 client stack range: [0x1FFEFFD000 0x1FFF000FFF] client SP: 0x1FFEFFF5A8
 valgrind stack range: [0x1002BAA000 0x1002CA9FFF] top usage: 18696 of 1048576
+=======
+Thread 1: status = VgTs_Runnable (lwpid 460)
+==460==    at 0x483B940: index (vg_replace_strmem.c:250)
+==460==    by 0x10BB44: handlegaps (handlegaps.c:101)
+==460==    by 0x10B1A8: loadHSP (loadhsp.c:334)
+==460==    by 0x1096A9: main (ballast.c:156)
+client stack range: [0x1FFEFFE000 0x1FFF000FFF] client SP: 0x1FFEFFF928
+valgrind stack range: [0x1002D8E000 0x1002E8DFFF] top usage: 18472 of 1048576
+>>>>>>> 9ebeb480743f851beb4a9f40fcb9a06b3cae0d4b
 
 
 Note: see also the FAQ in the source distribution.
