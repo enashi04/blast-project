@@ -16,8 +16,15 @@
 #include "macros.h"
 #include "readargs.h"
 #include "types.h"
+#include <ctype.h>
+#include <stdbool.h>
 
 #define NETRA 0
+
+extern int filter(char *seqhsp, char *seq);
+extern SimPrf *handlegaps(SimPrf *simprf);
+
+/***JUSTE LE CAS DU PROFIL AFIN DE RÉCUPÉRER LE PROFIL TOTAL!!!!*****/
 
 double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char *conserved, double *maxprofile, char type)
 {
@@ -26,10 +33,9 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
     double *profil, *ptr, *simptr;
     SimPrf *simprf;
     char *outtext = NULL, *ptrstr, *begline, *queryseq, *seq, *seqhsp, *startline;
-    int endofdbseq = 0, ok, okhsp, gapped, taux, naas, begin, end, debut, dline, n;
+    int endofdbseq = 0, ok = 0, okhsp = 0, gapped, taux, naas, begin, end, debut, dline, n;
     int debdb, enddb, begdb, dline2, dline1;
-
-   // printf("Nous nous trouvons dans la ligne : %s\n", line);
+    int identique = 1;
 
     // si on a comme argument lors de l'exécution du programme maxp ou nmaxp
     // pour l'instant pas notre cas
@@ -113,13 +119,11 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
         strcpy(seqres->access, seqres->name);
     }
     fgets(line, 256, file);
-   // printf("nous somme à la ligne suivante : %s\n", line);
     begline = line;
     if (*begline == ' ')
     {
         begline++;
     }
-  //  printf("begline is %s\n", begline);
     // comparaison entre la ligne où on se trouve actuellement et la ligne finale avant
     // l'analyse
     while (strncmp(begline, "Score", 5) != 0)
@@ -137,7 +141,6 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
     }
     // on met à jour outtext
     seqres->outtext = outtext;
-    //printf("Nous sommes actuellement à la ligne : %s\n", line);
 
     // rechercher la première occurence dans laquelle se trouve =e-
     ptrstr = (char *)(strstr(line, "e-"));
@@ -148,7 +151,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
     }
     // ici on va récupérer la e-value qui va correspondre à p.
     sscanf((char *)(strrchr(line, '=') + 1), "%lf", &p);
-   // printf("p est %lf\n", p);
+
     seqres->prob = p;
     simprf->p = p;
 
@@ -161,6 +164,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
     fctr = 1;
     simprf->text = (char *)malloc(strlen(line) + 1);
     strcpy(simprf->text, line);
+    // tant qu'on est pas à la fin de la première analyse
     while (endofdbseq == 0)
     {
         // On parcourt d'abord le score
@@ -217,13 +221,11 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
             // là on recherche d'abord en début de la ligne le numéro de début puis de fin
             sscanf((char *)(strpbrk(line, "0123456789")), "%d", &debut);
             sscanf((char *)(strrchr(line, ' ')), "%d", &end);
-            //printf("le début est %d; la fin est %d\n", debut, end);
             // la dline correspond à la longueur de la séquence (autour de 30 normalement)
             dline = strlen(line) - strlen(strpbrk(line + 1, "ABCDEFGHIJKLMNOPQRSTUVWXYZ-"));
             ptrstr = (char *)(strrchr(line, ' '));
             *ptrstr = '\0';
             strcpy(line, (char *)(line + dline));
-            //printf("la ligne ici est %s\n", line);
 
             if (ok == 0)
             {
@@ -232,22 +234,19 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
             }
             else
             {
-                queryseq = (char *)realloc(queryseq,strlen(line) + strlen(queryseq) + 1); // it was 1
+                queryseq = (char *)realloc(queryseq, strlen(line) + strlen(queryseq) + 1); // it was 1
             }
-            strcpy(queryseq, line);
-           // printf("queryseq %s\n", queryseq);
+            strcat(queryseq, strtok(line, " "));
 
             fgets(line, 256, file);
 
-            line[strlen(line) - 1] = '\0';
-            n = (end - debut + 1) - strlen((char *)(line + dline));
-            if (n > 0)
-                strncat(line, "                                                            ", n);
+            /**********************************************MIDDLE**********************************************/
+            line[strlen(line) - 2] = '\0';
 
             if (ok == 0)
             {
                 begin = debut;
-                seq = (char *)malloc(strlen(line) * strlen(line));
+                seq = (char *)malloc(strlen(line) + 1);
                 *seq = '\0';
             }
             else
@@ -255,58 +254,202 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
                 seq = (char *)realloc(seq, strlen(line) + strlen(seq) + 1);
             }
 
-            strcat(seq, (char *)(line + dline)); // strcat ici de base
+            line = strtok(line, " ");
+            strcat(seq, strtok(line, "\0")); // strcat ici de base
 
             ok = 1;
         }
-        //on va vers la target
-         else if(strncmp(line, "Sbjct", 5) == 0)
-		{
-            printf("on est dans la subject\n");
-			sscanf((char *)(strpbrk(line, "0123456789")), "%d", &debdb);
-			sscanf((char *)(strrchr(line, ' ')), "%d", &enddb);
-            printf("end of subject is : %u\n", enddb);
+        // on va vers la target
+        else if (strncmp(line, "Sbjct", 5) == 0)
+        {
+            sscanf((char *)(strpbrk(line, "0123456789")), "%d", &debdb);
+            sscanf((char *)(strrchr(line, ' ')), "%d", &enddb);
+            dline1 = strlen(line);
+            startline = strpbrk(line + 1, "ABCDEFGHIJKLMNOPQRSTUVWXYZ-");
 
-			dline1 = strlen(line);
-			startline = strpbrk(line + 1, "ABCDEFGHIJKLMNOPQRSTUVWXYZ-");
-            printf("startline is : %s\n", startline);
-			if (startline == NULL) /* Julie : added to avoid crash if HSP is badly formatted */
+            if (startline == NULL) /* Julie : added to avoid crash if HSP is badly formatted */
+            {
+
+                line[0] = '\0';
+                endofdbseq = 1;
+            }
+            else
+            {
+                dline2 = strlen(startline);
+                dline = dline1 - dline2;
+                ptrstr = (char *)strchr((char *)(line + dline), ' ');
+                if (ptrstr != NULL)
+                {
+                    *ptrstr = '\0';
+                }
+                if (okhsp == 0)
+                {
+                    begdb = debdb;
+                    seqhsp = (char *)malloc(strlen(line) + 1);
+                    *seqhsp = '\0';
+                    simprf->sens = '+';
+                    if (debdb > enddb)
+                    {
+                        simprf->sens = '-';
+                    }
+                }
+                else
+                {
+                    seqhsp = (char *)realloc(seqhsp, strlen(line) + strlen(seqhsp) + 1);
+                }
+                strcat(seqhsp, (char *)(line + dline));
+                okhsp = 1;
+            }
+        }
+
+        if (feof(file) != 0 || line[0] == '>')
+        {
+            endofdbseq = 1;
+        }
+        else
+        {
+            fgets(line, 256, file);
+        }
+    }
+    // là on a tout récupéré !! du coup on passe direct à la suite
+    // printf("query %s\n\n\n", queryseq);
+    // printf("la séquence seq est de %s \n", seq);
+    // printf("la séquence hsp est %s\n", seqhsp);
+
+    /*/////////////////////////////////////////////////////////////////*/
+    if (filter(seqhsp, seq) == 0)
+    {
+        p = 1;
+    }
+
+    simprf->hsp = seqhsp;
+    simprf->queryseq = queryseq;
+    simprf->aln = seq;
+    simprf->next = NULL;
+    queryseq = NULL;
+    seq = NULL;
+
+    if ((p >= maxp) || (p > 1))
+        p = 1;
+    if (p < seqres->p)
+    {
+        seqres->p = p;
+    }
+
+    simprf->begin = begin - 1;
+    simprf->end = end - 1;
+
+    simprf->begdb = begdb - 1;
+    simprf->enddb = enddb - 1;
+
+    if (simprf->begdb > simprf->enddb)
+    {
+        simprf->begdb = -simprf->begdb;
+        simprf->enddb = -simprf->enddb;
+    }
+
+    /**************************************************************************/
+
+    if (gapped)
+    {
+        simprf = handlegaps(simprf);
+    }
+    /**** The current line starts with " Score", we are therefore starting ****/
+    /**** to read a new HSP                                                ****/
+
+    begline = line;
+    if (*begline == ' '){
+        begline++;
+    }
+    /*/////////////////////////////////////////////////////////////////*/
+
+#ifdef DEBUG
+	printf("%s\n", seqres->desc);
+#endif
+
+	for (simprf = seqres->sim; simprf != NULL; simprf = simprf->next)
+	{
+		seqhsp = simprf->hsp;
+		seq = simprf->aln;
+		begin = simprf->begin + 1;
+		end = simprf->end + 1;
+		begdb = simprf->begdb + 1;
+		enddb = simprf->enddb + 1;
+
+		simprf->prf = (double *)malloc(sizeof(double) * (end - begin + 1));
+
+		p = simprf->p;
+		if ((p >= maxp) || (p > 1))
+			p = 1;
+		facteur = (1 - p);
+		fctr = 1;
+
+#ifdef DEBUG
+		printf("Query %6d %s %d\n", begin, simprf->queryseq, end);
+		printf("             %s\n", seq);
+		printf("Sbjct %6d %s %d\n\n\n", begdb, seqhsp, enddb);
+		fflush(NULL);
+#endif
+
+		/**************************************************************************/
+		/**** Update the profile for this sequence accounting for the current  ****/
+		/**** HSP and create the similarity profile for the current HSP        ****/
+
+		for (int i = begin - 1; i < end; i++)
+		{
+			ptr = (double *)(maxprofile + i);
+			if ((taux == 100) && (naas > (length / 10))){
+				identique = 0;
+			}
+			*ptr += facteur * identique;
+
+			ptr = (double *)(profil + i);
+			simptr = (double *)(simprf->prf + i - begin + 1);
+			*simptr = 0.0;
+
+			/****************************************************************/
+			/*** Aligned Aas in Query sequence and Database sequence are ****/
+			/*** identical                                               ****/
+
+			if ((*(seq + i - begin + 1) != '+') && (*(seq + i - begin + 1) != ' ') && (*(seq + i - begin + 1) != 'x'))
 			{
-				line[0] = '\0';
-				endofdbseq = 1;
+				*ptr = facteur * identique;
+				*simptr = ID * fctr;
+				ptrstr = (char *)(conserved + i);
+				*ptrstr = *(seq + i - begin + 1);
+
+				/****************************************************************/
 			}
 			else
 			{
-                printf("on rentre là?");
+				/********************************************************/
+				/*** Aligned Aas in Query and Database sequences are  ***/
+				/*** similar                                          ***/
 
-				dline2 = strlen(startline);
-				dline = dline1 - dline2;
-				ptrstr = (char *)strchr((char *)(line + dline), ' ');
-				if (ptrstr != NULL)
-					*ptrstr = '\0';
-
-				if (okhsp == 0)
+				if (*(seq + i - begin + 1) == '+')
 				{
-					begdb = debdb;
-					seqhsp = (char *)malloc(strlen(line) + 1);
-					*seqhsp = '\0';
-					simprf->sens = '+';
-					if (debdb > enddb)
-						simprf->sens = '-';
+					*ptr = identique * facteur / 2;
+					*simptr = SIM * fctr;
+
+					/********************************************************/
 				}
 				else
 				{
-					seqhsp = (char *)realloc(seqhsp, strlen(line) + strlen(seqhsp) + 1);
+					/************************************************/
+					/*** Well... actually they're different       ***/
+
+					*ptr = identique * NETRA * facteur;
+					*simptr = RIEN * fctr;
+					/************************************************/
 				}
-
-				strcat(seqhsp, (char *)(line + dline));
-				okhsp = 1;
 			}
-        }
-       
-        fgets(line, 256, file);
-    }
+		}
+		/**************************************************************************/
+	}
+	fprintf(stdout, "le smptr est de : %lf\n", *simptr);
 
+   
     // end of while
     return 1;
 }
+

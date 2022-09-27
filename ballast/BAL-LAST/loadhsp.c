@@ -255,9 +255,9 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
 			}
 			else
 			{
-				queryseq = (char *)malloc(strlen(line) + strlen(queryseq) + 2);//it was 1
+				queryseq = (char *)realloc(queryseq,strlen(line) + strlen(queryseq) + 1);//it was 1
 			}
-			strcpy(queryseq, line);//au lieu de strcat 
+			strcat(queryseq, line);//au lieu de strcat 
 
 			fgets(line, 256, file);
 
@@ -281,7 +281,6 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
 
 			ok = 1;
 		}
-		/**************************************************************************/
 
 		
 		/**** The current line starts with "Sbjct", we are therefore reading  *****/
@@ -343,13 +342,11 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
 			strcat(simprf->text, "             ");
 			strcat(simprf->text, line);
 			sscanf((char *)(strchr(line, '(') + 1), "%d", &taux);
-			printf("Le taux est de %d\n", taux);
 			sscanf((char *)(strchr(line, '=') + 1), "%d", &naas);
 			simprf->pcid = taux;
 
 			simprf->nid = naas;
 
-			//printf("naas est de %u\n", simprf->nid);
 		}
 		/**** At this point, we have finished reading the current HSP and are  ****/
 		/**** ready to deal with it                                            ****/
@@ -437,7 +434,6 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
 
 
 	}
-	//fprintf(stdout, "seqres->desc %s\n\n", seqres->desc);
 
 
 
@@ -515,12 +511,8 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
 		}
 			
 	}
-	//fprintf(stdout, "le smptr est de : %lf\n", *simptr);
-	/**************************************************************************/
+	fprintf(stdout, "le smptr est de : %lf\n", *simptr);
 
-	/**********************************************************************************/
-
-	/**********************************************************************************/
 	/**** Bye, bye...  ****************************************************************/
 
 	return profil;
