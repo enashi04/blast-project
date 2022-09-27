@@ -29,7 +29,7 @@ char *getLine(char *line);
 
 double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char *conserved, double *maxprofile, char type)
 {
-    //déclaration des variables
+    // déclaration des variables
     double maxp, p, facteur, fctr;
     double *profil, *ptr, *simptr;
     SimPrf *simprf;
@@ -39,7 +39,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
     int identique = 1;
 
     // si on a comme argument lors de l'exécution du programme maxp ou nmaxp : pour l'instant pas notre cas
-    
+
     if (getargdouble("-maxp", &maxp) == NULL)
         maxp = DEFMAXP;
     if (type == 'n')
@@ -117,14 +117,14 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
         seqres->access = (char *)malloc(strlen(seqres->name) + 1);
         strcpy(seqres->access, seqres->name);
     }
-    //on va à la ligne suivante
+    // on va à la ligne suivante
     fgets(line, 256, file);
     begline = line;
     if (*begline == ' ')
     {
         begline++;
     }
-    // comparaison avec la ligne où on se trouve actuellement 
+    // comparaison avec la ligne où on se trouve actuellement
     while (strncmp(begline, "Score", 5) != 0)
     {
         outtext = (char *)realloc(outtext, strlen(outtext) + strlen(line) + 1);
@@ -153,7 +153,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
 
     seqres->prob = p;
     simprf->p = p;
-//condition permettant de fixer la e-value <=1
+    // condition permettant de fixer la e-value <=1
     if ((p >= maxp) || (p > 1))
     {
         p = 1;
@@ -180,7 +180,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
                 simprf->score = 0;
                 simprf->maxscore = 0;
                 simprf->nmatch = 0;
-            }
+            } 
             ptrstr = (char *)(strstr(line, "= e-"));
             if (ptrstr != NULL)
             {
@@ -266,7 +266,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
             dline1 = strlen(line);
             startline = strpbrk(line + 1, "ABCDEFGHIJKLMNOPQRSTUVWXYZ-");
 
-            if (startline == NULL) 
+            if (startline == NULL)
             {
 
                 line[0] = '\0';
@@ -300,14 +300,20 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
                 okhsp = 1;
             }
         }
-        //si on est à la fin du fichier ou si on arrive à la prochaine analyse alors on met fin 
+        // si on est à la fin du fichier ou si on arrive à la prochaine analyse alors on met fin
         if (feof(file) != 0 || line[0] == '>')
         {
             endofdbseq = 1;
         }
+        else if(strlen(line)==2){
+            fgets(line, 256,file);
+            if(strlen(line)==2){
+                endofdbseq=1;
+            }
+        }
         else
         {
-            //sinon on va a la ligne suivante
+            // sinon on va a la ligne suivante
             fgets(line, 256, file);
         }
     }
@@ -348,8 +354,6 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
         simprf->enddb = -simprf->enddb;
     }
 
-    /**************************************************************************/
-
     if (gapped)
     {
         simprf = handlegaps(simprf);
@@ -358,95 +362,86 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
     /**** to read a new HSP                                                ****/
 
     begline = line;
-    if (*begline == ' '){
+    if (*begline == ' ')
+    {
         begline++;
     }
     /*/////////////////////////////////////////////////////////////////*/
 
 #ifdef DEBUG
-	printf("%s\n", seqres->desc);
+    printf("%s\n", seqres->desc);
 #endif
 
-	for (simprf = seqres->sim; simprf != NULL; simprf = simprf->next)
-	{
-		seqhsp = simprf->hsp;
-		seq = simprf->aln;
-		begin = simprf->begin + 1;
-		end = simprf->end + 1;
-		begdb = simprf->begdb + 1;
-		enddb = simprf->enddb + 1;
+    for (simprf = seqres->sim; simprf != NULL; simprf = simprf->next)
+    {
+        seqhsp = simprf->hsp;
+        seq = simprf->aln;
+        begin = simprf->begin + 1;
+        end = simprf->end + 1;
+        begdb = simprf->begdb + 1;
+        enddb = simprf->enddb + 1;
 
-		simprf->prf = (double *)malloc(sizeof(double) * (end - begin + 1));
+        simprf->prf = (double *)malloc(sizeof(double) * (end - begin + 1));
 
-		p = simprf->p;
-		if ((p >= maxp) || (p > 1))
-			p = 1;
-		facteur = (1 - p);
-		fctr = 1;
+        p = simprf->p;
+        if ((p >= maxp) || (p > 1))
+            p = 1;
+        facteur = (1 - p);
+        fctr = 1;
 
 #ifdef DEBUG
-		printf("Query %6d %s %d\n", begin, simprf->queryseq, end);
-		printf("             %s\n", seq);
-		printf("Sbjct %6d %s %d\n\n\n", begdb, seqhsp, enddb);
-		fflush(NULL);
+        printf("Query %6d %s %d\n", begin, simprf->queryseq, end);
+        printf("             %s\n", seq);
+        printf("Sbjct %6d %s %d\n\n\n", begdb, seqhsp, enddb);
+        fflush(NULL);
 #endif
 
-		/**************************************************************************/
-		/**** Update the profile for this sequence accounting for the current  ****/
-		/**** HSP and create the similarity profile for the current HSP        ****/
+        /**** Update the profile for this sequence accounting for the current  ****/
+        /**** HSP and create the similarity profile for the current HSP        ****/
 
-		for (int i = begin - 1; i < end; i++)
-		{
-			ptr = (double *)(maxprofile + i);
-			if ((taux == 100) && (naas > (length / 10))){
-				identique = 0;
-			}
-			*ptr += facteur * identique;
+        for (int i = begin - 1; i < end; i++)
+        {
+            ptr = (double *)(maxprofile + i);
+            if ((taux == 100) && (naas > (length / 10)))
+            {
+                identique = 0;
+            }
+            *ptr += facteur * identique;
 
-			ptr = (double *)(profil + i);
-			simptr = (double *)(simprf->prf + i - begin + 1);
-			*simptr = 0.0;
+            ptr = (double *)(profil + i);
+            simptr = (double *)(simprf->prf + i - begin + 1);
+            *simptr = 0.0;
 
-			/****************************************************************/
-			/*** Aligned Aas in Query sequence and Database sequence are ****/
-			/*** identical                                               ****/
+            /*** Aligned Aas in Query sequence and Database sequence are ****/
+            /*** identical                                               ****/
 
-			if ((*(seq + i - begin + 1) != '+') && (*(seq + i - begin + 1) != ' ') && (*(seq + i - begin + 1) != 'x'))
-			{
-				*ptr = facteur * identique;
-				*simptr = ID * fctr;
-				ptrstr = (char *)(conserved + i);
-				*ptrstr = *(seq + i - begin + 1);
-				/****************************************************************/
-			}
-			else
-			{
-				/********************************************************/
-				/*** Aligned Aas in Query and Database sequences are  ***/
-				/*** similar                                          ***/
+            if ((*(seq + i - begin + 1) != '+') && (*(seq + i - begin + 1) != ' ') && (*(seq + i - begin + 1) != 'x'))
+            {
+                *ptr = facteur * identique;
+                *simptr = ID * fctr;
+                ptrstr = (char *)(conserved + i);
+                *ptrstr = *(seq + i - begin + 1);
+            }
+            else
+            {
+                /*** Aligned Aas in Query and Database sequences are  ***/
+                /*** similar                                          ***/
 
-				if (*(seq + i - begin + 1) == '+')
-				{
-					*ptr = identique * facteur / 2;
-					*simptr = SIM * fctr;
+                if (*(seq + i - begin + 1) == '+')
+                {
+                    *ptr = identique * facteur / 2;
+                    *simptr = SIM * fctr;
+                }
+                else
+                {
+                    /*** Well... actually they're different       ***/
 
-					/********************************************************/
-				}
-				else
-				{
-					/************************************************/
-					/*** Well... actually they're different       ***/
-
-					*ptr = identique * NETRA * facteur;
-					*simptr = RIEN * fctr;
-					/************************************************/
-				}
-			}
-		}
-		/**************************************************************************/
-	}
-	//fprintf(stdout, "le smptr est de : %lf\n", *simptr);
+                    *ptr = identique * NETRA * facteur;
+                    *simptr = RIEN * fctr;
+                }
+            }
+        }
+    }
+    fprintf(stdout, "le smptr est de : %lf\n", *simptr);
     return profil;
 }
-
-

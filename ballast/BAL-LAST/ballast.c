@@ -3,6 +3,8 @@
 #include "readargs.h"
 #include "prototypes.h"
 #include "macros.h"
+#include <ctype.h>
+#include <stdbool.h>
 
 #define HELPDIR "/ballast/Help"
 #define MSFSEUIL 0.001
@@ -146,26 +148,25 @@ int main(int argc, char *argv[])
     if (length != 0)
     {
         i = 1;
-
+        int j = 0;
         profiltotal = profilBuilding(seqres, infile, curline, length, conserved, maxprofile, 'p');
-
-        while (curline[0]!='\0')
+        fgets(curline, 256, infile);
+        fprintf(stdout, "curline is %s\n", curline);
+        while (curline[0] != '\0')
         {
             seqres->rank = i++;
             seqres->next = (SeqHSP *)malloc(sizeof(SeqHSP));
             (seqres->next)->prev = seqres;
-            	seqres = seqres->next;
-        	seqres->next = NULL;
+            seqres = seqres->next;
+            seqres->next = NULL;
             j++;
             printf("Tour : %u\n", j);
-            contribution = profilBuilding(seqres, infile, curline, length,conserved, maxprofile,'p');
+           // contribution = loadHSP(seqres, infile, curline, length, conserved, maxprofile, 'p');
 
-            if(strcmp(seqres->prev->sim->hsp, seqres->sim->hsp)!=0){
+            if (strcmp(seqres->prev->sim->hsp, seqres->sim->hsp) != 0)
+            {
                 addprofils(profiltotal, contribution, length);
             }
-            printf("les seqres sont : %u\n", seqres->rank);
-
-            printf("la contribution est de : %lf\n", *contribution);
         }
     }
 
