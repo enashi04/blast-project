@@ -24,11 +24,11 @@
 extern int filter(char *seqhsp, char *seq);
 extern SimPrf *handlegaps(SimPrf *simprf);
 
-/***JUSTE LE CAS DU PROFIL AFIN DE RÉCUPÉRER LE PROFIL TOTAL!!!!*****/
+/*******************************JUSTE LE CAS DU PROFIL AFIN DE RÉCUPÉRER LE PROFIL TOTAL!!!*******************************/
 
 double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char *conserved, double *maxprofile, char type)
 {
-    // dans quelle ligne on se situe
+    //déclaration des variables
     double maxp, p, facteur, fctr;
     double *profil, *ptr, *simptr;
     SimPrf *simprf;
@@ -37,8 +37,8 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
     int debdb, enddb, begdb, dline2, dline1;
     int identique = 1;
 
-    // si on a comme argument lors de l'exécution du programme maxp ou nmaxp
-    // pour l'instant pas notre cas
+    // si on a comme argument lors de l'exécution du programme maxp ou nmaxp : pour l'instant pas notre cas
+    
     if (getargdouble("-maxp", &maxp) == NULL)
         maxp = DEFMAXP;
     if (type == 'n')
@@ -67,7 +67,6 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
     simprf->score = 0;
     simprf->maxscore = 0;
     simprf->nmatch = 0;
-
     seqres->p = 1;
     seqres->prob = maxp;
 
@@ -75,8 +74,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
     outtext = (char *)malloc(strlen(line) + 1);
     strcpy(outtext, line);
 
-    // condition qui permet de vérifier si ou non il y'a un > permettant ainsi d'identifier
-    // la target/query
+    // condition qui permet de vérifier si ou non il y'a un > permettant ainsi d'identifier la target/query
     if (line[0] == '>')
     {
         strcpy(line, &line[1]);
@@ -118,14 +116,14 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
         seqres->access = (char *)malloc(strlen(seqres->name) + 1);
         strcpy(seqres->access, seqres->name);
     }
+    //on va à la ligne suivante
     fgets(line, 256, file);
     begline = line;
     if (*begline == ' ')
     {
         begline++;
     }
-    // comparaison entre la ligne où on se trouve actuellement et la ligne finale avant
-    // l'analyse
+    // comparaison avec la ligne où on se trouve actuellement 
     while (strncmp(begline, "Score", 5) != 0)
     {
         outtext = (char *)realloc(outtext, strlen(outtext) + strlen(line) + 1);
@@ -142,7 +140,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
     // on met à jour outtext
     seqres->outtext = outtext;
 
-    // rechercher la première occurence dans laquelle se trouve =e-
+    // recherche la première occurence dans laquelle se trouve =e- pour la e-value
     ptrstr = (char *)(strstr(line, "e-"));
     if (ptrstr != NULL)
     {
@@ -154,7 +152,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
 
     seqres->prob = p;
     simprf->p = p;
-
+//condition permettant de fixer la e-value <=1
     if ((p >= maxp) || (p > 1))
     {
         p = 1;
@@ -240,7 +238,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
 
             fgets(line, 256, file);
 
-            /**********************************************MIDDLE**********************************************/
+            /**********************************************MIDDLE SEQUENCE**********************************************/
             line[strlen(line) - 2] = '\0';
 
             if (ok == 0)
@@ -259,7 +257,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
 
             ok = 1;
         }
-        // on va vers la target
+        // On est à la subject
         else if (strncmp(line, "Sbjct", 5) == 0)
         {
             sscanf((char *)(strpbrk(line, "0123456789")), "%d", &debdb);
@@ -267,7 +265,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
             dline1 = strlen(line);
             startline = strpbrk(line + 1, "ABCDEFGHIJKLMNOPQRSTUVWXYZ-");
 
-            if (startline == NULL) /* Julie : added to avoid crash if HSP is badly formatted */
+            if (startline == NULL) 
             {
 
                 line[0] = '\0';
@@ -301,13 +299,14 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
                 okhsp = 1;
             }
         }
-
+        //si on est à la fin du fichier ou si on arrive à la prochaine analyse alors on met fin 
         if (feof(file) != 0 || line[0] == '>')
         {
             endofdbseq = 1;
         }
         else
         {
+            //sinon on va a la ligne suivante
             fgets(line, 256, file);
         }
     }
@@ -417,7 +416,6 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
 				*simptr = ID * fctr;
 				ptrstr = (char *)(conserved + i);
 				*ptrstr = *(seq + i - begin + 1);
-
 				/****************************************************************/
 			}
 			else
@@ -447,9 +445,8 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
 		/**************************************************************************/
 	}
 	fprintf(stdout, "le smptr est de : %lf\n", *simptr);
-
-   
+    fprintf(stdout, "line : %s\n", line);
     // end of while
-    return 1;
+    return profil;
 }
 
