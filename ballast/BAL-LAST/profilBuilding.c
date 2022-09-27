@@ -23,6 +23,7 @@
 
 extern int filter(char *seqhsp, char *seq);
 extern SimPrf *handlegaps(SimPrf *simprf);
+char *getLine(char *line);
 
 /*******************************JUSTE LE CAS DU PROFIL AFIN DE RÉCUPÉRER LE PROFIL TOTAL!!!*******************************/
 
@@ -444,9 +445,8 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
 		}
 		/**************************************************************************/
 	}
-	fprintf(stdout, "le smptr est de : %lf\n", *simptr);
-    fprintf(stdout, "line : %s\n", line);
-    // end of while
+	//fprintf(stdout, "le smptr est de : %lf\n", *simptr);
     return profil;
 }
+
 

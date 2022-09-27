@@ -7,6 +7,7 @@
 #define HELPDIR "/ballast/Help"
 #define MSFSEUIL 0.001
 #define DEFANCHORSEUIL 0.20
+extern double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char *conserved, double *maxprofile, char type);
 
 int main(int argc, char *argv[])
 {
@@ -17,7 +18,6 @@ int main(int argc, char *argv[])
     Sbjmot *motifdb, *firstmotdb, *firstalnmotdb;
     BlastHeader blhd1, blhd2;
 
-    
     double *profiltotal;
     double *smoothed;
     double *trimmed;
@@ -79,7 +79,7 @@ int main(int argc, char *argv[])
         {"-t", 'f', 1, '\0'},
         {"-table", 'b', 0, '\0'}};
 
-    //printf(("Déclaration des variables : ok \n"));
+    // printf(("Déclaration des variables : ok \n"));
 
     // initialisation des variables
 
@@ -98,7 +98,8 @@ int main(int argc, char *argv[])
     {
         msfseuil = DEFMAXP;
     }
-    if (getargfloat("-maxtab", &tableseuil) == NULL){
+    if (getargfloat("-maxtab", &tableseuil) == NULL)
+    {
         tableseuil = msfseuil;
     }
 
@@ -122,7 +123,7 @@ int main(int argc, char *argv[])
     }
 
     length = initresfile(infile, curline, &blhd1);
-    fprintf(stdout, "la longueur du fichier est de : %u \n", length);
+    //  fprintf(stdout, "la longueur du fichier est de : %u \n", length);
 
     conserved = (char *)malloc(length + 1);
     maxprofile = (double *)malloc(sizeof(double) * length);
@@ -138,36 +139,34 @@ int main(int argc, char *argv[])
     ptrstr = (char *)(conserved + length);
     *ptrstr = '\0';
 
-   // fprintf(stdout, "Initialisation : ok\n");
+    // fprintf(stdout, "Initialisation : ok\n");
 
-    //construction du profil BlastP
-    int j=0;
-    if(length!=0){
-        i=1; 
-        printf("line précédent est : %s\n", curline);
-        profiltotal=profilBuilding(seqres, infile, curline, length, conserved, maxprofile, 'p');
-        printf("conserved est %s\n", conserved);
-        printf("line actuelle est : %s\n", curline);
-        while(curline[0]!=-1){
-            seqres->rank = i++; 
+    // construction du profil BlastP
+    int j = 0;
+    if (length != 0)
+    {
+        i = 1;
+
+        profiltotal = profilBuilding(seqres, infile, curline, length, conserved, maxprofile, 'p');
+
+        while (curline[0]!='\0')
+        {
+            seqres->rank = i++;
             seqres->next = (SeqHSP *)malloc(sizeof(SeqHSP));
             (seqres->next)->prev = seqres;
-			seqres = seqres->next;
-			seqres->next = NULL;
+            	seqres = seqres->next;
+        	seqres->next = NULL;
             j++;
             printf("Tour : %u\n", j);
-            contribution = loadHSP(seqres, infile, curline, length,conserved, maxprofile,'p');
-            
+            contribution = profilBuilding(seqres, infile, curline, length,conserved, maxprofile,'p');
+
             if(strcmp(seqres->prev->sim->hsp, seqres->sim->hsp)!=0){
                 addprofils(profiltotal, contribution, length);
             }
+            printf("les seqres sont : %u\n", seqres->rank);
 
-        //     //printf("les seqres sont : %u\n", seqres->rank);
-            
-        //     //printf("la contribution est de : %lf\n", *contribution);
-         }
-        seqres->rank=i++;
-
+            printf("la contribution est de : %lf\n", *contribution);
+        }
     }
 
     fclose(infile);
