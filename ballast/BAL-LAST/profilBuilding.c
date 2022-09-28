@@ -73,7 +73,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
 
     // là on récupère la ligne dans laquelle nous nous trouvons
     outtext = (char *)malloc(strlen(line) + 1);
-    strcpy(outtext, line); //strcpy
+    strcpy(outtext, line); // strcpy
 
     // condition qui permet de vérifier si ou non il y'a un > permettant ainsi d'identifier la target/query
     if (line[0] == '>')
@@ -180,7 +180,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
                 simprf->score = 0;
                 simprf->maxscore = 0;
                 simprf->nmatch = 0;
-            } 
+            }
             ptrstr = (char *)(strstr(line, "= e-"));
             if (ptrstr != NULL)
             {
@@ -237,28 +237,27 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
             }
             strcat(queryseq, strtok(line, " "));
 
+            /**********************************************MIDDLE SEQUENCE**********************************************/
             fgets(line, 256, file);
 
-            /**********************************************MIDDLE SEQUENCE**********************************************/
             line[strlen(line) - 2] = '\0';
+            strncpy(line, (line + 12), strlen(line) - 12);
 
             if (ok == 0)
             {
                 begin = debut;
                 seq = (char *)malloc(strlen(line) + 1);
                 *seq = '\0';
+                strcpy(seq, line);
             }
             else
             {
-                //printf("reallocation pour seq \n");
-                seq = (char *)realloc(seq, strlen(line) + strlen(seq)+1);//pb ici (de base +1)
-             //  printf("on a fini de réallouer\n");
+                seq = (char *)realloc(seq, strlen(line) + strlen(seq) + 1); // pb ici
+                strcat(seq, line);
             }
-            line = strtok(line, " ");
-            strcat(seq, strtok(line, "\0")); // strcat ici de base
-
             ok = 1;
         }
+
         // On est à la subject
         else if (strncmp(line, "Sbjct", 5) == 0)
         {
@@ -270,7 +269,6 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
 
             if (startline == NULL)
             {
-
                 line[0] = '\0';
                 endofdbseq = 1;
             }
@@ -307,10 +305,12 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
         {
             endofdbseq = 1;
         }
-        else if(strlen(line)==2){
-            fgets(line, 256,file);
-            if(strlen(line)==2){
-                endofdbseq=1;
+        else if (strlen(line) == 2)
+        {
+            fgets(line, 256, file);
+            if (strlen(line) == 2)
+            {
+                endofdbseq = 1;
             }
         }
         else
@@ -319,14 +319,12 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
             fgets(line, 256, file);
         }
     }
-    
 
     // là on a tout récupéré !! du coup on passe direct à la suite
     // printf("query %s\n\n\n", queryseq);
     // printf("la séquence seq est de %s \n", seq);
     // printf("la séquence hsp est %s\n", seqhsp);
 
-    /*/////////////////////////////////////////////////////////////////*/
     if (filter(seqhsp, seq) == 0)
     {
         p = 1;
@@ -335,6 +333,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
     simprf->hsp = seqhsp;
     simprf->queryseq = queryseq;
     simprf->aln = seq;
+
     simprf->next = NULL;
     queryseq = NULL;
     seq = NULL;
@@ -362,24 +361,22 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
     {
         simprf = handlegaps(simprf);
     }
-    /**** The current line starts with " Score", we are therefore starting ****/
-    /**** to read a new HSP                                                ****/
 
     begline = line;
     if (*begline == ' ')
     {
         begline++;
     }
-    /*/////////////////////////////////////////////////////////////////*/
-    
-#ifdef DEBUG
-    printf("%s\n", seqres->desc);
-#endif
+
+    /****************************************************SIMPRF à calculer****************************************************/
+    // printf("la taille de la séquence est : %ld\n", strlen(simprf->aln));
+    // int simprofil[strlen(seq)]; // on crée un tableau qui va contenir les valeurs pour chaque aa (if id, sim, nothing)
+
     for (simprf = seqres->sim; simprf != NULL; simprf = simprf->next)
     {
         seqhsp = simprf->hsp;
         seq = simprf->aln;
-       // printf("seq is %s\n",seq);
+        // printf("seq is %s\n",seq);
         begin = simprf->begin + 1;
         end = simprf->end + 1;
         begdb = simprf->begdb + 1;
@@ -393,18 +390,10 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
         facteur = (1 - p);
         fctr = 1;
 
-#ifdef DEBUG
-        printf("Query %6d %s %d\n", begin, simprf->queryseq, end);
-        printf("             %s\n", seq);
-        printf("Sbjct %6d %s %d\n\n\n", begdb, seqhsp, enddb);
-        fflush(NULL);
-#endif
-
         /**** Update the profile for this sequence accounting for the current  ****/
         /**** HSP and create the similarity profile for the current HSP        ****/
         for (int i = begin - 1; i < end; i++)
         {
-
             ptr = (double *)(maxprofile + i);
             if ((taux == 100) && (naas > (length / 10)))
             {
@@ -418,7 +407,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
 
             /*** Aligned Aas in Query sequence and Database sequence are ****/
             /*** identical                                               ****/
-            
+
             if ((*(seq + i - begin + 1) != '+') && (*(seq + i - begin + 1) != ' ') && (*(seq + i - begin + 1) != 'x'))
             {
                 *ptr = facteur * identique;
@@ -445,7 +434,6 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
                 }
             }
         }
-
     }
 
     fprintf(stdout, "le smptr est de : %lf\n", *simptr);

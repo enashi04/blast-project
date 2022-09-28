@@ -4,12 +4,13 @@
 #include "types.h"
 #include <ctype.h>
 
-char *substr(const char *src, int m, int n);
+extern char *substr(const char *src, int m, int n);
 void blastVersion(BlastHeader *blhd, char *line);
 void queryName(BlastHeader *blhd, char *line, FILE *file);
 void databaseName(BlastHeader *blhd, char *line, FILE *file);
 void jumpAlignment(char *line, FILE *file);
 int getLength(char *line, int length);
+
 
 int initresfile(FILE *file, char *line, BlastHeader *blhd)
 {
@@ -55,13 +56,6 @@ int initresfile(FILE *file, char *line, BlastHeader *blhd)
 /*
  Substring
 */
-char *substr(const char *src, int m, int n)
-{
-    int len = n - m;
-    char *dest = (char *)malloc(sizeof(char) * (len + 1));
-    strncpy(dest, (src + m), len);
-    return dest;
-}
 
 /*
   Gets BLAST Program name and version 
