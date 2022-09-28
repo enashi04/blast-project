@@ -177,6 +177,37 @@ int main(int argc, char *argv[])
             }
         }
     }
+    else{
+        fprintf(outfile, "\n *********************************");
+		fprintf(outfile, "\n ***     FATAL BLASTP error    ***");
+		fprintf(outfile, "\n ***                           ***");
+		fprintf(outfile, "\n *** No HSP to build \'profile\' ***");
+		fprintf(outfile, "\n *********************************\n\n");
+		if (outfile != stdout){
+			fclose(outfile);
+        }
+		exit(1);
+    }
+    /**Reads an already existing profile if required**/
+    if (getargchar("-profil", &nomprofil) != NULL)
+	{
+		readprofil(nomprofil, profiltotal);
+	}
+
+    /*****************************************************************/
+	/*** Masks profile if required                  ******************/
+	/*** otherwise treats and uses the full profile ******************/
+	/*****************************************************************/
+
+	if (getargchar("-mask", &maskfilename) != NULL)
+	{
+		readmask(maskfilename, &mask);
+		trimmed = maskprofil(profiltotal, length, mask);
+	}
+    else{
+        //ici le profil à lissé et à couper ! 
+        
+    }
 
     fclose(infile);
 
