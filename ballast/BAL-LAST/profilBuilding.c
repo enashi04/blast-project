@@ -1,5 +1,5 @@
 /**
- * @file loadhspv2.c
+ * @file profilBuilding.c
  * @author Ihsane E.
  * @brief
  * @version 0.1
@@ -73,12 +73,12 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
 
     // là on récupère la ligne dans laquelle nous nous trouvons
     outtext = (char *)malloc(strlen(line) + 1);
-    strcpy(outtext, line);
+    strcpy(outtext, line); //strcpy
 
     // condition qui permet de vérifier si ou non il y'a un > permettant ainsi d'identifier la target/query
     if (line[0] == '>')
     {
-        strcpy(line, &line[1]);
+        memmove(line, &line[1], strlen(line));
     }
     // taille de la target (non de la séquence mais de l'identification)
     if (strlen(line) <= 90)
@@ -224,7 +224,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
             dline = strlen(line) - strlen(strpbrk(line + 1, "ABCDEFGHIJKLMNOPQRSTUVWXYZ-"));
             ptrstr = (char *)(strrchr(line, ' '));
             *ptrstr = '\0';
-            strcpy(line, (char *)(line + dline));
+            memmove(line, (char *)(line + dline), strlen(line));
 
             if (ok == 0)
             {
@@ -250,9 +250,10 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
             }
             else
             {
-                seq = (char *)realloc(seq, strlen(line) + strlen(seq) + 1);
+                //printf("reallocation pour seq \n");
+                seq = (char *)realloc(seq, strlen(line) + strlen(seq)+1);//pb ici (de base +1)
+             //  printf("on a fini de réallouer\n");
             }
-
             line = strtok(line, " ");
             strcat(seq, strtok(line, "\0")); // strcat ici de base
 
@@ -261,6 +262,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
         // On est à la subject
         else if (strncmp(line, "Sbjct", 5) == 0)
         {
+
             sscanf((char *)(strpbrk(line, "0123456789")), "%d", &debdb);
             sscanf((char *)(strrchr(line, ' ')), "%d", &enddb);
             dline1 = strlen(line);
@@ -317,6 +319,8 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
             fgets(line, 256, file);
         }
     }
+    
+
     // là on a tout récupéré !! du coup on passe direct à la suite
     // printf("query %s\n\n\n", queryseq);
     // printf("la séquence seq est de %s \n", seq);
@@ -367,15 +371,15 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
         begline++;
     }
     /*/////////////////////////////////////////////////////////////////*/
-
+    
 #ifdef DEBUG
     printf("%s\n", seqres->desc);
 #endif
-
     for (simprf = seqres->sim; simprf != NULL; simprf = simprf->next)
     {
         seqhsp = simprf->hsp;
         seq = simprf->aln;
+       // printf("seq is %s\n",seq);
         begin = simprf->begin + 1;
         end = simprf->end + 1;
         begdb = simprf->begdb + 1;
@@ -398,9 +402,9 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
 
         /**** Update the profile for this sequence accounting for the current  ****/
         /**** HSP and create the similarity profile for the current HSP        ****/
-
         for (int i = begin - 1; i < end; i++)
         {
+
             ptr = (double *)(maxprofile + i);
             if ((taux == 100) && (naas > (length / 10)))
             {
@@ -414,7 +418,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
 
             /*** Aligned Aas in Query sequence and Database sequence are ****/
             /*** identical                                               ****/
-
+            
             if ((*(seq + i - begin + 1) != '+') && (*(seq + i - begin + 1) != ' ') && (*(seq + i - begin + 1) != 'x'))
             {
                 *ptr = facteur * identique;
@@ -441,7 +445,9 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
                 }
             }
         }
+
     }
+
     fprintf(stdout, "le smptr est de : %lf\n", *simptr);
     return profil;
 }

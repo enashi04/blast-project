@@ -488,6 +488,7 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
 				*simptr = ID * fctr;
 				ptrstr = (char *)(conserved + i);
 				*ptrstr = *(seq + i - begin + 1);
+				//printf("on est identique\n");
 			}
 			else
 			{

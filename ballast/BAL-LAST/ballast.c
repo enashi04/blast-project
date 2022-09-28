@@ -151,23 +151,23 @@ int main(int argc, char *argv[])
         int j = 0;
         profiltotal = profilBuilding(seqres, infile, curline, length, conserved, maxprofile, 'p');
         fgets(curline, 256, infile);
-        fprintf(stdout, "curline is %s\n", curline);
-        while (curline[0] != '\0')
-        {
-            seqres->rank = i++;
-            seqres->next = (SeqHSP *)malloc(sizeof(SeqHSP));
-            (seqres->next)->prev = seqres;
-            seqres = seqres->next;
-            seqres->next = NULL;
-            j++;
-            printf("Tour : %u\n", j);
-           // contribution = loadHSP(seqres, infile, curline, length, conserved, maxprofile, 'p');
 
-            if (strcmp(seqres->prev->sim->hsp, seqres->sim->hsp) != 0)
-            {
-                addprofils(profiltotal, contribution, length);
-            }
-        }
+        // while (curline[0] != '\0')
+        // {
+
+        //     seqres->rank = i++;
+        //     seqres->next = (SeqHSP *)malloc(sizeof(SeqHSP));
+        //     (seqres->next)->prev = seqres;
+        //     seqres = seqres->next;
+        //     seqres->next = NULL;
+        //     j++;
+        //     contribution = loadHSP(seqres, infile, curline, length, conserved, maxprofile, 'p');
+
+        //     if (strcmp(seqres->prev->sim->hsp, seqres->sim->hsp) != 0)
+        //     {
+        //         addprofils(profiltotal, contribution, length);
+        //     }
+        // }
     }
 
     fclose(infile);
