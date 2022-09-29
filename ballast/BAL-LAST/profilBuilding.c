@@ -337,7 +337,6 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
     simprf->hsp = seqhsp;
     simprf->queryseq = queryseq;
     simprf->aln = seq;
-    printf("%s\n",simprf->aln);
     simprf->next = NULL;
     queryseq = NULL;
     seq = NULL;

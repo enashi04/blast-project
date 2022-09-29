@@ -55,6 +55,10 @@ int main(int argc, char *argv[])
     char *nomprofil;
     char *mask;
     char curline[256];
+
+    int mismatches, prevn;
+    int nmotifs = 0;
+
     FILE *infile, *outfile, *msffile, *tablefile, *anchorfile, *motifsfile;
 
 #define NUMARGS 20
@@ -156,8 +160,8 @@ int main(int argc, char *argv[])
             // printf("curline is %s\n", curline);
             if (curline[0] == '>')
             {
-                printf("Tour : %u\n", j);
-                printf("curline is %s\n", curline);
+            //     printf("Tour : %u\n", j);
+            //     printf("curline is %s\n", curline);
 
                 seqres->rank = i++;
                 seqres->next = (SeqHSP *)malloc(sizeof(SeqHSP));
@@ -177,7 +181,6 @@ int main(int argc, char *argv[])
                 fgets(curline, 256, infile);
                 if (curline[0] != '>')
                 {
-                    printf("On rentre ici\n");
                     break;
                 }
             }
@@ -231,11 +234,238 @@ int main(int argc, char *argv[])
         }
         else
         {
-            printf("Je rentre ici normalement\n");
             trimmed = trimprofil(profiltotal, smoothed, length, conserved);
         }
+    }
 
-        
+    // on passe à l'extraction du motif
+    motif = extractmotifs(trimmed, length, conserved);
+
+    if (motif == NULL)
+    {
+        outfile = stdout;
+        printf(outfile, "\n *********************************");
+        fprintf(outfile, "\n ***      FATAL Error          ***");
+        fprintf(outfile, "\n ***                           ***");
+        fprintf(outfile, "\n ***    Words too short        ***");
+        fprintf(outfile, "\n *** could not extract motifs  ***");
+        fprintf(outfile, "\n ***                           ***");
+        fprintf(outfile, "\n *********************************\n\n");
+        if (outfile != stdout)
+        {
+            fclose(outfile);
+        }
+        exit(1);
+    }
+
+    // déterminer le score maximum possible
+    motifptr = motif;
+
+    while (motifptr != NULL)
+    {
+        maxscore += motifptr->maxscore;
+        if (motifptr->maxscore > maxmotifscore)
+            maxmotifscore = motifptr->maxscore;
+        motifptr = motifptr->next;
+    }
+
+    /*****************************************************************/
+
+    motifsfilename = (char *)malloc(strlen(outfilename) + 8);
+    strcpy(motifsfilename, outfilename); // d'ou viens le outfilename
+    strcat(motifsfilename, ".motifs");
+
+    if (!(motifsfile = fopen(motifsfilename, "w")))
+    {
+        motifsfile = stdout;
+        printf("****************** W A R N I N G **********************\n");
+        printf("Cannot write %s file, printing suggested words to Standard Output\n\n", motifsfilename);
+        printf("*******************************************************\n");
+    }
+
+    fprintf(motifsfile, "\nSuggested Words : \n\n");
+
+    motifptr = motif;
+    // printf("mots conservés %s\n", *conserved);
+    // ici a lieu l'écriture dans le fichier .motif
+    while (motifptr != NULL)
+    {
+        // ici on écrit direct dans le motifsfile fichier .motif (j'ai ajouté le +1 de end parce que pas trop cohérent)
+        fprintf(motifsfile, "\t%4d - %4d\t: ", motifptr->begin + 1, motifptr->end + 1);
+        for (i = motifptr->begin; i < motifptr->end + 1; i++)
+        {
+            fprintf(motifsfile, "%c", *(conserved + i));
+            // on va afficher ici ce qu'il y'a dans conserved
+            //  et d'ici on peut avoir les positions de chaque acide aminé conservé
+        }
+        fprintf(motifsfile, "  \t:%8.2f\n\n", motifptr->maxscore);
+        // fprintf(stdout,"Le max score est : %lf\n", motifptr->maxscore);
+        motifptr = motifptr->next;
+    }
+
+    if (motifsfile != stdout)
+        fclose(motifsfile);
+
+    /*****************************************************************/
+    /*** Plots main 'profile' to *.prof file                      ****/
+    /*****************************************************************/
+
+    maxvalue = profilplot(profiltotal, trimmed, length, outfilename, conserved, first, maxprofile);
+
+    /*****************************************************************/
+    /*** Writes consensus sequence in FastA format                ****/
+    /*****************************************************************/
+
+    if (getargbool("-s") == 1)
+    {
+        consseq(profiltotal, length, outfilename, conserved);
+    }
+
+    if (getargbool("-anchors") == 1)
+    {
+        anchorfilename = (char *)malloc(strlen(outfilename) + 9);
+        strcpy(anchorfilename, outfilename);
+        strcat(anchorfilename, ".anchors");
+
+        if (!(anchorfile = fopen(anchorfilename, "w")))
+        {
+            printf("****************** W A R N I N G **********************\n");
+            printf("*** Cannot write %s anchors file ***\n\n", anchorfilename);
+            printf("*******************************************************\n");
+            anchorfile = NULL;
+        }
+        if (anchorfile)
+            fprintf(anchorfile, "Ballast %f\n", maxmotifscore);
+    }
+
+    if (getargbool("-table") == 1)
+    {
+        tablefilename = (char *)malloc(strlen(outfilename) + 7);
+        strcpy(tablefilename, outfilename);
+        strcat(tablefilename, ".table");
+        if (!(tablefile = fopen(tablefilename, "w")))
+        {
+            printf("****************** W A R N I N G **********************\n");
+            printf("*** Cannot write %s table file ***\n\n", tablefilename);
+            printf("*******************************************************\n");
+            tablefile = NULL;
+        }
+        else
+        {
+            for (motifptr = motif; motifptr != NULL; motifptr = motifptr->next)
+            {
+                fprintf(tablefile, "%d ", motifptr->n);
+                nmotifs = motifptr->n;
+            }
+        }
+    }
+
+    seqres = first;
+    while (seqres != NULL)
+    {
+        seqres->aligned = NULL;
+
+#ifdef DEBUG
+        printf("***%s\n", seqres->desc);
+#endif
+
+        /*****************************************************************/
+        /*** Identifies overlapping motifs/HSPs **************************/
+        /*****************************************************************/
+
+        motifdb = getsbjmotifs(motif, seqres->sim, trimmed, seqres->type);
+
+        if (motifdb != NULL)
+        {
+
+            /********************************************************/
+            /*** Sorts HSPs by order of position                 ****/
+            /********************************************************/
+
+            firstmotdb = sortbybegdb(motifdb);
+            seqres->sc = MHalign(motif, firstmotdb, trimmed, seqres->type, &firstalnmotdb);
+
+            if (seqres->type == 'p')
+            {
+                if ((tablefile) && (seqres->p < tableseuil))
+                {
+                    prevn = 0;
+                    fprintf(tablefile, "\n%-15s ", seqres->name);
+                }
+
+                seqres->aligned = (char *)malloc(length + 1);
+                for (i = 0; i < length; i++)
+                {
+                    ptrseq = (char *)(seqres->aligned + i);
+                    *ptrseq = '.';
+                }
+                ptrseq = (char *)(seqres->aligned + length);
+                *ptrseq = '\0';
+
+                motifdb = firstalnmotdb;
+                while (motifdb != NULL)
+                {
+                    ptrstr = (char *)malloc(motifdb->enddb - motifdb->begdb + 2);
+                    strncpy(ptrstr, motifdb->hsp->hsp + motifdb->begdb - motifdb->hsp->begdb, motifdb->enddb - motifdb->begdb + 1);
+                    lastchar = (char *)(ptrstr + motifdb->enddb - motifdb->begdb + 1);
+                    *lastchar = '\0';
+                    /*weight = MAX (0,1-motifdb->hsp->p);*/
+                    weight = motifdb->hsp->score;
+                    consmotif(motifdb->motif, ptrstr, motifdb->begin - motifdb->motif->begin, weight, weight);
+                    if (((seqres->p) < msfseuil))
+                    {
+                        if (anchorfile)
+                        {
+                            if (getargchar("-queryname", &queryname))
+                            {
+                                fprintf(anchorfile, "seq: %15s %15s\tpos: %10d\tbeg: %10d %10d\tlen: %6d\tweight: %6.2f\n", queryname, seqres->name, motifdb->motif->peak, motifdb->begin + 1, motifdb->begdb + 1, motifdb->enddb - motifdb->begdb + 1, 100.0 * motifdb->score / maxmotifscore);
+                            }
+                            else
+                            {
+                                if (seqres != first)
+                                {
+                                    fprintf(anchorfile, "seq: %15s %15s\tpos: %10d\tbeg: %10d %10d\tlen: %6d\tweight: %6.2f\n", first->name, seqres->name, motifdb->motif->peak, motifdb->begin + 1, motifdb->begdb + 1, motifdb->enddb - motifdb->begdb + 1, 100.0 * motifdb->score / maxmotifscore);
+                                }
+                            }
+                        }
+                        for (i = 0; i < (motifdb->enddb - motifdb->begdb + 1); i++)
+                        {
+                            ptrseq = (char *)(seqres->aligned + motifdb->begin + i);
+                            *ptrseq = *(ptrstr + i);
+                        }
+                    }
+                    free(ptrstr);
+
+                    if ((tablefile) && (seqres->p < tableseuil))
+                    {
+                        mismatches = motifdb->motif->n - prevn - 1;
+                        for (i = 0; i < mismatches; i++)
+                        {
+                            fprintf(tablefile, "-1.00 ");
+                        }
+                        fprintf(tablefile, "%5.2f ", motifdb->score / motifdb->motif->maxscore);
+                        prevn = motifdb->motif->n;
+                    }
+
+                    motifdb = motifdb->alnnext;
+                }
+            }
+            freesbjmotifs(firstmotdb);
+
+            if ((tablefile) && (seqres->p < tableseuil) && (prevn < nmotifs))
+            {
+                mismatches = nmotifs - prevn;
+
+                for (i = 0; i < mismatches; i++)
+                {
+                    fprintf(tablefile, "-1.00 ");
+                }
+            }
+            seqres->nmatch = countmatches(seqres->sim);
+        }
+
+        seqres->twins = NULL;
+        seqres = seqres->next;
     }
 
     fclose(infile);

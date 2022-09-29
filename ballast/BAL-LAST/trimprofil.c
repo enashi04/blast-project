@@ -164,38 +164,6 @@ double *trimprofil(double *profiltotal, double *profil, int length, char *cons)
 		}
 	}
 
-	/* Est-ce que ca peut aider ?
-
-	for (i=0;i<length;i++)
-			{
-		m=0;
-			n=0;
-			for (j=i-DEMIFEN;j<i+DEMIFEN+1;j++)
-					{
-					if((j>=0) && (j<length))
-							{
-				if(*(cons+j) != '.')
-					{
-					m+=*(d2prof+j);
-					n++;
-					}
-							}
-					}
-			ptr = (double *) (smoothed + i);
-			if ((n!= 0) && (*(cons+i) != '.'))
-					{
-					m = m /(double) n;
-					}
-			else
-					{
-					m = 0;
-					}
-			*ptr = m;
-			}
-
-	d2prof = smoothed;
-	*/
-
 	/*****************************************************************/
 
 	/*****************************************************************/
