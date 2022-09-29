@@ -150,9 +150,10 @@ int main(int argc, char *argv[])
         i = 1;
         int j = 1;
         profiltotal = profilBuilding(seqres, infile, curline, length, conserved, maxprofile, 'p');
+        printf("Le profil total est %ld\n", *profiltotal);
         while (curline[0] != '\0')
         {
-            fgets(curline, 256, infile);
+           // printf("curline is %s\n", curline);
             if (curline[0] == '>')
             {
                 printf("Tour : %u\n", j);
@@ -173,7 +174,12 @@ int main(int argc, char *argv[])
             }
             else
             {
-                break;
+                fgets(curline,256,infile);
+                if(curline[0]!='>'){
+                    printf("On rentre ici\n");
+                    break;
+                }
+                
             }
         }
     }
@@ -191,7 +197,9 @@ int main(int argc, char *argv[])
     /**Reads an already existing profile if required**/
     if (getargchar("-profil", &nomprofil) != NULL)
 	{
-		readprofil(nomprofil, profiltotal);
+        if(fopen(nomprofil,"r")){
+		    readprofil(nomprofil, profiltotal);
+        }
 	}
 
     /*****************************************************************/
@@ -200,12 +208,19 @@ int main(int argc, char *argv[])
 	/*****************************************************************/
 
 	if (getargchar("-mask", &maskfilename) != NULL)
-	{
-		readmask(maskfilename, &mask);
-		trimmed = maskprofil(profiltotal, length, mask);
+	{ 
+        if(fopen(maskfilename,"r")){
+            readmask(maskfilename, &mask);
+            //printf("On va ici\n");
+            trimmed = maskprofil(profiltotal, length, mask);
+        }
+		
 	}
     else{
-        //ici le profil à lissé et à couper ! 
+        //On va d'abord lisser le profil en récupérant d'abord la partie conservée
+        //printf("conserved %s\n", conserved); //nickel
+        //lissage
+        smoothed=smoothprofil(profiltotal, length, conserved);
         
     }
 

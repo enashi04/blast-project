@@ -371,6 +371,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
     /****************************************************SIMPRF à calculer****************************************************/
     // printf("la taille de la séquence est : %ld\n", strlen(simprf->aln));
     // int simprofil[strlen(seq)]; // on crée un tableau qui va contenir les valeurs pour chaque aa (if id, sim, nothing)
+    //double averageSimptr;
 
     for (simprf = seqres->sim; simprf != NULL; simprf = simprf->next)
     {
@@ -383,6 +384,9 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
         enddb = simprf->enddb + 1;
 
         simprf->prf = (double *)malloc(sizeof(double) * (end - begin + 1));
+
+        // double simptrValue[strlen(seq)];
+        // printf("la taille du tableau est de %ld\n", strlen(seq));
 
         p = simprf->p;
         if ((p >= maxp) || (p > 1))
@@ -414,6 +418,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
                 *simptr = ID * fctr;
                 ptrstr = (char *)(conserved + i);
                 *ptrstr = *(seq + i - begin + 1);
+                
             }
             else
             {
@@ -424,6 +429,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
                 {
                     *ptr = identique * facteur / 2;
                     *simptr = SIM * fctr;
+                    
                 }
                 else
                 {
@@ -431,6 +437,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
 
                     *ptr = identique * NETRA * facteur;
                     *simptr = RIEN * fctr;
+                   
                 }
             }
         }

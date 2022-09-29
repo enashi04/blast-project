@@ -4,8 +4,7 @@ EXEC=ballast
 
 # Les fichiers .o a générer si nécessaire
 
-DEP=printusage.o getargs.o initresfile.o addprofils.o loadhsp.o handlegaps.o filter.o profilBuilding.o substring.o
-
+DEP=printusage.o getargs.o initresfile.o addprofils.o handlegaps.o filter.o profilBuilding.o substring.o readmask.o readprofil.o maskprofil.o smoothprofil.o
 
 all: $(EXEC)
 
