@@ -153,7 +153,7 @@ int main(int argc, char *argv[])
         printf("Le profil total est %ld\n", *profiltotal);
         while (curline[0] != '\0')
         {
-           // printf("curline is %s\n", curline);
+            // printf("curline is %s\n", curline);
             if (curline[0] == '>')
             {
                 printf("Tour : %u\n", j);
@@ -174,53 +174,67 @@ int main(int argc, char *argv[])
             }
             else
             {
-                fgets(curline,256,infile);
-                if(curline[0]!='>'){
+                fgets(curline, 256, infile);
+                if (curline[0] != '>')
+                {
                     printf("On rentre ici\n");
                     break;
                 }
-                
             }
         }
     }
-    else{
+    else
+    {
         fprintf(outfile, "\n *********************************");
-		fprintf(outfile, "\n ***     FATAL BLASTP error    ***");
-		fprintf(outfile, "\n ***                           ***");
-		fprintf(outfile, "\n *** No HSP to build \'profile\' ***");
-		fprintf(outfile, "\n *********************************\n\n");
-		if (outfile != stdout){
-			fclose(outfile);
+        fprintf(outfile, "\n ***     FATAL BLASTP error    ***");
+        fprintf(outfile, "\n ***                           ***");
+        fprintf(outfile, "\n *** No HSP to build \'profile\' ***");
+        fprintf(outfile, "\n *********************************\n\n");
+        if (outfile != stdout)
+        {
+            fclose(outfile);
         }
-		exit(1);
+        exit(1);
     }
     /**Reads an already existing profile if required**/
     if (getargchar("-profil", &nomprofil) != NULL)
-	{
-        if(fopen(nomprofil,"r")){
-		    readprofil(nomprofil, profiltotal);
+    {
+        if (fopen(nomprofil, "r"))
+        {
+            readprofil(nomprofil, profiltotal);
         }
-	}
+    }
 
     /*****************************************************************/
-	/*** Masks profile if required                  ******************/
-	/*** otherwise treats and uses the full profile ******************/
-	/*****************************************************************/
+    /*** Masks profile if required                  ******************/
+    /*** otherwise treats and uses the full profile ******************/
+    /*****************************************************************/
 
-	if (getargchar("-mask", &maskfilename) != NULL)
-	{ 
-        if(fopen(maskfilename,"r")){
+    if (getargchar("-mask", &maskfilename) != NULL)
+    {
+        if (fopen(maskfilename, "r"))
+        {
             readmask(maskfilename, &mask);
-            //printf("On va ici\n");
+            // printf("On va ici\n");
             trimmed = maskprofil(profiltotal, length, mask);
         }
-		
-	}
-    else{
-        //On va d'abord lisser le profil en récupérant d'abord la partie conservée
-        //printf("conserved %s\n", conserved); //nickel
-        //lissage
-        smoothed=smoothprofil(profiltotal, length, conserved);
+    }
+    else
+    {
+        // On va d'abord lisser le profil en récupérant d'abord la partie conservée
+        // printf("conserved %s\n", conserved); //nickel
+        // lissage
+        smoothed = smoothprofil(profiltotal, length, conserved);
+        if (getargbool("-noext") == 0)
+        {
+            trimmed = trimprofilext(profiltotal, smoothed, length, conserved);
+        }
+        else
+        {
+            printf("Je rentre ici normalement\n");
+            trimmed = trimprofil(profiltotal, smoothed, length, conserved);
+        }
+
         
     }
 

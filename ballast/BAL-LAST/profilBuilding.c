@@ -241,6 +241,8 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
             fgets(line, 256, file);
 
             line[strlen(line) - 2] = '\0';
+
+            /*12 OU 13 REVOIR LES NOUVEAUX FORMATS DE FICHIERS BLASTP*/
             strncpy(line, (line + 12), strlen(line) - 12);
 
             if (ok == 0)
@@ -330,10 +332,12 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
         p = 1;
     }
 
+    //déclaration et initialisation d'une variable tableau
+    int tabSimprt[strlen(seq)+1];
     simprf->hsp = seqhsp;
     simprf->queryseq = queryseq;
     simprf->aln = seq;
-
+    printf("%s\n",simprf->aln);
     simprf->next = NULL;
     queryseq = NULL;
     seq = NULL;
@@ -372,12 +376,12 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
     // printf("la taille de la séquence est : %ld\n", strlen(simprf->aln));
     // int simprofil[strlen(seq)]; // on crée un tableau qui va contenir les valeurs pour chaque aa (if id, sim, nothing)
     //double averageSimptr;
-
+    int j=0; //remplir le tableau
     for (simprf = seqres->sim; simprf != NULL; simprf = simprf->next)
     {
         seqhsp = simprf->hsp;
         seq = simprf->aln;
-        // printf("seq is %s\n",seq);
+
         begin = simprf->begin + 1;
         end = simprf->end + 1;
         begdb = simprf->begdb + 1;
@@ -385,17 +389,16 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
 
         simprf->prf = (double *)malloc(sizeof(double) * (end - begin + 1));
 
-        // double simptrValue[strlen(seq)];
-        // printf("la taille du tableau est de %ld\n", strlen(seq));
-
+       
         p = simprf->p;
-        if ((p >= maxp) || (p > 1))
+        if ((p >= maxp) || (p > 1)){
             p = 1;
+        }
         facteur = (1 - p);
         fctr = 1;
-
         /**** Update the profile for this sequence accounting for the current  ****/
         /**** HSP and create the similarity profile for the current HSP        ****/
+
         for (int i = begin - 1; i < end; i++)
         {
             ptr = (double *)(maxprofile + i);
@@ -418,7 +421,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
                 *simptr = ID * fctr;
                 ptrstr = (char *)(conserved + i);
                 *ptrstr = *(seq + i - begin + 1);
-                
+
             }
             else
             {
@@ -428,21 +431,18 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
                 if (*(seq + i - begin + 1) == '+')
                 {
                     *ptr = identique * facteur / 2;
-                    *simptr = SIM * fctr;
-                    
+                    *simptr = SIM * fctr;  
                 }
                 else
                 {
                     /*** Well... actually they're different       ***/
-
                     *ptr = identique * NETRA * facteur;
                     *simptr = RIEN * fctr;
-                   
                 }
             }
         }
     }
 
-    fprintf(stdout, "le smptr est de : %lf\n", *simptr);
+    //fprintf(stdout, "le smptr est de : %lf\n", *simptr);
     return profil;
 }
