@@ -7,7 +7,7 @@
 /*#define DEMIFEN 4*/
 #define DEMIFEN demifen
 
-extern void profilplot(double *profil, double *profil2, int length, char *filename, char *conserved, SeqHSP *first);
+//extern void profilplot(double *profil, double *profil2, int length, char *filename, char *conserved, SeqHSP *first);
 
 double *smoothprofil(double *profil, int length, char *cons)
 {
@@ -15,6 +15,7 @@ double *smoothprofil(double *profil, int length, char *cons)
 	double *smoothed, *ptr;
 	double m;
 	int i, j, n;
+	printf("la valeur de profil+j est :%lf\n", *profil);
 
 	//printf("le profil est %lf \n", *profil);
 	if (getargint("-smooth", &demifen) == NULL)
@@ -33,10 +34,13 @@ double *smoothprofil(double *profil, int length, char *cons)
 		{
 			if ((j >= 0) && (j < length))
 			{
+				//printf("Alors la valeur de cons est %c\n",*(cons + j) );
 				if (*(cons + j) != '.')
 				{
+
 					m += *(profil + j);
 					n++;
+					
 				}
 			}
 		}

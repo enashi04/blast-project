@@ -36,7 +36,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
     char *outtext = NULL, *ptrstr, *begline, *queryseq, *seq, *seqhsp, *startline;
     int endofdbseq = 0, ok = 0, okhsp = 0, gapped, taux, naas, begin, end, debut, dline, n;
     int debdb, enddb, begdb, dline2, dline1;
-    int identique = 1;
+    int identique ;
 
     // si on a comme argument lors de l'exécution du programme maxp ou nmaxp : pour l'instant pas notre cas
 
@@ -49,7 +49,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
     }
 
     // initialisation du profil
-    profil = (double *)malloc(sizeof(double) * length); // pb ici
+    profil = (double *)malloc(sizeof(double) * length); 
 
     for (int i = 0; i < length; i++)
     {
@@ -375,7 +375,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
     // printf("la taille de la séquence est : %ld\n", strlen(simprf->aln));
     // int simprofil[strlen(seq)]; // on crée un tableau qui va contenir les valeurs pour chaque aa (if id, sim, nothing)
     //double averageSimptr;
-    int j=0; //remplir le tableau
+    //int j=0; //remplir le tableau
     for (simprf = seqres->sim; simprf != NULL; simprf = simprf->next)
     {
         seqhsp = simprf->hsp;
@@ -405,9 +405,13 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
             {
                 identique = 0;
             }
+            else{
+                identique=1;
+            }
             *ptr += facteur * identique;
 
             ptr = (double *)(profil + i);
+            //printf("le profil est de %f\n", *profil);
             simptr = (double *)(simprf->prf + i - begin + 1);
             *simptr = 0.0;
 
@@ -441,7 +445,6 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
             }
         }
     }
-
     //fprintf(stdout, "le smptr est de : %lf\n", *simptr);
     return profil;
 }

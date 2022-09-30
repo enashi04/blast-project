@@ -95,7 +95,7 @@ double *trimprofilext(double *profiltotal, double *profil, int length, char *con
             *ptr = 0.0;
         }
     }
-    printf("ptr bon %lf\n", *ptr);
+    printf("ptr du trimmed: %lf\n", *ptr);
     /*****************************************************************/
 
     /*****************************************************************/
@@ -234,10 +234,10 @@ double *trimprofilext(double *profiltotal, double *profil, int length, char *con
 
     /*****************************************************************/
 
-    for (i = 0; i < length; i++)
-    {
-        printf("%4d %c : %5.2f %5.2f <%5.2f> (%5.2f) %5.2f\n", i, *(cons + i), *(profil + i), *(smoothed + i), *(trimmed + i), *(dprof + i), *(d2prof + i));
-    }
+    // for (i = 0; i < length; i++)
+    // {
+    //     printf("%4d %c : %5.2f %5.2f <%5.2f> (%5.2f) %5.2f\n", i, *(cons + i), *(profil + i), *(smoothed + i), *(trimmed + i), *(dprof + i), *(d2prof + i));
+    // }
 
     free(dprof);
     free(d2prof);
