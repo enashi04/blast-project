@@ -160,8 +160,8 @@ int main(int argc, char *argv[])
             // printf("curline is %s\n", curline);
             if (curline[0] == '>')
             {
-            //     printf("Tour : %u\n", j);
-            //     printf("curline is %s\n", curline);
+                printf("Tour : %u\n", j);
+                printf("curline is %s\n", curline);
 
                 seqres->rank = i++;
                 seqres->next = (SeqHSP *)malloc(sizeof(SeqHSP));

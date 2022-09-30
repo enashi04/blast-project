@@ -25,7 +25,8 @@ extern int filter(char *seqhsp, char *seq);
 extern SimPrf *handlegaps(SimPrf *simprf);
 char *getLine(char *line);
 
-/*******************************JUSTE LE CAS DU PROFIL AFIN DE RÉCUPÉRER LE PROFIL TOTAL!!!*******************************/
+double getMaxP(double maxp, char type);
+void initSeqres(SeqHSP *seqres, SimPrf *simprf, double maxp, char type);
 
 double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char *conserved, double *maxprofile, char type)
 {
@@ -36,20 +37,14 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
     char *outtext = NULL, *ptrstr, *begline, *queryseq, *seq, *seqhsp, *startline;
     int endofdbseq = 0, ok = 0, okhsp = 0, gapped, taux, naas, begin, end, debut, dline, n;
     int debdb, enddb, begdb, dline2, dline1;
-    int identique ;
+    int identique;
 
     // si on a comme argument lors de l'exécution du programme maxp ou nmaxp : pour l'instant pas notre cas
 
-    if (getargdouble("-maxp", &maxp) == NULL)
-        maxp = DEFMAXP;
-    if (type == 'n')
-    {
-        if (getargdouble("-nmaxp", &maxp) == NULL)
-            maxp = DEFMAXP;
-    }
+    maxp = getMaxP(maxp, type);
 
     // initialisation du profil
-    profil = (double *)malloc(sizeof(double) * length); 
+    profil = (double *)malloc(sizeof(double) * length);
 
     for (int i = 0; i < length; i++)
     {
@@ -62,15 +57,16 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
     seqres->nmatch = 0;
     seqres->type = type;
     seqres->risedup = ' ';
+
     seqres->sim = (SimPrf *)malloc(sizeof(SimPrf));
+
     simprf = seqres->sim;
     simprf->text = NULL;
-    simprf->score = 0;
+    simprf->score = 2;
     simprf->maxscore = 0;
     simprf->nmatch = 0;
     seqres->p = 1;
     seqres->prob = maxp;
-
     // là on récupère la ligne dans laquelle nous nous trouvons
     outtext = (char *)malloc(strlen(line) + 1);
     strcpy(outtext, line); // strcpy
@@ -105,7 +101,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
         *ptrstr = '|';
     }
 
-    // récuparation de access
+    // récupération de access
     ptrstr = strtok(NULL, " ");
     if (ptrstr != NULL)
     {
@@ -243,7 +239,8 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
             line[strlen(line) - 2] = '\0';
 
             /*12 OU 13 REVOIR LES NOUVEAUX FORMATS DE FICHIERS BLASTP*/
-            strncpy(line, (line + 12), strlen(line) - 12); //a modifier 
+
+            strncpy(line, (line + 12), strlen(line) - dline); // a modifier
 
             if (ok == 0)
             {
@@ -324,7 +321,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
 
     // là on a tout récupéré !! du coup on passe direct à la suite
     // printf("query %s\n\n\n", queryseq);
-    // printf("la séquence seq est de %s \n", seq);
+    printf("la séquence seq est de %s \n", seq);
     // printf("la séquence hsp est %s\n", seqhsp);
 
     if (filter(seqhsp, seq) == 0)
@@ -332,8 +329,8 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
         p = 1;
     }
 
-    //déclaration et initialisation d'une variable tableau
-    int tabSimprt[strlen(seq)+1];
+    // déclaration et initialisation d'une variable tableau
+    int tabSimprt[strlen(seq) + 1];
     simprf->hsp = seqhsp;
     simprf->queryseq = queryseq;
     simprf->aln = seq;
@@ -374,8 +371,8 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
     /****************************************************SIMPRF à calculer****************************************************/
     // printf("la taille de la séquence est : %ld\n", strlen(simprf->aln));
     // int simprofil[strlen(seq)]; // on crée un tableau qui va contenir les valeurs pour chaque aa (if id, sim, nothing)
-    //double averageSimptr;
-    //int j=0; //remplir le tableau
+    // double averageSimptr;
+    // int j=0; //remplir le tableau
     for (simprf = seqres->sim; simprf != NULL; simprf = simprf->next)
     {
         seqhsp = simprf->hsp;
@@ -388,9 +385,9 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
 
         simprf->prf = (double *)malloc(sizeof(double) * (end - begin + 1));
 
-       
         p = simprf->p;
-        if ((p >= maxp) || (p > 1)){
+        if ((p >= maxp) || (p > 1))
+        {
             p = 1;
         }
         facteur = (1 - p);
@@ -405,26 +402,26 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
             {
                 identique = 0;
             }
-            else{
-                identique=1;
+            else
+            {
+                identique = 1;
             }
             *ptr += facteur * identique;
 
             ptr = (double *)(profil + i);
-            //printf("le profil est de %f\n", *profil);
+            // printf("le profil est de %f\n", *profil);
             simptr = (double *)(simprf->prf + i - begin + 1);
             *simptr = 0.0;
 
             /*** Aligned Aas in Query sequence and Database sequence are ****/
             /*** identical                                               ****/
-
+            
             if ((*(seq + i - begin + 1) != '+') && (*(seq + i - begin + 1) != ' ') && (*(seq + i - begin + 1) != 'x'))
             {
                 *ptr = facteur * identique;
                 *simptr = ID * fctr;
                 ptrstr = (char *)(conserved + i);
                 *ptrstr = *(seq + i - begin + 1);
-
             }
             else
             {
@@ -434,7 +431,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
                 if (*(seq + i - begin + 1) == '+')
                 {
                     *ptr = identique * facteur / 2;
-                    *simptr = SIM * fctr;  
+                    *simptr = SIM * fctr;
                 }
                 else
                 {
@@ -445,6 +442,20 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
             }
         }
     }
-    //fprintf(stdout, "le smptr est de : %lf\n", *simptr);
+    // fprintf(stdout, "le smptr est de : %lf\n", *simptr);
     return profil;
+}
+
+double getMaxP(double maxp, char type)
+{
+    if (getargdouble("-maxp", &maxp) == NULL)
+    {
+        maxp = DEFMAXP;
+        if (type == 'n')
+        {
+            if (getargdouble("-nmaxp", &maxp) == NULL)
+                maxp = DEFMAXP;
+        }
+    }
+    return maxp;
 }
