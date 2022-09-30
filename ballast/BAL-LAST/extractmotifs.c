@@ -38,9 +38,9 @@ Motif *extractmotifs(double *profil, int length, char *conserved)
     firstmotif = NULL;
     motif = NULL;
 
-#ifndef WWW
-    printf("\nSuggested Words : \n\n");
-#endif
+// #ifndef WWW
+//     printf("\nSuggested Words : \n\n");
+// #endif
 
     i = 0;
 
@@ -58,11 +58,13 @@ Motif *extractmotifs(double *profil, int length, char *conserved)
         while ((i < length) && (*(profil + i) != 0))
         {
             score += *(profil + i) * ID;
+           // printf("le score est de %f\n", score);
             if (*(profil + i) > maxprofvalue)
             {
                 maxpos = i + 1;
                 maxprofvalue = *(profil + i);
             }
+           // printf(" %d %8.2f (%8.2f)\n", i, *(profil + i), score);
 #ifdef DEBUG
             printf(" %d %8.2f (%8.2f)\n", i, *(profil + i), score);
 #endif
@@ -70,6 +72,7 @@ Motif *extractmotifs(double *profil, int length, char *conserved)
             i++;
         }
         end = i;
+        printf("le score est de %f\n", score);
         if ((n > MINWORD) && (score > MINSCORE))
         {
             if (motif == NULL)

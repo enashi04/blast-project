@@ -243,7 +243,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
             line[strlen(line) - 2] = '\0';
 
             /*12 OU 13 REVOIR LES NOUVEAUX FORMATS DE FICHIERS BLASTP*/
-            strncpy(line, (line + 12), strlen(line) - 12);
+            strncpy(line, (line + 12), strlen(line) - 12); //a modifier 
 
             if (ok == 0)
             {
