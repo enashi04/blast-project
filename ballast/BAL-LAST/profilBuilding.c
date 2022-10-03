@@ -190,7 +190,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
             }
             simprf->p = p;
         } // ensuite l'identité
-        else if (strncmp(line, " Identities", 11) == 0)
+        else if (strncmp(line, "Identities", 11) == 0)
         {
             // si y'a pas de gaps
             if (strstr(line, "Gaps = 0/"))
@@ -304,18 +304,13 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
         {
             endofdbseq = 1;
         }
-        else if (strlen(line) == 2)
-        {
-            fgets(line, 256, file);
-            if (strlen(line) == 2)
-            {
-                endofdbseq = 1;
-            }
-        }
         else
         {
             // sinon on va a la ligne suivante
             fgets(line, 256, file);
+            if(strncmp(line, "Score", 10)){
+                
+            }
         }
     }
 
