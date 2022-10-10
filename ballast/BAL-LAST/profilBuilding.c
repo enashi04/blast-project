@@ -140,7 +140,6 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
         // on arrive à la query
         else if (strncmp(line, "Query", 5) == 0)
         {
-            printf("on passe là\n");
             // là on recherche d'abord en début de la ligne le numéro de début puis de fin
             sscanf((char *)(strpbrk(line, "0123456789")), "%d", &debut);
             sscanf((char *)(strrchr(line, ' ')), "%d", &end);
@@ -300,15 +299,13 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
         }
     }
 
-    // là on a tout récupéré !! du coup on passe direct à la suite
-    // printf("query %s\n\n\n", queryseq);
-    // printf("la séquence hsp est %s\n", seqhsp);
-
     /****************************************************SIMPRF à calculer****************************************************/
     // printf("la taille de la séquence est : %ld\n", strlen(simprf->aln));
     // int simprofil[strlen(seq)]; // on crée un tableau qui va contenir les valeurs pour chaque aa (if id, sim, nothing)
     // double averageSimptr;
     // int j=0; //remplir le tableau
+	printf("%s\n", seqres->desc);
+
     for (simprf = seqres->sim; simprf != NULL; simprf = simprf->next)
     {
         seqhsp = simprf->hsp;
@@ -328,6 +325,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
         }
         facteur = (1 - p);
         fctr = 1;
+
         /**** Update the profile for this sequence accounting for the current  ****/
         /**** HSP and create the similarity profile for the current HSP        ****/
 
@@ -378,7 +376,8 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
             }
         }
     }
-    // fprintf(stdout, "le smptr est de : %lf\n", *simptr);
+
+    fprintf(stdout, "le smptr est de : %lf\n", *simptr);
     return profil;
 }
 
