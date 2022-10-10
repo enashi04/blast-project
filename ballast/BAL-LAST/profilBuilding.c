@@ -23,10 +23,18 @@
 
 extern int filter(char *seqhsp, char *seq);
 extern SimPrf *handlegaps(SimPrf *simprf);
-char *getLine(char *line);
+void verifLine(char *line);
+double getMaxP(double maxp, char type);
 
 double getMaxP(double maxp, char type);
-void initSeqres(SeqHSP *seqres, SimPrf *simprf, double maxp, char type);
+char *getOuttext(char *line, char *outtext);
+char *getDesc(char *line, SeqHSP *seqres);
+char *getName(char *line, char *ptrstr, SeqHSP *seqres);
+char *getAccess(char *line, char *ptrstr, SeqHSP *seqres);
+char *firstScoreRecovery(char *line, char *outtext, char *begline, FILE *file);
+double eValueRecovery(char *line, char *ptrstr, double p);
+void fixeValue(double p, double maxp);
+char *getText(char *line, SimPrf *simprf);
 
 double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char *conserved, double *maxprofile, char type)
 {
@@ -68,98 +76,43 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
     seqres->p = 1;
     seqres->prob = maxp;
     // là on récupère la ligne dans laquelle nous nous trouvons
-    outtext = (char *)malloc(strlen(line) + 1);
-    strcpy(outtext, line); // strcpy
+    outtext = getOuttext(line, outtext);
 
     // condition qui permet de vérifier si ou non il y'a un > permettant ainsi d'identifier la target/query
-    if (line[0] == '>')
-    {
-        memmove(line, &line[1], strlen(line));
-    }
-    // taille de la target (non de la séquence mais de l'identification)
-    if (strlen(line) <= 90)
-    {
-        for (int i = strlen(line) - 1; i < 90; i++)
-        {
-            line[i] = ' ';
-        }
-    }
-
-    line[90] = '\0';
+    verifLine(line);
 
     // récupération de desc
-    seqres->desc = (char *)malloc(strlen(line) + 1);
-    strcpy(seqres->desc, line);
+    seqres->desc = getDesc(line, seqres);
     // récupération de name
-    ptrstr = strtok(line, " ");
-    seqres->name = (char *)malloc(strlen(ptrstr) + 1);
-    strcpy(seqres->name, ptrstr);
-
-    ptrstr = strchr(seqres->name, ':');
-    if (ptrstr != NULL)
-    {
-        *ptrstr = '|';
-    }
+    seqres->name = getName(line, ptrstr, seqres);
 
     // récupération de access
-    ptrstr = strtok(NULL, " ");
-    if (ptrstr != NULL)
-    {
-        seqres->access = (char *)malloc(strlen(ptrstr) + 1);
-        strcpy(seqres->access, ptrstr);
-    }
-    else
-    {
-        seqres->access = (char *)malloc(strlen(seqres->name) + 1);
-        strcpy(seqres->access, seqres->name);
-    }
+    seqres->access = getAccess(line, ptrstr, seqres);
+
     // on va à la ligne suivante
     fgets(line, 256, file);
+
     begline = line;
     if (*begline == ' ')
     {
         begline++;
     }
-    // comparaison avec la ligne où on se trouve actuellement
-    while (strncmp(begline, "Score", 5) != 0)
-    {
-        outtext = (char *)realloc(outtext, strlen(outtext) + strlen(line) + 1);
-        strcpy(outtext, line);
-        // on va à la ligne suivante
-        fgets(line, 256, file);
-        begline = line;
-
-        if (*begline == ' ')
-        {
-            begline++;
-        }
-    }
-    // on met à jour outtext
-    seqres->outtext = outtext;
+    // Mise à jour de l'outtext si on n'est pas dans le score (normalement on y est ...)
+    seqres->outtext = firstScoreRecovery(line, outtext, begline, file);
 
     // recherche la première occurence dans laquelle se trouve =e- pour la e-value
-    ptrstr = (char *)(strstr(line, "e-"));
-    if (ptrstr != NULL)
-    {
-        ptrstr = (char *)(ptrstr + 1);
-        *ptrstr = 1;
-    }
-    // ici on va récupérer la e-value qui va correspondre à p.
-    sscanf((char *)(strrchr(line, '=') + 1), "%lf", &p);
+    p = eValueRecovery(line, ptrstr, p);
 
     seqres->prob = p;
     simprf->p = p;
+
     // condition permettant de fixer la e-value <=1
-    if ((p >= maxp) || (p > 1))
-    {
-        p = 1;
-    }
+    fixeValue(p, maxp);
 
     facteur = (1.0) * p;
     fctr = 1;
-    simprf->text = (char *)malloc(strlen(line) + 1);
-    strcpy(simprf->text, line);
-    // tant qu'on est pas à la fin de la première analyse
+
+    simprf->text = getText(line, simprf);
     while (endofdbseq == 0)
     {
         // On parcourt d'abord le score
@@ -316,7 +269,6 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
 
     // là on a tout récupéré !! du coup on passe direct à la suite
     // printf("query %s\n\n\n", queryseq);
-    printf("la séquence seq est de %s \n", seq);
     // printf("la séquence hsp est %s\n", seqhsp);
 
     if (filter(seqhsp, seq) == 0)
@@ -453,4 +405,113 @@ double getMaxP(double maxp, char type)
         }
     }
     return maxp;
+}
+
+void verifLine(char *line)
+{
+    if (line[0] == '>')
+    {
+        memmove(line, &line[1], strlen(line));
+    }
+    // taille de la target (non de la séquence mais de l'identification)
+    if (strlen(line) <= 90)
+    {
+        for (int i = strlen(line) - 1; i < 90; i++)
+        {
+            line[i] = ' ';
+        }
+    }
+
+    line[90] = '\0';
+}
+
+char *getOuttext(char *line, char *outtext)
+{
+    outtext = (char *)malloc(strlen(line) + 1);
+    strcpy(outtext, line); // strcpy
+    return outtext;
+}
+
+char *getDesc(char *line, SeqHSP *seqres)
+{
+    seqres->desc = (char *)malloc(strlen(line) + 1);
+    strcpy(seqres->desc, line);
+    return seqres->desc;
+}
+
+char *getName(char *line, char *ptrstr, SeqHSP *seqres)
+{
+    ptrstr = strtok(line, " ");
+    seqres->name = (char *)malloc(strlen(ptrstr) + 1);
+    strcpy(seqres->name, ptrstr);
+
+    ptrstr = strchr(seqres->name, ':');
+    if (ptrstr != NULL)
+    {
+        *ptrstr = '|';
+    }
+    return seqres->name;
+}
+
+char *getAccess(char *line, char *ptrstr, SeqHSP *seqres)
+{
+    ptrstr = strtok(NULL, " ");
+    if (ptrstr != NULL)
+    {
+        seqres->access = (char *)malloc(strlen(ptrstr) + 1);
+        strcpy(seqres->access, ptrstr);
+    }
+    else
+    {
+        seqres->access = (char *)malloc(strlen(seqres->name) + 1);
+        strcpy(seqres->access, seqres->name);
+    }
+    return seqres->access;
+}
+
+char *firstScoreRecovery(char *line, char *outtext, char *begline, FILE *file)
+{
+    while (strncmp(begline, "Score", 5) != 0)
+    {
+        outtext = (char *)realloc(outtext, strlen(outtext) + strlen(line) + 1);
+        strcpy(outtext, line);
+        // on va à la ligne suivante
+        fgets(line, 256, file);
+        begline = line;
+
+        if (*begline == ' ')
+        {
+            begline++;
+        }
+    }
+    // on met à jour outtext
+    return outtext;
+}
+
+double eValueRecovery(char *line, char *ptrstr, double p)
+{
+    ptrstr = (char *)(strstr(line, "e-"));
+    if (ptrstr != NULL)
+    {
+        ptrstr = (char *)(ptrstr + 1);
+        *ptrstr = 1;
+    }
+    // ici on va récupérer la e-value qui va correspondre à p.
+    sscanf((char *)(strrchr(line, '=') + 1), "%lf", &p);
+    return p;
+}
+
+void fixeValue(double p, double maxp)
+{
+    if ((p >= maxp) || (p > 1))
+    {
+        p = 1;
+    }
+}
+
+char *getText(char *line, SimPrf *simprf)
+{
+    simprf->text = (char *)malloc(strlen(line) + 1);
+    strcpy(simprf->text, line);
+    return simprf->text;
 }

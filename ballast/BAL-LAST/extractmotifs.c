@@ -72,7 +72,6 @@ Motif *extractmotifs(double *profil, int length, char *conserved)
             i++;
         }
         end = i;
-        printf("le score est de %f\n", score);
         if ((n > MINWORD) && (score > MINSCORE))
         {
             if (motif == NULL)
