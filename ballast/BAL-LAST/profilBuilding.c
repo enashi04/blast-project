@@ -140,6 +140,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
         // on arrive à la query
         else if (strncmp(line, "Query", 5) == 0)
         {
+            printf("on passe là\n");
             // là on recherche d'abord en début de la ligne le numéro de début puis de fin
             sscanf((char *)(strpbrk(line, "0123456789")), "%d", &debut);
             sscanf((char *)(strrchr(line, ' ')), "%d", &end);
@@ -167,7 +168,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
 
             /*12 OU 13 REVOIR LES NOUVEAUX FORMATS DE FICHIERS BLASTP*/
 
-            strncpy(line, (line + 12), strlen(line) - dline); // a modifier
+            strncpy(line, (line + dline), strlen(line) - dline); // a modifier
 
             if (ok == 0)
             {
