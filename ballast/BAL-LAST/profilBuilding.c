@@ -113,37 +113,11 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
     fctr = 1;
 
     simprf->text = getText(line, simprf);
+    fgets(line, 256, file);
+
     while (endofdbseq == 0)
     {
-        // On parcourt d'abord le score
-        if (strncmp(begline, "Score", 5) == 0)
-        {
-            if (ok == 1)
-            {
-                simprf->next = (SimPrf *)malloc(sizeof(SimPrf));
-                simprf = simprf->next;
-                simprf->text = (char *)malloc(strlen(line) + 1);
-                strcpy(simprf->text, line);
-                ok = 0;
-                okhsp = 0;
-                simprf->score = 0;
-                simprf->maxscore = 0;
-                simprf->nmatch = 0;
-            }
-            ptrstr = (char *)(strstr(line, "= e-"));
-            if (ptrstr != NULL)
-            {
-                ptrstr = (char *)(ptrstr + 1);
-                *ptrstr = '1';
-            }
-            sscanf((char *)(strrchr(line, '=') + 1), "%lf", &p);
-            if (p < seqres->prob)
-            {
-                seqres->prob = p;
-            }
-            simprf->p = p;
-        } // ensuite l'identité
-        else if (strncmp(line, "Identities", 11) == 0)
+        if (strncmp(line, "Identities", 11) == 0)
         {
             // si y'a pas de gaps
             if (strstr(line, "Gaps = 0/"))
@@ -252,68 +226,82 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
                 okhsp = 1;
             }
         }
+        else if(strncmp(line, " Score", 6)==0){ //on arrive vers le score là
+            if (ok == 1)
+				{
+					simprf->next = (SimPrf *)malloc(sizeof(SimPrf));
+					simprf = simprf->next;
+					simprf->text = (char *)malloc(strlen(line) + 1);
+					strcpy(simprf->text, line);
+					ok = 0;
+					okhsp = 0;
+					simprf->score = 0;
+					simprf->maxscore = 0;
+					simprf->nmatch = 0;
+				}
+				ptrstr = (char *)(strstr(line, "= e-"));
+				if (ptrstr != NULL)
+				{
+					ptrstr = (char *)(ptrstr + 1);
+					*ptrstr = '1';
+				}
+				sscanf((char *)(strrchr(line, '=') + 1), "%lf", &p);
+				if (p < seqres->prob){
+					seqres->prob = p;
+                }
+				simprf->p = p;
+        }
         // si on est à la fin du fichier ou si on arrive à la prochaine analyse alors on met fin
-        if (feof(file) != 0 || line[0] == '>')
+        if (feof(file) != 0 || line[0] == '>' || strncmp(line, "Database", 8) == 0)
         {
+            if (filter(seqhsp, seq) == 0)
+            {
+                p = 1;
+            }
+
+            simprf->hsp = seqhsp;
+            simprf->queryseq = queryseq;
+            simprf->aln = seq;
+            simprf->next = NULL;
+            queryseq = NULL;
+            seq = NULL;
+
+            if ((p >= maxp) || (p > 1))
+                p = 1;
+            if (p < seqres->p)
+            {
+                seqres->p = p;
+            }
+
+            simprf->begin = begin - 1;
+            simprf->end = end - 1;
+
+            simprf->begdb = begdb - 1;
+            simprf->enddb = enddb - 1;
+
+            if (simprf->begdb > simprf->enddb)
+            {
+                simprf->begdb = -simprf->begdb;
+                simprf->enddb = -simprf->enddb;
+            }
+
+            if (gapped)
+            {
+                simprf = handlegaps(simprf);
+            }
+
             endofdbseq = 1;
         }
         else
         {
             // sinon on va a la ligne suivante
             fgets(line, 256, file);
-            if(strncmp(line, "Score", 10)){
-                
-            }
         }
     }
 
     // là on a tout récupéré !! du coup on passe direct à la suite
     // printf("query %s\n\n\n", queryseq);
     // printf("la séquence hsp est %s\n", seqhsp);
-
-    if (filter(seqhsp, seq) == 0)
-    {
-        p = 1;
-    }
-
-    // déclaration et initialisation d'une variable tableau
-    int tabSimprt[strlen(seq) + 1];
-    simprf->hsp = seqhsp;
-    simprf->queryseq = queryseq;
-    simprf->aln = seq;
-    simprf->next = NULL;
-    queryseq = NULL;
-    seq = NULL;
-
-    if ((p >= maxp) || (p > 1))
-        p = 1;
-    if (p < seqres->p)
-    {
-        seqres->p = p;
-    }
-
-    simprf->begin = begin - 1;
-    simprf->end = end - 1;
-
-    simprf->begdb = begdb - 1;
-    simprf->enddb = enddb - 1;
-
-    if (simprf->begdb > simprf->enddb)
-    {
-        simprf->begdb = -simprf->begdb;
-        simprf->enddb = -simprf->enddb;
-    }
-
-    if (gapped)
-    {
-        simprf = handlegaps(simprf);
-    }
-
-    begline = line;
-    if (*begline == ' ')
-    {
-        begline++;
-    }
 
     /****************************************************SIMPRF à calculer****************************************************/
     // printf("la taille de la séquence est : %ld\n", strlen(simprf->aln));
@@ -362,7 +350,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
 
             /*** Aligned Aas in Query sequence and Database sequence are ****/
             /*** identical                                               ****/
-            
+
             if ((*(seq + i - begin + 1) != '+') && (*(seq + i - begin + 1) != ' ') && (*(seq + i - begin + 1) != 'x'))
             {
                 *ptr = facteur * identique;
