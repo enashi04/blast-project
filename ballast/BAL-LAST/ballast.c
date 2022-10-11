@@ -157,11 +157,10 @@ int main(int argc, char *argv[])
         profiltotal = profilBuilding(seqres, infile, curline, length, conserved, maxprofile, 'p');
         while (curline[0] != '\0')
         {
-            printf("curline is %s\n", curline);
             if (curline[0] == '>')
             {
                 printf("Tour : %u\n", j);
-                //printf("curline is %s\n", curline);
+                printf("curline is %s\n", curline);
 
                 seqres->rank = i++;
                 seqres->next = (SeqHSP *)malloc(sizeof(SeqHSP));
@@ -170,10 +169,8 @@ int main(int argc, char *argv[])
                 seqres->next = NULL;
                 j++;
                 contribution = profilBuilding(seqres, infile, curline, length, conserved, maxprofile, 'p');
-                printf("salina\n");
                 if (strcmp(seqres->prev->sim->hsp, seqres->sim->hsp) != 0)
                 {                
-                    printf("salina\n");
                     addprofils(profiltotal, contribution, length);
                 }
 
