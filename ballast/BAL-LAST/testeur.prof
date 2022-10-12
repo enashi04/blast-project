@@ -1,0 +1,643 @@
+BALLAST profile testeur.prof
+
+The following sequences from BLAST results were used to build this profile :
+--------------------------------------------------------------------------------
+SP:P43836 SYY_HAEIN Tyrosine--tRNA ligase OS=Haemophilus influenzae (strain                 0.0     
+SP:Q4QL45 SYY_HAEI8 Tyrosine--tRNA ligase OS=Haemophilus influenzae (strain                 0.0     
+TR:A0A1V3INI2 A0A1V3INI2_9PAST Tyrosine--tRNA ligase OS=Rodentibacter trehalosifermentans   0.0     
+TR:A0A4R1FVY1 A0A4R1FVY1_9PAST Tyrosine--tRNA ligase OS=Volucribacter psittacicida          0.0     
+TR:A6VQD1 A6VQD1_ACTSZ Tyrosine--tRNA ligase OS=Actinobacillus succinogenes                 0.0     
+TR:A0A2M8S526 A0A2M8S526_9PAST Tyrosine--tRNA ligase OS=Conservatibacter flavescens         0.0     
+TR:A0A380U4M0 A0A380U4M0_9PAST Tyrosine--tRNA ligase OS=[Actinobacillus] rossii             0.0     
+TR:A0A369ZBH0 A0A369ZBH0_HAEPH Tyrosine--tRNA ligase OS=Haemophilus parahaemolyticus        0.0     
+TR:A0A4R2T2Q2 A0A4R2T2Q2_9PAST Tyrosine--tRNA ligase OS=Cricetibacter osteomyelitidis       0.0     
+TR:I3DFW9 I3DFW9_9PAST Tyrosine--tRNA ligase OS=Pasteurella bettyae CCUG                    0.0     
+TR:E6KY24 E6KY24_9PAST Tyrosine--tRNA ligase OS=Aggregatibacter segnis                      0.0     
+TR:A0A1V3TRD0 A0A1V3TRD0_9PAST Tyrosine--tRNA ligase OS=Pasteurellaceae bacterium           0.0     
+TR:A0A448T9J2 A0A448T9J2_MANHA Tyrosine--tRNA ligase OS=Mannheimia haemolytica              0.0     
+TR:B8F794 B8F794_GLAP5 Tyrosine--tRNA ligase OS=Glaesserella parasuis serovar               0.0     
+TR:A0A1T0AUY3 A0A1T0AUY3_9PAST Tyrosine--tRNA ligase OS=[Haemophilus] felis                 0.0     
+TR:A0A6H0T7Y1 A0A6H0T7Y1_9PAST Tyrosine--tRNA ligase OS=Pasteurellaceae bacterium           0.0     
+SP:Q9CMQ8 SYY_PASMU Tyrosine--tRNA ligase OS=Pasteurella multocida (strain                  0.0     
+TR:A3N2C4 A3N2C4_ACTP2 Tyrosine--tRNA ligase OS=Actinobacillus pleuropneumoniae             0.0     
+TR:M4R3Y8 M4R3Y8_BIBTR Tyrosine--tRNA ligase OS=Bibersteinia trehalosi                      0.0     
+TR:A0A4R1L0P6 A0A4R1L0P6_9PAST Tyrosine--tRNA ligase OS=Lonepinella koalarum                0.0     
+TR:A0A0J5P7J7 A0A0J5P7J7_9PAST Tyrosine--tRNA ligase OS=Muribacter muris OX=67855           0.0     
+TR:A0A3N4VL29 A0A3N4VL29_9PAST Tyrosine--tRNA ligase OS=Vespertiliibacter pulmonis          0.0     
+TR:A0A1T0AQG9 A0A1T0AQG9_9PAST Tyrosine--tRNA ligase OS=Haemophilus paracuniculus           0.0     
+SP:Q65T71 SYY_MANSM Tyrosine--tRNA ligase OS=Mannheimia succiniciproducens                  0.0     
+TR:A0A263HG87 A0A263HG87_9PAST Tyrosine--tRNA ligase OS=Actinobacillus seminis              0.0     
+TR:A0A0A3B8Q7 A0A0A3B8Q7_9PAST Tyrosine--tRNA ligase OS=Chelonobacter oris                  0.0     
+TR:A0A2M8RXW6 A0A2M8RXW6_9PAST Tyrosine--tRNA ligase OS=Caviibacterium pharyngocola         0.0     
+TR:A0A4R6V768 A0A4R6V768_9PAST Tyrosine--tRNA ligase OS=Mesocricetibacter intestinalis      0.0     
+TR:A0A4R2N2P7 A0A4R2N2P7_9PAST Tyrosine--tRNA ligase OS=Bisgaardia hudsonensis              0.0     
+SP:Q7VN81 SYY_HAEDU Tyrosine--tRNA ligase OS=Haemophilus ducreyi (strain                    0.0     
+TR:A0A420XEH8 A0A420XEH8_9PAST Tyrosine--tRNA ligase OS=Otariodibacter oris                 0.0     
+TR:A0A4R2N610 A0A4R2N610_9PAST Tyrosine--tRNA ligase OS=Nicoletella semolina                0.0     
+TR:A0A0F5EZQ3 A0A0F5EZQ3_AVIPA Tyrosine--tRNA ligase OS=Avibacterium paragallinarum         0.0     
+TR:A0A448TRK4 A0A448TRK4_9PAST Tyrosine--tRNA ligase OS=Actinobacillus delphinicola         0.0     
+TR:A0A1A7Q7C2 A0A1A7Q7C2_9PAST Tyrosine--tRNA ligase OS=Gallibacterium salpingitidis        0.0     
+TR:A0A379CBT9 A0A379CBT9_9PAST Tyrosine--tRNA ligase OS=Phocoenobacter uteri                0.0     
+TR:F9QB48 F9QB48_9PAST Tyrosine--tRNA ligase OS=Haemophilus pittmaniae                      0.0     
+TR:A0A090SHL3 A0A090SHL3_9VIBR Tyrosine--tRNA ligase OS=Vibrio variabilis OX=990271         0.0     
+TR:A0A090RWD4 A0A090RWD4_9VIBR Tyrosine--tRNA ligase OS=Vibrio maritimus OX=990268          0.0     
+TR:A0A1M5YAY5 A0A1M5YAY5_9VIBR Tyrosine--tRNA ligase OS=Vibrio aerogenes CECT               0.0     
+SP:Q9KU92 SYY2_VIBCH Tyrosine--tRNA ligase 2 OS=Vibrio cholerae serotype                    0.0     
+TR:A0A7Y4FFV6 A0A7Y4FFV6_9VIBR Tyrosine--tRNA ligase OS=Vibrio sp. 99-8-1 OX=2607602        0.0     
+TR:A0A7X4LIJ7 A0A7X4LIJ7_9VIBR Tyrosine--tRNA ligase OS=Vibrio sp. CAIM 722                 0.0     
+TR:A0A233HLN7 A0A233HLN7_9VIBR Tyrosine--tRNA ligase OS=Vibrio sp. V15_P4S5T153             0.0     
+TR:A0A0F5VI47 A0A0F5VI47_9GAMM Tyrosine--tRNA ligase OS=Photobacterium halotolerans         0.0     
+TR:A0A3N9THS9 A0A3N9THS9_9VIBR Tyrosine--tRNA ligase OS=Vibrio viridaestus                  0.0     
+TR:A0A2N7CZ40 A0A2N7CZ40_9VIBR Tyrosine--tRNA ligase OS=Vibrio sp. 10N.286.49.C2            0.0     
+TR:U3BM87 U3BM87_VIBPR Tyrosine--tRNA ligase OS=Vibrio proteolyticus NBRC                   0.0     
+TR:A0A2N7DBD9 A0A2N7DBD9_9VIBR Tyrosine--tRNA ligase OS=Vibrio sp. 10N.286.49.B3            0.0     
+TR:A0A0Q2UX20 A0A0Q2UX20_VIBFU Tyrosine--tRNA ligase OS=Vibrio furnissii OX=29494           0.0     
+TR:A0A0J1H755 A0A0J1H755_9GAMM Tyrosine--tRNA ligase OS=Photobacterium ganghwense           0.0     
+TR:C9P1B7 C9P1B7_VIBME Tyrosine--tRNA ligase OS=Vibrio metschnikovii CIP                    0.0     
+TR:U4K8D5 U4K8D5_9VIBR Tyrosine--tRNA ligase OS=Vibrio nigripulchritudo                     0.0     
+TR:A0A0F5ASE9 A0A0F5ASE9_9GAMM Tyrosine--tRNA ligase OS=Salinivibrio sp. KP-1               0.0     
+TR:A0A2M8GXU5 A0A2M8GXU5_9VIBR Tyrosine--tRNA ligase OS=Vibrio sp. HA2012 OX=1971595        0.0     
+TR:A0A1C3EGT3 A0A1C3EGT3_9GAMM Tyrosine--tRNA ligase OS=Enterovibrio pacificus              0.0     
+TR:A0A7Z2T4S1 A0A7Z2T4S1_9VIBR Tyrosine--tRNA ligase OS=Vibrio astriarenae                  0.0     
+TR:D0Z034 D0Z034_PHODD Tyrosine--tRNA ligase OS=Photobacterium damselae                     0.0     
+TR:A0A1E5DYH2 A0A1E5DYH2_9VIBR Tyrosine--tRNA ligase OS=Vibrio rumoiensis 1S-45             0.0     
+TR:A0A1G8AYH3 A0A1G8AYH3_9VIBR Tyrosine--tRNA ligase OS=Vibrio xiamenensis                  0.0     
+TR:A0A4Q0YST3 A0A4Q0YST3_9GAMM Tyrosine--tRNA ligase OS=Veronia nyctiphanis                 0.0     
+TR:A0A0C5WU22 A0A0C5WU22_9GAMM Tyrosine--tRNA ligase OS=Photobacterium gaetbulicola         0.0     
+TR:A0A1B9QVH6 A0A1B9QVH6_9VIBR Tyrosine--tRNA ligase OS=Vibrio genomosp. F10                0.0     
+TR:A0A2J8GS98 A0A2J8GS98_VIBDI Tyrosine--tRNA ligase OS=Vibrio diazotrophicus               0.0     
+TR:E1SUI0 E1SUI0_FERBD Tyrosine--tRNA ligase OS=Ferrimonas balearica (strain                0.0     
+TR:D0I865 D0I865_GRIHO Tyrosine--tRNA ligase OS=Grimontia hollisae CIP                      0.0     
+TR:A0A2N8ZCF0 A0A2N8ZCF0_9VIBR Tyrosine--tRNA ligase OS=Vibrio tapetis subsp.               0.0     
+TR:A0A0B8NW77 A0A0B8NW77_9VIBR Tyrosine--tRNA ligase OS=Vibrio ishigakensis                 0.0     
+TR:A0A1R4B8T0 A0A1R4B8T0_9VIBR Tyrosine--tRNA ligase OS=Vibrio palustris OX=1918946         0.0     
+SP:Q6LUR9 SYY_PHOPR Tyrosine--tRNA ligase OS=Photobacterium profundum (strain               0.0     
+TR:A0A178KBW0 A0A178KBW0_9GAMM Tyrosine--tRNA ligase OS=Photobacterium jeanii               0.0     
+TR:A0A0B8PJC3 A0A0B8PJC3_9VIBR Tyrosine--tRNA ligase OS=Vibrio sp. JCM 19236                0.0     
+SP:Q8DBX3 SYY2_VIBVU Tyrosine--tRNA ligase 2 OS=Vibrio vulnificus (strain                   0.0     
+SP:Q7MHZ4 SYY2_VIBVY Tyrosine--tRNA ligase 2 OS=Vibrio vulnificus (strain                   0.0     
+TR:A0A2T3MWA1 A0A2T3MWA1_9GAMM Tyrosine--tRNA ligase OS=Photobacterium lipolyticum          0.0     
+TR:A0A1T4TTP9 A0A1T4TTP9_9GAMM Tyrosine--tRNA ligase OS=Enterovibrio nigricans              0.0     
+TR:A0A1Y6IWU4 A0A1Y6IWU4_9VIBR Tyrosine--tRNA ligase OS=Vibrio mangrovi OX=474394           0.0     
+TR:A0A0F4NNK1 A0A0F4NNK1_9VIBR Tyrosine--tRNA ligase OS=Vibrio galatheae OX=579748          0.0     
+TR:L8J3M7 L8J3M7_9GAMM Tyrosine--tRNA ligase OS=Photobacterium marinum                      0.0     
+SP:Q87LY8 SYY2_VIBPA Tyrosine--tRNA ligase 2 OS=Vibrio parahaemolyticus                     0.0     
+TR:A0A0M0HT12 A0A0M0HT12_VIBNE Tyrosine--tRNA ligase OS=Vibrio nereis OX=693                0.0     
+TR:B7VJJ0 B7VJJ0_VIBA3 Tyrosine--tRNA ligase OS=Vibrio atlanticus (strain                   0.0     
+TR:A0A1X1MNE9 A0A1X1MNE9_9VIBR Tyrosine--tRNA ligase OS=Vibrio sp. qd031 OX=1603038         0.0     
+TR:A0A1A6L820 A0A1A6L820_9VIBR Tyrosine--tRNA ligase OS=Vibrio sp. UCD-FRSSP16_10           0.0     
+TR:E3BM67 E3BM67_9VIBR Tyrosine--tRNA ligase OS=Vibrio caribbeanicus ATCC                   0.0     
+TR:A0A0J1GMH9 A0A0J1GMH9_9GAMM Tyrosine--tRNA ligase OS=Photobacterium aphoticum            0.0     
+TR:F9RAK1 F9RAK1_VIBSN Tyrosine--tRNA ligase OS=Vibrio sp. (strain N418)                    0.0     
+TR:A0A7X8TQG5 A0A7X8TQG5_9VIBR Tyrosine--tRNA ligase OS=Vibrio agarilyticus                 0.0     
+TR:A0A1G8M6D0 A0A1G8M6D0_9GAMM Tyrosine--tRNA ligase OS=Ferrimonas sediminum                0.0     
+TR:U3BYH6 U3BYH6_9VIBR Tyrosine--tRNA ligase OS=Vibrio azureus NBRC 104587                  0.0     
+TR:A0A368NMJ5 A0A368NMJ5_9GAMM Tyrosine--tRNA ligase OS=Corallincola holothuriorum          0.0     
+TR:A0A1M5X2S7 A0A1M5X2S7_9GAMM Tyrosine--tRNA ligase OS=Ferrimonas marina OX=299255         0.0     
+TR:A0A4U1BML6 A0A4U1BML6_9GAMM Tyrosine--tRNA ligase OS=Ferrimonas aestuarii                0.0     
+TR:A0A3R9G2X6 A0A3R9G2X6_9VIBR Tyrosine--tRNA ligase OS=Vibrio pectenicida                  0.0     
+TR:A0A090P2A1 A0A090P2A1_9VIBR Tyrosine--tRNA ligase OS=Vibrio ponticus OX=265668           0.0     
+TR:A0A1S2TZB9 A0A1S2TZB9_9GAMM Tyrosine--tRNA ligase OS=Shewanella algae OX=38313           0.0     
+TR:A0A1E5CZ23 A0A1E5CZ23_9VIBR Tyrosine--tRNA ligase OS=Vibrio genomosp. F6                 0.0     
+TR:A1S3V1 A1S3V1_SHEAM Tyrosine--tRNA ligase OS=Shewanella amazonensis                      0.0     
+TR:A0A094JEN9 A0A094JEN9_9GAMM Tyrosine--tRNA ligase OS=Shewanella mangrovi                 0.0     
+TR:A0A4R2FE93 A0A4R2FE93_9GAMM Tyrosine--tRNA ligase OS=Shewanella fodinae                  0.0     
+TR:A0A3L8PU82 A0A3L8PU82_9GAMM Tyrosine--tRNA ligase OS=Parashewanella curva                0.0     
+TR:A0A411PJY2 A0A411PJY2_9GAMM Tyrosine--tRNA ligase OS=Shewanella maritima                 0.0     
+TR:R8ATC7 R8ATC7_PLESH Tyrosine--tRNA ligase OS=Plesiomonas shigelloides                    0.0     
+TR:A3QBP5 A3QBP5_SHELP Tyrosine--tRNA ligase OS=Shewanella loihica (strain                  0.0     
+TR:A0A4Q5MC09 A0A4Q5MC09_9GAMM Tyrosine--tRNA ligase OS=Shewanella sp. OPT22                0.0     
+TR:A0A1I0GP74 A0A1I0GP74_THASX Tyrosine--tRNA ligase OS=Thalassotalea agarivorans           0.0     
+TR:K2JGF5 K2JGF5_9GAMM Tyrosine--tRNA ligase OS=Gallaecimonas xiamenensis                   0.0     
+TR:A0A7Y0L9Z7 A0A7Y0L9Z7_9GAMM Tyrosine--tRNA ligase OS=Thalassotalea algicola              0.0     
+TR:A8H185 A8H185_SHEPA Tyrosine--tRNA ligase OS=Shewanella pealeana (strain                 0.0     
+TR:A0A6H1UHC1 A0A6H1UHC1_9GAMM Tyrosine--tRNA ligase OS=Ferrimonas lipolytica               0.0     
+TR:A0A0J8GXA6 A0A0J8GXA6_9ALTE Tyrosine--tRNA ligase OS=Catenovulum maritimum               0.0     
+TR:A0A7L9S6S4 A0A7L9S6S4_9GAMM Tyrosine--tRNA ligase OS=Thalassotalea sp. LPB0316           0.0     
+TR:Q12KD7 Q12KD7_SHEDO Tyrosine--tRNA ligase OS=Shewanella denitrificans                    0.0     
+TR:B1KI27 B1KI27_SHEWM Tyrosine--tRNA ligase OS=Shewanella woodyi (strain                   0.0     
+TR:A0A0Q0I1H3 A0A0Q0I1H3_9GAMM Tyrosine--tRNA ligase OS=Shewanella sp. P1-14-1              0.0     
+TR:Q07YV4 Q07YV4_SHEFN Tyrosine--tRNA ligase OS=Shewanella frigidimarina                    0.0     
+TR:A0A6G9QL04 A0A6G9QL04_9GAMM Tyrosine--tRNA ligase OS=Shewanella aestuarii                0.0     
+TR:A0A4Q9XLF4 A0A4Q9XLF4_9ALTE Tyrosine--tRNA ligase OS=Bowmanella sp. JS7-9                0.0     
+TR:W7QBD0 W7QBD0_9ALTE Tyrosine--tRNA ligase OS=Catenovulum agarivorans                     0.0     
+TR:A0A2A5T661 A0A2A5T661_9GAMM Tyrosine--tRNA ligase OS=Candidatus Enterovibrio             0.0     
+TR:A0A3E0U260 A0A3E0U260_9GAMM Tyrosine--tRNA ligase OS=Thalassotalea euphylliae            0.0     
+TR:A0A4Y6I9N3 A0A4Y6I9N3_9GAMM Tyrosine--tRNA ligase OS=Shewanella sp. SNU                  0.0     
+TR:I1DZG9 I1DZG9_9GAMM Tyrosine--tRNA ligase OS=Rheinheimera nanhaiensis                    0.0     
+TR:A0A4V5NXX2 A0A4V5NXX2_9GAMM Tyrosine--tRNA ligase OS=Thalassotalea mangrovi              0.0     
+TR:A0A3N5Y4P8 A0A3N5Y4P8_9ALTE Tyrosine--tRNA ligase OS=Alteromonas sediminis               0.0     
+TR:A0A2S0VNQ7 A0A2S0VNQ7_9ALTE Tyrosine--tRNA ligase OS=Saccharobesus litoralis             0.0     
+SP:Q47V01 SYY_COLP3 Tyrosine--tRNA ligase OS=Colwellia psychrerythraea                      0.0     
+TR:I8U7J8 I8U7J8_9ALTE Tyrosine--tRNA ligase OS=Alishewanella agri BL06                     0.0     
+SP:Q8EHB3 SYY_SHEON Tyrosine--tRNA ligase OS=Shewanella oneidensis (strain                  0.0     
+TR:A9DGC7 A9DGC7_9GAMM Tyrosine--tRNA ligase OS=Shewanella benthica KT99                    0.0     
+TR:A0A0D8CQL8 A0A0D8CQL8_9GAMM Tyrosine--tRNA ligase OS=Thalassomonas actiniarum            0.0     
+TR:A0A4P6VVP3 A0A4P6VVP3_9GAMM Tyrosine--tRNA ligase OS=Rheinheimera sp. D18                0.0     
+TR:A0A4Q8UB19 A0A4Q8UB19_9ALTE Tyrosine--tRNA ligase OS=Alteromonas sp. KUL49               0.0     
+TR:A0A2N0WTG4 A0A2N0WTG4_9GAMM Tyrosine--tRNA ligase OS=Alteromonadales bacterium           0.0     
+TR:D4ZGS8 D4ZGS8_SHEVD Tyrosine--tRNA ligase OS=Shewanella violacea (strain                 0.0     
+TR:A0A8H2JPF0 A0A8H2JPF0_9GAMM Tyrosine--tRNA ligase OS=Colwellia ponticola                 0.0     
+TR:A0A0S2JJQ5 A0A0S2JJQ5_9GAMM Tyrosine--tRNA ligase OS=Colwellia sp. MT41                  0.0     
+TR:A0A3D8MF26 A0A3D8MF26_9ALTE Tyrosine--tRNA ligase OS=Alteromonas aestuariivivens         0.0     
+TR:A0A7X0NHT2 A0A7X0NHT2_9GAMM Tyrosine--tRNA ligase OS=Thalassotalea piscium               0.0     
+TR:A0A3A6U2P7 A0A3A6U2P7_9GAMM Tyrosine--tRNA ligase OS=Parashewanella spongiae             0.0     
+TR:A0A1E8FA85 A0A1E8FA85_9ALTE Tyrosine--tRNA ligase OS=Alteromonas lipolytica              0.0     
+TR:A0A396TY73 A0A396TY73_9GAMM Tyrosine--tRNA ligase OS=Colwellia sp. RSH04                 0.0     
+TR:A0A1H4DV63 A0A1H4DV63_ALKAM Tyrosine--tRNA ligase OS=Alkalimonas amylolytica             0.0     
+TR:A0A090IJY5 A0A090IJY5_9GAMM Tyrosine--tRNA ligase OS=Moritella viscosa OX=80854          0.0     
+TR:A0A233RAR6 A0A233RAR6_9GAMM Tyrosine--tRNA ligase OS=Oceanimonas doudoroffii             0.0     
+TR:A0A553FF75 A0A553FF75_9GAMM Tyrosine--tRNA ligase OS=Thalassomonas sp. M1454             0.0     
+TR:A0A1Y6G162 A0A1Y6G162_9GAMM Tyrosine--tRNA ligase OS=Pseudidiomarina planktonica         0.0     
+TR:A0A4P7JMM5 A0A4P7JMM5_9GAMM Tyrosine--tRNA ligase OS=Thalassotalea sp. HSM               0.0     
+TR:F7NS43 F7NS43_9GAMM Tyrosine--tRNA ligase OS=Rheinheimera sp. A13L OX=506534             0.0     
+TR:A0A2N1DE92 A0A2N1DE92_9ALTE Tyrosine--tRNA ligase OS=Paraglaciecola sp.                  0.0     
+TR:K6Y9C3 K6Y9C3_9ALTE Tyrosine--tRNA ligase OS=Paraglaciecola arctica                      0.0     
+TR:A0A099L8P0 A0A099L8P0_9GAMM Tyrosine--tRNA ligase OS=Thalassotalea sp. ND16A             0.0     
+TR:A0A0M2VGL6 A0A0M2VGL6_9GAMM Tyrosine--tRNA ligase OS=Arsukibacterium sp.                 0.0     
+TR:A0A1D8RWQ9 A0A1D8RWQ9_9GAMM Tyrosine--tRNA ligase OS=Colwellia sp. PAMC                  0.0     
+TR:A0A1E7Q8D2 A0A1E7Q8D2_9GAMM Tyrosine--tRNA ligase OS=Rheinheimera salexigens             0.0     
+TR:A0A291B8L8 A0A291B8L8_9GAMM Tyrosine--tRNA ligase OS=Candidatus Enterovibrio             0.0     
+TR:G4QJW4 G4QJW4_GLANF Tyrosine--tRNA ligase OS=Glaciecola nitratireducens                  0.0     
+TR:A0A1Q6CFV6 A0A1Q6CFV6_9GAMM Tyrosine--tRNA ligase OS=Thalassotalea sp. PP2-459           0.0     
+TR:A0A075P4N2 A0A075P4N2_9ALTE Tyrosine--tRNA ligase OS=Alteromonas australica              0.0     
+TR:A0A1H7LLG6 A0A1H7LLG6_9GAMM Tyrosine--tRNA ligase OS=Colwellia chukchiensis              0.0     
+TR:K6YEJ3 K6YEJ3_9ALTE Tyrosine--tRNA ligase OS=Aliiglaciecola lipolytica                   0.0     
+TR:A0A346NPW0 A0A346NPW0_9ALTE Tyrosine--tRNA ligase OS=Salinimonas sediminis               0.0     
+TR:A0A1E7ZCH0 A0A1E7ZCH0_9ALTE Tyrosine--tRNA ligase OS=Alteromonas confluentis             0.0     
+TR:A0A432WCF3 A0A432WCF3_9GAMM Tyrosine--tRNA ligase OS=Aliidiomarina sanyensis             0.0     
+TR:A0A847SEP5 A0A847SEP5_9NEIS Tyrosine--tRNA ligase OS=Leeia aquatica OX=2725557           0.0     
+TR:A0A5B7YDK7 A0A5B7YDK7_9ALTE Tyrosine--tRNA ligase OS=Salinimonas iocasae                 0.0     
+TR:A0A1M5LZA2 A0A1M5LZA2_9ALTE Tyrosine--tRNA ligase OS=Marisediminitalea aggregata         0.0     
+TR:A0A0U4WF81 A0A0U4WF81_9GAMM Tyrosine--tRNA ligase OS=Rheinheimera sp. F8                 0.0     
+TR:K6Z2Y0 K6Z2Y0_9ALTE Tyrosine--tRNA ligase OS=Paraglaciecola psychrophila                 0.0     
+TR:A0A7Y6ZZF8 A0A7Y6ZZF8_9ALTE Tyrosine--tRNA ligase OS=Alteromonadaceae bacterium          0.0     
+TR:A0A1I1PMI8 A0A1I1PMI8_9GAMM Tyrosine--tRNA ligase OS=Pseudoalteromonas denitrificans     0.0     
+TR:A0A1T4Y346 A0A1T4Y346_9GAMM Tyrosine--tRNA ligase OS=Thiothrix eikelboomii               0.0     
+TR:A0A2S7UZN8 A0A2S7UZN8_9GAMM Tyrosine--tRNA ligase OS=Psychrosphaera saromensis           0.0     
+TR:H2FYE0 H2FYE0_OCESG Tyrosine--tRNA ligase OS=Oceanimonas sp. (strain                     0.0     
+TR:A0A2S2E107 A0A2S2E107_9ALTE Tyrosine--tRNA ligase OS=Saliniradius amylolyticus           0.0     
+TR:K2JVM8 K2JVM8_9GAMM Tyrosine--tRNA ligase OS=Idiomarina xiamenensis                      0.0     
+TR:U1J7N8 U1J7N8_9GAMM Tyrosine--tRNA ligase OS=Pseudoalteromonas citrea                    0.0     
+TR:A0A6M4MAB9 A0A6M4MAB9_9ALTE Tyrosine--tRNA ligase OS=Alteromonas pelagimontana           0.0     
+TR:A0A0A7EHF3 A0A0A7EHF3_9GAMM Tyrosine--tRNA ligase OS=Pseudoalteromonas piratica          0.0     
+TR:A0A244CUA0 A0A244CUA0_PSEDV Tyrosine--tRNA ligase OS=Pseudoalteromonas ulvae             0.0     
+TR:A0A1B7UHV3 A0A1B7UHV3_9GAMM Tyrosine--tRNA ligase OS=Rheinheimera sp. SA_1               0.0     
+TR:A0A0F4P6Q7 A0A0F4P6Q7_PSEO7 Tyrosine--tRNA ligase OS=Pseudoalteromonas piscicida         0.0     
+TR:A0A1J4QD49 A0A1J4QD49_9GAMM Tyrosine--tRNA ligase OS=Oceanisphaera psychrotolerans       0.0     
+TR:A0A1N6NA56 A0A1N6NA56_9GAMM Tyrosine--tRNA ligase OS=Aeromonas sp. RU39B                 0.0     
+TR:A0A1Y0CZC0 A0A1Y0CZC0_9GAMM Tyrosine--tRNA ligase OS=Oceanisphaera avium                 0.0     
+TR:A0A432ZRZ5 A0A432ZRZ5_9GAMM Tyrosine--tRNA ligase OS=Idiomarina tyrosinivorans           0.0     
+TR:A0A6N8F5R5 A0A6N8F5R5_9GAMM Tyrosine--tRNA ligase OS=Psychrosphaera haliotis             0.0     
+TR:A0A2T4CT57 A0A2T4CT57_9GAMM Tyrosine--tRNA ligase OS=Pseudidiomarina aestuarii           0.0     
+TR:A0A0F4PVH5 A0A0F4PVH5_9GAMM Tyrosine--tRNA ligase OS=Pseudoalteromonas ruthenica         0.0     
+TR:A0A0F4QH40 A0A0F4QH40_9GAMM Tyrosine--tRNA ligase OS=Pseudoalteromonas rubra             0.0     
+TR:A0A432WDU2 A0A432WDU2_9GAMM Tyrosine--tRNA ligase OS=Aliidiomarina soli                  0.0     
+TR:A0A4R5H4Z0 A0A4R5H4Z0_9ALTE Tyrosine--tRNA ligase OS=Alteromonadaceae bacterium          0.0     
+TR:F7RYF9 F7RYF9_9GAMM Tyrosine--tRNA ligase OS=Idiomarina sp. A28L OX=1036674              0.0     
+TR:A0A840MQC9 A0A840MQC9_9PROT Tyrosine--tRNA ligase OS=Chitinivorax tropicus               0.0     
+TR:A0A0U2Z4F5 A0A0U2Z4F5_9ALTE Tyrosine--tRNA ligase OS=Lacimicrobium alkaliphilum          0.0     
+TR:A0A136A2A4 A0A136A2A4_9ALTE Tyrosine--tRNA ligase OS=Paraglaciecola hydrolytica          0.0     
+TR:A0A432VTQ0 A0A432VTQ0_9GAMM Tyrosine--tRNA ligase OS=Aliidiomarina haloalkalitolerans    0.0     
+TR:A0A553L5G0 A0A553L5G0_9ALTE Tyrosine--tRNA ligase OS=Aliiglaciecola sp.                  0.0     
+TR:A0A6F8PXS3 A0A6F8PXS3_9GAMM Tyrosine--tRNA ligase OS=Thiosulfatimonas sediminis          0.0     
+TR:A0A432ZCH3 A0A432ZCH3_9GAMM Tyrosine--tRNA ligase OS=Pseudidiomarina taiwanensis         0.0     
+TR:A0A094IN12 A0A094IN12_9GAMM Tyrosine--tRNA ligase OS=Pseudidiomarina atlantica           0.0     
+TR:A0A269PMQ2 A0A269PMQ2_9GAMM Tyrosine--tRNA ligase OS=Pseudoalteromonas sp.               0.0     
+TR:A0A2Z6UAH7 A0A2Z6UAH7_GLASK Tyrosine--tRNA ligase OS=Glaciecola sp. (strain              0.0     
+TR:A0A167CEI1 A0A167CEI1_9GAMM Tyrosine--tRNA ligase OS=Pseudoalteromonas luteoviolacea     0.0     
+TR:A0A0S2K5P6 A0A0S2K5P6_9GAMM Tyrosine--tRNA ligase OS=Pseudoalteromonas phenolica         0.0     
+TR:A0A1G6DGT1 A0A1G6DGT1_9GAMM Tyrosine--tRNA ligase OS=Pseudidiomarina indica              0.0     
+TR:A0A0F7K0I3 A0A0F7K0I3_9GAMM Tyrosine--tRNA ligase OS=Sedimenticola thiotaurini           0.0     
+TR:G2J4R9 G2J4R9_PSEUL Tyrosine--tRNA ligase OS=Pseudogulbenkiania sp.                      0.0     
+TR:A0A1S1MPX3 A0A1S1MPX3_9GAMM Tyrosine--tRNA ligase OS=Pseudoalteromonas amylolytica       0.0     
+TR:A0A3A1Y372 A0A3A1Y372_9GAMM Tyrosine--tRNA ligase OS=Psittacicella melopsittaci          0.0     
+TR:A0A4R4F3H6 A0A4R4F3H6_9GAMM Tyrosine--tRNA ligase OS=Lysobacter sp. N42                  0.0     
+TR:A0A7L6ANI2 A0A7L6ANI2_9GAMM Tyrosine--tRNA ligase OS=Candidatus Thiothrix                0.0     
+TR:A0A848GBH3 A0A848GBH3_9RHOO Tyrosine--tRNA ligase OS=Zoogloea dura OX=2728840            0.0     
+TR:A0A4V3D710 A0A4V3D710_9GAMM Tyrosine--tRNA ligase OS=Permianibacter aggregans            0.0     
+TR:A0A4V1HI13 A0A4V1HI13_9GAMM Tyrosine--tRNA ligase OS=Thiomicrorhabdus sediminis          0.0     
+TR:A0KMW6 A0KMW6_AERHH Tyrosine--tRNA ligase OS=Aeromonas hydrophila subsp.                 0.0     
+SP:Q31E84 SYY_HYDCU Tyrosine--tRNA ligase OS=Hydrogenovibrio crunogenus                     0.0     
+TR:A0A656HIJ2 A0A656HIJ2_THINJ Tyrosine--tRNA ligase OS=Thiothrix nivea (strain             0.0     
+TR:A0A2K9L937 A0A2K9L937_9RHOO Tyrosine--tRNA ligase OS=Rhodocyclaceae bacterium            0.0     
+TR:A0A165G4R7 A0A165G4R7_9NEIS Tyrosine--tRNA ligase OS=Crenobacter luteus                  0.0     
+TR:W0SM82 W0SM82_9PROT Tyrosine--tRNA ligase OS=Sulfuritalea hydrogenivorans                0.0     
+TR:H5T8K0 H5T8K0_9ALTE Tyrosine--tRNA ligase OS=Glaciecola punicea ACAM                     0.0     
+TR:S6BEL6 S6BEL6_9GAMM Tyrosine--tRNA ligase OS=endosymbiont of unidentified                0.0     
+TR:G4E584 G4E584_9GAMM Tyrosine--tRNA ligase OS=Thiorhodospira sibirica                     0.0     
+TR:A0A369BY45 A0A369BY45_9GAMM Tyrosine--tRNA ligase OS=Thioalbus denitrificans             0.0     
+TR:A0A4R8IMX0 A0A4R8IMX0_9GAMM Tyrosine--tRNA ligase OS=Thiohalophilus thiocyanatoxydans    0.0     
+TR:A0A066ZS55 A0A066ZS55_HYDMR Tyrosine--tRNA ligase OS=Hydrogenovibrio marinus             0.0     
+TR:C4LAK8 C4LAK8_TOLAT Tyrosine--tRNA ligase OS=Tolumonas auensis (strain                   0.0     
+TR:A0A3N1XTX8 A0A3N1XTX8_9GAMM Tyrosine--tRNA ligase OS=Inmirania thermothiophila           0.0     
+SP:Q3ILJ9 SYY2_PSET1 Tyrosine--tRNA ligase 2 OS=Pseudoalteromonas translucida               0.0     
+TR:A0A6N1DQ44 A0A6N1DQ44_9GAMM Tyrosine--tRNA ligase OS=Ectothiorhodospiraceae              0.0     
+
+The following sequences from BLAST results were NOT used to build this profile :
+--------------------------------------------------------------------------------
+...
+******************************************************************************
+
+maximum : 230.000000
+M :     1 :    191.000 :+++++++++++++++++++++++++++++++++++++++++|
+T :     2 :     73.500 :###############                        |
+D :     3 :    113.000 :########################                 |
+I :     4 :    132.000 :############################                 |
+N :     5 :     45.000 :#########                                    |
+T :     6 :     55.000 :###########                                  |
+V :     7 :     37.500 :########                                     |
+L :     8 :    180.000 :#######################################       |
+A :     9 :    206.500 :############################################   |
+E :    10 :    205.500 :############################################   |
+L :    11 :    144.000 :###############################                |
+K :    12 :    200.000 :###########################################    |
+R :    13 :    228.000 :#################################################|
+G :    14 :    227.000 :#################################################|
+T :    15 :     54.000 :###########                                    |
+D :    16 :    157.500 :##################################             |
+E :    17 :    212.000 :############################################## |
+I :    18 :    182.500 :#######################################        |
+L :    19 :    177.500 :######################################         |
+S :    20 :     37.000 :++++++++                                       |
+E :    21 :    218.500 :+++++++++++++++++++++++++++++++++++++++++++++++|
+A :    22 :     50.000 :++++++++++                                     |
+D :    23 :    145.000 :+++++++++++++++++++++++++++++++                |
+L :    24 :    225.500 :+++++++++++++++++++++++++++++++++++++++++++++++++|
+I :    25 :    169.500 :++++++++++++++++++++++++++++++++++++           |
+E :    26 :    130.000 :############################                   |
+K :    27 :    221.500 :################################################|
+L :    28 :    228.000 :#################################################|
+K :    29 :    210.500 :#############################################  |
+E :    30 :    150.000 :################################               |
+N :    31 :     71.500 :###############                                |
+R :    32 :    185.000 :########################################       |
+P :    33 :    202.000 :###########################################    |
+L :    34 :    228.000 :#################################################|
+K :    35 :    137.500 :#############################                  |
+V :    36 :    143.000 :###############################                |
+K :    37 :    228.000 :#################################################|
+L :    38 :    126.000 :###########################                    |
+G :    39 :    228.000 :#################################################|
+A :    40 :    118.000 :#########################                      |
+D :    41 :    228.000 :#################################################|
+P :    42 :    228.000 :#################################################|
+T :    43 :    228.000 :#################################################|
+A :    44 :    227.000 :#################################################|
+P :    45 :    227.000 :#################################################|
+D :    46 :    228.000 :#################################################|
+I :    47 :    177.000 :######################################         |
+H :    48 :    228.000 :#################################################|
+L :    49 :    226.000 :#################################################|
+G :    50 :    228.000 :#################################################|
+H :    51 :    228.000 :#################################################|
+T :    52 :    227.000 :#################################################|
+V :    53 :    228.000 :#################################################|
+V :    54 :    136.000 :#############################                   |
+L :    55 :    164.500 :###################################             |
+N :    56 :    225.500 :#################################################|
+K :    57 :    229.000 :#################################################|
+L :    58 :    212.000 :##############################################  |
+R :    59 :    216.500 :############################################### |
+Q :    60 :     88.000 :###################                             |
+L :    61 :    223.000 :################################################|
+G :    62 :    229.000 :+++++++++++++++++++++++++++++++++++++++++++++++++|
+H :    63 :    210.000 :+++++++++++++++++++++++++++++++++++++++++++++   |
+T :    64 :    226.500 :#################################################|
+V :    65 :    228.500 :#################################################|
+V :    66 :    141.500 :##############################                  |
+L :    67 :    164.500 :###################################             |
+N :    68 :    225.000 :################################################|
+K :    69 :    227.000 :#################################################|
+L :    70 :    212.000 :##############################################  |
+R :    71 :    216.500 :############################################### |
+Q :    72 :     88.000 :+++++++++++++++++++                             |
+F :    73 :    225.000 :++++++++++++++++++++++++++++++++++++++++++++++++|
+Q :    74 :    229.000 :+++++++++++++++++++++++++++++++++++++++++++++++++|
+Q :    75 :    106.500 :+++++++++++++++++++++++                         |
+L :    76 :    199.500 :+++++++++++++++++++++++++++++++++++++++++++     |
+G :    77 :    229.000 :+++++++++++++++++++++++++++++++++++++++++++++++++|
+H :    78 :    229.000 :+++++++++++++++++++++++++++++++++++++++++++++++++|
+E :    79 :    187.000 :++++++++++++++++++++++++++++++++++++++++        |
+V :    80 :    223.500 :++++++++++++++++++++++++++++++++++++++++++++++++|
+Y :    81 :     12.500 :++                                              |
+F :    82 :    221.000 :++++++++++++++++++++++++++++++++++++++++++++++++|
+L :    83 :    229.000 :+++++++++++++++++++++++++++++++++++++++++++++++++|
+I :    84 :    227.500 :#################################################|
+G :    85 :    229.000 :#################################################|
+D :    86 :    229.000 :#################################################|
+F :    87 :    226.500 :#################################################|
+T :    88 :    229.000 :#################################################|
+G :    89 :    183.000 :#######################################         |
+M :    90 :    197.500 :##########################################      |
+V :    91 :    177.500 :######################################          |
+G :    92 :    229.000 :#################################################|
+D :    93 :    229.000 :#################################################|
+P :    94 :    229.000 :#################################################|
+S :    95 :    164.000 :###################################             |
+G :    96 :    229.000 :#################################################|
+K :    97 :    228.000 :#################################################|
+N :    98 :    222.000 :################################################|
+A :    99 :     49.500 :##########                                      |
+T :   100 :    229.000 :#################################################|
+R :   101 :    229.000 :+++++++++++++++++++++++++++++++++++++++++++++++++|
+P :   102 :    147.000 :+++++++++++++++++++++++++++++++                 |
+P :   103 :    223.000 :++++++++++++++++++++++++++++++++++++++++++++++++|
+L :   104 :    229.000 :+++++++++++++++++++++++++++++++++++++++++++++++++|
+S :   105 :    151.500 :++++++++++++++++++++++++++++++++                |
+R :   106 :    179.000 :++++++++++++++++++++++++++++++++++++++          |
+E :   107 :    212.000 :++++++++++++++++++++++++++++++++++++++++++++++  |
+D :   108 :    149.500 :++++++++++++++++++++++++++++++++                |
+V :   109 :    222.000 :++++++++++++++++++++++++++++++++++++++++++++++++|
+L :   110 :    202.000 :###########################################     |
+R :   111 :     82.000 :#################                               |
+N :   112 :    229.000 :#################################################|
+A :   113 :    229.000 :#################################################|
+E :   114 :    197.000 :##########################################      |
+T :   115 :    227.000 :#################################################|
+Y :   116 :    229.000 :#################################################|
+K :   117 :    200.000 :###########################################     |
+E :   118 :    193.500 :##########################################      |
+Q :   119 :    229.000 :#################################################|
+I :   120 :    136.000 :#############################                   |
+Y :   121 :    129.000 :############################                    |
+K :   122 :    229.000 :#################################################|
+I :   123 :    225.000 :################################################|
+L :   124 :    229.000 :#################################################|
+D :   125 :    228.000 :#################################################|
+P :   126 :    217.000 :############################################### |
+Q :   127 :     53.000 :###########                                     |
+K :   128 :    221.500 :++++++++++++++++++++++++++++++++++++++++++++++++|
+T :   129 :    229.000 :+++++++++++++++++++++++++++++++++++++++++++++++++|
+K :   130 :    118.000 :+++++++++++++++++++++++++                       |
+I :   131 :    191.000 :#########################################       |
+V :   132 :     53.000 :###########                                     |
+F :   133 :    146.000 :###############################                 |
+K :   134 :    229.000 :+++++++++++++++++++++++++++++++++++++++++++++++++|
+I :   135 :    225.000 :++++++++++++++++++++++++++++++++++++++++++++++++|
+L :   136 :    227.000 :+++++++++++++++++++++++++++++++++++++++++++++++++|
+D :   137 :    228.000 :#################################################|
+P :   138 :    212.500 :##############################################  |
+Q :   139 :     56.000 :############                                    |
+K :   140 :    219.000 :############################################### |
+T :   141 :    229.000 :#################################################|
+K :   142 :    118.500 :#########################                       |
+I :   143 :    191.000 :#########################################       |
+V :   144 :     52.000 :###########                                     |
+F :   145 :    225.500 :#################################################|
+N :   146 :    229.000 :+++++++++++++++++++++++++++++++++++++++++++++++++|
+S :   147 :    229.000 :+++++++++++++++++++++++++++++++++++++++++++++++++|
+E :   148 :    126.000 :+++++++++++++++++++++++++++                     |
+W :   149 :    229.000 :+++++++++++++++++++++++++++++++++++++++++++++++++|
+L :   150 :    176.500 :++++++++++++++++++++++++++++++++++++++          |
+S :   151 :     75.000 :++++++++++++++++                                |
+K :   152 :    126.500 :+++++++++++++++++++++++++++                     |
+L :   153 :    219.500 :+++++++++++++++++++++++++++++++++++++++++++++++ |
+G :   154 :    217.000 :+++++++++++++++++++++++++++++++++++++++++++++++ |
+T :   155 :     53.000 :###########                                     |
+A :   156 :      1.000 :                                                |
+G :   157 :    216.000 :++++++++++++++++++++++++++++++++++++++++++++++  |
+M :   158 :    222.000 :++++++++++++++++++++++++++++++++++++++++++++++++|
+I :   159 :    212.500 :++++++++++++++++++++++++++++++++++++++++++++++  |
+R :   160 :    173.500 :#####################################           |
+L :   161 :    228.500 :#################################################|
+A :   162 :    220.500 :############################################### |
+S :   163 :    173.000 :#####################################           |
+N :   164 :    102.000 :######################                          |
+Y :   165 :     46.000 :##########                                      |
+T :   166 :    229.000 :#################################################|
+V :   167 :    228.500 :#################################################|
+A :   168 :    229.000 :#################################################|
+R :   169 :    228.000 :#################################################|
+M :   170 :    229.000 :#################################################|
+L :   171 :    211.500 :#############################################   |
+E :   172 :    229.000 :#################################################|
+R :   173 :    229.000 :#################################################|
+D :   174 :    225.000 :################################################|
+D :   175 :    229.000 :#################################################|
+F :   176 :    229.000 :#################################################|
+K :   177 :    209.000 :#############################################   |
+K :   178 :    221.000 :++++++++++++++++++++++++++++++++++++++++++++++++|
+R :   179 :    229.000 :+++++++++++++++++++++++++++++++++++++++++++++++++|
+F :   180 :    139.500 :++++++++++++++++++++++++++++++                  |
+G :   181 :     21.000 :++++                                            |
+N :   182 :    118.000 :+++++++++++++++++++++++++                       |
+N :   183 :     66.000 :++++++++++++++                                  |
+Q :   184 :    216.500 :+++++++++++++++++++++++++++++++++++++++++++++++ |
+P :   185 :    142.000 :++++++++++++++++++++++++++++++                  |
+I :   186 :    229.000 :+++++++++++++++++++++++++++++++++++++++++++++++++|
+A :   187 :    228.000 :+++++++++++++++++++++++++++++++++++++++++++++++++|
+I :   188 :    227.000 :#################################################|
+H :   189 :    229.000 :#################################################|
+E :   190 :    229.000 :#################################################|
+F :   191 :    228.000 :#################################################|
+I :   192 :    136.000 :#############################                   |
+Y :   193 :    229.000 :#################################################|
+P :   194 :    229.000 :#################################################|
+L :   195 :    229.000 :#################################################|
+L :   196 :    175.000 :######################################          |
+Q :   197 :    228.000 :#################################################|
+G :   198 :    229.000 :+++++++++++++++++++++++++++++++++++++++++++++++++|
+Y :   199 :    168.000 :++++++++++++++++++++++++++++++++++++            |
+D :   200 :    229.000 :#################################################|
+S :   201 :    229.000 :+++++++++++++++++++++++++++++++++++++++++++++++++|
+V :   202 :    229.000 :+++++++++++++++++++++++++++++++++++++++++++++++++|
+A :   203 :    215.000 :##############################################  |
+L :   204 :    199.000 :###########################################     |
+Y :   205 :    196.500 :##########################################      |
+P :   206 :    228.500 :#################################################|
+L :   207 :    229.000 :#################################################|
+L :   208 :    178.000 :######################################          |
+Q :   209 :    228.000 :#################################################|
+G :   210 :    226.500 :#################################################|
+Y :   211 :    173.500 :#####################################           |
+D :   212 :    229.000 :+++++++++++++++++++++++++++++++++++++++++++++++++|
+S :   213 :    229.000 :+++++++++++++++++++++++++++++++++++++++++++++++++|
+V :   214 :    229.000 :+++++++++++++++++++++++++++++++++++++++++++++++++|
+A :   215 :    214.000 :++++++++++++++++++++++++++++++++++++++++++++++  |
+L :   216 :    199.000 :+++++++++++++++++++++++++++++++++++++++++++     |
+D :   217 :     76.000 :++++++++++++++++                                |
+A :   218 :    168.500 :++++++++++++++++++++++++++++++++++++            |
+D :   219 :    229.000 :+++++++++++++++++++++++++++++++++++++++++++++++++|
+V :   220 :    213.000 :++++++++++++++++++++++++++++++++++++++++++++++  |
+E :   221 :    229.000 :#################################################|
+L :   222 :    221.000 :################################################|
+G :   223 :    229.000 :#################################################|
+G :   224 :    229.000 :#################################################|
+T :   225 :    228.500 :#################################################|
+D :   226 :    229.000 :#################################################|
+Q :   227 :    229.000 :#################################################|
+K :   228 :    176.500 :######################################          |
+F :   229 :    229.000 :#################################################|
+N :   230 :    229.000 :#################################################|
+L :   231 :    228.000 :#################################################|
+L :   232 :    229.000 :#################################################|
+V :   233 :    130.500 :############################                    |
+G :   234 :    229.000 :#################################################|
+R :   235 :    229.000 :#################################################|
+E :   236 :    220.000 :############################################### |
+L :   237 :    228.000 :#################################################|
+Q :   238 :    229.000 :#################################################|
+K :   239 :    219.000 :############################################### |
+S :   240 :    109.500 :#######################                         |
+A :   241 :     47.000 :++++++++++                                      |
+G :   242 :    226.000 :+++++++++++++++++++++++++++++++++++++++++++++++++|
+K :   243 :    112.500 :++++++++++++++++++++++++                        |
+K :   244 :    160.500 :++++++++++++++++++++++++++++++++++              |
+P :   245 :    189.000 :+++++++++++++++++++++++++++++++++++++++++       |
+Q :   246 :    229.000 :+++++++++++++++++++++++++++++++++++++++++++++++++|
+V :   247 :     98.000 :+++++++++++++++++++++                           |
+A :   248 :     36.000 :+++++++                                         |
+I :   249 :    150.000 :++++++++++++++++++++++++++++++++                |
+T :   250 :     95.000 :++++++++++++++++++++                            |
+L :   251 :    132.500 :++++++++++++++++++++++++++++                    |
+P :   252 :    229.000 :+++++++++++++++++++++++++++++++++++++++++++++++++|
+L :   253 :    224.000 :++++++++++++++++++++++++++++++++++++++++++++++++|
+L :   254 :    228.500 :#################################################|
+V :   255 :     99.500 :#####################                           |
+G :   256 :    229.000 :#################################################|
+L :   257 :    219.000 :############################################### |
+D :   258 :    229.000 :#################################################|
+G :   259 :    229.000 :#################################################|
+E :   260 :     70.000 :###############                                 |
+K :   261 :    173.500 :#####################################           |
+K :   262 :    229.000 :#################################################|
+M :   263 :    229.000 :#################################################|
+S :   264 :    229.000 :#################################################|
+K :   265 :    229.000 :#################################################|
+S :   266 :    229.000 :#################################################|
+L :   267 :    138.000 :##############################                  |
+G :   268 :    118.000 :#########################                       |
+N :   269 :    229.000 :#################################################|
+Y :   270 :    229.000 :#################################################|
+I :   271 :    223.000 :################################################|
+G :   272 :    228.000 :+++++++++++++++++++++++++++++++++++++++++++++++++|
+V :   273 :    160.500 :++++++++++++++++++++++++++++++++++              |
+T :   274 :    153.000 :+++++++++++++++++++++++++++++++++               |
+E :   275 :    166.500 :++++++++++++++++++++++++++++++++++++            |
+A :   276 :    146.000 :+++++++++++++++++++++++++++++++                 |
+K :   277 :    220.000 :+++++++++++++++++++++++++++++++++++++++++++++++ |
+S :   278 :    215.500 :++++++++++++++++++++++++++++++++++++++++++++++  |
+L :   279 :    129.500 :############################                    |
+G :   280 :    119.000 :#########################                       |
+N :   281 :    229.000 :+++++++++++++++++++++++++++++++++++++++++++++++++|
+Y :   282 :    229.000 :+++++++++++++++++++++++++++++++++++++++++++++++++|
+I :   283 :    225.000 :++++++++++++++++++++++++++++++++++++++++++++++++|
+G :   284 :    226.000 :#################################################|
+V :   285 :    158.500 :##################################              |
+T :   286 :    155.000 :#################################               |
+E :   287 :    169.000 :####################################            |
+A :   288 :    146.000 :###############################                 |
+P :   289 :    199.000 :###########################################     |
+S :   290 :    133.500 :#############################                   |
+D :   291 :    151.500 :################################                |
+M :   292 :    223.500 :################################################|
+F :   293 :    228.500 :#################################################|
+G :   294 :    229.000 :#################################################|
+K :   295 :    227.000 :#################################################|
+V :   296 :    149.000 :################################                |
+M :   297 :    229.000 :#################################################|
+S :   298 :    228.500 :#################################################|
+I :   299 :    213.500 :##############################################  |
+S :   300 :    228.000 :#################################################|
+D :   301 :    227.500 :#################################################|
+E :   302 :    147.500 :################################                |
+L :   303 :    208.500 :#############################################   |
+M :   304 :    210.000 :#############################################   |
+W :   305 :    208.000 :#############################################   |
+D :   306 :     46.000 :##########                                      |
+W :   307 :    123.500 :##########################                      |
+Y :   308 :    178.500 :######################################          |
+N :   309 :     60.500 :#############                                   |
+L :   310 :    224.000 :################################################|
+L :   311 :    227.000 :#################################################|
+S :   312 :    227.000 :#################################################|
+F :   313 :    209.000 :#############################################   |
+R :   314 :    198.000 :###########################################     |
+P :   315 :    184.000 :########################################        |
+L :   316 :    194.000 :##########################################      |
+E :   317 :     38.500 :########                                        |
+E :   318 :    202.500 :############################################    |
+I :   319 :    202.500 :++++++++++++++++++++++++++++++++++++++++++++    |
+A :   320 :    113.000 :++++++++++++++++++++++++                        |
+Q :   321 :    135.500 :+++++++++++++++++++++++++++++                   |
+L :   322 :    120.500 :++++++++++++++++++++++++++                      |
+K :   323 :    216.500 :+++++++++++++++++++++++++++++++++++++++++++++++ |
+S :   324 :     60.500 :+++++++++++++                                   |
+E :   325 :    115.500 :+++++++++++++++++++++++++                       |
+V :   326 :    187.000 :++++++++++++++++++++++++++++++++++++++++        |
+G :   327 :     81.000 :+++++++++++++++++                               |
+N :   328 :     81.500 :+++++++++++++++++                               |
+N :   329 :    224.000 :++++++++++++++++++++++++++++++++++++++++++++++++|
+P :   330 :    101.500 :++++++++++++++++++++++                          |
+R :   331 :    229.000 :#################################################|
+D :   332 :    202.000 :###########################################     |
+D :   333 :    216.000 :############################################## |
+K :   334 :    209.000 :#############################################  |
+I :   335 :    149.500 :################################                |
+K :   336 :    199.000 :###########################################     |
+L :   337 :    207.000 :#############################################   |
+A :   338 :    205.000 :############################################    |
+L :   339 :    226.000 :#################################################|
+E :   340 :    196.500 :##########################################      |
+E :   341 :    209.500 :#############################################   |
+E :   342 :    210.500 :#############################################   |
+A :   343 :    179.000 :######################################          |
+R :   344 :    220.500 :+++++++++++++++++++++++++++++++++++++++++++++++ |
+F :   345 :    216.000 :++++++++++++++++++++++++++++++++++++++++++++++  |
+H :   346 :    207.000 :#############################################   |
+I :   347 :    169.000 :####################################            |
+K :   348 :    180.500 :#######################################         |
+L :   349 :    200.500 :###########################################     |
+A :   350 :    201.000 :###########################################     |
+L :   351 :    205.500 :############################################    |
+E :   352 :    194.500 :##########################################      |
+E :   353 :    209.000 :#############################################   |
+E :   354 :    211.000 :#############################################   |
+A :   355 :    179.500 :#######################################         |
+R :   356 :    220.000 :############################################### |
+F :   357 :    216.000 :++++++++++++++++++++++++++++++++++++++++++++++  |
+H :   358 :    177.000 :++++++++++++++++++++++++++++++++++++++          |
+H :   359 :    180.500 :+++++++++++++++++++++++++++++++++++++++         |
+E :   360 :    153.000 :+++++++++++++++++++++++++++++++++               |
+E :   361 :    121.000 :++++++++++++++++++++++++++                      |
+A :   362 :    202.000 :+++++++++++++++++++++++++++++++++++++++++++     |
+A :   363 :     49.000 :++++++++++                                      |
+A :   364 :    101.500 :++++++++++++++++++++++                          |
+A :   365 :    216.000 :++++++++++++++++++++++++++++++++++++++++++++++  |
+A :   366 :     94.500 :++++++++++++++++++++                            |
+A :   367 :    161.000 :+++++++++++++++++++++++++++++++++++             |
+A :   368 :    192.500 :+++++++++++++++++++++++++++++++++++++++++       |
+F :   369 :    200.000 :+++++++++++++++++++++++++++++++++++++++++++     |
+Q :   370 :    178.000 :######################################          |
+F :   371 :    161.500 :###################################             |
+N :   372 :    217.500 :############################################### |
+R :   373 :    201.000 :###########################################     |
+N :   374 :    204.500 :############################################    |
+R :   375 :    183.500 :#######################################         |
+A :   376 :    193.500 :##########################################     |
+G :   377 :    178.000 :######################################         |
+G :   378 :    206.000 :############################################   |
+G :   379 :    189.500 :#########################################      |
+P :   380 :    177.500 :######################################         |
+D :   381 :    182.500 :#######################################         |
+D :   382 :    204.000 :############################################    |
+D :   383 :    179.000 :######################################          |
+P :   384 :    151.500 :################################                |
+P :   385 :    145.500 :###############################                 |
+E :   386 :    130.500 :############################                    |
+E :   387 :    118.000 :#########################                       |
+T :   388 :    117.500 :#########################                       |
+T :   389 :     77.500 :################                                |
+F :   390 :    127.000 :+++++++++++++++++++++++++++                     |
+G :   391 :     68.000 :++++++++++++++                                  |
+G :   392 :     85.500 :++++++++++++++++++                              |
+M :   393 :     55.000 :+++++++++++                       |
+M :   394 :     63.500 :+++++++++++++                     |
+G :   395 :     22.000 :++++  |
+A :   396 :      2.000 :|
+A :   397 :      0.000 :|
+L :   398 :      0.000 :|
+L :   399 :      0.000 :|
+L :   400 :      0.000 :|
+K :   401 :      0.000 :|
