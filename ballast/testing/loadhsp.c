@@ -154,19 +154,7 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
             line[0] = '\0';
             endofdbseq = 1;
         }
-        /*************************************************************************/
-        /**** This is supposed to be the end of the BLAST results, we don't*******/
-        /**** need to read the file any further and may leave*********************/
-        /*************************************************************************/
-        if ((strncmp(line, "WARNING:", 8) == 0) || (strncmp(line, "  Database:", 11) == 0) || (strncmp(line, "Parameters:", 11) == 0) || (strncmp(line, "Lambda", 6) == 0))
-        {
-            printf("je dois etre là");
-            line[0] = '\0';
-            endofdbseq = 1;
-            simprf->next = NULL;
-            printf("c'est fini");
-
-        }
+        
         /************************************************************************************************************************************************/
         /*************************************************************Identities*************************************************************************/
         /************************************************************************************************************************************************/
@@ -291,7 +279,7 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
         /************************************************************************************************************************************************/
         if (strncmp(line, "Sbjct", 5) == 0)
         {
-            printf("Nous sommes dans la target\n");
+            //printf("Nous sommes dans la target\n");
             /***************************************************************************************************************/
             /******************************************Recherche du numéro**************************************************/
             /*****************************************du début et fin de la*************************************************/
@@ -354,6 +342,7 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
                 }
                 okhsp = 1;
             }
+            printf("fin de la target\n");
         }
         // go à la partie qui ne marchait pas de base !
 
@@ -441,6 +430,19 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
             else {
                 endofdbseq = 1;
             }
+        }
+        /*************************************************************************/
+        /**** This is supposed to be the end of the BLAST results, we don't*******/
+        /**** need to read the file any further and may leave*********************/
+        /*************************************************************************/
+        if ((strncmp(line, "WARNING:", 8) == 0) || (strncmp(line, "  Database:", 11) == 0) || (strncmp(line, "Parameters:", 11) == 0))
+        {
+            printf("je dois etre là :%s\n", line);
+            line[0] = '\0';
+            endofdbseq = 1;
+            simprf->next = NULL;
+            printf("c'est fini");
+
         }
     }
 
