@@ -157,31 +157,20 @@ int main(int argc, char *argv[])
         profiltotal = profilBuilding(seqres, infile, curline, length, conserved, maxprofile, 'p');
         while (curline[0] != '\0')
         {
-            if (curline[0] == '>')
-            {
-                printf("Tour : %u\n", j);
-                printf("curline is %s\n", curline);
+            
+            printf("Tour : %u\n", j);
+            printf("curline is %s\n", curline);
 
-                seqres->rank = i++;
-                seqres->next = (SeqHSP *)malloc(sizeof(SeqHSP));
-                (seqres->next)->prev = seqres;
-                seqres = seqres->next;
-                seqres->next = NULL;
-                j++;
-                contribution = profilBuilding(seqres, infile, curline, length, conserved, maxprofile, 'p');
-                if (strcmp(seqres->prev->sim->hsp, seqres->sim->hsp) != 0)
-                {                
-                    addprofils(profiltotal, contribution, length);
-                }
-
-            }
-            else
-            {
-                fgets(curline, 256, infile);
-                if (curline[0] != '>')
-                {
-                    break;
-                }
+            seqres->rank = i++;
+            seqres->next = (SeqHSP *)malloc(sizeof(SeqHSP));
+            (seqres->next)->prev = seqres;
+            seqres = seqres->next;
+            seqres->next = NULL;
+            j++;
+            contribution = profilBuilding(seqres, infile, curline, length, conserved, maxprofile, 'p');
+            if (strcmp(seqres->prev->sim->hsp, seqres->sim->hsp) != 0)
+            {                
+                addprofils(profiltotal, contribution, length);
             }
         }
       //  printf("Le profil total est %f\n", *profiltotal);

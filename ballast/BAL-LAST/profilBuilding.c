@@ -1,9 +1,9 @@
 /**
- * @file profilBuilding.c
+ * @file loadHSP.c
  * @author Ihsane E.
  * @brief
  * @version 0.1
- * @date 2022-09-26
+ * @date 2022-10-12
  *
  * @copyright Copyright (c) 2022
  *
@@ -17,12 +17,13 @@
 #include "readargs.h"
 #include "types.h"
 #include <ctype.h>
-#include <stdbool.h>
-
 #define NETRA 0
 
 extern int filter(char *seqhsp, char *seq);
 extern SimPrf *handlegaps(SimPrf *simprf);
+/*****************************************************************************/
+/**************************Méthodes dont j'ai besoin**************************/
+/*****************************************************************************/
 void verifLine(char *line);
 double getMaxP(double maxp, char type);
 char *getOuttext(char *line, char *outtext);
@@ -34,24 +35,14 @@ double eValueRecovery(char *line, char *ptrstr, double p);
 void fixeValue(double p, double maxp);
 char *getText(char *line, SimPrf *simprf);
 
-/**
- * @brief Loads HSPs into seqres structure and derives contribution to profile and similarity profile for rescoring.
- * @param seqres
- * @param file
- * @param line
- * @param length
- * @param conserved
- * @param maxprofile
- * @param type
- *@return profil
- */
-
 double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char *conserved, double *maxprofile, char type)
 {
     /*************************************************************************************************************************************************/
+    /********************/
+    /*************************************************************************************************************************************************/
     /************************************************************Déclaration des variables************************************************************/
     /************************************************************************************************************************************************/
-    double maxp, p, facteur, fctr;
+    double maxp = 0, p, facteur, fctr;
     double *profil, *ptr, *simptr;
     SimPrf *simprf;
     char *outtext = NULL, *ptrstr, *begline, *queryseq, *seq, *seqhsp, *startline;
@@ -149,28 +140,40 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
     /**************************************************Nous sommes à la ligne commencant*************************************************************/
     /*********************************************************par Identities*************************************************************************/
     /************************************************************************************************************************************************/
-    fgets(line, 256, file);
+    // printf("Nous sommes à la ligne %s\n",line);
     /************************************************************************************************************************************************/
     /**************************************************On parcourt le résultat de l'analyse***********************************************************/
     /************************************************************************************************************************************************/
     while (endofdbseq == 0)
     {
+        if (!fgets(line, 256, file) || (feof(file) != 0))
+        {
+            /**************************************************************************/
+            /**** Huuhhhh.... t'looks like we've run off the file and should stop *****/
+            /**************************************************************************/
+            line[0] = '\0';
+            endofdbseq = 1;
+        }
+        
         /************************************************************************************************************************************************/
         /*************************************************************Identities*************************************************************************/
         /************************************************************************************************************************************************/
         if (strncmp(line, " Identities", 11) == 0)
         {
-            /*************************************************************************************************************/
-            /**************************************Vérifie si il y'a ****************************************************/
-            /***************************************des gaps ou non ****************************************************/
-            /***********************************************************************************************************/
-            if (strstr(line, "Gaps = 0/")) // no gap
+            if (strstr(line, "Gaps"))
             {
-                gapped = 0;
+                if (strstr(line, "Gaps = 0/"))
+                {
+                    gapped = 0;
+                }
+                else
+                {
+                    gapped = 1;
+                }
             }
             else
             {
-                gapped = 1; // gaps
+                gapped = 0;
             }
             /**************************************************************************************************************/
             /*****************************************MAJ simprf->text****************************************************/
@@ -195,8 +198,9 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
         /************************************************************************************************************************************************/
         /**************************************************************Query*****************************************************************************/
         /************************************************************************************************************************************************/
-        else if (strncmp(line, "Query", 5) == 0)
+        if (strncmp(line, "Query", 5) == 0)
         {
+            printf("nous allons dans la query\n");
             /****************************************************************************************************************/
             /*****************************************Recherche du numéro****************************************************/
             /*****************************************du début et fin de la**************************************************/
@@ -232,6 +236,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
                 queryseq = (char *)realloc(queryseq, strlen(line) + strlen(queryseq) + 1); // it was 1
             }
             strcat(queryseq, strtok(line, " "));
+
             /************************************************************************************************************************************************/
             /**************************************************************MidLine***************************************************************************/
             /************************************************************************************************************************************************/
@@ -247,26 +252,34 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
             /************************************de vérifier si nous sommes à la première*************************************/
             /***********************************partie de la séquence de la midline ou non************************************/
             /*****************************************************************************************************************/
+            line[strlen(line)] = '\0';
+			n = (end - debut + 1) - strlen((char *)(line + dline));
+			if (n > 0)
+				strncat(line, "                                                            ", n);
+
             if (ok == 0)
             {
                 begin = debut;
                 seq = (char *)malloc(strlen(line) + 1);
                 *seq = '\0';
-                strcpy(seq, line);
+                // strcpy(seq, line);
             }
             else
             {
                 seq = (char *)realloc(seq, strlen(line) + strlen(seq) + 1); // pb ici
-                strcat(seq, line);
+                // strcat(seq, line);
             }
-            ok = 1;
-        }
+            strcat(seq, (char *)(line + dline));
 
+            ok = 1;
+            fgets(line, 256, file);
+        }
         /************************************************************************************************************************************************/
         /**************************************************************Sbjct*****************************************************************************/
         /************************************************************************************************************************************************/
-        else if (strncmp(line, "Sbjct", 5) == 0)
+        if (strncmp(line, "Sbjct", 5) == 0)
         {
+            //printf("Nous sommes dans la target\n");
             /***************************************************************************************************************/
             /******************************************Recherche du numéro**************************************************/
             /*****************************************du début et fin de la*************************************************/
@@ -329,24 +342,33 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
                 }
                 okhsp = 1;
             }
+            printf("fin de la target\n");
         }
-        /************************************************************************************************************************************************/
-        /**************************************************************Score******************************************************************************/
-        /************************************************************************************************************************************************/
-        if (feof(file) != 0 || line[0] == '>' || strncmp(line, "Database", 8) == 0 || strncmp(line, " Score", 6) == 0 || strncmp(line,"Score",5)==0)
+        // go à la partie qui ne marchait pas de base !
+
+        if (*line=='>' || (strncmp(line, "WARNING:", 8) == 0) || (strncmp(line, "  Database:", 11) == 0) || (strncmp(line, "Score", 5) == 0) || (strncmp(line, " Score", 6) == 0) || (strncmp(line, "Parameters:", 11) == 0))
         {
-            printf("Nous sommes à la ligne :%s\n", line);
+            printf("On va là\n");
+            /**************************************************************************/
+            /**** Let's check that the current database sequence doesn't contain   ****/
+            /**** too many low complexity subsequences in the region where the HSP ****/
+            /**** has been found. Otherwise, we simply reject this HSP (p set to 1)****/
+
             if (filter(seqhsp, seq) == 0)
             {
                 p = 1;
             }
+            /**************************************************************************/
 
             simprf->hsp = seqhsp;
             simprf->queryseq = queryseq;
             simprf->aln = seq;
+            // printf("aln: %s\n",simprf->aln);
             simprf->next = NULL;
             queryseq = NULL;
             seq = NULL;
+
+            /**************************************************************************/
 
             if ((p >= maxp) || (p > 1))
                 p = 1;
@@ -367,59 +389,64 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
                 simprf->enddb = -simprf->enddb;
             }
 
+            /**************************************************************************/
+
             if (gapped)
-            {
                 simprf = handlegaps(simprf);
-            }
+
+            /**************************************************************************/
+            /**** The current line starts with " Score", we are therefore starting ****/
+            /**** to read a new HSP                                                ****/
+
             begline = line;
-			if (*begline == ' ')
-				begline++;
+            if (*begline == ' ')
+                begline++;
 
-			/*begline = (char *) (line + strcspn (line," ") + 1);	*/
+            /*begline = (char *) (line + strcspn (line," ") + 1);	*/
 
-			if (strncmp(begline, "Score", 5) == 0)
-			{
-				if (ok == 1)
-				{
-					printf("On arrive ici\n");
-					simprf->next = (SimPrf *)malloc(sizeof(SimPrf));
-					simprf = simprf->next;
-					simprf->text = (char *)malloc(strlen(line) + 1);
-					strcpy(simprf->text, line);
-					ok = 0;
-					okhsp = 0;
-					simprf->score = 0;
-					simprf->maxscore = 0;
-					simprf->nmatch = 0;
-				}
-				ptrstr = (char *)(strstr(line, "= e-"));
-				if (ptrstr != NULL)
-				{
-					ptrstr = (char *)(ptrstr + 1);
-					*ptrstr = '1';
-				}
-				sscanf((char *)(strrchr(line, '=') + 1), "%lf", &p);
-				if (p < seqres->prob)
-					seqres->prob = p;
-				simprf->p = p;
-			}
-            if(*line == '>'){
-				endofdbseq = 1;
+            if (strncmp(begline, "Score", 5) == 0)
+            {
+                if (ok == 1)
+                {
+                    printf("la ligne du score est %s\n", line);
+                    printf("la ligne suivante est %s\n", fgets(line, 256, file));
+                    simprf->next = (SimPrf *)malloc(sizeof(SimPrf));
+                    simprf = simprf->next;
+                    simprf->text = (char *)malloc(strlen(line) + 1);
+                    strcpy(simprf->text, line);
+                    ok = 0;
+                    okhsp = 0;
+                    simprf->score = 0;
+                    simprf->maxscore = 0;
+                    simprf->nmatch = 0;
+                }
+                p = eValueRecovery(line, ptrstr,p);
+                
+                if (p < seqres->prob)
+                    seqres->prob = p;
+                simprf->p = p;
+            }
+            /**************************************************************************/
+            else {
+                endofdbseq = 1;
             }
         }
-        else
+        /*************************************************************************/
+        /**** This is supposed to be the end of the BLAST results, we don't*******/
+        /**** need to read the file any further and may leave*********************/
+        /*************************************************************************/
+        if ((strncmp(line, "WARNING:", 8) == 0) || (strncmp(line, "  Database:", 11) == 0) || (strncmp(line, "Parameters:", 11) == 0))
         {
-            // sinon on va a la ligne suivante
-            fgets(line, 256, file);
+            printf("je dois etre là :%s\n", line);
+            line[0] = '\0';
+            endofdbseq = 1;
+            simprf->next = NULL;
+            printf("c'est fini");
+
         }
     }
 
-    /****************************************************SIMPRF à calculer****************************************************/
-    // printf("la taille de la séquence est : %ld\n", strlen(simprf->aln));
-    // int simprofil[strlen(seq)]; // on crée un tableau qui va contenir les valeurs pour chaque aa (if id, sim, nothing)
-    // double averageSimptr;
-    // int j=0; //remplir le tableau
-    printf("%s\n", seqres->desc);
+// printf("desc is : %s\n", seqres->desc);
 
     for (simprf = seqres->sim; simprf != NULL; simprf = simprf->next)
     {
@@ -430,7 +457,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
         end = simprf->end + 1;
         begdb = simprf->begdb + 1;
         enddb = simprf->enddb + 1;
-
+        
         simprf->prf = (double *)malloc(sizeof(double) * (end - begin + 1));
 
         p = simprf->p;
@@ -456,7 +483,6 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
                 identique = 1;
             }
             *ptr += facteur * identique;
-
             ptr = (double *)(profil + i);
             // printf("le profil est de %f\n", *profil);
             simptr = (double *)(simprf->prf + i - begin + 1);
@@ -593,16 +619,16 @@ char *firstScoreRecovery(char *line, char *outtext, char *begline, FILE *file)
 
 double eValueRecovery(char *line, char *ptrstr, double p)
 {
-    ptrstr = (char *)(strstr(line, "e-"));
+    ptrstr = (char *)(strstr(line, "= e-"));
     if (ptrstr != NULL)
     {
         ptrstr = (char *)(ptrstr + 1);
-        *ptrstr = 1;
+        *ptrstr = '1';
     }
-    // ici on va récupérer la e-value qui va correspondre à p.
     sscanf((char *)(strrchr(line, '=') + 1), "%lf", &p);
     return p;
 }
+
 
 void fixeValue(double p, double maxp)
 {
@@ -616,5 +642,6 @@ char *getText(char *line, SimPrf *simprf)
 {
     simprf->text = (char *)malloc(strlen(line) + 1);
     strcpy(simprf->text, line);
+    printf("simprf->text = %s\n", simprf->text);
     return simprf->text;
 }
