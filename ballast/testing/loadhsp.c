@@ -35,8 +35,9 @@ double eValueRecovery(char *line, char *ptrstr, double p);
 void fixeValue(double p, double maxp);
 char *getText(char *line, SimPrf *simprf);
 
-double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conserved, double *maxprofile, char type){
-	/*************************************************************************************************************************************************/
+double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conserved, double *maxprofile, char type)
+{
+    /*************************************************************************************************************************************************/
     /********************/
     /*************************************************************************************************************************************************/
     /************************************************************Déclaration des variables************************************************************/
@@ -139,61 +140,59 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
     /**************************************************Nous sommes à la ligne commencant*************************************************************/
     /*********************************************************par Identities*************************************************************************/
     /************************************************************************************************************************************************/
-    //printf("Nous sommes à la ligne %s\n",line);
+    // printf("Nous sommes à la ligne %s\n",line);
     /************************************************************************************************************************************************/
     /**************************************************On parcourt le résultat de l'analyse***********************************************************/
     /************************************************************************************************************************************************/
     while (endofdbseq == 0)
     {
-        // printf("line is %s\n", line);
-
         if (!fgets(line, 256, file) || (feof(file) != 0))
-		{
-		/**************************************************************************/
-		/**** Huuhhhh.... t'looks like we've run off the file and should stop *****/
-        /**************************************************************************/
-            printf("1 %s\n", line);
-
-			line[0] = '\0';
-			endofdbseq = 1;
-		}
+        {
+            /**************************************************************************/
+            /**** Huuhhhh.... t'looks like we've run off the file and should stop *****/
+            /**************************************************************************/
+            line[0] = '\0';
+            endofdbseq = 1;
+        }
         /*************************************************************************/
-		/**** This is supposed to be the end of the BLAST results, we don't*******/
-		/**** need to read the file any further and may leave*********************/
+        /**** This is supposed to be the end of the BLAST results, we don't*******/
+        /**** need to read the file any further and may leave*********************/
         /*************************************************************************/
-        if ((strncmp(line, "WARNING:", 8) == 0) || (strncmp(line, "  Database:", 11) == 0) || (strncmp(line, "Parameters:", 11) == 0) || (strncmp(line, "Lambda", 6)==0))
-		{
-            printf("2 %s\n", line);
+        if ((strncmp(line, "WARNING:", 8) == 0) || (strncmp(line, "  Database:", 11) == 0) || (strncmp(line, "Parameters:", 11) == 0) || (strncmp(line, "Lambda", 6) == 0))
+        {
+            printf("je dois etre là");
+            line[0] = '\0';
+            endofdbseq = 1;
+            simprf->next = NULL;
+            printf("c'est fini");
 
-			line[0] = '\0';
-			endofdbseq = 1;
-			simprf->next = NULL;
-		}
+        }
         /************************************************************************************************************************************************/
         /*************************************************************Identities*************************************************************************/
         /************************************************************************************************************************************************/
         if (strncmp(line, " Identities", 11) == 0)
-		{
-			if (strstr(line, "Gaps"))
-			{
-                if(strstr(line,"Gaps = 0/")){
+        {
+            if (strstr(line, "Gaps"))
+            {
+                if (strstr(line, "Gaps = 0/"))
+                {
                     gapped = 0;
                 }
-                else{
-                    gapped=1;
+                else
+                {
+                    gapped = 1;
                 }
-				
-			}
-			else
-			{
-				gapped = 0;
-			}
-			/**************************************************************************************************************/
+            }
+            else
+            {
+                gapped = 0;
+            }
+            /**************************************************************************************************************/
             /*****************************************MAJ simprf->text****************************************************/
             /*****************************************ajout d'identities**************************************************/
             /************************************************************************************************************/
             simprf->text = (char *)realloc(simprf->text, strlen(simprf->text) + strlen(line) + 1); // 14 à la place de 1
-            //strcat(simprf->text, "             "); //il vient d'ici le 14 mmh
+            // strcat(simprf->text, "             "); //il vient d'ici le 14 mmh
             strcat(simprf->text, line);
             /******************************************************************************************************************/
             /*****************************************Récupération du taux ****************************************************/
@@ -207,12 +206,13 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
             /**************************************************************************************************************/
             simprf->pcid = taux;
             simprf->nid = naas;
-		}
+        }
         /************************************************************************************************************************************************/
         /**************************************************************Query*****************************************************************************/
         /************************************************************************************************************************************************/
         if (strncmp(line, "Query", 5) == 0)
         {
+            printf("nous allons dans la query\n");
             /****************************************************************************************************************/
             /*****************************************Recherche du numéro****************************************************/
             /*****************************************du début et fin de la**************************************************/
@@ -248,6 +248,7 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
                 queryseq = (char *)realloc(queryseq, strlen(line) + strlen(queryseq) + 1); // it was 1
             }
             strcat(queryseq, strtok(line, " "));
+
             /************************************************************************************************************************************************/
             /**************************************************************MidLine***************************************************************************/
             /************************************************************************************************************************************************/
@@ -263,25 +264,34 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
             /************************************de vérifier si nous sommes à la première*************************************/
             /***********************************partie de la séquence de la midline ou non************************************/
             /*****************************************************************************************************************/
+            line[strlen(line)] = '\0';
+			n = (end - debut + 1) - strlen((char *)(line + dline));
+			if (n > 0)
+				strncat(line, "                                                            ", n);
+
             if (ok == 0)
             {
                 begin = debut;
                 seq = (char *)malloc(strlen(line) + 1);
                 *seq = '\0';
-                strcpy(seq, line);
+                // strcpy(seq, line);
             }
             else
             {
                 seq = (char *)realloc(seq, strlen(line) + strlen(seq) + 1); // pb ici
-                strcat(seq, line);
+                // strcat(seq, line);
             }
+            strcat(seq, (char *)(line + dline));
+
             ok = 1;
+            fgets(line, 256, file);
         }
-         /************************************************************************************************************************************************/
+        /************************************************************************************************************************************************/
         /**************************************************************Sbjct*****************************************************************************/
         /************************************************************************************************************************************************/
         if (strncmp(line, "Sbjct", 5) == 0)
         {
+            printf("Nous sommes dans la target\n");
             /***************************************************************************************************************/
             /******************************************Recherche du numéro**************************************************/
             /*****************************************du début et fin de la*************************************************/
@@ -345,103 +355,168 @@ double *loadHSP(SeqHSP *seqres, FILE *file, char *line, int length, char *conser
                 okhsp = 1;
             }
         }
-        //go à la partie qui ne marchait pas de base !
+        // go à la partie qui ne marchait pas de base !
 
+        if (*line=='>' || (strncmp(line, "WARNING:", 8) == 0) || (strncmp(line, "  Database:", 11) == 0) || (strncmp(line, "Score", 5) == 0) || (strncmp(line, " Score", 6) == 0) || (strncmp(line, "Parameters:", 11) == 0))
+        {
+            printf("On va là\n");
+            /**************************************************************************/
+            /**** Let's check that the current database sequence doesn't contain   ****/
+            /**** too many low complexity subsequences in the region where the HSP ****/
+            /**** has been found. Otherwise, we simply reject this HSP (p set to 1)****/
 
-        if (((strchr("[1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz>", *line)) && ((strncmp(line, "Query", 5) != 0) && (strncmp(line, "Sbjct", 5) != 0) && (strncmp(line, "Score", 5) != 0) && (strncmp(line, "Identities", 10) != 0))) || (strncmp(line, "WARNING:", 8) == 0) || (strncmp(line, "  Database:", 11) == 0) || (strncmp(line, "Score", 5) == 0) || (strncmp(line, " Score", 6) == 0) || (strncmp(line, "Parameters:", 11) == 0))
-		{
-			/**************************************************************************/
-			/**** Let's check that the current database sequence doesn't contain   ****/
-			/**** too many low complexity subsequences in the region where the HSP ****/
-			/**** has been found. Otherwise, we simply reject this HSP (p set to 1)****/
+            if (filter(seqhsp, seq) == 0)
+            {
+                p = 1;
+            }
+            /**************************************************************************/
 
-			if (filter(seqhsp, seq) == 0)
-			{
-				p = 1;
-			}
-			/**************************************************************************/
+            simprf->hsp = seqhsp;
+            simprf->queryseq = queryseq;
+            simprf->aln = seq;
+            // printf("aln: %s\n",simprf->aln);
+            simprf->next = NULL;
+            queryseq = NULL;
+            seq = NULL;
 
-			simprf->hsp = seqhsp;
-			simprf->queryseq = queryseq;
-			simprf->aln = seq;
-			//printf("aln: %s\n",simprf->aln);
-			simprf->next = NULL;
-			queryseq = NULL;
-			seq = NULL;
+            /**************************************************************************/
 
-			/**************************************************************************/
+            if ((p >= maxp) || (p > 1))
+                p = 1;
+            if (p < seqres->p)
+            {
+                seqres->p = p;
+            }
 
-			if ((p >= maxp) || (p > 1))
-				p = 1;
-			if (p < seqres->p)
-			{
-				seqres->p = p;
-			}
+            simprf->begin = begin - 1;
+            simprf->end = end - 1;
 
-			simprf->begin = begin - 1;
-			simprf->end = end - 1;
-			
-			simprf->begdb = begdb - 1;
-			simprf->enddb = enddb - 1;
-		
-			if (simprf->begdb > simprf->enddb)
-			{
-				simprf->begdb = -simprf->begdb;
-				simprf->enddb = -simprf->enddb;
-			}
+            simprf->begdb = begdb - 1;
+            simprf->enddb = enddb - 1;
 
-			/**************************************************************************/
+            if (simprf->begdb > simprf->enddb)
+            {
+                simprf->begdb = -simprf->begdb;
+                simprf->enddb = -simprf->enddb;
+            }
 
-			if (gapped)
-				simprf = handlegaps(simprf);
+            /**************************************************************************/
 
-			/**************************************************************************/
-			/**** The current line starts with " Score", we are therefore starting ****/
-			/**** to read a new HSP                                                ****/
+            if (gapped)
+                simprf = handlegaps(simprf);
 
-			begline = line;
-			if (*begline == ' ')
-				begline++;
+            /**************************************************************************/
+            /**** The current line starts with " Score", we are therefore starting ****/
+            /**** to read a new HSP                                                ****/
 
-			printf("On passe d'abord par ici\n");
-			/*begline = (char *) (line + strcspn (line," ") + 1);	*/
+            begline = line;
+            if (*begline == ' ')
+                begline++;
 
-			if (strncmp(begline, "Score", 5) == 0)
-			{
-				if (ok == 1)
-				{
-					printf("la ligne du score est %s\n", line);
-					printf("la ligne suivante est %s\n", fgets(line,256, file));
-					simprf->next = (SimPrf *)malloc(sizeof(SimPrf));
-					simprf = simprf->next;
-					simprf->text = (char *)malloc(strlen(line) + 1);
-					strcpy(simprf->text, line);
-					ok = 0;
-					okhsp = 0;
-					simprf->score = 0;
-					simprf->maxscore = 0;
-					simprf->nmatch = 0;
-				}
-				ptrstr = (char *)(strstr(line, "= e-"));
-				if (ptrstr != NULL)
-				{
-					ptrstr = (char *)(ptrstr + 1);
-					*ptrstr = '1';
-				}
-				sscanf((char *)(strrchr(line, '=') + 1), "%lf", &p);
-				if (p < seqres->prob)
-					seqres->prob = p;
-				simprf->p = p;
-			}
-			/**************************************************************************/
-			if (*line == '>')
-				endofdbseq = 1;
-		}
+            /*begline = (char *) (line + strcspn (line," ") + 1);	*/
 
-        
+            if (strncmp(begline, "Score", 5) == 0)
+            {
+                if (ok == 1)
+                {
+                    printf("la ligne du score est %s\n", line);
+                    printf("la ligne suivante est %s\n", fgets(line, 256, file));
+                    simprf->next = (SimPrf *)malloc(sizeof(SimPrf));
+                    simprf = simprf->next;
+                    simprf->text = (char *)malloc(strlen(line) + 1);
+                    strcpy(simprf->text, line);
+                    ok = 0;
+                    okhsp = 0;
+                    simprf->score = 0;
+                    simprf->maxscore = 0;
+                    simprf->nmatch = 0;
+                }
+                p = eValueRecovery(line, ptrstr,p);
+                
+                if (p < seqres->prob)
+                    seqres->prob = p;
+                simprf->p = p;
+            }
+            /**************************************************************************/
+            else {
+                endofdbseq = 1;
+            }
+        }
     }
 
+// printf("desc is : %s\n", seqres->desc);
 
+    for (simprf = seqres->sim; simprf != NULL; simprf = simprf->next)
+    {
+        seqhsp = simprf->hsp;
+        seq = simprf->aln;
+
+        begin = simprf->begin + 1;
+        end = simprf->end + 1;
+        begdb = simprf->begdb + 1;
+        enddb = simprf->enddb + 1;
+        
+        simprf->prf = (double *)malloc(sizeof(double) * (end - begin + 1));
+
+        p = simprf->p;
+        if ((p >= maxp) || (p > 1))
+        {
+            p = 1;
+        }
+        facteur = (1 - p);
+        fctr = 1;
+
+        /**** Update the profile for this sequence accounting for the current  ****/
+        /**** HSP and create the similarity profile for the current HSP        ****/
+
+        for (int i = begin - 1; i < end; i++)
+        {
+            ptr = (double *)(maxprofile + i);
+            if ((taux == 100) && (naas > (length / 10)))
+            {
+                identique = 0;
+            }
+            else
+            {
+                identique = 1;
+            }
+            *ptr += facteur * identique;
+            ptr = (double *)(profil + i);
+            // printf("le profil est de %f\n", *profil);
+            simptr = (double *)(simprf->prf + i - begin + 1);
+            *simptr = 0.0;
+
+            /*** Aligned Aas in Query sequence and Database sequence are ****/
+            /*** identical                                               ****/
+
+            if ((*(seq + i - begin + 1) != '+') && (*(seq + i - begin + 1) != ' ') && (*(seq + i - begin + 1) != 'x'))
+            {
+                *ptr = facteur * identique;
+                *simptr = ID * fctr;
+                ptrstr = (char *)(conserved + i);
+                *ptrstr = *(seq + i - begin + 1);
+            }
+            else
+            {
+                /*** Aligned Aas in Query and Database sequences are  ***/
+                /*** similar                                          ***/
+
+                if (*(seq + i - begin + 1) == '+')
+                {
+                    *ptr = identique * facteur / 2;
+                    *simptr = SIM * fctr;
+                }
+                else
+                {
+                    /*** Well... actually they're different       ***/
+                    *ptr = identique * NETRA * facteur;
+                    *simptr = RIEN * fctr;
+                }
+            }
+        }
+    }
+
+    fprintf(stdout, "le smptr est de : %lf\n", *simptr);
     return profil;
 }
 
@@ -542,16 +617,16 @@ char *firstScoreRecovery(char *line, char *outtext, char *begline, FILE *file)
 
 double eValueRecovery(char *line, char *ptrstr, double p)
 {
-    ptrstr = (char *)(strstr(line, "e-"));
+    ptrstr = (char *)(strstr(line, "= e-"));
     if (ptrstr != NULL)
     {
         ptrstr = (char *)(ptrstr + 1);
-        *ptrstr = 1;
+        *ptrstr = '1';
     }
-    // ici on va récupérer la e-value qui va correspondre à p.
     sscanf((char *)(strrchr(line, '=') + 1), "%lf", &p);
     return p;
 }
+
 
 void fixeValue(double p, double maxp)
 {

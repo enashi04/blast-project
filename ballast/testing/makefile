@@ -4,7 +4,7 @@ EXEC=programtest
 
 # Les fichiers .o a générer si nécessaire
 
-DEP=printusage.o getargs.o initresfile.o addprofils.o filter.o loadhsp.o
+DEP=printusage.o getargs.o initresfile.o addprofils.o filter.o loadhsp.o handlegaps.o
 
 all: $(EXEC)
 
