@@ -1,11 +1,10 @@
 # L'exécutable à générer :
 
-EXEC=ballast
+EXEC=programtest
 
 # Les fichiers .o a générer si nécessaire
 
-DEP=printusage.o getargs.o initresfile.o loadhsp.o addprofils.o handlegaps.o filter.o
-
+DEP=printusage.o getargs.o initresfile.o addprofils.o filter.o loadhsp.o
 
 all: $(EXEC)
 

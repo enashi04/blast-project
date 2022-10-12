@@ -112,7 +112,7 @@ int filter(char *seqhsp, char *seq)
     /**** If l, the total length of all lowest complexity subseqs is > LSEUIL ***/
     /**** then the whole HSP is considered as being of low complexity and non ***/
     /**** informative at all. It is therefore rejected.                       ***/
-
+    //printf("l is : %u  seuil: %u\n", l, LSEUIL);
     if (l > LSEUIL)
     {
 #ifdef DEBUG

@@ -11,12 +11,13 @@ void databaseName(BlastHeader *blhd, char *line, FILE *file);
 void jumpAlignment(char *line, FILE *file);
 int getLength(char *line, int length);
 
+
 int initresfile(FILE *file, char *line, BlastHeader *blhd)
 {
     int length=0;
 
     fgets(line, 256, file);
-    printf("line : %s\n", line);
+
     blhd->prog = NULL;
 
     while (strstr(line, "Length=") == NULL)
@@ -48,25 +49,13 @@ int initresfile(FILE *file, char *line, BlastHeader *blhd)
             line = NULL;
             return (0);
         }
-
     }
-    /*donc ici on aura la longueur de la protéine blastée, et la ligne dans laquelle on commence 
-    * disons l'analyse cad par >SPxxxxx
-    * et blastheader permet de remplir les params de data base et query name !
-    */
     return length;
 }
 
 /*
  Substring
 */
-char *substr(const char *src, int m, int n)
-{
-    int len = n - m;
-    char *dest = (char *)malloc(sizeof(char) * (len + 1));
-    strncpy(dest, (src + m), len);
-    return dest;
-}
 
 /*
   Gets BLAST Program name and version 
@@ -153,5 +142,13 @@ int getLength(char *line, int length)
         }
     }
     return length;
+}
+
+char *substr(const char *src, int m, int n)
+{
+    int len = n - m;
+    char *dest = (char *)malloc(sizeof(char) * (len + 1));
+    strncpy(dest, (src + m), len);
+    return dest;
 }
 /**************************************************************************/
