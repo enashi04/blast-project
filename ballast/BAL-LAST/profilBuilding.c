@@ -200,7 +200,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
         /************************************************************************************************************************************************/
         if (strncmp(line, "Query", 5) == 0)
         {
-            printf("nous allons dans la query\n");
+            //printf("nous allons dans la query\n");
             /****************************************************************************************************************/
             /*****************************************Recherche du numéro****************************************************/
             /*****************************************du début et fin de la**************************************************/
@@ -342,13 +342,13 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
                 }
                 okhsp = 1;
             }
-            printf("fin de la target\n");
+            //printf("fin de la target\n");
         }
         // go à la partie qui ne marchait pas de base !
 
         if (*line=='>' || (strncmp(line, "WARNING:", 8) == 0) || (strncmp(line, "  Database:", 11) == 0) || (strncmp(line, "Score", 5) == 0) || (strncmp(line, " Score", 6) == 0) || (strncmp(line, "Parameters:", 11) == 0))
         {
-            printf("On va là\n");
+            //printf("On va là\n");
             /**************************************************************************/
             /**** Let's check that the current database sequence doesn't contain   ****/
             /**** too many low complexity subsequences in the region where the HSP ****/
@@ -408,8 +408,8 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
             {
                 if (ok == 1)
                 {
-                    printf("la ligne du score est %s\n", line);
-                    printf("la ligne suivante est %s\n", fgets(line, 256, file));
+                    // printf("la ligne du score est %s\n", line);
+                    // printf("la ligne suivante est %s\n", fgets(line, 256, file));
                     simprf->next = (SimPrf *)malloc(sizeof(SimPrf));
                     simprf = simprf->next;
                     simprf->text = (char *)malloc(strlen(line) + 1);
@@ -437,11 +437,11 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
         /*************************************************************************/
         if ((strncmp(line, "WARNING:", 8) == 0) || (strncmp(line, "  Database:", 11) == 0) || (strncmp(line, "Parameters:", 11) == 0))
         {
-            printf("je dois etre là :%s\n", line);
+            //printf("je dois etre là :%s\n", line);
             line[0] = '\0';
             endofdbseq = 1;
             simprf->next = NULL;
-            printf("c'est fini");
+            //printf("c'est fini");
 
         }
     }
@@ -518,7 +518,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
         }
     }
 
-    fprintf(stdout, "le smptr est de : %lf\n", *simptr);
+   // fprintf(stdout, "le smptr est de : %lf\n", *simptr);
     return profil;
 }
 
@@ -642,6 +642,6 @@ char *getText(char *line, SimPrf *simprf)
 {
     simprf->text = (char *)malloc(strlen(line) + 1);
     strcpy(simprf->text, line);
-    printf("simprf->text = %s\n", simprf->text);
+   // printf("simprf->text = %s\n", simprf->text);
     return simprf->text;
 }
