@@ -15,11 +15,11 @@ double *smoothprofil(double *profil, int length, char *cons)
 	double *smoothed, *ptr;
 	double m;
 	int i, j, n;
-	printf("la valeur de profil+j est :%lf\n", *profil);
+	//printf("la valeur de profil+j est :%lf\n", *profil);
 
 	//printf("le profil est %lf \n", *profil);
 	if (getargint("-smooth", &demifen) == NULL)
-		demifen = 6;//augmentation de la fenetre à 6
+		demifen = 4;//augmentation de la fenetre à 6 ca fait un plus grand score
 
 	/*****************************************************************/
 	/*** Smooth 'profile'                                         ****/
@@ -59,6 +59,6 @@ double *smoothprofil(double *profil, int length, char *cons)
 		*ptr = m;
 		//printf("ptr : %lf\n", *ptr);
 	}
-	printf("lissage : %lf\n", *smoothed);
+	//printf("lissage : %lf\n", *smoothed);
 	return smoothed;
 }

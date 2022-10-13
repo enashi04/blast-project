@@ -491,7 +491,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
             /*** Aligned Aas in Query sequence and Database sequence are ****/
             /*** identical                                               ****/
 
-            if ((*(seq + i - begin + 1) != '+') && (*(seq + i - begin + 1) != ' ') && (*(seq + i - begin + 1) != 'x'))
+            if ((*(seq + i - begin + 1) != '+') && (*(seq + i - begin + 1) != ' ') && (*(seq + i - begin + 1) != 'x')) //ici ajout le minuscule et le x
             {
                 *ptr = facteur * identique;
                 *simptr = ID * fctr;

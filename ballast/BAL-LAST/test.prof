@@ -1,770 +1,0 @@
-BALLAST profile test.prof
-
-The following sequences from BLAST results were used to build this profile :
---------------------------------------------------------------------------------
-SP:P96368 TRCS_MYCTU Sensor histidine kinase TrcS OS=Mycobacterium tuberculosis            0.0     
-TR:A0A7U8Y2G3 A0A7U8Y2G3_MYCTX Histidine kinase OS=Mycobacterium tuberculosis              0.0     
-TR:A0A1X2AYW4 A0A1X2AYW4_9MYCO Histidine kinase OS=Mycobacterium riyadhense                0.0     
-TR:B2HDH9 B2HDH9_MYCMM Histidine kinase OS=Mycobacterium marinum (strain                   0.0     
-TR:A0A1E3S2Q7 A0A1E3S2Q7_9MYCO Histidine kinase OS=Mycobacterium intermedium               0.0     
-TR:A0A1A3NDW3 A0A1A3NDW3_MYCAS Histidine kinase OS=Mycobacterium asiaticum                 0.0     
-TR:A0A7I7MM13 A0A7I7MM13_9MYCO Histidine kinase OS=Mycobacterium shinjukuense              0.0     
-TR:A0A0Q2QV36 A0A0Q2QV36_MYCGO Histidine kinase OS=Mycobacterium gordonae OX=1778          0.0     
-TR:A0A7I7NNG0 A0A7I7NNG0_9MYCO Histidine kinase OS=Mycobacterium lacus OX=169765           0.0     
-TR:A0A498QWQ0 A0A498QWQ0_9MYCO Histidine kinase OS=Mycobacterium pseudokansasii            0.0     
-TR:A0A1A0M6I3 A0A1A0M6I3_9MYCO Histidine kinase OS=Mycobacterium sp. 1164966.3             0.0     
-TR:A0A1X1T8X6 A0A1X1T8X6_9MYCO Histidine kinase OS=Mycobacterium conspicuum                0.0     
-TR:A0A1X2C3N9 A0A1X2C3N9_9MYCO Histidine kinase OS=Mycobacterium saskatchewanense          0.0     
-TR:A0A0I9UZG7 A0A0I9UZG7_9MYCO Histidine kinase OS=Mycobacterium haemophilum               0.0     
-TR:A0A1A2ZGN0 A0A1A2ZGN0_9MYCO Histidine kinase OS=Mycobacterium sp. E787 OX=1834150       0.0     
-TR:A0A1X0DQH2 A0A1X0DQH2_9MYCO Histidine kinase OS=Mycobacterium heidelbergense            0.0     
-TR:A0A1X1R2V8 A0A1X1R2V8_9MYCO Histidine kinase OS=Mycobacterium bohemicum                 0.0     
-TR:I2A9R5 I2A9R5_9MYCO Histidine kinase OS=Mycobacterium sp. MOTT36Y OX=1168287            0.0     
-TR:Q741T6 Q741T6_MYCPA Histidine kinase OS=Mycolicibacterium paratuberculosis              0.0     
-TR:A0A2U3PBQ0 A0A2U3PBQ0_9MYCO Histidine kinase OS=Mycobacterium numidiamassiliense        0.0     
-TR:A0A1X1RPX3 A0A1X1RPX3_MYCCE Histidine kinase OS=Mycobacterium celatum OX=28045          0.0     
-TR:A0A7I7Z4T4 A0A7I7Z4T4_9MYCO Histidine kinase OS=Mycobacterium parmense OX=185642        0.0     
-TR:A0A557Y063 A0A557Y063_9MYCO Histidine kinase OS=Mycobacterium helveticum                0.0     
-TR:A0A1A2Z3J8 A0A1A2Z3J8_9MYCO Histidine kinase OS=Mycobacterium kyorinense                0.0     
-TR:A0A7I9XYL6 A0A7I9XYL6_9MYCO Histidine kinase OS=Mycobacterium botniense                 0.0     
-TR:A0A2R5H7Y4 A0A2R5H7Y4_9MYCO Histidine kinase OS=Mycobacterium montefiorense             0.0     
-TR:I0RJM6 I0RJM6_MYCXE Histidine kinase OS=Mycobacterium xenopi RIVM700367                 0.0     
-TR:A0A1S1NET7 A0A1S1NET7_9MYCO Histidine kinase OS=Mycobacterium talmoniae                 0.0     
-TR:A0A1A3PMH4 A0A1A3PMH4_9MYCO Histidine kinase OS=Mycobacterium sp. 1245111.1             0.0     
-TR:X7Y3U8 X7Y3U8_MYCKA Histidine kinase OS=Mycobacterium kansasii 824 OX=1299328           0.0     
-TR:F5YSD0 F5YSD0_MYCSD Histidine kinase OS=Mycolicibacter sinensis (strain                 0.0     
-TR:A0A132PBR2 A0A132PBR2_9MYCO Histidine kinase OS=Mycolicibacterium wolinskyi             0.0     
-TR:A0A100VZ08 A0A100VZ08_9MYCO Histidine kinase OS=Mycolicibacterium brisbanense           0.0     
-TR:A0A0N9XJD2 A0A0N9XJD2_MYCFO Histidine kinase OS=Mycolicibacterium fortuitum             0.0     
-TR:W9AVT2 W9AVT2_9MYCO Histidine kinase OS=Mycolicibacterium cosmeticum                    0.0     
-TR:X8EZK8 X8EZK8_MYCUL Histidine kinase OS=Mycobacterium ulcerans str.                     0.0     
-TR:A0A0D1LGU9 A0A0D1LGU9_9MYCO Histidine kinase OS=Mycolicibacterium llatzerense           0.0     
-TR:A0A1E8Q0J8 A0A1E8Q0J8_9MYCO Histidine kinase OS=Mycobacterium grossiae OX=1552759       0.0     
-TR:A0A1E8Q055 A0A1E8Q055_9MYCO Histidine kinase OS=Mycobacterium grossiae OX=1552759       0.0     
-TR:K5BDU8 K5BDU8_MYCHD Histidine kinase OS=Mycolicibacterium hassiacum                     0.0     
-TR:A0A7I7SZ40 A0A7I7SZ40_9MYCO Histidine kinase OS=Mycolicibacterium sarraceniae           0.0     
-TR:A0A1A1Y8U0 A0A1A1Y8U0_9MYCO Histidine kinase OS=Mycobacterium sp. ACS1612               0.0     
-TR:A0A0G3IM14 A0A0G3IM14_9MYCO Histidine kinase OS=Mycobacterium sp. EPa45                 0.0     
-TR:A0A5N5UYP2 A0A5N5UYP2_MYCPH Histidine kinase OS=Mycolicibacterium phlei                 0.0     
-TR:A0A0T1WI50 A0A0T1WI50_9MYCO Histidine kinase OS=Mycobacterium sp. Root135               0.0     
-TR:A0A5S9RAR7 A0A5S9RAR7_MYCVN Histidine kinase OS=Mycolicibacterium vanbaalenii           0.0     
-TR:A0A1A3CBA0 A0A1A3CBA0_9MYCO Histidine kinase OS=Mycobacterium sp. E740 OX=1834149       0.0     
-TR:A1T7F9 A1T7F9_MYCVP Histidine kinase OS=Mycolicibacterium vanbaalenii                   0.0     
-TR:A0A1A0P1W6 A0A1A0P1W6_9MYCO Histidine kinase OS=Mycobacteriaceae bacterium              0.0     
-TR:A0A1A0TTQ0 A0A1A0TTQ0_9MYCO Histidine kinase OS=Mycobacterium sp. 852013-51886_SCH54283  0.0     
-TR:A0A7I7X9B2 A0A7I7X9B2_9MYCO Histidine kinase OS=Mycolicibacterium madagascariense       0.0     
-TR:A0A378TH14 A0A378TH14_9MYCO Histidine kinase OS=Mycolicibacterium tokaiense             0.0     
-TR:A0A132T376 A0A132T376_9MYCO Histidine kinase OS=Mycobacterium sp. NAZ190054             0.0     
-TR:A0QWE6 A0QWE6_MYCS2 Histidine kinase OS=Mycolicibacterium smegmatis                     0.0     
-TR:A0A2A7N836 A0A2A7N836_MYCAG Histidine kinase OS=Mycolicibacterium agri OX=36811         0.0     
-TR:A0A7I7S7C9 A0A7I7S7C9_9MYCO Histidine kinase OS=Mycolicibacterium arabiense             0.0     
-TR:A0A1E8PZL6 A0A1E8PZL6_9MYCO Histidine kinase OS=Mycobacterium grossiae OX=1552759       0.0     
-TR:V5XGT8 V5XGT8_MYCNE Histidine kinase OS=Mycolicibacterium neoaurum VKM                  0.0     
-TR:X8C394 X8C394_MYCXE His Kinase A domain protein OS=Mycobacterium xenopi                 0.0     
-TR:A0A852SMR4 A0A852SMR4_9MICO Histidine kinase OS=Herbiconiux flava OX=881268             0.0     
-TR:A0A0D8I2Y7 A0A0D8I2Y7_RHOSX Histidine kinase OS=Rhodococcus sp. (strain                 0.0     
-TR:X8B7C7 X8B7C7_MYCAV Histidine kinase OS=Mycobacterium avium subsp. avium                0.0     
-TR:A0A4Q2MCS8 A0A4Q2MCS8_9MICO Histidine kinase OS=Agromyces atrinae OX=592376             0.0     
-TR:A0A1H3KVP5 A0A1H3KVP5_9MICO Histidine kinase OS=Herbiconiux ginsengi OX=381665          0.0     
-TR:A0A0Q5EBT2 A0A0Q5EBT2_9MICO Histidine kinase OS=Plantibacter sp. Leaf314                0.0     
-TR:A0A0S9DVY6 A0A0S9DVY6_9MICO Histidine kinase OS=Agreia sp. Leaf244 OX=1736305           0.0     
-TR:A0A1B1BP44 A0A1B1BP44_9MICO Histidine kinase OS=Cryobacterium arcticum OX=670052        0.0     
-TR:A0A2V1HNK9 A0A2V1HNK9_9MICO Histidine kinase OS=Amnibacterium flavum OX=2173173         0.0     
-TR:A0A6M5IP49 A0A6M5IP49_9MICO Histidine kinase OS=Herbiconiux sp. SALV-R1                 0.0     
-TR:A0A1X9LVA6 A0A1X9LVA6_9MICO Histidine kinase OS=Cnuibacter physcomitrellae              0.0     
-TR:A0A7G1I8E1 A0A7G1I8E1_MYCKA HAMP domain-containing protein OS=Mycobacterium             0.0     
-TR:A0A1H0Z9J0 A0A1H0Z9J0_9ACTN Histidine kinase OS=Quadrisphaera sp. DSM 44207             0.0     
-TR:A0A1A8Z6Y0 A0A1A8Z6Y0_9ACTN Histidine kinase OS=Micromonospora auratinigra              0.0     
-TR:A0A4Q7US82 A0A4Q7US82_9PSEU Histidine kinase OS=Pseudonocardia sediminis                0.0     
-TR:A0A1Q5AQC6 A0A1Q5AQC6_9ACTN Histidine kinase OS=Micromonospora sp. CB01531              0.0     
-TR:A0A1C5JWD3 A0A1C5JWD3_9ACTN Histidine kinase OS=Micromonospora coxensis                 0.0     
-TR:A0A6H9WSX0 A0A6H9WSX0_9MICO Histidine kinase OS=Pseudoclavibacter endophyticus          0.0     
-TR:A0A4R1HVZ1 A0A4R1HVZ1_9PSEU Histidine kinase OS=Pseudonocardia endophytica              0.0     
-TR:A0A5C8UVQ3 A0A5C8UVQ3_9MICO Histidine kinase OS=Lacisediminihabitans profunda           0.0     
-TR:A0A248YMS0 A0A248YMS0_9ACTN Histidine kinase OS=Plantactinospora sp. KBS50              0.0     
-TR:A0A7L4YP57 A0A7L4YP57_9ACTN Histidine kinase OS=Epidermidibacterium keratini            0.0     
-TR:A0A558B0W2 A0A558B0W2_9PSEU Histidine kinase OS=Amycolatopsis rhizosphaerae             0.0     
-TR:A0A0P0S9V9 A0A0P0S9V9_9PSEU Histidine kinase OS=Pseudonocardia sp. EC080619-01          0.0     
-TR:A0A1N7DZ22 A0A1N7DZ22_9ACTN Histidine kinase OS=Micromonospora avicenniae               0.0     
-TR:A0A2P8ALD1 A0A2P8ALD1_9ACTN Histidine kinase OS=Micromonospora sp. MH33                 0.0     
-TR:A0A5A7S838 A0A5A7S838_9NOCA Histidine kinase OS=Rhodococcus cavernicola                 0.0     
-TR:A0A3M8KVC8 A0A3M8KVC8_9MICO Histidine kinase OS=Cryobacterium tepidiphilum              0.0     
-TR:A0A0N6W704 A0A0N6W704_9MICO Histidine kinase OS=Curtobacterium sp. MR_MD2014            0.0     
-TR:A0A1C5JW90 A0A1C5JW90_9ACTN Histidine kinase OS=Micromonospora inositola                0.0     
-TR:W5TAN1 W5TAN1_9NOCA Histidine kinase OS=Nocardia nova SH22a OX=1415166                  0.0     
-TR:A0A387C0E9 A0A387C0E9_9MICO Histidine kinase OS=Gryllotalpicola protaetiae              0.0     
-TR:A0A2M9CGJ6 A0A2M9CGJ6_9MICO Histidine kinase OS=Diaminobutyricimonas aerilata           0.0     
-TR:A0A2W6PKZ0 A0A2W6PKZ0_9ACTN Histidine kinase OS=Streptomyces sp. SW4 OX=1453555         0.0     
-TR:A0A6V8JTM6 A0A6V8JTM6_9ACTN Histidine kinase OS=Phytohabitans houttuyneae               0.0     
-TR:A0A4S4FM74 A0A4S4FM74_9MICO Histidine kinase OS=Naasia lichenicola OX=2565933           0.0     
-TR:A0A0S9DZN6 A0A0S9DZN6_9MICO Histidine kinase OS=Agreia sp. Leaf244 OX=1736305           0.0     
-TR:A0A1A8ZCL1 A0A1A8ZCL1_9ACTN Histidine kinase OS=Micromonospora narathiwatensis          0.0     
-TR:A0A0Q5B8Y1 A0A0Q5B8Y1_9MICO Histidine kinase OS=Rathayibacter sp. Leaf296               0.0     
-TR:A0A852SK01 A0A852SK01_9MICO Histidine kinase OS=Herbiconiux flava OX=881268             0.0     
-TR:A0A2V1HV87 A0A2V1HV87_9MICO Histidine kinase OS=Amnibacterium flavum OX=2173173         0.0     
-TR:A0A076MM63 A0A076MM63_AMYME Histidine kinase OS=Amycolatopsis methanolica               0.0     
-TR:G7H5Y0 G7H5Y0_9ACTN Histidine kinase OS=Gordonia araii NBRC 100433 OX=1073574           0.0     
-TR:A0A7W7SWC4 A0A7W7SWC4_9ACTN Histidine kinase OS=Micromonospora polyrhachis              0.0     
-TR:A0A4Q2L9A8 A0A4Q2L9A8_9MICO Histidine kinase OS=Agromyces albus OX=205332               0.0     
-TR:A0A2S5W2E9 A0A2S5W2E9_9MICO Histidine kinase OS=Subtercola sp. Z020 OX=2080582          0.0     
-TR:A0A1X7P487 A0A1X7P487_9MICO Histidine kinase OS=Rathayibacter oskolensis                0.0     
-TR:A0A2M9BCS6 A0A2M9BCS6_9MICO Histidine kinase OS=Compostimonas suwonensis                0.0     
-TR:A0A317DCE2 A0A317DCE2_9ACTN Histidine kinase OS=Micromonospora sp. 4G51                 0.0     
-TR:A0A1C6UT42 A0A1C6UT42_9ACTN Histidine kinase OS=Micromonospora yangpuensis              0.0     
-TR:A0A2R2WAP7 A0A2R2WAP7_9MICO Histidine kinase OS=Frondihabitans sp. 762G35               0.0     
-TR:A0A1H4G4J9 A0A1H4G4J9_9MICO Histidine kinase OS=Leifsonia sp. 21MFCrub1.1               0.0     
-TR:A0A7Y9MAS1 A0A7Y9MAS1_9MICO Histidine kinase OS=Leifsonia sp. AK011 OX=2723075          0.0     
-TR:A0A5C8Z2Y9 A0A5C8Z2Y9_9ACTN Histidine kinase OS=Quadrisphaera sp. DD2A OX=2593304       0.0     
-TR:A0A543GB10 A0A543GB10_9PSEU Histidine kinase OS=Pseudonocardia cypriaca                 0.0     
-TR:A0A2U3BWE4 A0A2U3BWE4_9ACTN Histidine kinase OS=Streptomyces sp. ICBB 8177              0.0     
-TR:A0A1I2YPW4 A0A1I2YPW4_9MICO Histidine kinase OS=Cryobacterium levicorallinum            0.0     
-TR:A0A8H9J1U8 A0A8H9J1U8_9PSEU Histidine kinase OS=Amycolatopsis bartoniae                 0.0     
-TR:A0A7K0D3T9 A0A7K0D3T9_9NOCA Histidine kinase OS=Nocardia macrotermitis OX=2585198       0.0     
-TR:A0A098YC59 A0A098YC59_9ACTN Histidine kinase OS=Modestobacter caceresii                 0.0     
-TR:A0A1I4Y149 A0A1I4Y149_9PSEU Histidine kinase OS=Pseudonocardia ammonioxydans            0.0     
-TR:A0A1I4JM43 A0A1I4JM43_9MICO Histidine kinase OS=Leifsonia sp. CL147 OX=1798215          0.0     
-TR:A0A136PU40 A0A136PU40_9ACTN Histidine kinase OS=Micromonospora rosaria OX=47874         0.0     
-TR:I4F4B8 I4F4B8_9ACTN Histidine kinase OS=Modestobacter marinus OX=477641                 0.0     
-TR:A0A4R4KPP1 A0A4R4KPP1_9ACTN Histidine kinase OS=Micromonospora sp. KC723                0.0     
-TR:A0A6V8LKN2 A0A6V8LKN2_9ACTN Histidine kinase OS=Phytohabitans rumicis OX=1076125        0.0     
-TR:A0A2T0ZYQ9 A0A2T0ZYQ9_9ACTN Histidine kinase OS=Antricoccus suffuscus OX=1629062        0.0     
-TR:A0A6F8Z0G5 A0A6F8Z0G5_9ACTN Histidine kinase OS=Phytohabitans suffuscus                 0.0     
-TR:A0A0Q5DWW6 A0A0Q5DWW6_9MICO Histidine kinase OS=Plantibacter sp. Leaf314                0.0     
-TR:A0A7K1FS34 A0A7K1FS34_9ACTN Histidine kinase OS=Nakamurella sp. YIM 132087              0.0     
-TR:A0A0H5CJ47 A0A0H5CJ47_9PSEU Histidine kinase OS=Alloactinosynnema sp. L-07              0.0     
-TR:A0A2S5X4Y6 A0A2S5X4Y6_9MICO Two-component sensor histidine kinase OS=Pseudoclavibacter   0.0     
-TR:A0A4Y8KPE5 A0A4Y8KPE5_9MICO Histidine kinase OS=Cryobacterium psychrophilum             0.0     
-TR:A0A7G6Z4U4 A0A7G6Z4U4_9MICO Histidine kinase OS=Glaciihabitans sp. INWT7                0.0     
-TR:A0A0N1CYN9 A0A0N1CYN9_9MICO Histidine kinase OS=Frigoribacterium sp. RIT-PI-h           0.0     
-TR:C8X7W3 C8X7W3_NAKMY Histidine kinase OS=Nakamurella multipartita (strain                0.0     
-TR:A0A7K2FIA4 A0A7K2FIA4_9ACTN Histidine kinase OS=Streptomyces sp. SID4985                0.0     
-TR:K4QY89 K4QY89_STRDJ Histidine kinase OS=Streptomyces davaonensis (strain                0.0     
-TR:A0A0M4Q8L0 A0A0M4Q8L0_9PSEU Histidine kinase OS=Pseudonocardia sp. HH130629-09          0.0     
-TR:A0A7X6L6Q3 A0A7X6L6Q3_9NOCA Histidine kinase OS=Nocardia gamkensis OX=352869            0.0     
-TR:A0A0Q8V3R7 A0A0Q8V3R7_9MICO Histidine kinase OS=Leifsonia sp. Root227 OX=1736496        0.0     
-TR:A0A0Q5SA80 A0A0Q5SA80_9MICO Histidine kinase OS=Curtobacterium sp. Leaf183              0.0     
-TR:A0A6P0H631 A0A6P0H631_9ACTN Histidine kinase OS=Modestobacter muralis OX=1608614        0.0     
-TR:A0A2M9JFM4 A0A2M9JFM4_9ACTN Histidine kinase OS=Streptomyces sp. CB01635                0.0     
-TR:A0A1C6SFR0 A0A1C6SFR0_9ACTN Histidine kinase OS=Micromonospora rhizosphaerae            0.0     
-TR:F4F8N3 F4F8N3_MICM1 Histidine kinase OS=Micromonospora maris (strain                    0.0     
-TR:A0A316A984 A0A316A984_9ACTN Histidine kinase OS=Quadrisphaera granulorum                0.0     
-TR:A0A4T2C5U9 A0A4T2C5U9_9MICO Histidine kinase OS=Subtercola vilae OX=2056433             0.0     
-TR:A0A848KSL6 A0A848KSL6_9NOCA Histidine kinase OS=Antrihabitans stalactiti                0.0     
-TR:A0A1B1ZQT3 A0A1B1ZQT3_9PSEU Histidine kinase OS=Pseudonocardia sp. HH130630-07          0.0     
-TR:A0A1E5MJ05 A0A1E5MJ05_9MICO Histidine kinase OS=Curtobacterium sp. ER1/6                0.0     
-TR:A0A0M8XJV1 A0A0M8XJV1_9ACTN Histidine kinase OS=Micromonospora sp. NRRL                 0.0     
-TR:A0A2T0T517 A0A2T0T517_9PSEU Histidine kinase OS=Umezawaea tangerina OX=84725            0.0     
-TR:A0A448HWW6 A0A448HWW6_MYCCI Histidine kinase OS=Mycolicibacterium chitae                0.0     
-TR:A0A1I3YKA5 A0A1I3YKA5_9PSEU Histidine kinase OS=Amycolatopsis sacchari OX=115433        0.0     
-TR:A0A7W7U0C7 A0A7W7U0C7_9ACTN Histidine kinase OS=Streptomyces nymphaeiformis             0.0     
-TR:A0A6M5IZI3 A0A6M5IZI3_9MICO Histidine kinase OS=Herbiconiux sp. SALV-R1                 0.0     
-TR:A0A2W1Z2P3 A0A2W1Z2P3_9MICO Histidine kinase OS=Curtobacterium sp. MCBD17_040           0.0     
-TR:A0A542YL63 A0A542YL63_9MICO Histidine kinase OS=Homoserinimonas aerilata                0.0     
-TR:A0A1R1SK76 A0A1R1SK76_9ACTN Histidine kinase OS=Streptomyces sparsogenes                0.0     
-TR:A0A0Q5VQM0 A0A0Q5VQM0_9ACTN Histidine kinase OS=Geodermatophilus sp. Leaf369            0.0     
-TR:A0A3E2YT82 A0A3E2YT82_9ACTN Histidine kinase OS=Micromonospora sp. MW-13                0.0     
-TR:A0A2I0SCG8 A0A2I0SCG8_9ACTN Histidine kinase OS=Streptomyces populi OX=2058924          0.0     
-TR:A0A0Q5N6R0 A0A0Q5N6R0_9MICO Histidine kinase OS=Frigoribacterium sp. Leaf172            0.0     
-TR:A0A554UWS4 A0A554UWS4_9ACTN Histidine kinase OS=Skermania sp. ID1734 OX=2597516         0.0     
-TR:A0A0X3VA93 A0A0X3VA93_9ACTN Histidine kinase OS=Streptomyces regalis OX=68262           0.0     
-TR:A0A1G9G676 A0A1G9G676_9MICO Histidine kinase OS=Cryobacterium psychrotolerans           0.0     
-TR:A0A4R2QL26 A0A4R2QL26_9PSEU Histidine kinase OS=Tamaricihabitans halophyticus           0.0     
-TR:A0A2W0D2V6 A0A2W0D2V6_9MICO Histidine kinase OS=Curtobacterium sp. MCBD17_030           0.0     
-TR:A0A323V9K3 A0A323V9K3_9ACTN Histidine kinase (Fragment) OS=Modestobacter                0.0     
-TR:A0A086DWG7 A0A086DWG7_9MICO Histidine kinase OS=Cryobacterium sp. MLB-32                0.0     
-TR:A0A1H3HPD1 A0A1H3HPD1_9PSEU Histidine kinase OS=Amycolatopsis xylanica OX=589385        0.0     
-TR:A0A166IKM9 A0A166IKM9_9MICO Histidine kinase OS=Rathayibacter tanaceti OX=1671680       0.0     
-TR:A0A1H0UW84 A0A1H0UW84_9PSEU Histidine kinase OS=Actinokineospora alba OX=504798         0.0     
-TR:A4X6T2 A4X6T2_SALTO Histidine kinase OS=Salinispora tropica (strain                     0.0     
-TR:A0A7W7PLE7 A0A7W7PLE7_9ACTN Two-component system OmpR family sensor kinase              0.0     
-TR:A0A2U3P7R8 A0A2U3P7R8_9MYCO Histidine kinase OS=Mycobacterium numidiamassiliense        0.0     
-TR:A0A6I4NBT9 A0A6I4NBT9_9ACTN Histidine kinase OS=Streptomyces sp. BA2 OX=436595          0.0     
-TR:A0A4Q7XFL4 A0A4Q7XFL4_9ACTN Histidine kinase OS=Streptomyces sp. BK239 OX=2512155       0.0     
-TR:A0A6I1G172 A0A6I1G172_9MICO Histidine kinase OS=Tetrasphaera sp. F2B08 OX=2653936       0.0     
-TR:D7C6X4 D7C6X4_STRBB Histidine kinase OS=Streptomyces bingchenggensis                    0.0     
-TR:A0A1H3TMA8 A0A1H3TMA8_9MICO Histidine kinase OS=Herbiconiux ginsengi OX=381665          0.0     
-TR:A0A1I3U1C3 A0A1I3U1C3_9PSEU Histidine kinase OS=Amycolatopsis sacchari OX=115433        0.0     
-TR:A0A1C5GAB1 A0A1C5GAB1_MICEH Histidine kinase OS=Micromonospora echinofusca              0.0     
-TR:A0A495JAS6 A0A495JAS6_9ACTN Histidine kinase OS=Micromonospora pisi OX=589240           0.0     
-TR:A0A3A5MAW5 A0A3A5MAW5_9MICO Histidine kinase OS=Cryobacterium melibiosiphilum           0.0     
-TR:A0A0Q8CFT3 A0A0Q8CFT3_9MICO Histidine kinase OS=Leifsonia sp. Root60 OX=1736567         0.0     
-TR:A0A1Q9LPZ3 A0A1Q9LPZ3_9PSEU Histidine kinase OS=Actinokineospora bangkokensis           0.0     
-TR:M3E2H5 M3E2H5_9ACTN Histidine kinase OS=Streptomyces gancidicus BKS                     0.0     
-TR:A0A6L9Y3F0 A0A6L9Y3F0_9MICO Histidine kinase OS=Diaminobutyricibacter tongyongensis     0.0     
-TR:A0A2W2DLU3 A0A2W2DLU3_9ACTN Histidine kinase OS=Micromonospora deserti OX=2070366       0.0     
-TR:A0A2S6H0M1 A0A2S6H0M1_9PSEU Histidine kinase OS=Actinokineospora auranticolor           0.0     
-TR:D9TA60 D9TA60_MICAI Histidine kinase OS=Micromonospora aurantiaca (strain               0.0     
-TR:A0A4R6S9G7 A0A4R6S9G7_9PSEU Histidine kinase OS=Labedaea rhizosphaerae OX=598644        0.0     
-TR:A0A542QSY6 A0A542QSY6_9ACTN Histidine kinase OS=Streptomyces sp. SLBN-118               0.0     
-TR:A0A5B9G0R3 A0A5B9G0R3_9MICO Histidine kinase OS=Salinibacterium sp. dk2585              0.0     
-TR:A0A1D7VVJ9 A0A1D7VVJ9_9ACTN Histidine kinase OS=Streptomyces lydicus OX=47763           0.0     
-TR:A0A7Y7B5H8 A0A7Y7B5H8_STRMO Histidine kinase OS=Streptomyces morookaense                0.0     
-TR:A0A1C4SA23 A0A1C4SA23_9ACTN Histidine kinase OS=Streptomyces sp. SolWspMP-5a-2          0.0     
-TR:A0A0G3IQC2 A0A0G3IQC2_9MYCO Histidine kinase OS=Mycobacterium sp. EPa45                 0.0     
-TR:A0A4R9B508 A0A4R9B508_9MICO Histidine kinase OS=Cryobacterium sp. Hh4 OX=1259157        0.0     
-TR:A0A1C5HSC6 A0A1C5HSC6_9ACTN Histidine kinase OS=Micromonospora echinaurantiaca          0.0     
-TR:A0A2S4XME2 A0A2S4XME2_9ACTN Histidine kinase OS=Streptomyces sp. Ru73 OX=2080748        0.0     
-TR:A0A0C5G410 A0A0C5G410_9ACTN Histidine kinase OS=Streptomyces cyaneogriseus              0.0     
-TR:A0A1T5IRM0 A0A1T5IRM0_9MICO Histidine kinase OS=Okibacterium fritillariae               0.0     
-TR:A0A1H4VGD8 A0A1H4VGD8_9ACTN Histidine kinase OS=Streptomyces sp. PAN_FS17               0.0     
-TR:A0A1C5A2H8 A0A1C5A2H8_MICEC Histidine kinase OS=Micromonospora echinospora              0.0     
-TR:A0A7W7T5W7 A0A7W7T5W7_9PSEU Histidine kinase OS=Saccharothrix violaceirubra             0.0     
-TR:A0A7Z0J773 A0A7Z0J773_9MICO Histidine kinase OS=Leifsonia psychrotolerans               0.0     
-TR:A0A2A2Z713 A0A2A2Z713_9ACTN Histidine kinase OS=Streptomyces sp. SA15 OX=934019         0.0     
-TR:U2TAZ9 U2TAZ9_LEIAQ Histidine kinase OS=Leifsonia aquatica ATCC 14665                   0.0     
-TR:A0A1C5IBZ5 A0A1C5IBZ5_9ACTN Histidine kinase OS=Micromonospora siamensis                0.0     
-TR:A0A6N7HYI8 A0A6N7HYI8_9PSEU Histidine kinase OS=Pseudonocardiaceae bacterium            0.0     
-TR:A0A3A9ZMJ9 A0A3A9ZMJ9_9ACTN Histidine kinase OS=Micromonospora endolithica              0.0     
-TR:A0A327WH36 A0A327WH36_9ACTN Histidine kinase OS=Streptomyces sp. PsTaAH-137             0.0     
-TR:A0A1G6VXS8 A0A1G6VXS8_9ACTN Histidine kinase OS=Auraticoccus monumenti OX=675864        0.0     
-TR:A0A0Q9ARK0 A0A0Q9ARK0_9ACTN Histidine kinase OS=Streptomyces sp. Root264                0.0     
-TR:A0A0C5BB75 A0A0C5BB75_9MICO Histidine kinase OS=Rathayibacter toxicus OX=145458         0.0     
-TR:A0A2S4Z0X2 A0A2S4Z0X2_9ACTN Histidine kinase OS=Streptomyces sp. Ru72 OX=2080747        0.0     
-TR:A0A505DKW9 A0A505DKW9_9ACTN Histidine kinase OS=Streptomyces sporangiiformans           0.0     
-TR:A0A1V0ADB9 A0A1V0ADB9_9ACTN Histidine kinase OS=Nonomuraea sp. ATCC 55076               0.0     
-TR:A0A2U1TA18 A0A2U1TA18_9MICO Histidine kinase OS=Mycetocola zhujimingii OX=2079792       0.0     
-TR:A0A1Q9S788 A0A1Q9S788_9PSEU Histidine kinase OS=Pseudonocardia sp. CNS-004              0.0     
-TR:A0A5N0UUX9 A0A5N0UUX9_9PSEU Histidine kinase OS=Amycolatopsis acidicola                 0.0     
-TR:A0A372M8V5 A0A372M8V5_9ACTN Histidine kinase OS=Streptomyces triticagri                 0.0     
-TR:A0A2U2ZWB0 A0A2U2ZWB0_9ACTN Histidine kinase OS=Streptomyces sp. Act143                 0.0     
-TR:A0A2S4YFV0 A0A2S4YFV0_9ACTN Histidine kinase OS=Streptomyces sp. Ru71 OX=2080746        0.0     
-TR:A0A444PZN6 A0A444PZN6_9MICO Histidine kinase OS=Labedella phragmitis OX=2498849         0.0     
-TR:A0A1H9V2V9 A0A1H9V2V9_9PSEU Histidine kinase OS=Actinokineospora terrae                 0.0     
-TR:A0A1X1QVU5 A0A1X1QVU5_9MYCO Histidine kinase OS=Mycobacterium bohemicum                 0.0     
-TR:A0A7K3DGH3 A0A7K3DGH3_9ACTN Histidine kinase OS=Streptomyces sp. SID5785                0.0     
-TR:A0A558A3K0 A0A558A3K0_9PSEU Histidine kinase OS=Amycolatopsis acidiphila                0.0     
-TR:A0A7Y0BCU4 A0A7Y0BCU4_9ACTN Histidine kinase OS=Streptomyces sp. R302 OX=2728844        0.0     
-TR:A0A5D0PDG1 A0A5D0PDG1_9ACTN Histidine kinase OS=Nonomuraea sp. PA05 OX=2604466          0.0     
-TR:A0A2G1XIB6 A0A2G1XIB6_STRCJ Histidine kinase OS=Streptomyces cinnamoneus                0.0     
-TR:A0A2K8PFM2 A0A2K8PFM2_STRLA Histidine kinase OS=Streptomyces lavendulae                 0.0     
-TR:A0A7G1P1V3 A0A7G1P1V3_9ACTN Histidine kinase OS=Streptomyces glomeroaurantiacus         0.0     
-TR:A0A1C4RCP1 A0A1C4RCP1_9ACTN Histidine kinase OS=Streptomyces sp. DvalAA-43              0.0     
-TR:A0A3G2JDY3 A0A3G2JDY3_9ACTN Histidine kinase OS=Streptomyces dangxiongensis             0.0     
-TR:F2RED6 F2RED6_STRVP Histidine kinase OS=Streptomyces venezuelae (strain                 0.0     
-TR:A0A4R1CUE9 A0A4R1CUE9_9ACTN Histidine kinase OS=Streptomyces sp. KM273126               0.0     
-TR:A0A6G4V5W6 A0A6G4V5W6_9ACTN Histidine kinase OS=Streptomyces scabichelini               0.0     
-TR:A0A1G6IZZ8 A0A1G6IZZ8_9PSEU Histidine kinase OS=Actinokineospora iranica                0.0     
-TR:A0A285VLW2 A0A285VLW2_9MICO Histidine kinase OS=Ornithinimicrobium cerasi               0.0     
-TR:A0A7Y5P4Z5 A0A7Y5P4Z5_9ACTN Histidine kinase OS=Streptomycetaceae bacterium             0.0     
-TR:A0A178XB46 A0A178XB46_9PSEU Histidine kinase OS=Amycolatopsis sp. M39 OX=1825094        0.0     
-TR:A0A6P0EXR3 A0A6P0EXR3_9ACTN Histidine kinase OS=Modestobacter muralis OX=1608614        0.0     
-TR:A0A5N8VN55 A0A5N8VN55_9ACTN Histidine kinase OS=Streptomyces adustus OX=1609272         0.0     
-TR:A0A514JQZ3 A0A514JQZ3_9ACTN Histidine kinase OS=Streptomyces calvus OX=67282            0.0     
-TR:A0A0Q6PWC2 A0A0Q6PWC2_9MICO Histidine kinase OS=Leifsonia sp. Root112D2                 0.0     
-TR:A0A5C4M1D5 A0A5C4M1D5_9PSEU Histidine kinase OS=Amycolatopsis alkalitolerans            0.0     
-
-The following sequences from BLAST results were NOT used to build this profile :
---------------------------------------------------------------------------------
-...
-******************************************************************************
-
-maximum : 249.000000
-P :     1 :     10.000 :++|
-C :     2 :      1.000 : |
-W :     3 :     13.000 :++|
-R :     4 :     10.000 :++ |
-P :     5 :     28.000 :+++++ |
-R :     6 :     19.000 :+++   |
-S :     7 :     36.000 :+++++++  |
-L :     8 :     54.500 :++++++++++|
-R :     9 :     57.000 :+++++++++++|
-R :    10 :     24.000 :++++         |
-L :    11 :     50.500 :++++++++++   |
-L :    12 :     66.500 :+++++++++++++|
-L :    13 :     52.500 :++++++++++    |
-L :    14 :     51.500 :##########    |
-G :    15 :     55.000 :###########      |
-V :    16 :     75.000 :###############           |
-L :    17 :     75.500 :###############              |
-A :    18 :     84.000 :################              |
-V :    19 :    133.000 :##########################                |
-V :    20 :    145.000 :#############################              |
-T :    21 :     38.500 :#######                                    |
-V :    22 :    156.500 :###############################            |
-V :    23 :    182.000 :####################################       |
-L :    24 :     67.500 :#############                               |
-V :    25 :    113.500 :######################                       |
-A :    26 :     52.500 :##########                                   |
-V :    27 :    152.500 :##############################               |
-G :    28 :    224.000 :############################################ |
-V :    29 :     89.000 :#################                             |
-V :    30 :    165.500 :#################################             |
-S :    31 :    175.500 :###################################           |
-V :    32 :    112.500 :######################                        |
-L :    33 :    145.000 :#############################                 |
-S :    34 :    135.500 :###########################                   |
-L :    35 :    226.000 :############################################# |
-S :    36 :     20.000 :####                                          |
-G :    37 :     46.000 :#########                                     |
-Y :    38 :    125.000 :#########################                     |
-V :    39 :    142.000 :############################                  |
-T :    40 :     64.000 :############                                  |
-A :    41 :     58.000 :###########                                   |
-M :    42 :     52.000 :##########                                    |
-N :    43 :     26.500 :#####                                         |
-D :    44 :    234.500 :###############################################|
-A :    45 :     67.500 :#############                                 |
-E :    46 :    124.500 :########################                      |
-L :    47 :    206.000 :#########################################     |
- :    48 :     18.000 :###                                           |
-E :    49 :     84.000 :################                              |
-S :    50 :    131.500 :##########################                    |
- :    51 :     90.000 :##################                            |
-H :    52 :     40.000 :########                                      |
-A :    53 :     90.000 :##################                            |
-A :    54 :     47.500 :#########                                     |
-N :    55 :     50.000 :##########                                    |
-D :    56 :     95.000 :###################                           |
-S :    57 :     91.500 :##################                           |
- :    58 :     68.500 :#############                                |
-T :    59 :     91.000 :##################                           |
-R :    60 :     57.000 :###########                              |
-T :    61 :     87.500 :#################                          |
-S :    62 :    103.500 :####################                      |
- :    63 :     80.000 :################                      |
-S :    64 :     67.000 :#############                        |
- :    65 :     83.000 :################                      |
-S :    66 :     50.500 :##########                           |
- :    67 :     75.500 :+++++++++++++++                       |
-D :    68 :     58.000 :+++++++++++                          |
- :    69 :     84.500 :++++++++++++++++                     |
-P :    70 :     39.000 :+++++++                              |
-T :    71 :     52.000 :++++++++++                            |
-R :    72 :     77.000 :+++++++++++++++                         |
-G :    73 :     78.000 :+++++++++++++++                         |
- :    74 :     64.500 :++++++++++++                              |
- :    75 :     50.000 :++++++++++                               |
- :    76 :    104.500 :++++++++++++++++++++                    |
- :    77 :     54.000 :++++++++++                               |
-S :    78 :     57.000 :+++++++++++                              |
- :    79 :     80.000 :++++++++++++++++                          |
-A :    80 :     68.000 :+++++++++++++                              |
-V :    81 :     52.000 :++++++++++                               |
-L :    82 :     82.500 :++++++++++++++++                          |
-E :    83 :     62.000 :++++++++++++                            |
-F :    84 :     76.000 :+++++++++++++++                          |
-T :    85 :     58.000 :+++++++++++                             |
-G :    86 :     96.000 :+++++++++++++++++++                    |
-Q :    87 :    110.000 :++++++++++++++++++++++                   |
-F :    88 :     53.500 :##########                              |
-P :    89 :    121.500 :########################                 |
-Q :    90 :    150.500 :##############################          |
-N :    91 :     64.500 :############                             |
-L :    92 :    123.000 :########################                 |
-G :    93 :     98.500 :###################                       |
-A :    94 :    152.000 :##############################             |
-L :    95 :    119.000 :#######################                   |
-L :    96 :    110.000 :######################                      |
-A :    97 :     51.500 :##########                                    |
-D :    98 :    127.500 :#########################                     |
-G :    99 :    184.000 :####################################          |
-V :   100 :     59.500 :###########                                   |
-V :   101 :    152.000 :##############################                |
-G :   102 :     87.500 :#################                            |
-G :   103 :     48.500 :#########                                     |
-S :   104 :    130.500 :##########################                   |
-I :   105 :    102.500 :####################                         |
-V :   106 :    115.500 :#######################                       |
-S :   107 :     92.000 :##################                            |
- :   108 :     91.500 :##################                            |
-E :   109 :    101.500 :++++++++++++++++++++                          |
- :   110 :     85.000 :+++++++++++++++++                              |
-G :   111 :    121.500 :++++++++++++++++++++++++                      |
-D :   112 :     72.000 :++++++++++++++                                |
-V :   113 :     95.500 :+++++++++++++++++++                           |
-P :   114 :     89.500 :#################                             |
-G :   115 :     92.500 :++++++++++++++++++                             |
-P :   116 :    102.000 :++++++++++++++++++++                          |
-P :   117 :     85.500 :+++++++++++++++++                              |
-D :   118 :     99.000 :###################                            |
- :   119 :     96.000 :###################                            |
- :   120 :     98.000 :###################                           |
-R :   121 :    100.500 :####################                          |
-A :   122 :    108.000 :#####################                          |
-G :   123 :    117.500 :#######################                        |
- :   124 :     88.000 :#################                              |
- :   125 :    106.500 :#####################                          |
-P :   126 :    105.500 :#####################                          |
-A :   127 :     90.000 :++++++++++++++++++                            |
- :   128 :     91.500 :++++++++++++++++++                            |
-P :   129 :     84.500 :++++++++++++++++                              |
-D :   130 :     75.500 :+++++++++++++++                               |
- :   131 :     83.500 :++++++++++++++++                               |
-V :   132 :     97.500 :+++++++++++++++++++                            |
-R :   133 :    101.500 :++++++++++++++++++++                          |
-P :   134 :    106.500 :+++++++++++++++++++++                         |
-R :   135 :     86.000 :+++++++++++++++++                           |
-V :   136 :     79.000 :+++++++++++++++                               |
- :   137 :     86.500 :#################                             |
-S :   138 :     57.500 :###########                                  |
-L :   139 :    156.500 :###############################              |
- :   140 :    129.000 :#########################                     |
-S :   141 :     59.500 :###########                                   |
-L :   142 :    159.000 :###############################              |
-G :   143 :    230.000 :##############################################|
-G :   144 :     56.500 :###########                                   |
-Y :   145 :    216.500 :###########################################    |
-Y :   146 :    131.000 :##########################                     |
-V :   147 :    164.500 :#################################             |
-V :   148 :     58.500 :###########                                |
-S :   149 :    103.500 :++++++++++++++++++++                           |
-S :   150 :     45.500 :+++++++++                                    |
-A :   151 :     53.500 :++++++++++                                    |
-A :   152 :     46.000 :+++++++++                                    |
-G :   153 :     91.000 :++++++++++++++++++                             |
-A :   154 :     57.000 :+++++++++++                                    |
-D :   155 :     65.500 :+++++++++++++                                  |
-D :   156 :     84.000 :++++++++++++++++                               |
-L :   157 :    111.000 :++++++++++++++++++++++                         |
-L :   158 :     72.500 :##############                                |
-V :   159 :    115.000 :#######################                        |
-G :   160 :    131.000 :##########################                    |
-G :   161 :    157.000 :###############################                |
-G :   162 :    101.000 :####################                           |
-L :   163 :    155.500 :###############################                |
-L :   164 :    101.500 :####################                          |
-L :   165 :     59.000 :###########                                   |
-A :   166 :     76.000 :###############                               |
-N :   167 :     87.000 :+++++++++++++++++                              |
- :   168 :     73.500 :++++++++++++++                                |
-Q :   169 :     61.500 :++++++++++++                                   |
- :   170 :    123.000 :++++++++++++++++++++++++                       |
-V :   171 :     91.000 :++++++++++++++++++                             |
-R :   172 :    136.000 :+++++++++++++++++++++++++++                    |
-V :   173 :     86.000 :+++++++++++++++++                              |
- :   174 :     35.000 :+++++++                                        |
-V :   175 :    117.000 :+++++++++++++++++++++++                        |
-T :   176 :     91.500 :++++++++++++++++++                             |
-L :   177 :     48.000 :#########                                      |
-V :   178 :     81.000 :################                               |
- :   179 :     92.000 :##################                             |
- :   180 :    116.500 :#######################                        |
-L :   181 :     90.500 :##################                             |
- :   182 :    103.000 :####################                           |
-A :   183 :     96.500 :###################                            |
-A :   184 :    142.500 :############################                   |
-L :   185 :    120.000 :########################                       |
-L :   186 :    110.000 :######################                         |
-L :   187 :    128.000 :#########################                      |
- :   188 :     84.000 :################                               |
-V :   189 :     56.500 :###########                                    |
-A :   190 :    100.000 :####################                           |
- :   191 :     66.000 :#############                                  |
-L :   192 :    129.000 :#########################                      |
- :   193 :     81.500 :################                              |
- :   194 :     77.000 :###############                               |
- :   195 :     84.000 :################                               |
-V :   196 :    147.500 :#############################                  |
-V :   197 :    211.500 :##########################################    |
-G :   198 :     92.500 :##################                            |
-V :   199 :     64.500 :############                                   |
- :   200 :    154.000 :##############################                |
-L :   201 :    203.000 :########################################      |
-R :   202 :    210.500 :##########################################    |
-P :   203 :    231.500 :##############################################|
-L :   204 :    232.500 :##############################################|
-R :   205 :    116.500 :#######################                       |
-R :   206 :    236.500 :###############################################|
-V :   207 :    231.000 :############################################## |
-A :   208 :    209.500 :##########################################     |
-A :   209 :    187.000 :#####################################          |
-T :   210 :    215.500 :###########################################    |
-A :   211 :    245.000 :#################################################|
-A :   212 :    113.000 :######################                         |
-E :   213 :     70.500 :##############                                 |
-V :   214 :    242.000 :################################################|
-A :   215 :    170.500 :##################################             |
-T :   216 :     31.000 :######                                         |
-R :   217 :    145.000 :#############################                  |
-P :   218 :    226.500 :#############################################  |
-L :   219 :    245.000 :#################################################|
-A :   220 :     31.500 :######                                         |
-A :   221 :     36.500 :#######                                        |
- :   222 :     63.000 :++++++++++++                                   |
-D :   223 :    160.000 :++++++++++++++++++++++++++++++++               |
-A :   224 :     52.500 :++++++++++                                     |
- :   225 :     45.500 :+++++++++                                      |
-V :   226 :    161.000 :++++++++++++++++++++++++++++++++               |
-S :   227 :    133.000 :##########################                     |
-V :   228 :    105.500 :#####################                          |
-R :   229 :    219.000 :###########################################   |
-V :   230 :    234.000 :##############################################|
-L :   231 :     90.000 :##################                             |
-P :   232 :     46.000 :#########                                      |
- :   233 :     34.000 :######                                         |
-D :   234 :    168.000 :#################################              |
-T :   235 :    174.500 :###################################            |
-D :   236 :    174.000 :##################################             |
-P :   237 :    176.000 :###################################            |
-P :   238 :    107.000 :#####################                          |
-S :   239 :     76.500 :###############                                |
-E :   240 :    163.500 :################################               |
-V :   241 :    230.500 :##############################################|
-G :   242 :    236.000 :###############################################|
- :   243 :    105.000 :#####################                          |
-P :   244 :    118.000 :#######################                        |
-G :   245 :    154.000 :##############################                 |
-D :   246 :    196.000 :#######################################        |
-T :   247 :    118.000 :#######################                        |
-D :   248 :    163.500 :################################               |
-P :   249 :    228.000 :#############################################  |
-N :   250 :    147.500 :#############################                  |
-R :   251 :    135.500 :###########################                    |
-E :   252 :    205.000 :#########################################      |
-V :   253 :    240.000 :################################################|
-G :   254 :    193.500 :######################################         |
- :   255 :    119.000 :#######################                        |
-V :   256 :    233.000 :############################################## |
-D :   257 :    139.000 :###########################                    |
-G :   258 :     71.000 :##############                                 |
-A :   259 :    217.500 :+++++++++++++++++++++++++++++++++++++++++++    |
-L :   260 :    234.000 :++++++++++++++++++++++++++++++++++++++++++++++ |
- :   261 :    138.500 :+++++++++++++++++++++++++++                    |
-R :   262 :     38.500 :+++++++                                        |
-R :   263 :    224.500 :+++++++++++++++++++++++++++++++++++++++++++++  |
-L :   264 :     28.000 :+++++                                          |
-D :   265 :     57.500 :+++++++++++                                    |
-S :   266 :    241.500 :++++++++++++++++++++++++++++++++++++++++++++++++|
-D :   267 :    160.500 :++++++++++++++++++++++++++++++++               |
-L :   268 :     38.500 :+++++++                                        |
-R :   269 :    218.000 :+++++++++++++++++++++++++++++++++++++++++++    |
- :   270 :    153.000 :++++++++++++++++++++++++++++++                 |
-R :   271 :    246.500 :+++++++++++++++++++++++++++++++++++++++++++++++++|
-Q :   272 :    224.000 :++++++++++++++++++++++++++++++++++++++++++++   |
-F :   273 :    246.500 :+++++++++++++++++++++++++++++++++++++++++++++++++|
-I :   274 :    148.000 :#############################                  |
-R :   275 :     76.000 :###############                                |
-D :   276 :    245.000 :#################################################|
-A :   277 :    243.500 :################################################|
-S :   278 :    246.500 :#################################################|
-H :   279 :    245.500 :#################################################|
-E :   280 :    242.500 :################################################|
-L :   281 :    247.500 :#################################################|
-R :   282 :    243.500 :################################################|
-T :   283 :    247.500 :#################################################|
-P :   284 :    247.500 :#################################################|
-L :   285 :    248.500 :#################################################|
-A :   286 :    231.000 :############################################## |
-A :   287 :    188.500 :#####################################          |
-I :   288 :    243.500 :################################################|
-A :   289 :    157.500 :###############################                |
-G :   290 :    242.500 :################################################|
-Y :   291 :    248.500 :#################################################|
-A :   292 :    238.500 :###############################################|
-E :   293 :    245.000 :#################################################|
-L :   294 :    239.500 :################################################|
-T :   295 :    211.500 :##########################################     |
-R :   296 :    238.000 :+++++++++++++++++++++++++++++++++++++++++++++++|
-L :   297 :    193.000 :++++++++++++++++++++++++++++++++++++++         |
- :   298 :    141.000 :++++++++++++++++++++++++++++                   |
-S :   299 :    126.500 :+++++++++++++++++++++++++                      |
-I :   300 :    134.500 :+++++++++++++++++++++++++++                    |
- :   301 :    113.000 :++++++++++++++++++++++                         |
-L :   302 :    195.500 :+++++++++++++++++++++++++++++++++++++++        |
-P :   303 :    219.500 :++++++++++++++++++++++++++++++++++++++++++++   |
- :   304 :    190.000 :++++++++++++++++++++++++++++++++++++++         |
-E :   305 :    173.500 :++++++++++++++++++++++++++++++++++             |
-L :   306 :    154.000 :++++++++++++++++++++++++++++++                 |
-T :   307 :    159.000 :+++++++++++++++++++++++++++++++                |
-R :   308 :    170.000 :++++++++++++++++++++++++++++++++++             |
-A :   309 :    172.000 :++++++++++++++++++++++++++++++++++             |
- :   310 :    157.500 :+++++++++++++++++++++++++++++++                |
-L :   311 :    156.000 :###############################                |
-R :   312 :     87.500 :#################                              |
-R :   313 :    177.500 :###################################            |
-L :   314 :    204.500 :#########################################      |
-P :   315 :    225.500 :#############################################  |
- :   316 :    209.000 :#########################################      |
-E :   317 :    182.500 :####################################           |
-A :   318 :    181.000 :####################################           |
- :   319 :     74.000 :##############                                 |
-R :   320 :    238.000 :###############################################|
-M :   321 :    243.000 :################################################|
- :   322 :    198.500 :#######################################        |
-L :   323 :     42.500 :########                                       |
-L :   324 :    243.000 :################################################|
-V :   325 :    245.000 :#################################################|
-D :   326 :    145.000 :#############################                  |
-E :   327 :    145.500 :#############################                  |
-L :   328 :    244.000 :################################################|
-L :   329 :    248.000 :#################################################|
-L :   330 :    244.500 :#################################################|
-L :   331 :    246.500 :#################################################|
-R :   332 :    146.000 :#############################                  |
-R :   333 :    244.000 :################################################|
-L :   334 :    246.000 :#################################################|
-L :   335 :      9.000 :+                                              |
-E :   336 :    115.500 :+++++++++++++++++++++++                        |
-G :   337 :    236.000 :+++++++++++++++++++++++++++++++++++++++++++++++|
- :   338 :     49.500 :+++++++++                                      |
-D :   339 :    101.500 :++++++++++++++++++++                           |
-L :   340 :    233.500 :++++++++++++++++++++++++++++++++++++++++++++++ |
-E :   341 :    115.500 :+++++++++++++++++++++++                        |
-T :   342 :     73.500 :++++++++++++++                                 |
-E :   343 :    155.000 :+++++++++++++++++++++++++++++++                |
-E :   344 :     96.000 :+++++++++++++++++++                            |
-R :   345 :    130.000 :++++++++++++++++++++++++++                     |
-D :   346 :    240.500 :++++++++++++++++++++++++++++++++++++++++++++++++|
-L :   347 :    215.000 :+++++++++++++++++++++++++++++++++++++++++++    |
-T :   348 :    127.000 :#########################                      |
-G :   349 :     83.000 :################                               |
-L :   350 :    195.000 :#######################################        |
-V :   351 :    179.500 :####################################           |
-I :   352 :    135.500 :###########################                    |
-N :   353 :    141.000 :############################                   |
-A :   354 :    181.000 :####################################           |
-V :   355 :    210.500 :##########################################     |
-V :   356 :    135.000 :###########################                    |
-D :   357 :    199.500 :########################################       |
-A :   358 :    231.000 :############################################## |
- :   359 :    136.000 :###########################                    |
-V :   360 :    145.000 :#############################                  |
-A :   361 :    139.500 :############################                   |
-L :   362 :    158.000 :###############################                |
-P :   363 :    176.500 :###################################            |
-I :   364 :    108.500 :#####################                          |
- :   365 :    153.500 :++++++++++++++++++++++++++++++                 |
-A :   366 :    196.500 :+++++++++++++++++++++++++++++++++++++++        |
-V :   367 :    181.500 :++++++++++++++++++++++++++++++++++++           |
-W :   368 :    157.000 :+++++++++++++++++++++++++++++++                |
-D :   369 :    147.500 :+++++++++++++++++++++++++++++                  |
-A :   370 :    139.000 :###########################                    |
- :   371 :     95.000 :###################                            |
-L :   372 :    202.000 :########################################       |
-A :   373 :    224.000 :++++++++++++++++++++++++++++++++++++++++++++   |
-D :   374 :    148.000 :+++++++++++++++++++++++++++++                  |
-P :   375 :    197.500 :+++++++++++++++++++++++++++++++++++++++        |
-P :   376 :    155.500 :+++++++++++++++++++++++++++++++                |
- :   377 :    192.000 :++++++++++++++++++++++++++++++++++++++         |
-R :   378 :     90.500 :++++++++++++++++++                             |
-V :   379 :    222.500 :############################################   |
- :   380 :     46.000 :#########                                      |
-G :   381 :    186.500 :#####################################          |
-D :   382 :    232.000 :############################################## |
- :   383 :     49.500 :#########                                      |
-A :   384 :    157.500 :###############################                |
-R :   385 :    237.500 :###############################################|
-L :   386 :    239.500 :################################################|
-H :   387 :    191.000 :######################################         |
-Q :   388 :    247.500 :#################################################|
-L :   389 :    137.000 :###########################                    |
-V :   390 :    180.000 :####################################           |
-S :   391 :    103.500 :####################                           |
-N :   392 :    247.000 :#################################################|
-L :   393 :    247.500 :#################################################|
-L :   394 :    241.000 :################################################|
-T :   395 :     65.000 :#############                                  |
-N :   396 :    246.000 :#################################################|
-A :   397 :    229.000 :#############################################  |
-L :   398 :     20.000 :####                                           |
-V :   399 :    120.500 :########################                       |
-H :   400 :    248.000 :#################################################|
-T :   401 :    244.500 :#################################################|
-V :   402 :     12.500 :##                                             |
-P :   403 :    133.000 :##########################                     |
-G :   404 :    236.000 :###############################################|
-L :   405 :     62.000 :############                                   |
-T :   406 :    184.000 :####################################           |
-V :   407 :    218.500 :###########################################    |
-T :   408 :    210.500 :##########################################     |
-V :   409 :     62.000 :############                                   |
-G :   410 :     57.000 :###########                                    |
-I :   411 :    115.500 :+++++++++++++++++++++++                        |
- :   412 :     88.000 :+++++++++++++++++                              |
-T :   413 :     65.000 :+++++++++++++                                  |
-H :   414 :     39.000 :+++++++                                        |
-R :   415 :     82.500 :++++++++++++++++                             |
-G :   416 :     82.500 :++++++++++++++++                       |
-G :   417 :     71.000 :++++++++++++++                         |
-P :   418 :     52.000 :++++++++++                       |
-V :   419 :     41.500 :++++++++                    |
- :   420 :     59.000 :+++++++++++                 |
-P :   421 :     39.500 :+++++++                             |
- :   422 :     35.500 :+++++++                                |
- :   423 :    103.000 :++++++++++++++++++++                    |
- :   424 :     84.500 :++++++++++++++++                    |
-L :   425 :     84.000 :++++++++++++++++                    |
- :   426 :     81.000 :++++++++++++++++                      |
-R :   427 :     99.500 :+++++++++++++++++++             |
-V :   428 :     92.500 :++++++++++++++++++                 |
-G :   429 :     94.500 :++++++++++++++++++                        |
-D :   430 :    139.500 :############################                 |
-G :   431 :    124.000 :########################                    |
- :   432 :    143.500 :############################                |
-P :   433 :    124.000 :########################                       |
-C :   434 :     37.000 :#######                                        |
-I :   435 :    188.500 :#####################################          |
-E :   436 :     88.000 :#################                              |
-P :   437 :    161.000 :################################               |
- :   438 :    144.500 :#############################                  |
-V :   439 :    166.000 :#################################              |
-L :   440 :    159.000 :###############################                |
-P :   441 :    207.000 :#########################################      |
-H :   442 :    119.500 :#######################                        |
-G :   443 :    188.500 :#####################################          |
-F :   444 :    246.500 :#################################################|
-P :   445 :    116.500 :#######################                        |
-R :   446 :    243.500 :################################################|
-F :   447 :    240.500 :################################################|
-V :   448 :     76.000 :###############                                |
-R :   449 :    244.000 :++++++++++++++++++++++++++++++++++++++++++++++++|
-A :   450 :     72.000 :++++++++++++++                                 |
-S :   451 :     12.500 :++                                             |
- :   452 :     51.500 :++++++++++                                     |
-S :   453 :    222.500 :++++++++++++++++++++++++++++++++++++++++++++   |
-R :   454 :    241.500 :++++++++++++++++++++++++++++++++++++++++++++++++|
-S :   455 :    217.000 :+++++++++++++++++++++++++++++++++++++++++++    |
-F :   456 :     28.500 :+++++                                          |
-G :   457 :     45.000 :+++++++++                                      |
-G :   458 :    120.500 :++++++++++++++++++++++++                       |
-G :   459 :    213.500 :++++++++++++++++++++++++++++++++++++++++++     |
-G :   460 :     36.000 :+++++++                                        |
-G :   461 :     54.000 :##########                                     |
-G :   462 :    225.000 :#############################################  |
-L :   463 :    226.000 :#############################################  |
-G :   464 :    224.500 :#############################################  |
-L :   465 :    229.000 :#############################################  |
-I :   466 :    243.500 :################################################|
-V :   467 :    206.000 :#########################################      |
-G :   468 :     95.500 :###################                            |
-S :   469 :    157.500 :###############################                |
-G :   470 :    172.000 :##################################             |
-V :   471 :    192.000 :######################################         |
- :   472 :     90.500 :##################                             |
-A :   473 :    226.500 :#############################################  |
-H :   474 :    243.500 :################################################|
-G :   475 :     87.500 :#################                              |
-G :   476 :    228.000 :#############################################  |
-A :   477 :    161.500 :################################               |
-V :   478 :    219.000 :###########################################    |
-T :   479 :    141.500 :############################                   |
- :   480 :     86.500 :#################                              |
-A :   481 :    111.000 :++++++++++++++++++++++                         |
-S :   482 :    197.000 :+++++++++++++++++++++++++++++++++++++++        |
- :   483 :    135.000 :+++++++++++++++++++++++++++                    |
- :   484 :     60.500 :++++++++++++                                   |
-G :   485 :    185.500 :+++++++++++++++++++++++++++++++++++++          |
- :   486 :    187.500 :+++++++++++++++++++++++++++++++++++++          |
-T :   487 :    121.000 :########################                       |
-G :   488 :    215.000 :###########################################    |
-F :   489 :    150.500 :##############################                 |
-V :   490 :    207.500 :#########################################      |
-V :   491 :    107.000 :#####################                         |
- :   492 :    141.500 :############################                   |
-R :   493 :    117.000 :#######################                        |
-S :   494 :    234.500 :###############################################|
-P :   495 :    157.000 :###############################                |
- :   496 :    104.500 :####################                           |
-G :   497 :    152.000 :##############################                 |
- :   498 :    161.500 :################################               |
-T :   499 :    144.500 :+++++++++++++++++++++++++++++                 |
-T :   500 :    107.000 :+++++++++++++++++++++     |
-V :   501 :     65.000 :+++++++++++++     |
-A :   502 :     58.500 :+++++++++++ |
- :   503 :     32.000 :++++++  |
- :   504 :     38.000 :+++++++|
- :   505 :     26.500 :+++++|
-L :   506 :     28.500 :+++++|
-P :   507 :     23.500 :++++|
-M :   508 :      7.500 :+ |
-I :   509 :      5.500 :+|

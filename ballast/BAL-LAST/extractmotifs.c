@@ -41,7 +41,7 @@ Motif *extractmotifs(double *profil, int length, char *conserved)
 // #ifndef WWW
 //     printf("\nSuggested Words : \n\n");
 // #endif
-
+    printf("\nSuggested Words : \n\n");
     i = 0;
 
     while (i < length)

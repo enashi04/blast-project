@@ -166,8 +166,8 @@ int main(int argc, char *argv[])
         while (curline[0] != '\0')
         {
             
-            printf("Tour : %u\n", j);
-            printf("curline is %s\n", curline);
+            // printf("Tour : %u\n", j);
+            // printf("curline is %s\n", curline);
 
             seqres->rank = i++;
             seqres->next = (SeqHSP *)malloc(sizeof(SeqHSP));

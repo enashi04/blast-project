@@ -95,7 +95,7 @@ double *trimprofilext(double *profiltotal, double *profil, int length, char *con
             *ptr = 0.0;
         }
     }
-    printf("ptr du trimmed: %lf\n", *ptr);
+   // printf("ptr du trimmed: %lf\n", *ptr);
     /*****************************************************************/
 
     /*****************************************************************/
