@@ -42,7 +42,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
     /*************************************************************************************************************************************************/
     /************************************************************Déclaration des variables************************************************************/
     /************************************************************************************************************************************************/
-    double maxp = 0, p=0gi, facteur, fctr;
+    double maxp = 0, p=0, facteur, fctr;
     double *profil, *ptr, *simptr;
     SimPrf *simprf;
     char *outtext = NULL, *ptrstr, *begline, *queryseq, *seq, *seqhsp, *startline;
