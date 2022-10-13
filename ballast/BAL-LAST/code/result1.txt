@@ -1,0 +1,88 @@
+lissage : 318.300000
+
+Suggested Words : 
+
+          11 -   30     : RPVSRGGVGLTGRPPSGIRP          :18315.98
+
+          41 -   51     : MPPGTARPGSR   :13906.98
+
+          59 -   78     : GVLSSQIKVAHRPVTQQGLT          :28084.96
+
+          89 -  115     : RQILDKSYYLGLLRSKISELTTEVNKL   :42710.94
+
+         126 -  137     : NSVYLSYEKRAE          :18332.99
+
+         147 -  169     : QGQLADYNMLVDKLNTNTEMEEV       :35991.95
+
+         175 -  181     : MLKAQND       : 9978.00
+
+         187 -  198     : LDVIFTERQAKE          :16789.99
+
+         204 -  219     : VEEEIEQEKQATDDII      :20028.99
+
+         226 -  238     : NQVKYLEMKTTNE         :14863.99
+
+         257 -  285     : KKESLEAEIAHSQVKQEAVLLHEKLYELE         :39492.00
+
+         288 -  290     : RDQ   : 4195.00
+
+         300 -  312     : SPMEEREKLLKQI         :19811.00
+
+         318 -  327     : EIASMERQLT    :15044.00
+
+         339 -  347     : EIRQLDMDL     :11805.00
+
+         357 -  365     : KYKELKKRE     :13918.00
+
+         374 -  382     : TFEETKNQE     :11344.00
+
+         390 -  404     : EANIVALLEHCSRNI       :19952.99
+
+         417 -  425     : ELKMMQDDL     :11511.00
+
+         431 -  442     : EVQKSQSTAQNL          :15020.99
+
+         448 -  466     : RLQLDLQKMELLESKMTEE   :24933.99
+
+         473 -  477     : KIKQM         : 6075.00
+
+         481 -  508     : LEIYNDLPALKSSGEEKIKKLHQERMIL          :29821.99
+
+         512 -  516     : RNAFK         : 5306.00
+
+         526 -  542     : YEALKTQLQENETHSQL     :22184.99
+
+         545 -  556     : LERKWQHLEQNN          :16574.99
+
+         560 -  572     : KEFIATKSQESDY         :17232.00
+
+         584 -  598     : AEYNKTIVDALHSTS       :12477.00
+
+   11:  R-P-[iv]-S-R-G-G-[iv]-G-L-t-G-R-P-P-[St]-[Ga]-I-R-P
+   41:  M-P-P-[Gs]-T-[As]-R-P-G-[St]-R
+   59:  G-V-L-S-[as]-Q-I-K-V-[At]-D-R-P-V-T-Q-Q-G-L-[St]
+   89:  R-Q-[Iv]-[lmq]-D-K-[St]-Y-[Yf]-L-G-[Lv]-L-R-S-K-[It]-[ns]-E-L-T-t-E-[itv]-[ns]-[Kr]-L
+  126:  [kn]-S-V-Y-L-S-Y-E-K-R-A-E
+  147:  Q-G-Q-L-A-D-Y-N-M-[Lv]-V-D-[Ki]-L-N-T-n-T-[de]-M-[ae]-E-[mv]
+  175:  m-L-K-[av]-Q-N-D
+  187:  [ilmv]-[De]-[ikv]-I-F-T-E-R-[qr]-[ae]-[krt]-E
+  204:  [iv]-E-E-[de]-[Iv]-[er]-[qr]-E-[kr]-[qrv]-[av]-A-[de]-[deg]-[iv]-[iv]
+  226:  [kn]-[Qr]-[aev]-K-Y-[film]-e-[Ml]-K-[at]-[at]-N-E
+  257:  [kr]-[ek]-e-[ds]-[ly]-[Er]-[as]-E-[il]-[as]-H-S-q-[iv]-K-Q-E-[Av]-V-[lqr]-L-[hy]-E-[kt]-L-[hsy]-E-L-E
+  288:  R-D-[aq]
+  300:  S-P-[mq]-E-E-R-E-[kr]-L-[Lf]-K-Q-V
+  318:  E-I-A-S-M-E-R-Q-L-[at]
+  339:  [ev]-[Il]-[qr]-[qr]-L-[De]-[mq]-D-[Ls]
+  357:  K-Y-K-E-L-K-[Kr]-[Rk]-E
+  374:  [st]-F-[Ed]-[de]-[stv]-[Kr]-[an]-Q-E
+  390:  [eq]-[ae]-[ns]-I-V-[as]-L-L-E-H-[cs]-S-R-N-[ilmv]
+  417:  E-L-[Kr]-[imn]-M-Q-[de]-[Dv]-L
+  431:  E-[mv]-[qv]-[Kq]-S-[eq]-S-T-A-[kr]-[gn]-L
+  448:  [Rk]-L-Q-[lmq]-D-L-[eq]-K-[mv]-[eq]-[lq]-L-E-[gs]-K-[im]-[tv]-[deg]-E
+  473:  [Kr]-[iv]-[eks]-[qt]-[Mt]
+  481:  L-[eh]-[it]-[Yf]-[nrs]-[dn]-L-[dp]-[at]-L-[Kr]-[as]-[ast]-[ag]-E-E-K-K-K-[kr]-L-[hq]-[deq]-[de]-[kr]-[emtv]-[iksv]-L
+  512:  [Rs]-[dn]-[ast]-F-K
+  526:  [hy]-E-[at]-L-K-[kt]-[ekq]-L-Q-E-N-E-T-H-[as]-Q-L
+  545:  L-E-R-K-W-Q-H-[hl]-E-Q-N-N
+  560:  K-E-F-I-A-[st]-K-s-Q-E-S-D-Y
+  584:  [ak]-[Ed]-Y-N-K-[ast]-[il]-[imv]-[de]-[as]-L-[hq]-[ns]-[mt]-[Sn]

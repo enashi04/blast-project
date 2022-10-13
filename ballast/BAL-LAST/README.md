@@ -1,9 +1,19 @@
 # BALLAST
 
-- to build the program 
+- CODE 
 
-```make```
+You will find the code of ballast :
+        
+    - to build the program 
 
-- to run it 
+        make
 
-```./ballast -p MYCO.blastp -o test ```
+    - to run it 
+
+    ./ballast -p MYCO.blastp -o test 
+
+- BLASTFILES
+
+Differents files examples of protein in blast format
+
+- results

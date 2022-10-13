@@ -1,0 +1,369 @@
+BALLAST profile pcd12.prof
+
+The following sequences from BLAST results were used to build this profile :
+--------------------------------------------------------------------------------
+TR:H2PGW8 H2PGW8_PONAB Protocadherin 12 OS=Pongo abelii OX=9601 GN=PCDH12                   0.0     
+SP:Q9NPG4 PCD12_HUMAN Protocadherin-12 OS=Homo sapiens OX=9606 GN=PCDH12                    0.0     
+TR:A0A8D2GGF0 A0A8D2GGF0_THEGE Protocadherin 12 OS=Theropithecus gelada OX=9565             0.0     
+TR:A0A2K5KCZ5 A0A2K5KCZ5_COLAP Protocadherin 12 OS=Colobus angolensis palliatus             0.0     
+TR:A0A2K6LRX1 A0A2K6LRX1_RHIBE Uncharacterized protein OS=Rhinopithecus bieti               0.0     
+TR:A0A2K5W3U0 A0A2K5W3U0_MACFA Protocadherin 12 OS=Macaca fascicularis OX=9541              0.0     
+TR:A0A2K5ZIH8 A0A2K5ZIH8_MANLE Protocadherin 12 OS=Mandrillus leucophaeus OX=9568           0.0     
+TR:A0A0D9RJ05 A0A0D9RJ05_CHLSB Protocadherin 12 OS=Chlorocebus sabaeus OX=60711             0.0     
+TR:A0A096MSK1 A0A096MSK1_PAPAN Protocadherin 12 OS=Papio anubis OX=9555 GN=PCDH12           0.0     
+TR:A0A2K5N200 A0A2K5N200_CERAT Protocadherin 12 OS=Cercocebus atys OX=9531                  0.0     
+TR:A0A2K6R0J0 A0A2K6R0J0_RHIRO Protocadherin 12 OS=Rhinopithecus roxellana                  0.0     
+TR:G3SFU1 G3SFU1_GORGO Protocadherin 12 OS=Gorilla gorilla gorilla OX=9595                  0.0     
+TR:A0A8C9HQF4 A0A8C9HQF4_9PRIM Protocadherin 12 OS=Piliocolobus tephrosceles                0.0     
+TR:A0A2R9CIK9 A0A2R9CIK9_PANPA Protocadherin 12 OS=Pan paniscus OX=9597 GN=PCDH12           0.0     
+TR:H2QRP0 H2QRP0_PANTR Protocadherin 12 OS=Pan troglodytes OX=9598 GN=PCDH12                0.0     
+TR:A0A2K5D6Y2 A0A2K5D6Y2_AOTNA Protocadherin 12 OS=Aotus nancymaae OX=37293                 0.0     
+TR:A0A2R8N6A7 A0A2R8N6A7_CALJA Protocadherin 12 OS=Callithrix jacchus OX=9483               0.0     
+TR:F7GZ76 F7GZ76_MACMU Protocadherin 12 OS=Macaca mulatta OX=9544 GN=PCDH12                 0.0     
+TR:G1RF07 G1RF07_NOMLE Protocadherin 12 OS=Nomascus leucogenys OX=61853                     0.0     
+TR:A0A6J3ES21 A0A6J3ES21_SAPAP protocadherin-12 isoform X2 OS=Sapajus apella                0.0     
+TR:A0A2K6TNZ4 A0A2K6TNZ4_SAIBB Protocadherin 12 OS=Saimiri boliviensis boliviensis          0.0     
+TR:A0A6J3EMP9 A0A6J3EMP9_SAPAP protocadherin-12 isoform X1 OS=Sapajus apella                0.0     
+TR:A0A2K5RAZ5 A0A2K5RAZ5_CEBIM Protocadherin 12 OS=Cebus imitator OX=2715852                0.0     
+TR:A0A2K6TNX2 A0A2K6TNX2_SAIBB Protocadherin 12 OS=Saimiri boliviensis boliviensis          0.0     
+TR:A0A2K6CRU5 A0A2K6CRU5_MACNE Protocadherin 12 OS=Macaca nemestrina OX=9545                0.0     
+TR:A0A8C9DT27 A0A8C9DT27_PROSS Protocadherin 12 OS=Prolemur simus OX=1328070                0.0     
+TR:A0A2K6EUE3 A0A2K6EUE3_PROCO Protocadherin 12 OS=Propithecus coquereli OX=379532          0.0     
+TR:A0A2F0B6Q6 A0A2F0B6Q6_ESCRO Protocadherin-12 (Fragment) OS=Eschrichtius                  0.0     
+TR:A0A384B3B5 A0A384B3B5_BALAS protocadherin-12 isoform X2 OS=Balaenoptera                  0.0     
+TR:A0A384B3J7 A0A384B3J7_BALAS protocadherin-12 isoform X1 OS=Balaenoptera                  0.0     
+TR:H0XZJ4 H0XZJ4_OTOGA Protocadherin 12 OS=Otolemur garnettii OX=30611                      0.0     
+TR:A0A8B8WW84 A0A8B8WW84_BALMU protocadherin-12 isoform X2 OS=Balaenoptera                  0.0     
+TR:A0A6A1PYM9 A0A6A1PYM9_BALPH Uncharacterized protein OS=Balaenoptera physalus             0.0     
+TR:A0A8B8WWG7 A0A8B8WWG7_BALMU protocadherin-12 isoform X1 OS=Balaenoptera                  0.0     
+TR:A0A7J7EC31 A0A7J7EC31_DICBM Uncharacterized protein OS=Diceros bicornis                  0.0     
+TR:A0A8B7F9B2 A0A8B7F9B2_MICMU Protocadherin-12 OS=Microcebus murinus OX=30608              0.0     
+TR:A0A6J3R5K2 A0A6J3R5K2_TURTR protocadherin-12 isoform X2 OS=Tursiops truncatus            0.0     
+TR:A0A340X398 A0A340X398_LIPVE protocadherin-12 OS=Lipotes vexillifer OX=118797             0.0     
+TR:A0A2U3V7G6 A0A2U3V7G6_TURTR protocadherin-12 isoform X1 OS=Tursiops truncatus            0.0     
+TR:A0A4U1FL04 A0A4U1FL04_MONMO Protocadherin 12 OS=Monodon monoceros OX=40151               0.0     
+TR:A0A484GL00 A0A484GL00_SOUCH Uncharacterized protein (Fragment) OS=Sousa                  0.0     
+TR:A0A8C6QS33 A0A8C6QS33_NANGA Protocadherin 12 OS=Nannospalax galili OX=1026970            0.0     
+TR:A0A2Y9PIQ5 A0A2Y9PIQ5_DELLE protocadherin-12 OS=Delphinapterus leucas OX=9749            0.0     
+TR:F6ZMN0 F6ZMN0_HORSE Protocadherin 12 OS=Equus caballus OX=9796 GN=PCDH12                 0.0     
+TR:A0A8C4MS06 A0A8C4MS06_EQUAS Protocadherin 12 OS=Equus asinus asinus OX=83772             0.0     
+TR:A0A2Y9EHL1 A0A2Y9EHL1_PHYMC protocadherin-12 OS=Physeter macrocephalus OX=9755           0.0     
+TR:A0A6J2MXM9 A0A6J2MXM9_9CHIR protocadherin-12 OS=Phyllostomus discolor OX=89673           0.0     
+TR:A0A8C9B777 A0A8C9B777_PHOSS Protocadherin 12 OS=Phocoena sinus OX=42100                  0.0     
+TR:A0A8B7T0X4 A0A8B7T0X4_HIPAR protocadherin-12 OS=Hipposideros armiger OX=186990           0.0     
+TR:A0A6J0AJ79 A0A6J0AJ79_VICPA protocadherin-12 isoform X2 OS=Vicugna pacos                 1.4e-45 
+TR:A0A5F5XVX6 A0A5F5XVX6_FELCA Protocadherin 12 OS=Felis catus OX=9685 GN=PCDH12            1.4e-45 
+TR:A0A8C9CUP5 A0A8C9CUP5_PANLE Protocadherin 12 OS=Panthera leo OX=9689 GN=PCDH12           1.4e-45 
+TR:A0A6I9I7P3 A0A6I9I7P3_VICPA protocadherin-12 isoform X1 OS=Vicugna pacos                 1.4e-45 
+TR:A0A6P6HZL3 A0A6P6HZL3_PUMCO protocadherin-12 OS=Puma concolor OX=9696 GN=PCDH12          1.4e-45 
+TR:A0A667G2V3 A0A667G2V3_LYNCA Protocadherin 12 OS=Lynx canadensis OX=61383                 1.4e-45 
+TR:A0A6I9ZI22 A0A6I9ZI22_ACIJB protocadherin-12 OS=Acinonyx jubatus OX=32536                1.4e-45 
+TR:A0A485MMG0 A0A485MMG0_LYNPA Protocadherin-12-like OS=Lynx pardinus OX=191816             1.4e-45 
+TR:A0A8C9K840 A0A8C9K840_PANTA Protocadherin 12 OS=Panthera tigris altaica                  1.4e-45 
+TR:M3WBD1 M3WBD1_FELCA Protocadherin 12 OS=Felis catus OX=9685 GN=PCDH12                    1.4e-45 
+TR:A0A2Y9RH45 A0A2Y9RH45_TRIMA protocadherin-12 OS=Trichechus manatus latirostris           1.4e-45 
+TR:L5JUK1 L5JUK1_PTEAL Protocadherin-12 OS=Pteropus alecto OX=9402 GN=PAL_GLEAN10016716     1.4e-45 
+TR:A0A6P3QTA9 A0A6P3QTA9_PTEVA protocadherin-12 OS=Pteropus vampyrus OX=132908              1.4e-45 
+TR:A0A7J8FKK3 A0A7J8FKK3_ROUAE Protocadherin 12 OS=Rousettus aegyptiacus OX=9407            1.4e-45 
+TR:F1RM49 F1RM49_PIG Protocadherin 12 OS=Sus scrofa OX=9823 GN=PCDH12 PE=4                  2.8e-45 
+TR:A0A2U3Y725 A0A2U3Y725_LEPWE protocadherin-12 OS=Leptonychotes weddellii                  2.8e-45 
+TR:A0A2U3VRD4 A0A2U3VRD4_ODORO protocadherin-12 OS=Odobenus rosmarus divergens              2.8e-45 
+TR:G3TI68 G3TI68_LOXAF Protocadherin 12 OS=Loxodonta africana OX=9785 GN=PCDH12             5.6e-45 
+TR:A0A8C5ZWA2 A0A8C5ZWA2_MARMA Protocadherin 12 OS=Marmota marmota marmota                  5.6e-45 
+TR:I3N1N8 I3N1N8_ICTTR Protocadherin 12 OS=Ictidomys tridecemlineatus OX=43179              5.6e-45 
+TR:A0A8C9QBH9 A0A8C9QBH9_SPEDA Protocadherin 12 OS=Spermophilus dauricus OX=99837           5.6e-45 
+TR:A0A1U7U064 A0A1U7U064_CARSF protocadherin-12 OS=Carlito syrichta OX=1868482              5.6e-45 
+TR:A0A8D2KI21 A0A8D2KI21_UROPR Protocadherin 12 OS=Urocitellus parryii OX=9999              5.6e-45 
+TR:A0A1S2ZGL8 A0A1S2ZGL8_ERIEU protocadherin-12 OS=Erinaceus europaeus OX=9365              5.6e-45 
+TR:S9Y256 S9Y256_CAMFR Protocadherin-12 OS=Camelus ferus OX=419612 GN=CB1_000740044         5.6e-45 
+TR:A0A5N4EDC7 A0A5N4EDC7_CAMDR Protocadherin-12 OS=Camelus dromedarius OX=9838              5.6e-45 
+TR:A0A452RCT8 A0A452RCT8_URSAM Protocadherin 12 OS=Ursus americanus OX=9643                 9.8e-45 
+TR:A0A384C4B5 A0A384C4B5_URSMA protocadherin-12 OS=Ursus maritimus OX=29073                 9.8e-45 
+TR:G1LUP2 G1LUP2_AILME Protocadherin 12 OS=Ailuropoda melanoleuca OX=9646                   9.8e-45 
+TR:S7Q800 S7Q800_MYOBR Protocadherin-12 OS=Myotis brandtii OX=109478 GN=D623_10027887       9.8e-45 
+TR:G1P025 G1P025_MYOLU Protocadherin 12 OS=Myotis lucifugus OX=59463 GN=PCDH12              9.8e-45 
+TR:A0A673V3Y7 A0A673V3Y7_SURSU Protocadherin 12 OS=Suricata suricatta OX=37032              9.8e-45 
+TR:A0A5E4BHY2 A0A5E4BHY2_MARMO Uncharacterized protein OS=Marmota monax OX=9995             2.0e-44 
+TR:A0A5E4BHR0 A0A5E4BHR0_MARMO Protocadherin-12 OS=Marmota monax OX=9995 GN=GHT09_010791    2.0e-44 
+TR:M3Y9A6 M3Y9A6_MUSPF Protocadherin 12 OS=Mustela putorius furo OX=9669                    2.0e-44 
+TR:A0A8B7TXS3 A0A8B7TXS3_CASCN protocadherin-12 OS=Castor canadensis OX=51338               2.0e-44 
+TR:A0A8C7C5T8 A0A8C7C5T8_NEOVI Protocadherin 12 OS=Neovison vison OX=452646                 2.0e-44 
+TR:A0A3P4S006 A0A3P4S006_GULGU Uncharacterized protein OS=Gulo gulo OX=48420                2.0e-44 
+TR:A0A3Q7MLR8 A0A3Q7MLR8_CALUR protocadherin-12 OS=Callorhinus ursinus OX=34884             2.0e-44 
+TR:A0A2Y9KX90 A0A2Y9KX90_ENHLU protocadherin-12 OS=Enhydra lutris kenyoni OX=391180         2.0e-44 
+TR:G1TCN8 G1TCN8_RABIT Protocadherin 12 OS=Oryctolagus cuniculus OX=9986                    2.9e-44 
+TR:A0A6P3I2G1 A0A6P3I2G1_BISBI protocadherin-12 isoform X2 OS=Bison bison bison             5.0e-44 
+TR:A0A8D2D311 A0A8D2D311_SCIVU Protocadherin 12 OS=Sciurus vulgaris OX=55149                6.0e-44 
+TR:A0A8C3WH96 A0A8C3WH96_9CETA Protocadherin 12 OS=Catagonus wagneri OX=51154               6.0e-44 
+TR:A0A6P5C531 A0A6P5C531_BOSIN protocadherin-12 OS=Bos indicus OX=9915 GN=PCDH12            6.0e-44 
+TR:A0A8B9Z1D9 A0A8B9Z1D9_BOSMU Protocadherin 12 OS=Bos mutus grunniens OX=30521             6.0e-44 
+TR:L8HNN1 L8HNN1_9CETA Protocadherin-12 OS=Bos mutus OX=72004 GN=M91_17241                  6.0e-44 
+TR:A0A4W2DDQ2 A0A4W2DDQ2_BOBOX Protocadherin 12 OS=Bos indicus x Bos taurus                 6.0e-44 
+TR:F1N0X0 F1N0X0_BOVIN Protocadherin 12 OS=Bos taurus OX=9913 GN=PCDH12                     6.0e-44 
+TR:A0A6P3IAG4 A0A6P3IAG4_BISBI protocadherin-12 isoform X1 OS=Bison bison bison             6.0e-44 
+TR:A0A7J7XIQ9 A0A7J7XIQ9_MYOMY Protocadherin 12 OS=Myotis myotis OX=51298 GN=mMyoMyo1_0148  8.0e-44 
+TR:A0A8I3NXR5 A0A8I3NXR5_CANLF Protocadherin 12 OS=Canis lupus familiaris OX=9615           9.9e-44 
+TR:A0A8C0L349 A0A8C0L349_CANLU Protocadherin 12 OS=Canis lupus dingo OX=286419              9.9e-44 
+TR:A0A811YN26 A0A811YN26_NYCPR (raccoon dog) hypothetical protein OS=Nyctereutes            9.9e-44 
+TR:W5NU38 W5NU38_SHEEP Protocadherin 12 OS=Ovis aries OX=9940 GN=PCDH12                     9.9e-44 
+TR:W5NU41 W5NU41_SHEEP Protocadherin 12 OS=Ovis aries OX=9940 GN=PCDH12                     9.9e-44 
+TR:A0A8B6ZNJ8 A0A8B6ZNJ8_ORYAF protocadherin-12 OS=Orycteropus afer afer OX=1230840         9.9e-44 
+TR:A0A8C6CT77 A0A8C6CT77_MOSMO Protocadherin 12 OS=Moschus moschiferus OX=68415             9.9e-44 
+TR:A0A212D2C6 A0A212D2C6_CEREH PCDH12 OS=Cervus elaphus hippelaphus OX=46360                9.9e-44 
+TR:A0A5J5N1L8 A0A5J5N1L8_MUNRE Uncharacterized protein OS=Muntiacus reevesi                 9.9e-44 
+TR:A0A6J0YAG0 A0A6J0YAG0_ODOVR protocadherin-12 OS=Odocoileus virginianus texanus           9.9e-44 
+TR:A0A671EHA4 A0A671EHA4_RHIFE Protocadherin 12 OS=Rhinolophus ferrumequinum                2.0e-43 
+TR:A0A1S3FI65 A0A1S3FI65_DIPOR protocadherin-12 OS=Dipodomys ordii OX=10020                 3.0e-43 
+TR:A0A3Q7TA16 A0A3Q7TA16_VULVU protocadherin-12 OS=Vulpes vulpes OX=9627 GN=PCDH12          3.0e-43 
+TR:A0A7J7XBN1 A0A7J7XBN1_PIPKU Protocadherin 12 OS=Pipistrellus kuhlii OX=59472             4.0e-43 
+TR:A0A452FZU8 A0A452FZU8_CAPHI Protocadherin 12 OS=Capra hircus OX=9925 GN=PCDH12           5.0e-43 
+TR:A0A452FZV9 A0A452FZV9_CAPHI Protocadherin 12 OS=Capra hircus OX=9925 GN=PCDH12           5.0e-43 
+TR:A0A452FZI7 A0A452FZI7_CAPHI Protocadherin 12 OS=Capra hircus OX=9925 GN=PCDH12           5.0e-43 
+TR:A0A452FYU1 A0A452FYU1_CAPHI Protocadherin 12 OS=Capra hircus OX=9925 GN=PCDH12           5.0e-43 
+TR:A0A7J8I9Z7 A0A7J8I9Z7_MOLMO Protocadherin 12 OS=Molossus molossus OX=27622               5.0e-43 
+TR:A0A8C5KXE7 A0A8C5KXE7_JACJA Protocadherin 12 OS=Jaculus jaculus OX=51337                 7.0e-43 
+TR:A0A6P5LQL4 A0A6P5LQL4_PHACI protocadherin-12 OS=Phascolarctos cinereus OX=38626          1.0e-41 
+TR:A0A6I9JV56 A0A6I9JV56_CHRAS protocadherin-12 OS=Chrysochloris asiatica OX=185453         1.0e-41 
+TR:F1MA46 F1MA46_RAT Protocadherin 12 OS=Rattus norvegicus OX=10116 GN=Pcdh12               1.0e-40 
+TR:L8YG18 L8YG18_TUPCH Protocadherin-12 OS=Tupaia chinensis OX=246437 GN=TREES_T100014432   1.0e-40 
+TR:A0A1U7QM89 A0A1U7QM89_MESAU protocadherin-12 OS=Mesocricetus auratus OX=10036            2.0e-40 
+TR:A0A1A6GJ89 A0A1A6GJ89_NEOLE Uncharacterized protein OS=Neotoma lepida OX=56216           5.0e-40 
+SP:O55134 PCD12_MOUSE Protocadherin-12 OS=Mus musculus OX=10090 GN=Pcdh12                   5.0e-40 
+TR:A0A8C6I3D7 A0A8C6I3D7_MUSSI Protocadherin 12 OS=Mus spicilegus OX=10103                  5.0e-40 
+TR:G3HYD2 G3HYD2_CRIGR Protocadherin-12 OS=Cricetulus griseus OX=10029                      1.0e-39 
+TR:A0A4X2KJ53 A0A4X2KJ53_VOMUR Protocadherin 12 OS=Vombatus ursinus OX=29139                2.0e-39 
+TR:G3WHW4 G3WHW4_SARHA Protocadherin 12 OS=Sarcophilus harrisii OX=9305                     2.0e-39 
+TR:A0A4X2KR69 A0A4X2KR69_VOMUR Protocadherin 12 OS=Vombatus ursinus OX=29139                2.0e-39 
+TR:A0A091CKY8 A0A091CKY8_FUKDA Protocadherin-12 OS=Fukomys damarensis OX=885580             5.0e-39 
+TR:A0A6I9M472 A0A6I9M472_PERMB protocadherin-12 OS=Peromyscus maniculatus bairdii           1.0e-38 
+TR:F6YSE3 F6YSE3_MONDO Uncharacterized protein OS=Monodelphis domestica                     2.0e-38 
+TR:G5AQR4 G5AQR4_HETGA Protocadherin-12 OS=Heterocephalus glaber OX=10181                   4.0e-38 
+TR:A0A6P3FDS0 A0A6P3FDS0_OCTDE protocadherin-12 OS=Octodon degus OX=10160 GN=Pcdh12         2.0e-37 
+TR:A0A7K7B5C7 A0A7K7B5C7_9AVES PCD12 protein (Fragment) OS=Nothoprocta ornata               9.0e-31 
+TR:A0A8C6YRS2 A0A8C6YRS2_NOTPE Protocadherin 12 OS=Nothoprocta perdicaria OX=30464          1.0e-30 
+TR:A0A7K7WEV3 A0A7K7WEV3_9AVES PCD12 protein (Fragment) OS=Nothocercus julius               3.0e-30 
+TR:A0A7K9B6J1 A0A7K9B6J1_DRONO PCD12 protein (Fragment) OS=Dromaius novaehollandiae         4.0e-30 
+TR:A0A7K7VES2 A0A7K7VES2_EUDEL PCD12 protein (Fragment) OS=Eudromia elegans                 4.0e-30 
+TR:A0A8B9P1Z5 A0A8B9P1Z5_APTOW Protocadherin 12 OS=Apteryx owenii OX=8824 PE=4              8.0e-30 
+TR:A0A8C8VN78 A0A8C8VN78_9SAUR Protocadherin 12 OS=Pelusios castaneus OX=367368             1.0e-29 
+TR:A0A7M4F9M7 A0A7M4F9M7_CROPO Protocadherin 12 OS=Crocodylus porosus OX=8502               2.0e-29 
+TR:M7BTF1 M7BTF1_CHEMY Protocadherin-12 OS=Chelonia mydas OX=8469 GN=UY3_03709              2.0e-29 
+TR:A0A7K4KF14 A0A7K4KF14_9AVES PCD12 protein (Fragment) OS=Crypturellus soui                3.0e-29 
+TR:A0A674J6K7 A0A674J6K7_TERCA Protocadherin 12 OS=Terrapene carolina triunguis             7.0e-29 
+TR:A0A4D9DR68 A0A4D9DR68_9SAUR Arylacetamide deacetylase-like 4 OS=Platysternon             7.0e-29 
+TR:A0A8C3FUD1 A0A8C3FUD1_CHRPI Protocadherin 12 OS=Chrysemys picta bellii OX=8478           7.0e-29 
+TR:A0A8C3XPX9 A0A8C3XPX9_CHESE Protocadherin 12 OS=Chelydra serpentina OX=8475              1.0e-28 
+TR:A0A6P7YT63 A0A6P7YT63_9AMPH protocadherin-12 OS=Microcaecilia unicolor OX=1415580        1.0e-28 
+TR:A0A7L0WRH4 A0A7L0WRH4_ALELA PCD12 protein (Fragment) OS=Alectura lathami                 2.0e-28 
+TR:A0A452HY46 A0A452HY46_9SAUR Protocadherin 12 OS=Gopherus agassizii OX=38772              2.0e-28 
+TR:A0A7L3FDX7 A0A7L3FDX7_9GRUI PCD12 protein (Fragment) OS=Zapornia atra OX=2585822         2.0e-28 
+TR:A0A8C4VQA9 A0A8C4VQA9_9SAUR Protocadherin 12 OS=Gopherus evgoodei OX=1825980             3.0e-28 
+TR:A0A7L3NBZ8 A0A7L3NBZ8_9AVES PCD12 protein (Fragment) OS=Oreotrochilus melanogaster       3.0e-28 
+TR:A0A852KQN5 A0A852KQN5_UROIN PCD12 protein (Fragment) OS=Urocolius indicus                3.0e-28 
+TR:A0A851YA60 A0A851YA60_9AVES PCD12 protein (Fragment) OS=Halcyon senegalensis             3.0e-28 
+TR:A0A7K8TU93 A0A7K8TU93_OCEOC PCD12 protein (Fragment) OS=Oceanites oceanicus              3.0e-28 
+TR:A0A6P8Q8W5 A0A6P8Q8W5_GEOSA protocadherin-12 OS=Geotrypetes seraphini OX=260995          3.0e-28 
+TR:A0A7L3J9X5 A0A7L3J9X5_THACH PCD12 protein (Fragment) OS=Thalassarche chlororhynchos      5.0e-28 
+TR:A0A2P4THE3 A0A2P4THE3_BAMTH Uncharacterized protein OS=Bambusicola thoracicus            6.0e-28 
+TR:A0A8C2TGP6 A0A8C2TGP6_COTJA Protocadherin 12 OS=Coturnix japonica OX=93934               6.0e-28 
+TR:A0A8C0HDG3 A0A8C0HDG3_CHEAB Protocadherin 12 OS=Chelonoidis abingdonii OX=106734         6.0e-28 
+TR:F1NI83 F1NI83_CHICK Uncharacterized protein OS=Gallus gallus OX=9031                     6.0e-28 
+TR:K7FGK9 K7FGK9_PELSI Protocadherin 12 OS=Pelodiscus sinensis OX=13735                     6.0e-28 
+TR:A0A7L0F6C2 A0A7L0F6C2_CORCN PCD12 protein (Fragment) OS=Corythaixoides concolor          6.0e-28 
+TR:A0A2I0TFM8 A0A2I0TFM8_LIMLA Protocadherin-12 OS=Limosa lapponica baueri                  9.0e-28 
+TR:A0A7K9FJQ7 A0A7K9FJQ7_STEPR PCD12 protein (Fragment) OS=Stercorarius parasiticus         1.0e-27 
+TR:A0A7K5D4G0 A0A7K5D4G0_9TYRA PCD12 protein (Fragment) OS=Pachyramphus minor               1.0e-27 
+TR:A0A7K5HQ58 A0A7K5HQ58_CROSL PCD12 protein (Fragment) OS=Crotophaga sulcirostris          1.0e-27 
+TR:A0A7L3WH09 A0A7L3WH09_9GRUI PCD12 protein (Fragment) OS=Atlantisia rogersi               2.0e-27 
+TR:A0A8C9FP33 A0A8C9FP33_PAVCR Protocadherin 12 OS=Pavo cristatus OX=9049 PE=4              2.0e-27 
+TR:G1MR99 G1MR99_MELGA Uncharacterized protein OS=Meleagris gallopavo OX=9103               2.0e-27 
+TR:A0A7K6TUB3 A0A7K6TUB3_9AVES PCD12 protein (Fragment) OS=Aegotheles bennettii             2.0e-27 
+TR:A0A7L0T0Y4 A0A7L0T0Y4_PODPO PCD12 protein (Fragment) OS=Podilymbus podiceps              2.0e-27 
+TR:A0A7K6YS80 A0A7K6YS80_ALCTO PCD12 protein (Fragment) OS=Alca torda OX=28689              2.0e-27 
+TR:A0A7K8VV93 A0A7K8VV93_9FURN PCD12 protein (Fragment) OS=Sclerurus mexicanus              2.0e-27 
+TR:A0A7K9EG77 A0A7K9EG77_BARMA PCD12 protein (Fragment) OS=Baryphthengus martii             2.0e-27 
+TR:A0A8C3BSI7 A0A8C3BSI7_CAIMO Protocadherin 12 OS=Cairina moschata domestica               2.0e-27 
+TR:A0A7K5AA78 A0A7K5AA78_9AVES PCD12 protein (Fragment) OS=Centropus unirufus               2.0e-27 
+TR:A0A8C5U0Q0 A0A8C5U0Q0_9PASS Protocadherin 12 OS=Malurus cyaneus samueli                  2.0e-27 
+TR:A0A2I0LSQ0 A0A2I0LSQ0_COLLI Protocadherin 12 OS=Columba livia OX=8932 GN=PCDH12          2.0e-27 
+TR:A0A8C3BRX6 A0A8C3BRX6_CAIMO Protocadherin 12 OS=Cairina moschata domestica               2.0e-27 
+TR:A0A851D3E0 A0A851D3E0_TODME PCD12 protein (Fragment) OS=Todus mexicanus                  2.0e-27 
+TR:A0A7K6GZ27 A0A7K6GZ27_9PASS PCD12 protein (Fragment) OS=Malurus elegans                  2.0e-27 
+TR:A0A8C3BUL5 A0A8C3BUL5_CAIMO Protocadherin 12 OS=Cairina moschata domestica               2.0e-27 
+TR:A0A663N1Z3 A0A663N1Z3_ATHCN Protocadherin 12 OS=Athene cunicularia OX=194338             3.0e-27 
+TR:A0A7K4S5X7 A0A7K4S5X7_COLPI PCD12 protein (Fragment) OS=Columbina picui                  3.0e-27 
+TR:A0A8D2NPX0 A0A8D2NPX0_ZOSLA Protocadherin 12 OS=Zosterops lateralis melanops             3.0e-27 
+TR:A0A8D2NUC8 A0A8D2NUC8_ZOSLA Protocadherin 12 OS=Zosterops lateralis melanops             3.0e-27 
+TR:A0A7K9Z493 A0A7K9Z493_9GALL PCD12 protein (Fragment) OS=Odontophorus gujanensis          3.0e-27 
+TR:A0A8D2NRL8 A0A8D2NRL8_ZOSLA Protocadherin 12 OS=Zosterops lateralis melanops             3.0e-27 
+TR:A0A663N1Y8 A0A663N1Y8_ATHCN Protocadherin 12 OS=Athene cunicularia OX=194338             3.0e-27 
+TR:A0A7K6TFQ5 A0A7K6TFQ5_CALNI PCD12 protein (Fragment) OS=Caloenas nicobarica              3.0e-27 
+TR:A0A7L4BH48 A0A7L4BH48_9CHAR PCD12 protein (Fragment) OS=Phaetusa simplex                 3.0e-27 
+TR:A0A7L1IW53 A0A7L1IW53_SMUAF PCD12 protein (Fragment) OS=Smutsornis africanus             3.0e-27 
+TR:A0A7L2YRC9 A0A7L2YRC9_JACJC PCD12 protein (Fragment) OS=Jacana jacana OX=54508           3.0e-27 
+TR:A0A7L1JUT5 A0A7L1JUT5_RYNNI PCD12 protein (Fragment) OS=Rynchops niger OX=227184         3.0e-27 
+TR:A0A7K5NII1 A0A7K5NII1_CHRMC PCD12 protein (Fragment) OS=Chroicocephalus                  3.0e-27 
+TR:A0A7L4MEJ5 A0A7L4MEJ5_GLAPT PCD12 protein (Fragment) OS=Glareola pratincola              3.0e-27 
+TR:A0A7L3AWD7 A0A7L3AWD7_9AVES PCD12 protein (Fragment) OS=Syrrhaptes paradoxus             3.0e-27 
+TR:A0A7K7ZAG1 A0A7K7ZAG1_9PASE PCD12 protein (Fragment) OS=Melanocharis versteri            3.0e-27 
+TR:A0A663N244 A0A663N244_ATHCN Protocadherin 12 OS=Athene cunicularia OX=194338             3.0e-27 
+TR:A0A1V4JVY7 A0A1V4JVY7_PATFA Protocadherin-12 OS=Patagioenas fasciata monilis             3.0e-27 
+TR:A0A8D0FAD6 A0A8D0FAD6_STROC Protocadherin 12 OS=Strix occidentalis caurina               4.0e-27 
+TR:A0A226NCI4 A0A226NCI4_CALSU Uncharacterized protein OS=Callipepla squamata               4.0e-27 
+TR:A0A8C8AP57 A0A8C8AP57_9STRI Protocadherin 12 OS=Otus sunia OX=257818 PE=4                4.0e-27 
+TR:A0A7L0NWB9 A0A7L0NWB9_9PASS PCD12 protein (Fragment) OS=Formicarius rufipectus           4.0e-27 
+TR:A0A7L3PDX4 A0A7L3PDX4_9DEND PCD12 protein (Fragment) OS=Xiphorhynchus elegans            4.0e-27 
+TR:A0A7K4WTP7 A0A7K4WTP7_9TYRA PCD12 protein (Fragment) OS=Tachuris rubrigastra             4.0e-27 
+TR:A0A7L1A521 A0A7L1A521_9PASS PCD12 protein (Fragment) OS=Oxyruncus cristatus              4.0e-27 
+TR:A0A850T3C7 A0A850T3C7_GRUAM PCD12 protein (Fragment) OS=Grus americana OX=9117           4.0e-27 
+TR:A0A851MSG6 A0A851MSG6_9DEND PCD12 protein (Fragment) OS=Campylorhamphus                  4.0e-27 
+TR:A0A7K6AM50 A0A7K6AM50_UPUEP PCD12 protein (Fragment) OS=Upupa epops OX=57439             4.0e-27 
+TR:A0A7K8SV42 A0A7K8SV42_9AVES PCD12 protein (Fragment) OS=Nyctibius bracteatus             4.0e-27 
+TR:A0A7L3YWI2 A0A7L3YWI2_FREGA PCD12 protein (Fragment) OS=Fregetta grallaria               4.0e-27 
+TR:A0A850VWF3 A0A850VWF3_FREMA PCD12 protein (Fragment) OS=Fregata magnificens              4.0e-27 
+TR:A0A7K5YJE0 A0A7K5YJE0_9AVES PCD12 protein (Fragment) OS=Pterocles burchelli              4.0e-27 
+TR:A0A851NVI0 A0A851NVI0_9GALL PCD12 protein (Fragment) OS=Penelope pileata                 6.0e-27 
+TR:A0A8C0E685 A0A8C0E685_BUBBB Protocadherin 12 OS=Bubo bubo OX=30461 PE=4                  6.0e-27 
+TR:A0A7K9AFG9 A0A7K9AFG9_9PASS PCD12 protein (Fragment) OS=Grallaria varia                  6.0e-27 
+TR:A0A7K6SC01 A0A7K6SC01_9GRUI PCD12 protein (Fragment) OS=Rhynochetos jubatus              6.0e-27 
+TR:A0A7K5TXW9 A0A7K5TXW9_CEPOR PCD12 protein (Fragment) OS=Cephalopterus ornatus            6.0e-27 
+TR:A0A7L1T7R5 A0A7L1T7R5_ARAGA PCD12 protein (Fragment) OS=Aramus guarauna                  6.0e-27 
+TR:A0A851FN92 A0A851FN92_PITSO PCD12 protein (Fragment) OS=Pitta sordida OX=9163            6.0e-27 
+TR:A0A7L0J893 A0A7L0J893_PIPCL PCD12 protein (Fragment) OS=Piprites chloris                 6.0e-27 
+TR:A0A7L0TT23 A0A7L0TT23_CHOAC PCD12 protein (Fragment) OS=Chordeiles acutipennis           6.0e-27 
+TR:A0A7L0Q5V1 A0A7L0Q5V1_9AVES PCD12 protein (Fragment) OS=Mesembrinibis cayennensis        6.0e-27 
+TR:A0A850ZRL3 A0A850ZRL3_SULDA PCD12 protein (Fragment) OS=Sula dactylatra                  6.0e-27 
+TR:A0A7L1HEG8 A0A7L1HEG8_9CHAR PCD12 protein (Fragment) OS=Nycticryphes semicollaris        6.0e-27 
+TR:A0A7K4JDR1 A0A7K4JDR1_GEOCA PCD12 protein (Fragment) OS=Geococcyx californianus          6.0e-27 
+TR:A0A7L1XF97 A0A7L1XF97_9AVES PCD12 protein (Fragment) OS=Thinocorus orbignyianus          6.0e-27 
+TR:A0A7L2G1R5 A0A7L2G1R5_NYCGR PCD12 protein (Fragment) OS=Nyctibius grandis                6.0e-27 
+TR:A0A7L3Y088 A0A7L3Y088_9AVES PCD12 protein (Fragment) OS=Calonectris borealis             6.0e-27 
+TR:A0A7L0DW50 A0A7L0DW50_TROML PCD12 protein (Fragment) OS=Trogon melanurus                 6.0e-27 
+TR:A0A7K9IBD4 A0A7K9IBD4_9AVES PCD12 protein (Fragment) OS=Bucco capensis OX=135168         6.0e-27 
+TR:A0A7K5R453 A0A7K5R453_9PASE PCD12 protein (Fragment) OS=Prunella himalayana              6.0e-27 
+TR:A0A7L2ZUU7 A0A7L2ZUU7_9PASE PCD12 protein (Fragment) OS=Prunella fulvescens              6.0e-27 
+TR:A0A6J2ILC5 A0A6J2ILC5_9PASS protocadherin-12 OS=Pipra filicauda OX=649802                6.0e-27 
+TR:A0A3Q0HJC5 A0A3Q0HJC5_ALLSI protocadherin-12 isoform X3 OS=Alligator sinensis            7.0e-27 
+TR:A0A3Q0HNI6 A0A3Q0HNI6_ALLSI protocadherin-12 isoform X2 OS=Alligator sinensis            7.0e-27 
+TR:R0L7N3 R0L7N3_ANAPL Protocadherin-12 (Fragment) OS=Anas platyrhynchos                    8.0e-27 
+TR:A0A226PCG5 A0A226PCG5_COLVI Uncharacterized protein OS=Colinus virginianus               8.0e-27 
+TR:A0A6J3DTJ8 A0A6J3DTJ8_AYTFU protocadherin-12 OS=Aythya fuligula OX=219594                8.0e-27 
+TR:A0A7K7L1F5 A0A7K7L1F5_9AVES PCD12 protein (Fragment) OS=Asarcornis scutulata             8.0e-27 
+TR:A0A7K7Y8W9 A0A7K7Y8W9_THRLU PCD12 protein (Fragment) OS=Thryothorus ludovicianus         8.0e-27 
+TR:A0A1U8DT88 A0A1U8DT88_ALLSI protocadherin-12 isoform X1 OS=Alligator sinensis            8.0e-27 
+TR:A0A7K4QY98 A0A7K4QY98_9TYRA PCD12 protein (Fragment) OS=Neopipo cinnamomea               8.0e-27 
+
+The following sequences from BLAST results were NOT used to build this profile :
+--------------------------------------------------------------------------------
+...
+******************************************************************************
+
+maximum : 247.971000
+V :     1 :     20.000 :++++|
+P :     2 :    189.000 :######################################       |
+S :     3 :     82.000 :################                             |
+G :     4 :    193.000 :######################################       |
+T :     5 :    201.971 :########################################        |
+V :     6 :    198.486 :########################################        |
+I :     7 :    200.971 :########################################        |
+G :     8 :    201.971 :########################################        |
+K :     9 :    111.000 :######################                          |
+L :    10 :    201.971 :########################################        |
+S :    11 :    145.986 :#############################                   |
+Q :    12 :    122.500 :########################                        |
+E :    13 :     95.986 :+++++++++++++++++++                             |
+L :    14 :    100.000 :++++++++++++++++++++                            |
+G :    15 :    101.971 :++++++++++++++++++++                            |
+R :    16 :     46.500 :+++++++++                                       |
+E :    17 :    103.500 :++++++++++++++++++++                            |
+E :    18 :    183.986 :+++++++++++++++++++++++++++++++++++++           |
+R :    19 :     85.000 :+++++++++++++++++                               |
+R :    20 :     38.000 :+++++++                                         |
+R :    21 :     25.000 :+++++                                           |
+Q :    22 :     72.000 :++++++++++++++                                  |
+A :    23 :    115.000 :+++++++++++++++++++++++                        |
+G :    24 :     72.000 :++++++++++++++                                 |
+A :    25 :     94.500 :+++++++++++++++++++                            |
+A :    26 :     81.000 :################                                |
+F :    27 :    200.000 :########################################        |
+Q :    28 :    190.000 :######################################          |
+V :    29 :    131.986 :##########################                      |
+L :    30 :    158.500 :###############################                 |
+Q :    31 :    157.486 :###############################                 |
+L :    32 :     94.000 :##################                              |
+P :    33 :    187.000 :#####################################          |
+Q :    34 :    109.500 :######################                         |
+A :    35 :     67.000 :+++++++++++++                                  |
+L :    36 :    106.500 :+++++++++++++++++++++                          |
+P :    37 :    200.000 :++++++++++++++++++++++++++++++++++++++++       |
+I :    38 :     90.000 :++++++++++++++++++      |
+Q :    39 :    109.000 :+++++++++++++++++++++                          |
+V :    40 :    196.500 :+++++++++++++++++++++++++++++++++++++++         |
+D :    41 :     83.971 :++++++++++++++++                                |
+S :    42 :    160.971 :++++++++++++++++++++++++++++++++                |
+E :    43 :    102.500 :++++++++++++++++++++                            |
+E :    44 :    106.486 :#####################                           |
+G :    45 :    201.000 :########################################        |
+L :    46 :    137.971 :###########################                     |
+L :    47 :    198.500 :########################################        |
+S :    48 :    196.486 :#######################################         |
+T :    49 :    201.000 :########################################        |
+I :    50 :    140.971 :############################                    |
+Q :    51 :    102.500 :####################                            |
+V :    52 :    198.471 :########################################        |
+D :    53 :     83.971 :################                                |
+S :    54 :    160.000 :++++++++++++++++++++++++++++++++                |
+E :    55 :    102.986 :++++++++++++++++++++                            |
+E :    56 :    106.000 :+++++++++++++++++++++                           |
+G :    57 :    201.971 :++++++++++++++++++++++++++++++++++++++++        |
+L :    58 :    137.486 :+++++++++++++++++++++++++++                     |
+L :    59 :    198.500 :########################################        |
+S :    60 :    196.486 :#######################################         |
+T :    61 :    197.971 :#######################################         |
+W :    62 :     18.000 :###                                             |
+D :    63 :    187.500 :#####################################           |
+P :    64 :    200.000 :########################################        |
+C :    65 :    201.000 :########################################        |
+L :    66 :    115.500 :#######################                         |
+V :    67 :    188.500 :######################################          |
+S :    68 :    198.986 :########################################        |
+F :    69 :    200.971 :########################################        |
+D :    70 :    198.971 :########################################        |
+V :    71 :    201.000 :########################################        |
+L :    72 :    196.971 :#######################################         |
+A :    73 :    182.486 :++++++++++++++++++++++++++++++++++++            |
+T :    74 :     98.471 :+++++++++++++++++++                             |
+G :    75 :     84.000 :++++++++++++++++                                |
+D :    76 :    116.000 :+++++++++++++++++++++++                         |
+L :    77 :    176.000 :+++++++++++++++++++++++++++++++++++             |
+A :    78 :    194.000 :+++++++++++++++++++++++++++++++++++++++         |
+L :    79 :    200.000 :++++++++++++++++++++++++++++++++++++++++        |
+I :    80 :    196.471 :#######################################         |
+H :    81 :    200.000 :########################################        |
+V :    82 :    199.500 :########################################        |
+E :    83 :    197.500 :#######################################         |
+I :    84 :    156.971 :###############################                 |
+Q :    85 :    193.986 :#######################################         |
+V :    86 :    201.000 :########################################        |
+L :    87 :    197.000 :#######################################         |
+D :    88 :    201.971 :++++++++++++++++++++++++++++++++++++++++        |
+I :    89 :    178.471 :+++++++++++++++++++++++++++++++++++             |
+N :    90 :    201.971 :++++++++++++++++++++++++++++++++++++++++        |
+D :    91 :    201.971 :++++++++++++++++++++++++++++++++++++++++        |
+H :    92 :    161.986 :++++++++++++++++++++++++++++++++                |
+Q :    93 :     83.000 :++++++++++++++++                                |
+P :    94 :    201.971 :++++++++++++++++++++++++++++++++++++++++        |
+R :    95 :    147.500 :+++++++++++++++++++++++++++++                   |
+F :    96 :    201.971 :########################################        |
+Q :    97 :    193.986 :#######################################         |
+V :    98 :    201.971 :########################################        |
+L :    99 :    197.000 :#######################################         |
+D :   100 :    201.971 :########################################        |
+I :   101 :    178.971 :####################################            |
+N :   102 :    201.971 :########################################        |
+D :   103 :    201.971 :########################################        |
+H :   104 :    161.986 :++++++++++++++++++++++++++++++++                |
+Q :   105 :     83.000 :++++++++++++++++                                |
+P :   106 :    201.971 :++++++++++++++++++++++++++++++++++++++++        |
+R :   107 :    147.500 :+++++++++++++++++++++++++++++                   |
+F :   108 :    201.971 :++++++++++++++++++++++++++++++++++++++++        |

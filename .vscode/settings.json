@@ -2,7 +2,13 @@
   "files.associations": {
     "parser.h": "c",
     "tree.h": "c",
-    "global.h": "c"
+    "global.h": "c",
+    "readargs.h": "c",
+    "string.h": "c",
+    "macros.h": "c",
+    "types.h": "c",
+    "ctype.h": "c",
+    "stdbool.h": "c"
   },
   "C_Cpp_Runner.cCompilerPath": "/mnt/c/usr/bin/gcc",
   "C_Cpp_Runner.cppCompilerPath": "g++",

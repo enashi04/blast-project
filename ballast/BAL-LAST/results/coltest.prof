@@ -1,0 +1,1003 @@
+BALLAST profile coltest.prof
+
+The following sequences from BLAST results were used to build this profile :
+--------------------------------------------------------------------------------
+SP:Q5KU26 COL12_HUMAN Collectin-12 OS=Homo sapiens OX=9606 GN=COLEC12 PE=1                  0.0     
+TR:A0A2K5ICB2 A0A2K5ICB2_COLAP Collectin-12 OS=Colobus angolensis palliatus                 0.0     
+TR:A0A2K6KYJ2 A0A2K6KYJ2_RHIBE Uncharacterized protein OS=Rhinopithecus bieti               0.0     
+TR:G3QHQ0 G3QHQ0_GORGO Collectin-12 OS=Gorilla gorilla gorilla OX=9595                      0.0     
+TR:A0A0D9RYG4 A0A0D9RYG4_CHLSB Collectin-12 OS=Chlorocebus sabaeus OX=60711                 0.0     
+TR:A0A2K6RAC9 A0A2K6RAC9_RHIRO Collectin-12 OS=Rhinopithecus roxellana OX=61622             0.0     
+TR:G1R560 G1R560_NOMLE Collectin-12 OS=Nomascus leucogenys OX=61853 GN=COLEC12              0.0     
+TR:A0A2R9A3W1 A0A2R9A3W1_PANPA Collectin-12 OS=Pan paniscus OX=9597 GN=COLEC12              0.0     
+TR:H2NW01 H2NW01_PONAB Collectin-12 OS=Pongo abelii OX=9601 GN=COLEC12                      0.0     
+TR:A0A2K6DPS6 A0A2K6DPS6_MACNE Collectin-12 OS=Macaca nemestrina OX=9545 GN=COLEC12         0.0     
+TR:A0A096MS31 A0A096MS31_PAPAN Collectin-12 OS=Papio anubis OX=9555 GN=COLEC12              0.0     
+TR:A0A1D5R904 A0A1D5R904_MACMU Collectin-12 OS=Macaca mulatta OX=9544 GN=COLEC12            0.0     
+TR:K7DKK3 K7DKK3_PANTR Collectin-12 OS=Pan troglodytes OX=9598 GN=COLEC12                   0.0     
+TR:A0A2K6U6L3 A0A2K6U6L3_SAIBB Collectin-12 OS=Saimiri boliviensis boliviensis              0.0     
+TR:A0A8C9LXM0 A0A8C9LXM0_9PRIM Collectin-12 OS=Piliocolobus tephrosceles OX=591936          0.0     
+TR:A0A2K5X6Z3 A0A2K5X6Z3_MACFA Collectin-12 OS=Macaca fascicularis OX=9541                  0.0     
+TR:A0A2K5LVR0 A0A2K5LVR0_CERAT Collectin-12 OS=Cercocebus atys OX=9531 GN=COLEC12           0.0     
+TR:A0A2R8MEH9 A0A2R8MEH9_CALJA Collectin-12 OS=Callithrix jacchus OX=9483 GN=COLEC12        0.0     
+TR:A0A8D2FD86 A0A8D2FD86_THEGE Collectin-12 OS=Theropithecus gelada OX=9565                 0.0     
+TR:A0A8D2DU07 A0A8D2DU07_SCIVU Collectin-12 OS=Sciurus vulgaris OX=55149 GN=COLEC12         0.0     
+TR:A0A8B6ZIC8 A0A8B6ZIC8_ORYAF Collectin-12 OS=Orycteropus afer afer OX=1230840             0.0     
+TR:A0A2K5CRZ3 A0A2K5CRZ3_AOTNA Collectin-12 OS=Aotus nancymaae OX=37293 GN=COLEC12          0.0     
+TR:A0A6J3J3J3 A0A6J3J3J3_SAPAP Collectin-12 OS=Sapajus apella OX=9515 GN=COLEC12            0.0     
+TR:A0A2K5PYV1 A0A2K5PYV1_CEBIM Collectin-12 OS=Cebus imitator OX=2715852 GN=COLEC12         0.0     
+TR:A0A2K5XWU9 A0A2K5XWU9_MANLE Collectin-12 OS=Mandrillus leucophaeus OX=9568               0.0     
+TR:A0A287CY30 A0A287CY30_ICTTR Collectin-12 OS=Ictidomys tridecemlineatus OX=43179          0.0     
+TR:A0A8B7F142 A0A8B7F142_MICMU Collectin-12 OS=Microcebus murinus OX=30608                  0.0     
+TR:A0A2K6GPV5 A0A2K6GPV5_PROCO Collectin-12 OS=Propithecus coquereli OX=379532              0.0     
+TR:A0A8B7S933 A0A8B7S933_HIPAR Collectin-12 OS=Hipposideros armiger OX=186990               0.0     
+TR:A0A8C9UR96 A0A8C9UR96_SPEDA Collectin-12 OS=Spermophilus dauricus OX=99837               0.0     
+TR:A0A671FWJ8 A0A671FWJ8_RHIFE Collectin-12 OS=Rhinolophus ferrumequinum OX=59479           0.0     
+TR:A0A671FMN0 A0A671FMN0_RHIFE Collectin-12 OS=Rhinolophus ferrumequinum OX=59479           0.0     
+TR:A0A8D2KE74 A0A8D2KE74_UROPR Collectin-12 OS=Urocitellus parryii OX=9999                  0.0     
+TR:A0A8C5ZES0 A0A8C5ZES0_MARMA Collectin-12 OS=Marmota marmota marmota OX=9994              0.0     
+TR:A0A8I3MJN7 A0A8I3MJN7_CANLF Collectin-12 OS=Canis lupus familiaris OX=9615               0.0     
+TR:A0A8C0R317 A0A8C0R317_CANLU Collectin-12 OS=Canis lupus dingo OX=286419                  0.0     
+TR:A0A2Y9EAT5 A0A2Y9EAT5_TRIMA Collectin-12 OS=Trichechus manatus latirostris               0.0     
+TR:A0A3Q7QK90 A0A3Q7QK90_CALUR Collectin-12 OS=Callorhinus ursinus OX=34884                 0.0     
+TR:A0A7J8HH39 A0A7J8HH39_MOLMO Collectin-12 OS=Molossus molossus OX=27622 GN=HJG59_003181   0.0     
+TR:A0A8C6RDQ9 A0A8C6RDQ9_NANGA Collectin-12 OS=Nannospalax galili OX=1026970                0.0     
+TR:M3Y247 M3Y247_MUSPF Collectin-12 OS=Mustela putorius furo OX=9669 GN=COLEC12             0.0     
+TR:G1LJ83 G1LJ83_AILME Collectin-12 OS=Ailuropoda melanoleuca OX=9646 GN=COLEC12            0.0     
+TR:A0A2Y9IS46 A0A2Y9IS46_ENHLU Collectin-12 OS=Enhydra lutris kenyoni OX=391180             0.0     
+TR:A0A6P6EVV7 A0A6P6EVV7_OCTDE Collectin-12 OS=Octodon degus OX=10160 GN=Colec12            0.0     
+TR:A0A2U3WPZ6 A0A2U3WPZ6_ODORO Collectin-12 OS=Odobenus rosmarus divergens                  0.0     
+TR:A0A452QD85 A0A452QD85_URSAM Collectin-12 OS=Ursus americanus OX=9643 GN=COLEC12          0.0     
+TR:A0A8M1G261 A0A8M1G261_URSMA collectin-12 OS=Ursus maritimus OX=29073 GN=COLEC12          0.0     
+TR:A0A3Q7SYV8 A0A3Q7SYV8_VULVU Collectin-12 OS=Vulpes vulpes OX=9627 GN=COLEC12             0.0     
+TR:A0A667I7R3 A0A667I7R3_LYNCA Collectin-12 OS=Lynx canadensis OX=61383 PE=4                0.0     
+TR:A0A6I9JWR7 A0A6I9JWR7_CHRAS Collectin-12 OS=Chrysochloris asiatica OX=185453             0.0     
+TR:A0A6I9ZK49 A0A6I9ZK49_ACIJB Collectin-12 OS=Acinonyx jubatus OX=32536 GN=COLEC12         0.0     
+TR:G3T412 G3T412_LOXAF Collectin-12 OS=Loxodonta africana OX=9785 GN=COLEC12                0.0     
+TR:A0A1S3F3C3 A0A1S3F3C3_DIPOR Collectin-12 OS=Dipodomys ordii OX=10020 GN=Colec12          0.0     
+TR:G1TYB6 G1TYB6_RABIT Collectin-12 OS=Oryctolagus cuniculus OX=9986 GN=COLEC12             0.0     
+TR:A0A667IK33 A0A667IK33_LYNCA Collectin subfamily member 12 OS=Lynx canadensis             0.0     
+TR:A0A673V0P2 A0A673V0P2_SURSU Collectin-12 OS=Suricata suricatta OX=37032                  0.0     
+TR:A0A8C7BF61 A0A8C7BF61_NEOVI Collectin-12 OS=Neovison vison OX=452646 GN=COLEC12          0.0     
+TR:A0A6P3QE36 A0A6P3QE36_PTEVA Collectin-12 OS=Pteropus vampyrus OX=132908                  0.0     
+TR:A0A8C8XYK0 A0A8C8XYK0_PANLE Collectin-12 OS=Panthera leo OX=9689 GN=COLEC12              0.0     
+TR:A0A7J8DGE1 A0A7J8DGE1_ROUAE Collectin-12 OS=Rousettus aegyptiacus OX=9407                0.0     
+TR:A0A2I2U1P2 A0A2I2U1P2_FELCA Collectin-12 OS=Felis catus OX=9685 GN=COLEC12               0.0     
+TR:M3WN82 M3WN82_FELCA Collectin-12 OS=Felis catus OX=9685 GN=COLEC12 PE=4                  0.0     
+TR:A0A8C9AYS1 A0A8C9AYS1_PROSS Collectin-12 OS=Prolemur simus OX=1328070 GN=COLEC12         0.0     
+TR:A0A6I9M0Z0 A0A6I9M0Z0_PERMB Collectin-12 OS=Peromyscus maniculatus bairdii               0.0     
+TR:A0A8C3W7L5 A0A8C3W7L5_9CETA Collectin-12 OS=Catagonus wagneri OX=51154 GN=COLEC12        0.0     
+TR:A0A7E6CDT7 A0A7E6CDT7_9CHIR Collectin-12 OS=Phyllostomus discolor OX=89673               0.0     
+TR:A0A1U7R851 A0A1U7R851_MESAU Collectin-12 OS=Mesocricetus auratus OX=10036                0.0     
+SP:A6QP79 COL12_BOVIN Collectin-12 OS=Bos taurus OX=9913 GN=COLEC12 PE=2                    0.0     
+TR:H0VI62 H0VI62_CAVPO Collectin-12 OS=Cavia porcellus OX=10141 GN=COLEC12                  0.0     
+TR:A0A6P5DV72 A0A6P5DV72_BOSIN Collectin-12 OS=Bos indicus OX=9915 GN=COLEC12               0.0     
+TR:A0A8B9Y2I4 A0A8B9Y2I4_BOSMU Collectin-12 OS=Bos mutus grunniens OX=30521                 0.0     
+TR:F7B187 F7B187_HORSE Collectin-12 OS=Equus caballus OX=9796 GN=COLEC12                    0.0     
+TR:A0A3Q2HGB8 A0A3Q2HGB8_HORSE Collectin-12 OS=Equus caballus OX=9796 GN=COLEC12            0.0     
+TR:A0A8C4L0S0 A0A8C4L0S0_EQUAS Collectin-12 OS=Equus asinus asinus OX=83772                 0.0     
+TR:W5PHR1 W5PHR1_SHEEP Collectin-12 OS=Ovis aries OX=9940 GN=COLEC12 PE=4                   0.0     
+TR:A0A6P3GC68 A0A6P3GC68_BISBI Collectin-12 OS=Bison bison bison OX=43346 GN=COLEC12        0.0     
+TR:A0A4W2HQJ2 A0A4W2HQJ2_BOBOX Collectin-12 OS=Bos indicus x Bos taurus OX=30522            0.0     
+TR:A0A8C2VB61 A0A8C2VB61_CHILA Collectin-12 OS=Chinchilla lanigera OX=34839                 0.0     
+TR:A0A8C6DKS6 A0A8C6DKS6_MOSMO Collectin-12 OS=Moschus moschiferus OX=68415                 0.0     
+TR:A0A8C6DAS3 A0A8C6DAS3_MOSMO Collectin-12 OS=Moschus moschiferus OX=68415                 0.0     
+TR:A0A287BFI2 A0A287BFI2_PIG Collectin-12 OS=Sus scrofa OX=9823 GN=COLEC12                  0.0     
+TR:A0A7J7VX80 A0A7J7VX80_MYOMY Collectin-12 OS=Myotis myotis OX=51298 GN=mMyoMyo1_003172    0.0     
+TR:K9J4M9 K9J4M9_PIG Collectin-12 OS=Sus scrofa OX=9823 GN=COLEC12 PE=2                     0.0     
+TR:A0A2Y9P5X9 A0A2Y9P5X9_DELLE Collectin-12 OS=Delphinapterus leucas OX=9749                0.0     
+TR:A0A2Y9SDM0 A0A2Y9SDM0_PHYMC Collectin-12 OS=Physeter macrocephalus OX=9755               0.0     
+TR:A0A452F9R8 A0A452F9R8_CAPHI Collectin-12 OS=Capra hircus OX=9925 GN=COLEC12              0.0     
+TR:A0A8C9E473 A0A8C9E473_PHOSS Collectin-12 OS=Phocoena sinus OX=42100 GN=COLEC12           0.0     
+TR:A0A6J3PU54 A0A6J3PU54_TURTR Collectin-12 OS=Tursiops truncatus OX=9739 GN=COLEC12        0.0     
+TR:A0A6J0WI37 A0A6J0WI37_ODOVR Collectin-12 OS=Odocoileus virginianus texanus               0.0     
+TR:A0A384AWJ8 A0A384AWJ8_BALAS Collectin-12 OS=Balaenoptera acutorostrata scammoni          0.0     
+TR:A0A8B8V2R2 A0A8B8V2R2_BALMU Collectin-12 OS=Balaenoptera musculus OX=9771                0.0     
+TR:A0A7J7Y7W1 A0A7J7Y7W1_PIPKU Collectin-12 OS=Pipistrellus kuhlii OX=59472                 0.0     
+TR:A0A2I3HSS7 A0A2I3HSS7_NOMLE Collectin-12 OS=Nomascus leucogenys OX=61853                 0.0     
+TR:A0A6I9I6S8 A0A6I9I6S8_VICPA collectin-12 OS=Vicugna pacos OX=30538 GN=COLEC12            0.0     
+TR:A0A2K6DPS5 A0A2K6DPS5_MACNE Collectin-12 OS=Macaca nemestrina OX=9545 GN=COLEC12         0.0     
+TR:A0A2K6U6M3 A0A2K6U6M3_SAIBB Collectin-12 OS=Saimiri boliviensis boliviensis              0.0     
+TR:A0A2K5ICJ3 A0A2K5ICJ3_COLAP Collectin-12 OS=Colobus angolensis palliatus                 0.0     
+TR:A0A2I2YZS6 A0A2I2YZS6_GORGO Collectin-12 OS=Gorilla gorilla gorilla OX=9595              0.0     
+TR:A0A2K6KYG8 A0A2K6KYG8_RHIBE Collectin-12 OS=Rhinopithecus bieti OX=61621                 0.0     
+TR:A0A096MM98 A0A096MM98_PAPAN Collectin-12 OS=Papio anubis OX=9555 GN=COLEC12              0.0     
+TR:A0A2I3SE48 A0A2I3SE48_PANTR Collectin-12 OS=Pan troglodytes OX=9598 GN=COLEC12           0.0     
+TR:F6RUR9 F6RUR9_MACMU Collectin-12 OS=Macaca mulatta OX=9544 GN=COLEC12                    0.0     
+TR:A0A2K6RAF0 A0A2K6RAF0_RHIRO Collectin-12 OS=Rhinopithecus roxellana OX=61622             0.0     
+SP:Q8K4Q8 COL12_MOUSE Collectin-12 OS=Mus musculus OX=10090 GN=Colec12                      0.0     
+TR:A0A452J8C7 A0A452J8C7_MOUSE Collectin-12 OS=Mus musculus OX=10090 GN=Colec12             0.0     
+TR:A0A2K6U6L6 A0A2K6U6L6_SAIBB Collectin-12 OS=Saimiri boliviensis boliviensis              0.0     
+TR:A0A2K5CS13 A0A2K5CS13_AOTNA Collectin-12 OS=Aotus nancymaae OX=37293 GN=COLEC12          0.0     
+TR:A0A8C6HUS3 A0A8C6HUS3_MUSSI Collectin-12 OS=Mus spicilegus OX=10103 PE=4                 0.0     
+TR:A0A2K5XWU1 A0A2K5XWU1_MANLE Collectin-12 OS=Mandrillus leucophaeus OX=9568               0.0     
+SP:Q4V885 COL12_RAT Collectin-12 OS=Rattus norvegicus OX=10116 GN=Colec12                   0.0     
+TR:A0A8C5VVT1 A0A8C5VVT1_MICMU Collectin-12 OS=Microcebus murinus OX=30608                  0.0     
+TR:A0A8C9AI11 A0A8C9AI11_PROSS Collectin-12 OS=Prolemur simus OX=1328070 GN=COLEC12         0.0     
+TR:A0A1U7TLG3 A0A1U7TLG3_CARSF Collectin-12 OS=Carlito syrichta OX=1868482                  0.0     
+TR:A0A8C6N0T7 A0A8C6N0T7_MUSSI Collectin-12 OS=Mus spicilegus OX=10103 PE=4                 0.0     
+TR:A0A2K5PYW1 A0A2K5PYW1_CEBIM Collectin-12 OS=Cebus imitator OX=2715852 GN=COLEC12         0.0     
+TR:A0A2K5PYT7 A0A2K5PYT7_CEBIM Collectin-12 OS=Cebus imitator OX=2715852 GN=COLEC12         0.0     
+TR:H0WMM4 H0WMM4_OTOGA Collectin-12 OS=Otolemur garnettii OX=30611 GN=COLEC12               0.0     
+TR:A0A8C5NZC4 A0A8C5NZC4_JACJA Collectin-12 OS=Jaculus jaculus OX=51337 GN=Colec12          0.0     
+TR:A0A671FMV2 A0A671FMV2_RHIFE Collectin-12 OS=Rhinolophus ferrumequinum OX=59479           0.0     
+TR:A0A2K5CS11 A0A2K5CS11_AOTNA Collectin-12 OS=Aotus nancymaae OX=37293 GN=COLEC12          0.0     
+TR:G3U5U0 G3U5U0_LOXAF Collectin-12 OS=Loxodonta africana OX=9785 GN=COLEC12                0.0     
+TR:G3TU05 G3TU05_LOXAF Collectin-12 OS=Loxodonta africana OX=9785 GN=COLEC12                0.0     
+TR:A0A8C5UWL5 A0A8C5UWL5_MICMU Collectin-12 OS=Microcebus murinus OX=30608                  0.0     
+TR:A0A811YGG0 A0A811YGG0_NYCPR Collectin-12 OS=Nyctereutes procyonoides OX=34880            0.0     
+TR:A0A485N794 A0A485N794_LYNPA Collectin-12 OS=Lynx pardinus OX=191816 GN=LYPA_23C019157    0.0     
+TR:A0A667J4V5 A0A667J4V5_LYNCA Collectin-12 OS=Lynx canadensis OX=61383 PE=4                0.0     
+TR:A0A8C6RHE8 A0A8C6RHE8_NANGA Collectin-12 OS=Nannospalax galili OX=1026970                0.0     
+TR:A0A8C6RFQ2 A0A8C6RFQ2_NANGA Collectin-12 OS=Nannospalax galili OX=1026970                0.0     
+TR:A0A6G1AFP6 A0A6G1AFP6_CROCR Collectin-12 (Fragment) OS=Crocuta crocuta OX=9678           0.0     
+TR:A0A3Q1N1S7 A0A3Q1N1S7_BOVIN Collectin-12 OS=Bos taurus OX=9913 GN=COLEC12                0.0     
+TR:G5BTS5 G5BTS5_HETGA Collectin-12 (Fragment) OS=Heterocephalus glaber                     0.0     
+TR:I3LZX1 I3LZX1_ICTTR Collectin-12 OS=Ictidomys tridecemlineatus OX=43179                  0.0     
+TR:A0A8B9Y3B3 A0A8B9Y3B3_BOSMU Collectin-12 OS=Bos mutus grunniens OX=30521                 0.0     
+TR:A0A5G2R5L4 A0A5G2R5L4_PIG Collectin-12 OS=Sus scrofa OX=9823 GN=COLEC12                  0.0     
+TR:G1P1P0 G1P1P0_MYOLU Collectin-12 OS=Myotis lucifugus OX=59463 GN=COLEC12                 0.0     
+TR:A0A452F9P4 A0A452F9P4_CAPHI Collectin-12 OS=Capra hircus OX=9925 GN=COLEC12              0.0     
+TR:A0A452F9T5 A0A452F9T5_CAPHI Collectin-12 OS=Capra hircus OX=9925 GN=COLEC12              0.0     
+TR:A0A452F9L6 A0A452F9L6_CAPHI Collectin-12 OS=Capra hircus OX=9925 GN=COLEC12              0.0     
+TR:L5M042 L5M042_MYODS Collectin-12 (Fragment) OS=Myotis davidii OX=225400                  0.0     
+TR:A0A4U1EP99 A0A4U1EP99_MONMO Uncharacterized protein (Fragment) OS=Monodon                0.0     
+TR:A0A5N3XYK5 A0A5N3XYK5_MUNRE Collectin-12 OS=Muntiacus reevesi OX=9886 GN=FD755_010441    0.0     
+TR:A0A484GK40 A0A484GK40_SOUCH Collectin-12 (Fragment) OS=Sousa chinensis OX=103600         0.0     
+TR:A0A4X2KNV5 A0A4X2KNV5_VOMUR Collectin-12 OS=Vombatus ursinus OX=29139 PE=4               0.0     
+TR:A0A6P5IW24 A0A6P5IW24_PHACI Collectin-12 OS=Phascolarctos cinereus OX=38626              0.0     
+TR:A0A091DA35 A0A091DA35_FUKDA Collectin-12 (Fragment) OS=Fukomys damarensis                0.0     
+TR:G3WQY7 G3WQY7_SARHA Collectin-12 OS=Sarcophilus harrisii OX=9305 GN=COLEC12              0.0     
+TR:F7G364 F7G364_MONDO Collectin-12 OS=Monodelphis domestica OX=13616 GN=COLEC12            0.0     
+TR:A0A643CIL3 A0A643CIL3_BALPH Uncharacterized protein (Fragment) OS=Balaenoptera           0.0     
+TR:L8ID82 L8ID82_9CETA Collectin-12 (Fragment) OS=Bos mutus OX=72004 GN=M91_00552           0.0     
+TR:A0A1S3WTX5 A0A1S3WTX5_ERIEU Collectin-12 OS=Erinaceus europaeus OX=9365                  0.0     
+TR:A0A1A6GUU2 A0A1A6GUU2_NEOLE Collectin-12 (Fragment) OS=Neotoma lepida OX=56216           0.0     
+TR:A0A6I8N2C9 A0A6I8N2C9_ORNAN Collectin-12 OS=Ornithorhynchus anatinus OX=9258             0.0     
+TR:A0A6I8N831 A0A6I8N831_ORNAN Collectin-12 OS=Ornithorhynchus anatinus OX=9258             0.0     
+TR:A0A6I8PGA0 A0A6I8PGA0_ORNAN Collectin-12 OS=Ornithorhynchus anatinus OX=9258             0.0     
+TR:A0A8C6N0T4 A0A8C6N0T4_MUSSI Collectin-12 OS=Mus spicilegus OX=10103 PE=4                 0.0     
+TR:F6TZ62 F6TZ62_ORNAN Collectin-12 OS=Ornithorhynchus anatinus OX=9258                     0.0     
+TR:A0A821I563 A0A821I563_9NEOB Collectin-12 OS=Ranitomeya imitator OX=111125                0.0     
+TR:A0A8C5KLB7 A0A8C5KLB7_JACJA Collectin-12 OS=Jaculus jaculus OX=51337 GN=Colec12          0.0     
+TR:A0A8C3IW28 A0A8C3IW28_CHRPI Collectin-12 OS=Chrysemys picta bellii OX=8478               0.0     
+TR:A0A2R9A8L8 A0A2R9A8L8_PANPA Collectin-12 OS=Pan paniscus OX=9597 GN=COLEC12              0.0     
+TR:A0A3Q0GZZ8 A0A3Q0GZZ8_ALLSI Collectin-12 OS=Alligator sinensis OX=38654                  0.0     
+TR:A0A4D9F2H6 A0A4D9F2H6_9SAUR Collectin-12 OS=Platysternon megacephalum OX=55544           0.0     
+TR:A0A151NFB6 A0A151NFB6_ALLMI Collectin-12 OS=Alligator mississippiensis OX=8496           0.0     
+TR:K7FK19 K7FK19_PELSI Collectin-12 OS=Pelodiscus sinensis OX=13735 GN=COLEC12              0.0     
+TR:A0A8C2TFD2 A0A8C2TFD2_COTJA Collectin-12 OS=Coturnix japonica OX=93934 GN=COLEC12        0.0     
+TR:A0A8C2T9Y0 A0A8C2T9Y0_COTJA Collectin-12 OS=Coturnix japonica OX=93934 GN=COLEC12        0.0     
+TR:A0A7M4F1N2 A0A7M4F1N2_CROPO Collectin-12 OS=Crocodylus porosus OX=8502 GN=COLEC12        0.0     
+TR:A0A663EFV1 A0A663EFV1_AQUCH Collectin-12 OS=Aquila chrysaetos chrysaetos                 0.0     
+TR:A0A8B9MSD7 A0A8B9MSD7_9AVES Collectin-12 OS=Accipiter nisus OX=211598 PE=4               0.0     
+TR:A0A6I8PQA4 A0A6I8PQA4_ORNAN Collectin-12 OS=Ornithorhynchus anatinus OX=9258             0.0     
+TR:A0A8C3J2V6 A0A8C3J2V6_9CHAR Collectin subfamily member 12 OS=Calidris pygmaea            0.0     
+TR:A0A1V4KFY4 A0A1V4KFY4_PATFA Collectin-12 OS=Patagioenas fasciata monilis                 0.0     
+TR:A0A8C8EEZ6 A0A8C8EEZ6_9STRI Collectin-12 OS=Otus sunia OX=257818 PE=4 SV=1               0.0     
+TR:A0A8B9IG14 A0A8B9IG14_ANSCY Collectin-12 OS=Anser cygnoid OX=8845 PE=4 SV=1              0.0     
+TR:A0A8B9DD69 A0A8B9DD69_ANSCY Collectin-12 OS=Anser cygnoid OX=8845 PE=4 SV=1              0.0     
+TR:A0A669QXZ2 A0A669QXZ2_PHACC Collectin-12 OS=Phasianus colchicus OX=9054                  0.0     
+TR:G1NBU6 G1NBU6_MELGA Collectin-12 OS=Meleagris gallopavo OX=9103 GN=COLEC12               0.0     
+TR:A0A803YJG6 A0A803YJG6_MELGA Collectin-12 OS=Meleagris gallopavo OX=9103                  0.0     
+TR:G3UNW8 G3UNW8_MELGA Collectin-12 OS=Meleagris gallopavo OX=9103 GN=COLEC12               0.0     
+TR:A0A7K6T3D9 A0A7K6T3D9_CALNI Collectin-12 (Fragment) OS=Caloenas nicobarica               0.0     
+TR:A0A8C0EUA1 A0A8C0EUA1_BUBBB Collectin-12 OS=Bubo bubo OX=30461 PE=4 SV=1                 0.0     
+TR:L5K2Y6 L5K2Y6_PTEAL Collectin-12 OS=Pteropus alecto OX=9402 GN=PAL_GLEAN10023175         0.0     
+TR:A0A8B7I8R1 A0A8B7I8R1_9AVES Collectin-12 OS=Apteryx mantelli mantelli OX=202946          0.0     
+TR:A0A2I0UJI3 A0A2I0UJI3_LIMLA Collectin-12 OS=Limosa lapponica baueri OX=1758121           0.0     
+TR:A0A8B9ZZG6 A0A8B9ZZG6_9AVES Collectin-12 OS=Anas zonorhyncha OX=75864 PE=4               0.0     
+TR:A0A8B9VPH2 A0A8B9VPH2_9AVES Collectin-12 OS=Anas zonorhyncha OX=75864 PE=4               0.0     
+TR:A0A8C4ULH1 A0A8C4ULH1_FALTI Collectin-12 OS=Falco tinnunculus OX=100819                  0.0     
+SP:Q2LK54 COL12_CHICK Collectin-12 OS=Gallus gallus OX=9031 GN=COLEC12                      0.0     
+TR:F1NIN5 F1NIN5_CHICK Collectin-12 OS=Gallus gallus OX=9031 GN=COLEC12                     0.0     
+TR:A0A803XMG0 A0A803XMG0_MELGA Collectin-12 OS=Meleagris gallopavo OX=9103                  0.0     
+TR:A0A8C3CSZ4 A0A8C3CSZ4_CAIMO Collectin-12 OS=Cairina moschata domestica OX=1240228        0.0     
+TR:A0A8C3GPY8 A0A8C3GPY8_CAIMO Collectin-12 OS=Cairina moschata domestica OX=1240228        0.0     
+TR:U3J8R0 U3J8R0_ANAPP Collectin-12 OS=Anas platyrhynchos platyrhynchos                     0.0     
+TR:A0A6J3CGN6 A0A6J3CGN6_AYTFU Collectin-12 OS=Aythya fuligula OX=219594 GN=COLEC12         0.0     
+TR:A0A6J2HIW4 A0A6J2HIW4_9PASS Collectin-12 OS=Pipra filicauda OX=649802 GN=COLEC12         0.0     
+TR:A0A8D0FTP5 A0A8D0FTP5_STROC Collectin-12 OS=Strix occidentalis caurina OX=311401         0.0     
+TR:A0A6J3CIG5 A0A6J3CIG5_AYTFU Collectin-12 OS=Aythya fuligula OX=219594 GN=COLEC12         0.0     
+TR:A0A2I0MX93 A0A2I0MX93_COLLI Collectin sub-family member 12 (Fragment) OS=Columba         0.0     
+TR:H0ZIV3 H0ZIV3_TAEGU Collectin-12 OS=Taeniopygia guttata OX=59729 GN=COLEC12              0.0     
+TR:A0A218V1W0 A0A218V1W0_9PASE Collectin-12 OS=Lonchura striata domestica OX=299123         0.0     
+TR:A0A8C3MGA9 A0A8C3MGA9_GEOPR Collectin-12 OS=Geospiza parvula OX=87175 GN=COLEC12         0.0     
+TR:A0A2K6U6J3 A0A2K6U6J3_SAIBB Collectin-12 OS=Saimiri boliviensis boliviensis              0.0     
+TR:U3JUP5 U3JUP5_FICAL Collectin-12 OS=Ficedula albicollis OX=59894 GN=COLEC12              0.0     
+TR:A0A2K5X6X4 A0A2K5X6X4_MACFA Collectin-12 OS=Macaca fascicularis OX=9541                  0.0     
+TR:A0A6P6IJ45 A0A6P6IJ45_PUMCO Collectin-12 OS=Puma concolor OX=9696 GN=COLEC12             0.0     
+TR:A0A8C3XFS5 A0A8C3XFS5_9PASS Collectin-12 OS=Cyanoderma ruficeps OX=181631                0.0     
+TR:A0A8C5IHL3 A0A8C5IHL3_JUNHY Collectin-12 OS=Junco hyemalis OX=40217 PE=4                 0.0     
+TR:A0A6J3J4N0 A0A6J3J4N0_SAPAP Collectin-12 OS=Sapajus apella OX=9515 GN=COLEC12            0.0     
+TR:A0A8C3TH21 A0A8C3TH21_CATUS Collectin-12 OS=Catharus ustulatus OX=91951                  0.0     
+TR:A0A8C3TKD7 A0A8C3TKD7_CATUS Collectin-12 OS=Catharus ustulatus OX=91951                  0.0     
+TR:A0A0Q3TNM0 A0A0Q3TNM0_AMAAE Collectin-12 OS=Amazona aestiva OX=12930 GN=AAES_73494       0.0     
+TR:A0A7K6PUJ2 A0A7K6PUJ2_9CORV Collectin-12 (Fragment) OS=Ifrita kowaldi OX=461245          0.0     
+TR:A0A5E4CU90 A0A5E4CU90_MARMO Collectin-12 OS=Marmota monax OX=9995 GN=GHT09_009854        0.0     
+TR:A0A8D2MI07 A0A8D2MI07_ZONAL Collectin-12 OS=Zonotrichia albicollis OX=44394              0.0     
+TR:A0A8C3IW76 A0A8C3IW76_CHRPI Collectin-12 OS=Chrysemys picta bellii OX=8478               0.0     
+TR:A0A8D0DT16 A0A8D0DT16_9SAUR Collectin-12 OS=Salvator merianae OX=96440 GN=COLEC12        0.0     
+TR:M7BSN4 M7BSN4_CHEMY Collectin-12 (Fragment) OS=Chelonia mydas OX=8469                    0.0     
+TR:A0A2U3XNR4 A0A2U3XNR4_LEPWE Collectin-12 OS=Leptonychotes weddellii OX=9713              0.0     
+TR:A0A8B7WDG3 A0A8B7WDG3_CASCN Collectin-12 OS=Castor canadensis OX=51338 GN=Colec12        0.0     
+TR:A0A8C3TEM5 A0A8C3TEM5_CHESE Collectin-12 OS=Chelydra serpentina OX=8475                  0.0     
+TR:A0A8C0V3U5 A0A8C0V3U5_CYACU Collectin-12 OS=Cyanistes caeruleus OX=156563                0.0     
+TR:A0A1S3F0Y2 A0A1S3F0Y2_DIPOR Collectin-12 OS=Dipodomys ordii OX=10020 GN=Colec12          0.0     
+TR:A0A8C7BC03 A0A8C7BC03_NEOVI Collectin-12 OS=Neovison vison OX=452646 GN=COLEC12          0.0     
+TR:A0A6J0TRL5 A0A6J0TRL5_9SAUR Collectin-12 OS=Pogona vitticeps OX=103695 GN=COLEC12        0.0     
+TR:A0A8C9JEY3 A0A8C9JEY3_PANTA Collectin-12 OS=Panthera tigris altaica OX=74533             0.0     
+TR:A0A8C8SFZ7 A0A8C8SFZ7_9SAUR Collectin-12 OS=Pelusios castaneus OX=367368                 0.0     
+TR:G1KHR4 G1KHR4_ANOCA Collectin-12 OS=Anolis carolinensis OX=28377 GN=COLEC12              0.0     
+TR:A0A8C4VSM9 A0A8C4VSM9_9SAUR Collectin-12 OS=Gopherus evgoodei OX=1825980                 0.0     
+TR:S7P415 S7P415_MYOBR Collectin-12 OS=Myotis brandtii OX=109478 GN=D623_10034234           0.0     
+TR:A0A8C6ZZN9 A0A8C6ZZN9_NOTPE Collectin-12 OS=Nothoprocta perdicaria OX=30464              0.0     
+TR:A0A7K8K7F9 A0A7K8K7F9_9GRUI Collectin-12 (Fragment) OS=Lophotis ruficrista               0.0     
+TR:A0A3Q0DBX8 A0A3Q0DBX8_MESAU Collectin-12 OS=Mesocricetus auratus OX=10036                0.0     
+TR:A0A2F0AYF1 A0A2F0AYF1_ESCRO Collectin-12 (Fragment) OS=Eschrichtius robustus             0.0     
+TR:A0A7K8KPX0 A0A7K8KPX0_9GRUI Collectin-12 (Fragment) OS=Ardeotis kori OX=89386            0.0     
+TR:A0A2Y9SHG2 A0A2Y9SHG2_PHYMC Collectin-12 OS=Physeter macrocephalus OX=9755               0.0     
+TR:A0A7L2YBD4 A0A7L2YBD4_JACJC Collectin-12 (Fragment) OS=Jacana jacana OX=54508            0.0     
+TR:A0A8D2PYX3 A0A8D2PYX3_ZOSLA Collectin-12 OS=Zosterops lateralis melanops                 0.0     
+TR:A0A093Q695 A0A093Q695_PHACA Collectin-12 (Fragment) OS=Phalacrocorax carbo               0.0     
+TR:A0A8B9MNW6 A0A8B9MNW6_9AVES Collectin-12 OS=Accipiter nisus OX=211598 PE=4               0.0     
+TR:A0A7K5I4C5 A0A7K5I4C5_CROSL Collectin-12 (Fragment) OS=Crotophaga sulcirostris           0.0     
+TR:A0A7L2HIK4 A0A7L2HIK4_SAGSE Collectin-12 (Fragment) OS=Sagittarius serpentarius          0.0     
+TR:A0A093EKW4 A0A093EKW4_TYTAL Collectin-12 (Fragment) OS=Tyto alba OX=56313                0.0     
+TR:A0A6P9D012 A0A6P9D012_PANGU Collectin-12 OS=Pantherophis guttatus OX=94885               0.0     
+TR:A0A851LCC9 A0A851LCC9_CORCR Collectin-12 (Fragment) OS=Corythaeola cristata              0.0     
+TR:A0A7L3CWZ0 A0A7L3CWZ0_PLUSO Collectin-12 (Fragment) OS=Pluvianellus socialis             0.0     
+TR:A0A7L2WGY2 A0A7L2WGY2_PANHA Collectin-12 (Fragment) OS=Pandion haliaetus                 0.0     
+TR:A0A7L0DXT9 A0A7L0DXT9_TROML Collectin-12 (Fragment) OS=Trogon melanurus                  0.0     
+TR:A0A850THM2 A0A850THM2_GRUAM Collectin-12 (Fragment) OS=Grus americana OX=9117            0.0     
+TR:A0A087V332 A0A087V332_BALRE Collectin-12 (Fragment) OS=Balearica regulorum               0.0     
+TR:A0A340WNM7 A0A340WNM7_LIPVE Collectin-12 OS=Lipotes vexillifer OX=118797                 0.0     
+
+The following sequences from BLAST results were NOT used to build this profile :
+--------------------------------------------------------------------------------
+...
+******************************************************************************
+
+maximum : 240.000000
+M :     1 :    107.000 :++++++++++++++++++++++    |
+K :     2 :    112.000 :+++++++++++++++++++++++    |
+D :     3 :    123.500 :#########################    |
+D :     4 :    131.500 :###########################    |
+F :     5 :    134.000 :###########################    |
+A :     6 :    128.500 :##########################     |
+E :     7 :    132.000 :###########################    |
+E :     8 :    133.000 :###########################    |
+E :     9 :    134.000 :###########################    |
+E :    10 :    135.500 :############################    |
+V :    11 :    136.000 :############################     |
+Q :    12 :    122.000 :#########################        |
+S :    13 :    141.500 :#############################    |
+F :    14 :    141.500 :#############################    |
+G :    15 :    137.000 :############################     |
+Y :    16 :    135.500 :############################     |
+K :    17 :    141.000 :#############################     |
+R :    18 :    140.500 :#############################      |
+F :    19 :    135.000 :############################       |
+G :    20 :    174.000 :####################################      |
+I :    21 :    191.000 :#######################################     |
+Q :    22 :    192.000 :########################################    |
+E :    23 :    191.500 :#######################################     |
+G :    24 :    193.000 :########################################    |
+T :    25 :    188.500 :#######################################     |
+Q :    26 :    193.500 :########################################    |
+C :    27 :    194.000 :########################################    |
+T :    28 :    194.000 :########################################    |
+K :    29 :    194.000 :########################################    |
+C :    30 :    194.000 :########################################    |
+K :    31 :    194.000 :########################################    |
+N :    32 :    192.000 :########################################    |
+N :    33 :    193.500 :########################################    |
+W :    34 :    194.000 :########################################    |
+A :    35 :    194.000 :########################################    |
+L :    36 :    194.000 :########################################    |
+K :    37 :    194.000 :++++++++++++++++++++++++++++++++++++++++    |
+F :    38 :    182.000 :+++++++++++++++++++++++++++++++++++++       |
+S :    39 :    194.000 :++++++++++++++++++++++++++++++++++++++++    |
+I :    40 :    194.000 :++++++++++++++++++++++++++++++++++++++++    |
+I :    41 :    190.000 :+++++++++++++++++++++++++++++++++++++++     |
+L :    42 :    194.000 :++++++++++++++++++++++++++++++++++++++++    |
+L :    43 :    194.000 :++++++++++++++++++++++++++++++++++++++++    |
+Y :    44 :    194.000 :++++++++++++++++++++++++++++++++++++++++    |
+I :    45 :    187.500 :+++++++++++++++++++++++++++++++++++++++     |
+L :    46 :    193.500 :++++++++++++++++++++++++++++++++++++++++    |
+C :    47 :    194.000 :########################################    |
+A :    48 :    192.000 :########################################    |
+L :    49 :    193.000 :########################################    |
+L :    50 :    194.000 :########################################    |
+T :    51 :    190.000 :#######################################     |
+I :    52 :    193.500 :########################################    |
+T :    53 :    195.000 :########################################    |
+V :    54 :    193.000 :########################################    |
+A :    55 :    193.000 :########################################    |
+I :    56 :    194.500 :########################################    |
+L :    57 :    195.000 :########################################    |
+G :    58 :    194.000 :########################################    |
+Y :    59 :    193.000 :########################################    |
+K :    60 :    194.000 :########################################    |
+V :    61 :    195.500 :########################################     |
+V :    62 :    197.000 :#########################################    |
+E :    63 :    198.000 :#########################################    |
+K :    64 :    198.000 :#########################################    |
+M :    65 :    210.000 :###########################################     |
+D :    66 :    207.000 :###########################################     |
+N :    67 :    200.000 :#########################################       |
+V :    68 :    210.000 :###########################################     |
+T :    69 :    209.500 :###########################################     |
+G :    70 :    203.000 :##########################################      |
+G :    71 :    209.000 :###########################################     |
+M :    72 :    183.000 :######################################          |
+E :    73 :    210.000 :###########################################     |
+T :    74 :    206.000 :++++++++++++++++++++++++++++++++++++++++++      |
+S :    75 :    210.000 :+++++++++++++++++++++++++++++++++++++++++++     |
+R :    76 :    132.500 :+++++++++++++++++++++++++++                     |
+Q :    77 :    168.500 :+++++++++++++++++++++++++++++++++++             |
+T :    78 :    132.500 :+++++++++++++++++++++++++++                     |
+Y :    79 :    209.000 :+++++++++++++++++++++++++++++++++++++++++++     |
+D :    80 :    136.500 :++++++++++++++++++++++++++++                    |
+D :    81 :    168.000 :+++++++++++++++++++++++++++++++++++             |
+K :    82 :    210.000 :+++++++++++++++++++++++++++++++++++++++++++     |
+L :    83 :    209.500 :+++++++++++++++++++++++++++++++++++++++++++     |
+T :    84 :    205.500 :++++++++++++++++++++++++++++++++++++++++++      |
+A :    85 :    136.000 :############################                    |
+V :    86 :    210.000 :###########################################     |
+E :    87 :    209.500 :###########################################     |
+S :    88 :    209.500 :###########################################     |
+D :    89 :    178.500 :#####################################           |
+L :    90 :    210.000 :###########################################     |
+K :    91 :    210.000 :###########################################     |
+K :    92 :    208.500 :###########################################     |
+L :    93 :    210.000 :###########################################     |
+G :    94 :    144.000 :++++++++++++++++++++++++++++++                  |
+D :    95 :    204.000 :++++++++++++++++++++++++++++++++++++++++++      |
+Q :    96 :    209.000 :+++++++++++++++++++++++++++++++++++++++++++     |
+T :    97 :    156.000 :++++++++++++++++++++++++++++++++                |
+G :    98 :    209.000 :+++++++++++++++++++++++++++++++++++++++++++     |
+K :    99 :    172.000 :+++++++++++++++++++++++++++++++++++             |
+K :   100 :    210.000 :+++++++++++++++++++++++++++++++++++++++++++     |
+A :   101 :    202.000 :++++++++++++++++++++++++++++++++++++++++++      |
+I :   102 :    143.000 :+++++++++++++++++++++++++++++                   |
+S :   103 :    180.500 :+++++++++++++++++++++++++++++++++++++           |
+T :   104 :    210.000 :###########################################     |
+N :   105 :    206.000 :##########################################      |
+S :   106 :    170.500 :###################################             |
+E :   107 :    210.000 :###########################################     |
+L :   108 :    210.000 :###########################################     |
+S :   109 :    210.000 :###########################################     |
+T :   110 :    168.500 :###################################             |
+F :   111 :    210.000 :###########################################     |
+R :   112 :    208.500 :###########################################     |
+S :   113 :    204.500 :##########################################      |
+D :   114 :    210.000 :###########################################     |
+I :   115 :    209.500 :###########################################     |
+L :   116 :    210.000 :###########################################     |
+D :   117 :    142.000 :#############################                   |
+L :   118 :    209.000 :###########################################     |
+R :   119 :    207.000 :###########################################     |
+Q :   120 :    209.500 :###########################################     |
+Q :   121 :    210.000 :###########################################     |
+L :   122 :    210.000 :+++++++++++++++++++++++++++++++++++++++++++     |
+R :   123 :    128.500 :++++++++++++++++++++++++++                      |
+E :   124 :    181.000 :+++++++++++++++++++++++++++++++++++++           |
+I :   125 :    205.500 :++++++++++++++++++++++++++++++++++++++++++      |
+T :   126 :    147.000 :++++++++++++++++++++++++++++++                  |
+E :   127 :    209.500 :+++++++++++++++++++++++++++++++++++++++++++     |
+K :   128 :    210.000 :+++++++++++++++++++++++++++++++++++++++++++     |
+T :   129 :    209.000 :+++++++++++++++++++++++++++++++++++++++++++     |
+S :   130 :    172.500 :+++++++++++++++++++++++++++++++++++             |
+K :   131 :    180.500 :+++++++++++++++++++++++++++++++++++++           |
+N :   132 :    210.000 :###########################################     |
+K :   133 :    202.500 :##########################################      |
+D :   134 :    207.500 :###########################################     |
+T :   135 :    198.000 :#########################################       |
+L :   136 :    210.000 :###########################################     |
+E :   137 :    209.500 :###########################################     |
+K :   138 :    210.000 :###########################################     |
+L :   139 :    210.000 :###########################################     |
+Q :   140 :    210.000 :+++++++++++++++++++++++++++++++++++++++++++     |
+A :   141 :    126.000 :++++++++++++++++++++++++++                      |
+S :   142 :    201.500 :+++++++++++++++++++++++++++++++++++++++++       |
+G :   143 :    208.000 :+++++++++++++++++++++++++++++++++++++++++++     |
+D :   144 :    163.000 :+++++++++++++++++++++++++++++++++               |
+A :   145 :    134.000 :+++++++++++++++++++++++++++                     |
+L :   146 :    209.500 :+++++++++++++++++++++++++++++++++++++++++++     |
+V :   147 :    133.000 :+++++++++++++++++++++++++++                     |
+D :   148 :    210.000 :+++++++++++++++++++++++++++++++++++++++++++     |
+R :   149 :    204.000 :##########################################      |
+Q :   150 :    210.000 :###########################################     |
+S :   151 :    201.500 :#########################################       |
+Q :   152 :    200.000 :#########################################       |
+L :   153 :    172.500 :###################################             |
+K :   154 :    190.000 :+++++++++++++++++++++++++++++++++++++++         |
+E :   155 :    143.000 :+++++++++++++++++++++++++++++                   |
+T :   156 :    141.000 :+++++++++++++++++++++++++++++                   |
+L :   157 :    210.000 :###########################################     |
+E :   158 :    172.000 :###################################             |
+N :   159 :    176.500 :####################################            |
+N :   160 :    210.000 :###########################################     |
+S :   161 :    206.500 :###########################################     |
+F :   162 :    208.000 :###########################################     |
+L :   163 :    165.000 :##################################              |
+I :   164 :    210.000 :###########################################     |
+T :   165 :    144.000 :##############################                  |
+T :   166 :    169.000 :###################################             |
+V :   167 :    209.500 :###########################################     |
+N :   168 :    210.000 :###########################################     |
+K :   169 :    210.000 :###########################################     |
+T :   170 :    210.000 :###########################################     |
+L :   171 :    210.000 :###########################################     |
+Q :   172 :    210.000 :###########################################     |
+A :   173 :    208.000 :###########################################     |
+Y :   174 :    210.000 :###########################################     |
+N :   175 :    146.000 :##############################                  |
+G :   176 :    210.000 :###########################################     |
+Y :   177 :    210.000 :###########################################     |
+V :   178 :    177.000 :++++++++++++++++++++++++++++++++++++            |
+T :   179 :    136.000 :++++++++++++++++++++++++++++                    |
+N :   180 :    204.500 :++++++++++++++++++++++++++++++++++++++++++     |
+L :   181 :    209.000 :###########################################    |
+Q :   182 :    209.500 :###########################################     |
+Q :   183 :    207.500 :###########################################     |
+D :   184 :    210.000 :###########################################     |
+T :   185 :    210.000 :###########################################     |
+S :   186 :    206.500 :+++++++++++++++++++++++++++++++++++++++++++     |
+V :   187 :    133.500 :+++++++++++++++++++++++++++                     |
+L :   188 :    176.500 :++++++++++++++++++++++++++++++++++++            |
+Q :   189 :    210.000 :+++++++++++++++++++++++++++++++++++++++++++     |
+G :   190 :    133.000 :+++++++++++++++++++++++++++                     |
+N :   191 :    204.000 :++++++++++++++++++++++++++++++++++++++++++      |
+L :   192 :    210.000 :+++++++++++++++++++++++++++++++++++++++++++     |
+Q :   193 :    210.000 :+++++++++++++++++++++++++++++++++++++++++++     |
+N :   194 :    151.500 :+++++++++++++++++++++++++++++++                 |
+Q :   195 :    210.000 :+++++++++++++++++++++++++++++++++++++++++++     |
+M :   196 :    178.500 :+++++++++++++++++++++++++++++++++++++           |
+Y :   197 :    172.500 :+++++++++++++++++++++++++++++++++++             |
+S :   198 :    210.000 :###########################################     |
+H :   199 :    198.500 :#########################################       |
+N :   200 :    204.000 :##########################################      |
+V :   201 :    208.000 :###########################################     |
+V :   202 :    206.500 :###########################################     |
+I :   203 :    200.000 :#########################################       |
+M :   204 :    209.500 :###########################################     |
+N :   205 :    203.500 :##########################################      |
+L :   206 :    209.500 :###########################################     |
+N :   207 :    210.000 :###########################################     |
+N :   208 :    210.000 :###########################################     |
+L :   209 :    210.000 :###########################################     |
+N :   210 :    210.000 :###########################################     |
+L :   211 :    206.000 :##########################################      |
+T :   212 :    209.000 :###########################################     |
+Q :   213 :    210.000 :###########################################     |
+V :   214 :    174.000 :####################################            |
+Q :   215 :    209.500 :###########################################     |
+Q :   216 :    210.000 :###########################################     |
+R :   217 :    210.000 :###########################################     |
+N :   218 :    204.500 :##########################################      |
+L :   219 :    209.000 :###########################################     |
+I :   220 :    210.000 :+++++++++++++++++++++++++++++++++++++++++++     |
+T :   221 :    162.000 :+++++++++++++++++++++++++++++++++               |
+N :   222 :    131.500 :+++++++++++++++++++++++++++                     |
+L :   223 :    210.000 :###########################################     |
+Q :   224 :    210.000 :###########################################     |
+R :   225 :    178.000 :+++++++++++++++++++++++++++++++++++++           |
+S :   226 :    209.500 :+++++++++++++++++++++++++++++++++++++++++++     |
+V :   227 :    177.500 :++++++++++++++++++++++++++++++++++++            |
+D :   228 :    182.500 :++++++++++++++++++++++++++++++++++++++          |
+D :   229 :    210.000 :+++++++++++++++++++++++++++++++++++++++++++     |
+T :   230 :    208.000 :###########################################     |
+S :   231 :    208.000 :###########################################     |
+Q :   232 :    149.000 :###############################                 |
+A :   233 :    210.000 :###########################################     |
+I :   234 :    209.500 :###########################################     |
+Q :   235 :    155.000 :################################                |
+R :   236 :    205.500 :##########################################      |
+I :   237 :    209.000 :###########################################     |
+K :   238 :    208.500 :###########################################     |
+N :   239 :    207.000 :###########################################     |
+D :   240 :    210.000 :###########################################     |
+F :   241 :    210.000 :###########################################     |
+Q :   242 :    210.000 :###########################################     |
+N :   243 :    208.500 :###########################################     |
+L :   244 :    210.000 :###########################################     |
+Q :   245 :    210.000 :###########################################     |
+Q :   246 :    210.000 :###########################################     |
+V :   247 :    208.000 :+++++++++++++++++++++++++++++++++++++++++++     |
+F :   248 :    142.000 :+++++++++++++++++++++++++++++                   |
+L :   249 :    204.000 :++++++++++++++++++++++++++++++++++++++++++      |
+Q :   250 :    210.000 :+++++++++++++++++++++++++++++++++++++++++++     |
+A :   251 :    208.500 :+++++++++++++++++++++++++++++++++++++++++++     |
+K :   252 :    171.500 :+++++++++++++++++++++++++++++++++++             |
+K :   253 :    210.000 :+++++++++++++++++++++++++++++++++++++++++++     |
+D :   254 :    210.000 :###########################################     |
+T :   255 :    205.000 :##########################################      |
+D :   256 :    209.500 :###########################################     |
+W :   257 :    209.000 :###########################################     |
+L :   258 :    204.000 :##########################################      |
+K :   259 :    209.000 :###########################################     |
+E :   260 :    209.000 :###########################################     |
+K :   261 :    209.000 :###########################################     |
+V :   262 :    206.000 :++++++++++++++++++++++++++++++++++++++++++      |
+Q :   263 :    193.000 :++++++++++++++++++++++++++++++++++++++++        |
+S :   264 :    169.500 :+++++++++++++++++++++++++++++++++++             |
+L :   265 :    210.000 :+++++++++++++++++++++++++++++++++++++++++++     |
+Q :   266 :    210.000 :+++++++++++++++++++++++++++++++++++++++++++     |
+T :   267 :    161.500 :+++++++++++++++++++++++++++++++++               |
+L :   268 :    210.000 :+++++++++++++++++++++++++++++++++++++++++++     |
+A :   269 :    209.000 :+++++++++++++++++++++++++++++++++++++++++++     |
+A :   270 :    189.000 :+++++++++++++++++++++++++++++++++++++++         |
+N :   271 :    210.000 :+++++++++++++++++++++++++++++++++++++++++++     |
+N :   272 :    210.000 :###########################################     |
+S :   273 :    208.500 :###########################################     |
+A :   274 :    204.000 :##########################################      |
+L :   275 :    204.000 :##########################################      |
+A :   276 :    207.000 :###########################################     |
+K :   277 :    210.000 :###########################################     |
+A :   278 :    206.000 :##########################################      |
+N :   279 :    210.000 :###########################################     |
+N :   280 :    209.500 :###########################################     |
+D :   281 :    210.000 :###########################################     |
+T :   282 :    210.000 :###########################################     |
+L :   283 :    210.000 :###########################################     |
+E :   284 :    210.000 :###########################################     |
+D :   285 :    209.000 :###########################################     |
+M :   286 :    209.500 :###########################################     |
+N :   287 :    208.000 :###########################################     |
+S :   288 :    181.500 :#####################################           |
+Q :   289 :    210.000 :###########################################     |
+L :   290 :    210.000 :+++++++++++++++++++++++++++++++++++++++++++     |
+N :   291 :    130.500 :+++++++++++++++++++++++++++                     |
+S :   292 :    210.000 :+++++++++++++++++++++++++++++++++++++++++++     |
+F :   293 :    210.000 :+++++++++++++++++++++++++++++++++++++++++++     |
+T :   294 :    149.000 :+++++++++++++++++++++++++++++++                 |
+G :   295 :    210.000 :###########################################     |
+Q :   296 :    209.000 :###########################################     |
+M :   297 :    204.500 :++++++++++++++++++++++++++++++++++++++++++      |
+E :   298 :    152.000 :+++++++++++++++++++++++++++++++                 |
+N :   299 :    210.000 :+++++++++++++++++++++++++++++++++++++++++++     |
+I :   300 :    209.500 :###########################################     |
+T :   301 :    209.000 :###########################################     |
+T :   302 :    201.500 :+++++++++++++++++++++++++++++++++++++++++       |
+I :   303 :    131.000 :+++++++++++++++++++++++++++                     |
+S :   304 :    176.500 :++++++++++++++++++++++++++++++++++++            |
+Q :   305 :    210.000 :+++++++++++++++++++++++++++++++++++++++++++     |
+A :   306 :    207.000 :###########################################     |
+N :   307 :    210.000 :###########################################     |
+E :   308 :    210.000 :###########################################     |
+Q :   309 :    210.000 :###########################################     |
+N :   310 :    196.500 :########################################        |
+L :   311 :    209.000 :###########################################     |
+K :   312 :    210.000 :###########################################     |
+D :   313 :    206.000 :##########################################      |
+L :   314 :    209.500 :###########################################     |
+Q :   315 :    208.000 :+++++++++++++++++++++++++++++++++++++++++++     |
+D :   316 :    178.500 :+++++++++++++++++++++++++++++++++++++           |
+L :   317 :     88.000 :++++++++++++++++++                              |
+H :   318 :    209.500 :+++++++++++++++++++++++++++++++++++++++++++     |
+K :   319 :    192.000 :++++++++++++++++++++++++++++++++++++++++        |
+D :   320 :    173.500 :++++++++++++++++++++++++++++++++++++            |
+A :   321 :    130.000 :+++++++++++++++++++++++++++                     |
+E :   322 :    209.000 :+++++++++++++++++++++++++++++++++++++++++++     |
+N :   323 :    210.000 :###########################################     |
+R :   324 :    206.000 :##########################################      |
+T :   325 :    209.000 :###########################################     |
+A :   326 :    179.500 :#####################################           |
+I :   327 :    108.500 :######################                          |
+K :   328 :    208.000 :###########################################     |
+F :   329 :    210.000 :###########################################     |
+N :   330 :    148.500 :##############################                  |
+Q :   331 :    196.000 :########################################        |
+L :   332 :    203.000 :##########################################      |
+E :   333 :    210.000 :###########################################     |
+E :   334 :    206.000 :##########################################      |
+R :   335 :    209.500 :###########################################     |
+F :   336 :    205.000 :##########################################      |
+Q :   337 :    208.000 :###########################################     |
+L :   338 :    166.500 :##################################              |
+F :   339 :    208.000 :###########################################     |
+E :   340 :    210.000 :###########################################     |
+T :   341 :    195.000 :########################################        |
+D :   342 :    210.000 :###########################################     |
+I :   343 :    210.000 :###########################################     |
+V :   344 :    210.000 :###########################################     |
+N :   345 :    205.000 :##########################################      |
+I :   346 :    210.000 :###########################################     |
+I :   347 :    209.500 :###########################################     |
+S :   348 :    205.500 :##########################################      |
+N :   349 :    210.000 :###########################################     |
+I :   350 :    209.500 :###########################################     |
+S :   351 :    210.000 :###########################################     |
+Y :   352 :    209.000 :###########################################     |
+T :   353 :    210.000 :###########################################     |
+A :   354 :    209.000 :###########################################     |
+H :   355 :    210.000 :+++++++++++++++++++++++++++++++++++++++++++     |
+H :   356 :    184.500 :++++++++++++++++++++++++++++++++++++++          |
+L :   357 :    210.000 :+++++++++++++++++++++++++++++++++++++++++++     |
+R :   358 :    210.000 :###########################################     |
+T :   359 :    209.000 :###########################################     |
+L :   360 :    210.000 :###########################################     |
+T :   361 :    209.500 :###########################################     |
+S :   362 :    207.000 :###########################################     |
+N :   363 :    208.500 :###########################################     |
+L :   364 :    210.000 :###########################################     |
+N :   365 :    210.000 :###########################################     |
+E :   366 :    201.000 :#########################################       |
+V :   367 :    209.000 :###########################################     |
+R :   368 :    210.000 :###########################################     |
+T :   369 :    210.000 :###########################################     |
+T :   370 :    210.000 :###########################################     |
+C :   371 :    210.000 :###########################################     |
+T :   372 :    209.500 :###########################################     |
+D :   373 :    210.000 :###########################################     |
+T :   374 :    209.000 :###########################################     |
+L :   375 :    209.500 :###########################################     |
+T :   376 :    173.500 :++++++++++++++++++++++++++++++++++++            |
+K :   377 :    196.500 :++++++++++++++++++++++++++++++++++++++++        |
+H :   378 :    210.000 :+++++++++++++++++++++++++++++++++++++++++++     |
+T :   379 :    182.000 :+++++++++++++++++++++++++++++++++++++           |
+D :   380 :    209.500 :+++++++++++++++++++++++++++++++++++++++++++     |
+D :   381 :    181.000 :+++++++++++++++++++++++++++++++++++++           |
+L :   382 :    208.500 :+++++++++++++++++++++++++++++++++++++++++++     |
+T :   383 :    165.500 :++++++++++++++++++++++++++++++++++              |
+S :   384 :    150.500 :+++++++++++++++++++++++++++++++                 |
+L :   385 :    184.000 :++++++++++++++++++++++++++++++++++++++          |
+N :   386 :    208.500 :+++++++++++++++++++++++++++++++++++++++++++     |
+N :   387 :    190.000 :#######################################         |
+T :   388 :    207.500 :###########################################     |
+L :   389 :    209.500 :###########################################     |
+A :   390 :    201.000 :#########################################       |
+N :   391 :    192.500 :########################################        |
+I :   392 :    206.500 :###########################################     |
+R :   393 :    209.000 :###########################################     |
+L :   394 :    198.500 :#########################################       |
+D :   395 :    208.000 :###########################################     |
+S :   396 :    208.000 :###########################################     |
+V :   397 :    151.000 :+++++++++++++++++++++++++++++++                 |
+S :   398 :    205.500 :++++++++++++++++++++++++++++++++++++++++++      |
+L :   399 :    203.500 :++++++++++++++++++++++++++++++++++++++++++      |
+R :   400 :    186.000 :++++++++++++++++++++++++++++++++++++++          |
+M :   401 :    201.500 :+++++++++++++++++++++++++++++++++++++++++       |
+Q :   402 :    210.000 :###########################################     |
+Q :   403 :    209.500 :###########################################     |
+D :   404 :    209.500 :+++++++++++++++++++++++++++++++++++++++++++     |
+L :   405 :    167.000 :++++++++++++++++++++++++++++++++++              |
+M :   406 :    194.500 :++++++++++++++++++++++++++++++++++++++++        |
+R :   407 :    209.000 :###########################################     |
+S :   408 :    202.000 :##########################################      |
+R :   409 :    208.500 :###########################################     |
+L :   410 :    210.000 :###########################################     |
+D :   411 :    210.000 :+++++++++++++++++++++++++++++++++++++++++++     |
+T :   412 :    156.500 :++++++++++++++++++++++++++++++++                |
+E :   413 :    207.000 :+++++++++++++++++++++++++++++++++++++++++++     |
+V :   414 :    207.500 :###########################################     |
+A :   415 :    208.500 :###########################################     |
+N :   416 :    205.000 :##########################################      |
+L :   417 :    205.000 :##########################################      |
+S :   418 :    205.000 :##########################################      |
+V :   419 :    202.000 :##########################################      |
+I :   420 :    200.000 :#########################################       |
+M :   421 :    203.000 :##########################################      |
+E :   422 :    203.000 :##########################################      |
+E :   423 :    203.000 :##########################################      |
+M :   424 :    201.500 :#########################################       |
+K :   425 :    202.000 :##########################################      |
+L :   426 :    202.000 :##########################################     |
+V :   427 :    202.000 :##########################################     |
+D :   428 :    199.000 :#########################################      |
+S :   429 :    199.000 :#########################################      |
+K :   430 :    196.000 :########################################       |
+H :   431 :    199.500 :+++++++++++++++++++++++++++++++++++++++++      |
+G :   432 :    198.000 :+++++++++++++++++++++++++++++++++++++++++      |
+Q :   433 :    199.000 :+++++++++++++++++++++++++++++++++++++++++      |
+L :   434 :    168.000 :+++++++++++++++++++++++++++++++++++            |
+I :   435 :    169.000 :+++++++++++++++++++++++++++++++++++            |
+K :   436 :    161.000 :+++++++++++++++++++++++++++++++++              |
+N :   437 :    164.000 :++++++++++++++++++++++++++++++++++             |
+F :   438 :    166.000 :++++++++++++++++++++++++++++++++++             |
+T :   439 :    168.000 :+++++++++++++++++++++++++++++++++++            |
+I :   440 :    197.500 :+++++++++++++++++++++++++++++++++++++++++      |
+L :   441 :    206.000 :++++++++++++++++++++++++++++++++++++++++++     |
+Q :   442 :    205.000 :++++++++++++++++++++++++++++++++++++++++++     |
+. :   443 :      0.000 :|
+. :   444 :      0.000 :|
+. :   445 :      0.000 :|
+. :   446 :      0.000 :|
+. :   447 :      0.000 :|
+. :   448 :      0.000 :|
+. :   449 :      0.000 :|
+. :   450 :      0.000 :|
+. :   451 :      0.000 :|
+. :   452 :      0.000 :|
+. :   453 :      0.000 :|
+. :   454 :      0.000 :|
+. :   455 :      0.000 :|
+. :   456 :      0.000 :|
+. :   457 :      0.000 :|
+. :   458 :      0.000 :|
+. :   459 :      0.000 :|
+. :   460 :      0.000 :|
+. :   461 :      0.000 :|
+. :   462 :      0.000 :|
+. :   463 :      0.000 :|
+. :   464 :      0.000 :|
+. :   465 :      0.000 :|
+. :   466 :      0.000 :|
+. :   467 :      0.000 :|
+. :   468 :      0.000 :|
+. :   469 :      0.000 :|
+. :   470 :      0.000 :|
+. :   471 :      0.000 :|
+. :   472 :      0.000 :|
+. :   473 :      0.000 :|
+. :   474 :      0.000 :|
+. :   475 :      0.000 :|
+. :   476 :      0.000 :|
+. :   477 :      0.000 :|
+. :   478 :      0.000 :|
+. :   479 :      0.000 :|
+. :   480 :      0.000 :|
+. :   481 :      0.000 :|
+. :   482 :      0.000 :|
+. :   483 :      0.000 :|
+. :   484 :      0.000 :|
+. :   485 :      0.000 :|
+. :   486 :      0.000 :|
+. :   487 :      0.000 :|
+. :   488 :      0.000 :|
+. :   489 :      0.000 :|
+. :   490 :      0.000 :|
+. :   491 :      0.000 :|
+. :   492 :      0.000 :|
+. :   493 :      0.000 :|
+. :   494 :      0.000 :|
+. :   495 :      0.000 :|
+. :   496 :      0.000 :|
+. :   497 :      0.000 :|
+. :   498 :      0.000 :|
+. :   499 :      0.000 :|
+. :   500 :      0.000 :|
+. :   501 :      0.000 :|
+. :   502 :      0.000 :|
+. :   503 :      0.000 :|
+. :   504 :      0.000 :|
+. :   505 :      0.000 :|
+. :   506 :      0.000 :|
+. :   507 :      0.000 :|
+. :   508 :      0.000 :|
+. :   509 :      0.000 :|
+. :   510 :      0.000 :|
+. :   511 :      0.000 :|
+. :   512 :      0.000 :|
+. :   513 :      0.000 :|
+. :   514 :      0.000 :|
+. :   515 :      0.000 :|
+. :   516 :      0.000 :|
+. :   517 :      0.000 :|
+. :   518 :      0.000 :|
+. :   519 :      0.000 :|
+. :   520 :      0.000 :|
+. :   521 :      0.000 :|
+. :   522 :      0.000 :|
+. :   523 :      0.000 :|
+. :   524 :      0.000 :|
+. :   525 :      0.000 :|
+. :   526 :      0.000 :|
+. :   527 :      0.000 :|
+. :   528 :      0.000 :|
+. :   529 :      0.000 :|
+. :   530 :      0.000 :|
+. :   531 :      0.000 :|
+. :   532 :      0.000 :|
+. :   533 :      0.000 :|
+. :   534 :      0.000 :|
+. :   535 :      0.000 :|
+. :   536 :      0.000 :|
+. :   537 :      0.000 :|
+. :   538 :      0.000 :|
+. :   539 :      0.000 :|
+. :   540 :      0.000 :|
+. :   541 :      0.000 :|
+. :   542 :      0.000 :|
+. :   543 :      0.000 :|
+. :   544 :      0.000 :|
+. :   545 :      0.000 :|
+. :   546 :      0.000 :|
+. :   547 :      0.000 :|
+. :   548 :      0.000 :|
+. :   549 :      0.000 :|
+. :   550 :      0.000 :|
+. :   551 :      0.000 :|
+. :   552 :      0.000 :|
+. :   553 :      0.000 :|
+. :   554 :      0.000 :|
+. :   555 :      0.000 :|
+. :   556 :      0.000 :|
+. :   557 :      0.000 :|
+. :   558 :      0.000 :|
+. :   559 :      0.000 :|
+. :   560 :      0.000 :|
+. :   561 :      0.000 :|
+. :   562 :      0.000 :|
+. :   563 :      0.000 :|
+. :   564 :      0.000 :|
+. :   565 :      0.000 :|
+. :   566 :      0.000 :|
+. :   567 :      0.000 :|
+. :   568 :      0.000 :|
+. :   569 :      0.000 :|
+. :   570 :      0.000 :|
+. :   571 :      0.000 :|
+. :   572 :      0.000 :|
+. :   573 :      0.000 :|
+. :   574 :      0.000 :|
+. :   575 :      0.000 :|
+. :   576 :      0.000 :|
+. :   577 :      0.000 :|
+. :   578 :      0.000 :|
+. :   579 :      0.000 :|
+. :   580 :      0.000 :|
+. :   581 :      0.000 :|
+. :   582 :      0.000 :|
+. :   583 :      0.000 :|
+. :   584 :      0.000 :|
+. :   585 :      0.000 :|
+. :   586 :      0.000 :|
+. :   587 :      0.000 :|
+. :   588 :      0.000 :|
+. :   589 :      0.000 :|
+. :   590 :      0.000 :|
+. :   591 :      0.000 :|
+. :   592 :      0.000 :|
+A :   593 :    196.000 :++++++++++++++++++++++++++++++++++++++++    |
+L :   594 :    198.000 :#########################################    |
+Q :   595 :    186.000 :######################################       |
+N :   596 :    140.000 :#############################                |
+E :   597 :    191.500 :#######################################      |
+P :   598 :    197.000 :#########################################    |
+T :   599 :    196.000 :++++++++++++++++++++++++++++++++++++++++     |
+P :   600 :     60.000 :++++++++++++                                 |
+A :   601 :    119.000 :++++++++++++++++++++++++                     |
+P :   602 :    188.000 :+++++++++++++++++++++++++++++++++++++++      |
+E :   603 :    197.000 :+++++++++++++++++++++++++++++++++++++++++     |
+D :   604 :     39.500 :++++++++                                      |
+N :   605 :    197.000 :+++++++++++++++++++++++++++++++++++++++++     |
+G :   606 :    202.000 :##########################################    |
+C :   607 :    201.000 :#########################################     |
+P :   608 :    127.000 :##########################                    |
+P :   609 :    188.000 :#######################################       |
+H :   610 :    184.500 :######################################        |
+W :   611 :    203.000 :##########################################    |
+K :   612 :    200.000 :#########################################     |
+N :   613 :    202.000 :##########################################    |
+F :   614 :    177.000 :####################################          |
+T :   615 :    198.000 :#########################################     |
+D :   616 :    168.500 :###################################           |
+K :   617 :    198.500 :#########################################     |
+C :   618 :    203.000 :##########################################    |
+Y :   619 :    203.000 :##########################################    |
+Y :   620 :    202.000 :##########################################    |
+F :   621 :    198.000 :#########################################     |
+S :   622 :    199.000 :+++++++++++++++++++++++++++++++++++++++++     |
+V :   623 :    128.000 :++++++++++++++++++++++++++                    |
+E :   624 :    199.500 :+++++++++++++++++++++++++++++++++++++++++     |
+K :   625 :    163.500 :++++++++++++++++++++++++++++++++++            |
+E :   626 :    187.000 :++++++++++++++++++++++++++++++++++++++        |
+I :   627 :    175.500 :++++++++++++++++++++++++++++++++++++          |
+F :   628 :    201.000 :#########################################     |
+E :   629 :    188.500 :#######################################       |
+D :   630 :    168.000 :###################################           |
+A :   631 :    203.000 :##########################################    |
+K :   632 :    203.000 :##########################################    |
+L :   633 :    194.000 :########################################      |
+F :   634 :    189.000 :#######################################       |
+C :   635 :    204.000 :##########################################    |
+E :   636 :    199.500 :#########################################     |
+D :   637 :    152.500 :###############################               |
+K :   638 :    183.500 :######################################        |
+S :   639 :    176.500 :####################################          |
+S :   640 :    200.500 :+++++++++++++++++++++++++++++++++++++++++     |
+H :   641 :    165.000 :++++++++++++++++++++++++++++++++++            |
+L :   642 :    204.000 :++++++++++++++++++++++++++++++++++++++++++    |
+V :   643 :    197.500 :+++++++++++++++++++++++++++++++++++++++++     |
+F :   644 :    141.500 :+++++++++++++++++++++++++++++                 |
+I :   645 :    204.000 :++++++++++++++++++++++++++++++++++++++++++    |
+N :   646 :    198.500 :+++++++++++++++++++++++++++++++++++++++++     |
+T :   647 :    132.500 :+++++++++++++++++++++++++++                   |
+R :   648 :    158.500 :+++++++++++++++++++++++++++++++++             |
+E :   649 :    200.000 :#########################################     |
+E :   650 :    204.000 :##########################################    |
+Q :   651 :    204.000 :##########################################    |
+Q :   652 :    202.000 :##########################################    |
+W :   653 :    203.000 :##########################################    |
+I :   654 :    197.500 :#########################################     |
+K :   655 :    202.500 :##########################################    |
+K :   656 :    171.000 :###################################           |
+Q :   657 :    199.000 :+++++++++++++++++++++++++++++++++++++++++     |
+M :   658 :    140.000 :+++++++++++++++++++++++++++++                 |
+V :   659 :    144.500 :++++++++++++++++++++++++++++++                |
+G :   660 :    187.000 :++++++++++++++++++++++++++++++++++++++        |
+R :   661 :    160.500 :+++++++++++++++++++++++++++++++++             |
+E :   662 :     98.000 :++++++++++++++++++++                          |
+S :   663 :    188.500 :+++++++++++++++++++++++++++++++++++++++       |
+H :   664 :    120.000 :+++++++++++++++++++++++++                     |
+W :   665 :    203.000 :##########################################    |
+I :   666 :    203.000 :##########################################    |
+G :   667 :    203.000 :##########################################    |
+L :   668 :    203.000 :##########################################    |
+T :   669 :    203.000 :##########################################    |
+D :   670 :    203.000 :##########################################    |
+S :   671 :    166.000 :##################################            |
+E :   672 :    194.000 :++++++++++++++++++++++++++++++++++++++++      |
+R :   673 :     70.500 :++++++++++++++                                |
+E :   674 :    203.000 :++++++++++++++++++++++++++++++++++++++++++    |
+N :   675 :    190.500 :#######################################       |
+E :   676 :    197.000 :#########################################     |
+W :   677 :    203.000 :##########################################    |
+K :   678 :    164.000 :##################################            |
+W :   679 :    203.000 :##########################################    |
+L :   680 :    198.500 :#########################################     |
+D :   681 :    202.500 :##########################################    |
+G :   682 :    202.000 :##########################################    |
+T :   683 :    168.000 :+++++++++++++++++++++++++++++++++++           |
+S :   684 :     89.500 :++++++++++++++++++                            |
+P :   685 :    149.000 :+++++++++++++++++++++++++++++++               |
+D :   686 :    106.000 :++++++++++++++++++++++                        |
+Y :   687 :    200.500 :+++++++++++++++++++++++++++++++++++++++++     |
+K :   688 :    125.000 :++++++++++++++++++++++++++                   |
+N :   689 :    201.000 :+++++++++++++++++++++++++++++++++++++++++    |
+W :   690 :    201.000 :#########################################    |
+K :   691 :    198.000 :#########################################    |
+A :   692 :    137.500 :############################                 |
+G :   693 :    202.000 :##########################################   |
+Q :   694 :    202.000 :##########################################   |
+P :   695 :    202.000 :##########################################   |
+D :   696 :    202.000 :##########################################   |
+N :   697 :    199.000 :#########################################    |
+W :   698 :    202.000 :++++++++++++++++++++++++++++++++++++++++++   |
+G :   699 :    134.000 :+++++++++++++++++++++++++++                  |
+H :   700 :    171.000 :+++++++++++++++++++++++++++++++++++          |
+G :   701 :    196.000 :########################################     |
+H :   702 :    189.500 :#######################################      |
+G :   703 :    191.000 :#######################################      |
+P :   704 :    195.000 :########################################     |
+G :   705 :    202.000 :##########################################   |
+E :   706 :    202.000 :##########################################   |
+D :   707 :    202.000 :##########################################   |
+C :   708 :    200.000 :#########################################    |
+A :   709 :    200.000 :#########################################    |
+G :   710 :    200.000 :#########################################    |
+L :   711 :    200.000 :#########################################    |
+I :   712 :    199.500 :#########################################    |
+Y :   713 :    173.000 :####################################         |
+A :   714 :    186.000 :######################################       |
+G :   715 :    200.000 :#########################################    |
+Q :   716 :    131.000 :###########################                  |
+W :   717 :    200.000 :#########################################    |
+N :   718 :    200.000 :#########################################    |
+D :   719 :    200.000 :#########################################    |
+F :   720 :    200.000 :+++++++++++++++++++++++++++++++++++++++++    |
+Q :   721 :    136.000 :++++++++++++++++++++++++++++                 |
+C :   722 :    200.000 :+++++++++++++++++++++++++++++++++++++++++    |
+E :   723 :    196.000 :########################################     |
+D :   724 :    193.000 :########################################     |
+V :   725 :    144.500 :##############################               |
+N :   726 :    201.000 :#########################################    |
+N :   727 :    187.500 :#######################################      |
+F :   728 :    201.000 :#########################################    |
+I :   729 :    202.000 :##########################################   |
+C :   730 :    202.000 :##########################################   |
+E :   731 :    202.000 :##########################################   |
+K :   732 :    198.000 :#########################################    |
+D :   733 :    187.500 :#######################################      |
+R :   734 :    136.500 :############################                 |
+E :   735 :    168.500 :###################################          |
+T :   736 :    109.000 :++++++++++++++++++++++        |
+V :   737 :     90.000 :++++++++++++++++++       |
+L :   738 :     90.500 :++++++++++++++++++      |
+S :   739 :     90.000 :++++++++++++++++++      |
+S :   740 :     88.500 :++++++++++++++++++      |
+A :   741 :     81.500 :++++++++++++++++       |
+L :   742 :    108.000 :++++++++++++++++++++++ |

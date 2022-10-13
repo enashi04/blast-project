@@ -1,0 +1,994 @@
+BALLAST profile vath.prof
+
+The following sequences from BLAST results were used to build this profile :
+--------------------------------------------------------------------------------
+SP:Q9UI12 VATH_HUMAN V-type proton ATPase subunit H OS=Homo sapiens OX=9606                 0.0     
+TR:A0A2I2Z4M8 A0A2I2Z4M8_GORGO V-type proton ATPase subunit H OS=Gorilla gorilla            0.0     
+TR:A0A2I3H1J4 A0A2I3H1J4_NOMLE V-type proton ATPase subunit H OS=Nomascus leucogenys        0.0     
+TR:A0A2R9BM13 A0A2R9BM13_PANPA V-type proton ATPase subunit H OS=Pan paniscus               0.0     
+TR:K7CGT2 K7CGT2_PANTR V-type proton ATPase subunit H OS=Pan troglodytes                    0.0     
+TR:A0A2J8UN40 A0A2J8UN40_PONAB V-type proton ATPase subunit H OS=Pongo abelii               0.0     
+TR:A0A8D2FBB4 A0A8D2FBB4_THEGE V-type proton ATPase subunit H OS=Theropithecus              0.0     
+TR:A0A2K5IVX2 A0A2K5IVX2_COLAP V-type proton ATPase subunit H OS=Colobus angolensis         0.0     
+TR:A0A2K6CJK4 A0A2K6CJK4_MACNE V-type proton ATPase subunit H OS=Macaca nemestrina          0.0     
+TR:A0A2K6K7E7 A0A2K6K7E7_RHIBE V-type proton ATPase subunit H OS=Rhinopithecus              0.0     
+TR:A0A2K5V7B1 A0A2K5V7B1_MACFA V-type proton ATPase subunit H OS=Macaca fascicularis        0.0     
+TR:A0A2K5XM23 A0A2K5XM23_MANLE V-type proton ATPase subunit H OS=Mandrillus                 0.0     
+TR:A0A0D9RQC5 A0A0D9RQC5_CHLSB V-type proton ATPase subunit H OS=Chlorocebus                0.0     
+TR:A0A8C9I9Q9 A0A8C9I9Q9_9PRIM V-type proton ATPase subunit H OS=Piliocolobus               0.0     
+TR:A0A096NBF5 A0A096NBF5_PAPAN V-type proton ATPase subunit H OS=Papio anubis               0.0     
+TR:A0A2K6QVC5 A0A2K6QVC5_RHIRO V-type proton ATPase subunit H OS=Rhinopithecus              0.0     
+TR:H9FVN3 H9FVN3_MACMU V-type proton ATPase subunit H OS=Macaca mulatta                     0.0     
+TR:A0A2K6U769 A0A2K6U769_SAIBB V-type proton ATPase subunit H OS=Saimiri boliviensis        0.0     
+TR:A0A6J3JAT6 A0A6J3JAT6_SAPAP V-type proton ATPase subunit H OS=Sapajus apella             0.0     
+TR:A0A2K5QU13 A0A2K5QU13_CEBIM V-type proton ATPase subunit H OS=Cebus imitator             0.0     
+TR:G1TBC4 G1TBC4_RABIT V-type proton ATPase subunit H OS=Oryctolagus cuniculus              0.0     
+TR:A0A8C8ZTK9 A0A8C8ZTK9_PROSS V-type proton ATPase subunit H OS=Prolemur simus             0.0     
+TR:A0A8B7FG11 A0A8B7FG11_MICMU V-type proton ATPase subunit H OS=Microcebus                 0.0     
+TR:U3BXQ6 U3BXQ6_CALJA V-type proton ATPase subunit H OS=Callithrix jacchus                 0.0     
+TR:G5B615 G5B615_HETGA V-type proton ATPase subunit H OS=Heterocephalus                     0.0     
+TR:A0A8D2GYR4 A0A8D2GYR4_UROPR V-type proton ATPase subunit H OS=Urocitellus                0.0     
+TR:A0A287CV22 A0A287CV22_ICTTR V-type proton ATPase subunit H OS=Ictidomys                  0.0     
+TR:A0A8C9QFX1 A0A8C9QFX1_SPEDA V-type proton ATPase subunit H OS=Spermophilus               0.0     
+TR:A0A8C2VIX1 A0A8C2VIX1_CHILA V-type proton ATPase subunit H OS=Chinchilla                 0.0     
+TR:A0A286XWM6 A0A286XWM6_CAVPO V-type proton ATPase subunit H OS=Cavia porcellus            0.0     
+TR:A0A8C5YM97 A0A8C5YM97_MARMA V-type proton ATPase subunit H OS=Marmota marmota            0.0     
+TR:A0A5E4BYT3 A0A5E4BYT3_MARMO V-type proton ATPase subunit H OS=Marmota monax              0.0     
+SP:Q8BVE3 VATH_MOUSE V-type proton ATPase subunit H OS=Mus musculus OX=10090                0.0     
+TR:A0A8C5KWQ4 A0A8C5KWQ4_JACJA V-type proton ATPase subunit H OS=Jaculus jaculus            0.0     
+TR:A0A8C6I096 A0A8C6I096_MUSSI V-type proton ATPase subunit H OS=Mus spicilegus             0.0     
+TR:A0A1S3EMX1 A0A1S3EMX1_DIPOR V-type proton ATPase subunit H OS=Dipodomys                  0.0     
+TR:A0A8C6R816 A0A8C6R816_NANGA V-type proton ATPase subunit H OS=Nannospalax                0.0     
+TR:M3YGW1 M3YGW1_MUSPF V-type proton ATPase subunit H OS=Mustela putorius                   0.0     
+TR:A0A452SKG9 A0A452SKG9_URSAM V-type proton ATPase subunit H OS=Ursus americanus           0.0     
+TR:A0A8C7AF01 A0A8C7AF01_NEOVI V-type proton ATPase subunit H OS=Neovison vison             0.0     
+TR:A0A3Q7P7Y1 A0A3Q7P7Y1_CALUR V-type proton ATPase subunit H OS=Callorhinus                0.0     
+TR:A0A2Y9KIG5 A0A2Y9KIG5_ENHLU V-type proton ATPase subunit H OS=Enhydra lutris             0.0     
+TR:A0A384DD14 A0A384DD14_URSMA V-type proton ATPase subunit H OS=Ursus maritimus            0.0     
+TR:A0A2U3WMC3 A0A2U3WMC3_ODORO V-type proton ATPase subunit H OS=Odobenus rosmarus          0.0     
+TR:A0A8D2B6P2 A0A8D2B6P2_SCIVU V-type proton ATPase subunit H OS=Sciurus vulgaris           0.0     
+TR:A0A6P6EM81 A0A6P6EM81_OCTDE V-type proton ATPase subunit H OS=Octodon degus              0.0     
+TR:A0A3Q2HMJ9 A0A3Q2HMJ9_HORSE V-type proton ATPase subunit H OS=Equus caballus             0.0     
+TR:A0A8C4MRB7 A0A8C4MRB7_EQUAS V-type proton ATPase subunit H OS=Equus asinus               0.0     
+TR:A0A8I5ZQ24 A0A8I5ZQ24_RAT V-type proton ATPase subunit H OS=Rattus norvegicus            0.0     
+TR:A0A7N5J9H8 A0A7N5J9H8_AILME V-type proton ATPase subunit H OS=Ailuropoda                 0.0     
+TR:A0A7J8C104 A0A7J8C104_ROUAE V-type proton ATPase subunit H OS=Rousettus                  0.0     
+TR:A0A1S2Z9P3 A0A1S2Z9P3_ERIEU V-type proton ATPase subunit H OS=Erinaceus                  0.0     
+TR:A0A7J8DS89 A0A7J8DS89_MOLMO V-type proton ATPase subunit H OS=Molossus molossus          0.0     
+TR:A0A6P3Q5R9 A0A6P3Q5R9_PTEVA V-type proton ATPase subunit H OS=Pteropus vampyrus          0.0     
+TR:A0A6I9MF27 A0A6I9MF27_PERMB V-type proton ATPase subunit H OS=Peromyscus                 0.0     
+TR:A0A671EKY9 A0A671EKY9_RHIFE V-type proton ATPase subunit H OS=Rhinolophus                0.0     
+TR:A0A811Y8L2 A0A811Y8L2_NYCPR V-type proton ATPase subunit H OS=Nyctereutes                0.0     
+TR:A0A8C0R1U1 A0A8C0R1U1_CANLU V-type proton ATPase subunit H OS=Canis lupus                0.0     
+TR:A0A3Q7UIL1 A0A3Q7UIL1_VULVU V-type proton ATPase subunit H OS=Vulpes vulpes              0.0     
+TR:F1RSG6 F1RSG6_PIG V-type proton ATPase subunit H OS=Sus scrofa OX=9823                   0.0     
+TR:A0A1U7RF82 A0A1U7RF82_MESAU V-type proton ATPase subunit H OS=Mesocricetus               0.0     
+TR:G7PBU4 G7PBU4_MACFA ATPase H+ transporting V1 subunit H OS=Macaca fascicularis           0.0     
+TR:A0A6I9KEF6 A0A6I9KEF6_CHRAS V-type proton ATPase subunit H OS=Chrysochloris              0.0     
+TR:G3SX59 G3SX59_LOXAF V-type proton ATPase subunit H OS=Loxodonta africana                 0.0     
+TR:A0A8B7AR03 A0A8B7AR03_ORYAF V-type proton ATPase subunit H OS=Orycteropus                0.0     
+SP:Q9TVC1 VATH_PIG V-type proton ATPase subunit H OS=Sus scrofa OX=9823                     0.0     
+TR:A0A7J7VLM6 A0A7J7VLM6_PIPKU V-type proton ATPase subunit H OS=Pipistrellus               0.0     
+TR:A0A2Y9FWU3 A0A2Y9FWU3_TRIMA V-type proton ATPase subunit H OS=Trichechus                 0.0     
+TR:A0A383Z0T2 A0A383Z0T2_BALAS V-type proton ATPase subunit H OS=Balaenoptera               0.0     
+TR:A0A2Y9EM94 A0A2Y9EM94_PHYMC V-type proton ATPase subunit H OS=Physeter macrocephalus     0.0     
+TR:A0A485MW93 A0A485MW93_LYNPA V-type proton ATPase subunit H OS=Lynx pardinus              0.0     
+TR:A0A6P6HST5 A0A6P6HST5_PUMCO V-type proton ATPase subunit H OS=Puma concolor              0.0     
+TR:A0A667I220 A0A667I220_LYNCA V-type proton ATPase subunit H OS=Lynx canadensis            0.0     
+TR:M3WKN2 M3WKN2_FELCA V-type proton ATPase subunit H OS=Felis catus OX=9685                0.0     
+TR:A0A8C8WAS4 A0A8C8WAS4_PANLE V-type proton ATPase subunit H OS=Panthera leo               0.0     
+TR:A0A6J0AIK9 A0A6J0AIK9_VICPA V-type proton ATPase subunit H OS=Vicugna pacos              0.0     
+TR:A0A452EVE9 A0A452EVE9_CAPHI V-type proton ATPase subunit H OS=Capra hircus               0.0     
+TR:A0A6I9ZTI0 A0A6I9ZTI0_ACIJB V-type proton ATPase subunit H OS=Acinonyx jubatus           0.0     
+TR:W5PWF2 W5PWF2_SHEEP V-type proton ATPase subunit H OS=Ovis aries OX=9940                 0.0     
+TR:A0A8C3WXW6 A0A8C3WXW6_9CETA V-type proton ATPase subunit H OS=Catagonus                  0.0     
+TR:A0A8B8VPD6 A0A8B8VPD6_BALMU V-type proton ATPase subunit H OS=Balaenoptera               0.0     
+TR:A0A8C9BVI4 A0A8C9BVI4_PHOSS V-type proton ATPase subunit H OS=Phocoena sinus             0.0     
+TR:A0A8C6EFB8 A0A8C6EFB8_MOSMO V-type proton ATPase subunit H OS=Moschus moschiferus        0.0     
+TR:A0A6P5CWH7 A0A6P5CWH7_BOSIN V-type proton ATPase subunit H OS=Bos indicus                0.0     
+TR:A0A6P3HF92 A0A6P3HF92_BISBI V-type proton ATPase subunit H OS=Bison bison                0.0     
+SP:O46563 VATH_BOVIN V-type proton ATPase subunit H OS=Bos taurus OX=9913                   0.0     
+TR:A0A4W2E4Z3 A0A4W2E4Z3_BOBOX V-type proton ATPase subunit H OS=Bos indicus                0.0     
+TR:A0A7J7THQ5 A0A7J7THQ5_MYOMY V-type proton ATPase subunit H OS=Myotis myotis              0.0     
+TR:A0A6J0YMX8 A0A6J0YMX8_ODOVR V-type proton ATPase subunit H OS=Odocoileus                 0.0     
+TR:A0A2U4AJD1 A0A2U4AJD1_TURTR V-type proton ATPase subunit H OS=Tursiops truncatus         0.0     
+TR:A0A340XRY9 A0A340XRY9_LIPVE V-type proton ATPase subunit H OS=Lipotes vexillifer         0.0     
+TR:A0A2Y9R445 A0A2Y9R445_TRIMA V-type proton ATPase subunit H OS=Trichechus                 0.0     
+TR:A0A2Y9LZT7 A0A2Y9LZT7_DELLE V-type proton ATPase subunit H OS=Delphinapterus             0.0     
+TR:A0A8B8VQD4 A0A8B8VQD4_BALMU V-type proton ATPase subunit H OS=Balaenoptera               0.0     
+TR:A0A8C9K3E3 A0A8C9K3E3_PANTA V-type proton ATPase subunit H OS=Panthera tigris            0.0     
+TR:A0A2I2Y4C8 A0A2I2Y4C8_GORGO V-type proton ATPase subunit H OS=Gorilla gorilla            0.0     
+TR:A0A2I3HE62 A0A2I3HE62_NOMLE V-type proton ATPase subunit H OS=Nomascus leucogenys        0.0     
+TR:A0A2I2YHG1 A0A2I2YHG1_GORGO V-type proton ATPase subunit H OS=Gorilla gorilla            0.0     
+TR:A0A2I3HHR3 A0A2I3HHR3_NOMLE V-type proton ATPase subunit H OS=Nomascus leucogenys        0.0     
+TR:A0A6I8P6X7 A0A6I8P6X7_ORNAN V-type proton ATPase subunit H OS=Ornithorhynchus            0.0     
+TR:A0A8C5Y3J0 A0A8C5Y3J0_MICMU V-type proton ATPase subunit H OS=Microcebus                 0.0     
+TR:A0A673VC93 A0A673VC93_SURSU V-type proton ATPase subunit H OS=Suricata suricatta         0.0     
+TR:F7HPQ6 F7HPQ6_CALJA V-type proton ATPase subunit H OS=Callithrix jacchus                 0.0     
+TR:A0A6J2M2B3 A0A6J2M2B3_9CHIR V-type proton ATPase subunit H OS=Phyllostomus               0.0     
+TR:A0A4X2KDR6 A0A4X2KDR6_VOMUR V-type proton ATPase subunit H OS=Vombatus ursinus           0.0     
+TR:A0A2K6CJN2 A0A2K6CJN2_MACNE V-type proton ATPase subunit H OS=Macaca nemestrina          0.0     
+TR:A0A2K5IWG6 A0A2K5IWG6_COLAP V-type proton ATPase subunit H OS=Colobus angolensis         0.0     
+TR:A0A2K5IVZ2 A0A2K5IVZ2_COLAP V-type proton ATPase subunit H OS=Colobus angolensis         0.0     
+TR:A0A2K6CJQ8 A0A2K6CJQ8_MACNE V-type proton ATPase subunit H OS=Macaca nemestrina          0.0     
+TR:A0A2K6K7J2 A0A2K6K7J2_RHIBE V-type proton ATPase subunit H OS=Rhinopithecus              0.0     
+TR:A0A2K5XM55 A0A2K5XM55_MANLE V-type proton ATPase subunit H OS=Mandrillus                 0.0     
+TR:A0A7N4P880 A0A7N4P880_SARHA V-type proton ATPase subunit H OS=Sarcophilus                0.0     
+TR:F6ZK96 F6ZK96_MACMU V-type proton ATPase subunit H OS=Macaca mulatta                     0.0     
+TR:F6SPA5 F6SPA5_MACMU V-type proton ATPase subunit H OS=Macaca mulatta                     0.0     
+TR:A0A2K6QVC7 A0A2K6QVC7_RHIRO V-type proton ATPase subunit H OS=Rhinopithecus              0.0     
+TR:A0A2K6QVD6 A0A2K6QVD6_RHIRO V-type proton ATPase subunit H OS=Rhinopithecus              0.0     
+TR:A0A6P5LSS8 A0A6P5LSS8_PHACI V-type proton ATPase subunit H OS=Phascolarctos              0.0     
+SP:Q9UI12-2 VATH_HUMAN Isoform 2 of V-type proton ATPase subunit H OS=Homo                  0.0     
+TR:G3QE24 G3QE24_GORGO V-type proton ATPase subunit H OS=Gorilla gorilla                    0.0     
+TR:G1QJL0 G1QJL0_NOMLE V-type proton ATPase subunit H OS=Nomascus leucogenys                0.0     
+TR:A0A2R9BQN8 A0A2R9BQN8_PANPA V-type proton ATPase subunit H OS=Pan paniscus               0.0     
+TR:H2PQA8 H2PQA8_PONAB V-type proton ATPase subunit H OS=Pongo abelii OX=9601               0.0     
+TR:H2QW58 H2QW58_PANTR V-type proton ATPase subunit H OS=Pan troglodytes                    0.0     
+TR:A0A2K6U7A5 A0A2K6U7A5_SAIBB V-type proton ATPase subunit H OS=Saimiri boliviensis        0.0     
+TR:A0A2K6U7B7 A0A2K6U7B7_SAIBB V-type proton ATPase subunit H OS=Saimiri boliviensis        0.0     
+TR:K7GFW2 K7GFW2_PELSI V-type proton ATPase subunit H OS=Pelodiscus sinensis                0.0     
+TR:A0A8C8ZL00 A0A8C8ZL00_PROSS V-type proton ATPase subunit H OS=Prolemur simus             0.0     
+TR:A0A8I5ZWI2 A0A8I5ZWI2_RAT V-type proton ATPase subunit H OS=Rattus norvegicus            0.0     
+TR:A0A5F9CED6 A0A5F9CED6_RABIT V-type proton ATPase subunit H OS=Oryctolagus                0.0     
+TR:H0WZF0 H0WZF0_OTOGA V-type proton ATPase subunit H OS=Otolemur garnettii                 0.0     
+TR:A0A8D2F7A4 A0A8D2F7A4_THEGE V-type proton ATPase subunit H OS=Theropithecus              0.0     
+TR:A0A2K5IWG1 A0A2K5IWG1_COLAP V-type proton ATPase subunit H OS=Colobus angolensis         0.0     
+TR:A0A2K6CJF9 A0A2K6CJF9_MACNE V-type proton ATPase subunit H OS=Macaca nemestrina          0.0     
+TR:A0A2K6K7D6 A0A2K6K7D6_RHIBE V-type proton ATPase subunit H OS=Rhinopithecus              0.0     
+TR:A0A2K5XM52 A0A2K5XM52_MANLE V-type proton ATPase subunit H OS=Mandrillus                 0.0     
+TR:A0A8C9I5S5 A0A8C9I5S5_9PRIM V-type proton ATPase subunit H OS=Piliocolobus               0.0     
+TR:A0A2I3M5M0 A0A2I3M5M0_PAPAN V-type proton ATPase subunit H OS=Papio anubis               0.0     
+TR:A0A2K6QVB4 A0A2K6QVB4_RHIRO V-type proton ATPase subunit H OS=Rhinopithecus              0.0     
+TR:F6SP98 F6SP98_MACMU V-type proton ATPase subunit H OS=Macaca mulatta                     0.0     
+TR:I7G9L5 I7G9L5_MACFA V-type proton ATPase subunit H OS=Macaca fascicularis                0.0     
+TR:A0A8C5TD34 A0A8C5TD34_9PASS V-type proton ATPase subunit H OS=Malurus cyaneus            0.0     
+TR:A0A8B7JHI7 A0A8B7JHI7_9AVES V-type proton ATPase subunit H OS=Apteryx mantelli           0.0     
+TR:A0A6J2H8P7 A0A6J2H8P7_9PASS V-type proton ATPase subunit H OS=Pipra filicauda            0.0     
+TR:A0A2I0MX84 A0A2I0MX84_COLLI V-type proton ATPase subunit H OS=Columba livia              0.0     
+TR:A0A674GW16 A0A674GW16_TAEGU V-type proton ATPase subunit H OS=Taeniopygia                0.0     
+TR:A0A2K6U766 A0A2K6U766_SAIBB V-type proton ATPase subunit H OS=Saimiri boliviensis        0.0     
+TR:A0A6J3JBW0 A0A6J3JBW0_SAPAP V-type proton ATPase subunit H OS=Sapajus apella             0.0     
+TR:A0A2K5QTZ6 A0A2K5QTZ6_CEBIM V-type proton ATPase subunit H OS=Cebus imitator             0.0     
+TR:U3CFY7 U3CFY7_CALJA V-type proton ATPase subunit H OS=Callithrix jacchus                 0.0     
+TR:A0A8C6J7R0 A0A8C6J7R0_MELUD V-type proton ATPase subunit H OS=Melopsittacus              0.0     
+TR:A0A672TRR6 A0A672TRR6_STRHB V-type proton ATPase subunit H OS=Strigops habroptila        0.0     
+TR:F1NW50 F1NW50_CHICK V-type proton ATPase subunit H OS=Gallus gallus                      0.0     
+TR:F6YKI8 F6YKI8_HORSE V-type proton ATPase subunit H OS=Equus caballus                     0.0     
+TR:A0A8C3FCN0 A0A8C3FCN0_CHRPI V-type proton ATPase subunit H OS=Chrysemys                  0.0     
+TR:A0A8B9F2M0 A0A8B9F2M0_9PSIT V-type proton ATPase subunit H OS=Amazona collaria           0.0     
+TR:A0A8D2PAE0 A0A8D2PAE0_ZOSLA V-type proton ATPase subunit H OS=Zosterops                  0.0     
+TR:A0A8C3RG20 A0A8C3RG20_9PASS V-type proton ATPase subunit H OS=Cyanoderma                 0.0     
+TR:A0A218VBF1 A0A218VBF1_9PASE V-type proton ATPase subunit H OS=Lonchura striata           0.0     
+TR:U3K6J2 U3K6J2_FICAL V-type proton ATPase subunit H OS=Ficedula albicollis                0.0     
+TR:A0A8C0UXB6 A0A8C0UXB6_CYACU V-type proton ATPase subunit H OS=Cyanistes                  0.0     
+TR:A0A8C3U1K1 A0A8C3U1K1_CATUS V-type proton ATPase subunit H OS=Catharus ustulatus         0.0     
+TR:A0A663E2H1 A0A663E2H1_AQUCH V-type proton ATPase subunit H OS=Aquila chrysaetos          0.0     
+TR:A0A8D0FLN8 A0A8D0FLN8_STROC V-type proton ATPase subunit H OS=Strix occidentalis         0.0     
+TR:A0A8C8ECP8 A0A8C8ECP8_9STRI V-type proton ATPase subunit H OS=Otus sunia                 0.0     
+TR:A0A8B9EJZ7 A0A8B9EJZ7_ANSCY V-type proton ATPase subunit H OS=Anser cygnoid              0.0     
+TR:A0A8B9I341 A0A8B9I341_9AVES V-type proton ATPase subunit H OS=Anser brachyrhynchus       0.0     
+TR:A0A8C3L3R4 A0A8C3L3R4_CHRPC V-type proton ATPase subunit H OS=Chrysolophus               0.0     
+TR:A0A8C0FVH9 A0A8C0FVH9_BUBBB V-type proton ATPase subunit H OS=Bubo bubo                  0.0     
+TR:A0A8C4UFR7 A0A8C4UFR7_FALTI V-type proton ATPase subunit H OS=Falco tinnunculus          0.0     
+TR:A0A5F9CMD7 A0A5F9CMD7_RABIT V-type proton ATPase subunit H OS=Oryctolagus                0.0     
+TR:A0A8D2BE52 A0A8D2BE52_SCIVU V-type proton ATPase subunit H OS=Sciurus vulgaris           0.0     
+TR:A0A8C5W9S9 A0A8C5W9S9_MICMU V-type proton ATPase subunit H OS=Microcebus                 0.0     
+TR:A0A8C3N3P5 A0A8C3N3P5_GEOPR V-type proton ATPase subunit H OS=Geospiza parvula           0.0     
+TR:A0A6I9HEN5 A0A6I9HEN5_GEOFO V-type proton ATPase subunit H OS=Geospiza fortis            0.0     
+TR:A0A8C9UFU0 A0A8C9UFU0_SERCA V-type proton ATPase subunit H OS=Serinus canaria            0.0     
+TR:A0A8C3TCE2 A0A8C3TCE2_CHESE V-type proton ATPase subunit H OS=Chelydra serpentina        0.0     
+TR:A0A8C8S7B9 A0A8C8S7B9_9SAUR V-type proton ATPase subunit H OS=Pelusios castaneus         0.0     
+TR:A0A803XZD7 A0A803XZD7_MELGA V-type proton ATPase subunit H OS=Meleagris                  0.0     
+TR:A0A5G2R974 A0A5G2R974_PIG V-type proton ATPase subunit H OS=Sus scrofa OX=9823           0.0     
+TR:A0A669QXA1 A0A669QXA1_PHACC V-type proton ATPase subunit H OS=Phasianus                  0.0     
+TR:A0A663MQI1 A0A663MQI1_ATHCN V-type proton ATPase subunit H OS=Athene cunicularia         0.0     
+TR:A0A8C2VEM9 A0A8C2VEM9_CHILA V-type proton ATPase subunit H OS=Chinchilla                 0.0     
+TR:A0A8D2KD15 A0A8D2KD15_UROPR V-type proton ATPase subunit H OS=Urocitellus                0.0     
+TR:A0A287D6N4 A0A287D6N4_ICTTR V-type proton ATPase subunit H OS=Ictidomys                  0.0     
+TR:G1NUK3 G1NUK3_MYOLU V-type proton ATPase subunit H OS=Myotis lucifugus                   0.0     
+TR:A0A5G2QWH1 A0A5G2QWH1_PIG V-type proton ATPase subunit H OS=Sus scrofa OX=9823           0.0     
+TR:A0A1S3EKB4 A0A1S3EKB4_DIPOR V-type proton ATPase subunit H OS=Dipodomys                  0.0     
+TR:G3HSY7 G3HSY7_CRIGR V-type proton ATPase subunit H OS=Cricetulus griseus                 0.0     
+TR:A0A3Q2HLJ7 A0A3Q2HLJ7_HORSE V-type proton ATPase subunit H OS=Equus caballus             0.0     
+TR:A0A8C4MNG5 A0A8C4MNG5_EQUAS V-type proton ATPase subunit H OS=Equus asinus               0.0     
+TR:A0A8C9Q8H5 A0A8C9Q8H5_SPEDA V-type proton ATPase subunit H OS=Spermophilus               0.0     
+TR:A0A5F8HGQ2 A0A5F8HGQ2_MONDO V-type proton ATPase subunit H OS=Monodelphis                0.0     
+TR:A0A4D9EQG8 A0A4D9EQG8_9SAUR V-type proton ATPase subunit H OS=Platysternon               0.0     
+TR:A0A286Y5L6 A0A286Y5L6_CAVPO V-type proton ATPase subunit H OS=Cavia porcellus            0.0     
+TR:A0A6G1AX87 A0A6G1AX87_CROCR VATH ATPase (Fragment) OS=Crocuta crocuta OX=9678            0.0     
+TR:A0A2K5BZA6 A0A2K5BZA6_AOTNA V-type proton ATPase subunit H OS=Aotus nancymaae            0.0     
+TR:A0A8C6EMK7 A0A8C6EMK7_MARMA V-type proton ATPase subunit H OS=Marmota marmota            0.0     
+TR:A0A1U7RQ10 A0A1U7RQ10_ALLSI V-type proton ATPase subunit H OS=Alligator                  0.0     
+TR:A0A0A6YX18 A0A0A6YX18_MOUSE V-type proton ATPase subunit H OS=Mus musculus               0.0     
+TR:A0A8C6HZ88 A0A8C6HZ88_MUSSI V-type proton ATPase subunit H OS=Mus spicilegus             0.0     
+TR:A0A8C5L0F8 A0A8C5L0F8_JACJA V-type proton ATPase subunit H OS=Jaculus jaculus            0.0     
+TR:A0A8I6ACJ2 A0A8I6ACJ2_RAT V-type proton ATPase subunit H OS=Rattus norvegicus            0.0     
+TR:A0A8C6R5W5 A0A8C6R5W5_NANGA V-type proton ATPase subunit H OS=Nannospalax                0.0     
+TR:A0A2U3WM67 A0A2U3WM67_ODORO V-type proton ATPase subunit H OS=Odobenus rosmarus          0.0     
+TR:A0A452SKE5 A0A452SKE5_URSAM V-type proton ATPase subunit H OS=Ursus americanus           0.0     
+TR:A0A671EL19 A0A671EL19_RHIFE V-type proton ATPase subunit H OS=Rhinolophus                0.0     
+TR:A0A7N5JBF2 A0A7N5JBF2_AILME V-type proton ATPase subunit H OS=Ailuropoda                 0.0     
+TR:A0A8C7AHI8 A0A8C7AHI8_NEOVI V-type proton ATPase subunit H OS=Neovison vison             0.0     
+TR:A0A3Q7NYS3 A0A3Q7NYS3_CALUR V-type proton ATPase subunit H OS=Callorhinus                0.0     
+TR:A0A2Y9KCP9 A0A2Y9KCP9_ENHLU V-type proton ATPase subunit H OS=Enhydra lutris             0.0     
+TR:A0A493TVL5 A0A493TVL5_ANAPP V-type proton ATPase subunit H OS=Anas platyrhynchos         0.0     
+TR:A0A8C3K8P8 A0A8C3K8P8_9CHAR V-type proton ATPase subunit H OS=Calidris pygmaea           0.0     
+TR:A0A8C3C6J9 A0A8C3C6J9_CAIMO V-type proton ATPase subunit H OS=Cairina moschata           0.0     
+TR:A0A8C4WPS3 A0A8C4WPS3_9SAUR V-type proton ATPase subunit H OS=Gopherus evgoodei          0.0     
+TR:A0A6J3CIY1 A0A6J3CIY1_AYTFU V-type proton ATPase subunit H OS=Aythya fuligula            0.0     
+TR:A0A8I3PT33 A0A8I3PT33_CANLF V-type proton ATPase subunit H OS=Canis lupus                0.0     
+TR:A0A674J8Q7 A0A674J8Q7_TERCA V-type proton ATPase subunit H OS=Terrapene                  0.0     
+TR:A0A6P3F9X1 A0A6P3F9X1_OCTDE V-type proton ATPase subunit H OS=Octodon degus              0.0     
+TR:A0A3Q2IGC7 A0A3Q2IGC7_HORSE V-type proton ATPase subunit H OS=Equus caballus             0.0     
+TR:A0A8C4MRH7 A0A8C4MRH7_EQUAS V-type proton ATPase subunit H OS=Equus asinus               0.0     
+TR:A0A8C5J8Y9 A0A8C5J8Y9_JUNHY V-type proton ATPase subunit H OS=Junco hyemalis             0.0     
+TR:A0A8D2MA89 A0A8D2MA89_ZONAL V-type proton ATPase subunit H OS=Zonotrichia                0.0     
+TR:A0A7J8C119 A0A7J8C119_ROUAE V-type proton ATPase subunit H OS=Rousettus                  0.0     
+TR:A0A670XWT6 A0A670XWT6_PSETE V-type proton ATPase subunit H OS=Pseudonaja                 0.0     
+TR:A0A6J0TTH0 A0A6J0TTH0_9SAUR V-type proton ATPase subunit H OS=Pogona vitticeps           0.0     
+TR:A0A6I9M877 A0A6I9M877_PERMB V-type proton ATPase subunit H OS=Peromyscus                 0.0     
+TR:A0A7J8DSH6 A0A7J8DSH6_MOLMO V-type proton ATPase subunit H OS=Molossus molossus          0.0     
+TR:A0A6P3QFN0 A0A6P3QFN0_PTEVA V-type proton ATPase subunit H OS=Pteropus vampyrus          0.0     
+TR:A0A8C6Y9K4 A0A8C6Y9K4_NAJNA V-type proton ATPase subunit H OS=Naja naja                  0.0     
+TR:V8PFA7 V8PFA7_OPHHA V-type proton ATPase subunit H OS=Ophiophagus hannah                 0.0     
+TR:A0A1U8CPV8 A0A1U8CPV8_MESAU V-type proton ATPase subunit H OS=Mesocricetus               0.0     
+TR:A0A8I3PPK2 A0A8I3PPK2_CANLF V-type proton ATPase subunit H OS=Canis lupus                0.0     
+TR:A0A3Q7TPJ1 A0A3Q7TPJ1_VULVU V-type proton ATPase subunit H OS=Vulpes vulpes              0.0     
+TR:A0A821U6B3 A0A821U6B3_9NEOB V-type proton ATPase subunit H OS=Ranitomeya                 0.0     
+TR:A0A6J1U5X6 A0A6J1U5X6_9SAUR V-type proton ATPase subunit H OS=Notechis scutatus          0.0     
+TR:A0A6I9K8P0 A0A6I9K8P0_CHRAS V-type proton ATPase subunit H OS=Chrysochloris              0.0     
+TR:I3LQB3 I3LQB3_PIG V-type proton ATPase subunit H OS=Sus scrofa OX=9823                   0.0     
+TR:A0A6P9CMI2 A0A6P9CMI2_PANGU V-type proton ATPase subunit H OS=Pantherophis               0.0     
+TR:A0A383Z0M0 A0A383Z0M0_BALAS V-type proton ATPase subunit H OS=Balaenoptera               0.0     
+TR:H9GPX3 H9GPX3_ANOCA V-type proton ATPase subunit H OS=Anolis carolinensis                0.0     
+TR:A0A2Y9ENM9 A0A2Y9ENM9_PHYMC V-type proton ATPase subunit H OS=Physeter macrocephalus     0.0     
+TR:A0A8B7ARU4 A0A8B7ARU4_ORYAF V-type proton ATPase subunit H OS=Orycteropus                0.0     
+SP:Q9TVC1-2 VATH_PIG Isoform Beta of V-type proton ATPase subunit H OS=Sus                  0.0     
+TR:A0A670I474 A0A670I474_PODMU V-type proton ATPase subunit H OS=Podarcis muralis           0.0     
+TR:A0A7J7VLM3 A0A7J7VLM3_PIPKU V-type proton ATPase subunit H OS=Pipistrellus               0.0     
+TR:A0A5N3XD91 A0A5N3XD91_MUNRE V-type proton ATPase subunit H OS=Muntiacus                  0.0     
+TR:A0A8C0HGV6 A0A8C0HGV6_CHEAB V-type proton ATPase subunit H OS=Chelonoidis                0.0     
+TR:A0A2Y9DJ52 A0A2Y9DJ52_TRIMA V-type proton ATPase subunit H OS=Trichechus                 0.0     
+TR:L5LJJ6 L5LJJ6_MYODS V-type proton ATPase subunit H OS=Myotis davidii                     0.0     
+TR:A0A6I9I6K2 A0A6I9I6K2_VICPA V-type proton ATPase subunit H OS=Vicugna pacos              0.0     
+TR:A0A452EVG7 A0A452EVG7_CAPHI V-type proton ATPase subunit H OS=Capra hircus               0.0     
+TR:A0A8B8VPD8 A0A8B8VPD8_BALMU V-type proton ATPase subunit H OS=Balaenoptera               0.0     
+TR:A0A485MT84 A0A485MT84_LYNPA V-type proton ATPase subunit H OS=Lynx pardinus              0.0     
+TR:A0A337SHV5 A0A337SHV5_FELCA V-type proton ATPase subunit H OS=Felis catus                0.0     
+TR:A0A8C8WAT5 A0A8C8WAT5_PANLE V-type proton ATPase subunit H OS=Panthera leo               0.0     
+TR:A0A8D0LAG2 A0A8D0LAG2_SPHPU V-type proton ATPase subunit H OS=Sphenodon                  0.0     
+TR:A0A8C6E4Q1 A0A8C6E4Q1_MOSMO V-type proton ATPase subunit H OS=Moschus moschiferus        0.0     
+TR:A0A6J1Y145 A0A6J1Y145_ACIJB V-type proton ATPase subunit H OS=Acinonyx jubatus           0.0     
+SP:O46563-2 VATH_BOVIN Isoform Beta of V-type proton ATPase subunit H OS=Bos                0.0     
+TR:A0A6I9XNJ7 A0A6I9XNJ7_9SAUR V-type proton ATPase subunit H OS=Thamnophis                 0.0     
+TR:A0A7F8KF53 A0A7F8KF53_DELLE V-type proton ATPase subunit H OS=Delphinapterus             0.0     
+TR:A0A8C3X1X9 A0A8C3X1X9_9CETA V-type proton ATPase subunit H OS=Catagonus                  0.0     
+TR:A0A4W2EBV8 A0A4W2EBV8_BOBOX V-type proton ATPase subunit H OS=Bos indicus                0.0     
+TR:A0A6J0YMD9 A0A6J0YMD9_ODOVR V-type proton ATPase subunit H OS=Odocoileus                 0.0     
+TR:A0A6P5CTZ5 A0A6P5CTZ5_BOSIN V-type proton ATPase subunit H OS=Bos indicus                0.0     
+TR:A0A5F7ZZJ2 A0A5F7ZZJ2_MACMU V-type proton ATPase subunit H OS=Macaca mulatta             0.0     
+TR:A0A6P3H5Q4 A0A6P3H5Q4_BISBI V-type proton ATPase subunit H OS=Bison bison                0.0     
+TR:A0A8C9C273 A0A8C9C273_PHOSS V-type proton ATPase subunit H OS=Phocoena sinus             0.0     
+TR:A0A7J7TIV1 A0A7J7TIV1_MYOMY V-type proton ATPase subunit H OS=Myotis myotis              0.0     
+TR:A0A8D0BX64 A0A8D0BX64_9SAUR V-type proton ATPase subunit H OS=Salvator merianae          0.0     
+TR:A0A7M4FIB7 A0A7M4FIB7_CROPO V-type proton ATPase subunit H OS=Crocodylus                 0.0     
+TR:A0A8D2IMY4 A0A8D2IMY4_VARKO V-type proton ATPase subunit H OS=Varanus komodoensis        0.0     
+TR:A0A673VLN2 A0A673VLN2_SURSU V-type proton ATPase subunit H OS=Suricata suricatta         0.0     
+TR:A0A2K5MKW8 A0A2K5MKW8_CERAT V-type proton ATPase subunit H OS=Cercocebus                 0.0     
+TR:A0A6J3Q8F4 A0A6J3Q8F4_TURTR V-type proton ATPase subunit H OS=Tursiops truncatus         0.0     
+TR:A0A340XXQ0 A0A340XXQ0_LIPVE V-type proton ATPase subunit H OS=Lipotes vexillifer         0.0     
+TR:A0A8B8VQ41 A0A8B8VQ41_BALMU V-type proton ATPase subunit H OS=Balaenoptera               0.0     
+TR:A0A2Y9QYV9 A0A2Y9QYV9_TRIMA V-type proton ATPase subunit H OS=Trichechus                 0.0     
+TR:A0A2Y9LS68 A0A2Y9LS68_DELLE V-type proton ATPase subunit H OS=Delphinapterus             0.0     
+TR:G3V126 G3V126_HUMAN V-type proton ATPase subunit H OS=Homo sapiens OX=9606               0.0     
+TR:A0A7N4NY11 A0A7N4NY11_SARHA V-type proton ATPase subunit H OS=Sarcophilus                0.0     
+TR:A0A8C9K004 A0A8C9K004_PANTA V-type proton ATPase subunit H OS=Panthera tigris            0.0     
+TR:A0A4X2JWT4 A0A4X2JWT4_VOMUR V-type proton ATPase subunit H OS=Vombatus ursinus           0.0     
+TR:K7GFW7 K7GFW7_PELSI V-type proton ATPase subunit H OS=Pelodiscus sinensis                0.0     
+TR:A0A8I5TKX3 A0A8I5TKX3_PONAB V-type proton ATPase subunit H OS=Pongo abelii               0.0     
+TR:A0A6P5LWF9 A0A6P5LWF9_PHACI V-type proton ATPase subunit H OS=Phascolarctos              0.0     
+TR:A0A6P7Z3G1 A0A6P7Z3G1_9AMPH V-type proton ATPase subunit H OS=Microcaecilia              0.0     
+TR:A0A8C5V325 A0A8C5V325_MICMU V-type proton ATPase subunit H OS=Microcebus                 0.0     
+TR:A0A673VLV4 A0A673VLV4_SURSU V-type proton ATPase subunit H OS=Suricata suricatta         0.0     
+TR:G3WN96 G3WN96_SARHA V-type proton ATPase subunit H OS=Sarcophilus harrisii               0.0     
+TR:A0A6P8QDX0 A0A6P8QDX0_GEOSA V-type proton ATPase subunit H OS=Geotrypetes                0.0     
+TR:A0A3Q0DIT9 A0A3Q0DIT9_CARSF V-type proton ATPase subunit H OS=Carlito syrichta           0.0     
+TR:A0A8C5MIV5 A0A8C5MIV5_9ANUR V-type proton ATPase subunit H OS=Leptobrachium              0.0     
+TR:A0A8C3FBP1 A0A8C3FBP1_CHRPI V-type proton ATPase subunit H OS=Chrysemys                  0.0     
+TR:A0A8I3WAX9 A0A8I3WAX9_CALJA ATPase H+ transporting V1 subunit H OS=Callithrix            0.0     
+TR:A0A7K8GXD0 A0A7K8GXD0_ORTSP VATH ATPase (Fragment) OS=Orthonyx spaldingii                0.0     
+TR:A0A6J3JCT7 A0A6J3JCT7_SAPAP V-type proton ATPase subunit H OS=Sapajus apella             0.0     
+TR:A0A803VSL3 A0A803VSL3_FICAL ATPase H+ transporting V1 subunit H OS=Ficedula              0.0     
+TR:B7ZSW8 B7ZSW8_XENTR V-type proton ATPase subunit H OS=Xenopus tropicalis                 0.0     
+TR:Q5BIX5 Q5BIX5_XENLA V-type proton ATPase subunit H OS=Xenopus laevis                     0.0     
+TR:A0A8C0UYX0 A0A8C0UYX0_CYACU ATPase H+ transporting V1 subunit H OS=Cyanistes             0.0     
+TR:A0A8B9EH39 A0A8B9EH39_ANSCY V-type proton ATPase subunit H OS=Anser cygnoid              0.0     
+TR:A0A8B9I343 A0A8B9I343_9AVES V-type proton ATPase subunit H OS=Anser brachyrhynchus       0.0     
+TR:A0A8C0UV15 A0A8C0UV15_CYACU V-type proton ATPase subunit H OS=Cyanistes                  0.0     
+TR:A0A8C3XZQ7 A0A8C3XZQ7_CATUS V-type proton ATPase subunit H OS=Catharus ustulatus         0.0     
+TR:G1NEI8 G1NEI8_MELGA ATPase H+ transporting V1 subunit H OS=Meleagris                     0.0     
+TR:A0A3L8T118 A0A3L8T118_CHLGU V-type proton ATPase subunit H OS=Chloebia gouldiae          0.0     
+TR:A0A8D0FF00 A0A8D0FF00_STROC V-type proton ATPase subunit H OS=Strix occidentalis         0.0     
+TR:A0A8B9EH95 A0A8B9EH95_ANSCY V-type proton ATPase subunit H OS=Anser cygnoid              0.0     
+TR:A0A8C0BA21 A0A8C0BA21_9AVES V-type proton ATPase subunit H OS=Buteo japonicus            0.0     
+TR:A0A8B7Q702 A0A8B7Q702_HIPAR V-type proton ATPase subunit H OS=Hipposideros               0.0     
+TR:A0A2U3YPU8 A0A2U3YPU8_LEPWE V-type proton ATPase subunit H OS=Leptonychotes              0.0     
+TR:A0A8I6AIG1 A0A8I6AIG1_RAT V-type proton ATPase subunit H OS=Rattus norvegicus            0.0     
+TR:U3I832 U3I832_ANAPP V-type proton ATPase subunit H OS=Anas platyrhynchos                 0.0     
+TR:A0A8C9DMS2 A0A8C9DMS2_PROSS V-type proton ATPase subunit H OS=Prolemur simus             0.0     
+TR:A0A5F8GI80 A0A5F8GI80_MONDO V-type proton ATPase subunit H OS=Monodelphis                0.0     
+TR:A0A5F8H988 A0A5F8H988_MONDO V-type proton ATPase subunit H OS=Monodelphis                0.0     
+TR:A0A8C3RD47 A0A8C3RD47_9PASS V-type proton ATPase subunit H OS=Cyanoderma                 0.0     
+TR:R0L6N2 R0L6N2_ANAPL Vacuolar proton pump subunit H (Fragment) OS=Anas                    0.0     
+TR:A0A8C5MIE1 A0A8C5MIE1_9ANUR V-type proton ATPase subunit H OS=Leptobrachium              0.0     
+TR:A0A8C3GKD7 A0A8C3GKD7_CAIMO V-type proton ATPase subunit H OS=Cairina moschata           0.0     
+TR:A0A493TWM1 A0A493TWM1_ANAPP ATPase H+ transporting V1 subunit H OS=Anas                  0.0     
+TR:A0A493T5M8 A0A493T5M8_ANAPP V-type proton ATPase subunit H OS=Anas platyrhynchos         0.0     
+TR:A0A151MNL8 A0A151MNL8_ALLMI V-type proton ATPase subunit H OS=Alligator                  0.0     
+TR:F7BKR7 F7BKR7_MONDO V-type proton ATPase subunit H OS=Monodelphis domestica              0.0     
+TR:A0A5F8HDK8 A0A5F8HDK8_MONDO V-type proton ATPase subunit H OS=Monodelphis                0.0     
+TR:A0A8C2TDQ1 A0A8C2TDQ1_COTJA V-type proton ATPase subunit H OS=Coturnix japonica          0.0     
+TR:A0A7J7THM5 A0A7J7THM5_MYOMY V-type proton ATPase subunit H OS=Myotis myotis              0.0     
+TR:W5MEZ1 W5MEZ1_LEPOC V-type proton ATPase subunit H OS=Lepisosteus oculatus               0.0     
+TR:A0A670I438 A0A670I438_PODMU ATPase H+ transporting V1 subunit H OS=Podarcis              0.0     
+TR:A0A8D2MAE2 A0A8D2MAE2_ZONAL V-type proton ATPase subunit H OS=Zonotrichia                0.0     
+TR:A0A8C4RT43 A0A8C4RT43_ERPCA V-type proton ATPase subunit H OS=Erpetoichthys              0.0     
+TR:A0A2K5BZB5 A0A2K5BZB5_AOTNA V-type proton ATPase subunit H OS=Aotus nancymaae            0.0     
+TR:A0A1V4KGD5 A0A1V4KGD5_PATFA V-type proton ATPase subunit H OS=Patagioenas                0.0     
+TR:A0A7J7TIF0 A0A7J7TIF0_MYOMY V-type proton ATPase subunit H OS=Myotis myotis              0.0     
+TR:F1MZL8 F1MZL8_BOVIN V-type proton ATPase subunit H OS=Bos taurus OX=9913                 0.0     
+TR:A0A452HVR5 A0A452HVR5_9SAUR V-type proton ATPase subunit H OS=Gopherus agassizii         0.0     
+TR:L5JTH1 L5JTH1_PTEAL V-type proton ATPase subunit H OS=Pteropus alecto                    0.0     
+TR:A0A452EVG0 A0A452EVG0_CAPHI V-type proton ATPase subunit H OS=Capra hircus               0.0     
+TR:A0A8D0HIV9 A0A8D0HIV9_SPHPU V-type proton ATPase subunit H OS=Sphenodon                  0.0     
+TR:A0A6I8NBB8 A0A6I8NBB8_ORNAN V-type proton ATPase subunit H OS=Ornithorhynchus            0.0     
+TR:A0A2K5MKX8 A0A2K5MKX8_CERAT V-type proton ATPase subunit H OS=Cercocebus                 0.0     
+TR:F7HPP7 F7HPP7_CALJA V-type proton ATPase subunit H OS=Callithrix jacchus                 0.0     
+TR:H3BBK5 H3BBK5_LATCH V-type proton ATPase subunit H OS=Latimeria chalumnae                0.0     
+TR:A0A8B8VQD7 A0A8B8VQD7_BALMU V-type proton ATPase subunit H OS=Balaenoptera               0.0     
+TR:A0A8C5PCC8 A0A8C5PCC8_9ANUR V-type proton ATPase subunit H OS=Leptobrachium              0.0     
+TR:A0A8C5MK59 A0A8C5MK59_9ANUR V-type proton ATPase subunit H OS=Leptobrachium              0.0     
+TR:A0A401S678 A0A401S678_CHIPU V-type proton ATPase subunit H OS=Chiloscyllium              0.0     
+TR:A0A452SKK0 A0A452SKK0_URSAM V-type proton ATPase subunit H OS=Ursus americanus           0.0     
+TR:A0A2Y9KBY8 A0A2Y9KBY8_ENHLU V-type proton ATPase subunit H OS=Enhydra lutris             0.0     
+TR:A0A6P6EMJ1 A0A6P6EMJ1_OCTDE V-type proton ATPase subunit H OS=Octodon degus              0.0     
+TR:A0A3Q2HRQ7 A0A3Q2HRQ7_HORSE V-type proton ATPase subunit H OS=Equus caballus             0.0     
+TR:A0A8C4PTL6 A0A8C4PTL6_EQUAS V-type proton ATPase subunit H OS=Equus asinus               0.0     
+TR:G1M0Y9 G1M0Y9_AILME V-type proton ATPase subunit H OS=Ailuropoda melanoleuca             0.0     
+TR:A0A5F8GVI4 A0A5F8GVI4_MONDO V-type proton ATPase subunit H OS=Monodelphis                0.0     
+TR:A0A6J2VD43 A0A6J2VD43_CHACN V-type proton ATPase subunit H OS=Chanos chanos              0.0     
+TR:A0A6P6CEU7 A0A6P6CEU7_PTEVA V-type proton ATPase subunit H OS=Pteropus vampyrus          0.0     
+TR:A0A8C5PCU9 A0A8C5PCU9_9ANUR V-type proton ATPase subunit H OS=Leptobrachium              0.0     
+TR:A0A8C5MEV7 A0A8C5MEV7_9ANUR V-type proton ATPase subunit H OS=Leptobrachium              0.0     
+TR:A0A671EUW0 A0A671EUW0_RHIFE V-type proton ATPase subunit H OS=Rhinolophus                0.0     
+TR:A0A2K5MKX4 A0A2K5MKX4_CERAT V-type proton ATPase subunit H OS=Cercocebus                 0.0     
+TR:A0A6P6RBK4 A0A6P6RBK4_CARAU V-type proton ATPase subunit H OS=Carassius                  0.0     
+TR:A0A7J6B5H5 A0A7J6B5H5_AMEME V-type proton ATPase subunit H OS=Ameiurus melas             0.0     
+TR:A0A5N5PIU1 A0A5N5PIU1_PANHP V-ATPase_H_C domain-containing protein OS=Pangasianodon      0.0     
+TR:A0A7J6DEQ9 A0A7J6DEQ9_9TELE V-type proton ATPase subunit H OS=Onychostoma                0.0     
+TR:A0A8C1P205 A0A8C1P205_CYPCA V-type proton ATPase subunit H OS=Cyprinus carpio            0.0     
+TR:K4FY83 K4FY83_CALMI V-type proton ATPase subunit H OS=Callorhinchus                      0.0     
+TR:A0A671MSG3 A0A671MSG3_9TELE V-type proton ATPase subunit H OS=Sinocyclocheilus           0.0     
+TR:A0A8C5MD61 A0A8C5MD61_9ANUR V-type proton ATPase subunit H OS=Leptobrachium              0.0     
+TR:W5LFY2 W5LFY2_ASTMX V-type proton ATPase subunit H OS=Astyanax mexicanus                 0.0     
+TR:A0A8M1P5K1 A0A8M1P5K1_DANRE V-type proton ATPase subunit H isoform 1 OS=Danio            0.0     
+TR:A0A8C3FFC0 A0A8C3FFC0_CHRPI V-type proton ATPase subunit H OS=Chrysemys                  0.0     
+TR:A0A667I0P7 A0A667I0P7_LYNCA V-type proton ATPase subunit H OS=Lynx canadensis            0.0     
+TR:A0A096MV93 A0A096MV93_PAPAN V-type proton ATPase subunit H OS=Papio anubis               0.0     
+TR:A0A8C4A0L7 A0A8C4A0L7_9TELE V-type proton ATPase subunit H OS=Denticeps                  0.0     
+TR:A0A6J1Y1M4 A0A6J1Y1M4_ACIJB V-type proton ATPase subunit H OS=Acinonyx jubatus           0.0     
+TR:A0A672MTX1 A0A672MTX1_SINGR V-type proton ATPase subunit H OS=Sinocyclocheilus           0.0     
+TR:A0A670I503 A0A670I503_PODMU ATPase H+ transporting V1 subunit H OS=Podarcis              0.0     
+TR:A0A8C5BPP1 A0A8C5BPP1_GADMO V-type proton ATPase subunit H OS=Gadus morhua               0.0     
+TR:A0A667YP67 A0A667YP67_9TELE V-type proton ATPase subunit H OS=Myripristis                0.0     
+TR:A0A6P6JQI7 A0A6P6JQI7_CARAU V-type proton ATPase subunit H OS=Carassius                  0.0     
+TR:A0A671KC03 A0A671KC03_9TELE V-type proton ATPase subunit H OS=Sinocyclocheilus           0.0     
+TR:A0A7M4FFQ6 A0A7M4FFQ6_CROPO V-type proton ATPase subunit H OS=Crocodylus                 0.0     
+TR:A0A8C0HM12 A0A8C0HM12_9AVES V-type proton ATPase subunit H OS=Buteo japonicus            0.0     
+TR:A0A3Q0GQ32 A0A3Q0GQ32_ALLSI V-type proton ATPase subunit H OS=Alligator                  0.0     
+TR:A0A6P6JR36 A0A6P6JR36_CARAU V-type proton ATPase subunit H OS=Carassius                  0.0     
+TR:A0A3P8ZRZ8 A0A3P8ZRZ8_ESOLU V-type proton ATPase subunit H OS=Esox lucius                0.0     
+TR:H2MU57 H2MU57_ORYLA V-type proton ATPase subunit H OS=Oryzias latipes                    0.0     
+TR:A0A8B7UQ03 A0A8B7UQ03_CASCN V-type proton ATPase subunit H OS=Castor canadensis          0.0     
+TR:A0A437CH72 A0A437CH72_ORYJA V-type proton ATPase subunit H OS=Oryzias javanicus          0.0     
+TR:A0A8C7E8A9 A0A8C7E8A9_NOTPE V-type proton ATPase subunit H OS=Nothoprocta                0.0     
+TR:A0A7J7TIS6 A0A7J7TIS6_MYOMY V-type proton ATPase subunit H OS=Myotis myotis              0.0     
+TR:A0A7K5MHB7 A0A7K5MHB7_CARCD VATH ATPase (Fragment) OS=Cardinalis cardinalis              0.0     
+TR:A0A8C7ZP42 A0A8C7ZP42_9TELE V-type proton ATPase subunit H OS=Oryzias sinensis           0.0     
+TR:A0A3Q0GKP4 A0A3Q0GKP4_ALLSI V-type proton ATPase subunit H OS=Alligator                  0.0     
+TR:A0A674BP98 A0A674BP98_SALTR V-type proton ATPase subunit H OS=Salmo trutta               0.0     
+TR:A0A8C4I272 A0A8C4I272_DICLA V-type proton ATPase subunit H OS=Dicentrarchus              0.0     
+TR:A0A5A9PBX2 A0A5A9PBX2_9TELE V-type proton ATPase subunit H OS=Triplophysa                0.0     
+TR:A0A0G2K9J2 A0A0G2K9J2_RAT V-type proton ATPase subunit H OS=Rattus norvegicus            0.0     
+TR:A0A3Q1FTU1 A0A3Q1FTU1_9TELE V-type proton ATPase subunit H OS=Acanthochromis             0.0     
+TR:A0A452EVL5 A0A452EVL5_CAPHI V-type proton ATPase subunit H OS=Capra hircus               0.0     
+TR:A0A087XGG8 A0A087XGG8_POEFO V-type proton ATPase subunit H OS=Poecilia formosa           0.0     
+TR:A0A3Q1C6H7 A0A3Q1C6H7_AMPOC V-type proton ATPase subunit H OS=Amphiprion                 0.0     
+TR:A0A8C3A1U1 A0A8C3A1U1_CYCLU V-type proton ATPase subunit H OS=Cyclopterus                0.0     
+TR:A0A3P8W2C6 A0A3P8W2C6_CYNSE V-type proton ATPase subunit H OS=Cynoglossus                0.0     
+TR:A0A3P8U7M7 A0A3P8U7M7_AMPPE V-type proton ATPase subunit H OS=Amphiprion                 0.0     
+TR:A0A3Q2DX86 A0A3Q2DX86_CYPVA V-type proton ATPase subunit H OS=Cyprinodon                 0.0     
+TR:A0A673WXC6 A0A673WXC6_SALTR V-type proton ATPase subunit H OS=Salmo trutta               0.0     
+TR:M4AT12 M4AT12_XIPMA V-type proton ATPase subunit H OS=Xiphophorus maculatus              0.0     
+TR:A0A4W6F4M8 A0A4W6F4M8_LATCA V-type proton ATPase subunit H OS=Lates calcarifer           0.0     
+TR:A0A4W4F8Z4 A0A4W4F8Z4_ELEEL V-type proton ATPase subunit H OS=Electrophorus              0.0     
+TR:A0A6P7K372 A0A6P7K372_9TELE V-type proton ATPase subunit H OS=Parambassis                0.0     
+TR:A0A3Q1H4H6 A0A3Q1H4H6_ANATE V-type proton ATPase subunit H OS=Anabas testudineus         0.0     
+TR:A0A672YZN6 A0A672YZN6_9TELE V-type proton ATPase subunit H OS=Sphaeramia                 0.0     
+TR:A0A2U9BIW3 A0A2U9BIW3_SCOMX V-type proton ATPase subunit H OS=Scophthalmus               0.0     
+TR:A0A3Q2I594 A0A3Q2I594_HORSE V-type proton ATPase subunit H OS=Equus caballus             0.0     
+TR:A0A8B9VVI7 A0A8B9VVI7_9AVES V-type proton ATPase subunit H OS=Anas zonorhyncha           0.0     
+TR:A0A669BMJ1 A0A669BMJ1_ORENI V-type proton ATPase subunit H OS=Oreochromis                0.0     
+TR:A0A3P9DBX5 A0A3P9DBX5_9CICH V-type proton ATPase subunit H OS=Maylandia                  0.0     
+TR:A0A665WQR8 A0A665WQR8_ECHNA V-type proton ATPase subunit H OS=Echeneis naucrates         0.0     
+TR:A0A3Q2WPQ7 A0A3Q2WPQ7_HAPBU V-type proton ATPase subunit H OS=Haplochromis               0.0     
+TR:A0A3Q3FJV7 A0A3Q3FJV7_9LABR V-type proton ATPase subunit H OS=Labrus bergylta            0.0     
+TR:A0A6A5F7J2 A0A6A5F7J2_PERFL V-type proton ATPase subunit H OS=Perca fluviatilis          0.0     
+TR:A0A7N8Y027 A0A7N8Y027_9TELE V-type proton ATPase subunit H OS=Mastacembelus              0.0     
+TR:A0A671V989 A0A671V989_SPAAU V-type proton ATPase subunit H OS=Sparus aurata              0.0     
+TR:A0A7K7UL26 A0A7K7UL26_9CHAR VATH ATPase (Fragment) OS=Ibidorhyncha struthersii           0.0     
+TR:B5X1Y1 B5X1Y1_SALSA V-type proton ATPase subunit H OS=Salmo salar OX=8030                0.0     
+TR:A0A8I3S974 A0A8I3S974_CANLF ATPase H+ transporting V1 subunit H OS=Canis                 0.0     
+TR:A0A8C4A065 A0A8C4A065_9TELE V-type proton ATPase subunit H OS=Denticeps                  0.0     
+TR:A0A5G2R3Q7 A0A5G2R3Q7_PIG V-type proton ATPase subunit H OS=Sus scrofa OX=9823           0.0     
+TR:A0A7M4FGH6 A0A7M4FGH6_CROPO V-type proton ATPase subunit H OS=Crocodylus                 0.0     
+TR:A0A6P8UBG0 A0A6P8UBG0_GYMAC V-type proton ATPase subunit H OS=Gymnodraco                 0.0     
+TR:A0A8C9X653 A0A8C9X653_SANLU V-type proton ATPase subunit H OS=Sander lucioperca          0.0     
+TR:A0A484CQM5 A0A484CQM5_PERFV V-type proton ATPase subunit H OS=Perca flavescens           0.0     
+TR:A0A8C7MTU5 A0A8C7MTU5_ONCKI V-type proton ATPase subunit H OS=Oncorhynchus               0.0     
+TR:A0A3Q3EJG4 A0A3Q3EJG4_KRYMA V-type proton ATPase subunit H OS=Kryptolebias               0.0     
+TR:A0A671MP82 A0A671MP82_9TELE V-type proton ATPase subunit H OS=Sinocyclocheilus           0.0     
+TR:A0A8C4A055 A0A8C4A055_9TELE V-type proton ATPase subunit H OS=Denticeps                  0.0     
+TR:A0A8I3PTB0 A0A8I3PTB0_CANLF ATPase H+ transporting V1 subunit H OS=Canis                 0.0     
+TR:A0A662YLT7 A0A662YLT7_ACIRT V-type proton ATPase subunit H OS=Acipenser                  0.0     
+TR:A0A6I9PWV9 A0A6I9PWV9_9TELE V-type proton ATPase subunit H OS=Notothenia                 0.0     
+TR:A0A455CBD2 A0A455CBD2_PHYMC V-type proton ATPase subunit H OS=Physeter macrocephalus     0.0     
+TR:A0A091EZT7 A0A091EZT7_CORBR V-type proton ATPase subunit H (Fragment) OS=Corvus          0.0     
+TR:A0A851WIC8 A0A851WIC8_9CORV VATH ATPase (Fragment) OS=Corvus moneduloides                0.0     
+TR:A0A6G1Q9G7 A0A6G1Q9G7_9TELE V-type proton ATPase subunit H OS=Channa argus               0.0     
+TR:A0A8C7N690 A0A8C7N690_ONCKI V-type proton ATPase subunit H OS=Oncorhynchus               0.0     
+TR:A0A8C1BMC8 A0A8C1BMC8_CYPCA V-type proton ATPase subunit H OS=Cyprinus carpio            0.0     
+TR:A0A6J2RIB5 A0A6J2RIB5_COTGO V-type proton ATPase subunit H OS=Cottoperca                 0.0     
+TR:A0A091WCB0 A0A091WCB0_OPIHO V-type proton ATPase subunit H (Fragment) OS=Opisthocomus    0.0     
+TR:H3DMR7 H3DMR7_TETNG V-type proton ATPase subunit H OS=Tetraodon nigroviridis             0.0     
+TR:A0A671MJY6 A0A671MJY6_9TELE V-type proton ATPase subunit H OS=Sinocyclocheilus           0.0     
+TR:A0A7K9LHQ0 A0A7K9LHQ0_9PASS VATH ATPase (Fragment) OS=Rhabdornis inornatus               0.0     
+TR:A0A671KAG1 A0A671KAG1_9TELE V-type proton ATPase subunit H OS=Sinocyclocheilus           0.0     
+TR:A0A7J8C0Z0 A0A7J8C0Z0_ROUAE V-type proton ATPase subunit H OS=Rousettus                  0.0     
+TR:A0A672MY45 A0A672MY45_SINGR V-type proton ATPase subunit H OS=Sinocyclocheilus           0.0     
+TR:A0A7K6CAS2 A0A7K6CAS2_PTIVI VATH ATPase (Fragment) OS=Ptilonorhynchus violaceus          0.0     
+TR:G3PYE2 G3PYE2_GASAC V-type proton ATPase subunit H OS=Gasterosteus aculeatus             0.0     
+TR:A0A672MY95 A0A672MY95_SINGR V-type proton ATPase subunit H OS=Sinocyclocheilus           0.0     
+TR:A0A7L2NFK2 A0A7L2NFK2_PYCJO VATH ATPase (Fragment) OS=Pycnonotus jocosus                 0.0     
+TR:A0A8C1BLP8 A0A8C1BLP8_CYPCA V-type proton ATPase subunit H OS=Cyprinus carpio            0.0     
+TR:A0A672GBA7 A0A672GBA7_SALFA V-type proton ATPase subunit H OS=Salarias fasciatus         0.0     
+TR:A0A7L1BHN1 A0A7L1BHN1_9PASS VATH ATPase (Fragment) OS=Illadopsis cleaveri                0.0     
+TR:A0A850UJQ7 A0A850UJQ7_9CORV VATH ATPase (Fragment) OS=Chloropsis hardwickii              0.0     
+TR:A0A7L0ZK17 A0A7L0ZK17_9PASS VATH ATPase (Fragment) OS=Oxyruncus cristatus                0.0     
+TR:A0A7K9V4T1 A0A7K9V4T1_ANSSE VATH ATPase (Fragment) OS=Anseranas semipalmata              0.0     
+TR:A0A3B1J8G1 A0A3B1J8G1_ASTMX V-type proton ATPase subunit H OS=Astyanax mexicanus         0.0     
+TR:A0A091QRN2 A0A091QRN2_MERNU V-type proton ATPase subunit H (Fragment) OS=Merops          0.0     
+TR:A0A850W6R4 A0A850W6R4_FREMA VATH ATPase (Fragment) OS=Fregata magnificens                0.0     
+TR:A0A7K7Z0Y3 A0A7K7Z0Y3_THRLU VATH ATPase (Fragment) OS=Thryothorus ludovicianus           0.0     
+TR:A0A1A7ZY91 A0A1A7ZY91_NOTFU V-type proton ATPase subunit H OS=Nothobranchius             0.0     
+TR:A0A2U3WM69 A0A2U3WM69_ODORO V-type proton ATPase subunit H isoform X3 OS=Odobenus        0.0     
+TR:A0A7K4WIW5 A0A7K4WIW5_9TYRA VATH ATPase (Fragment) OS=Tachuris rubrigastra               0.0     
+TR:A0A7L1QJW1 A0A7L1QJW1_9PASS VATH ATPase (Fragment) OS=Cisticola juncidis                 0.0     
+TR:A0A7L3B9M0 A0A7L3B9M0_9AVES VATH ATPase (Fragment) OS=Syrrhaptes paradoxus               0.0     
+TR:H2TWA1 H2TWA1_TAKRU V-type proton ATPase subunit H OS=Takifugu rubripes                  0.0     
+TR:A0A4Z2C2P5 A0A4Z2C2P5_9TELE V-type proton ATPase subunit H OS=Takifugu bimaculatus       0.0     
+TR:A0A7L0T8S0 A0A7L0T8S0_PODPO VATH ATPase (Fragment) OS=Podilymbus podiceps                0.0     
+TR:A0A7L2LXG1 A0A7L2LXG1_9SYLV VATH ATPase (Fragment) OS=Hippolais icterina                 0.0     
+TR:A0A7L1YG27 A0A7L1YG27_9PASS VATH ATPase (Fragment) OS=Scytalopus superciliaris           0.0     
+TR:A0A7K9RRK5 A0A7K9RRK5_9PASS VATH ATPase (Fragment) OS=Sterrhoptilus dennistouni          0.0     
+TR:A0A7L1KK34 A0A7L1KK34_HIMHI VATH ATPase (Fragment) OS=Himantopus himantopus              0.0     
+TR:A0A7K8ZZ73 A0A7K8ZZ73_9PASS VATH ATPase (Fragment) OS=Grallaria varia OX=117165          0.0     
+TR:A0A7K6H402 A0A7K6H402_9PASS VATH ATPase (Fragment) OS=Malurus elegans OX=720584          0.0     
+TR:A0A7K4J8P3 A0A7K4J8P3_GEOCA VATH ATPase (Fragment) OS=Geococcyx californianus            0.0     
+TR:A0A7K5WXE8 A0A7K5WXE8_9SYLV VATH ATPase (Fragment) OS=Hylia prasina OX=208073            0.0     
+TR:A0A852MIH1 A0A852MIH1_9PASS VATH ATPase (Fragment) OS=Pteruthius melanotis               0.0     
+TR:A0A7K5UQX7 A0A7K5UQX7_9CORV VATH ATPase (Fragment) OS=Platysteira castanea               0.0     
+TR:A0A7L2D9X4 A0A7L2D9X4_CATFU VATH ATPase (Fragment) OS=Catharus fuscescens                0.0     
+TR:A0A7L1EQD1 A0A7L1EQD1_OENON VATH ATPase (Fragment) OS=Oenanthe oenanthe                  0.0     
+TR:A0A7L1DHH6 A0A7L1DHH6_9PASS VATH ATPase (Fragment) OS=Serilophus lunatus                 0.0     
+TR:A0A7L1F463 A0A7L1F463_SYLBO VATH ATPase (Fragment) OS=Sylvia borin OX=73324              0.0     
+TR:A0A7K9NJE5 A0A7K9NJE5_9CORV VATH ATPase (Fragment) OS=Edolisoma coerulescens             0.0     
+TR:A0A7L1RRR6 A0A7L1RRR6_9PASS VATH ATPase (Fragment) OS=Locustella ochotensis              0.0     
+TR:A0A7K6UMS1 A0A7K6UMS1_9AVES VATH ATPase (Fragment) OS=Aegotheles bennettii               0.0     
+TR:A0A850XMX8 A0A850XMX8_PIACA VATH ATPase (Fragment) OS=Piaya cayana OX=33601              0.0     
+TR:A0A851JM10 A0A851JM10_9PASS VATH ATPase (Fragment) OS=Donacobius atricapilla             0.0     
+TR:A0A671KEN5 A0A671KEN5_9TELE V-type proton ATPase subunit H OS=Sinocyclocheilus           0.0     
+TR:A0A7K5JV80 A0A7K5JV80_9TYRA VATH ATPase (Fragment) OS=Mionectes macconnelli              0.0     
+TR:A0A7K6KIA3 A0A7K6KIA3_9PASE VATH ATPase (Fragment) OS=Oreocharis arfaki                  0.0     
+TR:A0A7K8A3I9 A0A7K8A3I9_9PASE VATH ATPase (Fragment) OS=Melanocharis versteri              0.0     
+
+The following sequences from BLAST results were NOT used to build this profile :
+--------------------------------------------------------------------------------
+...
+******************************************************************************
+
+maximum : 491.000000
+A :     1 :    169.000 :+++++++++++++++++     |
+V :     2 :    171.000 :+++++++++++++++++      |
+P :     3 :    217.000 :++++++++++++++++++++++      |
+T :     4 :    363.000 :####################################         |
+N :     5 :    363.000 :####################################         |
+I :     6 :    358.500 :####################################         |
+I :     7 :    361.500 :####################################         |
+A :     8 :    362.000 :####################################         |
+A :     9 :    363.000 :####################################         |
+K :    10 :    363.000 :####################################         |
+A :    11 :    363.000 :####################################         |
+A :    12 :    363.000 :####################################         |
+E :    13 :    363.000 :####################################         |
+V :    14 :    364.000 :#####################################        |
+R :    15 :    364.000 :#####################################        |
+A :    16 :    360.500 :####################################         |
+N :    17 :    362.500 :####################################         |
+K :    18 :    334.000 :##################################            |
+V :    19 :    363.000 :####################################          |
+N :    20 :    364.500 :#####################################         |
+W :    21 :    363.000 :####################################          |
+Q :    22 :    355.500 :####################################          |
+S :    23 :    351.000 :###################################           |
+Y :    24 :    361.000 :####################################          |
+L :    25 :    361.500 :####################################          |
+Q :    26 :    362.000 :####################################          |
+G :    27 :    333.000 :#################################             |
+Q :    28 :    360.000 :####################################          |
+M :    29 :    365.500 :#####################################         |
+I :    30 :    367.000 :#####################################         |
+S :    31 :    367.000 :+++++++++++++++++++++++++++++++++++++         |
+A :    32 :    195.000 :+++++++++++++++++++                           |
+E :    33 :    363.500 :+++++++++++++++++++++++++++++++++++++         |
+D :    34 :    364.000 :#####################################         |
+C :    35 :    364.000 :#####################################         |
+E :    36 :    365.000 :#####################################         |
+F :    37 :    365.000 :#####################################         |
+I :    38 :    370.000 :#####################################         |
+Q :    39 :    332.500 :#################################              |
+R :    40 :    341.000 :##################################             |
+F :    41 :    382.000 :######################################         |
+E :    42 :    381.000 :++++++++++++++++++++++++++++++++++++++         |
+M :    43 :    214.500 :+++++++++++++++++++++                          |
+K :    44 :    313.000 :+++++++++++++++++++++++++++++++                |
+R :    45 :    313.500 :+++++++++++++++++++++++++++++++                |
+S :    46 :    313.000 :+++++++++++++++++++++++++++++++                |
+P :    47 :    290.000 :+++++++++++++++++++++++++++++                  |
+E :    48 :    380.000 :######################################         |
+E :    49 :    365.000 :#####################################          |
+K :    50 :    383.000 :#######################################        |
+Q :    51 :    377.000 :######################################         |
+R :    52 :    346.000 :###################################            |
+F :    53 :    377.500 :######################################         |
+E :    54 :    381.000 :++++++++++++++++++++++++++++++++++++++         |
+Q :    55 :    222.000 :++++++++++++++++++++++                        |
+K :    56 :    310.000 :+++++++++++++++++++++++++++++++                |
+R :    57 :    313.500 :+++++++++++++++++++++++++++++++                |
+S :    58 :    315.500 :++++++++++++++++++++++++++++++++               |
+P :    59 :    287.500 :+++++++++++++++++++++++++++++           |
+E :    60 :    380.000 :++++++++++++++++++++++++++++++++++++++         |
+E :    61 :    365.000 :#####################################          |
+K :    62 :    383.000 :#######################################        |
+K :    63 :    380.500 :######################################         |
+T :    64 :    383.000 :#######################################        |
+F :    65 :    378.500 :######################################          |
+I :    66 :    349.000 :###################################             |
+N :    67 :    380.000 :######################################          |
+L :    68 :    384.000 :#######################################         |
+M :    69 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+T :    70 :    309.000 :+++++++++++++++++++++++++++++++                 |
+H :    71 :    382.500 :++++++++++++++++++++++++++++++++++++++          |
+I :    72 :    380.500 :++++++++++++++++++++++++++++++++++++++          |
+C :    73 :     14.000 :+                                               |
+K :    74 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+E :    75 :    382.500 :######################################          |
+Q :    76 :    384.000 :#######################################         |
+T :    77 :    384.000 :#######################################         |
+V :    78 :    384.000 :#######################################         |
+Q :    79 :    384.000 :#######################################         |
+Y :    80 :    384.000 :#######################################         |
+I :    81 :    384.000 :#######################################         |
+L :    82 :    384.000 :#######################################         |
+T :    83 :    384.000 :#######################################         |
+M :    84 :    328.000 :+++++++++++++++++++++++++++++++++               |
+V :    85 :    336.500 :++++++++++++++++++++++++++++++++++              |
+D :    86 :    381.000 :++++++++++++++++++++++++++++++++++++++          |
+D :    87 :    381.000 :++++++++++++++++++++++++++++++++++++++          |
+M :    88 :    264.000 :++++++++++++++++++++++++++                      |
+L :    89 :    381.000 :++++++++++++++++++++++++++++++++++++++          |
+Q :    90 :    380.000 :++++++++++++++++++++++++++++++++++++++          |
+E :    91 :    381.000 :++++++++++++++++++++++++++++++++++++++          |
+N :    92 :    373.000 :#####################################           |
+H :    93 :    380.000 :######################################          |
+Q :    94 :    380.000 :######################################          |
+R :    95 :    379.000 :######################################          |
+V :    96 :    378.000 :######################################          |
+S :    97 :    278.000 :############################                   |
+I :    98 :    377.000 :######################################         |
+F :    99 :    378.500 :######################################         |
+F :   100 :    377.000 :++++++++++++++++++++++++++++++++++++++         |
+D :   101 :    371.500 :+++++++++++++++++++++++++++++++++++++          |
+Y :   102 :    370.500 :+++++++++++++++++++++++++++++++++++++          |
+A :   103 :    378.000 :++++++++++++++++++++++++++++++++++++++         |
+R :   104 :    209.500 :+++++++++++++++++++++                          |
+H :   105 :      6.000 :                                               |
+S :   106 :    220.500 :++++++++++++++++++++++                         |
+K :   107 :    381.000 :######################################         |
+N :   108 :    348.000 :###################################             |
+T :   109 :    381.000 :######################################          |
+A :   110 :    381.500 :######################################          |
+F :   111 :    382.500 :######################################          |
+F :   112 :    361.000 :####################################            |
+D :   113 :    375.500 :######################################         |
+Y :   114 :    375.500 :######################################         |
+A :   115 :    381.000 :######################################         |
+P :   116 :    218.500 :++++++++++++++++++++++                         |
+M :   117 :     26.000 :++                                             |
+S :   118 :    229.500 :+++++++++++++++++++++++                        |
+K :   119 :    381.000 :++++++++++++++++++++++++++++++++++++++         |
+N :   120 :    348.500 :+++++++++++++++++++++++++++++++++++            |
+T :   121 :    379.500 :++++++++++++++++++++++++++++++++++++++         |
+A :   122 :    379.000 :++++++++++++++++++++++++++++++++++++++         |
+W :   123 :    218.000 :++++++++++++++++++++++                         |
+F :   124 :    378.000 :++++++++++++++++++++++++++++++++++++++         |
+T :   125 :    380.000 :######################################         |
+V :   126 :    380.000 :######################################         |
+H :   127 :    374.500 :######################################         |
+M :   128 :    380.000 :######################################         |
+A :   129 :    377.000 :######################################         |
+A :   130 :    377.000 :######################################         |
+R :   131 :    377.000 :######################################         |
+I :   132 :    379.000 :######################################         |
+I :   133 :    380.000 :######################################         |
+A :   134 :    380.000 :######################################         |
+K :   135 :    379.000 :++++++++++++++++++++++++++++++++++++++         |
+L :   136 :    382.000 :++++++++++++++++++++++++++++++++++++++          |
+A :   137 :    383.000 :+++++++++++++++++++++++++++++++++++++++         |
+A :   138 :    378.000 :++++++++++++++++++++++++++++++++++++++          |
+W :   139 :    382.000 :++++++++++++++++++++++++++++++++++++++          |
+G :   140 :    382.000 :++++++++++++++++++++++++++++++++++++++          |
+K :   141 :    293.500 :+++++++++++++++++++++++++++++                   |
+E :   142 :    351.000 :+++++++++++++++++++++++++++++++++++            |
+L :   143 :    381.500 :++++++++++++++++++++++++++++++++++++++          |
+M :   144 :    384.000 :#######################################         |
+E :   145 :    384.000 :#######################################         |
+G :   146 :    384.000 :#######################################         |
+S :   147 :    384.000 :#######################################         |
+D :   148 :    384.000 :#######################################         |
+L :   149 :    384.000 :#######################################         |
+N :   150 :    383.500 :#######################################         |
+Y :   151 :    384.000 :#######################################         |
+Y :   152 :    384.000 :#######################################         |
+F :   153 :    381.500 :######################################          |
+N :   154 :    384.000 :#######################################         |
+W :   155 :    384.000 :#######################################         |
+I :   156 :    384.000 :#######################################         |
+K :   157 :    384.000 :#######################################         |
+T :   158 :    362.000 :####################################            |
+Q :   159 :    383.000 :#######################################         |
+L :   160 :    382.000 :######################################          |
+S :   161 :    383.000 :#######################################         |
+S :   162 :    383.000 :#######################################         |
+Q :   163 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+K :   164 :    278.000 :++++++++++++++++++++++++++++                    |
+L :   165 :    309.500 :+++++++++++++++++++++++++++++++                 |
+R :   166 :    241.000 :++++++++++++++++++++++++                        |
+G :   167 :    296.000 :++++++++++++++++++++++++++++++                  |
+S :   168 :    225.000 :++++++++++++++++++++++                          |
+G :   169 :    343.000 :++++++++++++++++++++++++++++++++++              |
+V :   170 :    184.000 :++++++++++++++++++                              |
+Q :   171 :    279.000 :++++++++++++++++++++++++++++                    |
+L :   172 :    376.000 :######################################          |
+S :   173 :    379.000 :######################################          |
+S :   174 :    376.500 :######################################          |
+Q :   175 :    312.000 :###############################                 |
+K :   176 :    268.000 :###########################          |
+L :   177 :    308.000 :+++++++++++++++++++++++++++++++      |
+R :   178 :    240.000 :++++++++++++++++++++++++             |
+G :   179 :    289.500 :+++++++++++++++++++++++++++++        |
+S :   180 :    227.000 :+++++++++++++++++++++++              |
+G :   181 :    280.000 :++++++++++++++++++++++++++++        |
+S :   182 :    133.000 :+++++++++++++                      |
+S :   183 :    227.000 :+++++++++++++++++++++++            |
+Q :   184 :    301.000 :++++++++++++++++++++++++++++++      |
+Y :   185 :    307.500 :###############################      |
+V :   186 :    309.000 :###############################      |
+Q :   187 :    312.000 :###############################      |
+C :   188 :    309.000 :###############################      |
+V :   189 :    300.000 :##############################      |
+A :   190 :    300.500 :##############################      |
+G :   191 :    300.000 :##############################      |
+C :   192 :    301.000 :##############################      |
+L :   193 :    299.000 :##############################       |
+Q :   194 :    298.000 :##############################                 |
+L :   195 :    303.000 :##############################                  |
+M :   196 :    383.500 :#######################################         |
+L :   197 :    384.000 :#######################################         |
+R :   198 :    381.000 :######################################          |
+V :   199 :    381.000 :######################################          |
+N :   200 :    379.000 :######################################          |
+E :   201 :    383.000 :#######################################         |
+Y :   202 :    381.500 :######################################          |
+R :   203 :    383.000 :#######################################         |
+F :   204 :    383.000 :#######################################         |
+A :   205 :    382.000 :######################################          |
+W :   206 :    383.500 :#######################################         |
+V :   207 :    379.000 :######################################          |
+E :   208 :    380.000 :######################################          |
+A :   209 :    374.500 :######################################          |
+D :   210 :    383.000 :#######################################         |
+G :   211 :    383.000 :#######################################         |
+V :   212 :    381.500 :++++++++++++++++++++++++++++++++++++++          |
+N :   213 :    374.500 :++++++++++++++++++++++++++++++++++++++          |
+C :   214 :    383.000 :+++++++++++++++++++++++++++++++++++++++         |
+I :   215 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+M :   216 :    318.500 :++++++++++++++++++++++++++++++++                |
+G :   217 :    309.000 :+++++++++++++++++++++++++++++++                 |
+V :   218 :    382.000 :++++++++++++++++++++++++++++++++++++++          |
+L :   219 :    381.500 :++++++++++++++++++++++++++++++++++++++         |
+S :   220 :    380.000 :++++++++++++++++++++++++++++++++++++++         |
+N :   221 :    382.000 :++++++++++++++++++++++++++++++++++++++         |
+K :   222 :    383.000 :#######################################        |
+C :   223 :    383.000 :#######################################        |
+G :   224 :    383.000 :#######################################        |
+F :   225 :    382.000 :######################################         |
+Q :   226 :    383.000 :#######################################         |
+L :   227 :    384.000 :#######################################         |
+Q :   228 :    384.000 :#######################################         |
+Y :   229 :    383.000 :#######################################         |
+Q :   230 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+L :   231 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+S :   232 :    380.500 :++++++++++++++++++++++++++++++++++++++          |
+N :   233 :    383.000 :+++++++++++++++++++++++++++++++++++++++         |
+K :   234 :    377.000 :++++++++++++++++++++++++++++++++++++++          |
+C :   235 :    379.500 :######################################          |
+G :   236 :    384.000 :#######################################         |
+F :   237 :    384.000 :#######################################         |
+Q :   238 :    384.000 :#######################################         |
+L :   239 :    384.000 :#######################################         |
+Q :   240 :    384.000 :#######################################         |
+Y :   241 :    383.000 :#######################################         |
+Q :   242 :    382.000 :######################################          |
+Q :   243 :    384.000 :#######################################         |
+M :   244 :    350.000 :###################################             |
+C :   245 :    384.000 :#######################################         |
+E :   246 :    382.000 :++++++++++++++++++++++++++++++++++++++          |
+H :   247 :    257.500 :++++++++++++++++++++++++++                      |
+L :   248 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+R :   249 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+R :   250 :    378.000 :++++++++++++++++++++++++++++++++++++++          |
+Y :   251 :    378.500 :++++++++++++++++++++++++++++++++++++++          |
+N :   252 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+I :   253 :    349.500 :+++++++++++++++++++++++++++++++++++             |
+I :   254 :    286.500 :+++++++++++++++++++++++++++++                   |
+P :   255 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+V :   256 :    315.000 :++++++++++++++++++++++++++++++++                |
+L :   257 :    382.500 :++++++++++++++++++++++++++++++++++++++          |
+S :   258 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+D :   259 :    383.500 :#######################################         |
+I :   260 :    384.000 :#######################################         |
+L :   261 :    384.000 :#######################################         |
+Q :   262 :    384.000 :#######################################         |
+E :   263 :    384.000 :#######################################         |
+S :   264 :    384.000 :#######################################         |
+V :   265 :    382.500 :######################################          |
+K :   266 :    383.000 :#######################################         |
+E :   267 :    384.000 :#######################################         |
+K :   268 :    384.000 :#######################################         |
+V :   269 :    384.000 :#######################################         |
+T :   270 :    384.000 :#######################################         |
+R :   271 :    384.000 :#######################################         |
+I :   272 :    384.000 :#######################################         |
+I :   273 :    384.000 :#######################################         |
+L :   274 :    384.000 :#######################################         |
+A :   275 :    384.000 :#######################################         |
+A :   276 :    380.000 :######################################          |
+F :   277 :    381.000 :######################################          |
+R :   278 :    372.500 :+++++++++++++++++++++++++++++++++++++           |
+N :   279 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+F :   280 :    192.000 :+++++++++++++++++++                             |
+L :   281 :    382.000 :++++++++++++++++++++++++++++++++++++++          |
+E :   282 :    383.000 :#######################################         |
+K :   283 :    382.000 :######################################          |
+S :   284 :    380.500 :++++++++++++++++++++++++++++++++++++++          |
+T :   285 :    289.000 :+++++++++++++++++++++++++++++                   |
+E :   286 :    382.500 :++++++++++++++++++++++++++++++++++++++          |
+R :   287 :    377.500 :######################################          |
+E :   288 :    383.500 :#######################################         |
+T :   289 :    384.000 :#######################################         |
+R :   290 :    372.000 :#####################################           |
+N :   291 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+E :   292 :    197.000 :++++++++++++++++++++                            |
+L :   293 :    382.000 :++++++++++++++++++++++++++++++++++++++         |
+E :   294 :    383.000 :#######################################        |
+K :   295 :    382.000 :######################################         |
+S :   296 :    380.500 :######################################          |
+T :   297 :    292.000 :#############################                   |
+E :   298 :    382.500 :######################################          |
+R :   299 :    377.500 :######################################          |
+E :   300 :    383.500 :#######################################         |
+T :   301 :    384.000 :#######################################         |
+R :   302 :    378.500 :######################################          |
+L :   303 :    384.000 :#######################################         |
+K :   304 :    384.000 :#######################################         |
+Q :   305 :    383.000 :#######################################         |
+L :   306 :    384.000 :#######################################         |
+E :   307 :    384.000 :#######################################         |
+N :   308 :    384.000 :#######################################         |
+L :   309 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+E :   310 :    316.500 :++++++++++++++++++++++++++++++++                |
+Q :   311 :    381.000 :++++++++++++++++++++++++++++++++++++++          |
+Q :   312 :    384.000 :#######################################         |
+K :   313 :    384.000 :#######################################         |
+Y :   314 :    384.000 :#######################################         |
+D :   315 :    384.000 :#######################################         |
+D :   316 :    384.000 :#######################################         |
+E :   317 :    384.000 :#######################################         |
+D :   318 :    384.000 :#######################################         |
+I :   319 :    384.000 :#######################################         |
+S :   320 :    342.000 :++++++++++++++++++++++++++++++++++              |
+E :   321 :    367.500 :+++++++++++++++++++++++++++++++++++++           |
+D :   322 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+I :   323 :    382.500 :++++++++++++++++++++++++++++++++++++++          |
+K :   324 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+F :   325 :    381.500 :++++++++++++++++++++++++++++++++++++++          |
+L :   326 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+L :   327 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+E :   328 :    327.000 :+++++++++++++++++++++++++++++++++               |
+K :   329 :    349.500 :+++++++++++++++++++++++++++++++++++             |
+L :   330 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+G :   331 :    381.000 :######################################          |
+E :   332 :    384.000 :#######################################         |
+S :   333 :    383.000 :#######################################         |
+V :   334 :    383.000 :#######################################         |
+Q :   335 :    383.000 :#######################################         |
+D :   336 :    383.000 :#######################################         |
+L :   337 :    384.000 :#######################################         |
+S :   338 :    383.000 :#######################################         |
+S :   339 :    383.000 :#######################################         |
+F :   340 :    381.500 :++++++++++++++++++++++++++++++++++++++          |
+D :   341 :    383.000 :+++++++++++++++++++++++++++++++++++++++         |
+E :   342 :    383.000 :+++++++++++++++++++++++++++++++++++++++         |
+Y :   343 :    383.000 :+++++++++++++++++++++++++++++++++++++++         |
+S :   344 :    383.000 :+++++++++++++++++++++++++++++++++++++++         |
+S :   345 :    383.000 :+++++++++++++++++++++++++++++++++++++++         |
+E :   346 :    383.000 :+++++++++++++++++++++++++++++++++++++++         |
+L :   347 :    383.000 :+++++++++++++++++++++++++++++++++++++++         |
+K :   348 :    383.000 :+++++++++++++++++++++++++++++++++++++++         |
+S :   349 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+G :   350 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+S :   351 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+F :   352 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+D :   353 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+E :   354 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+Y :   355 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+S :   356 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+S :   357 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+E :   358 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+L :   359 :    384.000 :#######################################         |
+K :   360 :    384.000 :#######################################         |
+S :   361 :    384.000 :#######################################         |
+G :   362 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+F :   363 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+W :   364 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+R :   365 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+E :   366 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+N :   367 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+A :   368 :    383.500 :+++++++++++++++++++++++++++++++++++++++         |
+V :   369 :    345.000 :+++++++++++++++++++++++++++++++++++             |
+R :   370 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+L :   371 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+N :   372 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+E :   373 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+K :   374 :    384.000 :#######################################         |
+N :   375 :    384.000 :#######################################         |
+Y :   376 :    384.000 :#######################################         |
+E :   377 :    384.000 :#######################################         |
+L :   378 :    384.000 :#######################################         |
+L :   379 :    384.000 :#######################################         |
+K :   380 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+I :   381 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+L :   382 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+T :   383 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+K :   384 :    349.000 :+++++++++++++++++++++++++++++++++++             |
+L :   385 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+L :   386 :    384.000 :#######################################         |
+E :   387 :    384.000 :#######################################         |
+V :   388 :    384.000 :#######################################         |
+S :   389 :    384.000 :#######################################         |
+D :   390 :    384.000 :#######################################         |
+D :   391 :    384.000 :#######################################         |
+P :   392 :    384.000 :#######################################         |
+Q :   393 :    384.000 :#######################################         |
+V :   394 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+L :   395 :    352.500 :+++++++++++++++++++++++++++++++++++             |
+A :   396 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+V :   397 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+A :   398 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+A :   399 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+H :   400 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+D :   401 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+V :   402 :    365.000 :+++++++++++++++++++++++++++++++++++++           |
+G :   403 :    384.000 :+++++++++++++++++++++++++++++++++++++++         |
+E :   404 :    384.000 :#######################################         |
+Y :   405 :    384.000 :#######################################         |
+V :   406 :    384.000 :#######################################         |
+R :   407 :    384.000 :#######################################         |
+H :   408 :    384.000 :#######################################         |
+Y :   409 :    384.000 :#######################################         |
+P :   410 :    384.000 :#######################################         |
+A :   411 :    384.000 :#######################################         |
+H :   412 :    384.000 :#######################################         |
+D :   413 :    384.000 :#######################################         |
+V :   414 :    364.500 :#####################################           |
+G :   415 :    383.000 :#######################################         |
+E :   416 :    383.000 :#######################################         |
+Y :   417 :    383.000 :#######################################         |
+V :   418 :    383.000 :#######################################         |
+R :   419 :    383.000 :#######################################         |
+H :   420 :    383.000 :#######################################         |
+Y :   421 :    372.000 :#####################################           |
+P :   422 :    372.000 :#####################################           |
+R :   423 :    336.000 :++++++++++++++++++++++++++++++++++             |
+L :   424 :    345.500 :+++++++++++++++++++++++++++++++++++            |
+V :   425 :    338.500 :++++++++++++++++++++++++++++++++++             |
+M :   426 :    347.500 :+++++++++++++++++++++++++++++++++++             |
+N :   427 :    340.000 :++++++++++++++++++++++++++++++++++            |
+H :   428 :    338.000 :++++++++++++++++++++++++++++++++++            |
+M :   429 :    340.500 :++++++++++++++++++++++++++++++++++           |
+H :   430 :    333.000 :+++++++++++++++++++++++++++++++++            |
+H :   431 :    338.500 :++++++++++++++++++++++++++++++++++           |
+E :   432 :    332.500 :+++++++++++++++++++++++++++++++++           |
+D :   433 :    332.500 :+++++++++++++++++++++++++++++++++           |
+Q :   434 :    342.000 :++++++++++++++++++++++++++++++++++           |
+Q :   435 :    267.000 :+++++++++++++++++++++++++++                  |
+V :   436 :    336.000 :++++++++++++++++++++++++++++++++++            |
+R :   437 :    334.000 :++++++++++++++++++++++++++++++++++            |
+Y :   438 :    334.500 :++++++++++++++++++++++++++++++++++            |
+N :   439 :    340.000 :++++++++++++++++++++++++++++++++++            |
+A :   440 :    336.000 :##################################            |
+L :   441 :    343.500 :##################################            |
+L :   442 :    346.500 :###################################          |
+A :   443 :    336.000 :##################################           |
+V :   444 :    334.000 :##################################           |
+Q :   445 :    339.000 :##################################           |
+K :   446 :    332.500 :+++++++++++++++++++++++++++++++++            |
+L :   447 :    332.500 :+++++++++++++++++++++++++++++++++            |
+M :   448 :    339.000 :##################################          |
+V :   449 :    340.000 :++++++++++++++++++++++++++++++++++          |
+H :   450 :    336.000 :++++++++++++++++++++++++++++++++++          |
+N :   451 :    334.000 :++++++++++++++++++++++++++++++++++           |
+W :   452 :    327.500 :+++++++++++++++++++++++++++++++++            |
+E :   453 :    331.500 :#################################            |
+Y :   454 :    348.500 :###################################          |
+L :   455 :    346.500 :###################################          |
+G :   456 :    349.000 :###################################          |
+Q :   457 :    316.000 :################################             |
+Q :   458 :    345.500 :###################################          |
+L :   459 :    352.500 :###################################          |
+Q :   460 :    348.500 :###################################          |
+S :   461 :    347.500 :###################################          |
+E :   462 :    301.500 :++++++++++++++++++++++++++++++               |
+Q :   463 :    308.500 :+++++++++++++++++++++++++++++++              |
+P :   464 :    292.000 :+++++++++++++++++++++++++++++              |
+Q :   465 :    244.500 :++++++++++++++++++++++++               |
+T :   466 :    274.000 :+++++++++++++++++++++++++++            |
+A :   467 :    256.000 :++++++++++++++++++++++++++             |
+G :   468 :    183.000 :++++++++++++++++++                     |
+K :   469 :    285.500 :+++++++++++++++++++++++++++++          |
+Q :   470 :    300.500 :##############################         |
+L :   471 :    311.500 :###############################        |
+Q :   472 :    307.500 :###############################        |
+S :   473 :    312.000 :###############################        |
+E :   474 :    260.500 :##########################            |
+Q :   475 :    271.500 :###########################           |
+P :   476 :    253.000 :#########################             |
+Q :   477 :    262.000 :##########################            |
+T :   478 :    252.500 :+++++++++++++++++++++++++             |
+A :   479 :    241.500 :++++++++++++++++++++++++              |
+A :   480 :    171.000 :+++++++++++++++++                     |
+A :   481 :    295.000 :++++++++++++++++++++++++++++++       |
+R :   482 :    270.500 :+++++++++++++++++++++++++++       |
+S :   483 :    269.000 :+++++++++++++++++++++++++++       |
