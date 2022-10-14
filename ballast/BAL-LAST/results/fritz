@@ -8,7 +8,7 @@ Database: UNIPROT
            219,740,215 sequences; 75,474,994,830 total letters
 
 -------------------------------------------------------------------------------
-The 'profile' derived from blastp search is in file fritz.prof
+The 'profile' derived from blastp search is in file ../results/fritz.prof
 
 Only sequences with E(N) < 0.100000 were used to build the 'profile'
 

@@ -1,4 +1,4 @@
-BALLAST profile fritz.prof
+BALLAST profile ../results/fritz.prof
 
 The following sequences from BLAST results were used to build this profile :
 --------------------------------------------------------------------------------
