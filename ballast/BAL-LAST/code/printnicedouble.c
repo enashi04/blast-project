@@ -42,9 +42,7 @@ void printnicedouble(FILE *outfile, double p)
 
     /*
     if (strcmp(&str[3],"000") == 0) {fprintf (outfile," %2.1f     ",p);return;}
-
     if (strcmp(&str[4], "00") == 0) {fprintf (outfile," %3.2f    " ,p);return;}
-
     if (strcmp(&str[5],  "0") == 0) {fprintf (outfile," %4.3f   "  ,p);return;}
     */
 

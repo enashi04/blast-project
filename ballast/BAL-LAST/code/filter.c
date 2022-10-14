@@ -15,8 +15,7 @@
 
 int filter(char *seqhsp, char *seq)
 {
-    int n[26], deb[26];
-    //unused variable dibenn[26]
+    int n[26], deb[26], dibenn[26];
     int i, j, debut, fin;
     int l = 0;
     float max;
@@ -62,7 +61,7 @@ int filter(char *seqhsp, char *seq)
 
                 if (n[aa] == 0)
                     deb[aa] = i + j;
-                //dibenn[aa] = i + j;
+                dibenn[aa] = i + j;
 
                 n[aa]++;
 

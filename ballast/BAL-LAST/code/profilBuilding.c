@@ -31,7 +31,7 @@ char *getDesc(char *line, SeqHSP *seqres);
 char *getName(char *line, char *ptrstr, SeqHSP *seqres);
 char *getAccess(char *line, char *ptrstr, SeqHSP *seqres);
 char *firstScoreRecovery(char *line, char *outtext, char *begline, FILE *file);
-void eValueRecovery(char *line, char *ptrstr, double p);
+double eValueRecovery(char *line, char *ptrstr, double p);
 void fixeValue(double p, double maxp);
 char *getText(char *line, SimPrf *simprf);
 
@@ -42,7 +42,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
     /*************************************************************************************************************************************************/
     /************************************************************Déclaration des variables************************************************************/
     /************************************************************************************************************************************************/
-    double maxp = 0, p=0, facteur, fctr;
+    double maxp = 0, p, facteur, fctr;
     double *profil, *ptr, *simptr;
     SimPrf *simprf;
     char *outtext = NULL, *ptrstr, *begline, *queryseq, *seq, *seqhsp, *startline;
@@ -95,7 +95,6 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
     /************************************************************************************************************************************************/
     /******************************************************Récupération de name**********************************************************************/
     /************************************************************************************************************************************************/
-    ptrstr = strtok(line, " ");
     seqres->name = getName(line, ptrstr, seqres);
     /************************************************************************************************************************************************/
     /******************************************************Récupération de access********************************************************************/
@@ -119,7 +118,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
     /*******************************************************commençant par score et on cherche********************************************************/
     /****************************************************************la e-value***********************************************************************/
     /*************************************************************************************************************************************************/
-    eValueRecovery(line, ptrstr, p);
+    p = eValueRecovery(line, ptrstr, p);
 
     seqres->prob = p;
     simprf->p = p;
@@ -243,6 +242,11 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
             /************************************************************************************************************************************************/
             fgets(line, 256, file);
             line[strlen(line) - 1] = '\0';
+            /****************************************************************************************************************/
+            /******************************************Copier la nouvelle valeur*********************************************/
+            /**********************************de la ligne en ne laissant que la séquence************************************/
+            /****************************************************************************************************************/
+            //memmove(line, (line + dline), strlen(line) - dline);
             /*****************************************************************************************************************/
             /**********************************************Condition permettant***********************************************/
             /************************************de vérifier si nous sommes à la première*************************************/
@@ -416,7 +420,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
                     simprf->maxscore = 0;
                     simprf->nmatch = 0;
                 }
-                eValueRecovery(line, ptrstr,p);
+                p = eValueRecovery(line, ptrstr,p);
                 
                 if (p < seqres->prob)
                     seqres->prob = p;
@@ -487,7 +491,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
             /*** Aligned Aas in Query sequence and Database sequence are ****/
             /*** identical                                               ****/
 
-            if ((*(seq + i - begin + 1) != '+') && (*(seq + i - begin + 1) != ' ') && (*(seq + i - begin + 1) >= 'A' && *(seq + i - begin +1)<='Z')) //ici ajout le minuscule et le x : (*(seq + i - begin + 1) != 'x')
+            if ((*(seq + i - begin + 1) != '+') && (*(seq + i - begin + 1) != ' ') && (*(seq + i - begin + 1) != 'x')) //ici ajout le minuscule et le x
             {
                 *ptr = facteur * identique;
                 *simptr = ID * fctr;
@@ -566,6 +570,7 @@ char *getDesc(char *line, SeqHSP *seqres)
 
 char *getName(char *line, char *ptrstr, SeqHSP *seqres)
 {
+    ptrstr = strtok(line, " ");
     seqres->name = (char *)malloc(strlen(ptrstr) + 1);
     strcpy(seqres->name, ptrstr);
 
@@ -612,7 +617,7 @@ char *firstScoreRecovery(char *line, char *outtext, char *begline, FILE *file)
     return outtext;
 }
 
-void eValueRecovery(char *line, char *ptrstr, double p)
+double eValueRecovery(char *line, char *ptrstr, double p)
 {
     ptrstr = (char *)(strstr(line, "= e-"));
     if (ptrstr != NULL)
@@ -621,6 +626,7 @@ void eValueRecovery(char *line, char *ptrstr, double p)
         *ptrstr = '1';
     }
     sscanf((char *)(strrchr(line, '=') + 1), "%lf", &p);
+    return p;
 }
 
 

@@ -87,4 +87,3 @@ while (simptr != NULL)
 
 return firstsbjmot;
 }
-

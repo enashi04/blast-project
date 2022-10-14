@@ -19,9 +19,13 @@ int main(int argc, char *argv[])
 	Sbjmot *motifdb, *firstmotdb, *firstalnmotdb;
 
 	double *maxprofile;
+	double *maxprofile2;
 	double *profiltotal;
+	double *profiltotal2;
 	double *smoothed;
+	double *smoothed2;
 	double *trimmed;
+	double *trimmed2;
 	double *contribution;
 	double maxvalue;
 	double maxscore = 0.0;
@@ -29,6 +33,7 @@ int main(int argc, char *argv[])
 	double *ptrdbl;
 	float weight;
 	int length;
+	int length2;
 
 	float msfseuil;
 
@@ -38,6 +43,7 @@ int main(int argc, char *argv[])
 	int nmotifs = 0;
 
 	char *conserved;
+	char *conserved2;
 	char *ptrstr;
 	char *ptrseq;
 	char *lastchar;
@@ -45,10 +51,12 @@ int main(int argc, char *argv[])
 	BlastHeader blhd1;
 	BlastHeader blhd2;
 
-	int i;
+	int i, f;
 
 	char *infilename;
+	char *infilename2;
 	char *outfilename;
+	char *outfilename2;
 	char *msffilename;
 	char *tablefilename;
 	char *anchorfilename;
@@ -58,7 +66,8 @@ int main(int argc, char *argv[])
 	char *nomprofil;
 	char *mask;
 	char curline[256];
-	FILE *infile, *outfile = stdout, *msffile, *tablefile, *anchorfile, *motifsfile;
+	FILE *infile, *outfile, *msffile, *tablefile, *anchorfile, *motifsfile;
+	int tblastnsearch = 0;
 
 #define NUMARGS 20
 
@@ -182,10 +191,10 @@ int main(int argc, char *argv[])
         fprintf(outfile, "\n ***                           ***");
         fprintf(outfile, "\n *** No HSP to build \'profile\' ***");
         fprintf(outfile, "\n *********************************\n\n");
-        // if (outfile != stdout)
-        // {
-        //     fclose(outfile);
-        // }
+        if (outfile != stdout)
+        {
+            fclose(outfile);
+        }
         exit(1);
     }
     fclose(infile);
@@ -235,7 +244,7 @@ int main(int argc, char *argv[])
     if (motif == NULL)
     {
         outfile = stdout;
-        fprintf(outfile, "\n *********************************");
+        printf(outfile, "\n *********************************");
         fprintf(outfile, "\n ***      FATAL Error          ***");
         fprintf(outfile, "\n ***                           ***");
         fprintf(outfile, "\n ***    Words too short        ***");
@@ -302,6 +311,20 @@ int main(int argc, char *argv[])
     /*****************************************************************/
 
     maxvalue = profilplot(profiltotal, trimmed, length, outfilename, conserved, first, maxprofile);
+
+  /*****************************************************************/
+
+	/*****************************************************************/
+	/*** Plots 'profile' from TBlastN if required                 ****/
+	/*****************************************************************/
+
+	if ((getargbool("-plotn") == 1) && (tblastnsearch == 1))
+	{
+		outfilename2 = (char *)malloc(strlen(outfilename) + 4);
+		strcpy(outfilename2, outfilename);
+		strcat(outfilename2, "-nt");
+		profilplot(profiltotal2, trimmed2, length2, outfilename2, conserved2, first, maxprofile2);
+	}
 
 	/*****************************************************************/
 

@@ -59,6 +59,6 @@ double *smoothprofil(double *profil, int length, char *cons)
 		*ptr = m;
 		//printf("ptr : %lf\n", *ptr);
 	}
-	printf("lissage : %lf\n", *smoothed);
+	//printf("lissage : %lf\n", *smoothed);
 	return smoothed;
 }

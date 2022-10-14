@@ -34,7 +34,7 @@
 double MHalign (Motif *motif, Sbjmot *sbjmot, double *profil, char type, Sbjmot **first)
 {
 double sensepenalty;
-//double distpenalty;
+double distpenalty;
 
 double highscore;
 
