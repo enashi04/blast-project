@@ -48,7 +48,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
     char *outtext = NULL, *ptrstr, *begline, *queryseq, *seq, *seqhsp, *startline;
     int endofdbseq = 0, ok = 0, okhsp = 0, gapped, taux, naas, begin, end, debut, dline, n;
     int debdb, enddb, begdb, dline2, dline1;
-    int identique;
+    int identique=1;
     /************************************************************************************************************************************************/
     /************************************************************Initialisation de maxp**************************************************************/
     /************************************************************************************************************************************************/
@@ -484,14 +484,13 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
             }
             *ptr += facteur * identique;
             ptr = (double *)(profil + i);
-            // printf("le profil est de %f\n", *profil);
             simptr = (double *)(simprf->prf + i - begin + 1);
             *simptr = 0.0;
 
             /*** Aligned Aas in Query sequence and Database sequence are ****/
             /*** identical                                               ****/
 
-            if ((*(seq + i - begin + 1) != '+') && (*(seq + i - begin + 1) != ' ') && (*(seq + i - begin + 1) != 'x')) //ici ajout le minuscule et le x
+            if ((*(seq + i - begin + 1) != '+') && (*(seq + i - begin + 1) != ' ') && (*(seq + i - begin + 1) != 'x') && (*(seq + i - begin + 1) != '-')) //ici ajout le minuscule et le x 
             {
                 *ptr = facteur * identique;
                 *simptr = ID * fctr;
@@ -518,7 +517,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
         }
     }
 
-   // fprintf(stdout, "le smptr est de : %lf\n", *simptr);
+//    fprintf(stdout, "le smptr est de : %lf\n", *simptr);
     return profil;
 }
 

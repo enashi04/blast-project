@@ -55,7 +55,7 @@ int filter(char *seqhsp, char *seq)
                     }
                     else
                     {
-                        aa = (int)('X') - 65;
+                        aa = (int)('X') - 65; //ici ca peut aussi être des lettres minuscules
                     }
                 }
 

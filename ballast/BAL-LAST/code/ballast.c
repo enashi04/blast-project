@@ -14,6 +14,9 @@ extern double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length
 int main(int argc, char *argv[])
 {
 
+	/******************************************************************************/
+	/***************************Déclaration des variables**************************/
+	/******************************************************************************/
   	SeqHSP *seqres, *first;
 	Motif *motif, *motifptr;
 	Sbjmot *motifdb, *firstmotdb, *firstalnmotdb;
@@ -36,7 +39,6 @@ int main(int argc, char *argv[])
 	int length2;
 
 	float msfseuil;
-
 	float tableseuil;
 
 	int mismatches, prevn;
@@ -52,6 +54,7 @@ int main(int argc, char *argv[])
 	BlastHeader blhd2;
 
 	int i, f;
+	int tblastnsearch = 0;
 
 	char *infilename;
 	char *infilename2;
@@ -67,10 +70,12 @@ int main(int argc, char *argv[])
 	char *mask;
 	char curline[256];
 	FILE *infile, *outfile, *msffile, *tablefile, *anchorfile, *motifsfile;
-	int tblastnsearch = 0;
 
 #define NUMARGS 20
 
+	/******************************************************************************/
+	/***************************Définitions des arguments**************************/
+	/******************************************************************************/
     ARGDEF arg_def[NUMARGS] = {
         {"-anchors", 'b', 0, '\0'},
         {"-both", 'b', 0, '\0'},
@@ -93,9 +98,6 @@ int main(int argc, char *argv[])
         {"-t", 'f', 1, '\0'},
         {"-table", 'b', 0, '\0'}};
 
-    // printf(("Déclaration des variables : ok \n"));
-
-    // initialisation des variables
 
     if (initargs(argv, argc, arg_def, NUMARGS) == -1)
     {
@@ -137,9 +139,10 @@ int main(int argc, char *argv[])
         printf("\n*** ERROR: %s file not found ***\n\n", infilename);
         exit(1);
     }
-
+	/******************************************************************************/
+	/*************************Longueur de la séquence query************************/
+	/******************************************************************************/
     length = initresfile(infile, curline, &blhd1);
-    //  fprintf(stdout, "la longueur du fichier est de : %u \n", length);
 
     conserved = (char *)malloc(length + 1);
     maxprofile = (double *)malloc(sizeof(double) * length);
@@ -155,34 +158,27 @@ int main(int argc, char *argv[])
     ptrstr = (char *)(conserved + length);
     *ptrstr = '\0';
 
-    // fprintf(stdout, "Initialisation : ok\n");
 
-    // construction du profil BlastP
+    /******************************************************************************/
+	/*************************Construction du profil blastp************************/
+	/******************************************************************************/
     if (length != 0)
     {
         i = 1;
-        int j = 1;
         profiltotal = profilBuilding(seqres, infile, curline, length, conserved, maxprofile, 'p');
         while (curline[0] != '\0')
         {
-            
-            // printf("Tour : %u\n", j);
-            // printf("curline is %s\n", curline);
-
             seqres->rank = i++;
             seqres->next = (SeqHSP *)malloc(sizeof(SeqHSP));
             (seqres->next)->prev = seqres;
             seqres = seqres->next;
             seqres->next = NULL;
-            j++;
             contribution = profilBuilding(seqres, infile, curline, length, conserved, maxprofile, 'p');
             if (strcmp(seqres->prev->sim->hsp, seqres->sim->hsp) != 0)
             {                
                 addprofils(profiltotal, contribution, length);
             }
         }
-      //  printf("Le profil total est %f\n", *profiltotal);
-
     }
     else
     {
@@ -199,7 +195,9 @@ int main(int argc, char *argv[])
     }
     fclose(infile);
 
-    /**Reads an already existing profile if required**/
+    /******************************************************************************/
+	/****************************Lire un profil existant***************************/
+	/******************************************************************************/
     if (getargchar("-profil", &nomprofil) != NULL)
     {
         if (fopen(nomprofil, "r"))
@@ -212,7 +210,6 @@ int main(int argc, char *argv[])
     /*** Masks profile if required                  ******************/
     /*** otherwise treats and uses the full profile ******************/
     /*****************************************************************/
-
     if (getargchar("-mask", &maskfilename) != NULL)
     {
         if (fopen(maskfilename, "r"))
@@ -224,9 +221,7 @@ int main(int argc, char *argv[])
     }
     else
     {
-        // On va d'abord lisser le profil en récupérant d'abord la partie conservée
-        // printf("conserved %s\n", conserved); //nickel
-        // lissage
+        
         smoothed = smoothprofil(profiltotal, length, conserved);
         if (getargbool("-noext") == 0)
         {

@@ -19,13 +19,15 @@ double *smoothprofil(double *profil, int length, char *cons)
 
 	//printf("le profil est %lf \n", *profil);
 	if (getargint("-smooth", &demifen) == NULL)
-		demifen = 4;//augmentation de la fenetre à 6 ca fait un plus grand score
+		demifen = 6;
 
 	/*****************************************************************/
 	/*** Smooth 'profile'                                         ****/
 	/*****************************************************************/
 
 	smoothed = (double *)malloc(length * sizeof(double));
+	//printf("cons est : %s\n", cons);
+
 	for (i = 0; i < length; i++)
 	{
 		m = 0;
@@ -34,7 +36,6 @@ double *smoothprofil(double *profil, int length, char *cons)
 		{
 			if ((j >= 0) && (j < length))
 			{
-				//printf("Alors la valeur de cons est %c\n",*(cons + j) );
 				if (*(cons + j) != '.')
 				{
 
@@ -59,6 +60,6 @@ double *smoothprofil(double *profil, int length, char *cons)
 		*ptr = m;
 		//printf("ptr : %lf\n", *ptr);
 	}
-	//printf("lissage : %lf\n", *smoothed);
+	// printf("lissage : %lf\n", *smoothed);
 	return smoothed;
 }

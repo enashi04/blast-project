@@ -27,9 +27,9 @@
 #include "global.h"
 
 #define D2MAX -0.1
-#define DEFSEUIL 0.3
+#define DEFSEUIL 0.3//0.3
 #define SEUIL seuil
-#define DEMIFEN 4
+#define DEMIFEN 6
 
 double *trimprofilext(double *profiltotal, double *profil, int length, char *cons)
 {
@@ -62,7 +62,6 @@ double *trimprofilext(double *profiltotal, double *profil, int length, char *con
     *ptr = 0;
     ptr = (double *)(d2prof + length - 1);
     *ptr = 0;
-
     for (i = 1; i < length - 1; i++)
     {
         ptr = (double *)(dprof + i);
@@ -82,13 +81,16 @@ double *trimprofilext(double *profiltotal, double *profil, int length, char *con
             if (*(cons + i - 1) == '.')
             {
                 pr1 = *(profil + i);
+
                 i1 = 0;
             }
             else
             {
                 pr1 = *(profil + i - 1);
+
             }
             *ptr = (pr2 - pr1) * 3.0 / (double)(i2 - i1 + 1);
+
         }
         else
         {
@@ -136,7 +138,6 @@ double *trimprofilext(double *profiltotal, double *profil, int length, char *con
     /*****************************************************************/
     /**** derives the derived profile ********************************/
     /*****************************************************************/
-
     for (i = 1; i < length - 1; i++)
     {
         ptr = (double *)(d2prof + i);
