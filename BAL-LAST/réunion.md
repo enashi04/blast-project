@@ -36,10 +36,10 @@ Concernant la suite du projet : savoir si ca rentre dans les compétences de l'a
     * pour une query, trouver son orthologue
     * à partir d'un motif précis trouver son orthologue
 
-_On se dirige vers de l'IA, de la recherche?_  
 
-* ballast doit donner une sorte de score dans l'orthologie => IA ambitieuse
+* ballast doit donner une sorte de score dans l'orthologie.
 
+_On se dirige vers de l'IA ambitieuse, de la recherche?_  
 * Faire un blast pour récupérer le vrai orthologue
 
 * Interface Web pour y ajouter Ballast :
