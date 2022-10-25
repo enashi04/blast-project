@@ -32,7 +32,7 @@ $(EXEC): %: %.c $(DEP)
 
 	$(CC) $(CFLAGS) -o $@  $^ $(LDFLAGS) -lxml2
 
-²	
+
 #### RAPPEL ################
 
 
