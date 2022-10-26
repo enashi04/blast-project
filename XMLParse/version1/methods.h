@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-//entrer dans le noeud hit
+//ENTRER DANS LE NOEUD : HIT
 void hit_enter(xmlNode *node, FILE *fp){
     const char *name;
     name = "BlastOutput_query-len";
@@ -14,7 +14,9 @@ void hit_enter(xmlNode *node, FILE *fp){
         fprintf(fp, "Length : %s\n\n", xmlNodeGetContent(node));
     }
 }
-
+/**
+ * RÉCUPÉRER LE NOM DE LA QUERY
+*/
 void query_Def(xmlNode *node, FILE *fp){
 
     const char *name;
@@ -26,7 +28,9 @@ void query_Def(xmlNode *node, FILE *fp){
     }
 }
 
-//query length
+/**
+ * RÉCUPÉRER LA LONGUEUR DE LA QUERY
+*/
 void query_Length(xmlNode *node, FILE *fp){
     const char *name;
     name = "BlastOutput_query-len";
@@ -36,35 +40,54 @@ void query_Length(xmlNode *node, FILE *fp){
         fprintf(fp, "Length : %s\n\n", xmlNodeGetContent(node));
     }
 } 
-//identifier le hit id (hit id )
-void hit_ID(xmlNode *node, FILE *fp, int mode, char *liste[]){
+/**
+ * identifier le hit id (hit id )
+*/
+void hit_ID(xmlNode *node, FILE *fp, int mode, char *liste[2][12]){
     xmlNode *child;
     const char *name="Hit_id"; 
     child = node ->children;
     for(node = child; node; node=node->next){
         if(strcmp(name, ( const char *)node->name)==0){
+/***************************************************************************************************/
+/****************************************MODE BRONZE************************************************/
+/***************************************************************************************************/ 
             if(mode==1){
                 fprintf(fp, "hit id, score, evalue, align_length\n");
             }
+/***************************************************************************************************/
+/****************************************MODE SILVER************************************************/
+/***************************************************************************************************/ 
             else if(mode == 2){
                 fprintf(fp, "hit id, score, evalue, identity, positive, gaps, align_length\n");
             }
+/***************************************************************************************************/
+/*****************************************MODE GOLD*************************************************/
+/***************************************************************************************************/ 
             else if(mode == 3){
                 fprintf(fp, "hit id ,bit-score,score,evalue,query-from,query-to,target-from,target-to,identity,positive,gaps,align-length \n");
             }
+/***************************************************************************************************/
+/****************************************MODE PERSO*************************************************/
+/***************************************************************************************************/ 
             else{
-                printf("papapa");
+                printf("papapa"); //ICI C'EST LE TEST
             }
-           // fprintf(fp, "hit id ,bit-score,score,evalue,query-from,query-to,target-from,target-to,identity,positive,gaps,align-length \n");
             fprintf(fp, "%s,", xmlNodeGetContent(node));
         }
     }
 }
 
 
-//identifier l'identité
+/**
+ * RÉCUPÉRER L'ÉLÉMENT VOULU
+*/
 void getHSP(xmlNode *node, const char *name, FILE *fp){
     if(strcmp(name, (const char *)node->name)==0){
+/***************************************************************************************************/
+/*************************SI ALIGN_LENGTH, ALORS ON ENLEVE LA VIRGULE*******************************/
+/****************************************FIN DU CSV*************************************************/
+/***************************************************************************************************/  
         if(strcmp(name, (const char *)"Hsp_align-len")==0){
             fprintf(fp," %s",xmlNodeGetContent(node));
         }
@@ -75,34 +98,49 @@ void getHSP(xmlNode *node, const char *name, FILE *fp){
 }
 
 
-//rentrer dans hsp
-void HSP_Enter(xmlNode *node, FILE *fp, int mode, char *liste[]){
+/**
+ * ENTRER DANS L'HSP
+*/
+void HSP_Enter(xmlNode *node, FILE *fp, int mode, char *liste[2][12]){
     xmlNode *child;
     const char *name, *name2; 
+/***************************************************************************************************/
+/********************************CHILD = SOUS-NOEUD DU NODE ****************************************/
+/***************************************************************************************************/   
     child = node ->children;
     name= "Hit_hsps";
     name2 = "Hsp";
-    //printf("test \n");
 
     for(node = child; node; node=node->next){
         if(strcmp(name, ( const char *)node->name)==0){ 
-            xmlNode *childNode;
+/***************************************************************************************************/
+/*****************************CHILDNODE = SOUS-NOEUD DE NODE***************************************/
+/***************************************************************************************************/  
+            xmlNode *childNode; 
             childNode = node->children;
-           
             for(child = childNode; child; child=child->next){
-
+/***************************************************************************************************/
+/***************************NOEUD DANS LEQUEL ON SE TROUVE = HSP ?**********************************/
+/***************************************************************************************************/   
                 if(strcmp(name2, (const char *)child->name)==0){
-                    //dernière boucle et on mets les fonctions à l'intérieur pour récupérer les éléments qu'on veut !
+/***************************************************************************************************/
+/*****************************LASTCHILD = SOUS-NOEUD DE CHILD***************************************/
+/***************************************************************************************************/  
                     xmlNode *lastchild; 
                     lastchild=child->children;
-
                     for(childNode=lastchild; childNode; childNode=childNode->next){
+/***************************************************************************************************/
+/*****************************************MODE BRONZE***********************************************/
+/***************************************************************************************************/  
                         if(mode ==1){
                             getHSP(childNode, "Hsp_evalue",fp);
                             getHSP(childNode, "Hsp_score",fp);
                             getHSP(childNode, "Hsp_align-len", fp);
 
                         }
+/***************************************************************************************************/
+/****************************************MODE SILVER************************************************/
+/***************************************************************************************************/  
                         else if (mode == 2){
                             getHSP(childNode, "Hsp_identity", fp);
                             getHSP(childNode, "Hsp_evalue",fp);
@@ -111,8 +149,10 @@ void HSP_Enter(xmlNode *node, FILE *fp, int mode, char *liste[]){
                             getHSP(childNode, "Hsp_gaps", fp);
                             getHSP(childNode, "Hsp_align-len", fp);
                         }
+/***************************************************************************************************/
+/*****************************************MODE GOLD*************************************************/
+/***************************************************************************************************/  
                         else if (mode == 3){
-                            //les méthodes pour chercher les infos qu'on veut 
                             getHSP(childNode, "Hsp_identity", fp);
                             getHSP(childNode, "Hsp_align-len", fp);
                             getHSP(childNode, "Hsp_gaps", fp);
@@ -125,13 +165,13 @@ void HSP_Enter(xmlNode *node, FILE *fp, int mode, char *liste[]){
                             getHSP(childNode, "Hsp_score",fp);
                             getHSP(childNode, "Hsp_bit-score",fp);
                         }
+/***************************************************************************************************/
+/****************************************MODE PERSO*************************************************/
+/***************************************************************************************************/  
                         else{
                             printf("nothing\n");
-                        }   
-                            
-                    }
-                       
-                    
+                        }        
+                    }     
                 }
             }
         }
@@ -140,42 +180,52 @@ void HSP_Enter(xmlNode *node, FILE *fp, int mode, char *liste[]){
 }
 
 
-//récupérer le hit
-void hit_Iteration(xmlNode *node, FILE *fp, int mode, char *liste[]){
+/**
+ * RÉCUPÉRATION DU HIT
+*/
+void hit_Iteration(xmlNode *node, FILE *fp, int mode, char *liste[2][12]){
     xmlNode *child;
     const char *iteration, *hit; 
+/***************************************************************************************************/
+/********************************CHILD = SOUS-NOEUD DU NODE ****************************************/
+/***************************************************************************************************/   
     child = node->children;
     iteration = "Iteration_hits";
     hit= "Hit";
     int i=0; 
+/***************************************************************************************************/
+/***********************************PARCOURS DES SOUS-NOEUD*****************************************/
+/***************************************************************************************************/   
     for(node = child; node; node =node->next){
         if(strcmp(iteration, (const char *)node->name)==0){
             xmlNode *childNode;
+/***************************************************************************************************/
+/********************************CHILDNODE = SOUS-NOEUD DE CHILD************************************/
+/***************************************************************************************************/   
             childNode = node->children; 
             for(child=childNode; child; child=child->next){
                 if(strcmp(hit, (const char *)child->name)==0){
                    i++;
-                    //on met les fonctions qui va permettre de récupérer les données qu'on veut
-                   // fprintf(fp, "%u.\n", i);
+/***************************************************************************************************/
+/**********************************IDENTIFIER L'ID DU HIT*******************************************/
+/***************************************************************************************************/   
                     hit_ID(child,fp, mode, liste);
-                    //mettre condition ici pour savoir quoi prendre.
+/***************************************************************************************************/
+/*************************************ENTRER DANS L'HSP*********************************************/
+/***************************************************************************************************/   
                     HSP_Enter(child, fp, mode, liste);
-                    //break;
                 }
             }
         }
     }
 }
 
-void blastOutPut_iteration(xmlDoc *fichier, FILE *fp, int mode, char *liste[]){
-
+void blastOutPut_iteration(xmlDoc *fichier, FILE *fp, int mode, char** liste[]){
     xmlNode *node,*child, *root ;
-
 /***************************************************************************************************/
 /**********************************RECUP° DU PREMIER NOEUD******************************************/
 /***************************************************************************************************/   
     root = xmlDocGetRootElement(fichier);
-
 /***************************************************************************************************/
 /********************************CHILD = SOUS-NOEUD DU ROOT ****************************************/
 /***************************************************************************************************/   
