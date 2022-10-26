@@ -36,12 +36,11 @@ void query_Length(xmlNode *node, FILE *fp){
         fprintf(fp, "Length : %s\n\n", xmlNodeGetContent(node));
     }
 } 
-//identifier le hit id (hit id or hit def???)
+//identifier le hit id (hit id )
 void hit_ID(xmlNode *node, FILE *fp, int mode, char *liste[]){
     xmlNode *child;
-    const char *name; 
+    const char *name="Hit_id"; 
     child = node ->children;
-    name= "Hit_id";
     for(node = child; node; node=node->next){
         if(strcmp(name, ( const char *)node->name)==0){
             if(mode==1){
@@ -54,7 +53,7 @@ void hit_ID(xmlNode *node, FILE *fp, int mode, char *liste[]){
                 fprintf(fp, "hit id ,bit-score,score,evalue,query-from,query-to,target-from,target-to,identity,positive,gaps,align-length \n");
             }
             else{
-
+                printf("papapa");
             }
            // fprintf(fp, "hit id ,bit-score,score,evalue,query-from,query-to,target-from,target-to,identity,positive,gaps,align-length \n");
             fprintf(fp, "%s,", xmlNodeGetContent(node));
