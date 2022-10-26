@@ -1,0 +1,4090 @@
+BLASTP 2.12.0+
+
+
+Reference: Stephen F. Altschul, Thomas L. Madden, Alejandro A.
+Schaffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J.
+Lipman (1997), "Gapped BLAST and PSI-BLAST: a new generation of
+protein database search programs", Nucleic Acids Res. 25:3389-3402.
+
+
+Reference for composition-based statistics: Alejandro A. Schaffer,
+L. Aravind, Thomas L. Madden, Sergei Shavirin, John L. Spouge, Yuri
+I. Wolf, Eugene V. Koonin, and Stephen F. Altschul (2001),
+"Improving the accuracy of PSI-BLAST protein database searches with
+composition-based statistics and other refinements", Nucleic Acids
+Res. 29:2994-3005.
+
+
+
+Database: UNIPROT  
+           219,740,215 sequences; 75,474,994,830 total letters
+
+
+
+Query= sp|A8MTZ0|BBIP1_HUMAN OS=Homo sapiens OX=9606 GN=BBIP1 PE=1 SV=2
+
+Length=92
+                                                                 Score    E
+Sequences producing significant alignments:                      (bits) Value
+
+sp|A8MTZ0|BBIP1_HUMAN BBSome-interacting protein 1 OS=Homo sapie...   145   6e-42
+tr|A0A6D2XZL1|A0A6D2XZL1_PANTR BBIP1 isoform 1 OS=Pan troglodyte...   142   5e-41
+tr|G2HEF9|G2HEF9_PANTR BBSome interacting protein 1 OS=Pan trogl...   142   5e-41
+tr|A0A2I2ZQS5|A0A2I2ZQS5_GORGO BBSome interacting protein 1 OS=G...   140   2e-40
+tr|A0A2K5XI38|A0A2K5XI38_MANLE BBSome interacting protein 1 OS=M...   140   3e-40
+tr|A0A2I3MG30|A0A2I3MG30_PAPAN BBSome interacting protein 1 OS=P...   140   3e-40
+tr|A0A2J8W798|A0A2J8W798_PONAB BBIP1 isoform 1 OS=Pongo abelii O...   140   5e-40
+tr|A0A2I3HG82|A0A2I3HG82_NOMLE Uncharacterized protein OS=Nomasc...   139   1e-39
+tr|A0A2K5LLQ1|A0A2K5LLQ1_CERAT BBSome interacting protein 1 OS=C...   139   2e-39
+tr|A0A2K6DN77|A0A2K6DN77_MACNE BBSome interacting protein 1 OS=M...   138   3e-39
+tr|A0A2K6SGX3|A0A2K6SGX3_SAIBB Uncharacterized protein OS=Saimir...   134   6e-38
+tr|U3EYB8|U3EYB8_CALJA BBSome-interacting protein 1 isoform 2 OS...   130   3e-36
+tr|A0A2K5DVQ0|A0A2K5DVQ0_AOTNA BBSome interacting protein 1 OS=A...   130   5e-36
+tr|H2Q2K3|H2Q2K3_PANTR BBSome interacting protein 1 OS=Pan trogl...   120   3e-32
+tr|A0A0D9QYN2|A0A0D9QYN2_CHLSB Uncharacterized protein OS=Chloro...   119   6e-32
+tr|A0A5F8AL75|A0A5F8AL75_MACMU Uncharacterized protein OS=Macaca...   116   1e-30
+tr|A0A2K5HKV1|A0A2K5HKV1_COLAP BBSome interacting protein 1 OS=C...   108   1e-27
+tr|U6DUL7|U6DUL7_NEOVI BBSome-interacting protein 1 99 (Fragment...   105   5e-26
+tr|A0A7J7VAN0|A0A7J7VAN0_PIPKU BBSome interacting protein 1 OS=P...   100   2e-24
+tr|J9P3I0|J9P3I0_CANLF Uncharacterized protein OS=Canis lupus fa...    99   5e-24
+tr|A0A2K5HKQ8|A0A2K5HKQ8_COLAP BBSome interacting protein 1 OS=C...    98   6e-24
+tr|A0A2R9AK62|A0A2R9AK62_PANPA BBSome interacting protein 1 OS=P...    98   6e-24
+tr|A0A2J8PCK2|A0A2J8PCK2_PANTR BBIP1 isoform 3 OS=Pan troglodyte...    98   6e-24
+tr|A0A2J8W791|A0A2J8W791_PONAB BBIP1 isoform 2 OS=Pongo abelii O...    98   6e-24
+tr|A0A2K5XI42|A0A2K5XI42_MANLE BBSome interacting protein 1 OS=M...    97   2e-23
+tr|A0A2K6MC98|A0A2K6MC98_RHIBE Uncharacterized protein OS=Rhinop...    97   2e-23
+tr|A0A2K6NCU5|A0A2K6NCU5_RHIRO Uncharacterized protein OS=Rhinop...    97   2e-23
+tr|A0A2Y9F0L7|A0A2Y9F0L7_PHYMC BBSome-interacting protein 1 isof...    97   5e-23
+tr|A0A2Y9JBI6|A0A2Y9JBI6_ENHLU BBSome-interacting protein 1 isof...    97   6e-23
+tr|A0A643CJ18|A0A643CJ18_BALPH Uncharacterized protein OS=Balaen...    96   6e-23
+tr|A0A383ZD73|A0A383ZD73_BALAS BBSome-interacting protein 1 OS=B...    96   6e-23
+tr|A0A667IBP6|A0A667IBP6_LYNCA BBSome interacting protein 1 OS=L...    97   1e-22
+tr|A0A2K6DN83|A0A2K6DN83_MACNE BBSome interacting protein 1 OS=M...    95   2e-22
+tr|A0A6J1ZN74|A0A6J1ZN74_ACIJB BBSome-interacting protein 1 isof...    96   2e-22
+tr|A0A6G1B0M6|A0A6G1B0M6_CROCR BBIP1 protein (Fragment) OS=Crocu...    94   3e-22
+tr|A0A2Y9MU93|A0A2Y9MU93_DELLE BBSome-interacting protein 1 OS=D...    94   6e-22
+tr|A0A341CBS6|A0A341CBS6_NEOAA BBSome-interacting protein 1 OS=N...    94   6e-22
+tr|A0A2K5S0K7|A0A2K5S0K7_CEBIM Uncharacterized protein OS=Cebus ...    93   8e-22
+tr|A0A7J7TSE1|A0A7J7TSE1_MYOMY BBSome interacting protein 1 OS=M...    94   1e-21
+tr|A0A7J7UVT3|A0A7J7UVT3_RHIFE BBSome interacting protein 1 OS=R...    93   2e-21
+tr|A0A5F9DHU3|A0A5F9DHU3_RABIT Uncharacterized protein OS=Orycto...    92   3e-21
+tr|S7N739|S7N739_MYOBR BBSome-interacting protein 1 (Fragment) O...    92   3e-21
+tr|A0A6J3I6F1|A0A6J3I6F1_SAPAP BBSome-interacting protein 1 OS=S...    91   6e-21
+tr|A0A452EUG2|A0A452EUG2_CAPHI Uncharacterized protein OS=Capra ...    92   6e-21
+tr|A0A3Q7VCJ6|A0A3Q7VCJ6_URSAR BBSome-interacting protein 1 isof...    91   6e-21
+tr|A0A484GS56|A0A484GS56_SOUCH Uncharacterized protein (Fragment...    90   2e-20
+tr|A0A5E4BRF6|A0A5E4BRF6_MARMO Uncharacterized protein OS=Marmot...    91   2e-20
+tr|W5PLE6|W5PLE6_SHEEP Uncharacterized protein OS=Ovis aries OX=...    88   9e-20
+tr|H2NBL0|H2NBL0_PONAB Uncharacterized protein OS=Pongo abelii O...    87   2e-19
+tr|A0A5F9D256|A0A5F9D256_RABIT Uncharacterized protein OS=Orycto...    88   6e-19
+tr|A0A6P3TDJ2|A0A6P3TDJ2_SHEEP BBSome-interacting protein 1 isof...    87   1e-18
+tr|A0A6J0A480|A0A6J0A480_ACIJB BBSome-interacting protein 1 OS=A...    84   3e-18
+tr|A0A7J7FJH1|A0A7J7FJH1_DICBM Uncharacterized protein OS=Dicero...    82   1e-17
+tr|A0A485PA86|A0A485PA86_LYNPA Uncharacterized protein OS=Lynx p...    82   2e-17
+tr|A0A6P6HDR7|A0A6P6HDR7_PUMCO BBSome-interacting protein 1 OS=P...    82   2e-17
+tr|A0A667H0N5|A0A667H0N5_LYNCA BBSome interacting protein 1 OS=L...    82   2e-17
+tr|A0A2I2U3Y1|A0A2I2U3Y1_FELCA Uncharacterized protein OS=Felis ...    82   2e-17
+tr|A0A3Q7PRY2|A0A3Q7PRY2_CALUR BBSome-interacting protein 1 OS=C...    82   2e-17
+tr|A0A6J2D8F5|A0A6J2D8F5_ZALCA BBSome-interacting protein 1 OS=Z...    82   2e-17
+tr|A0A2U3WQY8|A0A2U3WQY8_ODORO BBSome-interacting protein 1 OS=O...    82   2e-17
+tr|A0A2Y9I0B8|A0A2Y9I0B8_NEOSC BBSome-interacting protein 1 OS=N...    82   2e-17
+tr|A0A6J1ZQF7|A0A6J1ZQF7_ACIJB BBSome-interacting protein 1 isof...    82   2e-17
+tr|A0A6P4WT46|A0A6P4WT46_PANPR BBSome-interacting protein 1 OS=P...    82   2e-17
+tr|A0A6B0RP22|A0A6B0RP22_9CETA Uncharacterized protein OS=Bos mu...    83   2e-17
+tr|A0A1S3FA98|A0A1S3FA98_DIPOR BBSome-interacting protein 1 OS=D...    82   2e-17
+tr|A0A7J8DNF5|A0A7J8DNF5_MOLMO BBSome interacting protein 1 OS=M...    81   2e-17
+tr|A0A7N5P139|A0A7N5P139_AILME Uncharacterized protein OS=Ailuro...    80   5e-17
+tr|A0A6P4UDT8|A0A6P4UDT8_PANPR BBSome-interacting protein 1-like...    80   7e-17
+tr|A0A3Q7S3Q1|A0A3Q7S3Q1_VULVU BBSome-interacting protein 1 OS=V...    80   7e-17
+tr|A0A7F8R072|A0A7F8R072_LEPWE BBSome-interacting protein 1 OS=L...    80   7e-17
+tr|A0A2Y9J605|A0A2Y9J605_ENHLU BBSome-interacting protein 1 isof...    80   7e-17
+tr|A0A4W2G3C9|A0A4W2G3C9_BOBOX BBSome interacting protein 1 OS=B...    80   9e-17
+tr|A0A452SJM5|A0A452SJM5_URSAM Uncharacterized protein OS=Ursus ...    80   1e-16
+tr|A0A452VGZ2|A0A452VGZ2_URSMA Uncharacterized protein OS=Ursus ...    80   1e-16
+tr|A0A3Q7W5G5|A0A3Q7W5G5_URSAR BBSome-interacting protein 1 isof...    80   1e-16
+tr|G3I6S4|G3I6S4_CRIGR BBSome-interacting protein of 10 kDa OS=C...    79   2e-16
+tr|A0A455AYP0|A0A455AYP0_PHYMC BBSome-interacting protein 1 isof...    79   3e-16
+tr|A0A673T7H0|A0A673T7H0_SURSU Uncharacterized protein OS=Surica...    79   3e-16
+tr|A0A671F1B2|A0A671F1B2_RHIFE BBSome interacting protein 1 OS=R...    79   3e-16
+tr|A0A2Y9R234|A0A2Y9R234_TRIMA BBSome-interacting protein 1 OS=T...    79   3e-16
+tr|A0A494C180|A0A494C180_HUMAN BBSome-interacting protein 1 OS=H...    78   4e-16
+tr|A0A2J8PCJ7|A0A2J8PCJ7_PANTR BBIP1 isoform 4 OS=Pan troglodyte...    78   4e-16
+tr|E9PIK7|E9PIK7_HUMAN BBSome-interacting protein 1 OS=Homo sapi...    78   4e-16
+tr|A0A2I2Z529|A0A2I2Z529_GORGO BBSome interacting protein 1 OS=G...    78   5e-16
+tr|A0A2K5XI11|A0A2K5XI11_MANLE BBSome interacting protein 1 OS=M...    78   5e-16
+tr|A0A2I3LPK3|A0A2I3LPK3_PAPAN BBSome interacting protein 1 OS=P...    78   5e-16
+tr|A0A2I3TPV4|A0A2I3TPV4_PANTR BBSome interacting protein 1 OS=P...    78   5e-16
+tr|A0A6D2W5V1|A0A6D2W5V1_PANTR BBIP1 isoform 7 OS=Pan troglodyte...    78   5e-16
+tr|A0A2J8W766|A0A2J8W766_PONAB BBIP1 isoform 7 OS=Pongo abelii O...    78   5e-16
+tr|A0A485PCS7|A0A485PCS7_LYNPA Uncharacterized protein OS=Lynx p...    78   5e-16
+tr|A0A1S2ZLS6|A0A1S2ZLS6_ERIEU LOW QUALITY PROTEIN: BBSome-inter...    79   5e-16
+tr|A0A2U3VA93|A0A2U3VA93_TURTR BBSome-interacting protein 1 OS=T...    78   6e-16
+tr|A0A4W2BYE9|A0A4W2BYE9_BOBOX Uncharacterized protein OS=Bos in...    77   8e-16
+tr|A0A2K6EF90|A0A2K6EF90_PROCO BBSome interacting protein 1 OS=P...    77   2e-15
+tr|A0A5N4DIZ1|A0A5N4DIZ1_CAMDR BBSome-interacting protein 1 OS=C...    77   2e-15
+tr|A0A2K6SGT6|A0A2K6SGT6_SAIBB Uncharacterized protein OS=Saimir...    76   2e-15
+tr|A0A340YE41|A0A340YE41_LIPVE BBSome-interacting protein 1 OS=L...    76   3e-15
+tr|A0A1A6H6K9|A0A1A6H6K9_NEOLE Uncharacterized protein (Fragment...    77   3e-15
+tr|A0A4X1TEA3|A0A4X1TEA3_PIG Uncharacterized protein OS=Sus scro...    76   3e-15
+tr|A0A2K5LLM7|A0A2K5LLM7_CERAT BBSome interacting protein 1 OS=C...    76   3e-15
+tr|A0A6P3TIZ8|A0A6P3TIZ8_SHEEP BBSome-interacting protein 1 isof...    76   3e-15
+tr|A0A2K6DN95|A0A2K6DN95_MACNE BBSome interacting protein 1 OS=M...    75   4e-15
+tr|A0A2K5W1B0|A0A2K5W1B0_MACFA Uncharacterized protein OS=Macaca...    75   4e-15
+tr|F7DHC4|F7DHC4_MACMU Uncharacterized protein OS=Macaca mulatta...    75   4e-15
+tr|A0A2J8W769|A0A2J8W769_PONAB BBIP1 isoform 4 OS=Pongo abelii O...    75   5e-15
+tr|A0A2K5DVM8|A0A2K5DVM8_AOTNA BBSome interacting protein 1 OS=A...    75   8e-15
+tr|A0A250Y8K0|A0A250Y8K0_CASCN BBSome-interacting protein 1 OS=C...    75   8e-15
+tr|A0A1U7Q2K2|A0A1U7Q2K2_MESAU BBSome-interacting protein 1 OS=M...    75   9e-15
+tr|A0A2I3HH61|A0A2I3HH61_NOMLE Uncharacterized protein OS=Nomasc...    75   9e-15
+tr|A0A6J0YHG7|A0A6J0YHG7_ODOVR BBSome-interacting protein 1 OS=O...    75   1e-14
+tr|F6V3X0|F6V3X0_CALJA Uncharacterized protein OS=Callithrix jac...    74   2e-14
+tr|A0A0G2JT03|A0A0G2JT03_RAT BBSome-interacting protein 1 OS=Rat...    74   2e-14
+tr|A0A4U1FT97|A0A4U1FT97_MONMO Uncharacterized protein OS=Monodo...    74   2e-14
+tr|A0A7J8G4H3|A0A7J8G4H3_ROUAE BBSome interacting protein 1 OS=R...    73   3e-14
+tr|A0A6I9MH45|A0A6I9MH45_PERMB BBSome-interacting protein 1 OS=P...    73   4e-14
+tr|A0A6P7QUA7|A0A6P7QUA7_MUSCR BBSome-interacting protein 1 OS=M...    74   4e-14
+tr|G3N2W1|G3N2W1_BOVIN Uncharacterized protein OS=Bos taurus OX=...    73   4e-14
+tr|A0A6P5E110|A0A6P5E110_BOSIN BBSome-interacting protein 1 OS=B...    73   4e-14
+tr|A0A6P3J2U7|A0A6P3J2U7_BISBI BBSome-interacting protein 1 OS=B...    73   4e-14
+tr|A0A1U7T5Q9|A0A1U7T5Q9_CARSF BBSome-interacting protein 1 OS=C...    73   5e-14
+tr|A0A6I9IXJ2|A0A6I9IXJ2_CHRAS BBSome-interacting protein 1 OS=C...    72   1e-13
+tr|A0A6J0ABV1|A0A6J0ABV1_VICPA BBSome-interacting protein 1 OS=V...    72   1e-13
+tr|A0A6P3QKT8|A0A6P3QKT8_PTEVA BBSome-interacting protein 1 isof...    72   1e-13
+tr|A0A7N4V6I2|A0A7N4V6I2_SARHA BBSome interacting protein 1 OS=S...    71   2e-13
+tr|A0A6P5KG92|A0A6P5KG92_PHACI BBSome-interacting protein 1 OS=P...    71   2e-13
+tr|A0A337SVT5|A0A337SVT5_FELCA BBSome interacting protein 1 OS=F...    71   2e-13
+tr|A0A6P3QRJ1|A0A6P3QRJ1_PTEVA BBSome-interacting protein 1 isof...    72   3e-13
+tr|J3QMK2|J3QMK2_MOUSE BBSome-interacting protein 1 OS=Mus muscu...    70   6e-13
+tr|F7AYF5|F7AYF5_MONDO Uncharacterized protein OS=Monodelphis do...    70   8e-13
+tr|A0A6I8P9P9|A0A6I8P9P9_ORNAN Uncharacterized protein OS=Ornith...    69   1e-12
+tr|A0A6J2LPQ8|A0A6J2LPQ8_9CHIR BBSome-interacting protein 1 OS=P...    69   2e-12
+tr|G3GRC2|G3GRC2_CRIGR BBSome-interacting protein of 10 kDa OS=C...    68   2e-12
+tr|A0A1S3WKR9|A0A1S3WKR9_ERIEU BBSome-interacting protein 1 OS=E...    66   2e-11
+tr|H0XMN1|H0XMN1_OTOGA Uncharacterized protein OS=Otolemur garne...    66   2e-11
+tr|A0A384BTS2|A0A384BTS2_URSMA LOW QUALITY PROTEIN: BBSome-inter...    66   6e-11
+tr|A0A6P7Y0H4|A0A6P7Y0H4_9AMPH BBSome-interacting protein 1 OS=M...    65   6e-11
+tr|A0A091E1P0|A0A091E1P0_FUKDA BBSome-interacting protein 1 OS=F...    65   7e-11
+tr|A0A3L7HIB3|A0A3L7HIB3_CRIGR BBIP1 OS=Cricetulus griseus OX=10...    64   8e-11
+tr|A0A672NZJ1|A0A672NZJ1_SINGR BBSome interacting protein 1 OS=S...    62   6e-10
+tr|A0A3B3TD87|A0A3B3TD87_9TELE BBSome interacting protein 1 OS=P...    62   8e-10
+tr|K4G085|K4G085_CALMI BBSome-interacting protein 1 OS=Callorhin...    61   1e-09
+tr|A0A671S6K4|A0A671S6K4_9TELE BBSome interacting protein 1 OS=S...    61   1e-09
+tr|A0A673HDV6|A0A673HDV6_9TELE BBSome interacting protein 1 OS=S...    61   1e-09
+tr|A0A0E9WU69|A0A0E9WU69_ANGAN Uncharacterized protein OS=Anguil...    61   2e-09
+tr|A0A673GEW5|A0A673GEW5_9TELE BBSome interacting protein 1 OS=S...    61   2e-09
+tr|A0A286X8X2|A0A286X8X2_CAVPO Uncharacterized protein OS=Cavia ...    60   2e-09
+tr|K4GE54|K4GE54_CALMI BBSome-interacting protein 1 OS=Callorhin...    60   3e-09
+tr|A0A6P6EFY4|A0A6P6EFY4_OCTDE BBSome-interacting protein 1 OS=O...    60   3e-09
+tr|A0A3B1KFT4|A0A3B1KFT4_ASTMX Uncharacterized protein OS=Astyan...    61   5e-09
+tr|A0A671MTD6|A0A671MTD6_9TELE BBSome interacting protein 1 OS=S...    59   9e-09
+tr|A0A498LM34|A0A498LM34_LABRO BBSome-interacting 1 OS=Labeo roh...    59   1e-08
+tr|A0A401NV99|A0A401NV99_SCYTO Uncharacterized protein OS=Scylio...    59   1e-08
+tr|A0A6P6J2L8|A0A6P6J2L8_CARAU BBSome-interacting protein 1 OS=C...    59   1e-08
+tr|A0A4W3K3M3|A0A4W3K3M3_CALMI Uncharacterized protein OS=Callor...    58   2e-08
+tr|A0A1B8Y1D2|A0A1B8Y1D2_XENTR Uncharacterized protein OS=Xenopu...    58   2e-08
+tr|A0A672SDG5|A0A672SDG5_SINGR BBSome interacting protein 1 OS=S...    57   3e-08
+sp|Q1L8Y6|BBIP1_DANRE BBSome-interacting protein 1 OS=Danio reri...    57   5e-08
+tr|A0A2U9BP90|A0A2U9BP90_SCOMX Putative BBSome-interacting prote...    57   6e-08
+tr|A0A2U9BQQ5|A0A2U9BQQ5_SCOMX Putative BBSome-interacting prote...    57   6e-08
+tr|A0A5N5KD08|A0A5N5KD08_PANHP Uncharacterized protein OS=Pangas...    57   6e-08
+tr|A0A7J6BT12|A0A7J6BT12_9TELE Uncharacterized protein OS=Onycho...    57   7e-08
+tr|L5K3B6|L5K3B6_PTEAL BBSome-interacting protein of 10 kDa OS=P...    56   1e-07
+tr|A0A6A4SR16|A0A6A4SR16_SCOMX Uncharacterized protein OS=Scopht...    57   1e-07
+tr|W5N3D2|W5N3D2_LEPOC BBSome interacting protein 1 OS=Lepisoste...    56   1e-07
+tr|A0A5A9NSB4|A0A5A9NSB4_9TELE BBSome-interacting protein 1 OS=T...    55   2e-07
+tr|A0A6Q2X7E6|A0A6Q2X7E6_ESOLU BBSome interacting protein 1 OS=E...    55   2e-07
+tr|A0A401RLX1|A0A401RLX1_CHIPU Uncharacterized protein OS=Chilos...    55   2e-07
+tr|A0A3Q4C0H5|A0A3Q4C0H5_MOLML BBSome interacting protein 1 OS=M...    55   3e-07
+tr|A0A437DLB4|A0A437DLB4_ORYJA Uncharacterized protein OS=Oryzia...    55   3e-07
+tr|A0A1S3GIG2|A0A1S3GIG2_DIPOR BBSome-interacting protein 1-like...    55   4e-07
+tr|A0A315UUA9|A0A315UUA9_GAMAF Uncharacterized protein (Fragment...    55   4e-07
+tr|A0A1L8FDN5|A0A1L8FDN5_XENLA Uncharacterized protein OS=Xenopu...    54   4e-07
+tr|A0A6P8QA81|A0A6P8QA81_GEOSA BBSome-interacting protein 1 OS=G...    54   5e-07
+tr|A0A3B4ZE47|A0A3B4ZE47_9TELE BBSome interacting protein 1 OS=S...    54   5e-07
+tr|A0A7N6C4N1|A0A7N6C4N1_ANATE BBSome interacting protein 1 OS=A...    54   6e-07
+tr|A0A7M4F024|A0A7M4F024_CROPO BBSome interacting protein 1 OS=C...    54   7e-07
+tr|A0A3B4U5N2|A0A3B4U5N2_SERDU BBSome interacting protein 1 OS=S...    54   7e-07
+tr|A0A4W6DC59|A0A4W6DC59_LATCA BBSome interacting protein 1 OS=L...    54   7e-07
+tr|M3ZXJ0|M3ZXJ0_XIPMA Uncharacterized protein OS=Xiphophorus ma...    54   8e-07
+tr|A0A3B5KH65|A0A3B5KH65_TAKRU Uncharacterized protein OS=Takifu...    54   8e-07
+tr|A0A5C6MYX8|A0A5C6MYX8_9TELE BBSome-interacting protein 1 OS=T...    54   8e-07
+tr|A0A3Q2ZPE5|A0A3Q2ZPE5_HIPCM BBSome interacting protein 1 OS=H...    54   8e-07
+tr|A0A3Q2QMH6|A0A3Q2QMH6_FUNHE BBSome interacting protein 1 OS=F...    54   9e-07
+tr|A0A3B3U5B8|A0A3B3U5B8_9TELE BBSome interacting protein 1 OS=P...    54   9e-07
+tr|A0A668T6V5|A0A668T6V5_OREAU BBSome interacting protein 1 OS=O...    54   9e-07
+tr|A0A669BNT3|A0A669BNT3_ORENI Uncharacterized protein OS=Oreoch...    54   9e-07
+tr|F7CDR8|F7CDR8_HORSE BBSome interacting protein 1 OS=Equus cab...    54   1e-06
+tr|A0A060YMI4|A0A060YMI4_ONCMY Uncharacterized protein OS=Oncorh...    53   1e-06
+tr|A0A4W5PS52|A0A4W5PS52_9TELE Uncharacterized protein OS=Hucho ...    53   1e-06
+tr|A0A3B3ZFK9|A0A3B3ZFK9_9GOBI Uncharacterized protein OS=Periop...    53   1e-06
+tr|A0A3Q2PH61|A0A3Q2PH61_FUNHE BBSome interacting protein 1 OS=F...    54   1e-06
+tr|A0A3P9B1R6|A0A3P9B1R6_9CICH BBSome interacting protein 1 OS=M...    53   1e-06
+tr|A0A3Q0S8Q3|A0A3Q0S8Q3_AMPCI BBSome interacting protein 1 OS=A...    53   1e-06
+tr|A0A1L8FI16|A0A1L8FI16_XENLA Uncharacterized protein OS=Xenopu...    53   2e-06
+tr|A0A6A5FQX3|A0A6A5FQX3_PERFL Uncharacterized protein OS=Perca ...    53   2e-06
+tr|A0A3B3BLH0|A0A3B3BLH0_ORYME BBSome interacting protein 1 OS=O...    53   2e-06
+tr|A0A3B3YAZ8|A0A3B3YAZ8_9TELE BBSome interacting protein 1 OS=P...    53   2e-06
+tr|A0A7N9ALY8|A0A7N9ALY8_9TELE BBSome interacting protein 1 OS=M...    53   2e-06
+tr|A0A3B5M7M6|A0A3B5M7M6_9TELE Uncharacterized protein OS=Xiphop...    53   2e-06
+tr|A0A3Q2DH60|A0A3Q2DH60_CYPVA BBSome interacting protein 1 OS=C...    53   2e-06
+tr|A0A6P7I3L1|A0A6P7I3L1_9TELE BBSome-interacting protein 1 OS=P...    52   2e-06
+tr|A0A484DLX6|A0A484DLX6_PERFV Uncharacterized protein OS=Perca ...    53   2e-06
+tr|A0A3B4CL13|A0A3B4CL13_PYGNA BBSome interacting protein 1 OS=P...    52   3e-06
+tr|A0A672GN25|A0A672GN25_SALFA Uncharacterized protein OS=Salari...    52   3e-06
+tr|A0A151NV80|A0A151NV80_ALLMI BBSome-interacting protein 1 OS=A...    52   3e-06
+tr|A0A672YUI9|A0A672YUI9_9TELE Uncharacterized protein OS=Sphaer...    52   3e-06
+tr|A0A3P9MFZ3|A0A3P9MFZ3_ORYLA Uncharacterized protein OS=Oryzia...    52   3e-06
+tr|K7FSX8|K7FSX8_PELSI Uncharacterized protein OS=Pelodiscus sin...    52   3e-06
+tr|A0A667ZQK8|A0A667ZQK8_9TELE BBSome interacting protein 1 OS=M...    52   4e-06
+tr|A0A3Q1FQJ2|A0A3Q1FQJ2_9TELE BBSome interacting protein 1 OS=A...    52   4e-06
+tr|A0A671VNV1|A0A671VNV1_SPAAU BBSome interacting protein 1 OS=S...    52   4e-06
+tr|A0A5F4CPQ7|A0A5F4CPQ7_CANLF Uncharacterized protein OS=Canis ...    51   5e-06
+tr|A0A3B3IK29|A0A3B3IK29_ORYLA Uncharacterized protein OS=Oryzia...    51   6e-06
+tr|A0A3Q1BM13|A0A3Q1BM13_AMPOC BBSome interacting protein 1 OS=A...    51   6e-06
+tr|A0A1S3L550|A0A1S3L550_SALSA BBSome-interacting protein 1 OS=S...    51   6e-06
+tr|A0A674E4B7|A0A674E4B7_SALTR BBSome-interacting protein 1 OS=S...    51   6e-06
+tr|Q4SDI7|Q4SDI7_TETNG Chromosome 18 SCAF14637, whole genome sho...    51   7e-06
+tr|A0A3P8S6X4|A0A3P8S6X4_AMPPE Uncharacterized protein OS=Amphip...    50   1e-05
+tr|A0A5J5DNY7|A0A5J5DNY7_9PERO Uncharacterized protein OS=Etheos...    52   1e-05
+tr|A0A3Q3BNP5|A0A3Q3BNP5_KRYMA BBSome interacting protein 1 OS=K...    50   1e-05
+tr|A0A287CTZ0|A0A287CTZ0_ICTTR BBSome interacting protein 1 OS=I...    50   1e-05
+tr|G1KRM1|G1KRM1_ANOCA Uncharacterized protein OS=Anolis carolin...    50   1e-05
+tr|A0A1S3Q8P3|A0A1S3Q8P3_SALSA BBSome-interacting protein 1-like...    50   1e-05
+tr|A0A6J0SNX3|A0A6J0SNX3_9SAUR BBSome-interacting protein 1 isof...    51   2e-05
+tr|A0A3P9MT23|A0A3P9MT23_POERE BBSome interacting protein 1 OS=P...    50   2e-05
+tr|A0A665WRH0|A0A665WRH0_ECHNA BBSome interacting protein 1 OS=E...    50   2e-05
+tr|A0A674CIQ2|A0A674CIQ2_SALTR BBSome-interacting protein 1-like...    50   2e-05
+tr|A0A087XH33|A0A087XH33_POEFO BBSome interacting protein 1 OS=P...    50   2e-05
+tr|A0A7J6BGJ4|A0A7J6BGJ4_AMEME Uncharacterized protein OS=Ameiur...    50   2e-05
+tr|A0A4W4FA73|A0A4W4FA73_ELEEL Uncharacterized protein OS=Electr...    49   4e-05
+tr|A0A1U7RRR7|A0A1U7RRR7_ALLSI BBSome-interacting protein 1 OS=A...    49   4e-05
+tr|A0A3P9JLB3|A0A3P9JLB3_ORYLA Uncharacterized protein OS=Oryzia...    49   5e-05
+tr|A0A553R496|A0A553R496_9TELE Uncharacterized protein OS=Danion...    49   5e-05
+tr|A0A6J0SKY9|A0A6J0SKY9_9SAUR BBSome-interacting protein 1 isof...    48   2e-04
+tr|A0A6J0SGM8|A0A6J0SGM8_9SAUR BBSome-interacting protein 1 isof...    47   3e-04
+tr|A0A452HIB7|A0A452HIB7_9SAUR Uncharacterized protein OS=Gopher...    46   4e-04
+tr|A0A3B4XI80|A0A3B4XI80_SERLL BBSome interacting protein 1 OS=S...    46   6e-04
+tr|A0A3B4F018|A0A3B4F018_9CICH BBSome interacting protein 1 OS=P...    46   6e-04
+tr|A0A3Q3C6B1|A0A3Q3C6B1_HAPBU BBSome interacting protein 1 OS=H...    46   6e-04
+tr|A0A3Q4M861|A0A3Q4M861_NEOBR BBSome interacting protein 1 OS=N...    46   6e-04
+tr|A0A3P8RAE7|A0A3P8RAE7_ASTCA BBSome interacting protein 1 OS=A...    45   8e-04
+
+>sp|A8MTZ0|BBIP1_HUMAN BBSome-interacting protein 1 OS=Homo sapiens OX=9606 GN=BBIP1
+          PE=1 SV=2
+          Length = 92
+
+ Score =  145 bits (365), Expect = 6e-42,   Method: Compositional matrix adjust.
+ Identities = 73/92 (79%), Positives = 73/92 (79%)
+
+Query: 1  MLKAAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXX 60
+          MLKAAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMV           
+Sbjct: 1  MLKAAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVLCKPKLLPLKS 60
+
+Query: 61 XXXXXXXXMHQAAQNTIRQQEMAEKDQRQITH 92
+                  MHQAAQNTIRQQEMAEKDQRQITH
+Sbjct: 61 LTLEKLEKMHQAAQNTIRQQEMAEKDQRQITH 92
+
+
+>tr|A0A6D2XZL1|A0A6D2XZL1_PANTR BBIP1 isoform 1 OS=Pan troglodytes OX=9598 GN=CK820_G0003957 PE=4
+          SV=1
+          Length = 92
+
+ Score =  142 bits (359), Expect = 5e-41,   Method: Compositional matrix adjust.
+ Identities = 72/92 (78%), Positives = 72/92 (78%)
+
+Query: 1  MLKAAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXX 60
+          MLKAAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDI TMV           
+Sbjct: 1  MLKAAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDITTMVLCKPKLLPLKS 60
+
+Query: 61 XXXXXXXXMHQAAQNTIRQQEMAEKDQRQITH 92
+                  MHQAAQNTIRQQEMAEKDQRQITH
+Sbjct: 61 LTLEKLEKMHQAAQNTIRQQEMAEKDQRQITH 92
+
+
+>tr|G2HEF9|G2HEF9_PANTR BBSome interacting protein 1 OS=Pan troglodytes OX=9598 GN=BBIP1
+          PE=2 SV=1
+          Length = 92
+
+ Score =  142 bits (359), Expect = 5e-41,   Method: Compositional matrix adjust.
+ Identities = 72/92 (78%), Positives = 72/92 (78%)
+
+Query: 1  MLKAAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXX 60
+          MLKAAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDI TMV           
+Sbjct: 1  MLKAAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDITTMVLCKPKLLPLKS 60
+
+Query: 61 XXXXXXXXMHQAAQNTIRQQEMAEKDQRQITH 92
+                  MHQAAQNTIRQQEMAEKDQRQITH
+Sbjct: 61 LTLEKLEKMHQAAQNTIRQQEMAEKDQRQITH 92
+
+
+>tr|A0A2I2ZQS5|A0A2I2ZQS5_GORGO BBSome interacting protein 1 OS=Gorilla gorilla gorilla OX=9595
+          GN=BBIP1 PE=4 SV=1
+          Length = 92
+
+ Score =  140 bits (354), Expect = 2e-40,   Method: Compositional matrix adjust.
+ Identities = 71/92 (77%), Positives = 72/92 (78%)
+
+Query: 1  MLKAAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXX 60
+          MLKAAAKRPELSGKNTISNNSDMAEVKS+FREVLPKQGPLFVEDI TMV           
+Sbjct: 1  MLKAAAKRPELSGKNTISNNSDMAEVKSVFREVLPKQGPLFVEDITTMVLCKPKLLPLKS 60
+
+Query: 61 XXXXXXXXMHQAAQNTIRQQEMAEKDQRQITH 92
+                  MHQAAQNTIRQQEMAEKDQRQITH
+Sbjct: 61 LTLEKLEKMHQAAQNTIRQQEMAEKDQRQITH 92
+
+
+>tr|A0A2K5XI38|A0A2K5XI38_MANLE BBSome interacting protein 1 OS=Mandrillus leucophaeus OX=9568
+          PE=4 SV=1
+          Length = 92
+
+ Score =  140 bits (354), Expect = 3e-40,   Method: Compositional matrix adjust.
+ Identities = 70/92 (76%), Positives = 72/92 (78%)
+
+Query: 1  MLKAAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXX 60
+          MLKAAAKRPELSGKNT+SNNSDMAE+KSMFREVLPKQGPLFVEDI TMV           
+Sbjct: 1  MLKAAAKRPELSGKNTVSNNSDMAELKSMFREVLPKQGPLFVEDITTMVLCKPKLLPLKS 60
+
+Query: 61 XXXXXXXXMHQAAQNTIRQQEMAEKDQRQITH 92
+                  MHQAAQNTIRQQEMAEKDQRQITH
+Sbjct: 61 LTLEKLEKMHQAAQNTIRQQEMAEKDQRQITH 92
+
+
+>tr|A0A2I3MG30|A0A2I3MG30_PAPAN BBSome interacting protein 1 OS=Papio anubis OX=9555 PE=4 SV=1
+          Length = 92
+
+ Score =  140 bits (354), Expect = 3e-40,   Method: Compositional matrix adjust.
+ Identities = 70/92 (76%), Positives = 72/92 (78%)
+
+Query: 1  MLKAAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXX 60
+          MLKAAAKRPELSGKNT+SNNSDMAE+KSMFREVLPKQGPLFVEDI TMV           
+Sbjct: 1  MLKAAAKRPELSGKNTVSNNSDMAELKSMFREVLPKQGPLFVEDITTMVLCKPKLLPLKS 60
+
+Query: 61 XXXXXXXXMHQAAQNTIRQQEMAEKDQRQITH 92
+                  MHQAAQNTIRQQEMAEKDQRQITH
+Sbjct: 61 LTLEKLEKMHQAAQNTIRQQEMAEKDQRQITH 92
+
+
+>tr|A0A2J8W798|A0A2J8W798_PONAB BBIP1 isoform 1 OS=Pongo abelii OX=9601 GN=CR201_G0012862 PE=4
+          SV=1
+          Length = 92
+
+ Score =  140 bits (352), Expect = 5e-40,   Method: Compositional matrix adjust.
+ Identities = 71/92 (77%), Positives = 71/92 (77%)
+
+Query: 1  MLKAAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXX 60
+          MLKAAAKRPELSGKNTISNN DMAEVKSMFREVLPKQGPLFVEDI TMV           
+Sbjct: 1  MLKAAAKRPELSGKNTISNNLDMAEVKSMFREVLPKQGPLFVEDITTMVLCKPKLLPLKS 60
+
+Query: 61 XXXXXXXXMHQAAQNTIRQQEMAEKDQRQITH 92
+                  MHQAAQNTIRQQEMAEKDQRQITH
+Sbjct: 61 LTLEKLEKMHQAAQNTIRQQEMAEKDQRQITH 92
+
+
+>tr|A0A2I3HG82|A0A2I3HG82_NOMLE Uncharacterized protein OS=Nomascus leucogenys OX=61853 GN=BBIP1
+          PE=4 SV=1
+          Length = 92
+
+ Score =  139 bits (350), Expect = 1e-39,   Method: Compositional matrix adjust.
+ Identities = 70/92 (76%), Positives = 72/92 (78%)
+
+Query: 1  MLKAAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXX 60
+          MLKAAA+RPELSGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDI TMV           
+Sbjct: 1  MLKAAARRPELSGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDITTMVLCKPKLLPLKS 60
+
+Query: 61 XXXXXXXXMHQAAQNTIRQQEMAEKDQRQITH 92
+                  MHQAAQNTIRQQEMAEKDQ+QITH
+Sbjct: 61 LTLEKLEKMHQAAQNTIRQQEMAEKDQQQITH 92
+
+
+>tr|A0A2K5LLQ1|A0A2K5LLQ1_CERAT BBSome interacting protein 1 OS=Cercocebus atys OX=9531 PE=4 SV=1
+          Length = 92
+
+ Score =  139 bits (349), Expect = 2e-39,   Method: Compositional matrix adjust.
+ Identities = 69/92 (75%), Positives = 72/92 (78%)
+
+Query: 1  MLKAAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXX 60
+          MLKAAAKRPELSGKNT+SNNSDMAE+KSMFREVLPKQGPLFVEDI TMV           
+Sbjct: 1  MLKAAAKRPELSGKNTVSNNSDMAELKSMFREVLPKQGPLFVEDITTMVLCKPKLLPLKS 60
+
+Query: 61 XXXXXXXXMHQAAQNTIRQQEMAEKDQRQITH 92
+                  MHQAAQNTIRQQEMAEKDQ+QITH
+Sbjct: 61 LTLEKLEKMHQAAQNTIRQQEMAEKDQQQITH 92
+
+
+>tr|A0A2K6DN77|A0A2K6DN77_MACNE BBSome interacting protein 1 OS=Macaca nemestrina OX=9545 PE=4
+          SV=1
+          Length = 92
+
+ Score =  138 bits (348), Expect = 3e-39,   Method: Compositional matrix adjust.
+ Identities = 69/92 (75%), Positives = 71/92 (77%)
+
+Query: 1  MLKAAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXX 60
+          MLKAAAKRPELSGKNT+SNNSDMAE+KSMFREVLPKQGPLFVEDI TMV           
+Sbjct: 1  MLKAAAKRPELSGKNTVSNNSDMAELKSMFREVLPKQGPLFVEDITTMVLCKPKLLPLKS 60
+
+Query: 61 XXXXXXXXMHQAAQNTIRQQEMAEKDQRQITH 92
+                  MHQAAQNTI QQEMAEKDQRQITH
+Sbjct: 61 LTLEKLEKMHQAAQNTIHQQEMAEKDQRQITH 92
+
+
+>tr|A0A2K6SGX3|A0A2K6SGX3_SAIBB Uncharacterized protein OS=Saimiri boliviensis boliviensis
+          OX=39432 PE=4 SV=1
+          Length = 92
+
+ Score =  134 bits (338), Expect = 6e-38,   Method: Compositional matrix adjust.
+ Identities = 67/92 (72%), Positives = 71/92 (77%)
+
+Query: 1  MLKAAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXX 60
+          MLKAAAKRPELSG+NT+SNNSDMAEVK +FREVLPKQGPLFVEDI TMV           
+Sbjct: 1  MLKAAAKRPELSGENTVSNNSDMAEVKPVFREVLPKQGPLFVEDITTMVLCKPKLLPLKS 60
+
+Query: 61 XXXXXXXXMHQAAQNTIRQQEMAEKDQRQITH 92
+                  MHQAAQ+TIRQQEMAEKDQRQITH
+Sbjct: 61 LTLEKLEKMHQAAQDTIRQQEMAEKDQRQITH 92
+
+
+>tr|U3EYB8|U3EYB8_CALJA BBSome-interacting protein 1 isoform 2 OS=Callithrix jacchus
+          OX=9483 GN=BBIP1 PE=2 SV=1
+          Length = 92
+
+ Score =  130 bits (327), Expect = 3e-36,   Method: Compositional matrix adjust.
+ Identities = 65/92 (70%), Positives = 71/92 (77%)
+
+Query: 1  MLKAAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXX 60
+          MLKAAAKRPELSG+NT+SNNS+MAEVK +FREVLPKQGPLFVEDI TMV           
+Sbjct: 1  MLKAAAKRPELSGENTVSNNSNMAEVKPVFREVLPKQGPLFVEDITTMVLCKPKLLPLKS 60
+
+Query: 61 XXXXXXXXMHQAAQNTIRQQEMAEKDQRQITH 92
+                  MHQAAQ+TIRQQEMAEK+QRQITH
+Sbjct: 61 LTLEKLEKMHQAAQDTIRQQEMAEKNQRQITH 92
+
+
+>tr|A0A2K5DVQ0|A0A2K5DVQ0_AOTNA BBSome interacting protein 1 OS=Aotus nancymaae OX=37293 PE=4
+          SV=1
+          Length = 92
+
+ Score =  130 bits (326), Expect = 5e-36,   Method: Compositional matrix adjust.
+ Identities = 64/92 (69%), Positives = 70/92 (76%)
+
+Query: 1  MLKAAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXX 60
+          MLKAAAKRPELSG+NT++NN DMAEVK +FREVLPKQGPLF+EDI TMV           
+Sbjct: 1  MLKAAAKRPELSGENTVTNNFDMAEVKPVFREVLPKQGPLFLEDITTMVLCKPKLLPLKS 60
+
+Query: 61 XXXXXXXXMHQAAQNTIRQQEMAEKDQRQITH 92
+                  MHQAAQ+TIRQQEMAEKDQRQITH
+Sbjct: 61 LTLEKLEKMHQAAQDTIRQQEMAEKDQRQITH 92
+
+
+>tr|H2Q2K3|H2Q2K3_PANTR BBSome interacting protein 1 OS=Pan troglodytes OX=9598 GN=BBIP1
+          PE=4 SV=2
+          Length = 82
+
+ Score =  120 bits (300), Expect = 3e-32,   Method: Compositional matrix adjust.
+ Identities = 60/82 (73%), Positives = 61/82 (74%)
+
+Query: 11 LSGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMH 70
+          + GKNTISNNSDMAEVKSMFREVLPKQGPLFVEDI TMV                   MH
+Sbjct: 1  IEGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDITTMVLCKPKLLPLKSLTLEKLEKMH 60
+
+Query: 71 QAAQNTIRQQEMAEKDQRQITH 92
+          QAAQNTIRQQEMAEKDQRQITH
+Sbjct: 61 QAAQNTIRQQEMAEKDQRQITH 82
+
+
+>tr|A0A0D9QYN2|A0A0D9QYN2_CHLSB Uncharacterized protein OS=Chlorocebus sabaeus OX=60711 PE=4 SV=1
+          Length = 93
+
+ Score =  119 bits (299), Expect = 6e-32,   Method: Compositional matrix adjust.
+ Identities = 61/93 (65%), Positives = 66/93 (70%), Gaps = 2/93 (2%)
+
+Query: 2  LKAAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQ--GPLFVEDIMTMVXXXXXXXXXX 59
+          L   A  P+++GKNT+SNNSDMAE+KSMFREVLPKQ  GPLFVEDI TMV          
+Sbjct: 1  LNVYANYPKVTGKNTVSNNSDMAELKSMFREVLPKQDLGPLFVEDITTMVLCKPKLLPLK 60
+
+Query: 60 XXXXXXXXXMHQAAQNTIRQQEMAEKDQRQITH 92
+                   MHQAAQNTIRQQEMAEKDQRQITH
+Sbjct: 61 SLTLEKLEKMHQAAQNTIRQQEMAEKDQRQITH 93
+
+
+>tr|A0A5F8AL75|A0A5F8AL75_MACMU Uncharacterized protein OS=Macaca mulatta OX=9544 PE=4 SV=1
+          Length = 84
+
+ Score =  116 bits (290), Expect = 1e-30,   Method: Compositional matrix adjust.
+ Identities = 57/81 (70%), Positives = 60/81 (74%)
+
+Query: 12 SGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQ 71
+          +GKNT+SNNSDMAE+KSMFREVLPKQGPLFVEDI TMV                   MHQ
+Sbjct: 4  AGKNTVSNNSDMAELKSMFREVLPKQGPLFVEDITTMVLCKPKLLPLKSLTLEKLEKMHQ 63
+
+Query: 72 AAQNTIRQQEMAEKDQRQITH 92
+          AAQNTI QQEMAEKDQRQITH
+Sbjct: 64 AAQNTIHQQEMAEKDQRQITH 84
+
+
+>tr|A0A2K5HKV1|A0A2K5HKV1_COLAP BBSome interacting protein 1 OS=Colobus angolensis palliatus
+          OX=336983 PE=4 SV=1
+          Length = 80
+
+ Score =  108 bits (270), Expect = 1e-27,   Method: Compositional matrix adjust.
+ Identities = 54/75 (72%), Positives = 55/75 (73%)
+
+Query: 18 SNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTI 77
+          +NNSDMAEVKSMFREVLPKQGPLFVEDI TMV                   MHQAAQNTI
+Sbjct: 6  TNNSDMAEVKSMFREVLPKQGPLFVEDITTMVLCKPKLLPLKSLTLEKLEKMHQAAQNTI 65
+
+Query: 78 RQQEMAEKDQRQITH 92
+          RQQEMAEKDQRQITH
+Sbjct: 66 RQQEMAEKDQRQITH 80
+
+
+>tr|U6DUL7|U6DUL7_NEOVI BBSome-interacting protein 1 99 (Fragment) OS=Neovison vison
+           OX=452646 GN=BBIP1 PE=2 SV=1
+          Length = 107
+
+ Score =  105 bits (261), Expect = 5e-26,   Method: Compositional matrix adjust.
+ Identities = 58/88 (65%), Positives = 62/88 (70%), Gaps = 2/88 (2%)
+
+Query: 7   KRP-ELSGKN-TISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXX 64
+           KRP ELSGKN  +SNNSDMAEVKSMFREVLPKQG L VEDI TMV               
+Sbjct: 20  KRPGELSGKNLAVSNNSDMAEVKSMFREVLPKQGQLSVEDITTMVLCKPKLLPLKSLTLE 79
+
+Query: 65  XXXXMHQAAQNTIRQQEMAEKDQRQITH 92
+               M QAAQ+TIRQQE+AEKDQ+QITH
+Sbjct: 80  KLEKMQQAAQDTIRQQEVAEKDQQQITH 107
+
+
+>tr|A0A7J7VAN0|A0A7J7VAN0_PIPKU BBSome interacting protein 1 OS=Pipistrellus kuhlii OX=59472
+           GN=mPipKuh1_001365 PE=4 SV=1
+          Length = 102
+
+ Score =  100 bits (250), Expect = 2e-24,   Method: Compositional matrix adjust.
+ Identities = 56/87 (64%), Positives = 59/87 (67%), Gaps = 1/87 (1%)
+
+Query: 6   AKRPELSGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXX 65
+            KR ELSGK TIS+NSDMAEVKSMFREVLPKQG L VEDI TMV                
+Sbjct: 17  GKRSELSGK-TISSNSDMAEVKSMFREVLPKQGQLSVEDITTMVLCKPKLLPLKSLTMEK 75
+
+Query: 66  XXXMHQAAQNTIRQQEMAEKDQRQITH 92
+              M QAAQ TIRQQEMAEKDQ+Q+T 
+Sbjct: 76  LEKMQQAAQETIRQQEMAEKDQKQMTR 102
+
+
+>tr|J9P3I0|J9P3I0_CANLF Uncharacterized protein OS=Canis lupus familiaris OX=9615
+          GN=BBIP1 PE=4 SV=2
+          Length = 94
+
+ Score = 99.4 bits (246), Expect = 5e-24,   Method: Compositional matrix adjust.
+ Identities = 55/90 (61%), Positives = 62/90 (68%), Gaps = 2/90 (2%)
+
+Query: 5  AAKRP-ELSGKN-TISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXX 62
+          A +RP EL+GK+  +SNNSDMAE+KSMFREVLPKQG L VEDI TMV             
+Sbjct: 5  AGRRPGELAGKDLAVSNNSDMAEMKSMFREVLPKQGQLSVEDITTMVLCKPKLLPLKSLT 64
+
+Query: 63 XXXXXXMHQAAQNTIRQQEMAEKDQRQITH 92
+                M QAAQ+TIRQQEMAEK Q+QITH
+Sbjct: 65 LEKLEKMQQAAQDTIRQQEMAEKQQQQITH 94
+
+
+>tr|A0A2K5HKQ8|A0A2K5HKQ8_COLAP BBSome interacting protein 1 OS=Colobus angolensis palliatus
+          OX=336983 PE=4 SV=1
+          Length = 70
+
+ Score = 98.2 bits (243), Expect = 6e-24,   Method: Compositional matrix adjust.
+ Identities = 50/70 (71%), Positives = 50/70 (71%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAEVKSMFREVLPKQGPLFVEDI TMV                   MHQAAQNTIRQQEM
+Sbjct: 1  MAEVKSMFREVLPKQGPLFVEDITTMVLCKPKLLPLKSLTLEKLEKMHQAAQNTIRQQEM 60
+
+Query: 83 AEKDQRQITH 92
+          AEKDQRQITH
+Sbjct: 61 AEKDQRQITH 70
+
+
+>tr|A0A2R9AK62|A0A2R9AK62_PANPA BBSome interacting protein 1 OS=Pan paniscus OX=9597 PE=4 SV=1
+          Length = 70
+
+ Score = 98.2 bits (243), Expect = 6e-24,   Method: Compositional matrix adjust.
+ Identities = 50/70 (71%), Positives = 50/70 (71%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAEVKSMFREVLPKQGPLFVEDI TMV                   MHQAAQNTIRQQEM
+Sbjct: 1  MAEVKSMFREVLPKQGPLFVEDITTMVLCKPKLLPLKSLTLEKLEKMHQAAQNTIRQQEM 60
+
+Query: 83 AEKDQRQITH 92
+          AEKDQRQITH
+Sbjct: 61 AEKDQRQITH 70
+
+
+>tr|A0A2J8PCK2|A0A2J8PCK2_PANTR BBIP1 isoform 3 OS=Pan troglodytes OX=9598 GN=CK820_G0003957 PE=4
+          SV=1
+          Length = 70
+
+ Score = 98.2 bits (243), Expect = 6e-24,   Method: Compositional matrix adjust.
+ Identities = 50/70 (71%), Positives = 50/70 (71%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAEVKSMFREVLPKQGPLFVEDI TMV                   MHQAAQNTIRQQEM
+Sbjct: 1  MAEVKSMFREVLPKQGPLFVEDITTMVLCKPKLLPLKSLTLEKLEKMHQAAQNTIRQQEM 60
+
+Query: 83 AEKDQRQITH 92
+          AEKDQRQITH
+Sbjct: 61 AEKDQRQITH 70
+
+
+>tr|A0A2J8W791|A0A2J8W791_PONAB BBIP1 isoform 2 OS=Pongo abelii OX=9601 GN=CR201_G0012862 PE=4
+          SV=1
+          Length = 70
+
+ Score = 98.2 bits (243), Expect = 6e-24,   Method: Compositional matrix adjust.
+ Identities = 50/70 (71%), Positives = 50/70 (71%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAEVKSMFREVLPKQGPLFVEDI TMV                   MHQAAQNTIRQQEM
+Sbjct: 1  MAEVKSMFREVLPKQGPLFVEDITTMVLCKPKLLPLKSLTLEKLEKMHQAAQNTIRQQEM 60
+
+Query: 83 AEKDQRQITH 92
+          AEKDQRQITH
+Sbjct: 61 AEKDQRQITH 70
+
+
+>tr|A0A2K5XI42|A0A2K5XI42_MANLE BBSome interacting protein 1 OS=Mandrillus leucophaeus OX=9568
+          PE=4 SV=1
+          Length = 70
+
+ Score = 97.4 bits (241), Expect = 2e-23,   Method: Compositional matrix adjust.
+ Identities = 49/70 (70%), Positives = 50/70 (71%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAE+KSMFREVLPKQGPLFVEDI TMV                   MHQAAQNTIRQQEM
+Sbjct: 1  MAELKSMFREVLPKQGPLFVEDITTMVLCKPKLLPLKSLTLEKLEKMHQAAQNTIRQQEM 60
+
+Query: 83 AEKDQRQITH 92
+          AEKDQRQITH
+Sbjct: 61 AEKDQRQITH 70
+
+
+>tr|A0A2K6MC98|A0A2K6MC98_RHIBE Uncharacterized protein OS=Rhinopithecus bieti OX=61621 PE=4 SV=1
+          Length = 70
+
+ Score = 97.1 bits (240), Expect = 2e-23,   Method: Compositional matrix adjust.
+ Identities = 49/70 (70%), Positives = 50/70 (71%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAEVKSMFREVLPKQGPLFVEDI TMV                   +HQAAQNTIRQQEM
+Sbjct: 1  MAEVKSMFREVLPKQGPLFVEDITTMVLCKPKLLPLKSLTLEKLEKIHQAAQNTIRQQEM 60
+
+Query: 83 AEKDQRQITH 92
+          AEKDQRQITH
+Sbjct: 61 AEKDQRQITH 70
+
+
+>tr|A0A2K6NCU5|A0A2K6NCU5_RHIRO Uncharacterized protein OS=Rhinopithecus roxellana OX=61622 PE=4
+          SV=1
+          Length = 70
+
+ Score = 97.1 bits (240), Expect = 2e-23,   Method: Compositional matrix adjust.
+ Identities = 49/70 (70%), Positives = 50/70 (71%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAEVKSMFREVLPKQGPLFVEDI TMV                   +HQAAQNTIRQQEM
+Sbjct: 1  MAEVKSMFREVLPKQGPLFVEDITTMVLCKPKLLPLKSLTLEKLEKIHQAAQNTIRQQEM 60
+
+Query: 83 AEKDQRQITH 92
+          AEKDQRQITH
+Sbjct: 61 AEKDQRQITH 70
+
+
+>tr|A0A2Y9F0L7|A0A2Y9F0L7_PHYMC BBSome-interacting protein 1 isoform X1 OS=Physeter macrocephalus
+          OX=9755 GN=BBIP1 PE=4 SV=1
+          Length = 92
+
+ Score = 96.7 bits (239), Expect = 5e-23,   Method: Compositional matrix adjust.
+ Identities = 54/92 (58%), Positives = 59/92 (64%)
+
+Query: 1  MLKAAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXX 60
+          M KAA KR   + +  +SNNSDMAE+KSMFREVLPKQG L VEDI TMV           
+Sbjct: 1  MPKAARKRIRRTFRKKLSNNSDMAEMKSMFREVLPKQGQLSVEDITTMVLCKPKLLPLKS 60
+
+Query: 61 XXXXXXXXMHQAAQNTIRQQEMAEKDQRQITH 92
+                  M QAAQNTIRQQEMAEK+Q QI H
+Sbjct: 61 LTLEKLEKMQQAAQNTIRQQEMAEKEQPQINH 92
+
+
+>tr|A0A2Y9JBI6|A0A2Y9JBI6_ENHLU BBSome-interacting protein 1 isoform X1 OS=Enhydra lutris kenyoni
+           OX=391180 GN=LOC111144872 PE=4 SV=1
+          Length = 105
+
+ Score = 97.1 bits (240), Expect = 6e-23,   Method: Compositional matrix adjust.
+ Identities = 55/92 (59%), Positives = 61/92 (66%), Gaps = 5/92 (5%)
+
+Query: 6   AKRP----ELSGKN-TISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXX 60
+           A+RP    E  GKN  +SNNSDMAEVKSMFREVLPKQG L VEDI TMV           
+Sbjct: 14  ARRPVGDGERGGKNLAVSNNSDMAEVKSMFREVLPKQGQLSVEDITTMVLCKPKLLPLKS 73
+
+Query: 61  XXXXXXXXMHQAAQNTIRQQEMAEKDQRQITH 92
+                   M QAAQ+TIRQQE+AEK+Q+QITH
+Sbjct: 74  LTLEKLEKMQQAAQDTIRQQEVAEKEQQQITH 105
+
+
+>tr|A0A643CJ18|A0A643CJ18_BALPH Uncharacterized protein OS=Balaenoptera physalus OX=9770
+          GN=E2I00_001481 PE=4 SV=1
+          Length = 92
+
+ Score = 96.3 bits (238), Expect = 6e-23,   Method: Compositional matrix adjust.
+ Identities = 53/92 (57%), Positives = 60/92 (65%)
+
+Query: 1  MLKAAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXX 60
+          M KAA KR   + +  +SNNSDMAE+KSMFREVLPKQG L VEDI TMV           
+Sbjct: 1  MPKAAGKRIRRTFRKKLSNNSDMAEMKSMFREVLPKQGQLSVEDITTMVLCKPKLLPLKS 60
+
+Query: 61 XXXXXXXXMHQAAQNTIRQQEMAEKDQRQITH 92
+                  M QAAQ+TIRQQEMAEK+Q QI+H
+Sbjct: 61 LTLEKLEKMQQAAQDTIRQQEMAEKEQPQISH 92
+
+
+>tr|A0A383ZD73|A0A383ZD73_BALAS BBSome-interacting protein 1 OS=Balaenoptera acutorostrata
+          scammoni OX=310752 GN=BBIP1 PE=4 SV=1
+          Length = 92
+
+ Score = 96.3 bits (238), Expect = 6e-23,   Method: Compositional matrix adjust.
+ Identities = 53/92 (57%), Positives = 60/92 (65%)
+
+Query: 1  MLKAAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXX 60
+          M KAA KR   + +  +SNNSDMAE+KSMFREVLPKQG L VEDI TMV           
+Sbjct: 1  MPKAAGKRIRRTFRKKLSNNSDMAEMKSMFREVLPKQGQLSVEDITTMVLCKPKLLPLKS 60
+
+Query: 61 XXXXXXXXMHQAAQNTIRQQEMAEKDQRQITH 92
+                  M QAAQ+TIRQQEMAEK+Q QI+H
+Sbjct: 61 LTLEKLEKMQQAAQDTIRQQEMAEKEQPQISH 92
+
+
+>tr|A0A667IBP6|A0A667IBP6_LYNCA BBSome interacting protein 1 OS=Lynx canadensis OX=61383 GN=BBIP1
+           PE=4 SV=1
+          Length = 115
+
+ Score = 96.7 bits (239), Expect = 1e-22,   Method: Compositional matrix adjust.
+ Identities = 53/83 (63%), Positives = 57/83 (68%), Gaps = 1/83 (1%)
+
+Query: 11  LSGKN-TISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXM 69
+           L GKN  +SNNSDMAEVKSMFREVLPKQG L VEDI TMV                   M
+Sbjct: 33  LLGKNLAVSNNSDMAEVKSMFREVLPKQGQLSVEDITTMVLCKPKLLPLKSLTLEKLEKM 92
+
+Query: 70  HQAAQNTIRQQEMAEKDQRQITH 92
+            QAAQ+TIRQQEMAEK+Q+QITH
+Sbjct: 93  QQAAQDTIRQQEMAEKEQQQITH 115
+
+
+>tr|A0A2K6DN83|A0A2K6DN83_MACNE BBSome interacting protein 1 OS=Macaca nemestrina OX=9545 PE=4
+          SV=1
+          Length = 70
+
+ Score = 94.7 bits (234), Expect = 2e-22,   Method: Compositional matrix adjust.
+ Identities = 48/70 (68%), Positives = 49/70 (70%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAE+KSMFREVLPKQGPLFVEDI TMV                   MHQAAQNTI QQEM
+Sbjct: 1  MAELKSMFREVLPKQGPLFVEDITTMVLCKPKLLPLKSLTLEKLEKMHQAAQNTIHQQEM 60
+
+Query: 83 AEKDQRQITH 92
+          AEKDQRQITH
+Sbjct: 61 AEKDQRQITH 70
+
+
+>tr|A0A6J1ZN74|A0A6J1ZN74_ACIJB BBSome-interacting protein 1 isoform X1 OS=Acinonyx jubatus
+           OX=32536 GN=BBIP1 PE=4 SV=1
+          Length = 115
+
+ Score = 95.9 bits (237), Expect = 2e-22,   Method: Compositional matrix adjust.
+ Identities = 53/92 (57%), Positives = 57/92 (61%)
+
+Query: 1   MLKAAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXX 60
+           ML      P L     +SNNSDMAEVKSMFREVLPKQG L VEDI TMV           
+Sbjct: 24  MLLVFLSWPLLGKHLAVSNNSDMAEVKSMFREVLPKQGQLSVEDITTMVLCKPKLLPLKS 83
+
+Query: 61  XXXXXXXXMHQAAQNTIRQQEMAEKDQRQITH 92
+                   M QAAQ+TIRQQEMAEK+Q+QITH
+Sbjct: 84  LTLEKLEKMQQAAQDTIRQQEMAEKEQQQITH 115
+
+
+>tr|A0A6G1B0M6|A0A6G1B0M6_CROCR BBIP1 protein (Fragment) OS=Crocuta crocuta OX=9678 GN=Bbip1 PE=4
+          SV=1
+          Length = 80
+
+ Score = 94.4 bits (233), Expect = 3e-22,   Method: Compositional matrix adjust.
+ Identities = 49/76 (64%), Positives = 53/76 (69%)
+
+Query: 17 ISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNT 76
+          +SNNSDMAEVKSMFREVLPKQG L VEDI TMV                   M QAAQ+T
+Sbjct: 5  VSNNSDMAEVKSMFREVLPKQGQLSVEDITTMVLCKPKLLPLKSLTLEKLEKMQQAAQDT 64
+
+Query: 77 IRQQEMAEKDQRQITH 92
+          IRQQEMAEK+Q+QITH
+Sbjct: 65 IRQQEMAEKEQQQITH 80
+
+
+>tr|A0A2Y9MU93|A0A2Y9MU93_DELLE BBSome-interacting protein 1 OS=Delphinapterus leucas OX=9749
+          GN=BBIP1 PE=4 SV=1
+          Length = 92
+
+ Score = 94.0 bits (232), Expect = 6e-22,   Method: Compositional matrix adjust.
+ Identities = 52/92 (56%), Positives = 59/92 (64%)
+
+Query: 1  MLKAAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXX 60
+          M KAA KR   + +  +SNNSDMAE+KSMFREVLPKQG L VEDI TMV           
+Sbjct: 1  MPKAAGKRIRRTFRKKLSNNSDMAEMKSMFREVLPKQGQLSVEDITTMVLCKPKLLPLKS 60
+
+Query: 61 XXXXXXXXMHQAAQNTIRQQEMAEKDQRQITH 92
+                  M QAAQ+TIRQQEMAEK+  QI+H
+Sbjct: 61 LTLEKLEKMQQAAQDTIRQQEMAEKEPPQISH 92
+
+
+>tr|A0A341CBS6|A0A341CBS6_NEOAA BBSome-interacting protein 1 OS=Neophocaena asiaeorientalis
+          asiaeorientalis OX=1706337 GN=BBIP1 PE=4 SV=1
+          Length = 92
+
+ Score = 94.0 bits (232), Expect = 6e-22,   Method: Compositional matrix adjust.
+ Identities = 52/92 (56%), Positives = 59/92 (64%)
+
+Query: 1  MLKAAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXX 60
+          M KAA KR   + +  +SNNSDMAE+KSMFREVLPKQG L VEDI TMV           
+Sbjct: 1  MPKAAGKRIRRTFRKKLSNNSDMAEMKSMFREVLPKQGQLSVEDITTMVLCKPKLLPLKS 60
+
+Query: 61 XXXXXXXXMHQAAQNTIRQQEMAEKDQRQITH 92
+                  M QAAQ+TIRQQEMAEK+  QI+H
+Sbjct: 61 LTLEKLEKMQQAAQDTIRQQEMAEKEPPQISH 92
+
+
+>tr|A0A2K5S0K7|A0A2K5S0K7_CEBIM Uncharacterized protein OS=Cebus imitator OX=2715852 PE=4 SV=1
+          Length = 70
+
+ Score = 93.2 bits (230), Expect = 8e-22,   Method: Compositional matrix adjust.
+ Identities = 47/70 (67%), Positives = 49/70 (70%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAEVK +FREVLPKQGPLFVEDI TMV                   MHQAAQ+TIRQQEM
+Sbjct: 1  MAEVKPVFREVLPKQGPLFVEDITTMVLCKPKLLPLKSLTLEKLEKMHQAAQDTIRQQEM 60
+
+Query: 83 AEKDQRQITH 92
+          AEKDQRQITH
+Sbjct: 61 AEKDQRQITH 70
+
+
+>tr|A0A7J7TSE1|A0A7J7TSE1_MYOMY BBSome interacting protein 1 OS=Myotis myotis OX=51298
+           GN=mMyoMyo1_001377 PE=4 SV=1
+          Length = 143
+
+ Score = 94.4 bits (233), Expect = 1e-21,   Method: Compositional matrix adjust.
+ Identities = 54/90 (60%), Positives = 58/90 (64%), Gaps = 2/90 (2%)
+
+Query: 4   AAAKRP-ELSGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXX 62
+              KRP ELSGK TIS+NSDMAEVK MFREVLPKQG L VEDI TMV             
+Sbjct: 55  CKGKRPGELSGK-TISSNSDMAEVKPMFREVLPKQGQLSVEDITTMVLCKPKLLPLKSLT 113
+
+Query: 63  XXXXXXMHQAAQNTIRQQEMAEKDQRQITH 92
+                 M QAAQ TIRQQEM +KDQ+Q+T 
+Sbjct: 114 MEKLEKMQQAAQETIRQQEMTKKDQQQMTR 143
+
+
+>tr|A0A7J7UVT3|A0A7J7UVT3_RHIFE BBSome interacting protein 1 OS=Rhinolophus ferrumequinum OX=59479
+           GN=mRhiFer1_001392 PE=4 SV=1
+          Length = 104
+
+ Score = 92.8 bits (229), Expect = 2e-21,   Method: Compositional matrix adjust.
+ Identities = 49/81 (60%), Positives = 55/81 (67%)
+
+Query: 12  SGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQ 71
+           S   T+SNNSDMAE+KS+FREVLPKQG L VEDI TMV                   M Q
+Sbjct: 24  SKAKTVSNNSDMAEMKSVFREVLPKQGQLSVEDITTMVLCKPKLLPLKSLTLEKLEKMQQ 83
+
+Query: 72  AAQNTIRQQEMAEKDQRQITH 92
+           AAQ+TIRQQEMAEK+Q+QITH
+Sbjct: 84  AAQDTIRQQEMAEKEQQQITH 104
+
+
+>tr|A0A5F9DHU3|A0A5F9DHU3_RABIT Uncharacterized protein OS=Oryctolagus cuniculus OX=9986 PE=4
+          SV=1
+          Length = 90
+
+ Score = 92.0 bits (227), Expect = 3e-21,   Method: Compositional matrix adjust.
+ Identities = 54/89 (60%), Positives = 58/89 (65%), Gaps = 2/89 (2%)
+
+Query: 4  AAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXX 63
+          AAA R    GKN +SNNS MAEVKSMFREVLPKQG L VED+ TMV              
+Sbjct: 4  AAAGRLGPPGKN-VSNNSKMAEVKSMFREVLPKQGQLSVEDVTTMVLCKPKLLPLKSLTL 62
+
+Query: 64 XXXXXMHQAAQNTIRQQEMAEKDQRQITH 92
+               M QAAQ+T+RQQEMAEK QRQITH
+Sbjct: 63 EKLEKMQQAAQDTVRQQEMAEK-QRQITH 90
+
+
+>tr|S7N739|S7N739_MYOBR BBSome-interacting protein 1 (Fragment) OS=Myotis brandtii
+          OX=109478 GN=D623_10027955 PE=4 SV=1
+          Length = 80
+
+ Score = 91.7 bits (226), Expect = 3e-21,   Method: Compositional matrix adjust.
+ Identities = 49/78 (62%), Positives = 52/78 (66%)
+
+Query: 15 NTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQ 74
+           TIS+NSDMAEVKSMFREVLPKQG L VEDI TMV                   M QAAQ
+Sbjct: 3  KTISSNSDMAEVKSMFREVLPKQGQLSVEDITTMVLCKPKLLPLKSLTMEKLEKMQQAAQ 62
+
+Query: 75 NTIRQQEMAEKDQRQITH 92
+           TIRQQEMAEKDQ+Q+T 
+Sbjct: 63 ETIRQQEMAEKDQQQMTR 80
+
+
+>tr|A0A6J3I6F1|A0A6J3I6F1_SAPAP BBSome-interacting protein 1 OS=Sapajus apella OX=9515 GN=BBIP1
+          PE=4 SV=1
+          Length = 70
+
+ Score = 90.9 bits (224), Expect = 6e-21,   Method: Compositional matrix adjust.
+ Identities = 46/70 (65%), Positives = 49/70 (70%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAEVK +FREVLPKQGPLFVEDI TMV                   MHQAAQ+TIRQQEM
+Sbjct: 1  MAEVKPVFREVLPKQGPLFVEDITTMVLCKPKLLPLKSLTLEKLEKMHQAAQDTIRQQEM 60
+
+Query: 83 AEKDQRQITH 92
+          AEKDQ+QITH
+Sbjct: 61 AEKDQQQITH 70
+
+
+>tr|A0A452EUG2|A0A452EUG2_CAPHI Uncharacterized protein OS=Capra hircus OX=9925 PE=4 SV=1
+          Length = 97
+
+ Score = 91.7 bits (226), Expect = 6e-21,   Method: Compositional matrix adjust.
+ Identities = 50/90 (55%), Positives = 57/90 (63%), Gaps = 4/90 (4%)
+
+Query: 6  AKRPEL---SGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXX 62
+          AK PE+   +   T+SN SDMAE KSMFREVLPKQG L+VEDI TMV             
+Sbjct: 9  AKEPEIKLPTSDETVSNTSDMAETKSMFREVLPKQGQLYVEDITTMVLCKPKLLPLKSLT 68
+
+Query: 63 XXXXXXMHQAAQNTIRQQEMAEKDQRQITH 92
+                M QAAQ+TIRQQEM EK+Q+ ITH
+Sbjct: 69 LEKLEKMQQAAQDTIRQQEMTEKEQK-ITH 97
+
+
+>tr|A0A3Q7VCJ6|A0A3Q7VCJ6_URSAR BBSome-interacting protein 1 isoform X1 OS=Ursus arctos
+          horribilis OX=116960 GN=BBIP1 PE=4 SV=1
+          Length = 86
+
+ Score = 91.3 bits (225), Expect = 6e-21,   Method: Compositional matrix adjust.
+ Identities = 48/82 (58%), Positives = 55/82 (67%), Gaps = 1/82 (1%)
+
+Query: 12 SGKN-TISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMH 70
+           G+N  +S NSDMAEVKSMFREVLPKQG L VEDI TMV                   M 
+Sbjct: 5  GGRNLAVSTNSDMAEVKSMFREVLPKQGQLSVEDITTMVLCKPKLLPLKSLSLEKLEKMQ 64
+
+Query: 71 QAAQNTIRQQEMAEKDQRQITH 92
+          QAAQ+T+RQQEMAEK+++QITH
+Sbjct: 65 QAAQDTLRQQEMAEKEKQQITH 86
+
+
+>tr|A0A484GS56|A0A484GS56_SOUCH Uncharacterized protein (Fragment) OS=Sousa chinensis OX=103600
+          GN=DBR06_SOUSAS110252 PE=4 SV=1
+          Length = 78
+
+ Score = 89.7 bits (221), Expect = 2e-20,   Method: Compositional matrix adjust.
+ Identities = 47/76 (61%), Positives = 52/76 (68%)
+
+Query: 17 ISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNT 76
+          +SNNSDMAE+KSMFREVLPKQG L VEDI TMV                   M QAAQ+T
+Sbjct: 3  LSNNSDMAEMKSMFREVLPKQGQLSVEDITTMVLCKPKLLPLKSLTLEKLEKMQQAAQDT 62
+
+Query: 77 IRQQEMAEKDQRQITH 92
+          IRQQEMAEK+Q QI+H
+Sbjct: 63 IRQQEMAEKEQPQISH 78
+
+
+>tr|A0A5E4BRF6|A0A5E4BRF6_MARMO Uncharacterized protein OS=Marmota monax OX=9995 GN=MONAX_5E019680
+           PE=4 SV=1
+          Length = 104
+
+ Score = 90.5 bits (223), Expect = 2e-20,   Method: Compositional matrix adjust.
+ Identities = 49/81 (60%), Positives = 56/81 (69%), Gaps = 1/81 (1%)
+
+Query: 7   KRPELSGK-NTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXX 65
+           KRPELSGK +T+SNNS+MAE+KSMFREVLPKQG L VED+ TMV                
+Sbjct: 20  KRPELSGKKHTVSNNSNMAELKSMFREVLPKQGQLSVEDVTTMVLCKPKLLPLKSLTLEK 79
+
+Query: 66  XXXMHQAAQNTIRQQEMAEKD 86
+              M QAAQ+TI QQEMAEK+
+Sbjct: 80  LEKMQQAAQDTIHQQEMAEKE 100
+
+
+>tr|W5PLE6|W5PLE6_SHEEP Uncharacterized protein OS=Ovis aries OX=9940 PE=4 SV=1
+          Length = 76
+
+ Score = 87.8 bits (216), Expect = 9e-20,   Method: Compositional matrix adjust.
+ Identities = 46/77 (59%), Positives = 51/77 (66%), Gaps = 1/77 (1%)
+
+Query: 16 TISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQN 75
+          T+SN SDMAE KSMFREVLPKQG L+VEDI TMV                   M QAAQ+
+Sbjct: 1  TVSNTSDMAETKSMFREVLPKQGQLYVEDITTMVLCKPKLLPLKSLTLEKLEKMQQAAQD 60
+
+Query: 76 TIRQQEMAEKDQRQITH 92
+          TIRQQEM EK+Q+ ITH
+Sbjct: 61 TIRQQEMTEKEQK-ITH 76
+
+
+>tr|H2NBL0|H2NBL0_PONAB Uncharacterized protein OS=Pongo abelii OX=9601 PE=4 SV=1
+          Length = 69
+
+ Score = 86.7 bits (213), Expect = 2e-19,   Method: Compositional matrix adjust.
+ Identities = 47/69 (68%), Positives = 47/69 (68%), Gaps = 2/69 (2%)
+
+Query: 23 MAEVKSMFREVLPKQ--GPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQ 80
+          MAEVKSMFREVLPKQ  GPLFVEDI TMV                   MHQAAQNTIRQQ
+Sbjct: 1  MAEVKSMFREVLPKQDLGPLFVEDITTMVLCKPKLLPLKSLTLEKLEKMHQAAQNTIRQQ 60
+
+Query: 81 EMAEKDQRQ 89
+          EMAEKDQRQ
+Sbjct: 61 EMAEKDQRQ 69
+
+
+>tr|A0A5F9D256|A0A5F9D256_RABIT Uncharacterized protein OS=Oryctolagus cuniculus OX=9986 PE=4 SV=1
+          Length = 185
+
+ Score = 88.2 bits (217), Expect = 6e-19,   Method: Compositional matrix adjust.
+ Identities = 49/82 (59%), Positives = 54/82 (65%), Gaps = 1/82 (1%)
+
+Query: 11  LSGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMH 70
+           L  + T+SNNS MAEVKSMFREVLPKQG L VED+ TMV                   M 
+Sbjct: 105 LKKEKTVSNNSKMAEVKSMFREVLPKQGQLSVEDVTTMVLCKPKLLPLKSLTLEKLEKMQ 164
+
+Query: 71  QAAQNTIRQQEMAEKDQRQITH 92
+           QAAQ+T+RQQEMAEK QRQITH
+Sbjct: 165 QAAQDTVRQQEMAEK-QRQITH 185
+
+
+>tr|A0A6P3TDJ2|A0A6P3TDJ2_SHEEP BBSome-interacting protein 1 isoform X1 OS=Ovis aries OX=9940
+           GN=BBIP1 PE=4 SV=1
+          Length = 150
+
+ Score = 87.0 bits (214), Expect = 1e-18,   Method: Compositional matrix adjust.
+ Identities = 46/77 (59%), Positives = 51/77 (66%), Gaps = 1/77 (1%)
+
+Query: 16  TISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQN 75
+           T+SN SDMAE KSMFREVLPKQG L+VEDI TMV                   M QAAQ+
+Sbjct: 75  TVSNTSDMAETKSMFREVLPKQGQLYVEDITTMVLCKPKLLPLKSLTLEKLEKMQQAAQD 134
+
+Query: 76  TIRQQEMAEKDQRQITH 92
+           TIRQQEM EK+Q+ ITH
+Sbjct: 135 TIRQQEMTEKEQK-ITH 150
+
+
+>tr|A0A6J0A480|A0A6J0A480_ACIJB BBSome-interacting protein 1 OS=Acinonyx jubatus OX=32536
+          GN=LOC106985872 PE=4 SV=1
+          Length = 70
+
+ Score = 84.0 bits (206), Expect = 3e-18,   Method: Compositional matrix adjust.
+ Identities = 45/70 (64%), Positives = 47/70 (67%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAEVKSMFREVLPKQG L VEDI TMV                   M QAAQ+TIRQQEM
+Sbjct: 1  MAEVKSMFREVLPKQGQLSVEDITTMVLCKPKLLPLKSLTLEKLEKMRQAAQDTIRQQEM 60
+
+Query: 83 AEKDQRQITH 92
+          AEK+QRQITH
+Sbjct: 61 AEKEQRQITH 70
+
+
+>tr|A0A7J7FJH1|A0A7J7FJH1_DICBM Uncharacterized protein OS=Diceros bicornis minor OX=77932
+          GN=HPG69_015304 PE=4 SV=1
+          Length = 70
+
+ Score = 82.4 bits (202), Expect = 1e-17,   Method: Compositional matrix adjust.
+ Identities = 44/70 (62%), Positives = 47/70 (67%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAE+KSMFREVLPKQG L VEDI TMV                   M QAAQ+TIRQQEM
+Sbjct: 1  MAEMKSMFREVLPKQGQLSVEDITTMVLCKPKLLPLKSLTLEKLEKMQQAAQDTIRQQEM 60
+
+Query: 83 AEKDQRQITH 92
+          AEK+QRQITH
+Sbjct: 61 AEKEQRQITH 70
+
+
+>tr|A0A485PA86|A0A485PA86_LYNPA Uncharacterized protein OS=Lynx pardinus OX=191816
+          GN=LYPA_23C012080 PE=4 SV=1
+          Length = 70
+
+ Score = 82.0 bits (201), Expect = 2e-17,   Method: Compositional matrix adjust.
+ Identities = 44/70 (62%), Positives = 47/70 (67%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAEVKSMFREVLPKQG L VEDI TMV                   M QAAQ+TIRQQEM
+Sbjct: 1  MAEVKSMFREVLPKQGQLSVEDITTMVLCKPKLLPLKSLTLEKLEKMQQAAQDTIRQQEM 60
+
+Query: 83 AEKDQRQITH 92
+          AEK+Q+QITH
+Sbjct: 61 AEKEQQQITH 70
+
+
+>tr|A0A6P6HDR7|A0A6P6HDR7_PUMCO BBSome-interacting protein 1 OS=Puma concolor OX=9696 GN=BBIP1
+          PE=4 SV=1
+          Length = 70
+
+ Score = 82.0 bits (201), Expect = 2e-17,   Method: Compositional matrix adjust.
+ Identities = 44/70 (62%), Positives = 47/70 (67%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAEVKSMFREVLPKQG L VEDI TMV                   M QAAQ+TIRQQEM
+Sbjct: 1  MAEVKSMFREVLPKQGQLSVEDITTMVLCKPKLLPLKSLTLEKLEKMQQAAQDTIRQQEM 60
+
+Query: 83 AEKDQRQITH 92
+          AEK+Q+QITH
+Sbjct: 61 AEKEQQQITH 70
+
+
+>tr|A0A667H0N5|A0A667H0N5_LYNCA BBSome interacting protein 1 OS=Lynx canadensis OX=61383 GN=BBIP1
+          PE=4 SV=1
+          Length = 70
+
+ Score = 82.0 bits (201), Expect = 2e-17,   Method: Compositional matrix adjust.
+ Identities = 44/70 (62%), Positives = 47/70 (67%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAEVKSMFREVLPKQG L VEDI TMV                   M QAAQ+TIRQQEM
+Sbjct: 1  MAEVKSMFREVLPKQGQLSVEDITTMVLCKPKLLPLKSLTLEKLEKMQQAAQDTIRQQEM 60
+
+Query: 83 AEKDQRQITH 92
+          AEK+Q+QITH
+Sbjct: 61 AEKEQQQITH 70
+
+
+>tr|A0A2I2U3Y1|A0A2I2U3Y1_FELCA Uncharacterized protein OS=Felis catus OX=9685 PE=4 SV=1
+          Length = 70
+
+ Score = 82.0 bits (201), Expect = 2e-17,   Method: Compositional matrix adjust.
+ Identities = 44/70 (62%), Positives = 47/70 (67%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAEVKSMFREVLPKQG L VEDI TMV                   M QAAQ+TIRQQEM
+Sbjct: 1  MAEVKSMFREVLPKQGQLSVEDITTMVLCKPKLLPLKSLTLEKLEKMQQAAQDTIRQQEM 60
+
+Query: 83 AEKDQRQITH 92
+          AEK+Q+QITH
+Sbjct: 61 AEKEQQQITH 70
+
+
+>tr|A0A3Q7PRY2|A0A3Q7PRY2_CALUR BBSome-interacting protein 1 OS=Callorhinus ursinus OX=34884
+          GN=BBIP1 PE=4 SV=1
+          Length = 70
+
+ Score = 82.0 bits (201), Expect = 2e-17,   Method: Compositional matrix adjust.
+ Identities = 44/70 (62%), Positives = 47/70 (67%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAEVKSMFREVLPKQG L VEDI TMV                   M QAAQ+TIRQQEM
+Sbjct: 1  MAEVKSMFREVLPKQGQLSVEDITTMVLCKPKLLPLKSLTLEKLEKMQQAAQDTIRQQEM 60
+
+Query: 83 AEKDQRQITH 92
+          AEK+Q+QITH
+Sbjct: 61 AEKEQQQITH 70
+
+
+>tr|A0A6J2D8F5|A0A6J2D8F5_ZALCA BBSome-interacting protein 1 OS=Zalophus californianus OX=9704
+          GN=BBIP1 PE=4 SV=1
+          Length = 70
+
+ Score = 82.0 bits (201), Expect = 2e-17,   Method: Compositional matrix adjust.
+ Identities = 44/70 (62%), Positives = 47/70 (67%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAEVKSMFREVLPKQG L VEDI TMV                   M QAAQ+TIRQQEM
+Sbjct: 1  MAEVKSMFREVLPKQGQLSVEDITTMVLCKPKLLPLKSLTLEKLEKMQQAAQDTIRQQEM 60
+
+Query: 83 AEKDQRQITH 92
+          AEK+Q+QITH
+Sbjct: 61 AEKEQQQITH 70
+
+
+>tr|A0A2U3WQY8|A0A2U3WQY8_ODORO BBSome-interacting protein 1 OS=Odobenus rosmarus divergens
+          OX=9708 GN=BBIP1 PE=4 SV=1
+          Length = 70
+
+ Score = 82.0 bits (201), Expect = 2e-17,   Method: Compositional matrix adjust.
+ Identities = 44/70 (62%), Positives = 47/70 (67%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAEVKSMFREVLPKQG L VEDI TMV                   M QAAQ+TIRQQEM
+Sbjct: 1  MAEVKSMFREVLPKQGQLSVEDITTMVLCKPKLLPLKSLTLEKLEKMQQAAQDTIRQQEM 60
+
+Query: 83 AEKDQRQITH 92
+          AEK+Q+QITH
+Sbjct: 61 AEKEQQQITH 70
+
+
+>tr|A0A2Y9I0B8|A0A2Y9I0B8_NEOSC BBSome-interacting protein 1 OS=Neomonachus schauinslandi
+          OX=29088 GN=BBIP1 PE=4 SV=1
+          Length = 70
+
+ Score = 82.0 bits (201), Expect = 2e-17,   Method: Compositional matrix adjust.
+ Identities = 44/70 (62%), Positives = 47/70 (67%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAEVKSMFREVLPKQG L VEDI TMV                   M QAAQ+TIRQQEM
+Sbjct: 1  MAEVKSMFREVLPKQGQLSVEDITTMVLCKPKLLPLKSLTLEKLEKMQQAAQDTIRQQEM 60
+
+Query: 83 AEKDQRQITH 92
+          AEK+Q+QITH
+Sbjct: 61 AEKEQQQITH 70
+
+
+>tr|A0A6J1ZQF7|A0A6J1ZQF7_ACIJB BBSome-interacting protein 1 isoform X2 OS=Acinonyx jubatus
+          OX=32536 GN=BBIP1 PE=4 SV=1
+          Length = 70
+
+ Score = 82.0 bits (201), Expect = 2e-17,   Method: Compositional matrix adjust.
+ Identities = 44/70 (62%), Positives = 47/70 (67%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAEVKSMFREVLPKQG L VEDI TMV                   M QAAQ+TIRQQEM
+Sbjct: 1  MAEVKSMFREVLPKQGQLSVEDITTMVLCKPKLLPLKSLTLEKLEKMQQAAQDTIRQQEM 60
+
+Query: 83 AEKDQRQITH 92
+          AEK+Q+QITH
+Sbjct: 61 AEKEQQQITH 70
+
+
+>tr|A0A6P4WT46|A0A6P4WT46_PANPR BBSome-interacting protein 1 OS=Panthera pardus OX=9691 GN=BBIP1
+          PE=4 SV=1
+          Length = 70
+
+ Score = 82.0 bits (201), Expect = 2e-17,   Method: Compositional matrix adjust.
+ Identities = 44/70 (62%), Positives = 47/70 (67%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAEVKSMFREVLPKQG L VEDI TMV                   M QAAQ+TIRQQEM
+Sbjct: 1  MAEVKSMFREVLPKQGQLSVEDITTMVLCKPKLLPLKSLTLEKLEKMQQAAQDTIRQQEM 60
+
+Query: 83 AEKDQRQITH 92
+          AEK+Q+QITH
+Sbjct: 61 AEKEQQQITH 70
+
+
+>tr|A0A6B0RP22|A0A6B0RP22_9CETA Uncharacterized protein OS=Bos mutus OX=72004 GN=E5288_WYG015514
+           PE=4 SV=1
+          Length = 110
+
+ Score = 82.8 bits (203), Expect = 2e-17,   Method: Compositional matrix adjust.
+ Identities = 45/77 (58%), Positives = 50/77 (64%), Gaps = 1/77 (1%)
+
+Query: 16  TISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQN 75
+           T+SN SDMAE KSMFREVLPKQG L+VEDI TMV                   M QAAQ+
+Sbjct: 35  TVSNISDMAETKSMFREVLPKQGQLYVEDITTMVLCKPKLLPLKSLTLEKLEKMQQAAQD 94
+
+Query: 76  TIRQQEMAEKDQRQITH 92
+           TI QQEM EK+Q+ ITH
+Sbjct: 95  TIHQQEMTEKEQK-ITH 110
+
+
+>tr|A0A1S3FA98|A0A1S3FA98_DIPOR BBSome-interacting protein 1 OS=Dipodomys ordii OX=10020 GN=Bbip1
+          PE=4 SV=1
+          Length = 70
+
+ Score = 81.6 bits (200), Expect = 2e-17,   Method: Compositional matrix adjust.
+ Identities = 43/70 (61%), Positives = 47/70 (67%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAEVKSMFREVLPKQG L VED+ TMV                   M QAAQ+TIR+QEM
+Sbjct: 1  MAEVKSMFREVLPKQGQLSVEDVTTMVLCKPRILPLKSLTLEKLEKMQQAAQDTIRKQEM 60
+
+Query: 83 AEKDQRQITH 92
+          AEK+QRQITH
+Sbjct: 61 AEKEQRQITH 70
+
+
+>tr|A0A7J8DNF5|A0A7J8DNF5_MOLMO BBSome interacting protein 1 OS=Molossus molossus OX=27622
+          GN=HJG59_001393 PE=4 SV=1
+          Length = 70
+
+ Score = 81.3 bits (199), Expect = 2e-17,   Method: Compositional matrix adjust.
+ Identities = 44/70 (62%), Positives = 46/70 (65%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAEVKSMFREVLPKQG L VEDI TMV                   M QAAQ TIRQQEM
+Sbjct: 1  MAEVKSMFREVLPKQGQLSVEDITTMVLCKPKLLPLKSLTLEKLEKMQQAAQETIRQQEM 60
+
+Query: 83 AEKDQRQITH 92
+          AEK+Q+QITH
+Sbjct: 61 AEKEQQQITH 70
+
+
+>tr|A0A7N5P139|A0A7N5P139_AILME Uncharacterized protein OS=Ailuropoda melanoleuca OX=9646 PE=4
+          SV=1
+          Length = 70
+
+ Score = 80.5 bits (197), Expect = 5e-17,   Method: Compositional matrix adjust.
+ Identities = 43/70 (61%), Positives = 47/70 (67%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAEVKSMFREVLPKQG L VEDI TMV                   M QAAQ+TIRQQEM
+Sbjct: 1  MAEVKSMFREVLPKQGQLSVEDITTMVLCKPKLLPLKSLSLEKLEKMQQAAQDTIRQQEM 60
+
+Query: 83 AEKDQRQITH 92
+          AEK+++QITH
+Sbjct: 61 AEKEKQQITH 70
+
+
+>tr|A0A6P4UDT8|A0A6P4UDT8_PANPR BBSome-interacting protein 1-like OS=Panthera pardus OX=9691
+          GN=LOC109253967 PE=4 SV=1
+          Length = 70
+
+ Score = 80.1 bits (196), Expect = 7e-17,   Method: Compositional matrix adjust.
+ Identities = 43/70 (61%), Positives = 46/70 (65%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKSMFREVLPKQG L VEDI TMV                   M QAAQ+TIRQQEM
+Sbjct: 1  MVEVKSMFREVLPKQGQLSVEDITTMVLCKPKLLPLKSLTLEKLEKMQQAAQDTIRQQEM 60
+
+Query: 83 AEKDQRQITH 92
+          AEK+Q+QITH
+Sbjct: 61 AEKEQQQITH 70
+
+
+>tr|A0A3Q7S3Q1|A0A3Q7S3Q1_VULVU BBSome-interacting protein 1 OS=Vulpes vulpes OX=9627 GN=BBIP1
+          PE=4 SV=1
+          Length = 70
+
+ Score = 80.1 bits (196), Expect = 7e-17,   Method: Compositional matrix adjust.
+ Identities = 43/70 (61%), Positives = 47/70 (67%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAE+KSMFREVLPKQG L VEDI TMV                   M QAAQ+TIRQQEM
+Sbjct: 1  MAEMKSMFREVLPKQGQLSVEDITTMVLCKPKLLPLKSLTLEKLEKMQQAAQDTIRQQEM 60
+
+Query: 83 AEKDQRQITH 92
+          AEK+Q+QITH
+Sbjct: 61 AEKEQQQITH 70
+
+
+>tr|A0A7F8R072|A0A7F8R072_LEPWE BBSome-interacting protein 1 OS=Leptonychotes weddellii OX=9713
+          GN=BBIP1 PE=4 SV=1
+          Length = 70
+
+ Score = 80.1 bits (196), Expect = 7e-17,   Method: Compositional matrix adjust.
+ Identities = 43/70 (61%), Positives = 47/70 (67%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAEVKS+FREVLPKQG L VEDI TMV                   M QAAQ+TIRQQEM
+Sbjct: 1  MAEVKSVFREVLPKQGQLSVEDITTMVLCKPKLLPLKSLTLEKLEKMQQAAQDTIRQQEM 60
+
+Query: 83 AEKDQRQITH 92
+          AEK+Q+QITH
+Sbjct: 61 AEKEQQQITH 70
+
+
+>tr|A0A2Y9J605|A0A2Y9J605_ENHLU BBSome-interacting protein 1 isoform X2 OS=Enhydra lutris kenyoni
+          OX=391180 GN=LOC111144872 PE=4 SV=1
+          Length = 70
+
+ Score = 80.1 bits (196), Expect = 7e-17,   Method: Compositional matrix adjust.
+ Identities = 43/70 (61%), Positives = 47/70 (67%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAEVKSMFREVLPKQG L VEDI TMV                   M QAAQ+TIRQQE+
+Sbjct: 1  MAEVKSMFREVLPKQGQLSVEDITTMVLCKPKLLPLKSLTLEKLEKMQQAAQDTIRQQEV 60
+
+Query: 83 AEKDQRQITH 92
+          AEK+Q+QITH
+Sbjct: 61 AEKEQQQITH 70
+
+
+>tr|A0A4W2G3C9|A0A4W2G3C9_BOBOX BBSome interacting protein 1 OS=Bos indicus x Bos taurus OX=30522
+          GN=BBIP1 PE=4 SV=1
+          Length = 70
+
+ Score = 80.1 bits (196), Expect = 9e-17,   Method: Compositional matrix adjust.
+ Identities = 41/70 (58%), Positives = 45/70 (64%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAE KSMFREVLPKQG L+VEDI TMV                   M QAAQ+TI QQEM
+Sbjct: 1  MAETKSMFREVLPKQGQLYVEDITTMVLCKPKLLPLKSLTLEKLEKMQQAAQDTIHQQEM 60
+
+Query: 83 AEKDQRQITH 92
+           EK+QRQ+TH
+Sbjct: 61 TEKEQRQVTH 70
+
+
+>tr|A0A452SJM5|A0A452SJM5_URSAM Uncharacterized protein OS=Ursus americanus OX=9643 PE=4 SV=1
+          Length = 70
+
+ Score = 79.7 bits (195), Expect = 1e-16,   Method: Compositional matrix adjust.
+ Identities = 42/70 (60%), Positives = 47/70 (67%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAEVKSMFREVLPKQG L VEDI TMV                   M QAAQ+T+RQQEM
+Sbjct: 1  MAEVKSMFREVLPKQGQLSVEDITTMVLCKPKLLPLKSLSLEKLEKMQQAAQDTLRQQEM 60
+
+Query: 83 AEKDQRQITH 92
+          AEK+++QITH
+Sbjct: 61 AEKEKQQITH 70
+
+
+>tr|A0A452VGZ2|A0A452VGZ2_URSMA Uncharacterized protein OS=Ursus maritimus OX=29073 PE=4 SV=1
+          Length = 70
+
+ Score = 79.7 bits (195), Expect = 1e-16,   Method: Compositional matrix adjust.
+ Identities = 42/70 (60%), Positives = 47/70 (67%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAEVKSMFREVLPKQG L VEDI TMV                   M QAAQ+T+RQQEM
+Sbjct: 1  MAEVKSMFREVLPKQGQLSVEDITTMVLCKPKLLPLKSLSLEKLEKMQQAAQDTLRQQEM 60
+
+Query: 83 AEKDQRQITH 92
+          AEK+++QITH
+Sbjct: 61 AEKEKQQITH 70
+
+
+>tr|A0A3Q7W5G5|A0A3Q7W5G5_URSAR BBSome-interacting protein 1 isoform X2 OS=Ursus arctos
+          horribilis OX=116960 GN=BBIP1 PE=4 SV=1
+          Length = 70
+
+ Score = 79.7 bits (195), Expect = 1e-16,   Method: Compositional matrix adjust.
+ Identities = 42/70 (60%), Positives = 47/70 (67%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAEVKSMFREVLPKQG L VEDI TMV                   M QAAQ+T+RQQEM
+Sbjct: 1  MAEVKSMFREVLPKQGQLSVEDITTMVLCKPKLLPLKSLSLEKLEKMQQAAQDTLRQQEM 60
+
+Query: 83 AEKDQRQITH 92
+          AEK+++QITH
+Sbjct: 61 AEKEKQQITH 70
+
+
+>tr|G3I6S4|G3I6S4_CRIGR BBSome-interacting protein of 10 kDa OS=Cricetulus griseus
+          OX=10029 GN=I79_019201 PE=4 SV=1
+          Length = 70
+
+ Score = 79.3 bits (194), Expect = 2e-16,   Method: Compositional matrix adjust.
+ Identities = 42/70 (60%), Positives = 45/70 (64%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAEVKSMFREVLPKQG L VED+ TMV                   M QAAQ+TIRQQEM
+Sbjct: 1  MAEVKSMFREVLPKQGQLSVEDVTTMVLCKPKLLPLKSLTLEKLEKMQQAAQDTIRQQEM 60
+
+Query: 83 AEKDQRQITH 92
+          AEK+ RQI H
+Sbjct: 61 AEKEDRQIAH 70
+
+
+>tr|A0A455AYP0|A0A455AYP0_PHYMC BBSome-interacting protein 1 isoform X2 OS=Physeter macrocephalus
+          OX=9755 GN=BBIP1 PE=4 SV=1
+          Length = 70
+
+ Score = 78.6 bits (192), Expect = 3e-16,   Method: Compositional matrix adjust.
+ Identities = 43/70 (61%), Positives = 45/70 (64%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAE+KSMFREVLPKQG L VEDI TMV                   M QAAQNTIRQQEM
+Sbjct: 1  MAEMKSMFREVLPKQGQLSVEDITTMVLCKPKLLPLKSLTLEKLEKMQQAAQNTIRQQEM 60
+
+Query: 83 AEKDQRQITH 92
+          AEK+Q QI H
+Sbjct: 61 AEKEQPQINH 70
+
+
+>tr|A0A673T7H0|A0A673T7H0_SURSU Uncharacterized protein OS=Suricata suricatta OX=37032 PE=4 SV=1
+          Length = 70
+
+ Score = 78.6 bits (192), Expect = 3e-16,   Method: Compositional matrix adjust.
+ Identities = 42/70 (60%), Positives = 45/70 (64%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAEVKSMFREVLPKQG L VEDI TMV                   M QAAQ+TIRQQEM
+Sbjct: 1  MAEVKSMFREVLPKQGQLSVEDITTMVLCKPKLLPLKSLTLEKLEKMQQAAQDTIRQQEM 60
+
+Query: 83 AEKDQRQITH 92
+          AEK+  Q+TH
+Sbjct: 61 AEKEHHQVTH 70
+
+
+>tr|A0A671F1B2|A0A671F1B2_RHIFE BBSome interacting protein 1 OS=Rhinolophus ferrumequinum
+          OX=59479 GN=mRhiFer1_001392 PE=4 SV=1
+          Length = 70
+
+ Score = 78.6 bits (192), Expect = 3e-16,   Method: Compositional matrix adjust.
+ Identities = 42/70 (60%), Positives = 47/70 (67%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAE+KS+FREVLPKQG L VEDI TMV                   M QAAQ+TIRQQEM
+Sbjct: 1  MAEMKSVFREVLPKQGQLSVEDITTMVLCKPKLLPLKSLTLEKLEKMQQAAQDTIRQQEM 60
+
+Query: 83 AEKDQRQITH 92
+          AEK+Q+QITH
+Sbjct: 61 AEKEQQQITH 70
+
+
+>tr|A0A2Y9R234|A0A2Y9R234_TRIMA BBSome-interacting protein 1 OS=Trichechus manatus latirostris
+          OX=127582 GN=LOC101343421 PE=4 SV=1
+          Length = 70
+
+ Score = 78.6 bits (192), Expect = 3e-16,   Method: Compositional matrix adjust.
+ Identities = 41/70 (58%), Positives = 47/70 (67%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAEVKSMFREVLPKQG L VED+ TMV                   M QAAQ+TIR+QEM
+Sbjct: 1  MAEVKSMFREVLPKQGQLSVEDVTTMVLCKPKLLPLKSLTLEKLEKMQQAAQDTIRKQEM 60
+
+Query: 83 AEKDQRQITH 92
+          AEK+++QITH
+Sbjct: 61 AEKEKQQITH 70
+
+
+>tr|A0A494C180|A0A494C180_HUMAN BBSome-interacting protein 1 OS=Homo sapiens OX=9606 GN=BBIP1
+          PE=4 SV=1
+          Length = 54
+
+ Score = 77.8 bits (190), Expect = 4e-16,   Method: Compositional matrix adjust.
+ Identities = 37/37 (100%), Positives = 37/37 (100%)
+
+Query: 1  MLKAAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQ 37
+          MLKAAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQ
+Sbjct: 1  MLKAAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQ 37
+
+
+>tr|A0A2J8PCJ7|A0A2J8PCJ7_PANTR BBIP1 isoform 4 OS=Pan troglodytes OX=9598 GN=CK820_G0003957 PE=4
+          SV=1
+          Length = 45
+
+ Score = 77.8 bits (190), Expect = 4e-16,   Method: Compositional matrix adjust.
+ Identities = 37/37 (100%), Positives = 37/37 (100%)
+
+Query: 1  MLKAAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQ 37
+          MLKAAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQ
+Sbjct: 1  MLKAAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQ 37
+
+
+>tr|E9PIK7|E9PIK7_HUMAN BBSome-interacting protein 1 OS=Homo sapiens OX=9606 GN=BBIP1
+          PE=4 SV=1
+          Length = 45
+
+ Score = 77.8 bits (190), Expect = 4e-16,   Method: Compositional matrix adjust.
+ Identities = 37/37 (100%), Positives = 37/37 (100%)
+
+Query: 1  MLKAAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQ 37
+          MLKAAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQ
+Sbjct: 1  MLKAAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQ 37
+
+
+>tr|A0A2I2Z529|A0A2I2Z529_GORGO BBSome interacting protein 1 OS=Gorilla gorilla gorilla OX=9595
+          GN=BBIP1 PE=4 SV=1
+          Length = 67
+
+ Score = 77.8 bits (190), Expect = 5e-16,   Method: Compositional matrix adjust.
+ Identities = 47/92 (51%), Positives = 47/92 (51%), Gaps = 25/92 (27%)
+
+Query: 1  MLKAAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXX 60
+          MLKAAAKRPELSG                         PLFVEDI TMV           
+Sbjct: 1  MLKAAAKRPELSG-------------------------PLFVEDITTMVLCKPKLLPLKS 35
+
+Query: 61 XXXXXXXXMHQAAQNTIRQQEMAEKDQRQITH 92
+                  MHQAAQNTIRQQEMAEKDQRQITH
+Sbjct: 36 LTLEKLEKMHQAAQNTIRQQEMAEKDQRQITH 67
+
+
+>tr|A0A2K5XI11|A0A2K5XI11_MANLE BBSome interacting protein 1 OS=Mandrillus leucophaeus OX=9568
+          PE=4 SV=1
+          Length = 67
+
+ Score = 77.8 bits (190), Expect = 5e-16,   Method: Compositional matrix adjust.
+ Identities = 47/92 (51%), Positives = 47/92 (51%), Gaps = 25/92 (27%)
+
+Query: 1  MLKAAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXX 60
+          MLKAAAKRPELSG                         PLFVEDI TMV           
+Sbjct: 1  MLKAAAKRPELSG-------------------------PLFVEDITTMVLCKPKLLPLKS 35
+
+Query: 61 XXXXXXXXMHQAAQNTIRQQEMAEKDQRQITH 92
+                  MHQAAQNTIRQQEMAEKDQRQITH
+Sbjct: 36 LTLEKLEKMHQAAQNTIRQQEMAEKDQRQITH 67
+
+
+>tr|A0A2I3LPK3|A0A2I3LPK3_PAPAN BBSome interacting protein 1 OS=Papio anubis OX=9555 PE=4 SV=1
+          Length = 67
+
+ Score = 77.8 bits (190), Expect = 5e-16,   Method: Compositional matrix adjust.
+ Identities = 47/92 (51%), Positives = 47/92 (51%), Gaps = 25/92 (27%)
+
+Query: 1  MLKAAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXX 60
+          MLKAAAKRPELSG                         PLFVEDI TMV           
+Sbjct: 1  MLKAAAKRPELSG-------------------------PLFVEDITTMVLCKPKLLPLKS 35
+
+Query: 61 XXXXXXXXMHQAAQNTIRQQEMAEKDQRQITH 92
+                  MHQAAQNTIRQQEMAEKDQRQITH
+Sbjct: 36 LTLEKLEKMHQAAQNTIRQQEMAEKDQRQITH 67
+
+
+>tr|A0A2I3TPV4|A0A2I3TPV4_PANTR BBSome interacting protein 1 OS=Pan troglodytes OX=9598 GN=BBIP1
+          PE=4 SV=1
+          Length = 67
+
+ Score = 77.8 bits (190), Expect = 5e-16,   Method: Compositional matrix adjust.
+ Identities = 47/92 (51%), Positives = 47/92 (51%), Gaps = 25/92 (27%)
+
+Query: 1  MLKAAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXX 60
+          MLKAAAKRPELSG                         PLFVEDI TMV           
+Sbjct: 1  MLKAAAKRPELSG-------------------------PLFVEDITTMVLCKPKLLPLKS 35
+
+Query: 61 XXXXXXXXMHQAAQNTIRQQEMAEKDQRQITH 92
+                  MHQAAQNTIRQQEMAEKDQRQITH
+Sbjct: 36 LTLEKLEKMHQAAQNTIRQQEMAEKDQRQITH 67
+
+
+>tr|A0A6D2W5V1|A0A6D2W5V1_PANTR BBIP1 isoform 7 OS=Pan troglodytes OX=9598 GN=CK820_G0003957 PE=4
+          SV=1
+          Length = 67
+
+ Score = 77.8 bits (190), Expect = 5e-16,   Method: Compositional matrix adjust.
+ Identities = 47/92 (51%), Positives = 47/92 (51%), Gaps = 25/92 (27%)
+
+Query: 1  MLKAAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXX 60
+          MLKAAAKRPELSG                         PLFVEDI TMV           
+Sbjct: 1  MLKAAAKRPELSG-------------------------PLFVEDITTMVLCKPKLLPLKS 35
+
+Query: 61 XXXXXXXXMHQAAQNTIRQQEMAEKDQRQITH 92
+                  MHQAAQNTIRQQEMAEKDQRQITH
+Sbjct: 36 LTLEKLEKMHQAAQNTIRQQEMAEKDQRQITH 67
+
+
+>tr|A0A2J8W766|A0A2J8W766_PONAB BBIP1 isoform 7 OS=Pongo abelii OX=9601 GN=CR201_G0012862 PE=4
+          SV=1
+          Length = 67
+
+ Score = 77.8 bits (190), Expect = 5e-16,   Method: Compositional matrix adjust.
+ Identities = 47/92 (51%), Positives = 47/92 (51%), Gaps = 25/92 (27%)
+
+Query: 1  MLKAAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXX 60
+          MLKAAAKRPELSG                         PLFVEDI TMV           
+Sbjct: 1  MLKAAAKRPELSG-------------------------PLFVEDITTMVLCKPKLLPLKS 35
+
+Query: 61 XXXXXXXXMHQAAQNTIRQQEMAEKDQRQITH 92
+                  MHQAAQNTIRQQEMAEKDQRQITH
+Sbjct: 36 LTLEKLEKMHQAAQNTIRQQEMAEKDQRQITH 67
+
+
+>tr|A0A485PCS7|A0A485PCS7_LYNPA Uncharacterized protein OS=Lynx pardinus OX=191816
+          GN=LYPA_23C011886 PE=4 SV=1
+          Length = 70
+
+ Score = 78.2 bits (191), Expect = 5e-16,   Method: Compositional matrix adjust.
+ Identities = 42/70 (60%), Positives = 46/70 (65%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAEVKSMF EVLPKQG L VEDI T+V                   M QAAQ+TIRQQEM
+Sbjct: 1  MAEVKSMFWEVLPKQGQLSVEDITTVVLCKPKLLPLKSLTLEKLEKMQQAAQDTIRQQEM 60
+
+Query: 83 AEKDQRQITH 92
+          AEK+QRQ+TH
+Sbjct: 61 AEKEQRQMTH 70
+
+
+>tr|A0A1S2ZLS6|A0A1S2ZLS6_ERIEU LOW QUALITY PROTEIN: BBSome-interacting protein 1-like
+          OS=Erinaceus europaeus OX=9365 GN=LOC103111945 PE=4
+          SV=1
+          Length = 92
+
+ Score = 78.6 bits (192), Expect = 5e-16,   Method: Compositional matrix adjust.
+ Identities = 51/93 (54%), Positives = 58/93 (62%), Gaps = 2/93 (2%)
+
+Query: 1  MLKAAAKRP-ELSGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXX 59
+          MLKAA KR  +LSGK+  SNN DMAE+KS+FREVLPKQG L  EDI T+V          
+Sbjct: 1  MLKAAGKRTVKLSGKSXSSNNXDMAEMKSIFREVLPKQGQLSAEDITTLVLCKPKLLPLK 60
+
+Query: 60 XXXXXXXXXMHQAAQNTIRQQEMAEKDQRQITH 92
+                   M QAAQ+TI Q EMAEK  +QI H
+Sbjct: 61 ALTLEKLEKMQQAAQDTIWQHEMAEK-AKQIIH 92
+
+
+>tr|A0A2U3VA93|A0A2U3VA93_TURTR BBSome-interacting protein 1 OS=Tursiops truncatus OX=9739
+          GN=BBIP1 PE=4 SV=1
+          Length = 70
+
+ Score = 77.8 bits (190), Expect = 6e-16,   Method: Compositional matrix adjust.
+ Identities = 42/70 (60%), Positives = 46/70 (65%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAE+KSMFREVLPKQG L VEDI TMV                   M QAAQ+TIRQQEM
+Sbjct: 1  MAEMKSMFREVLPKQGQLSVEDITTMVLCKPKLLPLKSLTLEKLEKMQQAAQDTIRQQEM 60
+
+Query: 83 AEKDQRQITH 92
+          AEK+Q QI+H
+Sbjct: 61 AEKEQPQISH 70
+
+
+>tr|A0A4W2BYE9|A0A4W2BYE9_BOBOX Uncharacterized protein OS=Bos indicus x Bos taurus OX=30522 PE=4
+          SV=1
+          Length = 70
+
+ Score = 77.4 bits (189), Expect = 8e-16,   Method: Compositional matrix adjust.
+ Identities = 40/70 (57%), Positives = 44/70 (62%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAE KSMFREVLPKQG L+VEDI TMV                   M QAAQ+TI QQEM
+Sbjct: 1  MAETKSMFREVLPKQGQLYVEDITTMVLCKPKLLPLKSLTLEKLEKMQQAAQDTIHQQEM 60
+
+Query: 83 AEKDQRQITH 92
+           EK+Q Q+TH
+Sbjct: 61 TEKEQWQVTH 70
+
+
+>tr|A0A2K6EF90|A0A2K6EF90_PROCO BBSome interacting protein 1 OS=Propithecus coquereli OX=379532
+          PE=4 SV=1
+          Length = 70
+
+ Score = 76.6 bits (187), Expect = 2e-15,   Method: Compositional matrix adjust.
+ Identities = 41/70 (58%), Positives = 46/70 (65%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAEVKSMFREVLPKQG L VED+ TMV                   M QAAQ+TI QQEM
+Sbjct: 1  MAEVKSMFREVLPKQGQLSVEDVTTMVLCKPKLLPLKSLTLEKLEKMQQAAQDTIHQQEM 60
+
+Query: 83 AEKDQRQITH 92
+          AEK+++QITH
+Sbjct: 61 AEKERQQITH 70
+
+
+>tr|A0A5N4DIZ1|A0A5N4DIZ1_CAMDR BBSome-interacting protein 1 OS=Camelus dromedarius OX=9838
+          GN=Cadr_000009544 PE=4 SV=1
+          Length = 85
+
+ Score = 77.0 bits (188), Expect = 2e-15,   Method: Compositional matrix adjust.
+ Identities = 42/72 (58%), Positives = 46/72 (63%)
+
+Query: 21 SDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQ 80
+          SDMAEVK MF+EVLPKQG L VEDI TMV                   M QAAQ+ IRQQ
+Sbjct: 14 SDMAEVKPMFQEVLPKQGQLSVEDITTMVLCKPKLLPLKSLTLEKLEKMQQAAQDAIRQQ 73
+
+Query: 81 EMAEKDQRQITH 92
+          EMAEK+Q+QIT 
+Sbjct: 74 EMAEKEQQQITQ 85
+
+
+>tr|A0A2K6SGT6|A0A2K6SGT6_SAIBB Uncharacterized protein OS=Saimiri boliviensis boliviensis
+          OX=39432 PE=4 SV=1
+          Length = 67
+
+ Score = 76.3 bits (186), Expect = 2e-15,   Method: Compositional matrix adjust.
+ Identities = 46/92 (50%), Positives = 47/92 (51%), Gaps = 25/92 (27%)
+
+Query: 1  MLKAAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXX 60
+          MLKAAAKRPELSG                         PLFVEDI TMV           
+Sbjct: 1  MLKAAAKRPELSG-------------------------PLFVEDITTMVLCKPKLLPLKS 35
+
+Query: 61 XXXXXXXXMHQAAQNTIRQQEMAEKDQRQITH 92
+                  MHQAAQ+TIRQQEMAEKDQRQITH
+Sbjct: 36 LTLEKLEKMHQAAQDTIRQQEMAEKDQRQITH 67
+
+
+>tr|A0A340YE41|A0A340YE41_LIPVE BBSome-interacting protein 1 OS=Lipotes vexillifer OX=118797
+          GN=BBIP1 PE=4 SV=1
+          Length = 70
+
+ Score = 75.9 bits (185), Expect = 3e-15,   Method: Compositional matrix adjust.
+ Identities = 41/70 (58%), Positives = 46/70 (65%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAE+KS+FREVLPKQG L VEDI TMV                   M QAAQ+TIRQQEM
+Sbjct: 1  MAEMKSVFREVLPKQGQLSVEDITTMVLCKPKLLPLKSLTLEKLEKMQQAAQDTIRQQEM 60
+
+Query: 83 AEKDQRQITH 92
+          AEK+Q QI+H
+Sbjct: 61 AEKEQPQISH 70
+
+
+>tr|A0A1A6H6K9|A0A1A6H6K9_NEOLE Uncharacterized protein (Fragment) OS=Neotoma lepida OX=56216
+          GN=A6R68_15981 PE=4 SV=1
+          Length = 99
+
+ Score = 76.6 bits (187), Expect = 3e-15,   Method: Compositional matrix adjust.
+ Identities = 41/70 (58%), Positives = 45/70 (64%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAEVKSMFREVLPKQG L VED+ TMV                   M QAAQ+TIRQQEM
+Sbjct: 30 MAEVKSMFREVLPKQGQLSVEDVTTMVLCKPKLLPLKSLTLEKLEKMQQAAQDTIRQQEM 89
+
+Query: 83 AEKDQRQITH 92
+          AEK+ +QI H
+Sbjct: 90 AEKEDQQIAH 99
+
+
+>tr|A0A4X1TEA3|A0A4X1TEA3_PIG Uncharacterized protein OS=Sus scrofa OX=9823 GN=BBIP1 PE=4 SV=1
+          Length = 70
+
+ Score = 75.9 bits (185), Expect = 3e-15,   Method: Compositional matrix adjust.
+ Identities = 41/70 (58%), Positives = 45/70 (64%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAEVKSMFREVLPKQG L VEDI TMV                   M QAAQ+TIRQQE+
+Sbjct: 1  MAEVKSMFREVLPKQGQLSVEDITTMVLCKPKLLPLKSLTLEKLEKMQQAAQDTIRQQEV 60
+
+Query: 83 AEKDQRQITH 92
+           EK+Q+QIT 
+Sbjct: 61 TEKEQQQITQ 70
+
+
+>tr|A0A2K5LLM7|A0A2K5LLM7_CERAT BBSome interacting protein 1 OS=Cercocebus atys OX=9531 PE=4 SV=1
+          Length = 67
+
+ Score = 75.9 bits (185), Expect = 3e-15,   Method: Compositional matrix adjust.
+ Identities = 46/92 (50%), Positives = 47/92 (51%), Gaps = 25/92 (27%)
+
+Query: 1  MLKAAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXX 60
+          MLKAAAKRPELSG                         PLFVEDI TMV           
+Sbjct: 1  MLKAAAKRPELSG-------------------------PLFVEDITTMVLCKPKLLPLKS 35
+
+Query: 61 XXXXXXXXMHQAAQNTIRQQEMAEKDQRQITH 92
+                  MHQAAQNTIRQQEMAEKDQ+QITH
+Sbjct: 36 LTLEKLEKMHQAAQNTIRQQEMAEKDQQQITH 67
+
+
+>tr|A0A6P3TIZ8|A0A6P3TIZ8_SHEEP BBSome-interacting protein 1 isoform X2 OS=Ovis aries OX=9940
+          GN=BBIP1 PE=4 SV=1
+          Length = 69
+
+ Score = 75.9 bits (185), Expect = 3e-15,   Method: Compositional matrix adjust.
+ Identities = 41/70 (58%), Positives = 45/70 (64%), Gaps = 1/70 (1%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAE KSMFREVLPKQG L+VEDI TMV                   M QAAQ+TIRQQEM
+Sbjct: 1  MAETKSMFREVLPKQGQLYVEDITTMVLCKPKLLPLKSLTLEKLEKMQQAAQDTIRQQEM 60
+
+Query: 83 AEKDQRQITH 92
+           EK+Q+ ITH
+Sbjct: 61 TEKEQK-ITH 69
+
+
+>tr|A0A2K6DN95|A0A2K6DN95_MACNE BBSome interacting protein 1 OS=Macaca nemestrina OX=9545 PE=4
+          SV=1
+          Length = 67
+
+ Score = 75.5 bits (184), Expect = 4e-15,   Method: Compositional matrix adjust.
+ Identities = 46/92 (50%), Positives = 46/92 (50%), Gaps = 25/92 (27%)
+
+Query: 1  MLKAAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXX 60
+          MLKAAAKRPELSG                         PLFVEDI TMV           
+Sbjct: 1  MLKAAAKRPELSG-------------------------PLFVEDITTMVLCKPKLLPLKS 35
+
+Query: 61 XXXXXXXXMHQAAQNTIRQQEMAEKDQRQITH 92
+                  MHQAAQNTI QQEMAEKDQRQITH
+Sbjct: 36 LTLEKLEKMHQAAQNTIHQQEMAEKDQRQITH 67
+
+
+>tr|A0A2K5W1B0|A0A2K5W1B0_MACFA Uncharacterized protein OS=Macaca fascicularis OX=9541
+          GN=EGM_18358 PE=4 SV=1
+          Length = 67
+
+ Score = 75.5 bits (184), Expect = 4e-15,   Method: Compositional matrix adjust.
+ Identities = 46/92 (50%), Positives = 46/92 (50%), Gaps = 25/92 (27%)
+
+Query: 1  MLKAAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXX 60
+          MLKAAAKRPELSG                         PLFVEDI TMV           
+Sbjct: 1  MLKAAAKRPELSG-------------------------PLFVEDITTMVLCKPKLLPLKS 35
+
+Query: 61 XXXXXXXXMHQAAQNTIRQQEMAEKDQRQITH 92
+                  MHQAAQNTI QQEMAEKDQRQITH
+Sbjct: 36 LTLEKLEKMHQAAQNTIHQQEMAEKDQRQITH 67
+
+
+>tr|F7DHC4|F7DHC4_MACMU Uncharacterized protein OS=Macaca mulatta OX=9544 GN=EGK_20063
+          PE=4 SV=1
+          Length = 67
+
+ Score = 75.5 bits (184), Expect = 4e-15,   Method: Compositional matrix adjust.
+ Identities = 46/92 (50%), Positives = 46/92 (50%), Gaps = 25/92 (27%)
+
+Query: 1  MLKAAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXX 60
+          MLKAAAKRPELSG                         PLFVEDI TMV           
+Sbjct: 1  MLKAAAKRPELSG-------------------------PLFVEDITTMVLCKPKLLPLKS 35
+
+Query: 61 XXXXXXXXMHQAAQNTIRQQEMAEKDQRQITH 92
+                  MHQAAQNTI QQEMAEKDQRQITH
+Sbjct: 36 LTLEKLEKMHQAAQNTIHQQEMAEKDQRQITH 67
+
+
+>tr|A0A2J8W769|A0A2J8W769_PONAB BBIP1 isoform 4 OS=Pongo abelii OX=9601 GN=CR201_G0012862 PE=4
+          SV=1
+          Length = 45
+
+ Score = 74.7 bits (182), Expect = 5e-15,   Method: Compositional matrix adjust.
+ Identities = 36/37 (97%), Positives = 36/37 (97%)
+
+Query: 1  MLKAAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQ 37
+          MLKAAAKRPELSGKNTISNN DMAEVKSMFREVLPKQ
+Sbjct: 1  MLKAAAKRPELSGKNTISNNLDMAEVKSMFREVLPKQ 37
+
+
+>tr|A0A2K5DVM8|A0A2K5DVM8_AOTNA BBSome interacting protein 1 OS=Aotus nancymaae OX=37293 PE=4
+          SV=1
+          Length = 67
+
+ Score = 74.7 bits (182), Expect = 8e-15,   Method: Compositional matrix adjust.
+ Identities = 45/92 (48%), Positives = 47/92 (51%), Gaps = 25/92 (27%)
+
+Query: 1  MLKAAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXX 60
+          MLKAAAKRPELSG                         PLF+EDI TMV           
+Sbjct: 1  MLKAAAKRPELSG-------------------------PLFLEDITTMVLCKPKLLPLKS 35
+
+Query: 61 XXXXXXXXMHQAAQNTIRQQEMAEKDQRQITH 92
+                  MHQAAQ+TIRQQEMAEKDQRQITH
+Sbjct: 36 LTLEKLEKMHQAAQDTIRQQEMAEKDQRQITH 67
+
+
+>tr|A0A250Y8K0|A0A250Y8K0_CASCN BBSome-interacting protein 1 OS=Castor canadensis OX=51338 PE=4
+          SV=1
+          Length = 74
+
+ Score = 75.1 bits (183), Expect = 8e-15,   Method: Compositional matrix adjust.
+ Identities = 40/70 (57%), Positives = 45/70 (64%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAE KSMFREVLPKQG L VED+ TMV                   M QAAQ+TIRQQE+
+Sbjct: 1  MAEAKSMFREVLPKQGQLSVEDVTTMVLCKPRILPLKSLTLEKLEKMQQAAQDTIRQQEI 60
+
+Query: 83 AEKDQRQITH 92
+          AEK+QRQ+T 
+Sbjct: 61 AEKEQRQMTK 70
+
+
+>tr|A0A1U7Q2K2|A0A1U7Q2K2_MESAU BBSome-interacting protein 1 OS=Mesocricetus auratus OX=10036
+          GN=Bbip1 PE=4 SV=1
+          Length = 70
+
+ Score = 74.7 bits (182), Expect = 9e-15,   Method: Compositional matrix adjust.
+ Identities = 40/70 (57%), Positives = 44/70 (62%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAEVKSMFREVLPKQG L VED+ TMV                   M QAAQ+TIRQQE 
+Sbjct: 1  MAEVKSMFREVLPKQGQLSVEDVTTMVLCKPKLLPLKSLTLEKLEKMQQAAQDTIRQQET 60
+
+Query: 83 AEKDQRQITH 92
+          AEK+ +QI H
+Sbjct: 61 AEKEDQQIAH 70
+
+
+>tr|A0A2I3HH61|A0A2I3HH61_NOMLE Uncharacterized protein OS=Nomascus leucogenys OX=61853 GN=BBIP1
+          PE=4 SV=1
+          Length = 67
+
+ Score = 74.7 bits (182), Expect = 9e-15,   Method: Compositional matrix adjust.
+ Identities = 45/92 (48%), Positives = 47/92 (51%), Gaps = 25/92 (27%)
+
+Query: 1  MLKAAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXX 60
+          MLKAAA+RPELSG                         PLFVEDI TMV           
+Sbjct: 1  MLKAAARRPELSG-------------------------PLFVEDITTMVLCKPKLLPLKS 35
+
+Query: 61 XXXXXXXXMHQAAQNTIRQQEMAEKDQRQITH 92
+                  MHQAAQNTIRQQEMAEKDQ+QITH
+Sbjct: 36 LTLEKLEKMHQAAQNTIRQQEMAEKDQQQITH 67
+
+
+>tr|A0A6J0YHG7|A0A6J0YHG7_ODOVR BBSome-interacting protein 1 OS=Odocoileus virginianus texanus
+          OX=9880 GN=BBIP1 PE=4 SV=1
+          Length = 70
+
+ Score = 74.7 bits (182), Expect = 1e-14,   Method: Compositional matrix adjust.
+ Identities = 39/70 (55%), Positives = 46/70 (65%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAE+KSMFREVLPKQG L+VEDI TMV                   + Q AQ+TIRQQEM
+Sbjct: 1  MAEMKSMFREVLPKQGQLYVEDIPTMVLCKPILLPLRLMTVPKLEKIQQTAQDTIRQQEM 60
+
+Query: 83 AEKDQRQITH 92
+           EK+Q++ITH
+Sbjct: 61 TEKEQQKITH 70
+
+
+>tr|F6V3X0|F6V3X0_CALJA Uncharacterized protein OS=Callithrix jacchus OX=9483 GN=BBIP1
+          PE=4 SV=2
+          Length = 67
+
+ Score = 73.9 bits (180), Expect = 2e-14,   Method: Compositional matrix adjust.
+ Identities = 45/92 (48%), Positives = 47/92 (51%), Gaps = 25/92 (27%)
+
+Query: 1  MLKAAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXX 60
+          MLKAAAKRPELSG                         PLFVEDI TMV           
+Sbjct: 1  MLKAAAKRPELSG-------------------------PLFVEDITTMVLCKPKLLPLKS 35
+
+Query: 61 XXXXXXXXMHQAAQNTIRQQEMAEKDQRQITH 92
+                  MHQAAQ+TIRQQEMAEK+QRQITH
+Sbjct: 36 LTLEKLEKMHQAAQDTIRQQEMAEKNQRQITH 67
+
+
+>tr|A0A0G2JT03|A0A0G2JT03_RAT BBSome-interacting protein 1 OS=Rattus norvegicus OX=10116
+          GN=Bbip1 PE=4 SV=1
+          Length = 67
+
+ Score = 73.6 bits (179), Expect = 2e-14,   Method: Compositional matrix adjust.
+ Identities = 39/67 (58%), Positives = 42/67 (62%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAEVKSMFREVLPKQG L VED+ TMV                   M Q AQ+T+RQQEM
+Sbjct: 1  MAEVKSMFREVLPKQGQLSVEDVTTMVLCKPKLLPLKSLTLERLEKMQQTAQDTVRQQEM 60
+
+Query: 83 AEKDQRQ 89
+          AEKD RQ
+Sbjct: 61 AEKDNRQ 67
+
+
+>tr|A0A4U1FT97|A0A4U1FT97_MONMO Uncharacterized protein OS=Monodon monoceros OX=40151
+          GN=EI555_015542 PE=4 SV=1
+          Length = 70
+
+ Score = 73.9 bits (180), Expect = 2e-14,   Method: Compositional matrix adjust.
+ Identities = 40/70 (57%), Positives = 45/70 (64%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAE+KSMFREVLPKQG L VEDI TMV                   M QAAQ+TIRQQEM
+Sbjct: 1  MAEMKSMFREVLPKQGQLSVEDISTMVLCKPKLLPLKSLTLEKLEKMQQAAQDTIRQQEM 60
+
+Query: 83 AEKDQRQITH 92
+          A+K+  QI+H
+Sbjct: 61 ADKEPPQISH 70
+
+
+>tr|A0A7J8G4H3|A0A7J8G4H3_ROUAE BBSome interacting protein 1 OS=Rousettus aegyptiacus OX=9407
+          GN=HJG63_001374 PE=4 SV=1
+          Length = 70
+
+ Score = 73.2 bits (178), Expect = 3e-14,   Method: Compositional matrix adjust.
+ Identities = 40/70 (57%), Positives = 45/70 (64%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAE+KSMF EVLPKQG L VEDI T+V                   M QAAQ+TIRQQEM
+Sbjct: 1  MAEMKSMFHEVLPKQGQLSVEDITTLVLCKPKLLPLKSLTLEKLEKMQQAAQDTIRQQEM 60
+
+Query: 83 AEKDQRQITH 92
+          AEK+Q+QIT 
+Sbjct: 61 AEKEQQQITE 70
+
+
+>tr|A0A6I9MH45|A0A6I9MH45_PERMB BBSome-interacting protein 1 OS=Peromyscus maniculatus bairdii
+          OX=230844 GN=Bbip1 PE=4 SV=1
+          Length = 70
+
+ Score = 73.2 bits (178), Expect = 4e-14,   Method: Compositional matrix adjust.
+ Identities = 40/70 (57%), Positives = 43/70 (61%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAEVKSMF EVLPKQG L VED+ TMV                   M QAAQ+TIRQQEM
+Sbjct: 1  MAEVKSMFHEVLPKQGQLSVEDVTTMVLCKPKLLPLKSLTLEKLEKMQQAAQDTIRQQEM 60
+
+Query: 83 AEKDQRQITH 92
+          AEK+ RQI  
+Sbjct: 61 AEKEDRQIAQ 70
+
+
+>tr|A0A6P7QUA7|A0A6P7QUA7_MUSCR BBSome-interacting protein 1 OS=Mus caroli OX=10089 GN=Bbip1 PE=4
+          SV=1
+          Length = 86
+
+ Score = 73.6 bits (179), Expect = 4e-14,   Method: Compositional matrix adjust.
+ Identities = 40/75 (53%), Positives = 45/75 (60%)
+
+Query: 11 LSGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMH 70
+          L  + T S+   MAEVKSMFREVLPKQG L VED+ TMV                   M 
+Sbjct: 8  LKEQKTASSTLQMAEVKSMFREVLPKQGQLSVEDVTTMVLCKPKLLPLKSLTLEKLEKMQ 67
+
+Query: 71 QAAQNTIRQQEMAEK 85
+          QAAQ+T+RQQEMAEK
+Sbjct: 68 QAAQDTVRQQEMAEK 82
+
+
+>tr|G3N2W1|G3N2W1_BOVIN Uncharacterized protein OS=Bos taurus OX=9913 GN=BBIP1 PE=1 SV=2
+          Length = 69
+
+ Score = 73.2 bits (178), Expect = 4e-14,   Method: Compositional matrix adjust.
+ Identities = 40/70 (57%), Positives = 44/70 (62%), Gaps = 1/70 (1%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAE KSMFREVLPKQG L+VEDI TMV                   M QAAQ+TI QQEM
+Sbjct: 1  MAETKSMFREVLPKQGQLYVEDITTMVLCKPKLLPLKSLTLEKLEKMQQAAQDTIHQQEM 60
+
+Query: 83 AEKDQRQITH 92
+           EK+Q+ ITH
+Sbjct: 61 TEKEQK-ITH 69
+
+
+>tr|A0A6P5E110|A0A6P5E110_BOSIN BBSome-interacting protein 1 OS=Bos indicus OX=9915 GN=BBIP1 PE=4
+          SV=1
+          Length = 69
+
+ Score = 73.2 bits (178), Expect = 4e-14,   Method: Compositional matrix adjust.
+ Identities = 40/70 (57%), Positives = 44/70 (62%), Gaps = 1/70 (1%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAE KSMFREVLPKQG L+VEDI TMV                   M QAAQ+TI QQEM
+Sbjct: 1  MAETKSMFREVLPKQGQLYVEDITTMVLCKPKLLPLKSLTLEKLEKMQQAAQDTIHQQEM 60
+
+Query: 83 AEKDQRQITH 92
+           EK+Q+ ITH
+Sbjct: 61 TEKEQK-ITH 69
+
+
+>tr|A0A6P3J2U7|A0A6P3J2U7_BISBI BBSome-interacting protein 1 OS=Bison bison bison OX=43346
+          GN=BBIP1 PE=4 SV=1
+          Length = 69
+
+ Score = 73.2 bits (178), Expect = 4e-14,   Method: Compositional matrix adjust.
+ Identities = 40/70 (57%), Positives = 44/70 (62%), Gaps = 1/70 (1%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAE KSMFREVLPKQG L+VEDI TMV                   M QAAQ+TI QQEM
+Sbjct: 1  MAETKSMFREVLPKQGQLYVEDITTMVLCKPKLLPLKSLTLEKLEKMQQAAQDTIHQQEM 60
+
+Query: 83 AEKDQRQITH 92
+           EK+Q+ ITH
+Sbjct: 61 TEKEQK-ITH 69
+
+
+>tr|A0A1U7T5Q9|A0A1U7T5Q9_CARSF BBSome-interacting protein 1 OS=Carlito syrichta OX=1868482
+          GN=BBIP1 PE=4 SV=1
+          Length = 69
+
+ Score = 72.8 bits (177), Expect = 5e-14,   Method: Compositional matrix adjust.
+ Identities = 40/70 (57%), Positives = 45/70 (64%), Gaps = 1/70 (1%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAEVKSMFREVLPKQG L VED+ TMV                   MH+AAQ+TI QQE+
+Sbjct: 1  MAEVKSMFREVLPKQGQLSVEDVTTMVLCKPKLLPLKSLTLEKLEKMHEAAQDTIHQQEV 60
+
+Query: 83 AEKDQRQITH 92
+          AEK+ R ITH
+Sbjct: 61 AEKE-RHITH 69
+
+
+>tr|A0A6I9IXJ2|A0A6I9IXJ2_CHRAS BBSome-interacting protein 1 OS=Chrysochloris asiatica OX=185453
+          GN=BBIP1 PE=4 SV=1
+          Length = 70
+
+ Score = 72.0 bits (175), Expect = 1e-13,   Method: Compositional matrix adjust.
+ Identities = 40/70 (57%), Positives = 44/70 (62%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAE+KSMFREVLPKQG L VEDI TMV                   M QAAQ+TI QQEM
+Sbjct: 1  MAELKSMFREVLPKQGQLSVEDINTMVLCKPKLLPLKSLTLEKLDKMQQAAQDTIHQQEM 60
+
+Query: 83 AEKDQRQITH 92
+          AEK++  ITH
+Sbjct: 61 AEKEKPPITH 70
+
+
+>tr|A0A6J0ABV1|A0A6J0ABV1_VICPA BBSome-interacting protein 1 OS=Vicugna pacos OX=30538 GN=BBIP1
+          PE=4 SV=1
+          Length = 70
+
+ Score = 72.0 bits (175), Expect = 1e-13,   Method: Compositional matrix adjust.
+ Identities = 39/70 (55%), Positives = 43/70 (61%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAEVK MFREVLPKQG L VEDI TMV                   M QAAQ+ IRQQE 
+Sbjct: 1  MAEVKPMFREVLPKQGQLSVEDITTMVLCKPKLLPLKSLTLEKLEKMQQAAQDAIRQQET 60
+
+Query: 83 AEKDQRQITH 92
+          AEK+Q+Q+T 
+Sbjct: 61 AEKEQQQVTQ 70
+
+
+>tr|A0A6P3QKT8|A0A6P3QKT8_PTEVA BBSome-interacting protein 1 isoform X2 OS=Pteropus vampyrus
+          OX=132908 GN=BBIP1 PE=4 SV=1
+          Length = 101
+
+ Score = 72.4 bits (176), Expect = 1e-13,   Method: Compositional matrix adjust.
+ Identities = 40/77 (51%), Positives = 46/77 (59%)
+
+Query: 2  LKAAAKRPELSGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXX 61
+           +AA +  E   + TISNNSDMAE+KSMFREVLPKQG L VEDI TMV            
+Sbjct: 11 WRAAGRHQENFKEKTISNNSDMAEMKSMFREVLPKQGQLSVEDITTMVLCKPKLLPLKSL 70
+
+Query: 62 XXXXXXXMHQAAQNTIR 78
+                 M QAAQ+T+R
+Sbjct: 71 TLEKLEKMQQAAQDTVR 87
+
+
+>tr|A0A7N4V6I2|A0A7N4V6I2_SARHA BBSome interacting protein 1 OS=Sarcophilus harrisii OX=9305
+          GN=BBIP1 PE=4 SV=1
+          Length = 70
+
+ Score = 71.2 bits (173), Expect = 2e-13,   Method: Compositional matrix adjust.
+ Identities = 39/67 (58%), Positives = 41/67 (61%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAEVKSMFREVLPKQG L VED+ TMV                   M Q AQ TIRQQEM
+Sbjct: 1  MAEVKSMFREVLPKQGQLSVEDVATMVLCKPKLLPLKSLTLEKLEKMQQTAQETIRQQEM 60
+
+Query: 83 AEKDQRQ 89
+          AEK+Q Q
+Sbjct: 61 AEKEQHQ 67
+
+
+>tr|A0A6P5KG92|A0A6P5KG92_PHACI BBSome-interacting protein 1 OS=Phascolarctos cinereus OX=38626
+          GN=BBIP1 PE=4 SV=1
+          Length = 70
+
+ Score = 71.2 bits (173), Expect = 2e-13,   Method: Compositional matrix adjust.
+ Identities = 39/67 (58%), Positives = 41/67 (61%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAEVKSMFREVLPKQG L VED+ TMV                   M Q AQ TIRQQEM
+Sbjct: 1  MAEVKSMFREVLPKQGQLSVEDVATMVLCKPKLLPLKSLTLEKLEKMQQTAQETIRQQEM 60
+
+Query: 83 AEKDQRQ 89
+          AEK+Q Q
+Sbjct: 61 AEKEQHQ 67
+
+
+>tr|A0A337SVT5|A0A337SVT5_FELCA BBSome interacting protein 1 OS=Felis catus OX=9685 GN=BBIP1 PE=4
+          SV=1
+          Length = 66
+
+ Score = 70.9 bits (172), Expect = 2e-13,   Method: Compositional matrix adjust.
+ Identities = 39/66 (59%), Positives = 42/66 (63%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAEVKSMFREVLPKQG L VEDI T+V                   M QAAQ+TI QQEM
+Sbjct: 1  MAEVKSMFREVLPKQGQLSVEDITTVVLCKPKLLPLKSLTLEKLEKMQQAAQDTIHQQEM 60
+
+Query: 83 AEKDQR 88
+          AEK+QR
+Sbjct: 61 AEKEQR 66
+
+
+>tr|A0A6P3QRJ1|A0A6P3QRJ1_PTEVA BBSome-interacting protein 1 isoform X1 OS=Pteropus vampyrus
+           OX=132908 GN=BBIP1 PE=4 SV=1
+          Length = 107
+
+ Score = 71.6 bits (174), Expect = 3e-13,   Method: Compositional matrix adjust.
+ Identities = 48/81 (59%), Positives = 54/81 (66%)
+
+Query: 12  SGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQ 71
+           S + TISNNSDMAE+KSMFREVLPKQG L VEDI TMV                   M Q
+Sbjct: 27  SKEKTISNNSDMAEMKSMFREVLPKQGQLSVEDITTMVLCKPKLLPLKSLTLEKLEKMQQ 86
+
+Query: 72  AAQNTIRQQEMAEKDQRQITH 92
+           AAQ+T+RQQEM EK+Q+QIT 
+Sbjct: 87  AAQDTVRQQEMEEKEQQQITE 107
+
+
+>tr|J3QMK2|J3QMK2_MOUSE BBSome-interacting protein 1 OS=Mus musculus OX=10090 GN=Bbip1
+          PE=1 SV=1
+          Length = 67
+
+ Score = 69.7 bits (169), Expect = 6e-13,   Method: Compositional matrix adjust.
+ Identities = 37/63 (58%), Positives = 40/63 (63%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAEVKSMFREVLPKQG L VED+ TMV                   M QAAQ+T+RQQEM
+Sbjct: 1  MAEVKSMFREVLPKQGQLSVEDVTTMVLCKPKLLPLKSLTLEKLEKMQQAAQDTVRQQEM 60
+
+Query: 83 AEK 85
+          AEK
+Sbjct: 61 AEK 63
+
+
+>tr|F7AYF5|F7AYF5_MONDO Uncharacterized protein OS=Monodelphis domestica OX=13616
+          GN=BBIP1 PE=4 SV=2
+          Length = 70
+
+ Score = 69.7 bits (169), Expect = 8e-13,   Method: Compositional matrix adjust.
+ Identities = 38/67 (56%), Positives = 41/67 (61%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAEVKSMFREVLPKQG L VED+ TMV                   M Q AQ TIRQQE+
+Sbjct: 1  MAEVKSMFREVLPKQGQLSVEDVATMVLCKPKLLPLKSLTLEKLEKMQQTAQETIRQQEI 60
+
+Query: 83 AEKDQRQ 89
+          AEK+Q Q
+Sbjct: 61 AEKEQHQ 67
+
+
+>tr|A0A6I8P9P9|A0A6I8P9P9_ORNAN Uncharacterized protein OS=Ornithorhynchus anatinus OX=9258
+          GN=BBIP1 PE=4 SV=1
+          Length = 70
+
+ Score = 69.3 bits (168), Expect = 1e-12,   Method: Compositional matrix adjust.
+ Identities = 38/70 (54%), Positives = 42/70 (60%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKSMFREVLPKQG L VED+ TMV                   M QAAQ TIRQQE+
+Sbjct: 1  MPEVKSMFREVLPKQGQLSVEDVATMVLCKPKLLPLKSLTLEKLEKMQQAAQETIRQQEL 60
+
+Query: 83 AEKDQRQITH 92
+          AEK Q+Q+  
+Sbjct: 61 AEKAQQQMNQ 70
+
+
+>tr|A0A6J2LPQ8|A0A6J2LPQ8_9CHIR BBSome-interacting protein 1 OS=Phyllostomus discolor OX=89673
+          GN=BBIP1 PE=4 SV=1
+          Length = 67
+
+ Score = 68.6 bits (166), Expect = 2e-12,   Method: Compositional matrix adjust.
+ Identities = 38/64 (59%), Positives = 39/64 (60%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAEVK MFREVLPKQG L VEDI TMV                   M QAAQ TIRQQEM
+Sbjct: 1  MAEVKPMFREVLPKQGQLSVEDITTMVLCKPKLLPLKSLTLEKLEKMQQAAQETIRQQEM 60
+
+Query: 83 AEKD 86
+          AEK+
+Sbjct: 61 AEKN 64
+
+
+>tr|G3GRC2|G3GRC2_CRIGR BBSome-interacting protein of 10 kDa OS=Cricetulus griseus
+          OX=10029 GN=I79_000065 PE=4 SV=1
+          Length = 64
+
+ Score = 68.2 bits (165), Expect = 2e-12,   Method: Compositional matrix adjust.
+ Identities = 36/64 (56%), Positives = 39/64 (60%)
+
+Query: 29 MFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEMAEKDQR 88
+          MFREVLPKQG L VED+ TMV                   M QAAQ+TIRQQEMAEK+ R
+Sbjct: 1  MFREVLPKQGQLSVEDVTTMVLCKHKLLPLKSLTLEKLEKMQQAAQDTIRQQEMAEKEDR 60
+
+Query: 89 QITH 92
+          QI H
+Sbjct: 61 QIAH 64
+
+
+>tr|A0A1S3WKR9|A0A1S3WKR9_ERIEU BBSome-interacting protein 1 OS=Erinaceus europaeus OX=9365
+          GN=BBIP1 PE=4 SV=1
+          Length = 69
+
+ Score = 65.9 bits (159), Expect = 2e-11,   Method: Compositional matrix adjust.
+ Identities = 36/63 (57%), Positives = 39/63 (61%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MAE+KSMFREVLPKQG L  EDI T+V                   M QAAQ+TIRQQEM
+Sbjct: 1  MAEMKSMFREVLPKQGQLSAEDITTLVLCKPKLLPLKSLTLEKLEKMQQAAQDTIRQQEM 60
+
+Query: 83 AEK 85
+          AEK
+Sbjct: 61 AEK 63
+
+
+>tr|H0XMN1|H0XMN1_OTOGA Uncharacterized protein OS=Otolemur garnettii OX=30611 PE=4 SV=1
+          Length = 67
+
+ Score = 65.9 bits (159), Expect = 2e-11,   Method: Compositional matrix adjust.
+ Identities = 38/67 (56%), Positives = 42/67 (62%), Gaps = 2/67 (2%)
+
+Query: 23 MAEVKSMFREVLPKQ--GPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQ 80
+          MAE+KSMFREVLPKQ  G L VED+ TMV                   M QAAQ+TIRQQ
+Sbjct: 1  MAEMKSMFREVLPKQDIGQLSVEDVTTMVLCKPKLLPLKSLTLEKLEKMQQAAQDTIRQQ 60
+
+Query: 81 EMAEKDQ 87
+          EMAEK+Q
+Sbjct: 61 EMAEKEQ 67
+
+
+>tr|A0A384BTS2|A0A384BTS2_URSMA LOW QUALITY PROTEIN: BBSome-interacting protein 1 OS=Ursus
+           maritimus OX=29073 GN=BBIP1 PE=4 SV=1
+          Length = 114
+
+ Score = 65.9 bits (159), Expect = 6e-11,   Method: Compositional matrix adjust.
+ Identities = 44/93 (47%), Positives = 52/93 (55%), Gaps = 3/93 (3%)
+
+Query: 2   LKAAAKRP-ELSGKN-TISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXX 59
+           LK   KRP ELSGK  +        EVKSMF+EV PKQ  L +ED+ T+V          
+Sbjct: 23  LKLPGKRPGELSGKKFSRIQQFRCGEVKSMFQEVPPKQX-LSMEDVTTVVLCKHKLLPLR 81
+
+Query: 60  XXXXXXXXXMHQAAQNTIRQQEMAEKDQRQITH 92
+                    M QAAQ+TI QQEMAEK+Q Q+TH
+Sbjct: 82  SLTLEKLEKMQQAAQDTIYQQEMAEKEQHQVTH 114
+
+
+>tr|A0A6P7Y0H4|A0A6P7Y0H4_9AMPH BBSome-interacting protein 1 OS=Microcaecilia unicolor OX=1415580
+          GN=BBIP1 PE=4 SV=1
+          Length = 72
+
+ Score = 64.7 bits (156), Expect = 6e-11,   Method: Compositional matrix adjust.
+ Identities = 36/67 (53%), Positives = 39/67 (58%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKSMFREVLPKQG L VED  TMV                   M + AQ TIRQQE+
+Sbjct: 1  MPEVKSMFREVLPKQGQLCVEDTPTMVLCKPKLLPLKSVTLEKLEKMQREAQETIRQQEL 60
+
+Query: 83 AEKDQRQ 89
+          A+KDQ Q
+Sbjct: 61 AKKDQEQ 67
+
+
+>tr|A0A091E1P0|A0A091E1P0_FUKDA BBSome-interacting protein 1 OS=Fukomys damarensis OX=885580
+          GN=H920_09646 PE=4 SV=1
+          Length = 72
+
+ Score = 64.7 bits (156), Expect = 7e-11,   Method: Compositional matrix adjust.
+ Identities = 36/63 (57%), Positives = 38/63 (60%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MA+VKSMFREVLPKQG L VEDI TMV                   M QAAQ T+ QQEM
+Sbjct: 1  MADVKSMFREVLPKQGQLSVEDITTMVLCKPKLLPLKSFTLEKLEKMQQAAQETLHQQEM 60
+
+Query: 83 AEK 85
+          AEK
+Sbjct: 61 AEK 63
+
+
+>tr|A0A3L7HIB3|A0A3L7HIB3_CRIGR BBIP1 OS=Cricetulus griseus OX=10029 GN=CgPICR_010103 PE=4 SV=1
+          Length = 64
+
+ Score = 64.3 bits (155), Expect = 8e-11,   Method: Compositional matrix adjust.
+ Identities = 34/64 (53%), Positives = 38/64 (59%)
+
+Query: 29 MFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEMAEKDQR 88
+          MFREVLPKQG L VED+ TMV                   M QAAQ+TIRQQE+A K+ R
+Sbjct: 1  MFREVLPKQGQLSVEDVTTMVLCKHKLLPLKSLTLEKLEKMQQAAQDTIRQQEVAAKEDR 60
+
+Query: 89 QITH 92
+          QI H
+Sbjct: 61 QIAH 64
+
+
+>tr|A0A672NZJ1|A0A672NZJ1_SINGR BBSome interacting protein 1 OS=Sinocyclocheilus grahami OX=75366
+          PE=4 SV=1
+          Length = 72
+
+ Score = 62.0 bits (149), Expect = 6e-10,   Method: Compositional matrix adjust.
+ Identities = 35/67 (52%), Positives = 39/67 (58%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKSMFREVLPKQG L VED+ TMV                   M Q AQ  IRQQE+
+Sbjct: 1  MPEVKSMFREVLPKQGQLSVEDVPTMVLCKPKLLPLKSVTLEKLEKMQQEAQEIIRQQEL 60
+
+Query: 83 AEKDQRQ 89
+          A K+Q+Q
+Sbjct: 61 ALKEQQQ 67
+
+
+>tr|A0A3B3TD87|A0A3B3TD87_9TELE BBSome interacting protein 1 OS=Paramormyrops kingsleyae
+          OX=1676925 PE=4 SV=1
+          Length = 83
+
+ Score = 62.0 bits (149), Expect = 8e-10,   Method: Compositional matrix adjust.
+ Identities = 37/75 (49%), Positives = 41/75 (54%), Gaps = 3/75 (4%)
+
+Query: 21 SDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQ 80
+          SDM EVK MFREVLPKQG L ++D+ TMV                   M Q AQ  IRQQ
+Sbjct: 9  SDMPEVKPMFREVLPKQGRLSMDDVPTMVLCKPKLLPLKSVTLEKLEKMQQEAQEIIRQQ 68
+
+Query: 81 EMAEKDQR---QITH 92
+          E A K+QR   Q TH
+Sbjct: 69 EAALKEQRQQEQCTH 83
+
+
+>tr|K4G085|K4G085_CALMI BBSome-interacting protein 1 OS=Callorhinchus milii OX=7868 PE=2
+          SV=1
+          Length = 70
+
+ Score = 61.2 bits (147), Expect = 1e-09,   Method: Compositional matrix adjust.
+ Identities = 34/68 (50%), Positives = 40/68 (58%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKSMFREVLPKQG L  ED  TMV                   M + AQ TIRQQE+
+Sbjct: 1  MPEVKSMFREVLPKQGQLSFEDTPTMVLCKPKLLPLKSVTLEKLEKMQREAQETIRQQEL 60
+
+Query: 83 AEKDQRQI 90
+          A+++Q+QI
+Sbjct: 61 AQREQQQI 68
+
+
+>tr|A0A671S6K4|A0A671S6K4_9TELE BBSome interacting protein 1 OS=Sinocyclocheilus anshuiensis
+          OX=1608454 PE=4 SV=1
+          Length = 72
+
+ Score = 61.2 bits (147), Expect = 1e-09,   Method: Compositional matrix adjust.
+ Identities = 34/67 (50%), Positives = 39/67 (58%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKS+FREVLPKQG L VED+ TMV                   M Q AQ  IRQQE+
+Sbjct: 1  MPEVKSLFREVLPKQGQLSVEDVPTMVLCKPKLLPLKSVTLEKLEKMQQEAQEIIRQQEL 60
+
+Query: 83 AEKDQRQ 89
+          A K+Q+Q
+Sbjct: 61 ALKEQQQ 67
+
+
+>tr|A0A673HDV6|A0A673HDV6_9TELE BBSome interacting protein 1 OS=Sinocyclocheilus rhinocerous
+          OX=307959 PE=4 SV=1
+          Length = 80
+
+ Score = 61.2 bits (147), Expect = 1e-09,   Method: Compositional matrix adjust.
+ Identities = 35/67 (52%), Positives = 38/67 (56%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKSMFREVLPKQG L VED+ TMV                   M Q AQ  IRQQE+
+Sbjct: 1  MPEVKSMFREVLPKQGQLSVEDVPTMVLCKPKLLPLKSVTLEKLEKMQQEAQELIRQQEL 60
+
+Query: 83 AEKDQRQ 89
+          A K Q+Q
+Sbjct: 61 ALKQQQQ 67
+
+
+>tr|A0A0E9WU69|A0A0E9WU69_ANGAN Uncharacterized protein OS=Anguilla anguilla OX=7936 PE=4 SV=1
+          Length = 69
+
+ Score = 60.8 bits (146), Expect = 2e-09,   Method: Compositional matrix adjust.
+ Identities = 33/65 (50%), Positives = 38/65 (58%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKSMFREVLPKQG L +ED+ TMV                   M Q AQ  IRQQE+
+Sbjct: 1  MPEVKSMFREVLPKQGQLSMEDVPTMVLCKPKLLPLKSVTLEKLEKMQQEAQEAIRQQEL 60
+
+Query: 83 AEKDQ 87
+          A+KD+
+Sbjct: 61 AQKDK 65
+
+
+>tr|A0A673GEW5|A0A673GEW5_9TELE BBSome interacting protein 1 OS=Sinocyclocheilus rhinocerous
+          OX=307959 PE=4 SV=1
+          Length = 72
+
+ Score = 60.8 bits (146), Expect = 2e-09,   Method: Compositional matrix adjust.
+ Identities = 34/67 (50%), Positives = 39/67 (58%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKSMFREVLPKQG L VED+ TMV                   M Q AQ  I+QQE+
+Sbjct: 1  MPEVKSMFREVLPKQGQLSVEDVPTMVLCKPKLLPLKSVTLEKLEKMQQEAQELIKQQEL 60
+
+Query: 83 AEKDQRQ 89
+          A K+Q+Q
+Sbjct: 61 ALKEQQQ 67
+
+
+>tr|A0A286X8X2|A0A286X8X2_CAVPO Uncharacterized protein OS=Cavia porcellus OX=10141 PE=4 SV=1
+          Length = 70
+
+ Score = 60.5 bits (145), Expect = 2e-09,   Method: Compositional matrix adjust.
+ Identities = 33/70 (47%), Positives = 40/70 (57%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MA+VK +FREVLPKQG L VE + TMV                   M QAAQ TIRQQ+M
+Sbjct: 1  MADVKPVFREVLPKQGQLSVEAVTTMVLCKPKLLPLKSLTLEKLEKMQQAAQETIRQQKM 60
+
+Query: 83 AEKDQRQITH 92
+           E ++R+  H
+Sbjct: 61 TENEKREKAH 70
+
+
+>tr|K4GE54|K4GE54_CALMI BBSome-interacting protein 1 OS=Callorhinchus milii OX=7868 PE=2
+          SV=1
+          Length = 70
+
+ Score = 60.1 bits (144), Expect = 3e-09,   Method: Compositional matrix adjust.
+ Identities = 33/68 (48%), Positives = 40/68 (58%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EV+SMFREVLPKQG L  ED  TMV                   M + AQ TIRQQE+
+Sbjct: 1  MPEVRSMFREVLPKQGQLSFEDTPTMVLCKPKLLPLKSVTLEKLEKMQREAQETIRQQEL 60
+
+Query: 83 AEKDQRQI 90
+          A+++Q+QI
+Sbjct: 61 AQREQQQI 68
+
+
+>tr|A0A6P6EFY4|A0A6P6EFY4_OCTDE BBSome-interacting protein 1 OS=Octodon degus OX=10160 GN=Bbip1
+          PE=4 SV=1
+          Length = 69
+
+ Score = 60.1 bits (144), Expect = 3e-09,   Method: Compositional matrix adjust.
+ Identities = 34/70 (48%), Positives = 43/70 (61%), Gaps = 1/70 (1%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          MA+VK +FREVLPKQG L VED+ TMV                   M QAA +TIRQQ+M
+Sbjct: 1  MADVK-IFREVLPKQGQLSVEDVTTMVLCKPKLLPLKSLSLEKLDKMQQAAHDTIRQQQM 59
+
+Query: 83 AEKDQRQITH 92
+          AEK++++  H
+Sbjct: 60 AEKEKQEKAH 69
+
+
+>tr|A0A3B1KFT4|A0A3B1KFT4_ASTMX Uncharacterized protein OS=Astyanax mexicanus OX=7994 PE=4 SV=1
+          Length = 150
+
+ Score = 60.8 bits (146), Expect = 5e-09,   Method: Compositional matrix adjust.
+ Identities = 34/78 (43%), Positives = 43/78 (55%)
+
+Query: 12  SGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQ 71
+           +G+   +    M EVKSMFREVLPKQG L +ED+ TMV                   M Q
+Sbjct: 65  TGEQISAAEGAMPEVKSMFREVLPKQGQLSMEDVPTMVLCKPKLLPLKSVTLEKLEKMQQ 124
+
+Query: 72  AAQNTIRQQEMAEKDQRQ 89
+            AQ  I+QQE+A ++QRQ
+Sbjct: 125 EAQEVIKQQEVALREQRQ 142
+
+
+>tr|A0A671MTD6|A0A671MTD6_9TELE BBSome interacting protein 1 OS=Sinocyclocheilus anshuiensis
+          OX=1608454 PE=4 SV=1
+          Length = 72
+
+ Score = 58.9 bits (141), Expect = 9e-09,   Method: Compositional matrix adjust.
+ Identities = 34/67 (50%), Positives = 38/67 (56%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKSMFREVLPKQG L VED+ TMV                   M Q AQ  I+QQE 
+Sbjct: 1  MPEVKSMFREVLPKQGQLSVEDVPTMVLCKPKLLPLKSVTLEKLEKMQQEAQELIKQQER 60
+
+Query: 83 AEKDQRQ 89
+          A K+Q+Q
+Sbjct: 61 ALKEQQQ 67
+
+
+>tr|A0A498LM34|A0A498LM34_LABRO BBSome-interacting 1 OS=Labeo rohita OX=84645 GN=ROHU_012352 PE=4
+          SV=1
+          Length = 72
+
+ Score = 58.9 bits (141), Expect = 1e-08,   Method: Compositional matrix adjust.
+ Identities = 33/67 (49%), Positives = 39/67 (58%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKSMFREVLPKQG L +ED+ TMV                   M Q AQ  I+QQE+
+Sbjct: 1  MPEVKSMFREVLPKQGQLSMEDVPTMVLCKPKLLPLKSVTLEKLEKMQQEAQELIKQQEL 60
+
+Query: 83 AEKDQRQ 89
+          A K+Q+Q
+Sbjct: 61 ALKEQQQ 67
+
+
+>tr|A0A401NV99|A0A401NV99_SCYTO Uncharacterized protein OS=Scyliorhinus torazame OX=75743
+          GN=scyTo_0004671 PE=4 SV=1
+          Length = 66
+
+ Score = 58.5 bits (140), Expect = 1e-08,   Method: Compositional matrix adjust.
+ Identities = 31/66 (46%), Positives = 37/66 (56%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M E+KSMFREVLPKQG L  ED+  MV                   M + AQ TIRQQE+
+Sbjct: 1  MPEIKSMFREVLPKQGQLSFEDVPAMVLCKPKLLPLKSVTLEKMEKMQREAQETIRQQEL 60
+
+Query: 83 AEKDQR 88
+           +KDQ+
+Sbjct: 61 VQKDQK 66
+
+
+>tr|A0A6P6J2L8|A0A6P6J2L8_CARAU BBSome-interacting protein 1 OS=Carassius auratus OX=7957
+          GN=bbip1 PE=4 SV=1
+          Length = 74
+
+ Score = 58.9 bits (141), Expect = 1e-08,   Method: Compositional matrix adjust.
+ Identities = 33/66 (50%), Positives = 38/66 (57%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKSMFREVLPKQG L VED+ TMV                   M Q AQ  I+QQE+
+Sbjct: 1  MPEVKSMFREVLPKQGQLSVEDVPTMVLCKPKLLPLKSVTLEKLEKMQQDAQEIIKQQEL 60
+
+Query: 83 AEKDQR 88
+          A K+Q+
+Sbjct: 61 ALKEQQ 66
+
+
+>tr|A0A4W3K3M3|A0A4W3K3M3_CALMI Uncharacterized protein OS=Callorhinchus milii OX=7868 GN=bbip1
+          PE=4 SV=1
+          Length = 69
+
+ Score = 57.8 bits (138), Expect = 2e-08,   Method: Compositional matrix adjust.
+ Identities = 32/66 (48%), Positives = 38/66 (57%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKSMFREVLPKQG L  ED  TMV                   M + AQ TIRQQE+
+Sbjct: 1  MPEVKSMFREVLPKQGQLSFEDTPTMVLCKPKLLPLKSVTLEKLEKMQREAQETIRQQEL 60
+
+Query: 83 AEKDQR 88
+          A+++Q+
+Sbjct: 61 AQREQQ 66
+
+
+>tr|A0A1B8Y1D2|A0A1B8Y1D2_XENTR Uncharacterized protein OS=Xenopus tropicalis OX=8364
+          GN=XENTR_v90027981mg PE=4 SV=1
+          Length = 70
+
+ Score = 57.8 bits (138), Expect = 2e-08,   Method: Compositional matrix adjust.
+ Identities = 32/65 (49%), Positives = 35/65 (53%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKSMFREVLPKQG L VED+ TMV                   M + AQ  IRQQE 
+Sbjct: 1  MPEVKSMFREVLPKQGQLCVEDVPTMVLCKPKILPLKSVTLEKLEKMQRDAQEAIRQQEA 60
+
+Query: 83 AEKDQ 87
+           + DQ
+Sbjct: 61 GQSDQ 65
+
+
+>tr|A0A672SDG5|A0A672SDG5_SINGR BBSome interacting protein 1 OS=Sinocyclocheilus grahami OX=75366
+          PE=4 SV=1
+          Length = 72
+
+ Score = 57.4 bits (137), Expect = 3e-08,   Method: Compositional matrix adjust.
+ Identities = 32/67 (47%), Positives = 39/67 (58%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKSMFREVLPKQG L +ED+ T+V                   M Q AQ  I+QQE+
+Sbjct: 1  MPEVKSMFREVLPKQGQLSMEDVPTIVLCKPKLLPLKSVTLEKLEKMQQEAQELIKQQEL 60
+
+Query: 83 AEKDQRQ 89
+          A K+Q+Q
+Sbjct: 61 ALKEQQQ 67
+
+
+>sp|Q1L8Y6|BBIP1_DANRE BBSome-interacting protein 1 OS=Danio rerio OX=7955 GN=bbip1 PE=3
+          SV=1
+          Length = 72
+
+ Score = 57.0 bits (136), Expect = 5e-08,   Method: Compositional matrix adjust.
+ Identities = 32/65 (49%), Positives = 37/65 (56%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKSMFREVLPKQG L +ED+ TMV                   M + AQ  IRQQE+
+Sbjct: 1  MPEVKSMFREVLPKQGQLSMEDVPTMVLCKPKLLPLKSVTLEKLEKMQKDAQEIIRQQEL 60
+
+Query: 83 AEKDQ 87
+          A K+Q
+Sbjct: 61 ALKEQ 65
+
+
+>tr|A0A2U9BP90|A0A2U9BP90_SCOMX Putative BBSome-interacting protein 1-like OS=Scophthalmus
+          maximus OX=52904 GN=SMAX5B_007307 PE=4 SV=1
+          Length = 67
+
+ Score = 56.6 bits (135), Expect = 6e-08,   Method: Compositional matrix adjust.
+ Identities = 31/67 (46%), Positives = 38/67 (56%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKS+FREVLPKQG L +ED+ TMV                   MH  AQ  ++QQE+
+Sbjct: 1  MPEVKSIFREVLPKQGQLSMEDVPTMVLCKPKLLPLKSVTLEKLEKMHMEAQEAVKQQEL 60
+
+Query: 83 AEKDQRQ 89
+          A K+Q Q
+Sbjct: 61 AMKEQPQ 67
+
+
+>tr|A0A2U9BQQ5|A0A2U9BQQ5_SCOMX Putative BBSome-interacting protein 1-like isoform 6
+          OS=Scophthalmus maximus OX=52904 GN=SMAX5B_007307 PE=4
+          SV=1
+          Length = 82
+
+ Score = 57.0 bits (136), Expect = 6e-08,   Method: Compositional matrix adjust.
+ Identities = 31/67 (46%), Positives = 38/67 (56%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKS+FREVLPKQG L +ED+ TMV                   MH  AQ  ++QQE+
+Sbjct: 16 MPEVKSIFREVLPKQGQLSMEDVPTMVLCKPKLLPLKSVTLEKLEKMHMEAQEAVKQQEL 75
+
+Query: 83 AEKDQRQ 89
+          A K+Q Q
+Sbjct: 76 AMKEQPQ 82
+
+
+>tr|A0A5N5KD08|A0A5N5KD08_PANHP Uncharacterized protein OS=Pangasianodon hypophthalmus OX=310915
+          GN=PHYPO_G00148600 PE=4 SV=1
+          Length = 70
+
+ Score = 56.6 bits (135), Expect = 6e-08,   Method: Compositional matrix adjust.
+ Identities = 31/67 (46%), Positives = 39/67 (58%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKS+FREVLPKQG L VED+ T+V                   M Q AQ  IRQQE 
+Sbjct: 1  MPEVKSVFREVLPKQGQLSVEDVPTLVLCKPKLLPLKSVTLEKLEKMQQEAQELIRQQEA 60
+
+Query: 83 AEKDQRQ 89
+          A+++Q++
+Sbjct: 61 ADREQQE 67
+
+
+>tr|A0A7J6BT12|A0A7J6BT12_9TELE Uncharacterized protein OS=Onychostoma macrolepis OX=369639
+          GN=G5714_021899 PE=4 SV=1
+          Length = 73
+
+ Score = 56.6 bits (135), Expect = 7e-08,   Method: Compositional matrix adjust.
+ Identities = 32/67 (47%), Positives = 38/67 (56%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKSMFREVLPK G L +ED+ TMV                   M Q AQ  I+QQE+
+Sbjct: 1  MPEVKSMFREVLPKHGQLSMEDVPTMVLCKPKLLPLKSVTLEKLEKMQQEAQEIIKQQEL 60
+
+Query: 83 AEKDQRQ 89
+          A K+Q+Q
+Sbjct: 61 ALKEQQQ 67
+
+
+>tr|L5K3B6|L5K3B6_PTEAL BBSome-interacting protein of 10 kDa OS=Pteropus alecto OX=9402
+          GN=PAL_GLEAN10014191 PE=4 SV=1
+          Length = 70
+
+ Score = 55.8 bits (133), Expect = 1e-07,   Method: Compositional matrix adjust.
+ Identities = 30/56 (53%), Positives = 33/56 (58%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIR 78
+          MAE+KSMFREVLPKQG L VEDI TMV                   M QAAQ+T+R
+Sbjct: 1  MAEMKSMFREVLPKQGQLSVEDITTMVLCKPKLLPLKSLTLEKLEKMQQAAQDTVR 56
+
+
+>tr|A0A6A4SR16|A0A6A4SR16_SCOMX Uncharacterized protein OS=Scophthalmus maximus OX=52904
+           GN=F2P81_010510 PE=4 SV=1
+          Length = 119
+
+ Score = 56.6 bits (135), Expect = 1e-07,   Method: Compositional matrix adjust.
+ Identities = 31/67 (46%), Positives = 38/67 (56%)
+
+Query: 23  MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+           M EVKS+FREVLPKQG L +ED+ TMV                   MH  AQ  ++QQE+
+Sbjct: 53  MPEVKSIFREVLPKQGQLSMEDVPTMVLCKPKLLPLKSVTLEKLEKMHMEAQEAVKQQEL 112
+
+Query: 83  AEKDQRQ 89
+           A K+Q Q
+Sbjct: 113 AMKEQPQ 119
+
+
+>tr|W5N3D2|W5N3D2_LEPOC BBSome interacting protein 1 OS=Lepisosteus oculatus OX=7918 PE=4
+          SV=1
+          Length = 72
+
+ Score = 55.8 bits (133), Expect = 1e-07,   Method: Compositional matrix adjust.
+ Identities = 31/65 (47%), Positives = 36/65 (55%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKSMFREVLPKQG L +ED+ TMV                   M Q  Q  +RQQEM
+Sbjct: 1  MPEVKSMFREVLPKQGQLSMEDVPTMVLCKPKLLPLKSVTLEKLEKMQQETQELVRQQEM 60
+
+Query: 83 AEKDQ 87
+          A ++Q
+Sbjct: 61 ALREQ 65
+
+
+>tr|A0A5A9NSB4|A0A5A9NSB4_9TELE BBSome-interacting protein 1 OS=Triplophysa tibetana OX=1572043
+          GN=E1301_Tti018628 PE=4 SV=1
+          Length = 72
+
+ Score = 55.5 bits (132), Expect = 2e-07,   Method: Compositional matrix adjust.
+ Identities = 31/70 (44%), Positives = 38/70 (54%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKSM REVLPKQG L +ED+ TMV                   M + AQ  I+QQE+
+Sbjct: 1  MPEVKSMLREVLPKQGQLCMEDVPTMVLCKPKLLPLKSVTLEKLEKMQKEAQEIIKQQEL 60
+
+Query: 83 AEKDQRQITH 92
+          A + Q+QI  
+Sbjct: 61 ALRQQQQIEQ 70
+
+
+>tr|A0A6Q2X7E6|A0A6Q2X7E6_ESOLU BBSome interacting protein 1 OS=Esox lucius OX=8010 PE=4 SV=1
+          Length = 68
+
+ Score = 55.5 bits (132), Expect = 2e-07,   Method: Compositional matrix adjust.
+ Identities = 31/65 (47%), Positives = 36/65 (55%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKSMFREVLPKQG L +ED+ TMV                   M   AQ  I+QQE+
+Sbjct: 1  MPEVKSMFREVLPKQGQLSMEDVPTMVLCKPKLLPLKSVTLEKLEKMQLDAQEAIKQQEL 60
+
+Query: 83 AEKDQ 87
+          A KD+
+Sbjct: 61 ARKDR 65
+
+
+>tr|A0A401RLX1|A0A401RLX1_CHIPU Uncharacterized protein OS=Chiloscyllium punctatum OX=137246
+          GN=chiPu_0018223 PE=4 SV=1
+          Length = 66
+
+ Score = 55.1 bits (131), Expect = 2e-07,   Method: Compositional matrix adjust.
+ Identities = 30/66 (45%), Positives = 37/66 (56%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKSMFREVLPKQG L  ED+ TMV                   M + AQ  IRQQE+
+Sbjct: 1  MPEVKSMFREVLPKQGQLSYEDVPTMVLCKPKLLPLKSVTLEKMEKMQREAQEAIRQQEL 60
+
+Query: 83 AEKDQR 88
+          A+ +++
+Sbjct: 61 AQHEKK 66
+
+
+>tr|A0A3Q4C0H5|A0A3Q4C0H5_MOLML BBSome interacting protein 1 OS=Mola mola OX=94237 PE=4 SV=1
+          Length = 67
+
+ Score = 54.7 bits (130), Expect = 3e-07,   Method: Compositional matrix adjust.
+ Identities = 29/67 (43%), Positives = 38/67 (56%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKS+FREVLPKQG L +ED+ TM+                   M   AQ  ++QQE+
+Sbjct: 1  MPEVKSIFREVLPKQGQLSMEDVPTMILCKPKLLPLKSVTLEKLEKMQMEAQEAVKQQEL 60
+
+Query: 83 AEKDQRQ 89
+          A ++QRQ
+Sbjct: 61 AMREQRQ 67
+
+
+>tr|A0A437DLB4|A0A437DLB4_ORYJA Uncharacterized protein OS=Oryzias javanicus OX=123683
+          GN=OJAV_G00000730 PE=4 SV=1
+          Length = 67
+
+ Score = 54.7 bits (130), Expect = 3e-07,   Method: Compositional matrix adjust.
+ Identities = 32/67 (47%), Positives = 37/67 (55%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKS+FREVLPKQG L +ED+ TMV                   M   AQ  IRQQE+
+Sbjct: 1  MPEVKSVFREVLPKQGQLSMEDVPTMVLCKPKLLPLKSVTLEKLEKMQTEAQEAIRQQEV 60
+
+Query: 83 AEKDQRQ 89
+          A K+Q Q
+Sbjct: 61 AMKEQGQ 67
+
+
+>tr|A0A1S3GIG2|A0A1S3GIG2_DIPOR BBSome-interacting protein 1-like OS=Dipodomys ordii OX=10020
+          GN=LOC105998361 PE=4 SV=1
+          Length = 70
+
+ Score = 54.7 bits (130), Expect = 4e-07,   Method: Compositional matrix adjust.
+ Identities = 31/70 (44%), Positives = 40/70 (57%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKS+F EV PKQ  L VE+++ MV                     QAA+NTI+++EM
+Sbjct: 1  MVEVKSVFPEVHPKQKQLSVENVIMMVPCKSRIVSLKSLTQEKLEKTQQAAENTIKKKEM 60
+
+Query: 83 AEKDQRQITH 92
+          A K+Q QITH
+Sbjct: 61 AVKEQGQITH 70
+
+
+>tr|A0A315UUA9|A0A315UUA9_GAMAF Uncharacterized protein (Fragment) OS=Gambusia affinis OX=33528
+           GN=CCH79_00014237 PE=4 SV=1
+          Length = 144
+
+ Score = 55.5 bits (132), Expect = 4e-07,   Method: Compositional matrix adjust.
+ Identities = 31/78 (39%), Positives = 42/78 (53%)
+
+Query: 12  SGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQ 71
+           +G  T   ++ M EVKS+ REVLPKQG L++ED+ TMV                   M  
+Sbjct: 63  TGMITRPQDTAMPEVKSILREVLPKQGQLYMEDVPTMVLCKPKLLPLKSVTLEKLEKMQM 122
+
+Query: 72  AAQNTIRQQEMAEKDQRQ 89
+            AQ  ++QQE+A K+Q Q
+Sbjct: 123 EAQEAVKQQELAMKEQGQ 140
+
+
+>tr|A0A1L8FDN5|A0A1L8FDN5_XENLA Uncharacterized protein OS=Xenopus laevis OX=8355
+          GN=XELAEV_18036618mg PE=4 SV=1
+          Length = 70
+
+ Score = 54.3 bits (129), Expect = 4e-07,   Method: Compositional matrix adjust.
+ Identities = 30/64 (46%), Positives = 34/64 (53%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKSMFREVLPKQG L VED+ TMV                   M + AQ  IR+QE 
+Sbjct: 1  MPEVKSMFREVLPKQGQLCVEDVPTMVLCKPKILPLKSVTLEKLEKMQREAQEAIRRQEA 60
+
+Query: 83 AEKD 86
+           + D
+Sbjct: 61 VQSD 64
+
+
+>tr|A0A6P8QA81|A0A6P8QA81_GEOSA BBSome-interacting protein 1 OS=Geotrypetes seraphini OX=260995
+          GN=BBIP1 PE=4 SV=1
+          Length = 69
+
+ Score = 54.3 bits (129), Expect = 5e-07,   Method: Compositional matrix adjust.
+ Identities = 31/66 (46%), Positives = 36/66 (54%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKSMFREVLPKQG L VE   TMV                   M + AQ   RQQE+
+Sbjct: 1  MPEVKSMFREVLPKQGQLCVEATPTMVLCKPKLLPLKSVTLDKLEKMQREAQEAFRQQEL 60
+
+Query: 83 AEKDQR 88
+          A+K+Q+
+Sbjct: 61 AQKEQQ 66
+
+
+>tr|A0A3B4ZE47|A0A3B4ZE47_9TELE BBSome interacting protein 1 OS=Stegastes partitus OX=144197 PE=4
+          SV=1
+          Length = 67
+
+ Score = 54.3 bits (129), Expect = 5e-07,   Method: Compositional matrix adjust.
+ Identities = 30/67 (44%), Positives = 37/67 (55%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKS+FREVLPKQG L +ED+ TMV                   M   AQ  ++QQE+
+Sbjct: 1  MPEVKSIFREVLPKQGQLSMEDVPTMVLCKPKLLPLKSVTLEKLEKMQMEAQEAVKQQEL 60
+
+Query: 83 AEKDQRQ 89
+          A K+Q Q
+Sbjct: 61 AAKEQLQ 67
+
+
+>tr|A0A7N6C4N1|A0A7N6C4N1_ANATE BBSome interacting protein 1 OS=Anabas testudineus OX=64144 PE=4
+          SV=1
+          Length = 66
+
+ Score = 53.9 bits (128), Expect = 6e-07,   Method: Compositional matrix adjust.
+ Identities = 29/65 (44%), Positives = 35/65 (53%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKS+FREVLPKQG L +ED+ TMV                   M   AQ  ++QQE+
+Sbjct: 1  MPEVKSIFREVLPKQGQLSMEDVPTMVLCKPKLLPLKSVTLEKLEKMQMEAQEAVKQQEL 60
+
+Query: 83 AEKDQ 87
+            KDQ
+Sbjct: 61 TSKDQ 65
+
+
+>tr|A0A7M4F024|A0A7M4F024_CROPO BBSome interacting protein 1 OS=Crocodylus porosus OX=8502
+          GN=BBIP1 PE=4 SV=1
+          Length = 90
+
+ Score = 54.3 bits (129), Expect = 7e-07,   Method: Compositional matrix adjust.
+ Identities = 29/67 (43%), Positives = 38/67 (56%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M E +S  REVLPK+G L VED+ T+V                   M +AAQ TIRQQEM
+Sbjct: 23 MPEARSALREVLPKRGQLAVEDVATLVLCKPKLLPLKSMTLEKLEKMQRAAQETIRQQEM 82
+
+Query: 83 AEKDQRQ 89
+          A++++ Q
+Sbjct: 83 AQREEPQ 89
+
+
+>tr|A0A3B4U5N2|A0A3B4U5N2_SERDU BBSome interacting protein 1 OS=Seriola dumerili OX=41447 PE=4
+          SV=1
+          Length = 67
+
+ Score = 53.9 bits (128), Expect = 7e-07,   Method: Compositional matrix adjust.
+ Identities = 30/67 (44%), Positives = 37/67 (55%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKS+FREVLPKQG L +ED+ TMV                   M   AQ  ++QQE+
+Sbjct: 1  MPEVKSIFREVLPKQGQLSMEDVPTMVLCKPKLLPLKSVTLEKLEKMQMEAQEAVKQQEL 60
+
+Query: 83 AEKDQRQ 89
+          A K+Q Q
+Sbjct: 61 AMKEQSQ 67
+
+
+>tr|A0A4W6DC59|A0A4W6DC59_LATCA BBSome interacting protein 1 OS=Lates calcarifer OX=8187 PE=4
+          SV=1
+          Length = 67
+
+ Score = 53.9 bits (128), Expect = 7e-07,   Method: Compositional matrix adjust.
+ Identities = 30/67 (44%), Positives = 37/67 (55%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKS+FREVLPKQG L +ED+ TMV                   M   AQ  ++QQE+
+Sbjct: 1  MPEVKSIFREVLPKQGQLSMEDVPTMVLCKPKLLPLKSVTLEKLEKMQMEAQEAVKQQEL 60
+
+Query: 83 AEKDQRQ 89
+          A K+Q Q
+Sbjct: 61 AMKEQSQ 67
+
+
+>tr|M3ZXJ0|M3ZXJ0_XIPMA Uncharacterized protein OS=Xiphophorus maculatus OX=8083 PE=4
+          SV=2
+          Length = 71
+
+ Score = 53.5 bits (127), Expect = 8e-07,   Method: Compositional matrix adjust.
+ Identities = 29/67 (43%), Positives = 37/67 (55%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKS+ REVLPKQG L++ED+ TMV                   M   AQ  ++QQE+
+Sbjct: 1  MPEVKSILREVLPKQGQLYMEDVPTMVLCKPKLLPLKSVTLEKLEKMQMEAQEAVKQQEL 60
+
+Query: 83 AEKDQRQ 89
+          A K+Q Q
+Sbjct: 61 AMKEQGQ 67
+
+
+>tr|A0A3B5KH65|A0A3B5KH65_TAKRU Uncharacterized protein OS=Takifugu rubripes OX=31033 PE=4 SV=2
+          Length = 67
+
+ Score = 53.5 bits (127), Expect = 8e-07,   Method: Compositional matrix adjust.
+ Identities = 28/67 (41%), Positives = 37/67 (55%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVK++FREVLPK+G L +ED+ TM+                   M   AQ  +RQQE+
+Sbjct: 1  MPEVKTVFREVLPKKGQLSIEDVPTMILCKPKLLPLKSVTLEKLEKMQMEAQEAVRQQEL 60
+
+Query: 83 AEKDQRQ 89
+          A K+Q Q
+Sbjct: 61 ATKEQLQ 67
+
+
+>tr|A0A5C6MYX8|A0A5C6MYX8_9TELE BBSome-interacting protein 1 OS=Takifugu flavidus OX=433684
+          GN=D4764_06G0011480 PE=4 SV=1
+          Length = 67
+
+ Score = 53.5 bits (127), Expect = 8e-07,   Method: Compositional matrix adjust.
+ Identities = 28/67 (41%), Positives = 37/67 (55%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVK++FREVLPK+G L +ED+ TM+                   M   AQ  +RQQE+
+Sbjct: 1  MPEVKTVFREVLPKKGQLSIEDVPTMILCKPKLLPLKSVTLEKLEKMQMEAQEAVRQQEL 60
+
+Query: 83 AEKDQRQ 89
+          A K+Q Q
+Sbjct: 61 ATKEQLQ 67
+
+
+>tr|A0A3Q2ZPE5|A0A3Q2ZPE5_HIPCM BBSome interacting protein 1 OS=Hippocampus comes OX=109280 PE=4
+          SV=1
+          Length = 67
+
+ Score = 53.5 bits (127), Expect = 8e-07,   Method: Compositional matrix adjust.
+ Identities = 31/67 (46%), Positives = 37/67 (55%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKS+FREVLPKQG L +ED+ TMV                   M   AQ  I+QQE+
+Sbjct: 1  MPEVKSVFREVLPKQGQLSMEDVPTMVLCKPKLLPLKSVTVEKLEKMQMEAQEAIKQQEV 60
+
+Query: 83 AEKDQRQ 89
+          A K+Q Q
+Sbjct: 61 AMKEQSQ 67
+
+
+>tr|A0A3Q2QMH6|A0A3Q2QMH6_FUNHE BBSome interacting protein 1 OS=Fundulus heteroclitus OX=8078
+          PE=4 SV=1
+          Length = 71
+
+ Score = 53.5 bits (127), Expect = 9e-07,   Method: Compositional matrix adjust.
+ Identities = 29/67 (43%), Positives = 37/67 (55%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKS+ REVLPKQG L++ED+ TMV                   M   AQ  ++QQE+
+Sbjct: 1  MPEVKSILREVLPKQGQLYMEDVPTMVLCKPKLLPLKSVTLEKLEKMQMEAQEAVKQQEL 60
+
+Query: 83 AEKDQRQ 89
+          A K+Q Q
+Sbjct: 61 AMKEQVQ 67
+
+
+>tr|A0A3B3U5B8|A0A3B3U5B8_9TELE BBSome interacting protein 1 OS=Poecilia latipinna OX=48699 PE=4
+          SV=1
+          Length = 75
+
+ Score = 53.5 bits (127), Expect = 9e-07,   Method: Compositional matrix adjust.
+ Identities = 29/67 (43%), Positives = 37/67 (55%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKS+ REVLPKQG L++ED+ TMV                   M   AQ  ++QQE+
+Sbjct: 1  MPEVKSILREVLPKQGQLYMEDVPTMVLCKPKLLPLKSVTLEKLEKMQMEAQEAVKQQEL 60
+
+Query: 83 AEKDQRQ 89
+          A K+Q Q
+Sbjct: 61 AMKEQGQ 67
+
+
+>tr|A0A668T6V5|A0A668T6V5_OREAU BBSome interacting protein 1 OS=Oreochromis aureus OX=47969 PE=4
+          SV=1
+          Length = 67
+
+ Score = 53.5 bits (127), Expect = 9e-07,   Method: Compositional matrix adjust.
+ Identities = 30/67 (44%), Positives = 37/67 (55%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKS+FREVLPKQG L +ED+ TMV                   M   AQ  ++QQE+
+Sbjct: 1  MPEVKSIFREVLPKQGQLSMEDVPTMVLCKPKLLPLKSVTLEKLEKMQMEAQEAVKQQEL 60
+
+Query: 83 AEKDQRQ 89
+          A K+Q Q
+Sbjct: 61 AMKEQLQ 67
+
+
+>tr|A0A669BNT3|A0A669BNT3_ORENI Uncharacterized protein OS=Oreochromis niloticus OX=8128 GN=bbip1
+          PE=4 SV=1
+          Length = 67
+
+ Score = 53.5 bits (127), Expect = 9e-07,   Method: Compositional matrix adjust.
+ Identities = 30/67 (44%), Positives = 37/67 (55%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKS+FREVLPKQG L +ED+ TMV                   M   AQ  ++QQE+
+Sbjct: 1  MPEVKSIFREVLPKQGQLSMEDVPTMVLCKPKLLPLKSVTLEKLEKMQMEAQEAVKQQEL 60
+
+Query: 83 AEKDQRQ 89
+          A K+Q Q
+Sbjct: 61 AMKEQLQ 67
+
+
+>tr|F7CDR8|F7CDR8_HORSE BBSome interacting protein 1 OS=Equus caballus OX=9796 GN=BBIP1
+           PE=4 SV=2
+          Length = 113
+
+ Score = 53.9 bits (128), Expect = 1e-06,   Method: Compositional matrix adjust.
+ Identities = 47/114 (41%), Positives = 50/114 (43%), Gaps = 23/114 (20%)
+
+Query: 1   MLKAAAKRP-ELSGKNTISN-----------NSDMAEVKSMFRE----------VLPKQG 38
+           M KAA K P ELSGKN I              S     K M  E          +L   G
+Sbjct: 1   MPKAAGKTPGELSGKNRIQQFRYGGSEVNVPGSSPKTSKRMANEALFLKPRNLVILKTAG 60
+
+Query: 39  PLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEMAEKDQRQITH 92
+            L VEDI TMV                   M QAAQ+TIRQQEMAEK+ RQITH
+Sbjct: 61  QLSVEDITTMVLCKPKLLPLKSLTLEKLEKMQQAAQDTIRQQEMAEKE-RQITH 113
+
+
+>tr|A0A060YMI4|A0A060YMI4_ONCMY Uncharacterized protein OS=Oncorhynchus mykiss OX=8022
+          GN=GSONMT00017882001 PE=4 SV=1
+          Length = 69
+
+ Score = 53.1 bits (126), Expect = 1e-06,   Method: Compositional matrix adjust.
+ Identities = 30/67 (44%), Positives = 38/67 (56%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKSMFREVLPKQG L +ED+ TMV                   M   AQ  I+QQ++
+Sbjct: 1  MPEVKSMFREVLPKQGQLSMEDVPTMVLCKPKLMPLKSVTLEKLEKMQLEAQEAIKQQDL 60
+
+Query: 83 AEKDQRQ 89
+          A K+Q++
+Sbjct: 61 ALKEQQE 67
+
+
+>tr|A0A4W5PS52|A0A4W5PS52_9TELE Uncharacterized protein OS=Hucho hucho OX=62062 PE=4 SV=1
+          Length = 69
+
+ Score = 53.1 bits (126), Expect = 1e-06,   Method: Compositional matrix adjust.
+ Identities = 30/67 (44%), Positives = 38/67 (56%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKSMFREVLPKQG L +ED+ TMV                   M   AQ  I+QQ++
+Sbjct: 1  MPEVKSMFREVLPKQGQLSMEDVPTMVLCKPKLMPLKSVTLEKLEKMQLEAQEAIKQQDL 60
+
+Query: 83 AEKDQRQ 89
+          A K+Q++
+Sbjct: 61 ALKEQQE 67
+
+
+>tr|A0A3B3ZFK9|A0A3B3ZFK9_9GOBI Uncharacterized protein OS=Periophthalmus magnuspinnatus
+          OX=409849 PE=4 SV=1
+          Length = 66
+
+ Score = 53.1 bits (126), Expect = 1e-06,   Method: Compositional matrix adjust.
+ Identities = 30/65 (46%), Positives = 36/65 (55%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKS+FREVLPKQG L +ED+ TMV                   M   AQ  IRQQE+
+Sbjct: 1  MPEVKSIFREVLPKQGQLSMEDVPTMVLCKPKLLPLKSVTLEKLEKMQTEAQEAIRQQEV 60
+
+Query: 83 AEKDQ 87
+          + K+Q
+Sbjct: 61 SLKEQ 65
+
+
+>tr|A0A3Q2PH61|A0A3Q2PH61_FUNHE BBSome interacting protein 1 OS=Fundulus heteroclitus OX=8078
+          PE=4 SV=1
+          Length = 97
+
+ Score = 53.5 bits (127), Expect = 1e-06,   Method: Compositional matrix adjust.
+ Identities = 29/67 (43%), Positives = 37/67 (55%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKS+ REVLPKQG L++ED+ TMV                   M   AQ  ++QQE+
+Sbjct: 27 MPEVKSILREVLPKQGQLYMEDVPTMVLCKPKLLPLKSVTLEKLEKMQMEAQEAVKQQEL 86
+
+Query: 83 AEKDQRQ 89
+          A K+Q Q
+Sbjct: 87 AMKEQVQ 93
+
+
+>tr|A0A3P9B1R6|A0A3P9B1R6_9CICH BBSome interacting protein 1 OS=Maylandia zebra OX=106582 PE=4
+          SV=1
+          Length = 67
+
+ Score = 52.8 bits (125), Expect = 1e-06,   Method: Compositional matrix adjust.
+ Identities = 29/67 (43%), Positives = 37/67 (55%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M E+KS+FREVLPKQG L +ED+ TMV                   M   AQ  ++QQE+
+Sbjct: 1  MPEIKSIFREVLPKQGQLSMEDVPTMVLCKPKLLPLKSVTLEKLEKMQMEAQEAVKQQEL 60
+
+Query: 83 AEKDQRQ 89
+          A K+Q Q
+Sbjct: 61 AMKEQLQ 67
+
+
+>tr|A0A3Q0S8Q3|A0A3Q0S8Q3_AMPCI BBSome interacting protein 1 OS=Amphilophus citrinellus OX=61819
+          PE=4 SV=1
+          Length = 67
+
+ Score = 52.8 bits (125), Expect = 1e-06,   Method: Compositional matrix adjust.
+ Identities = 29/67 (43%), Positives = 37/67 (55%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKS+FREVLPKQG L +ED+ TM+                   M   AQ  ++QQE+
+Sbjct: 1  MPEVKSIFREVLPKQGQLSMEDVPTMILCKPKLLPLKSVTLEKLEKMQMEAQEAVKQQEL 60
+
+Query: 83 AEKDQRQ 89
+          A K+Q Q
+Sbjct: 61 AMKEQLQ 67
+
+
+>tr|A0A1L8FI16|A0A1L8FI16_XENLA Uncharacterized protein OS=Xenopus laevis OX=8355
+          GN=XELAEV_18034217mg PE=4 SV=1
+          Length = 70
+
+ Score = 52.8 bits (125), Expect = 2e-06,   Method: Compositional matrix adjust.
+ Identities = 30/64 (46%), Positives = 33/64 (51%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKSMFREVLPKQG L VED+ TMV                   M + AQ  IR+QE 
+Sbjct: 1  MPEVKSMFREVLPKQGQLCVEDVPTMVLCKPKILPLKSVTLEKLEKMQREAQEAIRRQEK 60
+
+Query: 83 AEKD 86
+             D
+Sbjct: 61 EASD 64
+
+
+>tr|A0A6A5FQX3|A0A6A5FQX3_PERFL Uncharacterized protein OS=Perca fluviatilis OX=8168
+           GN=PFLUV_G00006570 PE=4 SV=1
+          Length = 101
+
+ Score = 53.1 bits (126), Expect = 2e-06,   Method: Compositional matrix adjust.
+ Identities = 32/73 (43%), Positives = 39/73 (53%), Gaps = 1/73 (1%)
+
+Query: 18  SNNSD-MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNT 76
+           SN  D M EVKS+FREVLPK G L +ED+ TMV                   M   AQ  
+Sbjct: 29  SNQEDTMPEVKSIFREVLPKTGQLSMEDVPTMVLCKPKLLPLKSVTLEKLEKMQMEAQEA 88
+
+Query: 77  IRQQEMAEKDQRQ 89
+           ++QQE+A K+Q Q
+Sbjct: 89  VKQQELAVKEQLQ 101
+
+
+>tr|A0A3B3BLH0|A0A3B3BLH0_ORYME BBSome interacting protein 1 OS=Oryzias melastigma OX=30732 PE=4
+          SV=1
+          Length = 67
+
+ Score = 52.8 bits (125), Expect = 2e-06,   Method: Compositional matrix adjust.
+ Identities = 32/67 (47%), Positives = 36/67 (53%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKS+FREVLPKQG L +ED+ TMV                   M   AQ  IRQQE 
+Sbjct: 1  MPEVKSVFREVLPKQGQLSMEDVPTMVLCKPKLLPLKSVTLEKLEKMQMEAQEAIRQQEE 60
+
+Query: 83 AEKDQRQ 89
+          A K+Q Q
+Sbjct: 61 AMKEQVQ 67
+
+
+>tr|A0A3B3YAZ8|A0A3B3YAZ8_9TELE BBSome interacting protein 1 OS=Poecilia mexicana OX=48701 PE=4
+          SV=1
+          Length = 71
+
+ Score = 52.8 bits (125), Expect = 2e-06,   Method: Compositional matrix adjust.
+ Identities = 28/65 (43%), Positives = 36/65 (55%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKS+ REVLPKQG L++ED+ TMV                   M   AQ  ++QQE+
+Sbjct: 1  MPEVKSILREVLPKQGQLYMEDVPTMVLCKPKLLPLKSVTLEKLEKMQMEAQQAVKQQEL 60
+
+Query: 83 AEKDQ 87
+          A K+Q
+Sbjct: 61 AMKEQ 65
+
+
+>tr|A0A7N9ALY8|A0A7N9ALY8_9TELE BBSome interacting protein 1 OS=Mastacembelus armatus OX=205130
+          PE=4 SV=1
+          Length = 67
+
+ Score = 52.8 bits (125), Expect = 2e-06,   Method: Compositional matrix adjust.
+ Identities = 30/67 (44%), Positives = 36/67 (53%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKSMFREVLPKQG L +ED+ TMV                   M   AQ  ++QQE+
+Sbjct: 1  MPEVKSMFREVLPKQGQLSMEDVPTMVLCKPKLLPLKSVTLEKLEKMQMEAQEAVKQQEL 60
+
+Query: 83 AEKDQRQ 89
+          A K+  Q
+Sbjct: 61 AMKELSQ 67
+
+
+>tr|A0A3B5M7M6|A0A3B5M7M6_9TELE Uncharacterized protein OS=Xiphophorus couchianus OX=32473 PE=4
+          SV=1
+          Length = 71
+
+ Score = 52.8 bits (125), Expect = 2e-06,   Method: Compositional matrix adjust.
+ Identities = 29/67 (43%), Positives = 36/67 (53%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKS  REVLPKQG L++ED+ TMV                   M   AQ  ++QQE+
+Sbjct: 1  MPEVKSTLREVLPKQGQLYMEDVPTMVLCKPKLLPLKSVTLEKLEKMQMEAQEAVKQQEL 60
+
+Query: 83 AEKDQRQ 89
+          A K+Q Q
+Sbjct: 61 AMKEQGQ 67
+
+
+>tr|A0A3Q2DH60|A0A3Q2DH60_CYPVA BBSome interacting protein 1 OS=Cyprinodon variegatus OX=28743
+          PE=4 SV=1
+          Length = 87
+
+ Score = 52.8 bits (125), Expect = 2e-06,   Method: Compositional matrix adjust.
+ Identities = 29/70 (41%), Positives = 37/70 (52%)
+
+Query: 20 NSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQ 79
+          +  M EVKS  REVLPKQG L++ED+ TMV                   M   AQ  ++Q
+Sbjct: 14 DETMPEVKSTLREVLPKQGQLYMEDVPTMVLCKPKLLPLKSVTLEKLEKMQMEAQEAVKQ 73
+
+Query: 80 QEMAEKDQRQ 89
+          QE+A K+Q Q
+Sbjct: 74 QELAMKEQVQ 83
+
+
+>tr|A0A6P7I3L1|A0A6P7I3L1_9TELE BBSome-interacting protein 1 OS=Parambassis ranga OX=210632
+          GN=bbip1 PE=4 SV=1
+          Length = 65
+
+ Score = 52.4 bits (124), Expect = 2e-06,   Method: Compositional matrix adjust.
+ Identities = 29/65 (44%), Positives = 36/65 (55%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKS+FREVLPKQG L +ED+ TMV                   M   AQ  ++QQE+
+Sbjct: 1  MPEVKSIFREVLPKQGQLSMEDVPTMVLCKPKLLPLKSVTLEKLEKMQMEAQEAVKQQEL 60
+
+Query: 83 AEKDQ 87
+          A K+Q
+Sbjct: 61 AMKEQ 65
+
+
+>tr|A0A484DLX6|A0A484DLX6_PERFV Uncharacterized protein OS=Perca flavescens OX=8167
+          GN=EPR50_G00014920 PE=4 SV=1
+          Length = 93
+
+ Score = 52.8 bits (125), Expect = 2e-06,   Method: Compositional matrix adjust.
+ Identities = 32/73 (43%), Positives = 39/73 (53%), Gaps = 1/73 (1%)
+
+Query: 18 SNNSD-MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNT 76
+          SN  D M EVKS+FREVLPK G L +ED+ TMV                   M   AQ  
+Sbjct: 21 SNQEDTMPEVKSIFREVLPKTGQLSMEDVPTMVLCKPKLLPLKSVTLEKLEKMQMEAQEA 80
+
+Query: 77 IRQQEMAEKDQRQ 89
+          ++QQE+A K+Q Q
+Sbjct: 81 VKQQELAMKEQLQ 93
+
+
+>tr|A0A3B4CL13|A0A3B4CL13_PYGNA BBSome interacting protein 1 OS=Pygocentrus nattereri OX=42514
+          PE=4 SV=1
+          Length = 76
+
+ Score = 52.4 bits (124), Expect = 3e-06,   Method: Compositional matrix adjust.
+ Identities = 29/61 (47%), Positives = 33/61 (54%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKSMFREVLPKQG L +ED+ TMV                   M   AQ  I+QQE+
+Sbjct: 1  MPEVKSMFREVLPKQGQLSMEDVPTMVLCKPKLLPLKSVTLEKLEKMQHEAQEVIKQQEL 60
+
+Query: 83 A 83
+          A
+Sbjct: 61 A 61
+
+
+>tr|A0A672GN25|A0A672GN25_SALFA Uncharacterized protein OS=Salarias fasciatus OX=181472 PE=4 SV=1
+          Length = 83
+
+ Score = 52.4 bits (124), Expect = 3e-06,   Method: Compositional matrix adjust.
+ Identities = 28/68 (41%), Positives = 38/68 (55%)
+
+Query: 22 DMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQE 81
+          +M E+K++FREVLPKQG L +ED+ TMV                   M   AQ  ++QQE
+Sbjct: 16 NMPELKTVFREVLPKQGQLSMEDVPTMVLCKPKLLPLKSVTLEKLEKMQMEAQEAVKQQE 75
+
+Query: 82 MAEKDQRQ 89
+          +A KD+ Q
+Sbjct: 76 LALKDEAQ 83
+
+
+>tr|A0A151NV80|A0A151NV80_ALLMI BBSome-interacting protein 1 OS=Alligator mississippiensis
+          OX=8496 GN=BBIP1 PE=4 SV=1
+          Length = 68
+
+ Score = 52.0 bits (123), Expect = 3e-06,   Method: Compositional matrix adjust.
+ Identities = 27/67 (40%), Positives = 38/67 (56%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M E +S  REVLPK+G L VED+ T+V                   M +AAQ T+R+QEM
+Sbjct: 1  MPEARSALREVLPKRGQLSVEDVATLVLCKPKLLPLKSVTLEKLEKMQRAAQETVRRQEM 60
+
+Query: 83 AEKDQRQ 89
+          A++++ Q
+Sbjct: 61 AQREEPQ 67
+
+
+>tr|A0A672YUI9|A0A672YUI9_9TELE Uncharacterized protein OS=Sphaeramia orbicularis OX=375764 PE=4
+          SV=1
+          Length = 67
+
+ Score = 52.0 bits (123), Expect = 3e-06,   Method: Compositional matrix adjust.
+ Identities = 28/65 (43%), Positives = 36/65 (55%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKS+FREVLPKQG L +ED+ TM+                   M   AQ  ++QQE+
+Sbjct: 1  MPEVKSIFREVLPKQGQLSMEDVPTMILCKPKLLPLKSVTLEKLEKMQMEAQEAVKQQEL 60
+
+Query: 83 AEKDQ 87
+          A K+Q
+Sbjct: 61 AMKEQ 65
+
+
+>tr|A0A3P9MFZ3|A0A3P9MFZ3_ORYLA Uncharacterized protein OS=Oryzias latipes OX=8090 PE=4 SV=1
+          Length = 67
+
+ Score = 52.0 bits (123), Expect = 3e-06,   Method: Compositional matrix adjust.
+ Identities = 30/67 (44%), Positives = 37/67 (55%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKS+FREVLPKQG L +ED+ TMV                   M   AQ  I+QQE+
+Sbjct: 1  MPEVKSVFREVLPKQGQLSMEDVPTMVLCKPKLLPLKSVTLEKLEKMQMEAQEAIKQQEL 60
+
+Query: 83 AEKDQRQ 89
+          A K++ Q
+Sbjct: 61 ALKERVQ 67
+
+
+>tr|K7FSX8|K7FSX8_PELSI Uncharacterized protein OS=Pelodiscus sinensis OX=13735 PE=4 SV=1
+          Length = 71
+
+ Score = 52.0 bits (123), Expect = 3e-06,   Method: Compositional matrix adjust.
+ Identities = 29/64 (45%), Positives = 35/64 (54%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M E KS  REVLPKQG L VED+ TMV                   M + AQ T+RQQEM
+Sbjct: 1  MPEGKSPLREVLPKQGQLSVEDVATMVLCKPKLLPLKSVTLEKLEKMQRDAQETVRQQEM 60
+
+Query: 83 AEKD 86
+          A+++
+Sbjct: 61 AQRE 64
+
+
+>tr|A0A667ZQK8|A0A667ZQK8_9TELE BBSome interacting protein 1 OS=Myripristis murdjan OX=586833
+          PE=4 SV=1
+          Length = 67
+
+ Score = 51.6 bits (122), Expect = 4e-06,   Method: Compositional matrix adjust.
+ Identities = 28/67 (41%), Positives = 36/67 (53%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKS+FREVLPKQG L +ED+ T+V                   M   AQ  ++QQE+
+Sbjct: 1  MPEVKSIFREVLPKQGQLSMEDVPTLVLCKPKLLPLKSVTLEKLEKMQMEAQEAVKQQEL 60
+
+Query: 83 AEKDQRQ 89
+          A K+  Q
+Sbjct: 61 ASKEPSQ 67
+
+
+>tr|A0A3Q1FQJ2|A0A3Q1FQJ2_9TELE BBSome interacting protein 1 OS=Acanthochromis polyacanthus
+          OX=80966 PE=4 SV=1
+          Length = 79
+
+ Score = 52.0 bits (123), Expect = 4e-06,   Method: Compositional matrix adjust.
+ Identities = 30/74 (40%), Positives = 40/74 (54%), Gaps = 2/74 (2%)
+
+Query: 16 TISNNSD--MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAA 73
+          + S +S+  M EVK +FREVLPKQG L +ED+ TMV                   M   A
+Sbjct: 4  SFSKDSEDIMPEVKPIFREVLPKQGQLSMEDVPTMVLCKPKLLPLKSVTLEKLEKMQMEA 63
+
+Query: 74 QNTIRQQEMAEKDQ 87
+          Q  ++QQE+A K+Q
+Sbjct: 64 QEAVKQQELAAKEQ 77
+
+
+>tr|A0A671VNV1|A0A671VNV1_SPAAU BBSome interacting protein 1 OS=Sparus aurata OX=8175 PE=4 SV=1
+          Length = 92
+
+ Score = 52.0 bits (123), Expect = 4e-06,   Method: Compositional matrix adjust.
+ Identities = 28/67 (41%), Positives = 37/67 (55%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKS+FREVLPKQG L +ED+ TM+                   M   AQ  ++QQE+
+Sbjct: 26 MPEVKSVFREVLPKQGQLSMEDVPTMILCKPKLLPLKSVTLEKLEKMQMEAQEAVKQQEL 85
+
+Query: 83 AEKDQRQ 89
+          A ++Q Q
+Sbjct: 86 AGREQLQ 92
+
+
+>tr|A0A5F4CPQ7|A0A5F4CPQ7_CANLF Uncharacterized protein OS=Canis lupus familiaris OX=9615
+          GN=BBIP1 PE=4 SV=1
+          Length = 68
+
+ Score = 51.2 bits (121), Expect = 5e-06,   Method: Compositional matrix adjust.
+ Identities = 29/55 (52%), Positives = 31/55 (56%)
+
+Query: 38 GPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEMAEKDQRQITH 92
+          G L VEDI TMV                   M QAAQ+TIRQQEMAEK Q+QITH
+Sbjct: 14 GQLSVEDITTMVLCKPKLLPLKSLTLEKLEKMQQAAQDTIRQQEMAEKQQQQITH 68
+
+
+>tr|A0A3B3IK29|A0A3B3IK29_ORYLA Uncharacterized protein OS=Oryzias latipes OX=8090 PE=4 SV=1
+          Length = 67
+
+ Score = 51.2 bits (121), Expect = 6e-06,   Method: Compositional matrix adjust.
+ Identities = 30/67 (44%), Positives = 37/67 (55%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKS+FREVLPKQG L +ED+ TMV                   M   AQ  I+QQE+
+Sbjct: 1  MPEVKSVFREVLPKQGQLSMEDVPTMVLCKPKLLPLKSVTLEKLEKMQMEAQEAIKQQEV 60
+
+Query: 83 AEKDQRQ 89
+          A K++ Q
+Sbjct: 61 ALKERVQ 67
+
+
+>tr|A0A3Q1BM13|A0A3Q1BM13_AMPOC BBSome interacting protein 1 OS=Amphiprion ocellaris OX=80972
+          PE=4 SV=1
+          Length = 67
+
+ Score = 51.2 bits (121), Expect = 6e-06,   Method: Compositional matrix adjust.
+ Identities = 28/65 (43%), Positives = 35/65 (53%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVK +FREVLPKQG L +ED+ TMV                   M   AQ  ++QQE+
+Sbjct: 1  MPEVKPIFREVLPKQGQLSMEDVPTMVLCKPKLLPLKSVTLEKLEKMQMEAQEAVKQQEL 60
+
+Query: 83 AEKDQ 87
+          A K+Q
+Sbjct: 61 AAKEQ 65
+
+
+>tr|A0A1S3L550|A0A1S3L550_SALSA BBSome-interacting protein 1 OS=Salmo salar OX=8030
+          GN=LOC106564478 PE=4 SV=1
+          Length = 66
+
+ Score = 51.2 bits (121), Expect = 6e-06,   Method: Compositional matrix adjust.
+ Identities = 29/64 (45%), Positives = 35/64 (54%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKSMFREVLPKQG L +ED+ TMV                   M   AQ  I+QQ++
+Sbjct: 1  MPEVKSMFREVLPKQGQLSMEDVPTMVLCKPKLMPLKSVTLEKLEKMQLEAQEAIKQQDL 60
+
+Query: 83 AEKD 86
+          A K+
+Sbjct: 61 ALKE 64
+
+
+>tr|A0A674E4B7|A0A674E4B7_SALTR BBSome-interacting protein 1 OS=Salmo trutta OX=8032
+          GN=LOC115147385 PE=4 SV=1
+          Length = 66
+
+ Score = 51.2 bits (121), Expect = 6e-06,   Method: Compositional matrix adjust.
+ Identities = 29/64 (45%), Positives = 35/64 (54%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKSMFREVLPKQG L +ED+ TMV                   M   AQ  I+QQ++
+Sbjct: 1  MPEVKSMFREVLPKQGQLSMEDVPTMVLCKPKLMPLKSVTLEKLEKMQLEAQEAIKQQDL 60
+
+Query: 83 AEKD 86
+          A K+
+Sbjct: 61 ALKE 64
+
+
+>tr|Q4SDI7|Q4SDI7_TETNG Chromosome 18 SCAF14637, whole genome shotgun sequence
+          OS=Tetraodon nigroviridis OX=99883 GN=GSTENG00020017001
+          PE=4 SV=1
+          Length = 67
+
+ Score = 50.8 bits (120), Expect = 7e-06,   Method: Compositional matrix adjust.
+ Identities = 28/67 (41%), Positives = 36/67 (53%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVK + REVLPK+G L +ED+ TMV                   M   AQ  +RQQE+
+Sbjct: 1  MPEVKPVLREVLPKKGQLSIEDVPTMVLCKPKLLPLKSVTLEKLEKMQMEAQEAVRQQEL 60
+
+Query: 83 AEKDQRQ 89
+          A K+Q+Q
+Sbjct: 61 AMKEQQQ 67
+
+
+>tr|A0A3P8S6X4|A0A3P8S6X4_AMPPE Uncharacterized protein OS=Amphiprion percula OX=161767 PE=4 SV=1
+          Length = 67
+
+ Score = 50.4 bits (119), Expect = 1e-05,   Method: Compositional matrix adjust.
+ Identities = 28/65 (43%), Positives = 35/65 (53%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVK +FREVLPKQG L +ED+ TMV                   M   AQ  ++QQE+
+Sbjct: 1  MPEVKPIFREVLPKQGQLSMEDVPTMVLCKPKLLPLKSVTLEKLEKMQMEAQEAVKQQEL 60
+
+Query: 83 AEKDQ 87
+          A K+Q
+Sbjct: 61 AVKEQ 65
+
+
+>tr|A0A5J5DNY7|A0A5J5DNY7_9PERO Uncharacterized protein OS=Etheostoma spectabile OX=54343
+           GN=FQN60_012200 PE=4 SV=1
+          Length = 168
+
+ Score = 51.6 bits (122), Expect = 1e-05,   Method: Compositional matrix adjust.
+ Identities = 32/90 (35%), Positives = 47/90 (52%), Gaps = 1/90 (1%)
+
+Query: 1   MLKAAAKRPELSGKNTISNNSD-MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXX 59
+           +L+ A +  +   +  + ++ D M EVKS+FREVLPK G L +ED+ TMV          
+Sbjct: 79  LLQPAKREADTQREQPVKHSEDTMPEVKSIFREVLPKTGQLSMEDVPTMVLCKPKLLPLK 138
+
+Query: 60  XXXXXXXXXMHQAAQNTIRQQEMAEKDQRQ 89
+                    M   AQ  ++QQE+A K+Q Q
+Sbjct: 139 SVTLEKLEKMQMEAQEAVKQQELAMKEQLQ 168
+
+
+>tr|A0A3Q3BNP5|A0A3Q3BNP5_KRYMA BBSome interacting protein 1 OS=Kryptolebias marmoratus OX=37003
+          PE=4 SV=1
+          Length = 71
+
+ Score = 50.4 bits (119), Expect = 1e-05,   Method: Compositional matrix adjust.
+ Identities = 29/67 (43%), Positives = 35/67 (52%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKS+ REVLPKQG L +ED+ TMV                   M   AQ  ++QQEM
+Sbjct: 1  MPEVKSILREVLPKQGQLSMEDVPTMVLCKPKLLPLKSVTLEKLEKMQMEAQEAVKQQEM 60
+
+Query: 83 AEKDQRQ 89
+          A K+  Q
+Sbjct: 61 AMKEHEQ 67
+
+
+>tr|A0A287CTZ0|A0A287CTZ0_ICTTR BBSome interacting protein 1 OS=Ictidomys tridecemlineatus
+          OX=43179 GN=Bbip1 PE=4 SV=1
+          Length = 53
+
+ Score = 50.1 bits (118), Expect = 1e-05,   Method: Compositional matrix adjust.
+ Identities = 27/53 (50%), Positives = 30/53 (56%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQN 75
+          MAE+KSMFREVLPKQG L VED+ TMV                   M QAAQ+
+Sbjct: 1  MAELKSMFREVLPKQGQLSVEDVTTMVLCKPKLLPLKSLTLEKLEKMQQAAQD 53
+
+
+>tr|G1KRM1|G1KRM1_ANOCA Uncharacterized protein OS=Anolis carolinensis OX=28377 GN=bbip1
+          PE=4 SV=1
+          Length = 62
+
+ Score = 50.4 bits (119), Expect = 1e-05,   Method: Compositional matrix adjust.
+ Identities = 27/61 (44%), Positives = 33/61 (54%)
+
+Query: 30 FREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEMAEKDQRQ 89
+          FREVLPKQG L VED+ TMV                   M + AQ TIRQQE+A++  + 
+Sbjct: 1  FREVLPKQGMLAVEDVTTMVLCKPKLLPLKSVTLEKLEKMQREAQETIRQQELAQQSSKS 60
+
+Query: 90 I 90
+          I
+Sbjct: 61 I 61
+
+
+>tr|A0A1S3Q8P3|A0A1S3Q8P3_SALSA BBSome-interacting protein 1-like OS=Salmo salar OX=8030
+          GN=LOC106590145 PE=4 SV=1
+          Length = 66
+
+ Score = 50.1 bits (118), Expect = 1e-05,   Method: Compositional matrix adjust.
+ Identities = 28/61 (45%), Positives = 33/61 (54%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKSMFREVLPKQG L +ED+ TMV                   M   AQ  I+QQ++
+Sbjct: 1  MPEVKSMFREVLPKQGQLSMEDVPTMVLCKPKLMPLKSVTLEKLEKMQLEAQEAIKQQDL 60
+
+Query: 83 A 83
+          A
+Sbjct: 61 A 61
+
+
+>tr|A0A6J0SNX3|A0A6J0SNX3_9SAUR BBSome-interacting protein 1 isoform X2 OS=Pogona vitticeps
+           OX=103695 GN=BBIP1 PE=4 SV=1
+          Length = 118
+
+ Score = 50.8 bits (120), Expect = 2e-05,   Method: Compositional matrix adjust.
+ Identities = 33/87 (37%), Positives = 46/87 (52%), Gaps = 3/87 (3%)
+
+Query: 6   AKRPELSGKNTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXX 65
+           A+R  + G +  S +  M+E K  FREVLPKQG L VED+ TMV                
+Sbjct: 32  AERERIVGSDRSSASRRMSESK--FREVLPKQGMLAVEDVTTMVLCKPKLLPLKSVTLEK 89
+
+Query: 66  XXXMHQAAQNTIRQQE-MAEKDQRQIT 91
+              M + AQ TIRQQE +A++  + ++
+Sbjct: 90  LEKMQREAQETIRQQEQLAQESSKSVS 116
+
+
+>tr|A0A3P9MT23|A0A3P9MT23_POERE BBSome interacting protein 1 OS=Poecilia reticulata OX=8081 PE=4
+          SV=1
+          Length = 62
+
+ Score = 50.1 bits (118), Expect = 2e-05,   Method: Compositional matrix adjust.
+ Identities = 26/61 (42%), Positives = 33/61 (54%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKS+ REVLPKQG L++ED+ TMV                   M   AQ  ++QQE+
+Sbjct: 1  MPEVKSILREVLPKQGQLYMEDVPTMVLCKPKLLPLKSVTLEKLEKMQMEAQEAVKQQEL 60
+
+Query: 83 A 83
+          A
+Sbjct: 61 A 61
+
+
+>tr|A0A665WRH0|A0A665WRH0_ECHNA BBSome interacting protein 1 OS=Echeneis naucrates OX=173247 PE=4
+          SV=1
+          Length = 92
+
+ Score = 50.1 bits (118), Expect = 2e-05,   Method: Compositional matrix adjust.
+ Identities = 28/67 (41%), Positives = 36/67 (53%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKS+ REVLPKQG + +ED+ TMV                   M   AQ  ++QQE+
+Sbjct: 26 MPEVKSIIREVLPKQGQVSMEDVPTMVLCKPKLLPLKSVTLEKLEKMQMEAQEAVKQQEL 85
+
+Query: 83 AEKDQRQ 89
+          A K+Q Q
+Sbjct: 86 AMKEQSQ 92
+
+
+>tr|A0A674CIQ2|A0A674CIQ2_SALTR BBSome-interacting protein 1-like OS=Salmo trutta OX=8032
+          GN=LOC115178261 PE=4 SV=1
+          Length = 66
+
+ Score = 49.7 bits (117), Expect = 2e-05,   Method: Compositional matrix adjust.
+ Identities = 29/64 (45%), Positives = 34/64 (53%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKSMFREVLPKQG L +ED+ TMV                   M   AQ  I+QQ +
+Sbjct: 1  MPEVKSMFREVLPKQGQLSMEDVPTMVLCKPKLMPLKSVTLEKLEKMQLEAQEAIKQQGL 60
+
+Query: 83 AEKD 86
+          A K+
+Sbjct: 61 ALKE 64
+
+
+>tr|A0A087XH33|A0A087XH33_POEFO BBSome interacting protein 1 OS=Poecilia formosa OX=48698 PE=4
+          SV=2
+          Length = 76
+
+ Score = 50.1 bits (118), Expect = 2e-05,   Method: Compositional matrix adjust.
+ Identities = 30/73 (41%), Positives = 38/73 (52%), Gaps = 3/73 (4%)
+
+Query: 23 MAEVKSMFREVLPKQ---GPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQ 79
+          M EVKS+ REVLPKQ   G L++ED+ TMV                   M   AQ  ++Q
+Sbjct: 1  MPEVKSILREVLPKQASTGQLYMEDVPTMVLCKPKLLPLKSVTLEKLEKMQMEAQEAVKQ 60
+
+Query: 80 QEMAEKDQRQITH 92
+          QE+A K+Q   TH
+Sbjct: 61 QELAMKEQVPRTH 73
+
+
+>tr|A0A7J6BGJ4|A0A7J6BGJ4_AMEME Uncharacterized protein OS=Ameiurus melas OX=219545
+          GN=AMELA_G00001300 PE=4 SV=1
+          Length = 67
+
+ Score = 49.7 bits (117), Expect = 2e-05,   Method: Compositional matrix adjust.
+ Identities = 28/67 (41%), Positives = 33/67 (49%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKS+FREVLPKQG L  ED+  +V                   M Q AQ  IRQQE 
+Sbjct: 1  MPEVKSVFREVLPKQGQLSAEDVPALVLCKPKLLPLKSVTLEKLEKMQQEAQELIRQQEA 60
+
+Query: 83 AEKDQRQ 89
+            ++  Q
+Sbjct: 61 GSREHTQ 67
+
+
+>tr|A0A4W4FA73|A0A4W4FA73_ELEEL Uncharacterized protein OS=Electrophorus electricus OX=8005 PE=4
+          SV=1
+          Length = 67
+
+ Score = 49.3 bits (116), Expect = 4e-05,   Method: Compositional matrix adjust.
+ Identities = 27/65 (41%), Positives = 36/65 (55%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVK++F+EVLPKQG L +ED+ TMV                   M Q AQ  I+QQE 
+Sbjct: 1  MPEVKTVFKEVLPKQGQLSMEDVPTMVLCKPRLLPLKSVTLEKLEKMQQEAQRVIKQQET 60
+
+Query: 83 AEKDQ 87
+          A++ +
+Sbjct: 61 AQQQE 65
+
+
+>tr|A0A1U7RRR7|A0A1U7RRR7_ALLSI BBSome-interacting protein 1 OS=Alligator sinensis OX=38654
+          GN=BBIP1 PE=4 SV=1
+          Length = 68
+
+ Score = 49.3 bits (116), Expect = 4e-05,   Method: Compositional matrix adjust.
+ Identities = 26/67 (38%), Positives = 38/67 (56%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M E +S  RE+LPK+G L VED+ T+V                   M +AAQ T+R+QEM
+Sbjct: 1  MPEARSALREMLPKRGQLSVEDMATLVLCKPKLLPLKSVTLEKLEKMQRAAQETVRRQEM 60
+
+Query: 83 AEKDQRQ 89
+          A++++ Q
+Sbjct: 61 AQREELQ 67
+
+
+>tr|A0A3P9JLB3|A0A3P9JLB3_ORYLA Uncharacterized protein OS=Oryzias latipes OX=8090 PE=4 SV=1
+          Length = 96
+
+ Score = 49.3 bits (116), Expect = 5e-05,   Method: Compositional matrix adjust.
+ Identities = 29/67 (43%), Positives = 36/67 (53%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKS+FREVLPKQG L +ED+ TMV                   M   AQ  I+QQE+
+Sbjct: 30 MPEVKSVFREVLPKQGQLSMEDVPTMVLCKPKLLPLKSVTLEKLEKMQMEAQEAIKQQEV 89
+
+Query: 83 AEKDQRQ 89
+            K++ Q
+Sbjct: 90 VLKERVQ 96
+
+
+>tr|A0A553R496|A0A553R496_9TELE Uncharacterized protein OS=Danionella translucida OX=623744
+          GN=DNTS_001424 PE=4 SV=1
+          Length = 69
+
+ Score = 48.9 bits (115), Expect = 5e-05,   Method: Compositional matrix adjust.
+ Identities = 27/59 (45%), Positives = 32/59 (54%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQE 81
+          M EVKSMFREVLPKQG L +ED+ T+V                   M + AQ  I+QQE
+Sbjct: 1  MPEVKSMFREVLPKQGQLSMEDVPTLVLCKPKLLPLKSVTLEKLEKMQRDAQELIKQQE 59
+
+
+>tr|A0A6J0SKY9|A0A6J0SKY9_9SAUR BBSome-interacting protein 1 isoform X1 OS=Pogona vitticeps
+           OX=103695 GN=BBIP1 PE=4 SV=1
+          Length = 157
+
+ Score = 47.8 bits (112), Expect = 2e-04,   Method: Compositional matrix adjust.
+ Identities = 31/80 (38%), Positives = 42/80 (52%), Gaps = 3/80 (3%)
+
+Query: 13  GKNTISNNSDMAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQA 72
+           G +  S +  M+E K  FREVLPKQG L VED+ TMV                   M + 
+Sbjct: 78  GSDRSSASRRMSESK--FREVLPKQGMLAVEDVTTMVLCKPKLLPLKSVTLEKLEKMQRE 135
+
+Query: 73  AQNTIRQQE-MAEKDQRQIT 91
+           AQ TIRQQE +A++  + ++
+Sbjct: 136 AQETIRQQEQLAQESSKSVS 155
+
+
+>tr|A0A6J0SGM8|A0A6J0SGM8_9SAUR BBSome-interacting protein 1 isoform X3 OS=Pogona vitticeps
+          OX=103695 GN=BBIP1 PE=4 SV=1
+          Length = 70
+
+ Score = 46.6 bits (109), Expect = 3e-04,   Method: Compositional matrix adjust.
+ Identities = 26/54 (48%), Positives = 28/54 (51%)
+
+Query: 28 SMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQE 81
+          S FREVLPKQG L VED+ TMV                   M + AQ TIRQQE
+Sbjct: 4  SKFREVLPKQGMLAVEDVTTMVLCKPKLLPLKSVTLEKLEKMQREAQETIRQQE 57
+
+
+>tr|A0A452HIB7|A0A452HIB7_9SAUR Uncharacterized protein OS=Gopherus agassizii OX=38772 PE=4 SV=1
+          Length = 72
+
+ Score = 46.2 bits (108), Expect = 4e-04,   Method: Compositional matrix adjust.
+ Identities = 26/55 (47%), Positives = 29/55 (52%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTI 77
+          MAE KS+FREVLPKQG L VED+  MV                   M +AAQ TI
+Sbjct: 1  MAEGKSLFREVLPKQGQLSVEDVAIMVLCKPKLLPLKSVTLEKLEKMQRAAQETI 55
+
+
+>tr|A0A3B4XI80|A0A3B4XI80_SERLL BBSome interacting protein 1 OS=Seriola lalandi dorsalis
+          OX=1841481 PE=4 SV=1
+          Length = 64
+
+ Score = 45.8 bits (107), Expect = 6e-04,   Method: Compositional matrix adjust.
+ Identities = 28/65 (43%), Positives = 35/65 (53%), Gaps = 1/65 (1%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKS+FREVLPKQ  L +ED+ TMV                   M   AQ  ++QQE+
+Sbjct: 1  MPEVKSIFREVLPKQQ-LSMEDVPTMVLCKPKLLPLKSVTLEKLEKMQMEAQEAVKQQEL 59
+
+Query: 83 AEKDQ 87
+          A K+Q
+Sbjct: 60 AMKEQ 64
+
+
+>tr|A0A3B4F018|A0A3B4F018_9CICH BBSome interacting protein 1 OS=Pundamilia nyererei OX=303518
+          PE=4 SV=1
+          Length = 64
+
+ Score = 45.8 bits (107), Expect = 6e-04,   Method: Compositional matrix adjust.
+ Identities = 28/65 (43%), Positives = 35/65 (53%), Gaps = 1/65 (1%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKS+FREVLPKQ  L +ED+ TMV                   M   AQ  ++QQE+
+Sbjct: 1  MPEVKSIFREVLPKQQ-LSMEDVPTMVLCKPKLLPLKSVTLEKLEKMQMEAQEAVKQQEL 59
+
+Query: 83 AEKDQ 87
+          A K+Q
+Sbjct: 60 AMKEQ 64
+
+
+>tr|A0A3Q3C6B1|A0A3Q3C6B1_HAPBU BBSome interacting protein 1 OS=Haplochromis burtoni OX=8153 PE=4
+          SV=1
+          Length = 64
+
+ Score = 45.8 bits (107), Expect = 6e-04,   Method: Compositional matrix adjust.
+ Identities = 28/65 (43%), Positives = 35/65 (53%), Gaps = 1/65 (1%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKS+FREVLPKQ  L +ED+ TMV                   M   AQ  ++QQE+
+Sbjct: 1  MPEVKSIFREVLPKQQ-LSMEDVPTMVLCKPKLLPLKSVTLEKLEKMQMEAQEAVKQQEL 59
+
+Query: 83 AEKDQ 87
+          A K+Q
+Sbjct: 60 AMKEQ 64
+
+
+>tr|A0A3Q4M861|A0A3Q4M861_NEOBR BBSome interacting protein 1 OS=Neolamprologus brichardi OX=32507
+          PE=4 SV=1
+          Length = 64
+
+ Score = 45.8 bits (107), Expect = 6e-04,   Method: Compositional matrix adjust.
+ Identities = 28/65 (43%), Positives = 35/65 (53%), Gaps = 1/65 (1%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M EVKS+FREVLPKQ  L +ED+ TMV                   M   AQ  ++QQE+
+Sbjct: 1  MPEVKSIFREVLPKQQ-LSMEDVPTMVLCKPKLLPLKSVTLEKLEKMQMEAQEAVKQQEL 59
+
+Query: 83 AEKDQ 87
+          A K+Q
+Sbjct: 60 AMKEQ 64
+
+
+>tr|A0A3P8RAE7|A0A3P8RAE7_ASTCA BBSome interacting protein 1 OS=Astatotilapia calliptera OX=8154
+          PE=4 SV=1
+          Length = 64
+
+ Score = 45.1 bits (105), Expect = 8e-04,   Method: Compositional matrix adjust.
+ Identities = 27/65 (41%), Positives = 35/65 (53%), Gaps = 1/65 (1%)
+
+Query: 23 MAEVKSMFREVLPKQGPLFVEDIMTMVXXXXXXXXXXXXXXXXXXXMHQAAQNTIRQQEM 82
+          M E+KS+FREVLPKQ  L +ED+ TMV                   M   AQ  ++QQE+
+Sbjct: 1  MPEIKSIFREVLPKQQ-LSMEDVPTMVLCKPKLLPLKSVTLEKLEKMQMEAQEAVKQQEL 59
+
+Query: 83 AEKDQ 87
+          A K+Q
+Sbjct: 60 AMKEQ 64
+
+
+  Database: UNIPROT 
+    Posted date:  Oct 14, 2021 12:05 PM
+  Number of letters in database: 75,474,994,830
+  Number of sequences in database:  219,740,215
+  
+Lambda     K      H
+   0.314    0.124    0.327 
+
+Gapped
+Lambda     K      H
+   0.267   0.0410    0.140 
+
+
+Matrix: BLOSUM62
+Gap Penalties: Existence: 11, Extension: 1
+Number of Sequences: 219740215
+Number of Hits to DB: 8,109,334,385
+Number of extensions: 172940630
+Number of successful extensions: 392661
+Number of sequences better than 1.0e-03: 245
+Number of HSP's gapped: 392434
+Number of HSP's successfully gapped: 245
+Length of query: 92
+Length of database: 75,474,994,830
+Length adjustment: 62
+Effective length of query: 30
+Effective length of database: 61,851,101,500
+Effective search space: 1855533045000
+Effective search space used: 1855533045000
+Neighboring words threshold: 11
+Window for multiple hits: 40
+X1: 16 ( 7.3 bits)
+X2: 38 (14.6 bits)
+X3: 64 (24.7 bits)
+S1: 41 (21.6 bits)
+S2: 104 (44.7 bits)

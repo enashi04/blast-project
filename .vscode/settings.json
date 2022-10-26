@@ -8,7 +8,14 @@
     "macros.h": "c",
     "types.h": "c",
     "ctype.h": "c",
-    "stdbool.h": "c"
+    "stdbool.h": "c",
+    "stdlib.h": "c",
+    "expat.h": "c",
+    "stdio.h": "c",
+    "methods.h": "c",
+    "prototypes.h": "c",
+    "xmlmemory.h": "c",
+    "string_view": "c"
   },
   "C_Cpp_Runner.cCompilerPath": "/mnt/c/usr/bin/gcc",
   "C_Cpp_Runner.cppCompilerPath": "g++",

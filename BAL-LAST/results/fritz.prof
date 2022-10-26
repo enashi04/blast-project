@@ -1,0 +1,1848 @@
+BALLAST profile ../results/fritz.prof
+
+The following sequences from BLAST results were used to build this profile :
+--------------------------------------------------------------------------------
+sp|O95876|FRITZ_HUMAN WD repeat-containing and planar cell polarity effector protein        0.0     
+tr|A0A2R9APJ6|A0A2R9APJ6_PANPA WD repeat containing planar cell polarity effector OS=Pan p  0.0     
+tr|H2R2S2|H2R2S2_PANTR WD repeat containing planar cell polarity effector OS=Pan            0.0     
+tr|A0A2J8N3R6|A0A2J8N3R6_PANTR WDPCP isoform 2 OS=Pan troglodytes OX=9598 GN=CK820_G001520  0.0     
+tr|G3R8E0|G3R8E0_GORGO WD repeat containing planar cell polarity effector OS=Gorilla        0.0     
+tr|A0A2J8XCA6|A0A2J8XCA6_PONAB WDPCP isoform 4 OS=Pongo abelii OX=9601 GN=CR201_G0003227 P  0.0     
+tr|H2P625|H2P625_PONAB WD repeat containing planar cell polarity effector OS=Pongo abelii   0.0     
+tr|G1RFG0|G1RFG0_NOMLE Uncharacterized protein OS=Nomascus leucogenys OX=61853 GN=WDPCP     0.0     
+tr|G7PMB1|G7PMB1_MACFA Uncharacterized protein OS=Macaca fascicularis OX=9541 GN=EGM_04847  0.0     
+tr|A0A2R9APK0|A0A2R9APK0_PANPA WD repeat containing planar cell polarity effector OS=Pan p  0.0     
+tr|A0A2I3TN14|A0A2I3TN14_PANTR WD repeat containing planar cell polarity effector OS=Pan    0.0     
+tr|A0A2K6A065|A0A2K6A065_MANLE WD repeat containing planar cell polarity effector OS=Mandr  0.0     
+tr|A0A2K5QP48|A0A2K5QP48_CEBIM WD repeat containing planar cell polarity effector OS=Cebus  0.0     
+tr|A0A2J8XCD7|A0A2J8XCD7_PONAB WDPCP isoform 10 OS=Pongo abelii OX=9601 GN=CR201_G0003227   0.0     
+tr|A0A2K6SLD8|A0A2K6SLD8_SAIBB WD repeat containing planar cell polarity effector OS=Saimi  0.0     
+tr|A0A2K6BP03|A0A2K6BP03_MACNE WD repeat containing planar cell polarity effector OS=Macac  0.0     
+tr|A0A0D9RQB1|A0A0D9RQB1_CHLSB Uncharacterized protein OS=Chlorocebus sabaeus OX=60711 GN=  0.0     
+tr|U3BDI3|U3BDI3_CALJA WD repeat-containing and planar cell polarity effector protein       0.0     
+tr|U3C6W8|U3C6W8_CALJA WD repeat-containing and planar cell polarity effector protein       0.0     
+tr|A0A2K5EH71|A0A2K5EH71_AOTNA WD repeat containing planar cell polarity effector OS=Aotus  0.0     
+tr|A0A2I3MVE3|A0A2I3MVE3_PAPAN WD repeat containing planar cell polarity effector OS=Papio  0.0     
+tr|A0A2K5V8D7|A0A2K5V8D7_MACFA WD repeat containing planar cell polarity effector OS=Macac  0.0     
+tr|A0A2K6BNT5|A0A2K6BNT5_MACNE WD repeat containing planar cell polarity effector OS=Macac  0.0     
+tr|A0A6J3J0I8|A0A6J3J0I8_SAPAP WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A1D5Q8Z3|A0A1D5Q8Z3_MACMU WD repeat containing planar cell polarity effector OS=Macac  0.0     
+tr|G7NA61|G7NA61_MACMU Uncharacterized protein (Fragment) OS=Macaca mulatta OX=9544         0.0     
+tr|A0A2K5QP53|A0A2K5QP53_CEBIM WD repeat containing planar cell polarity effector OS=Cebus  0.0     
+tr|A0A6J3IZ75|A0A6J3IZ75_SAPAP WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A2I2ZPP3|A0A2I2ZPP3_GORGO WD repeat containing planar cell polarity effector OS=Goril  0.0     
+tr|A0A6J3IZP9|A0A6J3IZP9_SAPAP WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A2K5NW00|A0A2K5NW00_CERAT WD repeat containing planar cell polarity effector OS=Cerco  0.0     
+tr|A0A2K5NVP0|A0A2K5NVP0_CERAT WD repeat containing planar cell polarity effector OS=Cerco  0.0     
+tr|A0A2K6SLF6|A0A2K6SLF6_SAIBB WD repeat containing planar cell polarity effector OS=Saimi  0.0     
+tr|F6W3E7|F6W3E7_CALJA WD repeat containing planar cell polarity effector OS=Callithrix     0.0     
+tr|A0A6J3IZ92|A0A6J3IZ92_SAPAP WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A3Q7VC98|A0A3Q7VC98_URSAR WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A384CTK0|A0A384CTK0_URSMA LOW QUALITY PROTEIN: WD repeat-containing and planar cell p  0.0     
+tr|A0A3Q7VRJ0|A0A3Q7VRJ0_URSAR WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A2K6FXB4|A0A2K6FXB4_PROCO WD repeat containing planar cell polarity effector OS=Propi  0.0     
+tr|A0A6J2FCQ8|A0A6J2FCQ8_ZALCA WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7J7V9X1|A0A7J7V9X1_RHIFE WD repeat containing planar cell polarity effector OS=Rhino  0.0     
+tr|A0A2I3N8G1|A0A2I3N8G1_PAPAN WD repeat containing planar cell polarity effector OS=Papio  0.0     
+tr|A0A3Q7NSZ4|A0A3Q7NSZ4_CALUR WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A3Q2H529|A0A3Q2H529_HORSE WD repeat containing planar cell polarity effector OS=Equus  0.0     
+tr|A0A7J8FNZ0|A0A7J8FNZ0_ROUAE WD repeat containing planar cell polarity effector OS=Rouse  0.0     
+tr|A0A2K5NW06|A0A2K5NW06_CERAT WD repeat containing planar cell polarity effector OS=Cerco  0.0     
+tr|A0A6P4UVI8|A0A6P4UVI8_PANPR WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A3Q7RTW0|A0A3Q7RTW0_VULVU WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|F1Q1T8|F1Q1T8_CANLF WD repeat containing planar cell polarity effector OS=Canis lupus    0.0     
+tr|A0A485NNW4|A0A485NNW4_LYNPA Wd repeat-containing and planar OS=Lynx pardinus OX=191816   0.0     
+tr|A0A6I9ZQD9|A0A6I9ZQD9_ACIJB WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7J8FNR6|A0A7J8FNR6_ROUAE WD repeat containing planar cell polarity effector OS=Rouse  0.0     
+tr|A0A2Y9G0D0|A0A2Y9G0D0_TRIMA WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A2Y9HSW7|A0A2Y9HSW7_NEOSC WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6J2FBJ6|A0A6J2FBJ6_ZALCA WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|H0XTE1|H0XTE1_OTOGA Uncharacterized protein OS=Otolemur garnettii OX=30611 GN=WDPCP      0.0     
+tr|A0A2Y9JGR3|A0A2Y9JGR3_ENHLU WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7F8QT93|A0A7F8QT93_LEPWE WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A2U3ZD35|A0A2U3ZD35_ODORO WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A250Y4J2|A0A250Y4J2_CASCN WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|U6DMX5|U6DMX5_NEOVI WD repeat-containing and planar cell polarity effector protein       0.0     
+tr|A0A7J8FP58|A0A7J8FP58_ROUAE WD repeat containing planar cell polarity effector OS=Rouse  0.0     
+tr|A0A7J8E4S0|A0A7J8E4S0_MOLMO WD repeat containing planar cell polarity effector OS=Molos  0.0     
+tr|A0A7J8FNN0|A0A7J8FNN0_ROUAE WD repeat containing planar cell polarity effector OS=Rouse  0.0     
+tr|A0A7F8QSA5|A0A7F8QSA5_LEPWE WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6P6BY22|A0A6P6BY22_PTEVA WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A3Q2I5Y0|A0A3Q2I5Y0_HORSE WD repeat containing planar cell polarity effector OS=Equus  0.0     
+tr|A0A6J2FEP1|A0A6J2FEP1_ZALCA WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7J8E5I1|A0A7J8E5I1_MOLMO WD repeat containing planar cell polarity effector OS=Molos  0.0     
+tr|A0A6P6BY19|A0A6P6BY19_PTEVA WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6P6IK06|A0A6P6IK06_PUMCO WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A3Q2KRK8|A0A3Q2KRK8_HORSE WD repeat containing planar cell polarity effector OS=Equus  0.0     
+tr|M3Y3G7|M3Y3G7_MUSPF WD repeat containing planar cell polarity effector OS=Mustela        0.0     
+tr|L5KTW4|L5KTW4_PTEAL Uncharacterized protein (Fragment) OS=Pteropus alecto OX=9402        0.0     
+tr|A0A5F4CW40|A0A5F4CW40_CANLF WD repeat containing planar cell polarity effector OS=Canis  0.0     
+tr|A0A485NRS7|A0A485NRS7_LYNPA Wd repeat-containing and planar OS=Lynx pardinus OX=191816   0.0     
+tr|A0A2K5IHZ5|A0A2K5IHZ5_COLAP WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6J2FAZ5|A0A6J2FAZ5_ZALCA WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A3Q7RSL5|A0A3Q7RSL5_VULVU WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A5F4DE42|A0A5F4DE42_CANLF WD repeat containing planar cell polarity effector OS=Canis  0.0     
+tr|A0A6I9JJY7|A0A6I9JJY7_CHRAS WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6G1AWH9|A0A6G1AWH9_CROCR FRITZ protein (Fragment) OS=Crocuta crocuta OX=9678 GN=Wdpc  0.0     
+tr|A0A6P6BXY7|A0A6P6BXY7_PTEVA WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7J7U712|A0A7J7U712_MYOMY WD repeat containing planar cell polarity effector OS=Myoti  0.0     
+tr|A0A2K6SLF7|A0A2K6SLF7_SAIBB WD repeat containing planar cell polarity effector OS=Saimi  0.0     
+tr|A0A7J8FQB9|A0A7J8FQB9_ROUAE WD repeat containing planar cell polarity effector OS=Rouse  0.0     
+tr|A0A452CMF0|A0A452CMF0_BALAS WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|G1LFS2|G1LFS2_AILME WD repeat containing planar cell polarity effector OS=Ailuropoda     0.0     
+tr|A0A2I2YGR6|A0A2I2YGR6_GORGO WD repeat containing planar cell polarity effector OS=Goril  0.0     
+tr|A0A7J7VWR4|A0A7J7VWR4_PIPKU WD repeat containing planar cell polarity effector OS=Pipis  0.0     
+tr|A0A2I3RH27|A0A2I3RH27_PANTR WD repeat containing planar cell polarity effector OS=Pan    0.0     
+tr|M3W6A3|M3W6A3_FELCA WD repeat containing planar cell polarity effector OS=Felis catus    0.0     
+tr|F7CR52|F7CR52_HORSE WD repeat containing planar cell polarity effector OS=Equus          0.0     
+tr|A0A2J8N3S1|A0A2J8N3S1_PANTR WDPCP isoform 7 OS=Pan troglodytes OX=9598 GN=CK820_G001520  0.0     
+tr|A0A5F4CBX5|A0A5F4CBX5_CANLF WD repeat containing planar cell polarity effector OS=Canis  0.0     
+tr|A0A2K5QP51|A0A2K5QP51_CEBIM WD repeat containing planar cell polarity effector OS=Cebus  0.0     
+tr|A0A1S3FNP3|A0A1S3FNP3_DIPOR WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A452CML1|A0A452CML1_BALAS WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A667G146|A0A667G146_LYNCA WD repeat containing planar cell polarity effector OS=Lynx   0.0     
+tr|A0A7F8QUP0|A0A7F8QUP0_LEPWE WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7F8QSC7|A0A7F8QSC7_LEPWE WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A452V5Y7|A0A452V5Y7_URSMA WD repeat containing planar cell polarity effector OS=Ursus  0.0     
+tr|A0A6J3IZ80|A0A6J3IZ80_SAPAP WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A452RDL7|A0A452RDL7_URSAM WD repeat containing planar cell polarity effector OS=Ursus  0.0     
+tr|I3MMH3|I3MMH3_ICTTR WD repeat containing planar cell polarity effector OS=Ictidomys      0.0     
+tr|A0A2J8XC93|A0A2J8XC93_PONAB WDPCP isoform 6 OS=Pongo abelii OX=9601 GN=CR201_G0003227 P  0.0     
+tr|A0A2R9AWE9|A0A2R9AWE9_PANPA WD repeat containing planar cell polarity effector OS=Pan p  0.0     
+tr|A0A2I3SGG0|A0A2I3SGG0_PANTR WD repeat containing planar cell polarity effector OS=Pan    0.0     
+tr|A0A6J3ACQ8|A0A6J3ACQ8_VICPA WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A2J8N3S3|A0A2J8N3S3_PANTR WDPCP isoform 6 OS=Pan troglodytes OX=9598 GN=CK820_G001520  0.0     
+tr|A0A7J7VWI7|A0A7J7VWI7_PIPKU WD repeat containing planar cell polarity effector OS=Pipis  0.0     
+tr|A0A6J3J0J3|A0A6J3J0J3_SAPAP WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A2I2Z3R6|A0A2I2Z3R6_GORGO WD repeat containing planar cell polarity effector OS=Goril  0.0     
+tr|A0A2K6RUD4|A0A2K6RUD4_RHIRO WD repeat containing planar cell polarity effector OS=Rhino  0.0     
+tr|A0A2K5V8D2|A0A2K5V8D2_MACFA WD repeat containing planar cell polarity effector OS=Macac  0.0     
+tr|F6XYF5|F6XYF5_MACMU WD repeat containing planar cell polarity effector OS=Macaca         0.0     
+tr|A0A2K6BP37|A0A2K6BP37_MACNE WD repeat containing planar cell polarity effector OS=Macac  0.0     
+tr|S7Q6Z2|S7Q6Z2_MYOBR WD repeat-containing and planar cell polarity effector protein       0.0     
+tr|A0A096MVJ7|A0A096MVJ7_PAPAN WD repeat containing planar cell polarity effector OS=Papio  0.0     
+tr|A0A2I3LFN2|A0A2I3LFN2_PAPAN WD repeat containing planar cell polarity effector OS=Papio  0.0     
+tr|A0A2J8XCG2|A0A2J8XCG2_PONAB WDPCP isoform 14 OS=Pongo abelii OX=9601 GN=CR201_G0003227   0.0     
+tr|A0A6J2LTF8|A0A6J2LTF8_9CHIR WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A2I3HZI4|A0A2I3HZI4_NOMLE Uncharacterized protein OS=Nomascus leucogenys OX=61853 GN=  0.0     
+tr|A0A6J0D204|A0A6J0D204_PERMB WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7J7U6X7|A0A7J7U6X7_MYOMY WD repeat containing planar cell polarity effector OS=Myoti  0.0     
+tr|A0A6J0D3A8|A0A6J0D3A8_PERMB WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A1S3ARJ6|A0A1S3ARJ6_ERIEU WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7J7U785|A0A7J7U785_MYOMY WD repeat containing planar cell polarity effector OS=Myoti  0.0     
+tr|A0A7J7V9S5|A0A7J7V9S5_RHIFE WD repeat containing planar cell polarity effector OS=Rhino  0.0     
+tr|A0A7F8KE99|A0A7F8KE99_DELLE WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A340XY29|A0A340XY29_LIPVE WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6J3PX78|A0A6J3PX78_TURTR WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|E9PFG9|E9PFG9_HUMAN WD repeat-containing and planar cell polarity effector protein       0.0     
+tr|A0A1U8BPD7|A0A1U8BPD7_MESAU WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|B3KMT8|B3KMT8_HUMAN cDNA FLJ12585 fis, clone NT2RM4001191, highly similar to Homo        0.0     
+tr|A0A6P6BY49|A0A6P6BY49_PTEVA WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7J8FP82|A0A7J8FP82_ROUAE WD repeat containing planar cell polarity effector OS=Rouse  0.0     
+tr|A0A2J8N3R7|A0A2J8N3R7_PANTR WDPCP isoform 1 OS=Pan troglodytes OX=9598 GN=CK820_G001520  0.0     
+tr|A0A6P6BXZ1|A0A6P6BXZ1_PTEVA WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A3Q7TX68|A0A3Q7TX68_URSAR WD repeat-containing and planar cell polarity effector prot  0.0     
+sp|B1WC10|FRITZ_RAT WD repeat-containing and planar cell polarity effector protein          0.0     
+tr|A0A6P7RWC5|A0A6P7RWC5_MUSCR WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A2K6MF16|A0A2K6MF16_RHIBE Uncharacterized protein OS=Rhinopithecus bieti OX=61621 GN=  0.0     
+tr|A0A2J8XC92|A0A2J8XC92_PONAB WDPCP isoform 12 OS=Pongo abelii OX=9601 GN=CR201_G0003227   0.0     
+tr|A0A2K5EH96|A0A2K5EH96_AOTNA WD repeat containing planar cell polarity effector OS=Aotus  0.0     
+tr|A0A455C947|A0A455C947_PHYMC WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A0G2JXB0|A0A0G2JXB0_RAT WD repeat-containing and planar cell polarity effector protei  0.0     
+tr|B1ATJ7|B1ATJ7_MOUSE Expressed sequence AV249152 OS=Mus musculus OX=10090 GN=Wdpcp PE=2   0.0     
+sp|Q8C456|FRITZ_MOUSE WD repeat-containing and planar cell polarity effector protein        0.0     
+tr|A0A2K5QP57|A0A2K5QP57_CEBIM WD repeat containing planar cell polarity effector OS=Cebus  0.0     
+tr|A0A6P5QKC7|A0A6P5QKC7_MUSCR WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6J3IZQ4|A0A6J3IZQ4_SAPAP WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6J3IZ96|A0A6J3IZ96_SAPAP WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6J3J0V5|A0A6J3J0V5_SAPAP WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6J2AFD4|A0A6J2AFD4_ACIJB WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6J2FFQ7|A0A6J2FFQ7_ZALCA WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A452CMI7|A0A452CMI7_BALAS WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A287AI40|A0A287AI40_PIG WD repeat-containing and planar cell polarity effector protei  0.0     
+tr|A0A2K6SLG1|A0A2K6SLG1_SAIBB WD repeat containing planar cell polarity effector OS=Saimi  0.0     
+tr|A0A6J0ADL7|A0A6J0ADL7_VICPA WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6J0AHG0|A0A6J0AHG0_VICPA WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A2R8M315|A0A2R8M315_CALJA WD repeat containing planar cell polarity effector OS=Calli  0.0     
+tr|A0A6J2FBK0|A0A6J2FBK0_ZALCA WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A341C1K8|A0A341C1K8_NEOAA WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7F8QSG5|A0A7F8QSG5_LEPWE WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6J0AE82|A0A6J0AE82_VICPA WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A452F7N6|A0A452F7N6_CAPHI WD repeat containing planar cell polarity effector OS=Capra  0.0     
+tr|A0A7F8QUP4|A0A7F8QUP4_LEPWE WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7F8QT98|A0A7F8QT98_LEPWE WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7F8QSB5|A0A7F8QSB5_LEPWE WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7N4PQH8|A0A7N4PQH8_SARHA WD repeat containing planar cell polarity effector OS=Sarco  0.0     
+tr|E1B8R8|E1B8R8_BOVIN WD repeat containing planar cell polarity effector OS=Bos taurus     0.0     
+tr|A0A6J0VWY2|A0A6J0VWY2_ODOVR WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6P5K834|A0A6P5K834_PHACI WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|F6PP46|F6PP46_MONDO Uncharacterized protein OS=Monodelphis domestica OX=13616 GN=WDPCP   0.0     
+tr|G5C8M2|G5C8M2_HETGA Uncharacterized protein (Fragment) OS=Heterocephalus glaber          0.0     
+tr|A0A4X2KYP9|A0A4X2KYP9_VOMUR WD repeat containing planar cell polarity effector OS=Vomba  0.0     
+tr|A0A6P3YGL6|A0A6P3YGL6_SHEEP WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A2K5NVQ1|A0A2K5NVQ1_CERAT WD repeat containing planar cell polarity effector OS=Cerco  0.0     
+tr|A0A7F8QSB0|A0A7F8QSB0_LEPWE WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6J0VYA1|A0A6J0VYA1_ODOVR WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6P3JAF2|A0A6P3JAF2_BISBI WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6P5CKE4|A0A6P5CKE4_BOSIN WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6J0VY96|A0A6J0VY96_ODOVR WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A4X1WCN4|A0A4X1WCN4_PIG Uncharacterized protein OS=Sus scrofa OX=9823 PE=3 SV=1        0.0     
+tr|A0A5F4CZN8|A0A5F4CZN8_CANLF WD repeat containing planar cell polarity effector OS=Canis  0.0     
+tr|A0A2K6FXA6|A0A2K6FXA6_PROCO WD repeat containing planar cell polarity effector OS=Propi  0.0     
+tr|G1SQG3|G1SQG3_RABIT WD repeat containing planar cell polarity effector OS=Oryctolagus    0.0     
+tr|A0A6J0VTV8|A0A6J0VTV8_ODOVR WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A3Q7VCD3|A0A3Q7VCD3_URSAR WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A4W2HHM5|A0A4W2HHM5_BOBOX WD repeat containing planar cell polarity effector OS=Bos i  0.0     
+tr|A0A6P5K6R4|A0A6P5K6R4_PHACI WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|G3W6A7|G3W6A7_SARHA WD repeat containing planar cell polarity effector OS=Sarcophilus    0.0     
+tr|A0A4W2E0V6|A0A4W2E0V6_BOBOX WD repeat containing planar cell polarity effector OS=Bos i  0.0     
+tr|A0A485NQ54|A0A485NQ54_LYNPA Wd repeat-containing and planar cell OS=Lynx pardinus OX=19  0.0     
+tr|A0A6P4V104|A0A6P4V104_PANPR WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7N4PR28|A0A7N4PR28_SARHA WD repeat containing planar cell polarity effector OS=Sarco  0.0     
+tr|A0A6J2AHZ2|A0A6J2AHZ2_ACIJB WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A3Q2HIY6|A0A3Q2HIY6_HORSE WD repeat containing planar cell polarity effector OS=Equus  0.0     
+tr|A0A6P5K729|A0A6P5K729_PHACI WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6P5K840|A0A6P5K840_PHACI WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A4D9E0B0|A0A4D9E0B0_9SAUR Ceramide synthase 2-like OS=Platysternon megacephalum OX=55  0.0     
+tr|A0A6J0VTY0|A0A6J0VTY0_ODOVR WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|D2HHZ7|D2HHZ7_AILME Uncharacterized protein (Fragment) OS=Ailuropoda melanoleuca         0.0     
+tr|A0A6J2FB00|A0A6J2FB00_ZALCA WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6P7DUK1|A0A6P7DUK1_SHEEP WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A452H8E0|A0A452H8E0_9SAUR WD repeat containing planar cell polarity effector OS=Gophe  0.0     
+tr|K7G526|K7G526_PELSI Uncharacterized protein OS=Pelodiscus sinensis OX=13735 GN=WDPCP     0.0     
+tr|A0A3Q0E491|A0A3Q0E491_CARSF WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A3Q0CQJ6|A0A3Q0CQJ6_MESAU WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A3Q0CQL1|A0A3Q0CQL1_MESAU WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A2K6FXA4|A0A2K6FXA4_PROCO WD repeat containing planar cell polarity effector OS=Propi  0.0     
+tr|G3HDQ5|G3HDQ5_CRIGR WD repeat-containing protein C2orf86-like OS=Cricetulus griseus      0.0     
+tr|A0A6P6BY24|A0A6P6BY24_PTEVA WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6P6EWH7|A0A6P6EWH7_OCTDE WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A667GKZ7|A0A667GKZ7_LYNCA WD repeat containing planar cell polarity effector OS=Lynx   0.0     
+tr|A0A5F4CK63|A0A5F4CK63_CANLF WD repeat containing planar cell polarity effector OS=Canis  0.0     
+tr|W5QFP5|W5QFP5_SHEEP Uncharacterized protein OS=Ovis aries OX=9940 GN=WDPCP PE=3 SV=1     0.0     
+tr|A0A6B0RTD6|A0A6B0RTD6_9CETA Uncharacterized protein OS=Bos mutus OX=72004 GN=E5288_WYG0  0.0     
+tr|A0A1U8DLX0|A0A1U8DLX0_ALLSI WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A671EJ37|A0A671EJ37_RHIFE WD repeat containing planar cell polarity effector OS=Rhino  0.0     
+tr|A0A7J8E4X3|A0A7J8E4X3_MOLMO WD repeat containing planar cell polarity effector OS=Molos  0.0     
+tr|A0A7J8E5F4|A0A7J8E5F4_MOLMO WD repeat containing planar cell polarity effector OS=Molos  0.0     
+tr|G1NXM3|G1NXM3_MYOLU WD repeat containing planar cell polarity effector OS=Myotis         0.0     
+tr|A0A3Q0FKD4|A0A3Q0FKD4_ALLSI WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A151MGZ9|A0A151MGZ9_ALLMI WD repeat-containing and planar cell polarity effector frit  0.0     
+tr|A0A6P7DW78|A0A6P7DW78_SHEEP WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|L9KKP9|L9KKP9_TUPCH WD repeat-containing and planar cell polarity effector protein       0.0     
+tr|A0A6P3J4U5|A0A6P3J4U5_BISBI WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6P3JBZ3|A0A6P3JBZ3_BISBI WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6P3JE18|A0A6P3JE18_BISBI WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A673TA64|A0A673TA64_SURSU WD repeat containing planar cell polarity effector OS=Suric  0.0     
+tr|A0A672UPG6|A0A672UPG6_STRHB WD repeat containing planar cell polarity effector OS=Strig  0.0     
+tr|A0A6P8R3V0|A0A6P8R3V0_GEOSA WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6P7XHT7|A0A6P7XHT7_9AMPH WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6P8QDU2|A0A6P8QDU2_GEOSA WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7K8PK16|A0A7K8PK16_COCCO FRITZ protein (Fragment) OS=Cochlearius cochlearius OX=1106  0.0     
+tr|A0A7L0BY59|A0A7L0BY59_9AVES FRITZ protein (Fragment) OS=Spizaetus tyrannus OX=252798 GN  0.0     
+tr|A0A7K9US10|A0A7K9US10_ANSSE FRITZ protein (Fragment) OS=Anseranas semipalmata OX=8851 G  0.0     
+tr|A0A7K8VQG3|A0A7K8VQG3_9STRI FRITZ protein (Fragment) OS=Ciccaba nigrolineata OX=1118524  0.0     
+tr|A0A093I8K4|A0A093I8K4_STRCA WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7L1JD95|A0A7L1JD95_RYNNI FRITZ protein (Fragment) OS=Rynchops niger OX=227184 GN=Wdp  0.0     
+tr|A0A2K5IHU9|A0A2K5IHU9_COLAP WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7K8STQ1|A0A7K8STQ1_9AVES FRITZ protein (Fragment) OS=Nyctibius bracteatus OX=48426 G  0.0     
+tr|A0A7K9TU30|A0A7K9TU30_9AVES FRITZ protein (Fragment) OS=Chloroceryle aenea OX=176938 GN  0.0     
+tr|A0A7L2FY48|A0A7L2FY48_NYCGR FRITZ protein (Fragment) OS=Nyctibius grandis OX=48427 GN=W  0.0     
+tr|A0A2K6RUD1|A0A2K6RUD1_RHIRO WD repeat containing planar cell polarity effector OS=Rhino  0.0     
+tr|A0A7K9XF03|A0A7K9XF03_9GRUI FRITZ protein (Fragment) OS=Psophia crepitans OX=54359 GN=W  0.0     
+tr|A0A7K6ST45|A0A7K6ST45_CALNI FRITZ protein (Fragment) OS=Caloenas nicobarica OX=187106 G  0.0     
+tr|A0A6J3CKS5|A0A6J3CKS5_AYTFU WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7K6Y825|A0A7K6Y825_ALCTO FRITZ protein (Fragment) OS=Alca torda OX=28689 GN=Wdpcp PE  0.0     
+tr|A0A7L0WTF4|A0A7L0WTF4_ALELA FRITZ protein (Fragment) OS=Alectura lathami OX=81907 GN=Wd  0.0     
+tr|A0A7K9MAA9|A0A7K9MAA9_HYDTY FRITZ protein (Fragment) OS=Hydrobates tethys OX=79633 GN=W  0.0     
+tr|A0A7K8JT16|A0A7K8JT16_9GRUI FRITZ protein (Fragment) OS=Lophotis ruficrista OX=172689 G  0.0     
+tr|E1BR95|E1BR95_CHICK Uncharacterized protein OS=Gallus gallus OX=9031 GN=WDPCP PE=3 SV=5  0.0     
+tr|A0A7L4D681|A0A7L4D681_9AVES FRITZ protein (Fragment) OS=Eurystomus gularis OX=325343 GN  0.0     
+tr|A0A7K8U6B7|A0A7K8U6B7_OCEOC FRITZ protein (Fragment) OS=Oceanites oceanicus OX=79653 GN  0.0     
+tr|A0A7K9F1U9|A0A7K9F1U9_STEPR FRITZ protein (Fragment) OS=Stercorarius parasiticus OX=540  0.0     
+tr|A0A7K4YRB4|A0A7K4YRB4_BUCAB FRITZ protein (Fragment) OS=Bucorvus abyssinicus OX=153643   0.0     
+tr|A0A7K5Y3Q3|A0A7K5Y3Q3_9CHAR FRITZ protein (Fragment) OS=Dromas ardeola OX=458190 GN=Wdp  0.0     
+tr|A0A7M4F365|A0A7M4F365_CROPO WD repeat containing planar cell polarity effector OS=Croco  0.0     
+tr|U3IR66|U3IR66_ANAPP WD repeat containing planar cell polarity effector OS=Anas           0.0     
+tr|A0A7L4MA92|A0A7L4MA92_GLAPT FRITZ protein (Fragment) OS=Glareola pratincola OX=43316 GN  0.0     
+tr|A0A6P7RV98|A0A6P7RV98_MUSCR WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7L0JPG7|A0A7L0JPG7_CHATO FRITZ protein (Fragment) OS=Chauna torquata OX=30388 GN=Wdp  0.0     
+tr|A0A093BXX9|A0A093BXX9_9AVES WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A669P5S8|A0A669P5S8_PHACC WD repeat containing planar cell polarity effector OS=Phasi  0.0     
+tr|A0A6J0D2K4|A0A6J0D2K4_PERMB WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A091IMW2|A0A091IMW2_EGRGA WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7K5GS35|A0A7K5GS35_9AVES FRITZ protein (Fragment) OS=Chunga burmeisteri OX=1352770 G  0.0     
+tr|A0A4X1WBI0|A0A4X1WBI0_PIG Uncharacterized protein OS=Sus scrofa OX=9823 PE=3 SV=1        0.0     
+tr|A0A7K6UIT0|A0A7K6UIT0_9AVES FRITZ protein (Fragment) OS=Aegotheles bennettii OX=48278 G  0.0     
+tr|A0A7L4CEU4|A0A7L4CEU4_9AVES FRITZ protein (Fragment) OS=Nyctiprogne leucopyga OX=382315  0.0     
+tr|A0A7L3MWS0|A0A7L3MWS0_9AVES FRITZ protein (Fragment) OS=Oreotrochilus melanogaster OX=6  0.0     
+tr|A0A7L0MV48|A0A7L0MV48_9PSIT FRITZ protein (Fragment) OS=Amazona guildingii OX=175529 GN  0.0     
+tr|G1N033|G1N033_MELGA WD repeat containing planar cell polarity effector OS=Meleagris      0.0     
+tr|A0A7K9Y4X8|A0A7K9Y4X8_9GALL FRITZ protein (Fragment) OS=Odontophorus gujanensis OX=8867  0.0     
+tr|A0A7K7L1Q3|A0A7K7L1Q3_9AVES FRITZ protein (Fragment) OS=Asarcornis scutulata OX=75869 G  0.0     
+tr|A0A7L0HWU8|A0A7L0HWU8_AREIN FRITZ protein (Fragment) OS=Arenaria interpres OX=54971 GN=  0.0     
+tr|A0A7N4UZ10|A0A7N4UZ10_SARHA WD repeat containing planar cell polarity effector OS=Sarco  0.0     
+tr|A0A6J2FZV1|A0A6J2FZV1_9PASS WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7K8WZY9|A0A7K8WZY9_9FURN FRITZ protein (Fragment) OS=Sclerurus mexicanus OX=265632 G  0.0     
+tr|A0A7K6P885|A0A7K6P885_9CORV FRITZ protein (Fragment) OS=Ifrita kowaldi OX=461245 GN=Wdp  0.0     
+tr|A0A7K9Q589|A0A7K9Q589_9CORV FRITZ protein (Fragment) OS=Pachycephala philippinensis OX=  0.0     
+tr|A0A7K8CTX0|A0A7K8CTX0_9CORV FRITZ protein (Fragment) OS=Eulacestoma nigropectus OX=4612  0.0     
+tr|A0A7L1T4K0|A0A7L1T4K0_ARAGA FRITZ protein (Fragment) OS=Aramus guarauna OX=54356 GN=Wdp  0.0     
+tr|A0A7L0NHD0|A0A7L0NHD0_9PASS FRITZ protein (Fragment) OS=Formicarius rufipectus OX=11185  0.0     
+tr|A0A6J0HK83|A0A6J0HK83_9PASS WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6J2FZI4|A0A6J2FZI4_9PASS WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6P3J581|A0A6P3J581_BISBI WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7L1D4W2|A0A7L1D4W2_9PASS FRITZ protein (Fragment) OS=Serilophus lunatus OX=239386 GN  0.0     
+tr|A0A7K6NAQ0|A0A7K6NAQ0_PEDTO FRITZ protein (Fragment) OS=Pedionomus torquatus OX=227192   0.0     
+tr|U3KGN2|U3KGN2_FICAL WD repeat containing planar cell polarity effector OS=Ficedula       0.0     
+tr|A0A7K8IH91|A0A7K8IH91_9PASS FRITZ protein (Fragment) OS=Chaetorhynchus papuensis OX=254  0.0     
+tr|A0A7L2BFZ2|A0A7L2BFZ2_9GRUI FRITZ protein (Fragment) OS=Heliornis fulica OX=54369 GN=Wd  0.0     
+tr|A0A7K5V7A8|A0A7K5V7A8_9CORV FRITZ protein (Fragment) OS=Platysteira castanea OX=1160851  0.0     
+tr|A0A7K5U661|A0A7K5U661_9PASS FRITZ protein (Fragment) OS=Cephalopterus ornatus OX=114276  0.0     
+tr|A0A7L1ATY4|A0A7L1ATY4_GYMTI FRITZ protein (Fragment) OS=Gymnorhina tibicen OX=9132 GN=W  0.0     
+tr|A0A7K8ZBL1|A0A7K8ZBL1_9PASS FRITZ protein (Fragment) OS=Grallaria varia OX=117165 GN=Wd  0.0     
+tr|A0A7K9J0E6|A0A7K9J0E6_9CORV FRITZ protein (Fragment) OS=Myiagra hebetior OX=381031 GN=W  0.0     
+tr|A0A7K7UFE2|A0A7K7UFE2_9CHAR FRITZ protein (Fragment) OS=Ibidorhyncha struthersii OX=425  0.0     
+tr|A0A6J0HLK6|A0A6J0HLK6_9PASS WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7K6JWY1|A0A7K6JWY1_9PASE FRITZ protein (Fragment) OS=Oreocharis arfaki OX=979223 GN=  0.0     
+tr|A0A7K5RZI0|A0A7K5RZI0_LANLU FRITZ protein (Fragment) OS=Lanius ludovicianus OX=28713 GN  0.0     
+tr|A0A1V4IFS2|A0A1V4IFS2_PATFA WD repeat-containing and planar cell polarity effector frit  0.0     
+tr|A0A7L4JUE6|A0A7L4JUE6_9AVES FRITZ protein (Fragment) OS=Ceuthmochares aereus OX=1961834  0.0     
+tr|A0A7K5EPW6|A0A7K5EPW6_POLCE FRITZ protein (Fragment) OS=Polioptila caerulea OX=66707 GN  0.0     
+tr|A0A7K9ZWS4|A0A7K9ZWS4_9CORV FRITZ protein (Fragment) OS=Dicrurus megarhynchus OX=450177  0.0     
+tr|A0A7K8BYL0|A0A7K8BYL0_9CORV FRITZ protein (Fragment) OS=Rhagologus leucostigma OX=15617  0.0     
+tr|A0A6J0VTW1|A0A6J0VTW1_ODOVR WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7K8AL09|A0A7K8AL09_9CORV FRITZ protein (Fragment) OS=Cnemophilus loriae OX=254448 GN  0.0     
+tr|A0A670IF55|A0A670IF55_PODMU Uncharacterized protein OS=Podarcis muralis OX=64176 GN=WDP  0.0     
+tr|A0A7L1Y2V6|A0A7L1Y2V6_9PASS FRITZ protein (Fragment) OS=Scytalopus superciliaris OX=312  0.0     
+tr|A0A6J0VTA4|A0A6J0VTA4_ODOVR WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7K8F3T9|A0A7K8F3T9_9CORV FRITZ protein (Fragment) OS=Struthidea cinerea OX=181839 GN  0.0     
+tr|A0A7K6IYJ3|A0A7K6IYJ3_9CORV FRITZ protein (Fragment) OS=Machaerirhynchus nigripectus OX  0.0     
+tr|A0A7L2XI64|A0A7L2XI64_9PASS FRITZ protein (Fragment) OS=Erpornis zantholeuca OX=1112836  0.0     
+tr|A0A7K9WFD2|A0A7K9WFD2_9PASS FRITZ protein (Fragment) OS=Rhipidura dahli OX=667186 GN=Wd  0.0     
+tr|A0A7K6IDB6|A0A7K6IDB6_9PASS FRITZ protein (Fragment) OS=Dasyornis broadbenti OX=243059   0.0     
+tr|A0A663N2Z3|A0A663N2Z3_ATHCN WD repeat containing planar cell polarity effector OS=Athen  0.0     
+tr|A0A6I9HMF7|A0A6I9HMF7_GEOFO WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7L1PZA1|A0A7L1PZA1_ORIOR FRITZ protein (Fragment) OS=Oriolus oriolus OX=181099 GN=Wd  0.0     
+tr|A0A091NEQ4|A0A091NEQ4_9PASS WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7K4QIZ5|A0A7K4QIZ5_9TYRA FRITZ protein (Fragment) OS=Neopipo cinnamomea OX=456388 GN  0.0     
+tr|A0A7L1A2N7|A0A7L1A2N7_9PASS FRITZ protein (Fragment) OS=Oxyruncus cristatus OX=114331 G  0.0     
+tr|A0A2I0LT47|A0A2I0LT47_COLLI WD repeat containing planar cell polarity effector OS=Colum  0.0     
+tr|A0A669PA05|A0A669PA05_PHACC WD repeat containing planar cell polarity effector OS=Phasi  0.0     
+tr|A0A7K5W8C2|A0A7K5W8C2_9SYLV FRITZ protein (Fragment) OS=Hylia prasina OX=208073 GN=Wdpc  0.0     
+tr|A0A7K8HNC3|A0A7K8HNC3_9CORV FRITZ protein (Fragment) OS=Aleadryas rufinucha OX=461220 G  0.0     
+tr|A0A663E7X1|A0A663E7X1_AQUCH WD repeat containing planar cell polarity effector OS=Aquil  0.0     
+tr|A0A7R5KHH6|A0A7R5KHH6_9PASS WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A091HKX7|A0A091HKX7_CALAN WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7L2CX07|A0A7L2CX07_CATFU FRITZ protein (Fragment) OS=Catharus fuscescens OX=159581 G  0.0     
+tr|A0A7K8GIX5|A0A7K8GIX5_ORTSP FRITZ protein (Fragment) OS=Orthonyx spaldingii OX=38397 GN  0.0     
+tr|A0A7K7Z8K9|A0A7K7Z8K9_9PASE FRITZ protein (Fragment) OS=Melanocharis versteri OX=254552  0.0     
+tr|F7DK17|F7DK17_ORNAN WD repeat containing planar cell polarity effector                   0.0     
+tr|A0A091EYK4|A0A091EYK4_CORBR WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7R5KHH2|A0A7R5KHH2_9PASS WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7K6F7T1|A0A7K6F7T1_9CORV FRITZ protein (Fragment) OS=Daphoenositta chrysoptera OX=25  0.0     
+tr|A0A7K5CS49|A0A7K5CS49_9TYRA FRITZ protein (Fragment) OS=Pachyramphus minor OX=369605 GN  0.0     
+tr|A0A7K8YME6|A0A7K8YME6_9PASS FRITZ protein (Fragment) OS=Sakesphorus luctuosus OX=419690  0.0     
+tr|G1KEQ2|G1KEQ2_ANOCA Uncharacterized protein OS=Anolis carolinensis OX=28377 GN=WDPCP     0.0     
+tr|A0A7K5LXC2|A0A7K5LXC2_CARCD FRITZ protein (Fragment) OS=Cardinalis cardinalis OX=98964   0.0     
+tr|A0A7K8M6N0|A0A7K8M6N0_9CORV FRITZ protein (Fragment) OS=Ptilorrhoa leucosticta OX=44938  0.0     
+tr|A0A7K6C5C4|A0A7K6C5C4_PTIVI FRITZ protein (Fragment) OS=Ptilonorhynchus violaceus OX=28  0.0     
+tr|A0A7L3HR51|A0A7L3HR51_9PASS FRITZ protein (Fragment) OS=Pardalotus punctatus OX=254575   0.0     
+tr|A0A7L1NZY3|A0A7L1NZY3_RHICY FRITZ protein (Fragment) OS=Rhinopomastus cyanomelas OX=113  0.0     
+tr|A0A7L1FTU7|A0A7L1FTU7_SYLBO FRITZ protein (Fragment) OS=Sylvia borin OX=73324 GN=Wdpcp   0.0     
+tr|A0A6J0HKB0|A0A6J0HKB0_9PASS WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7K9H0Q4|A0A7K9H0Q4_LOXLE FRITZ protein (Fragment) OS=Loxia leucoptera OX=96539 GN=Wd  0.0     
+tr|A0A7L1M967|A0A7L1M967_BOMGA FRITZ protein (Fragment) OS=Bombycilla garrulus OX=125297 G  0.0     
+tr|A0A7L1VA54|A0A7L1VA54_SITEU FRITZ protein (Fragment) OS=Sitta europaea OX=50251 GN=Wdpc  0.0     
+tr|A0A7L1QEK9|A0A7L1QEK9_9PASS FRITZ protein (Fragment) OS=Cisticola juncidis OX=52622 GN=  0.0     
+tr|A0A7L4J2N9|A0A7L4J2N9_9PASS FRITZ protein (Fragment) OS=Pomatorhinus ruficollis OX=9320  0.0     
+tr|A0A7L0IXU5|A0A7L0IXU5_PIPCL FRITZ protein (Fragment) OS=Piprites chloris OX=114369 GN=W  0.0     
+tr|A0A402FLN3|A0A402FLN3_9SAUR Uncharacterized protein OS=Paroedura picta OX=143630         0.0     
+tr|A0A7L0XN34|A0A7L0XN34_TYRSA FRITZ protein (Fragment) OS=Tyrannus savana OX=137541 GN=Wd  0.0     
+tr|A0A7L0R0Y7|A0A7L0R0Y7_SETKR FRITZ protein (Fragment) OS=Setophaga kirtlandii OX=298831   0.0     
+tr|A0A7L0YYW4|A0A7L0YYW4_9PASE FRITZ protein (Fragment) OS=Ploceus nigricollis OX=441696 G  0.0     
+tr|A0A7K9T698|A0A7K9T698_9AVES FRITZ protein (Fragment) OS=Galbula dea OX=1109041 GN=Wdpcp  0.0     
+tr|A0A7K5J052|A0A7K5J052_TOXRE FRITZ protein (Fragment) OS=Toxostoma redivivum OX=99882 GN  0.0     
+tr|A0A7K8DUD2|A0A7K8DUD2_LEURO FRITZ protein (Fragment) OS=Leucopsar rothschildi OX=127929  0.0     
+tr|A0A7K7YLW1|A0A7K7YLW1_THRLU FRITZ protein (Fragment) OS=Thryothorus ludovicianus OX=742  0.0     
+tr|A0A7K9RFG2|A0A7K9RFG2_9PASS FRITZ protein (Fragment) OS=Sterrhoptilus dennistouni OX=25  0.0     
+tr|A0A7K6VI97|A0A7K6VI97_9PASS FRITZ protein (Fragment) OS=Notiomystis cincta OX=366454 GN  0.0     
+tr|A0A7K4TVK1|A0A7K4TVK1_9PASS FRITZ protein (Fragment) OS=Sinosuthora webbiana OX=337173   0.0     
+tr|A0A7K9HL02|A0A7K9HL02_9AVES FRITZ protein (Fragment) OS=Bucco capensis OX=135168 GN=Wdp  0.0     
+tr|A0A663N5E1|A0A663N5E1_ATHCN WD repeat containing planar cell polarity effector OS=Athen  0.0     
+tr|A0A6J0HIU8|A0A6J0HIU8_9PASS WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7K8NT90|A0A7K8NT90_CASCA FRITZ protein (Fragment) OS=Casuarius casuarius OX=8787 GN=  0.0     
+tr|A0A7K5SYC0|A0A7K5SYC0_9FRIN FRITZ protein (Fragment) OS=Urocynchramus pylzowi OX=571890  0.0     
+tr|A0A7L2NY33|A0A7L2NY33_PYCJO FRITZ protein (Fragment) OS=Pycnonotus jocosus OX=182897 GN  0.0     
+tr|A0A7K9B4W8|A0A7K9B4W8_DRONO FRITZ protein (Fragment) OS=Dromaius novaehollandiae OX=879  0.0     
+tr|A0A7K6H672|A0A7K6H672_9PASS FRITZ protein (Fragment) OS=Malurus elegans OX=720584 GN=Wd  0.0     
+tr|A0A7L3AAD6|A0A7L3AAD6_9PASE FRITZ protein (Fragment) OS=Prunella fulvescens OX=670355 G  0.0     
+tr|A0A669PCU7|A0A669PCU7_PHACC WD repeat containing planar cell polarity effector OS=Phasi  0.0     
+tr|M3XJC5|M3XJC5_LATCH Uncharacterized protein OS=Latimeria chalumnae OX=7897 GN=WDPCP      0.0     
+tr|A0A7K5C4A5|A0A7K5C4A5_MOTAL FRITZ protein (Fragment) OS=Motacilla alba OX=45807 GN=Wdpc  0.0     
+tr|A0A7K6B8C7|A0A7K6B8C7_UPUEP FRITZ protein (Fragment) OS=Upupa epops OX=57439 GN=Wdpcp P  0.0     
+tr|A0A7K5PG58|A0A7K5PG58_9CORV FRITZ protein (Fragment) OS=Erythrocercus mccallii OX=10720  0.0     
+tr|A0A7L2L7N8|A0A7L2L7N8_9PASS FRITZ protein (Fragment) OS=Zosterops hypoxanthus OX=248532  0.0     
+tr|A0A7L0VGT6|A0A7L0VGT6_9PASE FRITZ protein (Fragment) OS=Leptocoma aspasia OX=2585812 GN  0.0     
+tr|A0A7K9LR96|A0A7K9LR96_9PASS FRITZ protein (Fragment) OS=Rhabdornis inornatus OX=237438   0.0     
+tr|A0A7L1E6Y9|A0A7L1E6Y9_OENON FRITZ protein (Fragment) OS=Oenanthe oenanthe OX=279966 GN=  0.0     
+tr|A0A7K8QR14|A0A7K8QR14_9PASS FRITZ protein (Fragment) OS=Smithornis capensis OX=363769 G  0.0     
+tr|A0A7M4FZA8|A0A7M4FZA8_CROPO WD repeat containing planar cell polarity effector OS=Croco  0.0     
+tr|A0A6I8R6M4|A0A6I8R6M4_XENTR WD repeat containing planar cell polarity effector OS=Xenop  0.0     
+tr|A0A6P9CWL9|A0A6P9CWL9_PANGU WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7K6M249|A0A7K6M249_PANBI FRITZ protein (Fragment) OS=Panurus biarmicus OX=181101 GN=  0.0     
+tr|A0A6P9CYH9|A0A6P9CYH9_PANGU WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6J1U6J4|A0A6J1U6J4_9SAUR WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6J1U8U1|A0A6J1U8U1_9SAUR WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A670IF46|A0A670IF46_PODMU Uncharacterized protein OS=Podarcis muralis OX=64176 GN=WDP  0.0     
+tr|A0A1L8G790|A0A1L8G790_XENLA Uncharacterized protein OS=Xenopus laevis OX=8355 GN=wdpcp.  0.0     
+sp|Q32NR9|FRITZ_XENLA WD repeat-containing and planar cell polarity effector protein        0.0     
+tr|A0A7K9R0G8|A0A7K9R0G8_IRECY FRITZ protein (Fragment) OS=Irena cyanogastra OX=175120 GN=  0.0     
+tr|A0A6I9Y0L0|A0A6I9Y0L0_9SAUR WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6I9XUQ3|A0A6I9XUQ3_9SAUR WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A674HVT2|A0A674HVT2_TAEGU WD repeat containing planar cell polarity effector OS=Taeni  0.0     
+tr|A0A663N4V3|A0A663N4V3_ATHCN WD repeat containing planar cell polarity effector OS=Athen  0.0     
+tr|F6QP01|F6QP01_XENTR WD repeat containing planar cell polarity effector OS=Xenopus        0.0     
+tr|A0A7L1IXM8|A0A7L1IXM8_SMUAF FRITZ protein (Fragment) OS=Smutsornis africanus OX=240209   0.0     
+tr|A0A7L2MN65|A0A7L2MN65_9PASS FRITZ protein (Fragment) OS=Rhadina sibilatrix OX=2585818 G  0.0     
+tr|A0A6P9CYJ4|A0A6P9CYJ4_PANGU WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7K9JH68|A0A7K9JH68_9PASE FRITZ protein (Fragment) OS=Dicaeum eximium OX=667154 GN=Wd  0.0     
+tr|A0A7L0AEG8|A0A7L0AEG8_9AVES FRITZ protein (Fragment) OS=Ciconia maguari OX=52777 GN=Wdp  0.0     
+tr|A0A674GHD3|A0A674GHD3_TAEGU WD repeat containing planar cell polarity effector OS=Taeni  0.0     
+tr|A0A7K4T695|A0A7K4T695_9CHAR FRITZ protein (Fragment) OS=Burhinus bistriatus OX=240201 G  0.0     
+tr|A0A663N306|A0A663N306_ATHCN WD repeat containing planar cell polarity effector OS=Athen  0.0     
+tr|A0A091DEG5|A0A091DEG5_FUKDA WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7L2LK52|A0A7L2LK52_9SYLV FRITZ protein (Fragment) OS=Hippolais icterina OX=68497 GN=  0.0     
+tr|H0YVI2|H0YVI2_TAEGU WD repeat containing planar cell polarity effector OS=Taeniopygia    0.0     
+tr|A0A7R5KL31|A0A7R5KL31_9PASS WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A663N303|A0A663N303_ATHCN WD repeat containing planar cell polarity effector OS=Athen  0.0     
+tr|A0A7R5KJE2|A0A7R5KJE2_9PASS WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6J0HIY5|A0A6J0HIY5_9PASS WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7L3L415|A0A7L3L415_9CHAR FRITZ protein (Fragment) OS=Turnix velox OX=2529409 GN=Wdpc  0.0     
+tr|A0A6P9DA05|A0A6P9DA05_PANGU WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6I9Y5I3|A0A6I9Y5I3_9SAUR WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6I8QZ40|A0A6I8QZ40_XENTR WD repeat-containing planar cell polarity effector OS=Xenop  0.0     
+tr|A0A4W3GL93|A0A4W3GL93_CALMI Uncharacterized protein OS=Callorhinchus milii OX=7868 GN=w  0.0     
+tr|A0A6I9XZL2|A0A6I9XZL2_9SAUR WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6P6BY26|A0A6P6BY26_PTEVA WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7K6SGT8|A0A7K6SGT8_9GRUI FRITZ protein (Fragment) OS=Rhynochetos jubatus OX=54386 GN  0.0     
+tr|A0A0Q3PJA8|A0A0Q3PJA8_AMAAE WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|H7BZ13|H7BZ13_HUMAN WD repeat-containing and planar cell polarity effector protein       0.0     
+tr|A0A4W3GKK9|A0A4W3GKK9_CALMI Uncharacterized protein OS=Callorhinchus milii OX=7868 GN=w  0.0     
+tr|A0A091H6V8|A0A091H6V8_BUCRH WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A444U3U7|A0A444U3U7_ACIRT WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A2J8N3R2|A0A2J8N3R2_PANTR WDPCP isoform 3 (Fragment) OS=Pan troglodytes OX=9598        0.0     
+tr|A0A7L0PG91|A0A7L0PG91_9AVES FRITZ protein (Fragment) OS=Mesembrinibis cayennensis OX=11  0.0     
+tr|A0A7L3F6Z7|A0A7L3F6Z7_9GRUI FRITZ protein (Fragment) OS=Zapornia atra OX=2585822 GN=Wdp  0.0     
+tr|V8P9D6|V8P9D6_OPHHA WD repeat-containing and planar cell polarity effector protein       0.0     
+tr|A0A226PT17|A0A226PT17_COLVI Uncharacterized protein OS=Colinus virginianus OX=9014       0.0     
+tr|A0A087R8D9|A0A087R8D9_APTFO WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A093NWW8|A0A093NWW8_PYGAD WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A2J8XCA5|A0A2J8XCA5_PONAB WDPCP isoform 15 (Fragment) OS=Pongo abelii OX=9601          0.0     
+tr|A0A7L3RHI1|A0A7L3RHI1_CEPGR FRITZ protein (Fragment) OS=Cepphus grylle OX=28697 GN=Wdpc  0.0     
+tr|A0A7L4B372|A0A7L4B372_9CHAR FRITZ protein (Fragment) OS=Phaetusa simplex OX=297813 GN=W  0.0     
+tr|A0A7K8LG46|A0A7K8LG46_9GRUI FRITZ protein (Fragment) OS=Ardeotis kori OX=89386 GN=Wdpcp  0.0     
+tr|A0A7K5HZX9|A0A7K5HZX9_CROSL FRITZ protein (Fragment) OS=Crotophaga sulcirostris OX=3359  0.0     
+tr|A0A093IVM8|A0A093IVM8_FULGA WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7L3Y8Y2|A0A7L3Y8Y2_9AVES FRITZ protein (Fragment) OS=Calonectris borealis OX=1323832  0.0     
+tr|A0A091TDD9|A0A091TDD9_PHALP WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7L3CMQ9|A0A7L3CMQ9_PELUR FRITZ protein (Fragment) OS=Pelecanoides urinatrix OX=37079  0.0     
+tr|A0A7L0U0P8|A0A7L0U0P8_CHOAC FRITZ protein (Fragment) OS=Chordeiles acutipennis OX=11818  0.0     
+tr|A0A7L0RYM7|A0A7L0RYM7_GLABR FRITZ protein (Fragment) OS=Glaucidium brasilianum OX=78217  0.0     
+tr|A0A091SB18|A0A091SB18_9GRUI WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7L3ZY55|A0A7L3ZY55_9AVES FRITZ protein (Fragment) OS=Circaetus pectoralis OX=321084   0.0     
+tr|A0A7L2EJH7|A0A7L2EJH7_ANTMN FRITZ protein (Fragment) OS=Anthoscopus minutus OX=156561 G  0.0     
+tr|A0A7L3T0M5|A0A7L3T0M5_RISTR FRITZ protein (Fragment) OS=Rissa tridactyla OX=75485 GN=Wd  0.0     
+tr|A0A7L3TXF1|A0A7L3TXF1_URIAL FRITZ protein (Fragment) OS=Uria aalge OX=13746 GN=Wdpcp PE  0.0     
+tr|A0A7L1WVG2|A0A7L1WVG2_9PASS FRITZ protein (Fragment) OS=Certhia brachydactyla OX=73330   0.0     
+tr|A0A7K5Y6Y2|A0A7K5Y6Y2_9AVES FRITZ protein (Fragment) OS=Pterocles burchelli OX=2585816   0.0     
+tr|A0A7L0T7D1|A0A7L0T7D1_PODPO FRITZ protein (Fragment) OS=Podilymbus podiceps OX=9252 GN=  0.0     
+tr|A0A091VAZ4|A0A091VAZ4_NIPNI WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|W5NGP4|W5NGP4_LEPOC WD repeat containing planar cell polarity effector OS=Lepisosteus    0.0     
+tr|A0A401T4B2|A0A401T4B2_CHIPU Uncharacterized protein OS=Chiloscyllium punctatum OX=13724  0.0     
+tr|A0A087V260|A0A087V260_BALRE WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A091P4E6|A0A091P4E6_LEPDC WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7K5NFH4|A0A7K5NFH4_CHRMC FRITZ protein (Fragment) OS=Chroicocephalus maculipennis OX  0.0     
+tr|A0A094L6J0|A0A094L6J0_ANTCR WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7L0FAT8|A0A7L0FAT8_CORCN FRITZ protein (Fragment) OS=Corythaixoides concolor OX=1039  0.0     
+tr|A0A091RP94|A0A091RP94_NESNO WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7L4FPS8|A0A7L4FPS8_9COLU FRITZ protein (Fragment) OS=Alopecoenas beccarii OX=262131   0.0     
+tr|A0A7K9E1W1|A0A7K9E1W1_BARMA FRITZ protein (Fragment) OS=Baryphthengus martii OX=176943   0.0     
+tr|H3BB60|H3BB60_LATCH Uncharacterized protein OS=Latimeria chalumnae OX=7897 GN=WDPCP      0.0     
+tr|A0A091KKF3|A0A091KKF3_9GRUI WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A093CTQ2|A0A093CTQ2_TAUER WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7K7WE13|A0A7K7WE13_9AVES FRITZ protein (Fragment) OS=Nothocercus julius OX=2585813 G  0.0     
+tr|A0A7K4RWQ5|A0A7K4RWQ5_COLPI FRITZ protein (Fragment) OS=Columbina picui OX=115618 GN=Wd  0.0     
+tr|A0A5E4BBD8|A0A5E4BBD8_MARMO Uncharacterized protein OS=Marmota monax OX=9995 GN=MONAX_5  0.0     
+tr|A0A7K6WR47|A0A7K6WR47_STECA FRITZ protein (Fragment) OS=Steatornis caripensis OX=48435   0.0     
+tr|R0JXL4|R0JXL4_ANAPL WD repeat-containing protein LOC51057 (Fragment) OS=Anas             0.0     
+tr|A0A7L0H166|A0A7L0H166_HERCA FRITZ protein (Fragment) OS=Herpetotheres cachinnans OX=563  0.0     
+tr|A0A7L2TKU7|A0A7L2TKU7_POMRU FRITZ protein (Fragment) OS=Pomatostomus ruficeps OX=9176 G  0.0     
+tr|A0A7K4ZRC2|A0A7K4ZRC2_9AVES FRITZ protein (Fragment) OS=Centropus unirufus OX=1118519 G  0.0     
+tr|A0A091NYA0|A0A091NYA0_HALAL FRITZ protein (Fragment) OS=Haliaeetus albicilla OX=8969 GN  0.0     
+tr|A0A091FVG2|A0A091FVG2_9AVES WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7L1HTK1|A0A7L1HTK1_9CHAR FRITZ protein (Fragment) OS=Nycticryphes semicollaris OX=22  0.0     
+tr|A0A7L3PV52|A0A7L3PV52_9DEND FRITZ protein (Fragment) OS=Xiphorhynchus elegans OX=269412  0.0     
+tr|A0A093QZ20|A0A093QZ20_PHACA WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7L2FC51|A0A7L2FC51_QUIME FRITZ protein (Fragment) OS=Quiscalus mexicanus OX=64278 GN  0.0     
+tr|A0A091WEH5|A0A091WEH5_OPIHO WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7L0D4Y2|A0A7L0D4Y2_9CHAR FRITZ protein (Fragment) OS=Rostratula benghalensis OX=1187  0.0     
+tr|A0A7L0ENJ3|A0A7L0ENJ3_TROML FRITZ protein (Fragment) OS=Trogon melanurus OX=56311 GN=Wd  0.0     
+tr|A0A7K5Z9V7|A0A7K5Z9V7_ONYCO FRITZ protein (Fragment) OS=Onychorhynchus coronatus OX=360  0.0     
+tr|A0A7K4WB92|A0A7K4WB92_9TYRA FRITZ protein (Fragment) OS=Tachuris rubrigastra OX=495162   0.0     
+tr|A0A093Q9G9|A0A093Q9G9_9PASS WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7L1WX40|A0A7L1WX40_9AVES FRITZ protein (Fragment) OS=Thinocorus orbignyianus OX=1617  0.0     
+tr|A0A7K7VHA7|A0A7K7VHA7_EUDEL FRITZ protein (Fragment) OS=Eudromia elegans OX=8805 GN=Wdp  0.0     
+tr|A0A7J7U750|A0A7J7U750_MYOMY WD repeat containing planar cell polarity effector OS=Myoti  0.0     
+tr|A0A093EUE7|A0A093EUE7_TYTAL WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6I9Y0L4|A0A6I9Y0L4_9SAUR WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6I9YA57|A0A6I9YA57_9SAUR WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7K7CI31|A0A7K7CI31_APHCE FRITZ protein (Fragment) OS=Aphelocoma coerulescens OX=3961  0.0     
+tr|A0A7K7BD44|A0A7K7BD44_9AVES FRITZ protein (Fragment) OS=Nothoprocta ornata OX=83376 GN=  0.0     
+tr|A0A7K4LJP7|A0A7K4LJP7_9AVES FRITZ protein (Fragment) OS=Crypturellus undulatus OX=48396  0.0     
+tr|A0A7K7A3P0|A0A7K7A3P0_9AVES FRITZ protein (Fragment) OS=Nothoprocta pentlandii OX=25858  0.0     
+tr|A0A7K6LNH6|A0A7K6LNH6_9CORV FRITZ protein (Fragment) OS=Falcunculus frontatus OX=254539  0.0     
+tr|A0A7L3KFW0|A0A7L3KFW0_9PASS FRITZ protein (Fragment) OS=Drymodes brunneopygia OX=626378  0.0     
+tr|A0A7L1KMI2|A0A7L1KMI2_HIMHI FRITZ protein (Fragment) OS=Himantopus himantopus OX=225398  0.0     
+tr|A0A7K5JVP1|A0A7K5JVP1_9TYRA FRITZ protein (Fragment) OS=Mionectes macconnelli OX=254557  0.0     
+tr|A0A7K7H8N7|A0A7K7H8N7_9PASS FRITZ protein (Fragment) OS=Rhegmatorhina hoffmannsi OX=468  0.0     
+tr|A0A7K4K3K0|A0A7K4K3K0_9AVES FRITZ protein (Fragment) OS=Crypturellus soui OX=458187 GN=  0.0     
+tr|A0A7K7XQ66|A0A7K7XQ66_9PASS FRITZ protein (Fragment) OS=Mohoua ochrocephala OX=874463 G  0.0     
+tr|A0A7L3DCI2|A0A7L3DCI2_PLUSO FRITZ protein (Fragment) OS=Pluvianellus socialis OX=227228  0.0     
+tr|A0A7K7ITN4|A0A7K7ITN4_LOXCU FRITZ protein (Fragment) OS=Loxia curvirostra OX=64802 GN=W  0.0     
+tr|A0A7K6EUJ7|A0A7K6EUJ7_9PASS FRITZ protein (Fragment) OS=Grantiella picta OX=266360 GN=W  0.0     
+tr|A0A7K7QT97|A0A7K7QT97_POEAT FRITZ protein (Fragment) OS=Poecile atricapillus OX=48891 G  0.0     
+tr|A0A7K6D187|A0A7K6D187_9PASS FRITZ protein (Fragment) OS=Origma solitaria OX=720586 GN=W  0.0     
+tr|A0A7L4L066|A0A7L4L066_9CORV FRITZ protein (Fragment) OS=Callaeas wilsoni OX=1347786 GN=  0.0     
+tr|A0A7K6XVB6|A0A7K6XVB6_9PASE FRITZ protein (Fragment) OS=Promerops cafer OX=254652 GN=Wd  0.0     
+tr|A0A7L4GBG6|A0A7L4GBG6_PODST FRITZ protein (Fragment) OS=Podargus strigoides OX=8905 GN=  0.0     
+tr|A0A7K7D0Y0|A0A7K7D0Y0_PHEME FRITZ protein (Fragment) OS=Pheucticus melanocephalus OX=37  0.0     
+tr|A0A7K7E2V7|A0A7K7E2V7_9SYLV FRITZ protein (Fragment) OS=Sylvia atricapilla OX=48155 GN=  0.0     
+tr|A0A7L1TZE1|A0A7L1TZE1_PHANI FRITZ protein (Fragment) OS=Phainopepla nitens OX=161653 GN  0.0     
+tr|A0A7L4F392|A0A7L4F392_HIRRU FRITZ protein (Fragment) OS=Hirundo rustica OX=43150 GN=Wdp  0.0     
+tr|A0A7K4V6N1|A0A7K4V6N1_9EMBE FRITZ protein (Fragment) OS=Emberiza fucata OX=337179 GN=Wd  0.0     
+tr|A0A7K4Q791|A0A7K4Q791_MELMO FRITZ protein (Fragment) OS=Melospiza melodia OX=44397 GN=W  0.0     
+tr|A0A7K7PRG5|A0A7K7PRG5_ACRAR FRITZ protein (Fragment) OS=Acrocephalus arundinaceus OX=39  0.0     
+tr|A0A7L0L0C4|A0A7L0L0C4_9SYLV FRITZ protein (Fragment) OS=Sylvietta virens OX=208069 GN=W  0.0     
+tr|A0A7K7JG28|A0A7K7JG28_AGEPH FRITZ protein (Fragment) OS=Agelaius phoeniceus OX=39638 GN  0.0     
+tr|A0A7L3V8P1|A0A7L3V8P1_MOLAT FRITZ protein (Fragment) OS=Molothrus ater OX=84834 GN=Wdpc  0.0     
+tr|A0A7K8RNM3|A0A7K8RNM3_9PASS FRITZ protein (Fragment) OS=Rhodinocichla rosea OX=58203 GN  0.0     
+tr|A0A7K7MI24|A0A7K7MI24_9PASS FRITZ protein (Fragment) OS=Brachypodius atriceps OX=182895  0.0     
+tr|A0A7K4XDP2|A0A7K4XDP2_REGSA FRITZ protein (Fragment) OS=Regulus satrapa OX=13245 GN=Wdp  0.0     
+tr|A0A7K6Q8U9|A0A7K6Q8U9_9PASS FRITZ protein (Fragment) OS=Climacteris rufus OX=47695 GN=W  0.0     
+tr|A0A7K5QYK1|A0A7K5QYK1_9PASE FRITZ protein (Fragment) OS=Prunella himalayana OX=670356 G  0.0     
+tr|A0A5E4BCJ7|A0A5E4BCJ7_MARMO Uncharacterized protein OS=Marmota monax OX=9995 GN=MONAX_5  0.0     
+tr|A0A7K7RM11|A0A7K7RM11_9PASS FRITZ protein (Fragment) OS=Nesospiza acunhae OX=381881 GN=  0.0     
+tr|A0A7L3EEI5|A0A7L3EEI5_9PASS FRITZ protein (Fragment) OS=Chaetops frenatus OX=221966 GN=  0.0     
+tr|T0NN20|T0NN20_CAMFR Uncharacterized protein OS=Camelus ferus OX=419612 GN=CB1_001609003  0.0     
+tr|A0A6J1U1J6|A0A6J1U1J6_9SAUR WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6J1U0E1|A0A6J1U0E1_9SAUR WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7L2JD48|A0A7L2JD48_CINMU FRITZ protein (Fragment) OS=Cinclus mexicanus OX=161649 GN=  0.0     
+tr|A0A0A0A4V6|A0A0A0A4V6_CHAVO WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A218UV98|A0A218UV98_9PASE WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6P8QFR9|A0A6P8QFR9_GEOSA WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7K9CEL6|A0A7K9CEL6_9PICI FRITZ protein (Fragment) OS=Psilopogon haemacephalus OX=258  0.0     
+tr|A0A3M0K5P5|A0A3M0K5P5_HIRRU Uncharacterized protein OS=Hirundo rustica rustica OX=33367  0.0     
+tr|A0A7K7GK44|A0A7K7GK44_ERIRU FRITZ protein (Fragment) OS=Erithacus rubecula OX=37610 GN=  0.0     
+tr|A0A7K9DD03|A0A7K9DD03_9AVES FRITZ protein (Fragment) OS=Hemiprocne comata OX=243314 GN=  0.0     
+tr|A0A091QNX8|A0A091QNX8_MERNU WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A091TXE8|A0A091TXE8_PHORB WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7L3WNR5|A0A7L3WNR5_9GRUI FRITZ protein (Fragment) OS=Atlantisia rogersi OX=2478892 G  0.0     
+tr|A0A6J0UID1|A0A6J0UID1_9SAUR WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6I9XUQ8|A0A6I9XUQ8_9SAUR WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A091TL15|A0A091TL15_PELCR WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A091LP17|A0A091LP17_CATAU WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7L3Z0D6|A0A7L3Z0D6_FREGA FRITZ protein (Fragment) OS=Fregetta grallaria OX=79628 GN=  0.0     
+tr|A0A093J3F7|A0A093J3F7_EURHL WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A3L8SRT2|A0A3L8SRT2_CHLGU Uncharacterized protein OS=Chloebia gouldiae OX=44316        0.0     
+tr|A0A099Z037|A0A099Z037_TINGU WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7K7FL72|A0A7K7FL72_CHIMN FRITZ protein (Fragment) OS=Chionis minor OX=227182 GN=Wdpc  0.0     
+tr|A0A7K7TGI6|A0A7K7TGI6_9TYRA FRITZ protein (Fragment) OS=Sapayoa aenigma OX=239371 GN=Wd  0.0     
+tr|A0A5E4BCD8|A0A5E4BCD8_MARMO Uncharacterized protein OS=Marmota monax OX=9995 GN=MONAX_5  0.0     
+tr|A0A226N4T6|A0A226N4T6_CALSU Uncharacterized protein OS=Callipepla squamata OX=9009       0.0     
+tr|A0A7L3GXB8|A0A7L3GXB8_9PASS FRITZ protein (Fragment) OS=Buphagus erythrorhynchus OX=245  0.0     
+tr|A0A7K4J6J0|A0A7K4J6J0_GEOCA FRITZ protein (Fragment) OS=Geococcyx californianus OX=8947  0.0     
+tr|A0A7L2YQS4|A0A7L2YQS4_JACJC FRITZ protein (Fragment) OS=Jacana jacana OX=54508 GN=Wdpcp  0.0     
+tr|A0A7K5FM59|A0A7K5FM59_PROAR FRITZ protein (Fragment) OS=Probosciger aterrimus OX=141839  0.0     
+tr|A0A091NLV6|A0A091NLV6_APAVI WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A091LRN4|A0A091LRN4_CARIC WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A091JWU9|A0A091JWU9_COLST WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A3Q7VRL7|A0A3Q7VRL7_URSAR WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|M7BLP7|M7BLP7_CHEMY WD repeat-containing and planar cell polarity effector protein       0.0     
+tr|A0A6P4ZMG1|A0A6P4ZMG1_BRABE WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6P4ZA75|A0A6P4ZA75_BRABE WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6J2WGB7|A0A6J2WGB7_CHACN WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|E7F9Q9|E7F9Q9_DANRE WD repeat-containing planar cell polarity effector OS=Danio rerio    0.0     
+tr|A0A7J6C590|A0A7J6C590_9TELE Uncharacterized protein OS=Onychostoma macrolepis OX=369639  0.0     
+tr|A0A7L1BZC4|A0A7L1BZC4_9PASS FRITZ protein (Fragment) OS=Illadopsis cleaveri OX=201329 G  0.0     
+tr|A0A498N6N4|A0A498N6N4_LABRO WD repeat-containing and planar cell polarity effector frit  0.0     
+tr|A0A7K8XQB8|A0A7K8XQB8_9PICI FRITZ protein (Fragment) OS=Eubucco bourcierii OX=91767 GN=  0.0     
+tr|C3ZXE5|C3ZXE5_BRAFL Uncharacterized protein OS=Branchiostoma floridae OX=7739            0.0     
+tr|A0A6I8SDJ8|A0A6I8SDJ8_XENTR WD repeat containing planar cell polarity effector OS=Xenop  0.0     
+tr|A0A3B3RMG0|A0A3B3RMG0_9TELE WD repeat containing planar cell polarity effector OS=Param  0.0     
+tr|A0A7J7EQQ4|A0A7J7EQQ4_DICBM Uncharacterized protein OS=Diceros bicornis minor OX=77932   0.0     
+tr|A0A6P8G3M1|A0A6P8G3M1_CLUHA WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7L1S1G9|A0A7L1S1G9_9PASS FRITZ protein (Fragment) OS=Locustella ochotensis OX=187437  0.0     
+tr|A0A6P6R9X7|A0A6P6R9X7_CARAU LOW QUALITY PROTEIN: WD repeat-containing and planar cell p  0.0     
+tr|A0A2R2MIN4|A0A2R2MIN4_LINUN WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A4W6DS09|A0A4W6DS09_LATCA WD repeat containing planar cell polarity effector OS=Lates  0.0     
+tr|A0A4W6DU82|A0A4W6DU82_LATCA WD repeat containing planar cell polarity effector OS=Lates  0.0     
+tr|A0A1S3HFW6|A0A1S3HFW6_LINUN WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6P7KPA4|A0A6P7KPA4_BETSP WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A3B4VCM7|A0A3B4VCM7_SERDU WD repeat containing planar cell polarity effector OS=Serio  0.0     
+tr|A0A6P7KL46|A0A6P7KL46_BETSP WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6A5E9H2|A0A6A5E9H2_PERFL Uncharacterized protein OS=Perca fluviatilis OX=8168         0.0     
+tr|A0A2D0RMW3|A0A2D0RMW3_ICTPU WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6J2R7S7|A0A6J2R7S7_COTGO WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6P7KL69|A0A6P7KL69_BETSP WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A484CD04|A0A484CD04_PERFV Uncharacterized protein OS=Perca flavescens OX=8167          0.0     
+tr|A0A3P9DPF4|A0A3P9DPF4_9CICH WD repeat containing planar cell polarity effector OS=Mayla  0.0     
+tr|A0A5N5N6K6|A0A5N5N6K6_PANHP Uncharacterized protein OS=Pangasianodon hypophthalmus OX=3  0.0     
+tr|A0A3P8REM8|A0A3P8REM8_ASTCA WD repeat containing planar cell polarity effector OS=Astat  0.0     
+tr|A0A3Q2W4T4|A0A3Q2W4T4_HAPBU WD repeat containing planar cell polarity effector OS=Haplo  0.0     
+tr|A0A087X8G3|A0A087X8G3_POEFO WD repeat containing planar cell polarity effector OS=Poeci  0.0     
+tr|A0A6P7KL64|A0A6P7KL64_BETSP WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|I3IYB3|I3IYB3_ORENI Uncharacterized protein OS=Oreochromis niloticus OX=8128 GN=wdpcp    0.0     
+tr|M3ZTR9|M3ZTR9_XIPMA Uncharacterized protein OS=Xiphophorus maculatus OX=8083 PE=3 SV=1   0.0     
+tr|A0A3B3YCL1|A0A3B3YCL1_9TELE WD repeat containing planar cell polarity effector OS=Poeci  0.0     
+tr|A0A3Q1INH4|A0A3Q1INH4_ANATE WD repeat containing planar cell polarity effector OS=Anaba  0.0     
+tr|A0A3B3WT33|A0A3B3WT33_9TELE WD repeat containing planar cell polarity effector OS=Poeci  0.0     
+tr|A0A3Q3NJ82|A0A3Q3NJ82_9TELE WD repeat containing planar cell polarity effector OS=Masta  0.0     
+tr|A0A6G0HPL2|A0A6G0HPL2_LARCR WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7J6ASB9|A0A7J6ASB9_AMEME Uncharacterized protein OS=Ameiurus melas OX=219545          0.0     
+tr|A0A3B5Q6E6|A0A3B5Q6E6_XIPMA Uncharacterized protein OS=Xiphophorus maculatus OX=8083 PE  0.0     
+tr|A0A671U074|A0A671U074_SPAAU WD repeat containing planar cell polarity effector OS=Sparu  0.0     
+tr|A0A6G1QZV2|A0A6G1QZV2_9TELE WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A3Q3RBP6|A0A3Q3RBP6_MONAL WD repeat containing planar cell polarity effector OS=Monop  0.0     
+tr|A0A3B4D8F9|A0A3B4D8F9_PYGNA WD repeat containing planar cell polarity effector OS=Pygoc  0.0     
+tr|A0A6P7JRB0|A0A6P7JRB0_9TELE WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|I3IYB2|I3IYB2_ORENI Uncharacterized protein OS=Oreochromis niloticus OX=8128 GN=wdpcp    0.0     
+tr|A0A094KIN2|A0A094KIN2_PODCR WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6P7JR12|A0A6P7JR12_9TELE WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6P8HQ52|A0A6P8HQ52_ACTTE WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|H2TTM2|H2TTM2_TAKRU Uncharacterized protein OS=Takifugu rubripes OX=31033 GN=wdpcp PE=3  0.0     
+tr|A0A3S1BYZ6|A0A3S1BYZ6_ELYCH Uncharacterized protein OS=Elysia chlorotica OX=188477       0.0     
+tr|A0A2C9KI08|A0A2C9KI08_BIOGL Uncharacterized protein OS=Biomphalaria glabrata OX=6526     0.0     
+tr|A0A6P8UI22|A0A6P8UI22_GYMAC WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|K1RF96|K1RF96_CRAGI WD repeat-containing protein C2orf86 OS=Crassostrea gigas OX=29159   0.0     
+tr|A0A4Z2C5J0|A0A4Z2C5J0_9TELE Uncharacterized protein OS=Takifugu bimaculatus OX=433685    0.0     
+tr|A0A553Q1J2|A0A553Q1J2_9TELE Uncharacterized protein (Fragment) OS=Danionella translucid  0.0     
+tr|A0A6Q2WP50|A0A6Q2WP50_ESOLU WD repeat containing planar cell polarity effector OS=Esox   0.0     
+tr|A0A3B3H778|A0A3B3H778_ORYLA Uncharacterized protein OS=Oryzias latipes OX=8090 GN=wdpcp  0.0     
+tr|A0A2F0BLG4|A0A2F0BLG4_ESCRO WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A3P9A2U8|A0A3P9A2U8_ESOLU WD repeat containing planar cell polarity effector OS=Esox   0.0     
+tr|A0A668SSS7|A0A668SSS7_OREAU WD repeat containing planar cell polarity effector OS=Oreoc  0.0     
+tr|A0A3P9MHV4|A0A3P9MHV4_ORYLA WD repeat containing planar cell polarity effector OS=Oryzi  0.0     
+tr|A0A3B5RBD4|A0A3B5RBD4_XIPMA Uncharacterized protein OS=Xiphophorus maculatus OX=8083 PE  0.0     
+tr|A0A6Q2XZF9|A0A6Q2XZF9_ESOLU WD repeat containing planar cell polarity effector OS=Esox   0.0     
+tr|A7S6S2|A7S6S2_NEMVE Predicted protein (Fragment) OS=Nematostella vectensis OX=45351      0.0     
+tr|A0A210QWM3|A0A210QWM3_MIZYE WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6D2XQE4|A0A6D2XQE4_TAKRU Uncharacterized protein OS=Takifugu rubripes OX=31033 GN=wd  0.0     
+tr|A0A401NR92|A0A401NR92_SCYTO Uncharacterized protein (Fragment) OS=Scyliorhinus torazame  0.0     
+tr|A0A1A7WLA1|A0A1A7WLA1_9TELE WD repeat containing planar cell polarity effector (Fragmen  0.0     
+tr|A0A3P8UE12|A0A3P8UE12_CYNSE WD repeat containing planar cell polarity effector OS=Cynog  0.0     
+tr|A0A1A7X4Q1|A0A1A7X4Q1_9TELE WD repeat containing planar cell polarity effector OS=Iconi  0.0     
+tr|Q4SGC4|Q4SGC4_TETNG Chromosome 17 SCAF14597, whole genome shotgun sequence (Fragment)    0.0     
+tr|A0A3P9H6L1|A0A3P9H6L1_ORYLA WD repeat containing planar cell polarity effector OS=Oryzi  0.0     
+tr|A0A669C7F3|A0A669C7F3_ORENI Uncharacterized protein OS=Oreochromis niloticus OX=8128 GN  0.0     
+tr|A0A3B3H435|A0A3B3H435_ORYLA Uncharacterized protein OS=Oryzias latipes OX=8090 GN=wdpcp  0.0     
+tr|A0A3Q1G724|A0A3Q1G724_9TELE WD repeat containing planar cell polarity effector           0.0     
+tr|A0A3Q3KAP0|A0A3Q3KAP0_MONAL WD repeat containing planar cell polarity effector OS=Monop  0.0     
+tr|A0A4U5VDH7|A0A4U5VDH7_COLLU WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A2I4CA81|A0A2I4CA81_9TELE WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|V4BDA4|V4BDA4_LOTGI Uncharacterized protein OS=Lottia gigantea OX=225164                 0.0     
+tr|A0A2U9CE03|A0A2U9CE03_SCOMX Putative WD repeat-containing and planar cell polarity effe  0.0     
+tr|A0A3P8RD73|A0A3P8RD73_ASTCA WD repeat containing planar cell polarity effector OS=Astat  0.0     
+tr|A0A3Q3AV29|A0A3Q3AV29_KRYMA WD repeat containing planar cell polarity effector OS=Krypt  0.0     
+tr|A0A553Q1J7|A0A553Q1J7_9TELE Uncharacterized protein (Fragment) OS=Danionella translucid  0.0     
+tr|A0A7M7PSZ1|A0A7M7PSZ1_STRPU Uncharacterized protein OS=Strongylocentrotus purpuratus OX  0.0     
+tr|H3CWU4|H3CWU4_TETNG WD repeat containing planar cell polarity effector OS=Tetraodon      0.0     
+tr|A0A3Q3KAQ2|A0A3Q3KAQ2_MONAL WD repeat containing planar cell polarity effector OS=Monop  0.0     
+tr|A0A671U2F8|A0A671U2F8_SPAAU WD repeat containing planar cell polarity effector OS=Sparu  0.0     
+tr|A0A3B5Q4J7|A0A3B5Q4J7_XIPMA Uncharacterized protein OS=Xiphophorus maculatus OX=8083 PE  0.0     
+tr|A0A3Q1ICG4|A0A3Q1ICG4_ANATE WD repeat containing planar cell polarity effector OS=Anaba  0.0     
+tr|A0A7N6FHJ0|A0A7N6FHJ0_ANATE WD repeat containing planar cell polarity effector OS=Anaba  0.0     
+tr|A0A669C9B8|A0A669C9B8_ORENI Uncharacterized protein OS=Oreochromis niloticus OX=8128 GN  0.0     
+tr|A0A1A8IW05|A0A1A8IW05_NOTKU WD repeat containing planar cell polarity effector           0.0     
+tr|A0A1A8AQ19|A0A1A8AQ19_NOTFU WD repeat containing planar cell polarity effector           0.0     
+tr|A0A1A7Z7W0|A0A1A7Z7W0_NOTFU WD repeat containing planar cell polarity effector           0.0     
+tr|A0A1A8BMD2|A0A1A8BMD2_9TELE WD repeat containing planar cell polarity effector           0.0     
+tr|A0A2T7NZ07|A0A2T7NZ07_POMCA Uncharacterized protein OS=Pomacea canaliculata OX=400727    0.0     
+tr|A0A669EVU4|A0A669EVU4_ORENI Uncharacterized protein OS=Oreochromis niloticus OX=8128 GN  0.0     
+tr|A0A7J8FNX4|A0A7J8FNX4_ROUAE WD repeat containing planar cell polarity effector OS=Rouse  0.0     
+tr|R7U559|R7U559_CAPTE Uncharacterized protein OS=Capitella teleta OX=283909                0.0     
+tr|A0A7M5XJK6|A0A7M5XJK6_9CNID Uncharacterized protein OS=Clytia hemisphaerica OX=252671 P  0.0     
+tr|A0A6S7G3N2|A0A6S7G3N2_PARCT WD repeat-containing and planar cell polarity effector frit  0.0     
+tr|A0A672KQ63|A0A672KQ63_SINGR WD repeat containing planar cell polarity effector           0.0     
+tr|A0A3Q0S1I6|A0A3Q0S1I6_AMPCI WD repeat containing planar cell polarity effector OS=Amphi  0.0     
+tr|A0A671TYC8|A0A671TYC8_SPAAU WD repeat containing planar cell polarity effector OS=Sparu  0.0     
+tr|A0A6S7G7R0|A0A6S7G7R0_PARCT WD repeat-containing and planar cell polarity effector frit  0.0     
+tr|A0A671L7F9|A0A671L7F9_9TELE WD repeat containing planar cell polarity effector           0.0     
+tr|A0A3Q3WKU1|A0A3Q3WKU1_MOLML WD repeat containing planar cell polarity effector OS=Mola   0.0     
+tr|A0A3B4ZCR6|A0A3B4ZCR6_9TELE WD repeat containing planar cell polarity effector OS=Stega  0.0     
+tr|A0A3P4KCQ3|A0A3P4KCQ3_GULGU Uncharacterized protein (Fragment) OS=Gulo gulo OX=48420     0.0     
+tr|A0A5N4D7G5|A0A5N4D7G5_CAMDR WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A672GWF1|A0A672GWF1_SALFA WD repeat containing planar cell polarity effector OS=Salar  0.0     
+tr|A0A3M6TZD1|A0A3M6TZD1_POCDA Uncharacterized protein OS=Pocillopora damicornis OX=46731   0.0     
+tr|A0A2G8KMD0|A0A2G8KMD0_STIJA Uncharacterized protein OS=Stichopus japonicus OX=307972     0.0     
+tr|A0A293MFF2|A0A293MFF2_ORNER Uncharacterized protein (Fragment) OS=Ornithodoros erraticu  0.0     
+tr|A0A6P7SMT7|A0A6P7SMT7_OCTVU WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A0L8I2U0|A0A0L8I2U0_OCTBM Uncharacterized protein OS=Octopus bimaculoides OX=37653     0.0     
+tr|A0A2B4RAE9|A0A2B4RAE9_STYPI WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|T1JGE4|T1JGE4_STRMM SAYSvFN domain-containing protein OS=Strigamia maritima OX=126957    0.0     
+tr|A0A674NEP4|A0A674NEP4_TAKRU Uncharacterized protein OS=Takifugu rubripes OX=31033 GN=wd  0.0     
+tr|A0A674MMT2|A0A674MMT2_TAKRU Uncharacterized protein OS=Takifugu rubripes OX=31033 GN=wd  0.0     
+tr|A0A3Q4H9W9|A0A3Q4H9W9_NEOBR WD repeat containing planar cell polarity effector           0.0     
+tr|A0A5J5MIU8|A0A5J5MIU8_MUNRE Uncharacterized protein OS=Muntiacus reevesi OX=9886         0.0     
+tr|A0A672KVH4|A0A672KVH4_SINGR WD repeat containing planar cell polarity effector           0.0     
+tr|A0A4D5RD65|A0A4D5RD65_IXOSC Putative wd repeat-containing (Fragment) OS=Ixodes scapular  0.0     
+tr|A0A6P7VRS6|A0A6P7VRS6_IXOSC WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A667X499|A0A667X499_9TELE WD repeat containing planar cell polarity effector OS=Myrip  0.0     
+tr|A0A4D5RDM4|A0A4D5RDM4_IXOSC Putative wd repeat-containing (Fragment) OS=Ixodes scapular  0.0     
+tr|A0A147BGI5|A0A147BGI5_IXORI Putative wd repeat-containing OS=Ixodes ricinus OX=34613 PE  0.0     
+tr|A0A5A9NQ77|A0A5A9NQ77_9TELE WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6P7W0Z1|A0A6P7W0Z1_IXOSC WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A2P4SVJ1|A0A2P4SVJ1_BAMTH Uncharacterized protein (Fragment) OS=Bambusicola thoracicu  0.0     
+tr|A0A7D9E4A8|A0A7D9E4A8_PARCT WD repeat-containing and planar cell polarity effector frit  0.0     
+tr|A0A3B4Y093|A0A3B4Y093_SERLL WD repeat containing planar cell polarity effector OS=Serio  0.0     
+tr|A0A067QKD4|A0A067QKD4_ZOONE WD repeat-containing protein C2orf86 OS=Zootermopsis nevade  0.0     
+tr|A0A6P7VZ79|A0A6P7VZ79_IXOSC WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6L2Q2Y6|A0A6L2Q2Y6_COPFO Uncharacterized protein (Fragment) OS=Coptotermes formosanu  0.0     
+tr|A0A5J5CT08|A0A5J5CT08_9PERO Uncharacterized protein (Fragment) OS=Etheostoma spectabile  0.0     
+tr|A0A7J7J4U0|A0A7J7J4U0_BUGNE WDPCP OS=Bugula neritina OX=10212 GN=EB796_020576 PE=3 SV=1  0.0     
+tr|A0A482XQP8|A0A482XQP8_LAOST Uncharacterized protein OS=Laodelphax striatellus OX=195883  0.0     
+tr|A0A5C6PG92|A0A5C6PG92_9TELE WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A665TQW0|A0A665TQW0_ECHNA WD repeat containing planar cell polarity effector OS=Echen  0.0     
+tr|A0A1B6D3B8|A0A1B6D3B8_9HEMI Uncharacterized protein OS=Clastoptera arizonana OX=38151 G  0.0     
+tr|A0A5N3W761|A0A5N3W761_MUNMU Uncharacterized protein (Fragment) OS=Muntiacus muntjak OX=  0.0     
+tr|A0A667WQG8|A0A667WQG8_9TELE WD repeat containing planar cell polarity effector OS=Myrip  0.0     
+tr|A0A6J1S1J5|A0A6J1S1J5_FRAOC WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7J5XXG6|A0A7J5XXG6_DISMA Uncharacterized protein OS=Dissostichus mawsoni OX=36200     0.0     
+tr|A0A6S7FXQ7|A0A6S7FXQ7_PARCT WD repeat-containing and planar cell polarity effector frit  0.0     
+tr|A0A3B3DZT4|A0A3B3DZT4_ORYME WD repeat containing planar cell polarity effector OS=Oryzi  0.0     
+tr|A0A146VYW1|A0A146VYW1_FUNHE WD repeat containing planar cell polarity effector OS=Fundu  0.0     
+tr|B0X1U1|B0X1U1_CULQU Uncharacterized protein OS=Culex quinquefasciatus OX=7176            0.0     
+tr|A0A182GRW7|A0A182GRW7_AEDAL Uncharacterized protein OS=Aedes albopictus OX=7160          0.0     
+tr|Q16RV9|Q16RV9_AEDAE AAEL010795-PA OS=Aedes aegypti OX=7159 GN=AAEL010795 PE=3 SV=1       0.0     
+tr|A0A6P8ZQA6|A0A6P8ZQA6_THRPL WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A3P9QBK3|A0A3P9QBK3_POERE WD repeat containing planar cell polarity effector OS=Poeci  0.0     
+tr|A0A182GY43|A0A182GY43_AEDAL Uncharacterized protein OS=Aedes albopictus OX=7160          0.0     
+tr|A0A6R5IBQ1|A0A6R5IBQ1_AEDAE Uncharacterized protein OS=Aedes aegypti OX=7159 GN=5573888  0.0     
+tr|A0A3B3CTK8|A0A3B3CTK8_ORYME WD repeat containing planar cell polarity effector OS=Oryzi  0.0     
+tr|A0A7R9CN22|A0A7R9CN22_TIMCR Hypothetical protein OS=Timema cristinae OX=61476            0.0     
+tr|A0A6J8BFZ3|A0A6J8BFZ3_MYTCO WDPCP OS=Mytilus coruscus OX=42192 GN=MCOR_18666 PE=3 SV=1   0.0     
+tr|A0A6F9DXE8|A0A6F9DXE8_9ASCI WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A3B3DZW5|A0A3B3DZW5_ORYME WD repeat containing planar cell polarity effector OS=Oryzi  0.0     
+tr|A0A3B3CTJ1|A0A3B3CTJ1_ORYME WD repeat containing planar cell polarity effector OS=Oryzi  0.0     
+tr|A0A023EY85|A0A023EY85_AEDAL Putative ack (Fragment) OS=Aedes albopictus OX=7160 PE=2 SV  0.0     
+tr|A0A315USZ3|A0A315USZ3_GAMAF Uncharacterized protein OS=Gambusia affinis OX=33528         0.0     
+tr|A0A6G1RKM2|A0A6G1RKM2_9GRUI WD repeat containing planar cell polarity effector (Fragmen  0.0     
+tr|A0A182QNS5|A0A182QNS5_9DIPT Uncharacterized protein OS=Anopheles farauti OX=69004 PE=3   0.0     
+tr|A0A3Q1B998|A0A3Q1B998_AMPOC WD repeat containing planar cell polarity effector OS=Amphi  0.0     
+tr|A0A182NMN6|A0A182NMN6_9DIPT Uncharacterized protein OS=Anopheles dirus OX=7168 PE=3 SV=  0.0     
+tr|A0A084VK03|A0A084VK03_ANOSI AGAP002252-PA-like protein OS=Anopheles sinensis OX=74873    0.0     
+tr|A0A0P4WSM0|A0A0P4WSM0_SCYOL Uncharacterized protein OS=Scylla olivacea OX=85551 PE=3 SV  0.0     
+tr|A0A182PJN4|A0A182PJN4_9DIPT Uncharacterized protein OS=Anopheles epiroticus OX=199890 P  0.0     
+tr|A0A182J9D5|A0A182J9D5_9DIPT Uncharacterized protein OS=Anopheles atroparvus OX=41427 PE  0.0     
+tr|A0A1B6M0F5|A0A1B6M0F5_9HEMI Uncharacterized protein OS=Graphocephala atropunctata OX=36  0.0     
+tr|A0A182M0J0|A0A182M0J0_9DIPT Uncharacterized protein OS=Anopheles culicifacies OX=139723  0.0     
+tr|A0A182K5W9|A0A182K5W9_9DIPT Uncharacterized protein OS=Anopheles christyi OX=43041 PE=3  0.0     
+tr|A0A182Y4Q5|A0A182Y4Q5_ANOST Uncharacterized protein OS=Anopheles stephensi OX=30069 PE=  0.0     
+tr|A0A182VQ23|A0A182VQ23_9DIPT Uncharacterized protein OS=Anopheles minimus OX=112268 PE=3  0.0     
+tr|A0A7J7JIW9|A0A7J7JIW9_BUGNE WDPCP OS=Bugula neritina OX=10212 GN=EB796_015647 PE=3 SV=1  0.0     
+tr|Q7QKB4|Q7QKB4_ANOGA AGAP002252-PA OS=Anopheles gambiae OX=7165 GN=AgaP_AGAP002252 PE=3   0.0     
+tr|A0A182X3A2|A0A182X3A2_ANOQN Uncharacterized protein OS=Anopheles quadriannulatus OX=346  0.0     
+tr|A0A453Z0X5|A0A453Z0X5_ANOGA Uncharacterized protein OS=Anopheles gambiae OX=7165 PE=3 S  0.0     
+tr|A0A182VEH6|A0A182VEH6_ANOME Uncharacterized protein OS=Anopheles merus OX=30066 PE=3 SV  0.0     
+tr|A0A6E8WBF0|A0A6E8WBF0_9DIPT Uncharacterized protein OS=Anopheles coluzzii OX=1518534 PE  0.0     
+tr|A0A3R7PQ15|A0A3R7PQ15_PENVA WD repeat-containing protein C2orf86 OS=Penaeus vannamei OX  0.0     
+tr|A0A2R5LDZ0|A0A2R5LDZ0_9ACAR Uncharacterized protein (Fragment) OS=Ornithodoros turicata  0.0     
+tr|A0A182HZF8|A0A182HZF8_ANOAR Uncharacterized protein OS=Anopheles arabiensis OX=7173 PE=  0.0     
+tr|A0A182UBS8|A0A182UBS8_9DIPT Uncharacterized protein OS=Anopheles melas OX=34690 PE=3 SV  0.0     
+tr|A0A182SX86|A0A182SX86_9DIPT Uncharacterized protein OS=Anopheles maculatus OX=74869 PE=  0.0     
+tr|A0A7R9EB82|A0A7R9EB82_9NEOP Hypothetical protein OS=Timema monikensis OX=170555          0.0     
+tr|A0A6B2E8R7|A0A6B2E8R7_9DIPT Uncharacterized protein OS=Phlebotomus kandelakii OX=110934  0.0     
+tr|A0A2M4B9X3|A0A2M4B9X3_9DIPT Putative ubiquitin-protein ligase/hyperplastic discs protei  0.0     
+tr|A0A6J0C1J8|A0A6J0C1J8_NEOLC WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A232FBP3|A0A232FBP3_9HYME Uncharacterized protein OS=Trichomalopsis sarcophagae OX=54  0.0     
+tr|A0A1B0GKH0|A0A1B0GKH0_LUTLO Putative fritz isoform a OS=Lutzomyia longipalpis OX=7200 P  0.0     
+tr|A0A7M7H942|A0A7M7H942_NASVI Uncharacterized protein OS=Nasonia vitripennis OX=7425 PE=3  0.0     
+tr|A0A7M7QHN2|A0A7M7QHN2_NASVI Uncharacterized protein OS=Nasonia vitripennis OX=7425 PE=3  0.0     
+tr|A0A182F840|A0A182F840_ANOAL Uncharacterized protein OS=Anopheles albimanus OX=7167 PE=3  0.0     
+tr|G9L2K0|G9L2K0_MUSPF Uncharacterized protein (Fragment) OS=Mustela putorius furo OX=9669  0.0     
+tr|A0A1S3QF27|A0A1S3QF27_SALSA WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A2A3ESR1|A0A2A3ESR1_APICC WD repeat-containing protein OS=Apis cerana cerana OX=94128  0.0     
+tr|A0A7M7LM98|A0A7M7LM98_APIME Uncharacterized protein OS=Apis mellifera OX=7460 GN=726636  0.0     
+tr|W5J3B6|W5J3B6_ANODA Fritz OS=Anopheles darlingi OX=43151 GN=AND_009559 PE=3 SV=1         0.0     
+tr|A0A2M3Z2S1|A0A2M3Z2S1_9DIPT Putative ubiquitin-protein ligase/hyperplastic discs protei  0.0     
+tr|A0A1B6K3G6|A0A1B6K3G6_9HEMI Uncharacterized protein (Fragment) OS=Homalodisca liturata   0.0     
+tr|T1HMQ0|T1HMQ0_RHOPR Uncharacterized protein (Fragment) OS=Rhodnius prolixus OX=13249     0.0     
+tr|A0A2M4A8I4|A0A2M4A8I4_9DIPT Uncharacterized protein (Fragment) OS=Anopheles triannulatu  0.0     
+tr|A0A2M4A913|A0A2M4A913_9DIPT Uncharacterized protein (Fragment) OS=Anopheles triannulatu  0.0     
+tr|A0A2M4A8R9|A0A2M4A8R9_9DIPT Uncharacterized protein (Fragment) OS=Anopheles triannulatu  0.0     
+tr|A0A2M4A8M0|A0A2M4A8M0_9DIPT Putative ubiquitin-protein ligase/hyperplastic discs protei  0.0     
+tr|A0A2M4BA06|A0A2M4BA06_9DIPT Putative ubiquitin-protein ligase/hyperplastic discs protei  0.0     
+tr|A0A1J1I9K5|A0A1J1I9K5_9DIPT CLUMA_CG010340, isoform A OS=Clunio marinus OX=568069        0.0     
+tr|A0A6P8LBG8|A0A6P8LBG8_BOMIM WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6P3U0G5|A0A6P3U0G5_BOMTE LOW QUALITY PROTEIN: WD repeat-containing and planar cell p  0.0     
+tr|A0A6P8LQ21|A0A6P8LQ21_BOMIM WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6P8KXU1|A0A6P8KXU1_BOMIM WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6P3UQS6|A0A6P3UQS6_BOMIM WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6P8NDS4|A0A6P8NDS4_9HYME WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6J3K7L3|A0A6J3K7L3_9HYME WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A0A9WNR8|A0A0A9WNR8_LYGHE Uncharacterized protein (Fragment) OS=Lygus hesperus OX=300  0.0     
+tr|A0A146KW75|A0A146KW75_LYGHE WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6A4K5M2|A0A6A4K5M2_APOLU Uncharacterized protein OS=Apolygus lucorum OX=248454        0.0     
+tr|A0A3L8DDZ7|A0A3L8DDZ7_OOCBI VHS domain-containing protein OS=Ooceraea biroi OX=2015173   0.0     
+tr|A0A026W1E4|A0A026W1E4_OOCBI WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A0C9QFR8|A0A0C9QFR8_9HYME Frtz_1 protein OS=Fopius arisanus OX=64838 GN=frtz_1 PE=3 S  0.0     
+tr|A0A0C9RJC5|A0A0C9RJC5_9HYME Frtz_0 protein OS=Fopius arisanus OX=64838 GN=frtz_0 PE=3 S  0.0     
+tr|A0A0B7ABG9|A0A0B7ABG9_9EUPU Uncharacterized protein OS=Arion vulgaris OX=1028688 GN=ORF  0.0     
+tr|A0A0M9A640|A0A0M9A640_9HYME WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|E2B3D2|E2B3D2_HARSA WD repeat-containing protein LOC51057-like protein OS=Harpegnathos   0.0     
+tr|A0A195DB22|A0A195DB22_9HYME WD repeat-containing protein C2orf86 like protein OS=Trachy  0.0     
+tr|F4WXK5|F4WXK5_ACREC WD repeat-containing protein C2orf86-like protein OS=Acromyrmex      0.0     
+tr|A0A336MF77|A0A336MF77_CULSO CSON000763 protein OS=Culicoides sonorensis OX=179676 GN=CS  0.0     
+tr|A0A4S2JZX7|A0A4S2JZX7_9HYME Component of oligomeric Golgi complex 8 OS=Temnothorax       0.0     
+tr|A0A6J1PK32|A0A6J1PK32_9HYME WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A151WSL3|A0A151WSL3_9HYME WD repeat-containing protein C2orf86 like protein OS=Trachy  0.0     
+tr|A0A2J8N3R5|A0A2J8N3R5_PANTR WDPCP isoform 12 (Fragment) OS=Pan troglodytes OX=9598       0.0     
+tr|H7C375|H7C375_HUMAN WD repeat-containing and planar cell polarity effector protein       0.0     
+tr|A0A195FQ98|A0A195FQ98_9HYME WD repeat-containing protein C2orf86 like protein OS=Trachy  0.0     
+tr|A0A6I9MG85|A0A6I9MG85_9TELE WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A2P8XNQ3|A0A2P8XNQ3_BLAGE Uncharacterized protein (Fragment) OS=Blattella germanica O  0.0     
+tr|A0A0L7R2D7|A0A0L7R2D7_9HYME WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A195CRK6|A0A195CRK6_9HYME WD repeat-containing protein C2orf86 like protein OS=Cyphom  0.0     
+tr|A0A7M7MM02|A0A7M7MM02_APIME Uncharacterized protein OS=Apis mellifera OX=7460 GN=726636  0.0     
+tr|A0A6P3Y195|A0A6P3Y195_DINQU WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A444TSK4|A0A444TSK4_ARMVU WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A158NV12|A0A158NV12_ATTCE Uncharacterized protein OS=Atta cephalotes OX=12957 GN=1056  0.0     
+tr|A0A195BWH4|A0A195BWH4_9HYME WD repeat-containing protein C2orf86 like protein OS=Atta c  0.0     
+tr|A0A6J1PKH7|A0A6J1PKH7_9HYME WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6H5G515|A0A6H5G515_9HEMI Uncharacterized protein (Fragment) OS=Nesidiocoris tenuis O  0.0     
+tr|E2A4F9|E2A4F9_CAMFO WD repeat-containing protein LOC51057-like protein OS=Camponotus     0.0     
+tr|A0A6A4W0G2|A0A6A4W0G2_AMPAM WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7M7GQY0|A0A7M7GQY0_APIME Uncharacterized protein OS=Apis mellifera OX=7460 GN=726636  0.0     
+tr|A0A2J8XCA0|A0A2J8XCA0_PONAB WDPCP isoform 9 (Fragment) OS=Pongo abelii OX=9601           0.0     
+tr|A0A6I9WRM1|A0A6I9WRM1_9HYME WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A0K8VEW9|A0A0K8VEW9_BACLA WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|W8BPC1|W8BPC1_CERCA WD repeat-containing and planar cell polarity effector protein       0.0     
+tr|A0A0K8WD26|A0A0K8WD26_BACLA WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A0K8TWR6|A0A0K8TWR6_BACLA WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6P3Y169|A0A6P3Y169_DINQU WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A7R8YP34|A0A7R8YP34_HERIL Hypothetical protein OS=Hermetia illucens OX=343691          0.0     
+tr|A0A034VFY6|A0A034VFY6_BACDO WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6J0RK30|A0A6J0RK30_BACDO WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A310SEJ4|A0A310SEJ4_9HYME WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6V7HDR3|A0A6V7HDR3_9HYME Uncharacterized protein (Fragment) OS=Heterotrigona itama O  0.0     
+tr|A0A0A1X9N6|A0A0A1X9N6_ZEUCU WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A1A8NDP1|A0A1A8NDP1_9TELE WD repeat containing planar cell polarity effector (Fragmen  0.0     
+tr|A0A5N5T9J1|A0A5N5T9J1_9CRUS WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A1Z5KU44|A0A1Z5KU44_ORNMO Uncharacterized protein (Fragment) OS=Ornithodoros moubata   0.0     
+tr|A0A553PBM4|A0A553PBM4_TIGCA Uncharacterized protein OS=Tigriopus californicus OX=6832    0.0     
+tr|A0A293M6M9|A0A293M6M9_ORNER Uncharacterized protein (Fragment) OS=Ornithodoros erraticu  0.0     
+tr|A0A1X7UNT2|A0A1X7UNT2_AMPQE Uncharacterized protein OS=Amphimedon queenslandica OX=4006  0.0     
+tr|X1WBT1|X1WBT1_DANRE WD repeat-containing planar cell polarity effector (Fragment)        0.0     
+tr|A0A154P1T7|A0A154P1T7_DUFNO WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6I9X078|A0A6I9X078_9HYME WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A4Y2QXM8|A0A4Y2QXM8_ARAVE WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A3Q3F9R3|A0A3Q3F9R3_9LABR WD repeat containing planar cell polarity effector OS=Labru  0.0     
+tr|A0A1A8RSC7|A0A1A8RSC7_9TELE WD repeat containing planar cell polarity effector (Fragmen  0.0     
+tr|A0A5E4MSJ6|A0A5E4MSJ6_9HEMI WD40/YVTN repeat-like-containing domain,Quinoprotein amine   0.0     
+tr|V9L0U0|V9L0U0_CALMI WD repeat-containing and planar cell polarity effector protein       0.0     
+tr|A0A1A8LB49|A0A1A8LB49_9TELE WD repeat containing planar cell polarity effector (Fragmen  0.0     
+tr|A0A7M7IMB0|A0A7M7IMB0_APIME Uncharacterized protein OS=Apis mellifera OX=7460 GN=726636  0.0     
+tr|A0A7R9FZG9|A0A7R9FZG9_TIMSH Hypothetical protein OS=Timema shepardi OX=629360            0.0     
+tr|A0A6G0YVK1|A0A6G0YVK1_APHCR WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A1A9ZIU3|A0A1A9ZIU3_GLOPL Uncharacterized protein OS=Glossina pallidipes OX=7398 PE=3  0.0     
+tr|A0A6J2X7R5|A0A6J2X7R5_SITOR WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A1B0B4N0|A0A1B0B4N0_9MUSC Uncharacterized protein OS=Glossina palpalis gambiensis OX=  0.0     
+tr|A0A2D4MQU0|A0A2D4MQU0_9SAUR Uncharacterized protein (Fragment) OS=Micrurus spixii OX=12  0.0     
+tr|A0A3Q2Z0K5|A0A3Q2Z0K5_HIPCM WD repeat containing planar cell polarity effector OS=Hippo  0.0     
+tr|A0A1A9XDS4|A0A1A9XDS4_GLOFF Uncharacterized protein OS=Glossina fuscipes fuscipes OX=20  0.0     
+tr|A0A1B0FDJ1|A0A1B0FDJ1_GLOMM Uncharacterized protein OS=Glossina morsitans morsitans OX=  0.0     
+tr|A0A5E4BBE6|A0A5E4BBE6_MARMO Uncharacterized protein OS=Marmota monax OX=9995 GN=MONAX_5  0.0     
+tr|A0A1A8N1Q2|A0A1A8N1Q2_9TELE WD repeat containing planar cell polarity effector           0.0     
+tr|A0A1A9W1R8|A0A1A9W1R8_9MUSC Uncharacterized protein OS=Glossina brevipalpis OX=37001 PE  0.0     
+tr|A0A6M2DIN0|A0A6M2DIN0_9NEOP Uncharacterized protein (Fragment) OS=Xenopsylla cheopis OX  0.0     
+tr|A0A6J2UBN5|A0A6J2UBN5_DROLE WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6P4JGU6|A0A6P4JGU6_DROBP WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A1B6FNV0|A0A1B6FNV0_9HEMI Uncharacterized protein (Fragment) OS=Cuerna arida OX=14648  0.0     
+tr|B3MUA1|B3MUA1_DROAN Uncharacterized protein OS=Drosophila ananassae OX=7217              0.0     
+tr|A0A0M4E6H6|A0A0M4E6H6_DROBS Frtz OS=Drosophila busckii OX=30019 GN=Dbus_chr2Lg262 PE=3   0.0     
+tr|A0A6H5G7W1|A0A6H5G7W1_9HEMI Uncharacterized protein (Fragment) OS=Nesidiocoris tenuis O  0.0     
+tr|B4MW67|B4MW67_DROWI Uncharacterized protein OS=Drosophila willistoni OX=7260             0.0     
+tr|A0A0L0C708|A0A0L0C708_LUCCU WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A401NH12|A0A401NH12_SCYTO Uncharacterized protein (Fragment) OS=Scyliorhinus torazame  0.0     
+tr|M9PE00|M9PE00_DROME Fritz, isoform D OS=Drosophila melanogaster OX=7227 GN=frtz PE=3     0.0     
+tr|A0A1W4VDJ5|A0A1W4VDJ5_DROFC WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|M9PBR4|M9PBR4_DROME Fritz, isoform B OS=Drosophila melanogaster OX=7227 GN=frtz PE=3     0.0     
+sp|Q9VQ36|FRITZ_DROME WD repeat-containing and planar cell polarity effector protein        0.0     
+tr|A0A6A4S6U7|A0A6A4S6U7_SCOMX Uncharacterized protein OS=Scophthalmus maximus OX=52904     0.0     
+tr|A0A2H8TSJ7|A0A2H8TSJ7_9HEMI WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|J9K271|J9K271_ACYPI Uncharacterized protein OS=Acyrthosiphon pisum OX=7029 GN=100165951  0.0     
+tr|A0A1I8MXT1|A0A1I8MXT1_MUSDO Uncharacterized protein OS=Musca domestica OX=7370 GN=10188  0.0     
+tr|A0A0J9QTU7|A0A0J9QTU7_DROSI Uncharacterized protein OS=Drosophila simulans OX=7240       0.0     
+tr|A0A6P8JEI2|A0A6P8JEI2_DROMA WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|B4IDB2|B4IDB2_DROSE GM16600 OS=Drosophila sechellia OX=7238 GN=Dsec\GM16600 PE=3 SV=1    0.0     
+tr|B3N8W9|B3N8W9_DROER Uncharacterized protein OS=Drosophila erecta OX=7220                 0.0     
+tr|B4P3K7|B4P3K7_DROYA Uncharacterized protein OS=Drosophila yakuba OX=7245                 0.0     
+tr|A0A484BY21|A0A484BY21_DRONA Uncharacterized protein OS=Drosophila navojoa OX=7232        0.0     
+tr|B4KGC5|B4KGC5_DROMO Uncharacterized protein OS=Drosophila mojavensis OX=7230             0.0     
+tr|A0A6P5VU61|A0A6P5VU61_DROOB WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A3B0K319|A0A3B0K319_DROGU Blast:WD repeat-containing and planar cell polarity effecto  0.0     
+tr|A0A6P4HGS9|A0A6P4HGS9_DROTK WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6P4F5X2|A0A6P4F5X2_DRORH WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A6I8UJV2|A0A6I8UJV2_DROPS WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|Q29MT0|Q29MT0_DROPS Uncharacterized protein, isoform A OS=Drosophila pseudoobscura       0.0     
+tr|A0A6J1LW73|A0A6J1LW73_DROHY WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A1A8N9H4|A0A1A8N9H4_9TELE WD repeat containing planar cell polarity effector (Fragmen  0.0     
+tr|A0A6P4JBU7|A0A6P4JBU7_DROKI WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|B4G8S5|B4G8S5_DROPE GL19344 OS=Drosophila persimilis OX=7234 GN=Dper\GL19344 PE=3 SV=1   0.0     
+tr|A0A6P8W4J6|A0A6P8W4J6_DROAB WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A0Q9W9F9|A0A0Q9W9F9_DROVI Uncharacterized protein, isoform B OS=Drosophila virilis OX  0.0     
+tr|B4LTU8|B4LTU8_DROVI Uncharacterized protein, isoform A OS=Drosophila virilis OX=7244     0.0     
+tr|A0A6P7FBI0|A0A6P7FBI0_DIAVI WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A4Y0BP85|A0A4Y0BP85_ANOFN Uncharacterized protein OS=Anopheles funestus OX=62324 PE=3  0.0     
+tr|B3RW68|B3RW68_TRIAD Uncharacterized protein OS=Trichoplax adhaerens OX=10228             0.0     
+tr|D2A2G0|D2A2G0_TRICA WD repeat-containing and planar cell polarity effector protein       0.0     
+tr|T2MHK9|T2MHK9_HYDVU WD repeat-containing and planar cell polarity effector protein       0.0     
+tr|A0A7R9P5H6|A0A7R9P5H6_TIMCA (California timema) hypothetical protein OS=Timema californ  0.0     
+tr|A0A7I8VWC9|A0A7I8VWC9_9ANNE DgyrCDS9079 OS=Dimorphilus gyrociliatus OX=2664684           0.0     
+tr|A0A1I8Q391|A0A1I8Q391_STOCA Uncharacterized protein OS=Stomoxys calcitrans OX=35570      0.0     
+tr|A0A1I8Q368|A0A1I8Q368_STOCA Uncharacterized protein OS=Stomoxys calcitrans OX=35570      0.0     
+tr|A0A1I8Q385|A0A1I8Q385_STOCA Uncharacterized protein OS=Stomoxys calcitrans OX=35570      0.0     
+tr|A0A5E4BBQ9|A0A5E4BBQ9_MARMO Uncharacterized protein OS=Marmota monax OX=9995 GN=MONAX_5  0.0     
+tr|B4JAR6|B4JAR6_DROGR GH11480 OS=Drosophila grimshawi OX=7222 GN=Dgri\GH11480 PE=3 SV=1    0.0     
+tr|A0A6G1RC90|A0A6G1RC90_9GRUI WD repeat containing planar cell polarity effector (Fragmen  0.0     
+tr|G9L2K1|G9L2K1_MUSPF Uncharacterized protein (Fragment) OS=Mustela putorius furo OX=9669  0.0     
+tr|A0A2J7RCS2|A0A2J7RCS2_9NEOP Uncharacterized protein OS=Cryptotermes secundus OX=105785   0.0     
+tr|A0A4P6D8F7|A0A4P6D8F7_RHOPR Uncharacterized protein (Fragment) OS=Rhodnius prolixus OX=  0.0     
+tr|A0A3P4RED6|A0A3P4RED6_GULGU Uncharacterized protein (Fragment) OS=Gulo gulo OX=48420     0.0     
+tr|A0A2M3Z401|A0A2M3Z401_9DIPT Putative ubiquitin-protein ligase/hyperplastic discs protei  0.0     
+tr|A0A653DIE3|A0A653DIE3_CALMS Uncharacterized protein OS=Callosobruchus maculatus OX=6439  0.0     
+tr|A0A1W4XUH0|A0A1W4XUH0_AGRPL WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A452V5U6|A0A452V5U6_URSMA WD repeat containing planar cell polarity effector OS=Ursus  0.0     
+tr|A0A7J7B2H6|A0A7J7B2H6_9COLE Uncharacterized protein OS=Abscondita terminalis OX=2069292  0.0     
+tr|A0A1E1XDD6|A0A1E1XDD6_9ACAR Uncharacterized protein (Fragment) OS=Amblyomma aureolatum   0.0     
+tr|A0A653DGG2|A0A653DGG2_CALMS Uncharacterized protein OS=Callosobruchus maculatus OX=6439  0.0     
+tr|A0A5E4BDW1|A0A5E4BDW1_MARMO Uncharacterized protein OS=Marmota monax OX=9995 GN=MONAX_5  0.0     
+tr|A0A0P7UGW9|A0A0P7UGW9_SCLFO WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A674J4F4|A0A674J4F4_TERCA Uncharacterized protein OS=Terrapene carolina triunguis OX=  0.0     
+tr|A0A7R9CQ89|A0A7R9CQ89_TIMPO Hypothetical protein OS=Timema poppense OX=170557            0.0     
+tr|A0A1Y1MN09|A0A1Y1MN09_PHOPY Uncharacterized protein OS=Photinus pyralis OX=7054 GN=PPYR  0.0     
+tr|A7T826|A7T826_NEMVE Predicted protein (Fragment) OS=Nematostella vectensis OX=45351      0.0     
+tr|A0A1A8BXF4|A0A1A8BXF4_9TELE WD repeat containing planar cell polarity effector           0.0     
+tr|S4RP91|S4RP91_PETMA Uncharacterized protein OS=Petromyzon marinus OX=7757 PE=3 SV=1      0.0     
+tr|A0A7F5RL92|A0A7F5RL92_AGRPL WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|B1ATQ4|B1ATQ4_MOUSE WD repeat-containing and planar cell polarity effector protein       0.0     
+tr|A0A0K2UH59|A0A0K2UH59_LEPSM Uncharacterized protein OS=Lepeophtheirus salmonis OX=72036  0.0     
+tr|A0A286XQX6|A0A286XQX6_CAVPO Uncharacterized protein OS=Cavia porcellus OX=10141 PE=3 SV  0.0     
+tr|N6TE63|N6TE63_DENPD Uncharacterized protein (Fragment) OS=Dendroctonus ponderosae        0.0     
+tr|A0A7R8HAP2|A0A7R8HAP2_LEPSM WDPCP OS=Lepeophtheirus salmonis OX=72036 GN=LSAL_12209 PE=  0.0     
+tr|A0A2J8N3S0|A0A2J8N3S0_PANTR WDPCP isoform 14 (Fragment) OS=Pan troglodytes OX=9598       0.0     
+tr|A0A369RV76|A0A369RV76_9METZ WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|B7QG96|B7QG96_IXOSC Uncharacterized protein OS=Ixodes scapularis OX=6945 GN=8040811      0.0     
+tr|C9JDS5|C9JDS5_HUMAN WD repeat-containing and planar cell polarity effector protein       0.0     
+tr|A0A0R3NXE6|A0A0R3NXE6_DROPS Uncharacterized protein, isoform B OS=Drosophila pseudoobsc  0.0     
+tr|A0A2H6N4Q8|A0A2H6N4Q8_MICLE Uncharacterized protein (Fragment) OS=Micrurus lemniscatus   0.0     
+tr|Q7TNQ2|Q7TNQ2_MOUSE AV249152 protein OS=Mus musculus OX=10090 GN=Wdpcp PE=2 SV=1         0.0     
+tr|A0A286XCK3|A0A286XCK3_CAVPO Uncharacterized protein OS=Cavia porcellus OX=10141 PE=3 SV  0.0     
+tr|A0A1A8EKI6|A0A1A8EKI6_9TELE WD repeat containing planar cell polarity effector (Fragmen  0.0     
+tr|A0A482VVZ4|A0A482VVZ4_9CUCU WD repeat-containing and planar cell polarity effector prot  0.0     
+tr|A0A2J8XC88|A0A2J8XC88_PONAB WDPCP isoform 3 (Fragment) OS=Pongo abelii OX=9601           1.4e-45 
+tr|A0A670YHU2|A0A670YHU2_PSETE Uncharacterized protein OS=Pseudonaja textilis OX=8673 PE=3  2.9e-44 
+tr|A0A7R9CP58|A0A7R9CP58_TIMPO Hypothetical protein OS=Timema poppense OX=170557            2.0e-43 
+tr|A0A2D4P545|A0A2D4P545_MICSU Uncharacterized protein (Fragment) OS=Micrurus surinamensis  2.0e-43 
+tr|G3UNS7|G3UNS7_LOXAF Uncharacterized protein OS=Loxodonta africana OX=9785 PE=3 SV=1      5.0e-42 
+tr|A0A1S3QLJ2|A0A1S3QLJ2_SALSA WD repeat-containing and planar cell polarity effector prot  1.0e-41 
+tr|A0A7E4RVC8|A0A7E4RVC8_CIMLE Uncharacterized protein OS=Cimex lectularius OX=79782 PE=3   3.0e-41 
+tr|A0A6P3XZK1|A0A6P3XZK1_DINQU WD repeat-containing and planar cell polarity effector prot  5.0e-41 
+tr|A0A7R9Q712|A0A7R9Q712_9ACAR Hypothetical protein OS=Medioppia subpectinata OX=1979941    9.0e-41 
+tr|A0A1A6FZK3|A0A1A6FZK3_NEOLE Uncharacterized protein (Fragment) OS=Neotoma lepida OX=562  1.0e-40 
+tr|A0A7F5RL81|A0A7F5RL81_AGRPL WD repeat-containing and planar cell polarity effector prot  2.0e-39 
+tr|A0A443S719|A0A443S719_9ACAR WD repeat-containing and planar cell polarity effector prot  9.0e-39 
+tr|A0A2J7RCV5|A0A2J7RCV5_9NEOP Uncharacterized protein OS=Cryptotermes secundus OX=105785   1.0e-38 
+tr|A0A3S3RZ08|A0A3S3RZ08_9ACAR WD repeat-containing and planar cell polarity effector prot  2.0e-38 
+tr|T1JX53|T1JX53_TETUR Uncharacterized protein OS=Tetranychus urticae OX=32264 PE=3 SV=1    5.0e-38 
+tr|H2Z2Z3|H2Z2Z3_CIOSA Uncharacterized protein OS=Ciona savignyi OX=51511 PE=3 SV=1         3.0e-37 
+tr|A0A7M7L0H4|A0A7M7L0H4_VARDE Uncharacterized protein OS=Varroa destructor OX=109461 PE=3  1.0e-36 
+tr|A0A5E4CFL6|A0A5E4CFL6_MARMO FGGY_C domain-containing protein (Fragment) OS=Marmota mona  4.0e-36 
+tr|A0A226EKL4|A0A226EKL4_FOLCA WD repeat-containing and planar cell polarity effector prot  2.0e-35 
+tr|A0A2H6N533|A0A2H6N533_MICLE Uncharacterized protein OS=Micrurus lemniscatus carvalhoi O  9.0e-35 
+tr|A0A671QHA1|A0A671QHA1_9TELE Uncharacterized protein OS=Sinocyclocheilus anshuiensis OX=  2.0e-34 
+tr|A0A3P8U4A1|A0A3P8U4A1_AMPPE Uncharacterized protein OS=Amphiprion percula OX=161767 PE=  3.0e-34 
+tr|A0A3B4FP36|A0A3B4FP36_9CICH Uncharacterized protein OS=Pundamilia nyererei OX=303518 PE  4.0e-34 
+tr|A0A3Q1CLR7|A0A3Q1CLR7_AMPOC WD repeat containing planar cell polarity effector OS=Amphi  5.0e-34 
+tr|A0A672P8N9|A0A672P8N9_SINGR Uncharacterized protein OS=Sinocyclocheilus grahami OX=7536  5.0e-34 
+tr|E4X9Q3|E4X9Q3_OIKDI Uncharacterized protein OS=Oikopleura dioica OX=34765                9.0e-34 
+tr|A0A673KZK3|A0A673KZK3_9TELE Uncharacterized protein OS=Sinocyclocheilus rhinocerous OX=  1.0e-33 
+tr|A0A3Q3EKF0|A0A3Q3EKF0_9LABR Uncharacterized protein OS=Labrus bergylta OX=56723 PE=3 SV  2.0e-33 
+tr|A0A3B5ABH0|A0A3B5ABH0_9TELE Uncharacterized protein OS=Stegastes partitus OX=144197 PE=  2.0e-33 
+tr|A0A673ZTT7|A0A673ZTT7_SALTR Uncharacterized protein OS=Salmo trutta OX=8032 PE=3 SV=1    2.0e-33 
+tr|A0A673Z785|A0A673Z785_SALTR WD repeat-containing and planar cell polarity effector prot  2.0e-33 
+tr|A0A653DH11|A0A653DH11_CALMS Uncharacterized protein OS=Callosobruchus maculatus OX=6439  6.0e-33 
+tr|A0A0P7UB79|A0A0P7UB79_SCLFO Uncharacterized protein (Fragment) OS=Scleropages formosus   1.0e-32 
+tr|A0A6J8BGS1|A0A6J8BGS1_MYTCO WDPCP OS=Mytilus coruscus OX=42192 GN=MCOR_18664 PE=3 SV=1   3.0e-32 
+tr|A0A673BYC6|A0A673BYC6_9TELE Uncharacterized protein OS=Sphaeramia orbicularis OX=375764  6.0e-32 
+tr|A0A4W4EGB9|A0A4W4EGB9_ELEEL Uncharacterized protein OS=Electrophorus electricus OX=8005  8.0e-32 
+tr|A0A3B4B384|A0A3B4B384_9GOBI Uncharacterized protein OS=Periophthalmus magnuspinnatus OX  8.0e-32 
+tr|A0A0J7KP96|A0A0J7KP96_LASNI Wd repeat-containing protein OS=Lasius niger OX=67767 GN=RF  9.0e-32 
+tr|A0A3B5MFG7|A0A3B5MFG7_9TELE Uncharacterized protein OS=Xiphophorus couchianus OX=32473   4.0e-31 
+tr|A0A3B1JJX7|A0A3B1JJX7_ASTMX Uncharacterized protein OS=Astyanax mexicanus OX=7994 PE=3   4.0e-31 
+tr|A0A4W5JZ39|A0A4W5JZ39_9TELE Uncharacterized protein OS=Hucho hucho OX=62062 PE=3 SV=1    3.0e-30 
+tr|A0A3Q2DRE9|A0A3Q2DRE9_CYPVA Uncharacterized protein OS=Cyprinodon variegatus OX=28743 P  3.0e-30 
+tr|A0A3B3USP9|A0A3B3USP9_9TELE Uncharacterized protein OS=Poecilia latipinna OX=48699 PE=3  3.0e-30 
+tr|A0A293LZC2|A0A293LZC2_ORNER Uncharacterized protein (Fragment) OS=Ornithodoros erraticu  5.0e-30 
+tr|A0A087UED6|A0A087UED6_STEMI WD repeat-containing and planar cell polarity effector prot  5.0e-30 
+tr|A0A6V7KER7|A0A6V7KER7_9HYME Uncharacterized protein (Fragment) OS=Bracon brevicornis OX  1.0e-29 
+tr|A0A7I0Z3A8|A0A7I0Z3A8_DANPL LOW QUALITY PROTEIN: WD repeat-containing and planar cell p  1.0e-29 
+tr|A0A6G0TGV3|A0A6G0TGV3_APHGL Uncharacterized protein OS=Aphis glycines OX=307491 GN=AGLY  2.0e-29 
+tr|L9KQ67|L9KQ67_TUPCH Serine/threonine-protein kinase PAK 1 (Fragment) OS=Tupaia           4.0e-29 
+tr|A0A0P5VTF1|A0A0P5VTF1_9CRUS WD repeat-containing and planar cell polarity effector prot  7.0e-29 
+tr|E9HT82|E9HT82_DAPPU Uncharacterized protein OS=Daphnia pulex OX=6669                     1.0e-28 
+tr|A0A1B6FIA2|A0A1B6FIA2_9HEMI Uncharacterized protein (Fragment) OS=Cuerna arida OX=14648  3.0e-28 
+tr|G9L5K5|G9L5K5_MUSPF WD repeat-containing protein C2orf86-like protein (Fragment)         4.0e-28 
+tr|A0A0S7EPF0|A0A0S7EPF0_9TELE FRITZ (Fragment) OS=Poeciliopsis prolifica OX=188132 GN=FRI  6.0e-27 
+tr|Q53TG5|Q53TG5_HUMAN Uncharacterized protein LOC51057 (Fragment) OS=Homo sapiens OX=9606  2.0e-26 
+tr|A0A4W5KEM3|A0A4W5KEM3_9TELE Uncharacterized protein OS=Hucho hucho OX=62062 PE=3 SV=1    3.0e-26 
+tr|A0A1A6HGQ7|A0A1A6HGQ7_NEOLE Uncharacterized protein (Fragment) OS=Neotoma lepida OX=562  3.0e-26 
+tr|A0A6J1MJ11|A0A6J1MJ11_BICAN WD repeat-containing and planar cell polarity effector prot  5.0e-26 
+tr|Q53RX9|Q53RX9_HUMAN Uncharacterized protein LOC51057 (Fragment) OS=Homo sapiens OX=9606  7.0e-26 
+tr|A0A672KI90|A0A672KI90_SINGR Uncharacterized protein OS=Sinocyclocheilus grahami OX=7536  2.0e-25 
+tr|Q53S85|Q53S85_HUMAN Uncharacterized protein LOC51057 (Fragment) OS=Homo sapiens OX=9606  2.0e-25 
+tr|A0A1D2MXJ5|A0A1D2MXJ5_ORCCI WD repeat-containing and planar cell polarity effector prot  2.0e-25 
+tr|A0A1A9VXM7|A0A1A9VXM7_GLOAU Uncharacterized protein OS=Glossina austeni OX=7395 PE=3 SV  2.0e-25 
+tr|A0A2S2P7M0|A0A2S2P7M0_SCHGA WD repeat-containing and planar cell polarity effector prot  3.0e-25 
+tr|A0A194R2W3|A0A194R2W3_PAPMA WD repeat-containing and planar cell polarity effector prot  2.0e-24 
+tr|H2Z2Z6|H2Z2Z6_CIOSA Uncharacterized protein OS=Ciona savignyi OX=51511 PE=3 SV=1         4.0e-24 
+tr|A0A4W5K3J5|A0A4W5K3J5_9TELE Uncharacterized protein OS=Hucho hucho OX=62062 PE=3 SV=1    6.0e-24 
+tr|A7T8I1|A7T8I1_NEMVE Predicted protein (Fragment) OS=Nematostella vectensis OX=45351      7.0e-24 
+tr|A0A7R9BX69|A0A7R9BX69_9CRUS Hypothetical protein OS=Notodromas monacha OX=399045         3.0e-23 
+tr|A0A194PI11|A0A194PI11_PAPXU WD repeat-containing and planar cell polarity effector prot  3.0e-23 
+tr|A0A4W5JSD0|A0A4W5JSD0_9TELE Uncharacterized protein OS=Hucho hucho OX=62062 PE=3 SV=1    4.0e-23 
+tr|A0A673KNV1|A0A673KNV1_9TELE Uncharacterized protein OS=Sinocyclocheilus rhinocerous OX=  1.0e-22 
+tr|A0A2R7X4F7|A0A2R7X4F7_ONCFA Uncharacterized protein OS=Oncopeltus fasciatus OX=7536      2.0e-22 
+tr|A0A5E4PXN8|A0A5E4PXN8_9NEOP Uncharacterized protein OS=Leptidea sinapis OX=189913        3.0e-22 
+tr|A0A6J2JZY9|A0A6J2JZY9_BOMMA WD repeat-containing and planar cell polarity effector prot  1.0e-21 
+tr|A0A6J2JWU1|A0A6J2JWU1_BOMMA WD repeat-containing and planar cell polarity effector prot  2.0e-21 
+tr|A0A6J2JZY0|A0A6J2JZY0_BOMMA WD repeat-containing and planar cell polarity effector prot  2.0e-21 
+tr|A0A6J2JXL9|A0A6J2JXL9_BOMMA WD repeat-containing and planar cell polarity effector prot  2.0e-21 
+tr|A0A6J2JY13|A0A6J2JY13_BOMMA WD repeat-containing and planar cell polarity effector prot  2.0e-21 
+tr|A0A3Q2QLR1|A0A3Q2QLR1_FUNHE Uncharacterized protein OS=Fundulus heteroclitus OX=8078 PE  2.0e-21 
+tr|A0A2S2PZL8|A0A2S2PZL8_9HEMI WD repeat-containing and planar cell polarity effector prot  4.0e-21 
+tr|A0A060Z6D1|A0A060Z6D1_ONCMY Uncharacterized protein OS=Oncorhynchus mykiss OX=8022       4.0e-21 
+tr|A0A4W5JMP0|A0A4W5JMP0_9TELE Uncharacterized protein OS=Hucho hucho OX=62062 PE=3 SV=1    4.0e-21 
+tr|A0A6J0TCR5|A0A6J0TCR5_9SAUR WD repeat-containing and planar cell polarity effector prot  8.0e-21 
+tr|A0A2R8QAX1|A0A2R8QAX1_DANRE WD repeat-containing planar cell polarity effector OS=Danio  9.0e-21 
+tr|A0A1V9XRX8|A0A1V9XRX8_9ACAR Uncharacterized protein OS=Tropilaelaps mercedesae OX=41898  1.0e-20 
+tr|A0A437B6N8|A0A437B6N8_CHISP Uncharacterized protein OS=Chilo suppressalis OX=168631      2.0e-20 
+tr|A0A2H1VC14|A0A2H1VC14_SPOFR SFRICE_007619 OS=Spodoptera frugiperda OX=7108 GN=SFRICE_00  2.0e-20 
+tr|A0A6J0TGU3|A0A6J0TGU3_9SAUR WD repeat-containing and planar cell polarity effector prot  5.0e-20 
+tr|G3TH52|G3TH52_LOXAF Uncharacterized protein OS=Loxodonta africana OX=9785 PE=4 SV=1      9.0e-20 
+tr|A0A1A8K7H8|A0A1A8K7H8_NOTKU WD repeat containing planar cell polarity effector (Fragmen  3.0e-19 
+tr|D2HI00|D2HI00_AILME Uncharacterized protein (Fragment) OS=Ailuropoda melanoleuca         6.0e-19 
+tr|A0A4W5JNL6|A0A4W5JNL6_9TELE Uncharacterized protein OS=Hucho hucho OX=62062 PE=3 SV=1    6.0e-19 
+tr|A0A1A9VXM2|A0A1A9VXM2_GLOAU Uncharacterized protein OS=Glossina austeni OX=7395 PE=3 SV  2.0e-18 
+tr|A0A6F9C6K9|A0A6F9C6K9_9TELE Uncharacterized protein (Fragment) OS=Coregonus sp. 'balche  2.0e-18 
+tr|A0A401QDP0|A0A401QDP0_SCYTO Uncharacterized protein (Fragment) OS=Scyliorhinus torazame  5.0e-18 
+tr|A0A7E5VW95|A0A7E5VW95_TRINI WD repeat-containing and planar cell polarity effector prot  7.0e-18 
+tr|A0A212F3G6|A0A212F3G6_DANPL WD repeat-containing protein C2orf86 (Fragment) OS=Danaus p  1.0e-17 
+tr|A0A7R8X3R0|A0A7R8X3R0_9CRUS Hypothetical protein OS=Darwinula stevensoni OX=69355        2.0e-17 
+tr|A0A1X7UMS5|A0A1X7UMS5_AMPQE Uncharacterized protein OS=Amphimedon queenslandica OX=4006  2.0e-17 
+tr|A0A6J3CEB3|A0A6J3CEB3_GALME WD repeat-containing and planar cell polarity effector prot  2.0e-17 
+tr|A0A6J3CG48|A0A6J3CG48_GALME WD repeat-containing and planar cell polarity effector prot  2.0e-17 
+tr|A0A3M7PGS7|A0A3M7PGS7_BRAPC WD repeat-containing and planar cell polarity effector frit  3.0e-17 
+tr|A0A6F9C5Z7|A0A6F9C5Z7_9TELE Uncharacterized protein (Fragment) OS=Coregonus sp. 'balche  3.0e-17 
+tr|A0A087UED5|A0A087UED5_STEMI WD repeat-containing and planar cell polarity effector prot  4.0e-16 
+tr|A0A1A9VXM3|A0A1A9VXM3_GLOAU Uncharacterized protein OS=Glossina austeni OX=7395 PE=3 SV  8.0e-16 
+tr|A0A1A8K7P9|A0A1A8K7P9_NOTKU WD repeat containing planar cell polarity effector (Fragmen  3.0e-15 
+tr|A0A132A3B4|A0A132A3B4_SARSC Uncharacterized protein OS=Sarcoptes scabiei OX=52283        2.0e-14 
+tr|A0A7E5VWW8|A0A7E5VWW8_TRINI WD repeat-containing and planar cell polarity effector prot  2.0e-14 
+tr|F6V8F4|F6V8F4_CIOIN Uncharacterized protein OS=Ciona intestinalis OX=7719 PE=3 SV=2      3.0e-14 
+tr|A0A6V7KG32|A0A6V7KG32_9HYME Uncharacterized protein (Fragment) OS=Bracon brevicornis OX  5.0e-14 
+tr|A0A6G0TIE7|A0A6G0TIE7_APHGL Uncharacterized protein OS=Aphis glycines OX=307491 GN=AGLY  1.0e-13 
+tr|A0A1B6IA07|A0A1B6IA07_9HEMI Uncharacterized protein (Fragment) OS=Homalodisca liturata   2.0e-13 
+tr|A0A0T6BH06|A0A0T6BH06_9SCAR Uncharacterized protein OS=Oryctes borbonicus OX=1629725     4.0e-13 
+tr|A0A6P6YHZ7|A0A6P6YHZ7_DERPT WD repeat-containing and planar cell polarity effector prot  6.0e-13 
+tr|A0A5B7D5J4|A0A5B7D5J4_PORTR WD repeat-containing and planar cell polarity effector prot  1.0e-12 
+tr|A0A2R7X221|A0A2R7X221_ONCFA Uncharacterized protein (Fragment) OS=Oncopeltus fasciatus   2.0e-12 
+tr|B4IPB8|B4IPB8_DROSE GM13573 (Fragment) OS=Drosophila sechellia OX=7238 GN=Dsec\GM13573   4.0e-12 
+tr|A0A1Y1IB40|A0A1Y1IB40_KLENI Uncharacterized protein OS=Klebsormidium nitens OX=105231    6.0e-12 
+tr|R7U8K2|R7U8K2_CAPTE Uncharacterized protein (Fragment) OS=Capitella teleta OX=283909     2.0e-11 
+tr|A0A1S3CZK0|A0A1S3CZK0_DIACI WD repeat-containing and planar cell polarity effector prot  6.0e-11 
+tr|A0A1W0W9S1|A0A1W0W9S1_HYPDU Uncharacterized protein OS=Hypsibius dujardini OX=232323     1.0e-10 
+tr|A0A4C1U9M8|A0A4C1U9M8_EUMVA WD repeat-containing and planar cell polarity effector prot  2.0e-10 
+tr|D2HHZ8|D2HHZ8_AILME Uncharacterized protein (Fragment) OS=Ailuropoda melanoleuca         5.0e-10 
+tr|T1FEE1|T1FEE1_HELRO Uncharacterized protein OS=Helobdella robusta OX=6412 GN=20207190    6.0e-10 
+tr|F6YM26|F6YM26_CIOIN Uncharacterized protein OS=Ciona intestinalis OX=7719 PE=3 SV=2      2.0e-09 
+tr|A0A6L5CIJ9|A0A6L5CIJ9_9INSE Uncharacterized protein (Fragment) OS=Ephemera danica OX=10  1.0e-08 
+tr|A0A2A4JQE4|A0A2A4JQE4_HELVI Uncharacterized protein (Fragment) OS=Heliothis virescens O  1.0e-08 
+tr|A0A2S2N999|A0A2S2N999_SCHGA WD repeat-containing and planar cell polarity effector prot  1.0e-08 
+tr|A0A1L8G0M1|A0A1L8G0M1_XENLA Uncharacterized protein (Fragment) OS=Xenopus laevis OX=835  3.0e-08 
+tr|A0A674ITY4|A0A674ITY4_TERCA Uncharacterized protein OS=Terrapene carolina triunguis OX=  3.0e-07 
+tr|A0A7D9JRY8|A0A7D9JRY8_PARCT WD repeat-containing and planar cell polarity effector frit  3.0e-07 
+tr|A0A2J8N3S6|A0A2J8N3S6_PANTR WDPCP isoform 9 OS=Pan troglodytes OX=9598 GN=CK820_G001520  5.0e-07 
+tr|F8WBT2|F8WBT2_HUMAN WD repeat-containing and planar cell polarity effector protein       5.0e-07 
+tr|A0A0K2UG17|A0A0K2UG17_LEPSM Uncharacterized protein (Fragment) OS=Lepeophtheirus salmon  6.0e-07 
+tr|A0A1Y3BCV0|A0A1Y3BCV0_EURMA Uncharacterized protein OS=Euroglyphus maynei OX=6958        2.0e-06 
+tr|A0A7D9JSR0|A0A7D9JSR0_PARCT WD repeat-containing and planar cell polarity effector frit  1.0e-05 
+tr|S4NZQ5|S4NZQ5_9NEOP WD repeat-containing and planar cell polarity effector protein       5.0e-05 
+tr|A0A0H5QLX5|A0A0H5QLX5_9EUKA Uncharacterized protein (Fragment) OS=Spongospora subterran  6.0e-05 
+tr|A0A1X7SEM2|A0A1X7SEM2_AMPQE Uncharacterized protein OS=Amphimedon queenslandica OX=4006  0.0002  
+tr|A0A7R9C256|A0A7R9C256_9CRUS Hypothetical protein OS=Notodromas monacha OX=399045         0.0004  
+tr|A0A1D1V9Q6|A0A1D1V9Q6_RAMVA Uncharacterized protein OS=Ramazzottius varieornatus OX=947  0.0004  
+tr|A0A6L5CLX8|A0A6L5CLX8_9INSE Uncharacterized protein (Fragment) OS=Ephemera danica OX=10  0.0008  
+
+The following sequences from BLAST results were NOT used to build this profile :
+--------------------------------------------------------------------------------
+...
+******************************************************************************
+
+maximum : 998.999147
+M :     1 :     32.500 :+|
+R :     2 :     36.000 :+|
+R :     3 :     35.000 :+|
+E :     4 :     35.000 :+|
+F :     5 :     37.000 :+|
+C :     6 :     32.000 :+|
+W :     7 :     15.500 :|
+D :     8 :     42.000 :++|
+A :     9 :     39.000 :+|
+Y :    10 :     37.000 :+|
+S :    11 :     43.000 :++|
+K :    12 :     32.000 :+|
+A :    13 :     40.500 :++|
+A :    14 :     38.000 :+|
+G :    15 :     42.000 :++|
+S :    16 :     36.000 :+|
+R :    17 :     38.000 :+|
+A :    18 :     40.500 :++|
+S :    19 :     44.000 :++|
+S :    20 :     42.000 :++|
+P :    21 :     38.000 :+|
+L :    22 :     43.500 :++|
+P :    23 :     25.000 :+|
+R :    24 :     48.000 :++|
+Q :    25 :     53.000 :++|
+D :    26 :     78.500 :+++|
+R :    27 :     85.500 :++++|
+D :    28 :     82.000 :++++|
+S :    29 :     78.000 :+++|
+F :    30 :     86.000 :####  |
+C :    31 :    167.000 :########|
+H :    32 :    187.000 :#########|
+Q :    33 :    215.500 :##########|
+M :    34 :    501.500 :#########################|
+S :    35 :    407.500 :####################     |
+F :    36 :    430.500 :#####################     |
+C :    37 :    401.000 :####################      |
+L :    38 :    567.000 :############################   |
+T :    39 :    415.000 :####################           |
+E :    40 :    576.499 :############################   |
+L :    41 :    450.000 :######################         |
+H :    42 :    396.999 :###################             |
+L :    43 :    467.500 :#######################         |
+W :    44 :    598.499 :#############################   |
+S :    45 :    552.000 :###########################     |
+L :    46 :    434.500 :#####################           |
+K :    47 :    510.999 :#########################       |
+N :    48 :    307.000 :###############                 |
+T :    49 :    280.000 :##############                  |
+L :    50 :    528.000 :##########################      |
+H :    51 :    349.500 :#################               |
+I :    52 :    526.499 :++++++++++++++++++++++++++      |
+A :    53 :     82.000 :++++                            |
+D :    54 :    516.500 :+++++++++++++++++++++++++       |
+R :    55 :    203.500 :++++++++++                      |
+D :    56 :    585.999 :+++++++++++++++++++++++++++++   |
+I :    57 :    485.000 :########################        |
+G :    58 :    585.999 :#############################    |
+I :    59 :    344.500 :#################                |
+Y :    60 :    440.000 :######################           |
+Q :    61 :    505.500 :#########################        |
+Y :    62 :    599.999 :##############################   |
+Y :    63 :    412.000 :####################             |
+D :    64 :    511.500 :#########################        |
+K :    65 :    590.499 :#############################    |
+K :    66 :    468.499 :#######################          |
+D :    67 :    375.999 :++++++++++++++++++              |
+P :    68 :    372.000 :++++++++++++++++++            |
+P :    69 :    187.000 :+++++++++                   |
+A :    70 :    231.999 :+++++++++++                   |
+T :    71 :    252.499 :++++++++++++                   |
+E :    72 :    382.499 :+++++++++++++++++++              |
+H :    73 :    408.500 :++++++++++++++++++++            |
+G :    74 :    278.000 :+++++++++++++                   |
+N :    75 :    207.500 :++++++++++                    |
+L :    76 :    403.499 :++++++++++++++++++++         |
+E :    77 :    448.999 :++++++++++++++++++++++         |
+K :    78 :    213.000 :##########                     |
+K :    79 :    609.499 :##############################   |
+Q :    80 :    472.000 :#######################          |
+K :    81 :    369.500 :##################               |
+L :    82 :    354.000 :#################                |
+A :    83 :    393.499 :###################              |
+E :    84 :    587.500 :#############################     |
+S :    85 :    474.000 :#######################            |
+R :    86 :    651.499 :################################    |
+D :    87 :    424.000 :#####################               |
+Y :    88 :    462.500 :#######################             |
+P :    89 :    407.000 :####################                |
+W :    90 :    614.499 :##############################      |
+T :    91 :    330.500 :################                   |
+L :    92 :    494.500 :########################           |
+K :    93 :    513.500 :#########################           |
+N :    94 :    581.499 :#############################       |
+R :    95 :    460.000 :#######################             |
+R :    96 :    625.500 :###############################     |
+P :    97 :    571.000 :############################       |
+E :    98 :    446.500 :######################             |
+K :    99 :    628.000 :###############################     |
+L :   100 :    662.500 :#################################  |
+R :   101 :    612.000 :##############################     |
+D :   102 :    609.000 :##############################     |
+S :   103 :    484.000 :########################           |
+L :   104 :    635.499 :###############################    |
+K :   105 :    627.000 :###############################     |
+E :   106 :    575.500 :############################        |
+L :   107 :    544.500 :###########################         |
+E :   108 :    674.499 :#################################   |
+E :   109 :    527.999 :##########################          |
+L :   110 :    570.500 :############################        |
+M :   111 :    534.000 :++++++++++++++++++++++++++          |
+Q :   112 :    539.000 :++++++++++++++++++++++++++          |
+N :   113 :    425.000 :+++++++++++++++++++++               |
+S :   114 :    451.000 :++++++++++++++++++++++              |
+R :   115 :    242.999 :++++++++++++                        |
+C :   116 :    497.000 :++++++++++++++++++++++++            |
+V :   117 :    586.999 :#############################       |
+L :   118 :    401.000 :####################                |
+S :   119 :    470.000 :#######################             |
+K :   120 :    532.500 :##########################          |
+W :   121 :    681.499 :##################################  |
+K :   122 :    517.500 :#########################           |
+N :   123 :    549.500 :###########################         |
+K :   124 :    518.000 :#########################           |
+Y :   125 :    327.000 :################                    |
+V :   126 :    334.500 :################                    |
+C :   127 :    488.000 :########################            |
+Q :   128 :    601.499 :##############################      |
+. :   129 :      0.000 :                                   |
+. :   130 :      0.000 :                                   |
+. :   131 :      0.000 :                                   |
+. :   132 :      0.000 :                                   |
+. :   133 :      0.000 :                                   |
+. :   134 :      0.000 :                                   |
+. :   135 :      0.000 :                                   |
+. :   136 :      0.000 :                                   |
+. :   137 :      0.000 :                                   |
+. :   138 :      0.000 :                                    |
+. :   139 :      0.000 :                                    |
+. :   140 :      0.000 :                                    |
+. :   141 :      0.000 :                                    |
+. :   142 :      0.000 :                                    |
+. :   143 :      0.000 :                                    |
+P :   144 :    570.000 :############################             |
+Q :   145 :    592.500 :#############################             |
+L :   146 :    714.000 :###################################       |
+E :   147 :    636.500 :###############################           |
+K :   148 :    648.499 :################################          |
+V :   149 :    691.000 :##################################        |
+V :   150 :    558.000 :###########################               |
+I :   151 :    619.000 :##############################            |
+D :   152 :    785.999 :#######################################   |
+R :   153 :    698.500 :##################################        |
+S :   154 :    437.000 :#####################                     |
+L :   155 :    766.999 :######################################    |
+V :   156 :    727.500 :####################################      |
+G :   157 :    761.999 :######################################    |
+K :   158 :    752.499 :#####################################     |
+L :   159 :    762.999 :######################################    |
+I :   160 :    542.500 :###########################              |
+S :   161 :    672.999 :#################################        |
+D :   162 :    631.000 :###############################           |
+T :   163 :    584.000 :#############################              |
+I :   164 :    722.000 :####################################       |
+S :   165 :    670.000 :+++++++++++++++++++++++++++++++++          |
+D :   166 :    741.999 :+++++++++++++++++++++++++++++++++++++      |
+A :   167 :    667.000 :+++++++++++++++++++++++++++++++++          |
+L :   168 :    482.000 :++++++++++++++++++++++++                   |
+L :   169 :    674.000 :#################################          |
+T :   170 :    664.500 :#################################          |
+D :   171 :    645.500 :################################           |
+S :   172 :    447.000 :######################                     |
+F :   173 :    580.500 :#############################              |
+I :   174 :    725.000 :####################################       |
+I :   175 :    669.000 :#################################          |
+L :   176 :    670.500 :#################################          |
+S :   177 :    728.500 :####################################       |
+F :   178 :    705.000 :+++++++++++++++++++++++++++++++++++        |
+L :   179 :    316.500 :+++++++++++++++                    |
+A :   180 :    197.000 :+++++++++                                 |
+Q :   181 :    366.000 :++++++++++++++++++                         |
+N :   182 :    668.500 :+++++++++++++++++++++++++++++++++          |
+K :   183 :    543.500 :+++++++++++++++++++++++++++                |
+L :   184 :    693.000 :##################################         |
+C :   185 :    555.000 :###########################                |
+F :   186 :    561.000 :############################               |
+I :   187 :    674.500 :#################################          |
+Q :   188 :    531.000 :##########################                 |
+F :   189 :    604.500 :##############################             |
+T :   190 :    527.000 :##########################                 |
+K :   191 :    732.500 :####################################       |
+K :   192 :    530.500 :++++++++++++++++++++++++++                |
+M :   193 :    489.500 :++++++++++++++++++++++++                 |
+E :   194 :    251.000 :++++++++++++                            |
+S :   195 :    614.500 :++++++++++++++++++++++++++++++          |
+S :   196 :    176.000 :++++++++                                |
+D :   197 :    605.000 :++++++++++++++++++++++++++++++        |
+V :   198 :    465.500 :+++++++++++++++++++++++             |
+N :   199 :    541.000 :+++++++++++++++++++++++++++          |
+K :   200 :    598.000 :+++++++++++++++++++++++++++++           |
+R :   201 :    635.500 :###############################           |
+L :   202 :    587.500 :#############################             |
+E :   203 :    703.000 :###################################        |
+K :   204 :    792.000 :#######################################    |
+L :   205 :    732.500 :####################################       |
+S :   206 :    772.000 :######################################      |
+A :   207 :    275.000 :#############                               |
+L :   208 :    612.500 :##############################              |
+D :   209 :    716.500 :###################################         |
+Y :   210 :    331.500 :################                            |
+K :   211 :    798.000 :#######################################     |
+I :   212 :    724.500 :####################################        |
+F :   213 :    118.000 :#####                                       |
+Y :   214 :    567.500 :############################                |
+Y :   215 :    214.500 :##########                                  |
+E :   216 :    521.000 :##########################                 |
+I :   217 :    665.000 :#################################          |
+P :   218 :    415.000 :####################                       |
+G :   219 :    776.000 :######################################      |
+P :   220 :    596.000 :+++++++++++++++++++++++++++++            |
+I :   221 :    153.000 :+++++++                                   |
+N :   222 :    281.500 :++++++++++++++                             |
+K :   223 :    443.000 :++++++++++++++++++++++                      |
+T :   224 :    234.000 :+++++++++++                                 |
+T :   225 :    198.000 :+++++++++                                  |
+E :   226 :    444.000 :######################                      |
+R :   227 :    781.500 :#######################################     |
+H :   228 :    519.000 :#########################                   |
+L :   229 :    746.500 :#####################################       |
+A :   230 :    591.000 :#############################               |
+I :   231 :    630.500 :###############################             |
+N :   232 :    788.500 :#######################################     |
+C :   233 :    397.000 :###################                         |
+V :   234 :    400.500 :++++++++++++++++++++                        |
+H :   235 :     77.000 :+++                                         |
+D :   236 :    777.000 :++++++++++++++++++++++++++++++++++++++      |
+R :   237 :    107.500 :+++++                                       |
+V :   238 :    629.500 :+++++++++++++++++++++++++++++++             |
+V :   239 :    522.500 :##########################                  |
+C :   240 :    635.000 :###############################             |
+W :   241 :    835.500 :#########################################   |
+W :   242 :    741.000 :+++++++++++++++++++++++++++++++++++++       |
+P :   243 :    251.000 :++++++++++++                                |
+L :   244 :    306.500 :+++++++++++++++                             |
+V :   245 :    234.000 :+++++++++++                                 |
+N :   246 :    373.500 :++++++++++++++++++                          |
+D :   247 :    677.000 :#################################           |
+D :   248 :    398.500 :###################                         |
+A :   249 :    526.000 :##########################                   |
+W :   250 :    700.000 :###################################         |
+P :   251 :    825.000 :#########################################   |
+W :   252 :    833.500 :#########################################   |
+A :   253 :    410.000 :####################                        |
+P :   254 :    810.000 :########################################   |
+I :   255 :    577.000 :############################               |
+S :   256 :    580.500 :#############################               |
+S :   257 :    324.500 :################                            |
+E :   258 :    610.500 :##############################              |
+K :   259 :    498.500 :########################                     |
+D :   260 :    719.500 :####################################        |
+R :   261 :    746.500 :#####################################       |
+A :   262 :    739.500 :#####################################       |
+N :   263 :    785.500 :#######################################     |
+L :   264 :    769.500 :######################################      |
+L :   265 :    614.000 :##############################              |
+L :   266 :    709.500 :###################################         |
+L :   267 :    590.500 :+++++++++++++++++++++++++++++               |
+G :   268 :    486.000 :++++++++++++++++++++++++                    |
+Y :   269 :    212.000 :++++++++++                                  |
+A :   270 :    530.500 :++++++++++++++++++++++++++                  |
+Q :   271 :    258.500 :++++++++++++                                |
+G :   272 :    606.000 :++++++++++++++++++++++++++++++              |
+R :   273 :    452.000 :++++++++++++++++++++++                   |
+L :   274 :    746.500 :+++++++++++++++++++++++++++++++++++++       |
+E :   275 :    745.500 :#####################################        |
+V :   276 :    718.000 :###################################          |
+L :   277 :    783.500 :#######################################      |
+S :   278 :    672.500 :#################################            |
+S :   279 :    291.000 :##############                               |
+V :   280 :    598.000 :#############################                |
+R :   281 :    711.000 :###################################          |
+T :   282 :    804.000 :########################################     |
+E :   283 :    800.000 :########################################     |
+W :   284 :    548.000 :###########################                  |
+D :   285 :    719.000 :###################################          |
+P :   286 :    788.000 :#######################################      |
+L :   287 :    799.000 :#######################################      |
+D :   288 :    620.000 :###############################              |
+V :   289 :    374.000 :++++++++++++++++++                           |
+R :   290 :    347.500 :+++++++++++++++++                            |
+F :   291 :    831.000 :+++++++++++++++++++++++++++++++++++++++++    |
+G :   292 :    191.000 :+++++++++                                    |
+T :   293 :    387.500 :+++++++++++++++++++                          |
+K :   294 :    266.500 :+++++++++++++                                |
+Q :   295 :    644.000 :++++++++++++++++++++++++++++++++             |
+P :   296 :    616.000 :++++++++++++++++++++++++++++++               |
+Y :   297 :    543.000 :###########################                  |
+Q :   298 :    715.000 :###################################          |
+V :   299 :    705.500 :###################################          |
+F :   300 :    172.000 :########                                     |
+T :   301 :    752.000 :#####################################        |
+V :   302 :    812.500 :########################################     |
+E :   303 :    840.500 :##########################################   |
+H :   304 :    375.500 :++++++++++++++++++                           |
+S :   305 :    589.500 :+++++++++++++++++++++++++++++                |
+V :   306 :    493.000 :++++++++++++++++++++++++                     |
+S :   307 :    702.500 :+++++++++++++++++++++++++++++++++++          |
+V :   308 :    239.000 :+++++++++++                                  |
+D :   309 :    427.000 :+++++++++++++++++++++                        |
+K :   310 :    558.500 :+++++++++++++++++++++++++++                  |
+E :   311 :    701.500 :+++++++++++++++++++++++++++++++++++          |
+P :   312 :    571.000 :++++++++++++++++++++++++++++                 |
+M :   313 :    530.000 :##########################                   |
+A :   314 :    648.000 :################################             |
+D :   315 :    748.000 :#####################################        |
+S :   316 :    679.000 :#################################            |
+C :   317 :    757.000 :#####################################        |
+I :   318 :    528.000 :##########################                   |
+Y :   319 :    831.000 :#########################################    |
+E :   320 :    674.500 :#################################            |
+C :   321 :    576.000 :++++++++++++++++++++++++++++                 |
+I :   322 :    309.500 :+++++++++++++++                              |
+R :   323 :    701.000 :+++++++++++++++++++++++++++++++++++          |
+N :   324 :    563.000 :++++++++++++++++++++++++++++                 |
+K :   325 :    690.000 :++++++++++++++++++++++++++++++++++           |
+I :   326 :    651.500 :++++++++++++++++++++++++++++++++              |
+Q :   327 :    649.500 :++++++++++++++++++++++++++++++++              |
+C :   328 :    530.000 :++++++++++++++++++++++++++                   |
+V :   329 :    437.000 :+++++++++++++++++++++                         |
+S :   330 :    610.500 :##############################                |
+V :   331 :    722.500 :####################################          |
+T :   332 :    747.500 :#####################################         |
+R :   333 :    613.500 :##############################                |
+I :   334 :    792.000 :#######################################       |
+P :   335 :    788.000 :#######################################       |
+L :   336 :    834.000 :#########################################     |
+K :   337 :    351.500 :#################                             |
+S :   338 :    694.500 :##################################            |
+K :   339 :    540.500 :+++++++++++++++++++++++++++                   |
+A :   340 :    545.000 :+++++++++++++++++++++++++++                   |
+I :   341 :    613.000 :++++++++++++++++++++++++++++++          |
+S :   342 :    700.500 :+++++++++++++++++++++++++++++++++++       |
+C :   343 :    755.000 :+++++++++++++++++++++++++++++++++++++         |
+C :   344 :    624.000 :+++++++++++++++++++++++++++++++               |
+R :   345 :    687.000 :++++++++++++++++++++++++++++++++++            |
+N :   346 :    566.500 :++++++++++++++++++++++++++++                  |
+V :   347 :    397.500 :+++++++++++++++++++                           |
+T :   348 :    567.500 :++++++++++++++++++++++++++++                  |
+E :   349 :    738.500 :####################################          |
+D :   350 :    696.000 :##################################            |
+K :   351 :    704.000 :###################################           |
+L :   352 :    845.500 :##########################################    |
+I :   353 :    539.000 :##########################                    |
+L :   354 :    829.500 :#########################################     |
+G :   355 :    779.999 :#######################################       |
+C :   356 :    719.000 :###################################           |
+E :   357 :    576.500 :############################                  |
+D :   358 :    856.500 :##########################################    |
+S :   359 :    642.000 :################################              |
+S :   360 :    817.500 :########################################      |
+L :   361 :    568.999 :############################                 |
+I :   362 :    604.500 :##############################               |
+L :   363 :    826.000 :#########################################     |
+Y :   364 :    754.000 :#####################################         |
+E :   365 :    667.000 :+++++++++++++++++++++++++++++++++             |
+T :   366 :    204.000 :++++++++++                                   |
+H :   367 :    409.000 :++++++++++++++++++++                         |
+R :   368 :    486.500 :++++++++++++++++++++++++                      |
+R :   369 :    424.000 :+++++++++++++++++++++                         |
+V :   370 :    675.500 :+++++++++++++++++++++++++++++++++             |
+T :   371 :    776.000 :######################################        |
+L :   372 :    591.000 :#############################                 |
+L :   373 :    658.000 :################################              |
+A :   374 :    636.500 :###############################               |
+Q :   375 :    641.500 :################################              |
+T :   376 :    107.000 :+++++                                         |
+E :   377 :    533.000 :++++++++++++++++++++++++++                    |
+L :   378 :    620.000 :+++++++++++++++++++++++++++++++               |
+L :   379 :    646.000 :################################              |
+P :   380 :    802.000 :########################################      |
+S :   381 :    524.000 :##########################                    |
+L :   382 :    574.500 :############################                  |
+I :   383 :    639.000 :###############################               |
+S :   384 :    547.000 :###########################                   |
+C :   385 :    263.000 :#############                                 |
+H :   386 :    849.000 :##########################################   |
+P :   387 :    744.000 :#####################################        |
+S :   388 :    584.000 :#############################                 |
+G :   389 :    740.999 :#####################################         |
+A :   390 :    689.500 :##################################            |
+I :   391 :    653.500 :++++++++++++++++++++++++++++++++              |
+L :   392 :    503.999 :+++++++++++++++++++++++++                     |
+L :   393 :    547.500 :+++++++++++++++++++++++++++                   |
+V :   394 :    731.499 :####################################          |
+G :   395 :    651.000 :################################              |
+S :   396 :    647.000 :################################              |
+N :   397 :    399.000 :###################                           |
+Q :   398 :    742.500 :#####################################         |
+G :   399 :    745.999 :#####################################         |
+E :   400 :    739.000 :####################################          |
+L :   401 :    787.000 :#######################################       |
+Q :   402 :    770.500 :######################################        |
+I :   403 :    426.000 :#####################                         |
+F :   404 :    826.000 :#########################################     |
+D :   405 :    874.499 :###########################################   |
+M :   406 :    387.500 :###################                           |
+A :   407 :    735.499 :####################################          |
+L :   408 :    866.999 :###########################################   |
+S :   409 :    749.500 :#####################################         |
+P :   410 :    697.000 :##################################            |
+I :   411 :    690.000 :##################################            |
+N :   412 :    290.500 :##############                                |
+I :   413 :    620.000 :###############################              |
+Q :   414 :    730.000 :####################################         |
+L :   415 :    785.499 :#######################################      |
+L :   416 :    719.500 :####################################         |
+A :   417 :    698.000 :##################################           |
+E :   418 :    695.000 :##################################           |
+D :   419 :    714.500 :###################################          |
+R :   420 :    173.000 :########                                     |
+L :   421 :    139.500 :######                                       |
+P :   422 :    747.000 :#####################################        |
+R :   423 :    235.500 :+++++++++++                                  |
+E :   424 :    230.500 :+++++++++++                                  |
+T :   425 :    654.500 :################################             |
+L :   426 :    812.500 :########################################     |
+Q :   427 :    622.000 :###############################              |
+F :   428 :    504.500 :#########################                    |
+S :   429 :    608.500 :##############################               |
+K :   430 :    608.500 :##############################                |
+L :   431 :     79.000 :+++                                           |
+F :   432 :    621.500 :+++++++++++++++++++++++++++++++              |
+D :   433 :    479.500 :+++++++++++++++++++++++                      |
+A :   434 :     89.000 :++++                                         |
+S :   435 :    419.500 :++++++++++++++++++++                          |
+S :   436 :    507.500 :+++++++++++++++++++++++++                     |
+S :   437 :    597.500 :#############################                 |
+L :   438 :    836.500 :#########################################     |
+V :   439 :    462.500 :#######################                      |
+Q :   440 :    583.500 :#############################                |
+M :   441 :    572.500 :############################                 |
+Q :   442 :    664.500 :#################################            |
+W :   443 :    791.000 :#######################################      |
+I :   444 :    211.500 :##########                              |
+A :   445 :    554.500 :###########################              |
+P :   446 :    557.000 :###########################             |
+Q :   447 :    382.500 :+++++++++++++++++++                     |
+V :   448 :    395.500 :+++++++++++++++++++                      |
+V :   449 :    292.000 :++++++++++++++                             |
+S :   450 :    484.000 :++++++++++++++++++++++++                   |
+Q :   451 :    263.500 :+++++++++++++                              |
+K :   452 :    257.500 :++++++++++++                               |
+G :   453 :    101.000 :+++++                                      |
+E :   454 :    452.500 :++++++++++++++++++++++                    |
+G :   455 :    298.000 :++++++++++++++                             |
+S :   456 :    254.000 :++++++++++++                                |
+D :   457 :    577.500 :++++++++++++++++++++++++++++               |
+I :   458 :    526.500 :##########################                 |
+Y :   459 :    372.500 :##################                        |
+D :   460 :    683.000 :##################################        |
+L :   461 :    649.500 :################################            |
+L :   462 :    775.999 :######################################       |
+F :   463 :    302.500 :###############                              |
+L :   464 :    641.999 :################################             |
+R :   465 :    557.000 :###########################                  |
+F :   466 :    822.000 :#########################################     |
+E :   467 :    457.000 :######################                        |
+R :   468 :    488.999 :########################                      |
+G :   469 :    864.999 :###########################################   |
+P :   470 :    857.999 :##########################################    |
+L :   471 :    794.000 :#######################################       |
+G :   472 :    615.000 :##############################               |
+V :   473 :    597.500 :#############################                 |
+L :   474 :    784.999 :#######################################       |
+L :   475 :    247.000 :############                                 |
+F :   476 :    678.999 :#################################           |
+K :   477 :    619.000 :##############################               |
+L :   478 :    663.000 :#################################            |
+G :   479 :    820.000 :#########################################    |
+V :   480 :    509.500 :+++++++++++++++++++++++++                    |
+F :   481 :    247.500 :++++++++++++                                 |
+T :   482 :    625.500 :+++++++++++++++++++++++++++++++              |
+R :   483 :    554.000 :###########################                  |
+G :   484 :    794.000 :#######################################       |
+Q :   485 :    623.000 :###############################               |
+L :   486 :    734.000 :####################################         |
+G :   487 :    730.999 :####################################        |
+L :   488 :    569.499 :############################                |
+I :   489 :    290.000 :##############                              |
+D :   490 :    493.500 :########################                    |
+I :   491 :    662.500 :#################################             |
+I :   492 :    716.500 :+++++++++++++++++++++++++++++++++++           |
+F :   493 :    202.500 :++++++++++                                    |
+Q :   494 :    727.500 :++++++++++++++++++++++++++++++++++++          |
+Y :   495 :    736.999 :++++++++++++++++++++++++++++++++++++          |
+I :   496 :    719.499 :++++++++++++++++++++++++++++++++++++          |
+H :   497 :    255.500 :++++++++++++                                  |
+C :   498 :    296.000 :++++++++++++++                                |
+D :   499 :    586.000 :+++++++++++++++++++++++++++++                 |
+E :   500 :    669.000 :#################################             |
+I :   501 :    659.000 :################################              |
+Y :   502 :    248.000 :############                                  |
+E :   503 :    715.000 :###################################           |
+A :   504 :    863.500 :###########################################   |
+I :   505 :    712.000 :###################################           |
+N :   506 :    649.000 :################################              |
+I :   507 :    605.000 :##############################                |
+L :   508 :    866.999 :###########################################   |
+S :   509 :    470.499 :#######################                       |
+S :   510 :    581.499 :#############################                 |
+M :   511 :    799.500 :########################################       |
+N :   512 :    777.500 :######################################         |
+W :   513 :    896.000 :############################################   |
+D :   514 :    530.500 :##########################                     |
+T :   515 :    710.500 :+++++++++++++++++++++++++++++++++++            |
+L :   516 :    443.500 :++++++++++++++++++++++                         |
+G :   517 :    793.000 :+++++++++++++++++++++++++++++++++++++++        |
+H :   518 :    285.500 :++++++++++++++                                 |
+Q :   519 :    579.000 :++++++++++++++++++++++++++++                   |
+C :   520 :    824.000 :+++++++++++++++++++++++++++++++++++++++++      |
+F :   521 :    551.500 :+++++++++++++++++++++++++++                    |
+I :   522 :    555.000 :+++++++++++++++++++++++++++                    |
+S :   523 :    404.500 :++++++++++++++++++++                           |
+M :   524 :    571.000 :++++++++++++++++++++++++++++                   |
+S :   525 :    639.500 :++++++++++++++++++++++++++++++++               |
+A :   526 :    613.500 :##############################                 |
+I :   527 :    830.000 :#########################################      |
+V :   528 :    487.000 :########################                       |
+N :   529 :    830.499 :#########################################      |
+H :   530 :    760.500 :######################################         |
+L :   531 :    846.499 :##########################################     |
+L :   532 :    767.000 :######################################         |
+R :   533 :    673.500 :#################################              |
+Q :   534 :    641.500 :++++++++++++++++++++++++++++++++               |
+K :   535 :    582.500 :+++++++++++++++++++++++++++++                  |
+L :   536 :    831.499 :#########################################     |
+T :   537 :    639.000 :###############################               |
+P :   538 :    578.000 :++++++++++++++++++++++++++++                   |
+E :   539 :    567.999 :++++++++++++++++++++++++++++                   |
+R :   540 :    792.000 :+++++++++++++++++++++++++++++++++++++++        |
+E :   541 :    835.500 :#########################################      |
+A :   542 :    671.500 :#################################              |
+Q :   543 :    753.500 :#####################################          |
+L :   544 :    841.000 :##########################################     |
+E :   545 :    814.000 :++++++++++++++++++++++++++++++++++++++++       |
+T :   546 :     69.500 :+++                                            |
+S :   547 :    687.999 :++++++++++++++++++++++++++++++++++             |
+L :   548 :    873.999 :###########################################    |
+G :   549 :    803.000 :########################################       |
+T :   550 :    645.500 :################################               |
+F :   551 :    869.999 :###########################################    |
+Y :   552 :    772.500 :######################################        |
+A :   553 :    693.500 :##################################            |
+P :   554 :    838.000 :#########################################     |
+T :   555 :    559.000 :###########################                    |
+R :   556 :    661.500 :+++++++++++++++++++++++++++++++++              |
+P :   557 :    794.000 :+++++++++++++++++++++++++++++++++++++++        |
+L :   558 :    831.499 :+++++++++++++++++++++++++++++++++++++++++      |
+L :   559 :    513.000 :+++++++++++++++++++++++++                      |
+D :   560 :    709.500 :+++++++++++++++++++++++++++++++++++            |
+S :   561 :    347.499 :+++++++++++++++++                              |
+T :   562 :    635.000 :+++++++++++++++++++++++++++++++                |
+I :   563 :    533.500 :++++++++++++++++++++++++++                     |
+L :   564 :    726.000 :####################################           |
+E :   565 :    805.000 :########################################       |
+Y :   566 :    825.500 :#########################################      |
+R :   567 :    700.000 :###################################            |
+D :   568 :    757.000 :#####################################          |
+Q :   569 :    333.500 :################                               |
+I :   570 :    771.000 :######################################         |
+S :   571 :    689.500 :##################################             |
+K :   572 :    508.500 :#########################                      |
+Y :   573 :    667.500 :#################################              |
+A :   574 :    740.500 :#####################################          |
+R :   575 :    858.500 :##########################################     |
+R :   576 :    871.500 :###########################################    |
+F :   577 :    866.500 :###########################################    |
+F :   578 :    874.500 :###########################################    |
+H :   579 :    830.000 :#########################################      |
+H :   580 :    807.500 :########################################       |
+L :   581 :    891.999 :############################################   |
+L :   582 :    873.000 :###########################################    |
+R :   583 :    876.500 :###########################################    |
+Y :   584 :    663.500 :+++++++++++++++++++++++++++++++++            |
+Q :   585 :    682.000 :++++++++++++++++++++++++++++++++++           |
+R :   586 :    686.500 :++++++++++++++++++++++++++++++++++           |
+F :   587 :    775.500 :++++++++++++++++++++++++++++++++++++++       |
+E :   588 :    766.000 :######################################       |
+K :   589 :    813.500 :########################################     |
+A :   590 :    849.500 :##########################################   |
+F :   591 :    818.500 :########################################     |
+L :   592 :    689.000 :##################################           |
+L :   593 :    830.000 :#########################################    |
+A :   594 :    840.500 :##########################################  |
+V :   595 :    739.000 :####################################        |
+D :   596 :    832.500 :+++++++++++++++++++++++++++++++++++++++++   |
+V :   597 :    433.500 :+++++++++++++++++++++                       |
+G :   598 :    586.000 :+++++++++++++++++++++++++++++               |
+A :   599 :    636.500 :+++++++++++++++++++++++++++++++             |
+R :   600 :    643.000 :++++++++++++++++++++++++++++++++            |
+D :   601 :    825.000 :#########################################   |
+L :   602 :    837.000 :#########################################   |
+F :   603 :    837.000 :#########################################   |
+M :   604 :    801.500 :########################################    |
+D :   605 :    743.500 :#####################################     |
+I :   606 :    664.500 :#################################         |
+H :   607 :    735.500 :####################################     |
+Y :   608 :    661.500 :#################################        |
+L :   609 :    514.000 :#########################                |
+A :   610 :    736.500 :####################################    |
+L :   611 :    514.500 :#########################               |
+D :   612 :    620.000 :###############################         |
+K :   613 :    583.000 :#############################           |
+G :   614 :    688.000 :##################################      |
+E :   615 :    670.500 :#################################       |
+L :   616 :    572.500 :############################           |
+A :   617 :    538.500 :##########################             |
+L :   618 :    713.500 :###################################    |
+A :   619 :    727.000 :####################################   |
+E :   620 :    577.500 :############################           |
+V :   621 :    618.000 :##############################         |
+A :   622 :    734.000 :####################################   |
+R :   623 :    420.000 :#####################                 |
+K :   624 :    526.000 :##########################            |
+R :   625 :    463.500 :#######################               |
+A :   626 :    707.000 :###################################   |
+S :   627 :    367.000 :##################                    |
+D :   628 :    551.000 :###########################          |
+I :   629 :    689.000 :##################################   |
+D :   630 :    561.000 :############################     |
+A :   631 :    524.000 :##########################     |
+E :   632 :    530.000 :##########################     |
+S :   633 :    542.000 :###########################   |
+I :   634 :    532.500 :##########################   |
+T :   635 :    495.000 :########################     |
+S :   636 :    389.500 :###################          |
+G :   637 :    428.000 :#####################       |
+V :   638 :    345.500 :+++++++++++++++++         |
+E :   639 :    323.000 :++++++++++++++++  |
+L :   640 :    288.500 :++++++++++++++   |
+L :   641 :    295.000 :++++++++++++++  |
+G :   642 :    280.000 :++++++++++++++ |
+P :   643 :    168.000 :++++++++       |
+L :   644 :    181.500 :+++++++++       |
+D :   645 :    291.000 :++++++++++++++  |
+R :   646 :    202.500 :++++++++++      |
+G :   647 :    166.000 :++++++++        |
+D :   648 :    291.000 :++++++++++++++  |
+M :   649 :    141.000 :+++++++        |
+L :   650 :    185.500 :+++++++++      |
+N :   651 :    183.000 :#########       |
+E :   652 :    290.000 :##############  |
+A :   653 :    276.500 :#############   |
+F :   654 :    277.000 :#############   |
+I :   655 :    141.000 :#######       |
+G :   656 :    183.000 :#########     |
+L :   657 :    184.500 :#########     |
+S :   658 :    236.500 :###########   |
+L :   659 :    192.000 :#########    |
+A :   660 :    134.500 :######        |
+P :   661 :    181.000 :#########     |
+Q :   662 :    206.500 :##########    |
+G :   663 :    210.000 :##########    |
+E :   664 :    225.500 :###########   |
+D :   665 :    165.500 :########      |
+S :   666 :    128.000 :######        |
+F :   667 :    179.500 :########      |
+P :   668 :    228.000 :###########   |
+D :   669 :    166.000 :########     |
+N :   670 :    174.500 :########     |
+L :   671 :    168.500 :########     |
+P :   672 :    245.000 :############  |
+P :   673 :    182.000 :#########   |
+S :   674 :    119.000 :#####       |
+C :   675 :     96.000 :####       |
+P :   676 :     77.000 :###        |
+T :   677 :     82.500 :####       |
+H :   678 :    157.000 :#######    |
+R :   679 :    167.500 :########   |
+H :   680 :    168.000 :++++++++  |
+I :   681 :    121.000 :++++++    |
+L :   682 :     90.500 :++++     |
+Q :   683 :    181.000 :######### |
+Q :   684 :    160.500 :########  |
+R :   685 :    156.000 :#######  |
+I :   686 :     76.000 :###      |
+L :   687 :    129.000 :######   |
+N :   688 :    161.500 :++++++++  |
+G :   689 :     78.000 :+++       |
+S :   690 :    169.500 :########  |
+S :   691 :    191.500 :######### |
+N :   692 :    152.500 :#######   |
+R :   693 :    175.000 :######## |
+Q :   694 :    150.500 :#######  |
+I :   695 :     80.500 :####     |
+I :   696 :     67.000 :###      |
+D :   697 :    150.000 :#######  |
+R :   698 :    121.500 :######   |
+R :   699 :    122.000 :######   |
+N :   700 :    135.500 :######   |
+E :   701 :    158.500 :#######  |
+L :   702 :    131.000 :######   |
+E :   703 :    132.500 :######   |
+K :   704 :    120.000 :######   |
+D :   705 :    162.500 :######## |
+I :   706 :     90.000 :++++     |
+C :   707 :    123.000 :++++++   |
+S :   708 :    121.500 :++++++   |
+G :   709 :     63.000 :+++     |
+F :   710 :     38.000 :+        |
+L :   711 :    143.500 :+++++++  |
+M :   712 :    118.500 :+++++    |
+T :   713 :     95.000 :++++     |
+N :   714 :     63.000 :+++      |
+T :   715 :    138.000 :++++++   |
+C :   716 :     99.000 :++++     |
+N :   717 :    129.000 :++++++   |
+A :   718 :     79.500 :###     |
+E :   719 :    141.500 :#######  |
+D :   720 :     76.500 :###     |
+G :   721 :    151.000 :####### |
+E :   722 :    133.000 :######  |
+L :   723 :    115.500 :#####   |
+R :   724 :    113.000 :#####   |
+E :   725 :    133.500 :######  |
+D :   726 :    136.000 :++++++  |
+G :   727 :     38.000 :+       |
+R :   728 :     69.500 :+++     |
+E :   729 :    125.000 :++++++  |
+Q :   730 :    164.000 :++++++++|
+E :   731 :    143.500 :+++++++ |
+I :   732 :    107.500 :+++++  |
+R :   733 :     61.500 :+++    |
+D :   734 :    138.500 :++++++  |
+G :   735 :     91.000 :++++    |
+G :   736 :    144.000 :+++++++ |
+S :   737 :    152.000 :+++++++ |
+L :   738 :    171.000 :++++++++|
+K :   739 :    109.000 :+++++   |
+M :   740 :    142.000 :+++++++ |
+I :   741 :    118.000 :+++++   |
+H :   742 :    176.000 :++++++++|
+F :   743 :    155.000 :+++++++ |
+G :   744 :    176.000 :++++++++|
+L :   745 :    170.000 :++++++++|
+V :   746 :    174.500 :++++++++|
