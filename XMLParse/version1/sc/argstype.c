@@ -8,6 +8,10 @@ int moreThanTwoArgs(){
     return 1;
 }
 
+int twoArgs(){ //faut mettre le filename
+
+}
+
 int noArgument(){
     FILE *fp = NULL;
     printf("Pas de fichier en argument ...On analysera stdin.xml\n");
