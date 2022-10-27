@@ -8,7 +8,7 @@ int moreThanTwoArgs(){
     return 1;
 }
 
-int noneArgument(){
+int noArgument(){
     FILE *fp = NULL;
     printf("Pas de fichier en argument ...On analysera stdin.xml\n");
     xmlDoc *f = xmlReadFile("../XMLFiles/stdin.xml",NULL, 0);
