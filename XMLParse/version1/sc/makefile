@@ -5,7 +5,7 @@ EXEC=parsing
 
 # Les fichiers .o a générer si nécessaire
 
-DEP= xmlparser.o
+DEP= xmlparser.o argstype.o
 
 
 all: $(EXEC)

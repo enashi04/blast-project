@@ -45,7 +45,7 @@ void hit_ID(xmlNode *node, FILE *fp, int mode){
     child = node ->children;
     for(node = child; node; node=node->next){
         if(strcmp(name, ( const char *)node->name)==0){
-            fprintf(fp, "%s,", xmlNodeGetContent(node));
+            fprintf(fp, "%s;", xmlNodeGetContent(node));
         }
     }
 }
@@ -61,10 +61,10 @@ void getHSP(xmlNode *node, const char *name, FILE *fp){
 /****************************************FIN DU CSV*************************************************/
 /***************************************************************************************************/  
         if(strcmp(name, (const char *)"Hsp_align-len")==0){
-            fprintf(fp," %s",xmlNodeGetContent(node));
+            fprintf(fp,"%s",xmlNodeGetContent(node));
         }
         else{
-            fprintf(fp," %s,",xmlNodeGetContent(node));
+            fprintf(fp,"%s;",xmlNodeGetContent(node));
         }
     }
 }
@@ -244,19 +244,19 @@ void selectedParameters(FILE *fp,int mode){
 /****************************************MODE BRONZE************************************************/
 /***************************************************************************************************/ 
     if(mode==1){
-        fprintf(fp, "hit id, score, evalue, align_length\n");
+        fprintf(fp, "hit id;score;evalue;align_length\n");
     }
 /***************************************************************************************************/
 /****************************************MODE SILVER************************************************/
 /***************************************************************************************************/ 
     else if(mode == 2){
-        fprintf(fp, "hit id, score, evalue, identity, positive, gaps, align_length\n");
+        fprintf(fp, "hit id;score;evalue;identity;positive;gaps;align_length\n");
     }
 /***************************************************************************************************/
 /*****************************************MODE GOLD*************************************************/
 /***************************************************************************************************/ 
     else if(mode == 3){
-        fprintf(fp, "hit id ,bit-score,score,evalue,query-from,query-to,target-from,target-to,identity,positive,gaps,align-length \n");
+        fprintf(fp, "hit id;bit-score;score;evalue;query-from;query-to;target-from;target-to;identity;positive;gaps;align-length \n");
     }
 /***************************************************************************************************/
 /****************************************MODE PERSO*************************************************/
