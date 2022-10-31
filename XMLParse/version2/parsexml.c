@@ -7,11 +7,15 @@
 
 char buf[BUFSIZE];
 char content[BUFSIZE];
+FILE *output;
+int mode;
 
 struct {
 	char query[128];
 	char access;
 } state;
+
+
 
 /** @brief Open the tag for the Bronze Mode
     @param data 
@@ -19,6 +23,8 @@ struct {
     @param attrs 
 */
 void bronze_tag_start(void *data, const char *name, const char **attrs){
+	
+	
 	if (strcmp(name, "Hit_accession") == 0){
 		state.access = 1;
 	}
@@ -34,6 +40,12 @@ void bronze_tag_start(void *data, const char *name, const char **attrs){
 	if (strcmp(name, "Hsp_align-len") == 0){
 		state.access = 2;
 	}
+	if(strcmp(name, "BlastOutput_query-def")==0){
+		state.access=3;
+	}
+	if(strcmp(name, "BlastOutput_query-len")==0){
+		state.access=4;
+	}
 }
 
 /** @brief Open the tag for the Silver Mode
@@ -42,6 +54,7 @@ void bronze_tag_start(void *data, const char *name, const char **attrs){
     @param attrs 
 */
 void silver_tag_start(void *data, const char *name, const char **attrs){
+
 	if (strcmp(name, "Hit_accession") == 0){
 		state.access = 1;
 	}
@@ -66,6 +79,12 @@ void silver_tag_start(void *data, const char *name, const char **attrs){
 	if (strcmp(name, "Hsp_align-len") == 0){
 		state.access = 2;
 	}
+	if(strcmp(name, "BlastOutput_query-def")==0){
+		state.access=3;
+	}
+	if(strcmp(name, "BlastOutput_query-len")==0){
+		state.access=4;
+	}
 }
 /** @brief Open the tag for the Gold Mode
     @param data 
@@ -73,13 +92,14 @@ void silver_tag_start(void *data, const char *name, const char **attrs){
     @param attrs 
 */
 void gold_tag_start(void *data, const char *name, const char **attrs) {
+
 	if (strcmp(name, "Hit_accession") == 0){
 		state.access = 1;
 	}
 	if (strcmp(name, "Hsp_num") == 0){
 		state.access = 1;
 	}
-	if (strcmp(name, "Hsp_bitscore") == 0){
+	if (strcmp(name, "Hsp_bit-score") == 0){
 		state.access = 1;
 	}
 	if (strcmp(name, "Hsp_score") == 0){
@@ -111,6 +131,12 @@ void gold_tag_start(void *data, const char *name, const char **attrs) {
 	}
 	if (strcmp(name, "Hsp_align-len") == 0){
 		state.access = 2;
+	}	
+	if(strcmp(name, "BlastOutput_query-def")==0){
+		state.access=3;
+	}
+	if(strcmp(name, "BlastOutput_query-len")==0){
+		state.access=4;
 	}
 	
 }
@@ -133,13 +159,33 @@ void tag_value(void *data, const char *text, int len) {
 	content[len] = '\0';
 	
 	if (state.access==1) {
-		printf("%s,", content);
+		fprintf(output,"%s,", content);
 		strcpy(content, state.query);
 		state.access = 0;
 	}
 	if(state.access==2){
-		printf("%s\n", content);
+		fprintf(output,"%s\n", content);
 		strcpy(content, state.query);
+		state.access = 0;
+	}
+	if(state.access==3){
+		fprintf(output, "Query-def :%s\n", content);
+		strcpy(content, state.query);
+		state.access = 0;
+	}
+	if(state.access==4){
+		fprintf(output, "Length :%s\n\n", content);
+		strcpy(content, state.query);
+		if(mode ==1){
+			fprintf(output, "id, num, score, evalue,align-length \n");
+		}
+		else if (mode ==2){
+			fprintf(output, "id,hit,score,evalue,identity,positive,gaps,align-length \n");
+		}
+		else{
+			fprintf(output, "id,hit,bitscore,score,evalue,query-from,query-to,target-from,target-to,identity,positive,gaps,align-length \n");
+
+		}
 		state.access = 0;
 	}
 }
@@ -200,18 +246,41 @@ int main(int argc, char *argv[]) {
 			fprintf(stderr, "arg2 : Mode choice: 1 (Bronze) | 2 (Silver) | 3 (Gold)\n");
 			exit(1);
 		}
+		//substring the file name
+		mode = atoi(argv[2]);
+		char *name = argv[1];
+        for (int i = 0; i < strlen(name); i++)
+        {
+            if (i >= strlen(name) - 4)
+            {
+                name[i] = '\0';
+            }
+            
+        }
+        if(strncmp (name,"../../",6) == 0){
+            memmove(name, name+6, strlen(name));
+        }
+        else if (strncmp(name, "../", 3)==0){
+            memmove(name, name+3, strlen(name));
+        }
+		else if(strncmp(name, "results/",8)==0){
+			memmove(name, name+8, strlen(name));
+		}
 
 		char *filename= (char *)malloc(100);
-		XML_Parser parser ;
+		XML_Parser parser;
 
 		switch(atoi(argv[2])){
 /**************************************************************************************/
 /***********************************Bronze mode****************************************/
 /**************************************************************************************/
 			case 1:
-				printf("on passe ici?");
-				strcpy(filename, "../BronzeResults_");
+				strcpy(filename, "results/BronzeResults_");
 				strcat(strcat(filename,argv[1]), ".csv");
+
+				output = fopen(filename, "w");
+				fprintf(output,"Bronze results of %s\n\n", name);
+				
 				parser = XML_ParserCreate(NULL);
 				XML_SetElementHandler(parser, bronze_tag_start, tag_end);
 				XML_SetCharacterDataHandler(parser, tag_value);
@@ -223,8 +292,12 @@ int main(int argc, char *argv[]) {
 /**********************************Silver mode*****************************************/
 /**************************************************************************************/
 			case 2 :
-				strcpy(filename, "../SilverResults_");
+				strcpy(filename, "results/SilverResults_");
 				strcat(strcat(filename,argv[1]), ".csv");
+				
+				output = fopen(filename, "w");
+				fprintf(output,"Silver results of %s\n\n", name);
+				
 				parser = XML_ParserCreate(NULL);
 				XML_SetElementHandler(parser, silver_tag_start, tag_end);
 				XML_SetCharacterDataHandler(parser, tag_value);
@@ -237,8 +310,12 @@ int main(int argc, char *argv[]) {
 /************************************Gold Mode*****************************************/
 /**************************************************************************************/
 			case 3:
-				strcpy(filename, "../GoldResults_");
+				strcpy(filename, "results/GoldResults_");
 				strcat(strcat(filename,argv[1]), ".csv");
+
+				output = fopen(filename, "w");
+				fprintf(output,"Gold results of %s\n\n", name);
+						
 				parser = XML_ParserCreate(NULL);
 				XML_SetElementHandler(parser, gold_tag_start, tag_end);
 				XML_SetCharacterDataHandler(parser, tag_value);
@@ -265,7 +342,11 @@ int main(int argc, char *argv[]) {
 /**************************************************************************************/
 /************************************Gold Mode*****************************************/
 /**************************************************************************************/
-		fprintf(stderr, "We're gonna display the Goldresults of stdin.xml");
+		fprintf(stderr, "We're gonna display the Goldresults of stdin.xml\n");
+		output = fopen("results/GoldResults_stdin.csv", "w");
+		fprintf(output, "GoldResult of stdin.xml");
+		fprintf(output, "id,hit,bitscore,score,evalue,query-from,query-to,target-from,target-to,identity,positive,gaps,align-length \n");
+
 		XML_Parser parser = XML_ParserCreate(NULL);
 		XML_SetElementHandler(parser, gold_tag_start, tag_end);
 		XML_SetCharacterDataHandler(parser, tag_value);
