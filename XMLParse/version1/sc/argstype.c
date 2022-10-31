@@ -67,7 +67,40 @@ int twoArgs(char **argv)
             {
                 name[i] = '\0';
             }
+            
         }
+        if(strncmp (name,"../../",6) == 0){
+            memmove(name, name+6, strlen(name));
+        }
+        else if (strncmp(name, "../", 3)==0){
+            memmove(name, name+3, strlen(name));
+        }
+       
+        char *filename= (char *)malloc(100);
+        //printf("name is %s et %u", name, atoi( argv[2]));
+        switch(atoi(argv[2])){
+            case 1: 
+                strcpy(filename, "../results/BronzeResults_");
+                strcat(strcat(filename, name), ".csv");
+                printf("je suis le filename %s\n",filename);
+                modechoice(1, f, fp, filename, name);                
+                break;
+            case 2:
+                strcpy(filename, "../results/SilverResults_");
+                strcat(strcat(filename, name), ".csv");
+                printf("je suis le filename %s\n",filename);
+                modechoice(2, f, fp, filename, name);    
+                break;
+            case 3:
+                strcpy(filename, "../results/GoldResults_");
+                strcat(strcat(filename, name), ".csv");
+                printf("je suis le filename %s\n",filename);
+                modechoice(1, f, fp, filename, name);    
+                break;
+            default:
+                break;
+        }
+
     }
     /**************************************************************************************/
     /********************Accéder au fichier contenant les fichiers*************************/
@@ -108,10 +141,11 @@ void modechoice(int mode, xmlDoc *fichier, FILE *fp, char *filename, char *name)
         /******************************************BRONZE***************************************************/
         /***************************************************************************************************/
     case 1:
+        printf("on entre ici.");
         fp = fopen(filename, "w");
         fprintf(fp, "Bronze mode for %s\n\n", name);
         blastOutPut_iteration(fichier, fp, 1);
-        printf("You chose the Bronze mode\nYou can open the file : BronzeResult.csv\n");
+        printf("You chose the Bronze mode\nYou can open the file : %s\n", filename);
         break;
         /***************************************************************************************************/
         /******************************************ARGENT***************************************************/
@@ -121,7 +155,7 @@ void modechoice(int mode, xmlDoc *fichier, FILE *fp, char *filename, char *name)
         fprintf(fp, "Silver mode for %s\n\n", name);
 
         blastOutPut_iteration(fichier, fp, 2);
-        printf("You chose the Silver mode\nYou can open the file : SilverResult.csv\n");
+        printf("You chose the Silver mode\nYou can open the file : %s\n", filename);
         break;
         /***************************************************************************************************/
         /******************************************GOLD*****************************************************/
@@ -130,12 +164,9 @@ void modechoice(int mode, xmlDoc *fichier, FILE *fp, char *filename, char *name)
         fp = fopen(filename, "w");
         fprintf(fp, "Gold mode for %s\n\n", name);
         blastOutPut_iteration(fichier, fp, 3);
-        printf("You chose the Gold mode\nYou can open the file : GoldResult.csv\n");
+        printf("You chose the Gold mode\nYou can open the file :%s\n", filename);
 
         break;
-        /***************************************************************************************************/
-        /***********************************CHOIX DE L'UTILISATEUR******************************************/
-        /***************************************************************************************************/
     default:
         break;
     }
