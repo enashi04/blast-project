@@ -12,6 +12,7 @@ int moreThanTwoArgs()
 int twoArgs(char **argv)
 { 
     FILE *fp = NULL;
+   // DIR *dr=opendir("../results1");
     char *next, *next1;
     long value = strtol(argv[1], &next, 10);
     long value1 = strtol(argv[2], &next1, 10);
@@ -25,7 +26,7 @@ int twoArgs(char **argv)
     if (next == argv[1] || (*next != '\0'))
     {
     /**************************************************************************************/
-    /****************************Si ce n'est pas un fichier xml*****************************/
+    /**********************Si ce n'est pas un fichier xml mais un chiffre******************/
     /**************************************************************************************/
         char *compare;
         compare = strstr(argv[1], ".xml");
