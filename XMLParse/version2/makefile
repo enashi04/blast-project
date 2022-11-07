@@ -1,4 +1,4 @@
-EXEC=parsexml
+EXEC=parsing
 
 
 DEP= 
