@@ -11,7 +11,7 @@ You will find the code of ballast :
 
     - to run it 
 
-    ./ballast -p [filename.blastp] -o [output] 
+    ./ballast -p [filename.blastp] -o ../results/[output] 
 
 - BLASTFILES
 
