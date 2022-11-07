@@ -95,7 +95,7 @@ int twoArgs(char **argv)
                 strcpy(filename, "../results/GoldResults_");
                 strcat(strcat(filename, name), ".csv");
                 printf("je suis le filename %s\n",filename);
-                modechoice(1, f, fp, filename, name);    
+                modechoice(3, f, fp, filename, name);    
                 break;
             default:
                 break;
