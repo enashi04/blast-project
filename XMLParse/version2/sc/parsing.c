@@ -409,7 +409,7 @@ int main(int argc, char *argv[])
 		/**************************************************************************************/
 		/**************************We're gonna open the example file***************************/
 		/**************************************************************************************/
-		FILE *f = fopen("stdin.xml", "r");
+		FILE *f = fopen("../XMLFiles/stdin.xml", "r");
 		if (!f)
 		{
 			fprintf(stderr, "Can't open blast file\n");
