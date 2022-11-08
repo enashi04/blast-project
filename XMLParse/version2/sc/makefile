@@ -3,7 +3,7 @@ CFLAGS=-std=c99 -pedantic -Wall -Wextra
 LDFLAGS=-lexpat
 SRC=$(wildcard ./*.c)
 OBJ=$(SRC:.c=.o)
-TARGET=readxml
+TARGET=parsing
 
 $(TARGET): $(OBJ)
 	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
