@@ -1,35 +1,17 @@
-EXEC=parsing
-
-
-DEP= 
-
-all: $(EXEC)
-
 CC=gcc
+CFLAGS=-std=c99 -pedantic -Wall -Wextra
+LDFLAGS=-lexpat
+SRC=$(wildcard ./*.c)
+OBJ=$(SRC:.c=.o)
+TARGET=readxml
 
-CFLAGS=-Wall 
+$(TARGET): $(OBJ)
+	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
 
-LDFLAGS=  -lexpat
+%.o: %.c %.h
+	$(CC) $(CFLAGS) -o $@ -c $< $(LDFLAGS)
 
-
-%.o: %.c 
-
-	$(CC) -c $^ $(CFLAGS)
-
-
-$(EXEC): %: %.c $(DEP)
-
-	$(CC) $(CFLAGS) -o $@  $^ $(LDFLAGS)
-
+.PHONY: clean
 
 clean:
-
-	rm -rf *.o 
-
-
-mrproper: clean
-
-	rm -rf $(EXEC) 
-
-
-
+	rm -f $(TARGET) $(OBJ)
