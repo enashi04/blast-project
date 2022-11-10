@@ -9,6 +9,7 @@ char content[BUFSIZE];
 FILE *output;
 int mode;
 
+
 struct
 {
     char query[128];
@@ -22,7 +23,6 @@ struct
 */
 void bronze_tag_start(void *data, const char *name, const char **attrs)
 {
-
     if (strcmp(name, "Hit_accession") == 0)
     {
         state.access = 5;
@@ -43,14 +43,14 @@ void bronze_tag_start(void *data, const char *name, const char **attrs)
     {
         state.access = 2;
     }
-    if (strcmp(name, "BlastOutput_query-def") == 0)
-    {
-        state.access = 3;
-    }
-    if (strcmp(name, "BlastOutput_query-len") == 0)
-    {
-        state.access = 4;
-    }
+    // if (strcmp(name, "Iteration_query-def") == 0)
+    // {
+    //     state.access = 3;
+    // }
+    // if (strcmp(name, "Iteration_query-len") == 0)
+    // {
+    //     state.access = 4;
+    // }
 }
 
 /** @brief Open the tag for the Silver Mode
@@ -93,14 +93,14 @@ void silver_tag_start(void *data, const char *name, const char **attrs)
     {
         state.access = 2;
     }
-    if (strcmp(name, "BlastOutput_query-def") == 0)
-    {
-        state.access = 3;
-    }
-    if (strcmp(name, "BlastOutput_query-len") == 0)
-    {
-        state.access = 4;
-    }
+    // if (strcmp(name, "Iteration_query-def") == 0)
+    // {
+    //     state.access = 3;
+    // }
+    // if (strcmp(name, "Iteration_query-len") == 0)
+    // {
+    //     state.access = 4;
+    // }
 }
 /** @brief Open the tag for the Gold Mode
     @param data
@@ -162,14 +162,14 @@ void gold_tag_start(void *data, const char *name, const char **attrs)
     {
         state.access = 2;
     }
-    if (strcmp(name, "BlastOutput_query-def") == 0)
-    {
-        state.access = 3;
-    }
-    if (strcmp(name, "BlastOutput_query-len") == 0)
-    {
-        state.access = 4;
-    }
+    // if (strcmp(name, "Iteration_query-def") == 0)
+    // {
+    //     state.access = 3;
+    // }
+    // if (strcmp(name, "Iteration_query-len") == 0)
+    // {
+    //     state.access = 4;
+    // }
 }
 
 /** @brief Closing the tag
@@ -190,7 +190,6 @@ void tag_value(void *data, const char *text, int len)
     strncpy(content, text, len);
     content[len] = '\0';
 
-    char *newname;
     if (state.access == 1)
     {
         fprintf(output, "%s,", content);
@@ -203,58 +202,54 @@ void tag_value(void *data, const char *text, int len)
         strcpy(content, state.query);
         state.access = 0;
     }
-    if (state.access == 3)
+    // if (state.access == 3)
+    // {
+    //     fprintf(output, "Query-def :%s\n", content);
+    //     strcpy(content, state.query);
+    //     state.access = 0;
+    // }
+    // if (state.access == 4)
+    // {
+    //     fprintf(output, "Length :%s\n\n", content);
+    //     printf("on sort le length : %s\n", content);
+        
+    //     strcpy(content, state.query);
+    //     if (mode == 1)
+    //     {
+    //         fprintf(output, "id, num, score, evalue,align-length \n");
+    //     }
+    //     else if (mode == 2)
+    //     {
+    //         fprintf(output, "id,hit,score,evalue,identity,positive,gaps,align-length \n");
+    //     }
+    //     else
+    //     {
+    //         fprintf(output, "id,hit,bitscore,score,evalue,query-from,query-to,target-from,target-to,identity,positive,gaps,align-length \n");
+    //     }
+    //     state.access = 0;
+    // }
+    if (state.access == 5) // pour le nom de l'hit
     {
-        fprintf(output, "Query-def :%s\n", content);
+        fprintf(output, "%s,", content);
         strcpy(content, state.query);
         state.access = 0;
     }
-    if (state.access == 4)
+    if (state.access == 6) // pour le numéro du hit
     {
-        fprintf(output, "Length :%s\n\n", content);
-        strcpy(content, state.query);
-        if (mode == 1)
+        if (strncmp(content, "1", 1) == 0)
         {
-            fprintf(output, "id, num, score, evalue,align-length \n");
-        }
-        else if (mode == 2)
-        {
-            fprintf(output, "id,hit,score,evalue,identity,positive,gaps,align-length \n");
+            fprintf(output, "%s,", content);
+            strcpy(content, state.query);
+            state.access = 0;
         }
         else
         {
-            fprintf(output, "id,hit,bitscore,score,evalue,query-from,query-to,target-from,target-to,identity,positive,gaps,align-length \n");
+            fprintf(output, "-,%s,", content);
+            strcpy(content, state.query);
+            state.access = 0;
         }
-        state.access = 0;
     }
-    if (state.access == 5) //pour le nom de l'hit
-	{
-		fprintf(output, "%s,", content);
-		strcpy(content, state.query);
-		state.access = 0;
-	}
-	if (state.access == 6) //pour le numéro du hit 
-	{
-		if (strncmp(content, "1", 1) == 0) 
-		{
-			fprintf(output, "%s,", content);
-			strcpy(content, state.query);
-			state.access = 0;
-		}
-		else
-		{
-			fprintf(output, "-,%s,", content);
-			strcpy(content, state.query);
-			state.access = 0;
-		}
-	}
 }
-
-
-// constchar* gethitname(char *content){
-//     const char* hitname = content;
-//     return hitname;
-// }
 
 /** @brief display errors and close file f
     @param f
@@ -283,6 +278,40 @@ void test_error(FILE *f, XML_Parser parser)
 
     XML_ParserFree(parser);
     fclose(f);
+}
+
+char *newname(char *name)
+{
+    for (size_t i = 0; i < strlen(name); i++)
+    {
+        if (i >= strlen(name) - 4)
+        {
+            name[i] = '\0';
+        }
+    }
+
+    
+    if (strncmp(name, "../", 3) == 0)
+    {
+        if (strncmp(name, "../XMLFiles/", 12) == 0)
+        {
+            memmove(name, name + 12, strlen(name));
+        }
+        else if (strncmp(name, "../../", 6) == 0)
+        {
+            memmove(name, name + 6, strlen(name));
+        }
+        else
+        {
+            memmove(name, name + 3, strlen(name));
+        }
+    }
+
+    if (strncmp(name, "results/", 8) == 0)
+    {
+        memmove(name, name + 8, strlen(name));
+    }
+    return name;
 }
 
 int main(int argc, char *argv[])
@@ -322,31 +351,11 @@ int main(int argc, char *argv[])
         }
         // substring the file name
         mode = atoi(argv[2]);
-        char *name = argv[1];
-        for (int i = 0; i < strlen(name); i++)
-        {
-            if (i >= strlen(name) - 4)
-            {
-                name[i] = '\0';
-            }
-        }
-        if (strncmp(name, "../../", 6) == 0)
-        {
-            memmove(name, name + 6, strlen(name));
-        }
-        else if (strncmp(name, "../", 3) == 0)
-        {
-            memmove(name, name + 3, strlen(name));
-        }
-        else if (strncmp(name, "results/", 8) == 0)
-        {
-            memmove(name, name + 8, strlen(name));
-        }
+        char *name = newname(argv[1]);
 
-        char *filename =(char *)malloc(125);
+        char *filename = (char *)malloc(125);
         XML_Parser parser;
         int done;
-
 
         switch (atoi(argv[2]))
         {
@@ -354,17 +363,18 @@ int main(int argc, char *argv[])
             /***********************************Bronze mode****************************************/
             /**************************************************************************************/
         case 1:
-            printf("Vous avez choisi le mode Bronze !\n");
-            strcpy(filename,"../results/BronzeResults_");
+            fprintf(stderr,"You chose the Bronze mode !\n");
+            strcpy(filename, "../results/BronzeResults_");
 
-            strcat(filename,argv[1]);
+            strcat(filename, argv[1]);
             strcat(filename, ".csv");
-            //printf("filename: %s\n", filename);
+            // printf("filename: %s\n", filename);
 
-            //strcat(strcat(filename, argv[1]), ".csv");
+            // strcat(strcat(filename, argv[1]), ".csv");
 
             output = fopen(filename, "w");
             fprintf(output, "Bronze results of %s\n\n", name);
+            fprintf(output, "id, num, score, evalue,align-length \n");
 
             parser = XML_ParserCreate(NULL);
             XML_SetElementHandler(parser, bronze_tag_start, tag_end);
@@ -392,26 +402,29 @@ int main(int argc, char *argv[])
             XML_ParserFree(parser);
             fclose(f);
 
-            printf("Vous pouvez ouvrir le fichier : %s\n", filename);
+            fprintf(stderr,"You can open the file: %s\n", filename);
             break;
             /**************************************************************************************/
             /**********************************Silver mode*****************************************/
             /**************************************************************************************/
         case 2:
-            printf("Vous avez choisi le mode Silver !\n");
+            fprintf(stderr,"You chose the Silver mode !\n");
             strcpy(filename, "../results/SilverResults_");
-            strcat(filename,argv[1]);
+            printf("%s\n", name);
+
+            strcat(filename, name);
             strcat(filename, ".csv");
 
             output = fopen(filename, "w");
             fprintf(output, "Silver results of %s\n\n", name);
+            fprintf(output, "id,hit,score,evalue,identity,positive,gaps,align-length \n");
 
             parser = XML_ParserCreate(NULL);
             XML_SetElementHandler(parser, silver_tag_start, tag_end);
             XML_SetCharacterDataHandler(parser, tag_value);
 
             state.access = 0;
-            
+
             do
             {
                 int len = fread(buf, 1, BUFSIZE, f);
@@ -432,19 +445,20 @@ int main(int argc, char *argv[])
 
             XML_ParserFree(parser);
             fclose(f);
-            printf("Vous pouvez ouvrir le fichier : %s\n", filename);
+            fprintf(stderr,"You can open the file: %s\n", filename);
 
             break;
             /**************************************************************************************/
             /************************************Gold Mode*****************************************/
             /**************************************************************************************/
         case 3:
-            printf("Vous avez choisi le mode Gold !\n");
+            printf("You chose the Gold mode !\n");
             strcpy(filename, "../results/GoldResults_");
-            strcat(filename,argv[1]);
+            strcat(filename, argv[1]);
             strcat(filename, ".csv");
             output = fopen(filename, "w");
             fprintf(output, "Gold results of %s\n\n", name);
+            fprintf(output, "id,hit,bitscore,score,evalue,query-from,query-to,target-from,target-to,identity,positive,gaps,align-length \n");
 
             parser = XML_ParserCreate(NULL);
             XML_SetElementHandler(parser, gold_tag_start, tag_end);
@@ -471,11 +485,10 @@ int main(int argc, char *argv[])
 
             XML_ParserFree(parser);
             fclose(f);
-            printf("Vous pouvez ouvrir le fichier : %s\n", filename);
+            fprintf(stderr,"You can open the file : %s\n", filename);
 
             break;
-        default:
-            break;
+       
         }
     }
     /**************************************************************************************/
@@ -528,8 +541,9 @@ int main(int argc, char *argv[])
         XML_ParserFree(parser);
         fclose(f);
     }
-    else{
-        printf("You need to put a second argument\n");
+    else
+    {
+        fprintf(stderr,"You need to put a second argument\n");
         exit(1);
     }
     return 0;
