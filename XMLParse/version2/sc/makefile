@@ -1,5 +1,5 @@
 # L'exécutable à générer :
-EXEC=parsingv2
+EXEC=parsing
 
 # Les fichiers .o a générer si nécessaire
 DEP=options.o
