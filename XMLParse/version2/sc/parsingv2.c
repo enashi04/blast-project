@@ -251,7 +251,7 @@ int main(int argc, char **argv)
     mode = modeChoice(argc, argv, mode);
     char *outName = NULL;
     outName = outputName(argc, argv, outName);
-    printf("l'outname est %s\n", outName);
+    //printf("l'outname est %s\n", outName);
     // si l'user met des options non valides
     invalidOptions(argc, argv);
     // ouverture du fichier pour mettre le résultat
@@ -272,7 +272,7 @@ int main(int argc, char **argv)
     {
         fprintf(stderr, "You chose the Bronze mode !\n");
 
-        fprintf(output, "Bronze results \n\n");
+        //fprintf(output, "Bronze results \n\n");
         fprintf(output, "id, num, score, evalue,align-length \n");
 
         XML_Parser parser = XML_ParserCreate(NULL);
@@ -280,27 +280,7 @@ int main(int argc, char **argv)
         XML_SetCharacterDataHandler(parser, tag_value);
 
         state.access = 0;
-        int done;
-        do
-        {
-            int len = fread(buf, 1, BUFSIZE, f);
-
-            if (ferror(f))
-            {
-                fprintf(stderr, "Read error\n");
-                break;
-            }
-            done = feof(f);
-
-            if (XML_Parse(parser, buf, len, done) == XML_STATUS_ERROR)
-            {
-                fprintf(stderr, "Error while parsing XML\n");
-                break;
-            }
-        } while (!done);
-
-        XML_ParserFree(parser);
-        fclose(f);
+        test_error(f, parser);
         if (outName != NULL)
         {
             fprintf(stderr, "You can open the file: %s\n", outName);
@@ -309,7 +289,7 @@ int main(int argc, char **argv)
     else if (strcmp(mode, "silver") == 0)
     {
         fprintf(stdout, "You chose the Silver mode !\n");
-        fprintf(output, "Silver results\n\n");
+        //fprintf(output, "Silver results\n\n");
         fprintf(output, "id,hit,score,evalue,identity,positive,gaps,align-length \n");
 
         // fprintf(stdout, "Silver results of %s\n\n", name);
@@ -320,27 +300,8 @@ int main(int argc, char **argv)
         XML_SetCharacterDataHandler(parser, tag_value);
 
         state.access = 0;
-        int done;
-        do
-        {
-            int len = fread(buf, 1, BUFSIZE, f);
+        test_error(f, parser);
 
-            if (ferror(f))
-            {
-                fprintf(stderr, "Read error\n");
-                break;
-            }
-            done = feof(f);
-
-            if (XML_Parse(parser, buf, len, done) == XML_STATUS_ERROR)
-            {
-                fprintf(stderr, "Error while parsing XML\n");
-                break;
-            }
-        } while (!done);
-
-        XML_ParserFree(parser);
-        fclose(f);
         if (outName != NULL)
         {
             fprintf(stderr, "You can open the file: %s\n", outName);
@@ -350,7 +311,7 @@ int main(int argc, char **argv)
     {
         fprintf(stderr, "You chose the Gold mode !\n");
 
-        fprintf(output, "Gold results\n\n");
+        //fprintf(output, "Gold results\n\n");
         fprintf(output, "id,hit,bitscore,score,evalue,query-from,query-to,target-from,target-to,identity,positive,gaps,align-length \n");
 
         // fprintf(stdout, "Gold results of %s\n\n", name);
@@ -361,27 +322,8 @@ int main(int argc, char **argv)
         XML_SetCharacterDataHandler(parser, tag_value);
 
         state.access = 0;
-        int done;
-        do
-        {
-            int len = fread(buf, 1, BUFSIZE, f);
+        test_error(f, parser);
 
-            if (ferror(f))
-            {
-                fprintf(stderr, "Read error\n");
-                break;
-            }
-            done = feof(f);
-
-            if (XML_Parse(parser, buf, len, done) == XML_STATUS_ERROR)
-            {
-                fprintf(stderr, "Error while parsing XML\n");
-                break;
-            }
-        } while (!done);
-
-        XML_ParserFree(parser);
-        fclose(f);
         if (outName != NULL)
         {
             fprintf(stderr, "You can open the file: %s\n", outName);

@@ -101,7 +101,6 @@ char *outputName(int argc, char **argv, char *name)
             }
         }
     }
-     fprintf(stderr,"%s\n", name);
     return name;
 }
 
@@ -132,7 +131,6 @@ void invalidOptions(int argc, char **argv)
 /// @return the name of the input
 char *inputRecovery(int argc, char **argv, char *inputName)
 {
-    printf("arg : %s\n", argv[argc - 1]);
     if (argv[argc - 1] != NULL && strchr(argv[argc - 1], '.'))
     {
         inputName = strrchr(argv[argc - 1], '.');
