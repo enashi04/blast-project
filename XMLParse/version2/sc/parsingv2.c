@@ -1,6 +1,7 @@
 #include <ctype.h>
 #include <expat.h>
 #include "options.h"
+
 #define BUFSIZE 8192
 
 char buf[BUFSIZE];
@@ -234,6 +235,7 @@ void test_error(FILE *f, XML_Parser parser)
 
 
 int main(int argc, char **argv){
+    //si on n'a pas d'argument
     if (argc==1)
     {
         fprintf(stderr,"Usage:\n");
@@ -241,21 +243,31 @@ int main(int argc, char **argv){
         fprintf(stderr, "-h or help to see options\n");
         exit(1);
     }
-    char *name=NULL;
-    char *outName = NULL;
-    int displayConsole = 0;
-    //FILE *f;
-    getArgs(argc, argv,name, outName, displayConsole);
+   
+    // Affichage du help si besoin
+    help(argv);
 
-    printf("%s\n", outName);
+    //récupération des valeurs passées en arguments
+    char *name='\0';
+    name = modeChoice(argc, argv, name);
+    char *outName =outputName(argc,argv,outName);
+    fprintf(stderr,"test %s\n",outName);
+    int displayConsole = displayResults(argc, argv);
 
-    // Affichage du résultat en fonction du mode
-    // if(outName==NULL){
-    //     f = fopen("out.csv", "w");
-    // }
-    // else {
-    //     f=fopen(outName, "w");
-    // }
+    //récupération de l'input
+
+//si l'user met des options non valides
+    invalidOptions(argc, argv);
+    
+    //ouverture du fichier pour mettre le résultat
+    FILE *f;
+    if(*outName!=NULL){
+        f=fopen(outName, "w");
+       
+    }
+    else {
+        f = fopen("out.csv", "w");
+    }
   
     //affichage du résultat sur la console
 

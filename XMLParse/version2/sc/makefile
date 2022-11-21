@@ -1,17 +1,73 @@
+# CC=gcc
+# CFLAGS=-std=c99 -pedantic -Wall -Wextra
+# LDFLAGS=-lexpat
+# SRC=$(wildcard ./*.c)
+# OBJ=$(SRC:.c=.o)
+# TARGET=parsingv2
+
+# $(TARGET): $(OBJ)
+# 	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
+
+# %.o: %.c %.h
+# 	$(CC) $(CFLAGS) -o $@ -c $< $(LDFLAGS)
+
+# .PHONY: clean
+
+# clean:
+# 	rm -f $(TARGET) $(OBJ)
+
+# # L'exécutable à générer :
+# EXEC=main
+
+# # Les fichiers .o a générer si nécessaire
+# DEP=tris.o tableau.o
+
+# all: $(EXEC)
+
+# #Variables personnalisées
+# CC=gcc
+# CFLAGS=-Wall 
+# LDFLAGS=
+
+
+# %.o: %.c 
+# 	$(CC) -c $^ $(CFLAGS)
+
+# L'exécutable à générer :
+EXEC=parsingv2
+
+# Les fichiers .o a générer si nécessaire
+DEP=options.o
+
+all: $(EXEC)
+
+#Variables personnalisées
 CC=gcc
-CFLAGS=-std=c99 -pedantic -Wall -Wextra
-LDFLAGS=-lexpat
-SRC=$(wildcard ./*.c)
-OBJ=$(SRC:.c=.o)
-TARGET=parsing
+CFLAGS=-Wall 
+LDFLAGS= -lexpat
 
-$(TARGET): $(OBJ)
-	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
 
-%.o: %.c %.h
-	$(CC) $(CFLAGS) -o $@ -c $< $(LDFLAGS)
+%.o: %.c 
+	$(CC) -c $^ $(CFLAGS)
 
-.PHONY: clean
+#Générer les commandes demandées une après l'autre
+$(EXEC): %: %.c $(DEP)
+	$(CC) $(CFLAGS) -o $@  $^ $(LDFLAGS)
 
+#### RAPPEL ################
+
+#   $@    Nom de la cible
+#   $<     Nom de la première dépendance pour la cible
+#   $ˆ      Liste des dépendances pour la cible
+#   $?     Liste des dépendances plus récentes que la cible Nom du fichier (sans son suffixe)
+#   $*      Nom du fichier (sans son suffixe)
+#    % : permet de prendre un élément après l'autre dans une liste de cibles
+##################
+
+#supprimer les fichier *.o 
 clean:
-	rm -f $(TARGET) $(OBJ)
+	rm -rf *.o 
+
+#supprimer les fichiers *.o et les exécutables
+mrproper: clean
+	rm -rf $(EXEC) 
