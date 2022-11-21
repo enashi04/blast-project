@@ -101,7 +101,7 @@ char *outputName(int argc, char **argv, char *name)
             }
         }
     }
-    // fprintf(stderr,"%s\n", name);
+     fprintf(stderr,"%s\n", name);
     return name;
 }
 

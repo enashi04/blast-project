@@ -204,32 +204,6 @@ void tag_value(void *data, const char *text, int len)
         strcpy(content, state.query);
         state.access = 0;
     }
-    // if (state.access == 3)
-    // {
-    //     fprintf(output, "Query-def :%s\n", content);
-    //     strcpy(content, state.query);
-    //     state.access = 0;
-    // }
-    // if (state.access == 4)
-    // {
-    //     fprintf(output, "Length :%s\n\n", content);
-    //     printf("on sort le length : %s\n", content);
-        
-    //     strcpy(content, state.query);
-    //     if (mode == 1)
-    //     {
-    //         fprintf(output, "id, num, score, evalue,align-length \n");
-    //     }
-    //     else if (mode == 2)
-    //     {
-    //         fprintf(output, "id,hit,score,evalue,identity,positive,gaps,align-length \n");
-    //     }
-    //     else
-    //     {
-    //         fprintf(output, "id,hit,bitscore,score,evalue,query-from,query-to,target-from,target-to,identity,positive,gaps,align-length \n");
-    //     }
-    //     state.access = 0;
-    // }
     if (state.access == 5) // pour le nom de l'hit
     {
         fprintf(output, "%s,", content);
