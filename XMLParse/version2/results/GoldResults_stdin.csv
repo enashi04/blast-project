@@ -1,9 +1,4 @@
-Gold results of stdin
-
-Query-def :sp|P96368|TRCS_MYCTU Sensor histidine kinase TrcS OS=Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv) OX=83332 GN=trcS PE=1 SV=1
-Length :509
-
-id,hit,bitscore,score,evalue,query-from,query-to,target-from,target-to,identity,positive,gaps,align-length 
+GoldResult of stdin.xmlid,hit,bitscore,score,evalue,query-from,query-to,target-from,target-to,identity,positive,gaps,align-length 
 WP_052630949,1,798.119,2060,0,1,509,1,509,508,509,0,509
 WP_057126492,1,798.119,2060,0,1,509,1,509,508,508,0,509
 WP_031678289,1,796.193,2055,0,1,509,1,509,508,508,0,509
@@ -192,7 +187,7 @@ WP_065137245,1,583.563,1503,0,7,501,2,500,382,433,4,499
 WP_069435171,1,583.563,1503,0,7,501,2,500,382,433,4,499
 VTO96402,1,582.793,1501,0,1,503,1,498,390,429,5,503
 COW81119,1,577.4,1487,0,134,509,235,610,370,371,0,376
-//,2,344.354,882,1.06892e-107,1,242,1,242,242,242,0,242
+-,2,344.354,882,1.06892e-107,1,242,1,242,242,242,0,242
 WP_076060169,1,574.318,1479,0,7,509,2,504,392,431,0,503
 WP_158018005,1,573.548,1477,0,7,509,2,502,388,428,2,503
 WP_067239579,1,571.237,1471,0,1,509,1,504,385,425,5,509
