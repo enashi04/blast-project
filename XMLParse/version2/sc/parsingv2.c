@@ -1,7 +1,5 @@
-#include <stdio.h>
-#include <string.h>
-#include <expat.h>
 #include <ctype.h>
+#include <expat.h>
 #include "options.h"
 #define BUFSIZE 8192
 
@@ -45,14 +43,6 @@ void bronze_tag_start(void *data, const char *name, const char **attrs)
     {
         state.access = 2;
     }
-    // if (strcmp(name, "Iteration_query-def") == 0)
-    // {
-    //     state.access = 3;
-    // }
-    // if (strcmp(name, "Iteration_query-len") == 0)
-    // {
-    //     state.access = 4;
-    // }
 }
 
 /** @brief Open the tag for the Silver Mode
@@ -95,14 +85,7 @@ void silver_tag_start(void *data, const char *name, const char **attrs)
     {
         state.access = 2;
     }
-    // if (strcmp(name, "Iteration_query-def") == 0)
-    // {
-    //     state.access = 3;
-    // }
-    // if (strcmp(name, "Iteration_query-len") == 0)
-    // {
-    //     state.access = 4;
-    // }
+   
 }
 /** @brief Open the tag for the Gold Mode
     @param data
@@ -261,10 +244,19 @@ int main(int argc, char **argv){
     char *name=NULL;
     char *outName = NULL;
     int displayConsole = 0;
+    //FILE *f;
     getArgs(argc, argv,name, outName, displayConsole);
 
-    // Affichage du résultat en fonction du mode
+    printf("%s\n", outName);
 
+    // Affichage du résultat en fonction du mode
+    // if(outName==NULL){
+    //     f = fopen("out.csv", "w");
+    // }
+    // else {
+    //     f=fopen(outName, "w");
+    // }
+  
     //affichage du résultat sur la console
 
     //affichage d'un exemple CSV
