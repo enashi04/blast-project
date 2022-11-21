@@ -193,12 +193,14 @@ void tag_value(void *data, const char *text, int len)
     if (state.access == 1)
     {
         fprintf(output, "%s,", content);
+        fprintf(stdout, "%s,", content);
         strcpy(content, state.query);
         state.access = 0;
     }
     if (state.access == 2)
     {
         fprintf(output, "%s\n", content);
+        fprintf(stdout, "%s\n", content);
         strcpy(content, state.query);
         state.access = 0;
     }
@@ -231,6 +233,7 @@ void tag_value(void *data, const char *text, int len)
     if (state.access == 5) // pour le nom de l'hit
     {
         fprintf(output, "%s,", content);
+        fprintf(stdout, "%s,", content);
         strcpy(content, state.query);
         state.access = 0;
     }
@@ -239,12 +242,14 @@ void tag_value(void *data, const char *text, int len)
         if (strncmp(content, "1", 1) == 0)
         {
             fprintf(output, "%s,", content);
+            fprintf(stdout, "%s", content);
             strcpy(content, state.query);
             state.access = 0;
         }
         else
         {
             fprintf(output, "-,%s,", content);
+            fprintf(stdout, "%s,", content);
             strcpy(content, state.query);
             state.access = 0;
         }

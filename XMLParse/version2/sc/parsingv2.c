@@ -7,15 +7,13 @@
 char buf[BUFSIZE];
 char content[BUFSIZE];
 FILE *output;
-//int mode;
-
+// int mode;
 
 struct
 {
     char query[128];
     char access;
 } state;
-
 
 /** @brief Open the tag for the Bronze Mode
     @param data
@@ -86,7 +84,6 @@ void silver_tag_start(void *data, const char *name, const char **attrs)
     {
         state.access = 2;
     }
-   
 }
 /** @brief Open the tag for the Gold Mode
     @param data
@@ -171,19 +168,24 @@ void tag_value(void *data, const char *text, int len)
     if (state.access == 1)
     {
         fprintf(output, "%s,", content);
+        fprintf(stdout, "%s,", content);
         strcpy(content, state.query);
         state.access = 0;
     }
     if (state.access == 2)
     {
         fprintf(output, "%s\n", content);
+        fprintf(stdout, "%s\n", content);
+
         strcpy(content, state.query);
         state.access = 0;
     }
-  
+
     if (state.access == 5) // pour le nom de l'hit
     {
         fprintf(output, "%s,", content);
+        fprintf(stdout, "%s,", content);
+
         strcpy(content, state.query);
         state.access = 0;
     }
@@ -192,12 +194,14 @@ void tag_value(void *data, const char *text, int len)
         if (strncmp(content, "1", 1) == 0)
         {
             fprintf(output, "%s,", content);
+            fprintf(stdout, "%s,", content);
             strcpy(content, state.query);
             state.access = 0;
         }
         else
         {
             fprintf(output, "-,%s,", content);
+            fprintf(stdout, "-,%s,", content);
             strcpy(content, state.query);
             state.access = 0;
         }
@@ -233,44 +237,158 @@ void test_error(FILE *f, XML_Parser parser)
     fclose(f);
 }
 
-
-int main(int argc, char **argv){
-    //si on n'a pas d'argument
-    if (argc==1)
+int main(int argc, char **argv)
+{
+    // si on n'a pas d'argument
+    if (argc == 1)
     {
-        fprintf(stderr,"Usage:\n");
-        fprintf(stderr,"\t./parsing -option <argument>\n\n");
+        fprintf(stderr, "Usage:\n");
+        fprintf(stderr, "\t./parsing -option <argument>\n\n");
         fprintf(stderr, "-h or help to see options\n");
         exit(1);
     }
-   
+
     // Affichage du help si besoin
     help(argv);
+    char *inputName = NULL;
 
-    //récupération des valeurs passées en arguments
-    char *name='\0';
-    name = modeChoice(argc, argv, name);
-    char *outName =outputName(argc,argv,outName);
-    fprintf(stderr,"test %s\n",outName);
-    int displayConsole = displayResults(argc, argv);
-
-    //récupération de l'input
-
-//si l'user met des options non valides
+    inputName = inputRecovery(argc, argv, inputName);
+    // récupération des valeurs passées en arguments
+    char *mode = '\0';
+    mode = modeChoice(argc, argv, mode);
+    char *outName = NULL;
+    outName = outputName(argc, argv, outName);
+    // si l'user met des options non valides
     invalidOptions(argc, argv);
-    
-    //ouverture du fichier pour mettre le résultat
-    FILE *f;
-    if(*outName!=NULL){
-        f=fopen(outName, "w");
-       
-    }
-    else {
-        f = fopen("out.csv", "w");
-    }
-  
-    //affichage du résultat sur la console
+    // ouverture du fichier pour mettre le résultat
+    FILE *output;
+    FILE *f = fopen(inputName, "r");
 
-    //affichage d'un exemple CSV
+    if (*outName != '\0')
+    {
+        output = fopen(outName, "w");
+    }
+    else
+    {
+        output = fopen("out.csv", "w");
+    }
+    // récupérer le nom du fichier sans extension
+    char *name = newname(inputName);
+
+    XML_Parser parser;
+    int done;
+    if (strcmp(mode, "bronze") == 0)
+    {
+        fprintf(stderr, "You chose the Bronze mode !\n");
+
+        fprintf(output, "Bronze results of %s\n\n", name);
+        fprintf(output, "id, num, score, evalue,align-length \n");
+
+        fprintf(stdout, "Bronze results of %s\n\n", name);
+        fprintf(stdout, "id, num, score, evalue,align-length \n");
+
+        parser = XML_ParserCreate(NULL);
+        XML_SetElementHandler(parser, bronze_tag_start, tag_end);
+        XML_SetCharacterDataHandler(parser, tag_value);
+
+        state.access = 0;
+        do
+        {
+            int len = fread(buf, 1, BUFSIZE, f);
+
+            if (ferror(f))
+            {
+                fprintf(stderr, "Read error\n");
+                break;
+            }
+            done = feof(f);
+
+                if (XML_Parse(parser, buf, len, done) == XML_STATUS_ERROR)
+            {
+                fprintf(stderr, "Error while parsing XML\n");
+                break;
+            }
+        } while (!done);
+
+        XML_ParserFree(parser);
+        fclose(f);
+
+        fprintf(stderr, "You can open the file: %s\n", outName);
+    }
+    else if (strcmp(mode, "silver") == 0)
+    {
+        fprintf(stdout, "You chose the Silver mode !\n");
+        fprintf(output, "Silver results of %s\n\n", name);
+        fprintf(output, "id,hit,score,evalue,identity,positive,gaps,align-length \n");
+
+        fprintf(stdout, "Silver results of %s\n\n", name);
+        fprintf(stdout, "id,hit,score,evalue,identity,positive,gaps,align-length \n");
+
+        parser = XML_ParserCreate(NULL);
+        XML_SetElementHandler(parser, silver_tag_start, tag_end);
+        XML_SetCharacterDataHandler(parser, tag_value);
+
+        state.access = 0;
+
+        do
+        {
+            int len = fread(buf, 1, BUFSIZE, f);
+
+            if (ferror(f))
+            {
+                fprintf(stderr, "Read error\n");
+                break;
+            }
+            done = feof(f);
+
+            if (XML_Parse(parser, buf, len, done) == XML_STATUS_ERROR)
+            {
+                fprintf(stderr, "Error while parsing XML\n");
+                break;
+            }
+        } while (!done);
+
+        XML_ParserFree(parser);
+        fclose(f);
+        fprintf(stderr, "You can open the file: %s\n", outName);
+    }
+    else if (strcmp(mode, "gold") == 0)
+    {
+        fprintf(stderr, "You chose the Gold mode !\n");
+
+        fprintf(output, "Gold results of %s\n\n", name);
+        fprintf(output, "id,hit,bitscore,score,evalue,query-from,query-to,target-from,target-to,identity,positive,gaps,align-length \n");
+
+        fprintf(stdout, "Gold results of %s\n\n", name);
+        fprintf(stdout, "id,hit,bitscore,score,evalue,query-from,query-to,target-from,target-to,identity,positive,gaps,align-length \n");
+
+        parser = XML_ParserCreate(NULL);
+        XML_SetElementHandler(parser, gold_tag_start, tag_end);
+        XML_SetCharacterDataHandler(parser, tag_value);
+
+        state.access = 0;
+        do
+        {
+            int len = fread(buf, 1, BUFSIZE, f);
+
+            if (ferror(f))
+            {
+                fprintf(stderr, "Read error\n");
+                break;
+            }
+            done = feof(f);
+
+            if (XML_Parse(parser, buf, len, done) == XML_STATUS_ERROR)
+            {
+                fprintf(stderr, "Error while parsing XML\n");
+                break;
+            }
+        } while (!done);
+
+        XML_ParserFree(parser);
+        fclose(f);
+        fprintf(stderr, "You can open the file : %s\n", outName);
+    }
+
     return 0;
 }

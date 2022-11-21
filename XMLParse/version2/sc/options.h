@@ -15,5 +15,6 @@ char *outputName(int argc, char **argv, char *name);
  
 int displayResults(int argc, char **argv);
 void invalidOptions(int argc, char **argv);
-
+char *inputRecovery(int argc, char **argv, char *inputName);
+char *newname(char *name);
 #endif

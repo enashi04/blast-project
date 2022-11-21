@@ -1,38 +1,3 @@
-# CC=gcc
-# CFLAGS=-std=c99 -pedantic -Wall -Wextra
-# LDFLAGS=-lexpat
-# SRC=$(wildcard ./*.c)
-# OBJ=$(SRC:.c=.o)
-# TARGET=parsingv2
-
-# $(TARGET): $(OBJ)
-# 	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
-
-# %.o: %.c %.h
-# 	$(CC) $(CFLAGS) -o $@ -c $< $(LDFLAGS)
-
-# .PHONY: clean
-
-# clean:
-# 	rm -f $(TARGET) $(OBJ)
-
-# # L'exécutable à générer :
-# EXEC=main
-
-# # Les fichiers .o a générer si nécessaire
-# DEP=tris.o tableau.o
-
-# all: $(EXEC)
-
-# #Variables personnalisées
-# CC=gcc
-# CFLAGS=-Wall 
-# LDFLAGS=
-
-
-# %.o: %.c 
-# 	$(CC) -c $^ $(CFLAGS)
-
 # L'exécutable à générer :
 EXEC=parsingv2
 
@@ -43,7 +8,7 @@ all: $(EXEC)
 
 #Variables personnalisées
 CC=gcc
-CFLAGS=-Wall 
+CFLAGS=-Wall -g
 LDFLAGS= -lexpat
 
 
