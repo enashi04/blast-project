@@ -7,7 +7,7 @@
 char buf[BUFSIZE];
 char content[BUFSIZE];
 FILE *output;
-// int mode;
+int t_from, t_to, query_length,number_of_hit=0;
 
 struct
 {
@@ -123,11 +123,11 @@ void gold_tag_start(void *data, const char *name, const char **attrs)
     }
     if (strcmp(name, "Hsp_hit-from") == 0)
     {
-        state.access = 1;
+        state.access = 3;
     }
     if (strcmp(name, "Hsp_hit-to") == 0)
     {
-        state.access = 1;
+        state.access = 4;
     }
     if (strcmp(name, "Hsp_identity") == 0)
     {
@@ -144,6 +144,10 @@ void gold_tag_start(void *data, const char *name, const char **attrs)
     if (strcmp(name, "Hsp_align-len") == 0)
     {
         state.access = 2;
+    }
+    if (strcmp(name, "Iteration_query-len") == 0)
+    {
+        state.access = 7;
     }
 }
 
@@ -171,13 +175,29 @@ void tag_value(void *data, const char *text, int len)
         strcpy(content, state.query);
         state.access = 0;
     }
-    if (state.access == 2)
+    if (state.access == 2) //pour la longueur d'alignement
     {
-        fprintf(output, "%s\n", content);
+        
+        int query_cover = 100 * (t_to - t_from)/query_length;
+       // fprintf(stdout, "t_from : %u-t_to : %u /query_length %d\n",t_from, t_to, query_cover);
+        fprintf(output, "%u,%s\n", query_cover,content);
         strcpy(content, state.query);
         state.access = 0;
     }
-
+    if(state.access==3){
+        t_from=atoi(content);
+       // fprintf(stdout, "target from is %u\n", t_from);
+        fprintf(output, "%s,", content);
+        strcpy(content, state.query);
+        state.access = 0;
+    }
+    if(state.access==4){
+        t_to=atoi(content);
+       // fprintf(stdout, "target to is %u\n", t_to);
+        fprintf(output, "%s,", content);
+        strcpy(content, state.query);
+        state.access = 0;
+    }
     if (state.access == 5) // pour le nom de l'hit
     {
         fprintf(output, "%s,", content);
@@ -198,6 +218,12 @@ void tag_value(void *data, const char *text, int len)
             strcpy(content, state.query);
             state.access = 0;
         }
+    }
+    if(state.access ==7){
+        query_length=atoi(content);
+        //fprintf(stdout, "la query length est %u\n", query_length);
+        strcpy(content, state.query);
+        state.access = 0;
     }
 }
 
@@ -312,7 +338,7 @@ int main(int argc, char **argv)
         fprintf(stderr, "You chose the Gold mode !\n");
 
         //fprintf(output, "Gold results\n\n");
-        fprintf(output, "id,hit,bitscore,score,evalue,query-from,query-to,target-from,target-to,identity,positive,gaps,align-length \n");
+        fprintf(output, "id,hit,bitscore,score,evalue,query-from,query-to,target-from,target-to,identity,positive,gaps,query-cover,align-length \n");
 
         // fprintf(stdout, "Gold results of %s\n\n", name);
         // fprintf(stdout, "id,hit,bitscore,score,evalue,query-from,query-to,target-from,target-to,identity,positive,gaps,align-length \n");
