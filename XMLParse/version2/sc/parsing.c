@@ -25,7 +25,6 @@ int main(int argc, char **argv)
     mode = modeChoice(argc, argv, mode);
     char *outName = NULL;
     outName = outputName(argc, argv, outName);
-    //printf("l'outname est %s\n", outName);
     // si l'user met des options non valides
     invalidOptions(argc, argv);
     // ouverture du fichier pour mettre le résultat
@@ -45,8 +44,6 @@ int main(int argc, char **argv)
     if (strcmp(mode, "bronze") == 0)
     {
         fprintf(stderr, "You chose the Bronze mode !\n");
-
-        //fprintf(output, "Bronze results \n\n");
         fprintf(output, "id, num, score, evalue,align-length \n");
 
         XML_Parser parser = XML_ParserCreate(NULL);
@@ -66,9 +63,6 @@ int main(int argc, char **argv)
         //fprintf(output, "Silver results\n\n");
         fprintf(output, "id,hit,score,evalue,identity,positive,gaps,align-length \n");
 
-        // fprintf(stdout, "Silver results of %s\n\n", name);
-        // fprintf(stdout, "id,hit,score,evalue,identity,positive,gaps,align-length \n");
-
         XML_Parser parser = XML_ParserCreate(NULL);
         XML_SetElementHandler(parser, silver_tag_start, tag_end);
         XML_SetCharacterDataHandler(parser, tag_value);
@@ -87,9 +81,6 @@ int main(int argc, char **argv)
 
         //fprintf(output, "Gold results\n\n");
         fprintf(output, "id,hit,bitscore,score,evalue,query-from,query-to,target-from,target-to,identity,positive,gaps,query-cover,align-length \n");
-
-        // fprintf(stdout, "Gold results of %s\n\n", name);
-        // fprintf(stdout, "id,hit,bitscore,score,evalue,query-from,query-to,target-from,target-to,identity,positive,gaps,align-length \n");
 
         XML_Parser parser = XML_ParserCreate(NULL);
         XML_SetElementHandler(parser, gold_tag_start, tag_end);
