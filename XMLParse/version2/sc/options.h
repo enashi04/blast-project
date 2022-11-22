@@ -3,7 +3,6 @@
 
 #include <stdio.h>
 #include <string.h>
-#include <stdio.h>
 #include <stdlib.h>
 
 // ici on met l'affichage de help avec l'argument -h ou help

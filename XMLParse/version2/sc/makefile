@@ -2,7 +2,7 @@
 EXEC=parsing
 
 # Les fichiers .o a générer si nécessaire
-DEP=options.o
+DEP=options.o tagParse.o
 
 all: $(EXEC)
 
