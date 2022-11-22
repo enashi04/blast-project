@@ -8,6 +8,7 @@ char buf[BUFSIZE];
 char content[BUFSIZE];
 FILE *output;
 int t_from, t_to, query_length,number_of_hit=0;
+char *name_hit;
 
 struct
 {
@@ -177,30 +178,28 @@ void tag_value(void *data, const char *text, int len)
     }
     if (state.access == 2) //pour la longueur d'alignement
     {
-        
         int query_cover = 100 * (t_to - t_from)/query_length;
-       // fprintf(stdout, "t_from : %u-t_to : %u /query_length %d\n",t_from, t_to, query_cover);
         fprintf(output, "%u,%s\n", query_cover,content);
         strcpy(content, state.query);
         state.access = 0;
     }
     if(state.access==3){
         t_from=atoi(content);
-       // fprintf(stdout, "target from is %u\n", t_from);
         fprintf(output, "%s,", content);
         strcpy(content, state.query);
         state.access = 0;
     }
     if(state.access==4){
         t_to=atoi(content);
-       // fprintf(stdout, "target to is %u\n", t_to);
         fprintf(output, "%s,", content);
         strcpy(content, state.query);
         state.access = 0;
     }
     if (state.access == 5) // pour le nom de l'hit
     {
-        fprintf(output, "%s,", content);
+        name_hit= content;
+        fprintf(stdout, "name hit is %s\n", name_hit);
+        fprintf(output, "%s,", name_hit);
         strcpy(content, state.query);
         state.access = 0;
     }
@@ -214,6 +213,7 @@ void tag_value(void *data, const char *text, int len)
         }
         else
         {
+            fprintf(stdout, "name hit is %s\n", name_hit);
             fprintf(output, "-,%s,", content);
             strcpy(content, state.query);
             state.access = 0;
@@ -221,7 +221,6 @@ void tag_value(void *data, const char *text, int len)
     }
     if(state.access ==7){
         query_length=atoi(content);
-        //fprintf(stdout, "la query length est %u\n", query_length);
         strcpy(content, state.query);
         state.access = 0;
     }
