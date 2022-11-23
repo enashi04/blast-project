@@ -1,6 +1,5 @@
 #include "tagParse.h"
 
-
 /** @brief Open the tag for the Bronze Mode
     @param data
     @param name
@@ -154,42 +153,49 @@ void tag_value(void *data, const char *text, int len)
 {
     strncpy(content, text, len);
     content[len] = '\0';
+    const char *name;
 
-    if (state.access == 1)
+    switch (state.access)
     {
+    case 1:
         fprintf(output, "%s,", content);
         strcpy(content, state.query);
         state.access = 0;
-    }
-    if (state.access == 2) //pour la longueur d'alignement
-    {
-        int query_cover = 100 * (t_to - t_from)/query_length;
-        fprintf(output, "%u,%s\n", query_cover,content);
-        strcpy(content, state.query);
-        state.access = 0;
-    }
-    if(state.access==3){
-        t_from=atoi(content);
+        break;
+    case 2:
+        if (query_length != 0)
+        {
+            int query_cover = 100 * (t_to - t_from) / query_length;
+            fprintf(output, "%u,%s\n", query_cover, content);
+            strcpy(content, state.query);
+            state.access = 0;
+        }
+        else
+        {
+            fprintf(output, "%s\n", content);
+            strcpy(content, state.query);
+            state.access = 0;
+        }
+        break;
+    case 3:
+        t_from = atoi(content);
         fprintf(output, "%s,", content);
         strcpy(content, state.query);
         state.access = 0;
-    }
-    if(state.access==4){
-        t_to=atoi(content);
+        break;
+    case 4:
+        t_to = atoi(content);
         fprintf(output, "%s,", content);
         strcpy(content, state.query);
         state.access = 0;
-    }
-    if (state.access == 5) // pour le nom de l'hit
-    {
-        name_hit= content;
-        fprintf(stdout, "name hit is %s\n", name_hit);
+        break;
+    case 5:
+        name_hit = content;
         fprintf(output, "%s,", name_hit);
         strcpy(content, state.query);
         state.access = 0;
-    }
-    if (state.access == 6) // pour le numéro du hit
-    {
+        break;
+    case 6:
         if (strncmp(content, "1", 1) == 0)
         {
             fprintf(output, "%s,", content);
@@ -199,18 +205,20 @@ void tag_value(void *data, const char *text, int len)
         else
         {
             fprintf(stdout, "name hit is %s\n", name_hit);
-            fprintf(output, "-,%s,", content);
+            fprintf(output, "%s,%s,", name_hit, content);
             strcpy(content, state.query);
             state.access = 0;
         }
-    }
-    if(state.access ==7){
-        query_length=atoi(content);
+        break;
+    case 7:
+        query_length = atoi(content);
         strcpy(content, state.query);
         state.access = 0;
+        break;
+    default:
+        break;
     }
 }
-
 
 /** @brief display errors and close file f
     @param f
