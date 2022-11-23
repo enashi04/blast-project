@@ -153,7 +153,6 @@ void tag_value(void *data, const char *text, int len)
 {
     strncpy(content, text, len);
     content[len] = '\0';
-    const char *name;
 
     switch (state.access)
     {

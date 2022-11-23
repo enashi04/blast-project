@@ -1,3 +1,5 @@
+#ifndef _TAGPARSE_
+#define _TAGPARSE_
 #include <expat.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -6,13 +8,13 @@
 
 #define BUFSIZE 8192
 
-char buf[BUFSIZE];
-char content[BUFSIZE];
-int t_from, t_to, query_length;
-char *name_hit;
-FILE *output;
+extern char buf[BUFSIZE];
+extern char content[BUFSIZE];
+extern int t_from, t_to, query_length;
+extern char *name_hit;
+extern FILE *output;
 
-struct
+extern struct
 {
     char query[128];
     char access;
@@ -57,3 +59,4 @@ void tag_value(void *data, const char *text, int len);
     @param parser
 */
 void test_error(FILE *f, XML_Parser parser);
+#endif
