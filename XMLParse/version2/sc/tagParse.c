@@ -205,7 +205,7 @@ void tag_value(void *data, const char *text, int len)
         else
         {
             fprintf(stdout, "name hit is %s\n", name_hit);
-            fprintf(output, "%s,%s,", name_hit, content);
+            fprintf(output, "-,%s,", content);
             strcpy(content, state.query);
             state.access = 0;
         }

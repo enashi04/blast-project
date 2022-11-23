@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "stdio.h": "c",
-        "options.h": "c"
+        "options.h": "c",
+        "tagparse.h": "c"
     }
 }
