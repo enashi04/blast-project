@@ -34,6 +34,10 @@ static char* get_taxon(uint taxid) {
 	return taxons->data[taxid];
 }
 
+static int get_taxid(char *name) {
+	return ;
+}
+
 int main() {
 	/*
 		Parse file created with:

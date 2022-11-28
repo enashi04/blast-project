@@ -2,6 +2,7 @@
     "files.associations": {
         "stdio.h": "c",
         "options.h": "c",
-        "tagparse.h": "c"
+        "tagparse.h": "c",
+        "dict.h": "c"
     }
 }
