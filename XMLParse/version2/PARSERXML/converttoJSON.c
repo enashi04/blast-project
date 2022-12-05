@@ -1,0 +1,217 @@
+//Conversion en JSON
+#include "converttoJSON.h"
+
+/*****************************************************************/
+/**********************Retrieve query info************************/
+/*****************************************************************/
+void queryInfo(void *data, const char *name, const char **attrs) {
+    printf("i = %u\n", i);
+    if(strcmp(name, "Iteration_query-def") == 0) {
+        state.access=1;
+    }
+    if(strcmp(name, "Iteration_query-len")==0){
+        state.access=2;
+    }
+     if (strcmp(name, "Hsp_num") == 0)
+    {
+        state.access = 3;
+    }
+     if (strcmp(name, "Hit_accession") == 0)
+    {
+        state.access = 4;
+    }
+   
+    if (strcmp(name, "Hsp_bit-score") == 0)
+    {
+        state.access = 5;
+    }
+    if (strcmp(name, "Hsp_score") == 0) //mettre la query cover après le score
+    {
+        state.access = 6;
+    }
+    if (strcmp(name, "Hsp_evalue") == 0)
+    {
+        state.access = 7;
+    }
+    if (strcmp(name, "Hsp_query-from") == 0)
+    {
+        state.access = 8;
+    }
+    if (strcmp(name, "Hsp_query-to") == 0)
+    {
+        state.access = 9;
+    }
+    if (strcmp(name, "Hsp_hit-from") == 0)
+    {
+        state.access = 10;
+    }
+    if (strcmp(name, "Hsp_hit-to") == 0)
+    {
+        state.access = 11;
+    }
+    if (strcmp(name, "Hsp_identity") == 0)
+    {
+        state.access = 12;
+    }
+    if (strcmp(name, "Hsp_positive") == 0)
+    {
+        state.access = 13;
+    }
+    if (strcmp(name, "Hsp_gaps") == 0)
+    {
+        state.access = 14;
+    }
+    if (strcmp(name, "Hsp_align-len") == 0)
+    {
+        state.access = 15;
+    }
+}
+void query_tag_end(void *data, const char *name){
+
+}
+void query_tag_value(void *data, const char *text, int len){
+    
+    strncpy(content, text, len);
+    content[len] = '\0';
+
+    switch(state.access){
+        case 1:
+            fprintf(output, "{\n\"query-name\" : \"%s\",\n", content);
+            strcpy(content, state.query);
+            state.access=0;
+            break;
+        case 2 : 
+            fprintf(output, "\"query-len\" : \"%u\",\n\"hits\":[\n\n", atoi(content));
+            query_length = atoi(content);
+            strcpy(content, state.query);
+            state.access=0;
+            break;
+         case 3 : 
+         if(atoi(content)==1){
+            fprintf(output, "\"nb_hit\" : \"%u\",\n", atoi(content));
+            strcpy(content, state.query);
+            state.access=0;
+            break; 
+         }
+         else{
+            fprintf(output,"{\n\"hit_accession\" : \"%s\",\n",name_hit);
+            //printf("name hit is %s\n", name_hit);
+            fprintf(output, "\"nb_hit\" : \"%u\",\n", atoi(content));           
+            strcpy(content, state.query);
+            state.access=0;
+            break;   
+         }
+            
+        case 4 : 
+            name_hit= content;
+            fprintf(output, "{\n\"hit_accession\" : \"%s\",\n", content);
+            strcpy(content, state.query);
+            state.access=0;
+            break;
+        case 5 : 
+            fprintf(output, "\"bitscore\" : \"%u\",\n", atoi(content));
+            strcpy(content, state.query);
+            state.access=0;
+            break;
+         case 6 : 
+            fprintf(output, "\"score\" : \"%u\",\n", atoi(content));
+            strcpy(content, state.query);
+            state.access=0;
+            break;
+         case 7 : 
+            fprintf(output, "\"evalue\" : \"%u\",\n", atoi(content));
+            strcpy(content, state.query);
+            state.access=0;
+            break;
+         case 8 : 
+            fprintf(output, "\"query-from\" : \"%u\",\n", atoi(content));
+            strcpy(content, state.query);
+            state.access=0;
+            break;
+         case 9 : 
+            fprintf(output, "\"query-to\" : \"%u\",\n", atoi(content));
+            strcpy(content, state.query);
+            state.access=0;
+            break;
+         case 10 : 
+            fprintf(output, "\"target-from\" : \"%u\",\n", atoi(content));
+            t_from = atoi(content);
+            strcpy(content, state.query);
+            state.access=0;
+            break;
+         case 11 : 
+            fprintf(output, "\"target-to\" : \"%u\",\n", atoi(content));
+            t_to = atoi(content);
+            strcpy(content, state.query);
+            state.access=0;
+            break;
+         case 12 : 
+            fprintf(output, "\"identities\" : \"%u\",\n", atoi(content));
+            strcpy(content, state.query);
+            state.access=0;
+            break;
+         case 13 : 
+            fprintf(output, "\"positives\" : \"%u\",\n", atoi(content));
+            strcpy(content, state.query);
+            int query_cover = 100 * (t_to - t_from) / query_length;
+            fprintf(output, "\"query-cover\" : \"%u\",\n", query_cover);
+            state.access=0;
+            break;
+         case 14 : 
+            fprintf(output, "\"gaps\" : \"%u\",\n", atoi(content));
+            strcpy(content, state.query);
+            state.access=0;
+            break;
+         case 15 : 
+            fprintf(output, "\"align-len\" : \"%u\"\n},", atoi(content));
+            strcpy(content, state.query);
+            state.access=0;
+            break;
+    }
+}
+
+/** @brief display errors and close file f
+    @param f
+    @param parser
+*/
+void test_error(FILE *f, XML_Parser parser)
+{
+    int done;
+    do
+    {
+        int len = fread(buf, 1, BUFSIZE, f);
+
+        if (ferror(f))
+        {
+            fprintf(stderr, "Read error\n");
+            break;
+        }
+        done = feof(f);
+
+        if (XML_Parse(parser, buf, len, done) == XML_STATUS_ERROR)
+        {
+            fprintf(stderr, "Error while parsing XML\n");
+            break;
+        }
+    } while (!done);
+
+    XML_ParserFree(parser);
+    fclose(f);
+}
+/*****************************************************************/
+/***********************Retrieve hit info*************************/
+/*****************************BRONZE******************************/
+/*****************************************************************/
+
+
+/*****************************************************************/
+/***********************Retrieve hit info*************************/
+/*****************************SILVER******************************/
+/*****************************************************************/
+
+
+
+/*****************************************************************/
+/***********************Retrieve hit info*************************/
+/******************************GOLD*******************************/
+/*****************************************************************/

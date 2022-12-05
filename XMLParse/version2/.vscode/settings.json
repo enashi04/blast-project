@@ -3,6 +3,10 @@
         "stdio.h": "c",
         "options.h": "c",
         "tagparse.h": "c",
-        "dict.h": "c"
+        "dict.h": "c",
+        "converttojson.h": "c",
+        "types.h": "c",
+        "string.h": "c",
+        "stdlib.h": "c"
     }
 }

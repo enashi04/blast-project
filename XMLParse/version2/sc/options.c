@@ -81,22 +81,22 @@ char *outputName(int argc, char **argv, char *name)
                 {
                     extension = strrchr(argv[i + 1], '.');
                     // printf("extension is %s\n", extension);
-                    if (strcmp(extension, ".csv") == 0)
+                    if (strcmp(extension, ".json") == 0)
                     {
                         name = argv[i + 1];
                     }
                 }
                 else
                 {
-                    fprintf(stderr, "The output name is not valid. You need to add the csv extension\n");
-                    fprintf(stderr, "Like output.csv\n");
+                    fprintf(stderr, "The output name is not valid. You need to add the json extension\n");
+                    fprintf(stderr, "Like output.json\n");
                     exit(1);
                 }
             }
             else
             {
                 fprintf(stderr, "The output name is empty. Please add an output file\n");
-                fprintf(stderr, "Like output.csv\n");
+                fprintf(stderr, "Like output.json\n");
                 exit(1);
             }
         }
@@ -146,7 +146,7 @@ char *inputRecovery(int argc, char **argv, char *inputName)
             }
             return inputName;
         }
-        else if (strcmp(inputName, ".csv") == 0)
+        else if (strcmp(inputName, ".json") == 0)
         {
             printf("You didn't put an input file. The input will be : stdin.xml\n");
             return inputName = "stdin.xml";

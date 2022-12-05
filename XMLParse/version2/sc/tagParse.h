@@ -8,13 +8,13 @@
 
 #define BUFSIZE 8192
 
-extern char buf[BUFSIZE];
-extern char content[BUFSIZE];
-extern int t_from, t_to, query_length;
-extern char *name_hit;
-extern FILE *output;
+char buf[BUFSIZE];
+char content[BUFSIZE];
+int t_from, t_to, query_length;
+char *name_hit;
+FILE *output;
 
-extern struct
+struct
 {
     char query[128];
     char access;

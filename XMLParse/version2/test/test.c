@@ -17,7 +17,7 @@ void speciesName(char *species){
             printf("%u : %c\n",i,converted[i]);
             memmove(translated,converted +i, strlen(converted));
             break;
-        }
+        
     }
     char *newword = (char *)malloc(strlen(translated));
     int j =0;
