@@ -2,7 +2,7 @@
 EXEC=parsing
 
 # Les fichiers .o a générer si nécessaire
-DEP=options.o converttoJSON.o
+DEP=options.o converttoJSON.o readTaxonomy.o
 
 all: $(EXEC)
 

@@ -2,25 +2,7 @@
 #include <string.h>
 #include <stdio.h>
 
-#define BUFSIZE 1024
-#define CAPACITY 2429415 //nbre de ligne du fichier taxo
-
-
-//on définit les items
-typedef struct Ht_item Ht_item;
-struct Ht_item {
-    char* key;
-    char* value;
-};
-
-//on définit la hashtable
-typedef struct HashTable HashTable;
-struct HashTable {
-    // Contains an array of pointers to items
-    Ht_item** items;
-    int size;
-    int count;
-};
+#include "readTaxonomy.h"
 
 int hash_index(HashTable *table, char *key){
     int index = -1;
@@ -48,13 +30,33 @@ Ht_item* create_item(char* key, char* value) {
 
 //création d'une hashtable
 HashTable* create_table(int size) {
+
+    char l[BUFSIZE];
+    char name[512];
+    char lineage[512];
    
     HashTable* table = (HashTable*) malloc (sizeof(HashTable));
     table->size = size; //nbre de ligne dans le fichier taxo
     table->count = 0;
     table->items = (Ht_item**) calloc (table->size, sizeof(Ht_item*));
-    for (int i=0; i<table->size; i++)
-        table->items[i] = NULL; //table vide au départ
+
+    FILE *f;
+    if ((f=fopen("taxo_species_linea.reduced", "r")) == NULL){
+            fprintf(stderr,"Can't open taxo file");
+    }
+    if (fgets(l, BUFSIZE, f) == NULL){
+        fprintf(stderr,"Empty taxo file");
+    }
+
+    while(fgets(l, BUFSIZE, f)!=NULL){
+        sscanf(l,"%[^	]	%[^\n]", name, lineage);
+       //printf(l,"%s : %s\n", name, lineage);
+        ht_insert(table, name,lineage);
+    }
+    fclose(f);
+//
+    // for (int i=0; i<table->size; i++)
+    //     table->items[i] = NULL; //table vide au départ
     return table;
 }
 
@@ -118,7 +120,7 @@ char* ht_search(HashTable* table, char* key) {
     }
     return NULL;
 }
-
+//passer de void à char car ici on veut récupérer la valeur  
 void print_search(HashTable* table, char* key) {
     char* val=ht_search(table, key);
     if (val== NULL) {
@@ -138,32 +140,13 @@ void print_table(HashTable* table) {
         }
     }
 }
-int main(int argc, char ** argv){
 
-    FILE *f;
-    char l[BUFSIZE];
-    char name[512];
-    char lineage[512];
-    HashTable *table= create_table(CAPACITY);
+// int main(int argc, char ** argv){
 
-//vérif du document
-    if ((f = fopen("taxo_species_linea.reduced", "r")) == NULL){
-            fprintf(stderr,"Can't open taxo file");
-    }
-    if (fgets(l, BUFSIZE, f) == NULL){
-        fprintf(stderr,"Empty taxo file");
-    }
+//     HashTable *table= create_table(CAPACITY);
 
-    while(fgets(l, BUFSIZE, f)!=NULL){
-        sscanf(l,"%[^	]	%[^\n]", name, lineage);
-       //printf(l,"%s : %s\n", name, lineage);
-        ht_insert(table, name,lineage);
-    }
-    fclose(f);
+//     fprintf(stderr,"%s\n",ht_search(table,"Homo sapiens"));
 
-    print_search(table,"Homo sapiens");
-//    print_table(table);
-
-    free_table(table);
-    return 0;
-}
+//     free_table(table);
+//     return 0;
+// }

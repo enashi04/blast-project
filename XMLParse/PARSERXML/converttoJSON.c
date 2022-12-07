@@ -2,12 +2,43 @@
 #include "converttoJSON.h"
 
 char name_hit[128];
+char name_species[128];
+
+
+
+char *getSpecies(char *content)
+{
+    char *def = (char *)malloc(strlen(content));
+    for (int i = 0; i < strlen(content); i++)
+    {
+        if (content[i] == '[')
+        {
+            memmove(def, content + i, strlen(content));
+            break;
+        }
+    }
+    char *species = (char *)malloc(strlen(def));
+    int j = 0;
+    for (int i = 0; i < strlen(def); i++)
+    {
+        if (def[i] != '[' && def[i] != ']')
+        {
+            species[j] = def[i];
+            j++;
+        }
+        else if (def[i] == ']')
+        {
+            break;
+        }
+    }
+    // printf("%s : is the word \n", newword);
+    return species;
+}
 
 /*****************************************************************/
 /***********************Retrieve hit info*************************/
 /*****************************BRONZE******************************/
 /*****************************************************************/
-
 void bronze_tag_start(void *data, const char *name, const char **attrs)
 {
     if (strcmp(name, "Iteration_query-def") == 0)
@@ -69,6 +100,10 @@ void bronze_tag_start(void *data, const char *name, const char **attrs)
     if (strcmp(name, "Hsp_align-len") == 0)
     {
         state.access = 15;
+    }
+    if (strcmp(name, "Hit_def") == 0)
+    { // pour récupérer le nom de l'espèce entre []
+        state.access = 16;
     }
 }
 
@@ -139,6 +174,10 @@ void silver_tag_start(void *data, const char *name, const char **attrs)
     {
         state.access = 15;
     }
+    if (strcmp(name, "Hit_def") == 0)
+    { // pour récupérer le nom de l'espèce entre []
+        state.access = 16;
+    }
 }
 
 /*****************************************************************/
@@ -207,6 +246,10 @@ void gold_tag_start(void *data, const char *name, const char **attrs)
     if (strcmp(name, "Hsp_align-len") == 0)
     {
         state.access = 15;
+    }
+    if (strcmp(name, "Hit_def") == 0)
+    { // pour récupérer le nom de l'espèce entre [] ou OS
+        state.access = 16;
     }
 }
 void tag_end(void *data, const char *name)
@@ -327,6 +370,12 @@ void tag_value(void *data, const char *text, int len)
         strcpy(content, state.query);
         state.access = 0;
         break;
+    case 16:
+        strcpy(name_species, getSpecies(content)); // ici on va mettre la fonction qui permet de récupérer que le nom de l'espèce.
+        fprintf(stderr, "l'espèce est : %s et %s\n", name_species, ht_search(table, name_species));
+        strcpy(content, state.query);
+
+        state.access=0;
     }
 }
 

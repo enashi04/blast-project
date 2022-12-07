@@ -27,6 +27,10 @@ int main(int argc, char **argv)
     outName = outputName(argc, argv, outName);
     // si l'user met des options non valides
     invalidOptions(argc, argv);
+
+    //on va remplir la hashtable
+    table = create_table(CAPACITY);
+    
     // ouverture du fichier pour mettre le résultat
     FILE *f = fopen(inputName, "r");
 
@@ -39,6 +43,8 @@ int main(int argc, char **argv)
         output = stdout;
     }
 
+
+
     // récupérer le nom du fichier sans extension
 
     if (strcmp(mode, "bronze") == 0)
@@ -49,7 +55,6 @@ int main(int argc, char **argv)
         XML_Parser parser = XML_ParserCreate(NULL);
         XML_SetElementHandler(parser, bronze_tag_start, tag_end);
         XML_SetCharacterDataHandler(parser, tag_value);
-        
 
         state.access = 0;
         test_error(f, parser);

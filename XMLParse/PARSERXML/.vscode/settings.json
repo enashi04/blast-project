@@ -12,6 +12,8 @@
         "utility": "c",
         "typeinfo": "c",
         "string_view": "c",
-        "initializer_list": "c"
+        "initializer_list": "c",
+        "converttojson.h": "c",
+        "expat.h": "c"
     }
 }
