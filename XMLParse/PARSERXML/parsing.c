@@ -59,6 +59,7 @@ int main(int argc, char **argv)
         state.access = 0;
         test_error(f, parser);
         fprintf(output, "\n\t]\n}");
+        free_table(table);
 
         if (outName != NULL)
         {
@@ -76,18 +77,17 @@ int main(int argc, char **argv)
         state.access = 0;
         test_error(f, parser);
         fprintf(output, "\n\t]\n}");
-
+        free_table(table);
 
         if (outName != NULL)
         {
             fprintf(stderr, "You can open the file: %s\n", outName);
         }
+
     }
     else if (strcmp(mode, "gold") == 0)
     {
         fprintf(stderr, "You chose the Gold mode !\n");
-
-
         XML_Parser parser = XML_ParserCreate(NULL);
         XML_SetElementHandler(parser, gold_tag_start, tag_end);
         XML_SetCharacterDataHandler(parser, tag_value);
@@ -95,6 +95,7 @@ int main(int argc, char **argv)
         state.access = 0;
         test_error(f, parser);
         fprintf(output, "\n\t]\n}");
+         free_table(table);
 
 
         if (outName != NULL)
@@ -102,6 +103,7 @@ int main(int argc, char **argv)
             fprintf(stderr, "You can open the file: %s\n", outName);
         }
     }
+   
 
     return 0;
 }

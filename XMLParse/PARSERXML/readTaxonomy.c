@@ -4,11 +4,12 @@
 
 #include "readTaxonomy.h"
 
+//récupérer l'index
 int hash_index(HashTable *table, char *key){
     int index = -1;
     for(int i = 0; i< table->size; i++){
-        if(strcmp(table->items[i]->key, key)==0){
-            index= i ;
+        if(strncmp(key,table->items[i]->key,strlen(key))==0){
+            index=i;
             break;
         }
     }
@@ -108,19 +109,23 @@ void ht_insert(HashTable* table, char* key, char* value) {
 char* ht_search(HashTable* table, char* key) {
 
     //retrouver l'index de la clé. 
-   int index = hash_index(table,key);
+    char *retour ;
+    int index = hash_index(table,key);
+    if(index == -1){
+        return "";
+    }
+   //printf("L'index est : %u", index);
     Ht_item* item = table->items[index];
-        
-
+    
     // Ensure that we move to a non NULL item
     if (item != NULL) {
-        if (strcmp(item->key, key) == 0){
-            return item->value;
+        if (strncmp(item->key, key, strlen(key)) == 0){
+            retour= item->value;
         }
     }
-    return NULL;
+   return retour;
 }
-//passer de void à char car ici on veut récupérer la valeur  
+
 void print_search(HashTable* table, char* key) {
     char* val=ht_search(table, key);
     if (val== NULL) {
@@ -145,8 +150,12 @@ void print_table(HashTable* table) {
 
 //     HashTable *table= create_table(CAPACITY);
 
-//     fprintf(stderr,"%s\n",ht_search(table,"Homo sapiens"));
-
+//    // fprintf(stderr,"%s\n",ht_search(table,"Azorhizobium"));
+  
+//     if(strncmp(table->items[0]->key, "Bacteria", strlen("Bacteria"))==0){
+//         printf("Ouais c'est ok\n");
+//     }
+//     //printf("%s\n", table->items[1]->key);
 //     free_table(table);
 //     return 0;
 // }

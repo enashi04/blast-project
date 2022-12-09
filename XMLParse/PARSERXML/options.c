@@ -12,7 +12,6 @@ void help(char **argv)
         fprintf(stderr, "\r -h \t Show this screen.\n");
         fprintf(stderr, "\r -m \t Choose mode [bronze, silver or gold].\n");
         fprintf(stderr, "\r -o \t Put an output file\n");
-        fprintf(stderr, "\r -a \t Display CSV file example\n\n");
         exit(1);
     }
 }
@@ -146,7 +145,7 @@ char *inputRecovery(int argc, char **argv, char *inputName)
             }
             return inputName;
         }
-        else if (strcmp(inputName, ".csv") == 0)
+        else if (strcmp(inputName, ".json") == 0)
         {
             printf("You didn't put an input file. The input will be : stdin.xml\n");
             return inputName = "stdin.xml";
