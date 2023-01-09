@@ -2717,9 +2717,9 @@
 			"species": [
 				{
 					"name":"Mycobacterium tuberculosis",
-					"taxid": "nt bovis",
+					"taxid": "1773",
 					"parent": "Mycobacteroides chelonae",
-					"rank": "species"
+					"rank": "nt bovis"
 				}
 			],
 			"number of hit" : "1",
@@ -6770,9 +6770,9 @@
 			"species": [
 				{
 					"name":"Mycobacterium avium complex (MAC)",
-					"taxid": ")",
+					"taxid": "120793",
 					"parent": "Falco rusticolus",
-					"rank": "species group"
+					"rank": ")"
 				}
 			],
 			"number of hit" : "1",
@@ -12413,9 +12413,9 @@
 			"species": [
 				{
 					"name":"Mycolicibacterium sp. NCC-Tsukiji",
-					"taxid": "i",
+					"taxid": "2185272",
 					"parent": "Codinaeopsis sp. FL1790",
-					"rank": "species"
+					"rank": "i"
 				}
 			],
 			"number of hit" : "1",
@@ -15482,9 +15482,9 @@
 			"species": [
 				{
 					"name":"Mycolicibacterium austroafricanum",
-					"taxid": "m",
+					"taxid": "39687",
 					"parent": "Mycolicibacterium duvalii",
-					"rank": "species"
+					"rank": "m"
 				}
 			],
 			"number of hit" : "1",
@@ -18011,9 +18011,9 @@
 			"species": [
 				{
 					"name":"Mycolicibacterium sp. 018/SC-01/001",
-					"taxid": "001",
+					"taxid": "2592069",
 					"parent": "Elioraea sp. Yellowstone",
-					"rank": "species"
+					"rank": "001"
 				}
 			],
 			"number of hit" : "1",
@@ -37211,9 +37211,9 @@
 			"species": [
 				{
 					"name":"Curtobacterium flaccumfaciens",
-					"taxid": ". flaccumfaciens",
+					"taxid": "2035",
 					"parent": "Curtobacterium citreum",
-					"rank": "species"
+					"rank": ". flaccumfaciens"
 				}
 			],
 			"number of hit" : "1",
@@ -37235,9 +37235,9 @@
 			"species": [
 				{
 					"name":"Curtobacterium flaccumfaciens",
-					"taxid": ". flaccumfaciens",
+					"taxid": "2035",
 					"parent": "Curtobacterium citreum",
-					"rank": "species"
+					"rank": ". flaccumfaciens"
 				}
 			],
 			"number of hit" : "1",
@@ -54089,9 +54089,9 @@
 			"species": [
 				{
 					"name":"Mycobacterium tuberculosis",
-					"taxid": "70017",
+					"taxid": "1773",
 					"parent": "Mycobacteroides chelonae",
-					"rank": "species"
+					"rank": "70017"
 				}
 			],
 			"number of hit" : "1",
@@ -54113,9 +54113,9 @@
 			"species": [
 				{
 					"name":"Mycobacterium tuberculosis",
-					"taxid": "70017",
+					"taxid": "1773",
 					"parent": "Mycobacteroides chelonae",
-					"rank": "species"
+					"rank": "70017"
 				}
 			],
 			"number of hit" : "1",
@@ -55514,9 +55514,9 @@
 			"species": [
 				{
 					"name":"Mycobacterium tuberculosis",
-					"taxid": "",
+					"taxid": "1773",
 					"parent": "Mycobacteroides chelonae",
-					"rank": "species"
+					"rank": ""
 				}
 			],
 			"number of hit" : "1",
@@ -55538,9 +55538,9 @@
 			"species": [
 				{
 					"name":"Mycobacterium tuberculosis",
-					"taxid": "",
+					"taxid": "1773",
 					"parent": "Mycobacteroides chelonae",
-					"rank": "species"
+					"rank": ""
 				}
 			],
 			"number of hit" : "1",
@@ -64704,7 +64704,7 @@
 				{
 					"name":"Streptomyces tendae",
 					"taxid": "1932",
-					"parent": "Streptoalloteichus tenebrarius (strain ATCC 17920 / DSM 40477 / JCM 4838 / CBS 697.72 / NBRC 16175 / NCIMB 11028 / NRRL B-12390 / A12253. 1)",
+					"parent": "Streptoalloteichus tenebrarius (strain ATCC 17920 / DSM 40477 / JCM 4838 / CBS 697.72 / NBRC 16175 / NCIMB 11028 / NRRL B-12390 1933",
 					"rank": "species"
 				}
 			],
@@ -87954,7 +87954,7 @@
 				{
 					"name":"Streptomyces tendae",
 					"taxid": "1932",
-					"parent": "Streptoalloteichus tenebrarius (strain ATCC 17920 / DSM 40477 / JCM 4838 / CBS 697.72 / NBRC 16175 / NCIMB 11028 / NRRL B-12390 / A12253. 1)",
+					"parent": "Streptoalloteichus tenebrarius (strain ATCC 17920 / DSM 40477 / JCM 4838 / CBS 697.72 / NBRC 16175 / NCIMB 11028 / NRRL B-12390 1933",
 					"rank": "species"
 				}
 			],
@@ -88404,7 +88404,7 @@
 				{
 					"name":"Streptomyces tendae",
 					"taxid": "1932",
-					"parent": "Streptoalloteichus tenebrarius (strain ATCC 17920 / DSM 40477 / JCM 4838 / CBS 697.72 / NBRC 16175 / NCIMB 11028 / NRRL B-12390 / A12253. 1)",
+					"parent": "Streptoalloteichus tenebrarius (strain ATCC 17920 / DSM 40477 / JCM 4838 / CBS 697.72 / NBRC 16175 / NCIMB 11028 / NRRL B-12390 1933",
 					"rank": "species"
 				}
 			],
@@ -93054,7 +93054,7 @@
 				{
 					"name":"Streptomyces tendae",
 					"taxid": "1932",
-					"parent": "Streptoalloteichus tenebrarius (strain ATCC 17920 / DSM 40477 / JCM 4838 / CBS 697.72 / NBRC 16175 / NCIMB 11028 / NRRL B-12390 / A12253. 1)",
+					"parent": "Streptoalloteichus tenebrarius (strain ATCC 17920 / DSM 40477 / JCM 4838 / CBS 697.72 / NBRC 16175 / NCIMB 11028 / NRRL B-12390 1933",
 					"rank": "species"
 				}
 			],
@@ -94629,7 +94629,7 @@
 				{
 					"name":"Streptomyces tendae",
 					"taxid": "1932",
-					"parent": "Streptoalloteichus tenebrarius (strain ATCC 17920 / DSM 40477 / JCM 4838 / CBS 697.72 / NBRC 16175 / NCIMB 11028 / NRRL B-12390 / A12253. 1)",
+					"parent": "Streptoalloteichus tenebrarius (strain ATCC 17920 / DSM 40477 / JCM 4838 / CBS 697.72 / NBRC 16175 / NCIMB 11028 / NRRL B-12390 1933",
 					"rank": "species"
 				}
 			],

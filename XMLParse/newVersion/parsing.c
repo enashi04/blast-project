@@ -33,7 +33,7 @@ int main(int argc, char **argv){
         return 1;
     }
     //ici on va créer la HashMap
-    table = create_table(CAPACITY);
+  //  table = create_table(CAPACITY);
     
     blastOutPut_iteration(f, mode);
 

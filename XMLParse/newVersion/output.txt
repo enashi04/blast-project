@@ -1,0 +1,22 @@
+BLASTP 2.13.0+
+
+
+Reference: Stephen F. Altschul, Thomas L. Madden, Alejandro A. 
+Schäffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. 
+Lipman (1997), "Gapped BLAST and PSI-BLAST: a new generation of 
+protein database search programs", Nucleic Acids Res. 25:3389-3402.
+
+
+
+DataBase: nr
+
+
+
+Query:sp|P96368|TRCS_MYCTU Sensor histidine kinase TrcS OS=Mycobacterium 
+	tuberculosis (strain ATCC 25618 / H37Rv) OX=83332 GN=trcS PE=1 SV=1
+
+Length : 509
+
+                                                                 Score    E
+Sequences producing significant alignments:                      (bits) Value
+
