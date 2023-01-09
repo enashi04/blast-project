@@ -32,12 +32,11 @@ int main(int argc, char **argv){
         printf("Le fichier est vide\n");
         return 1;
     }
-    //ici on va créer la HashMap
-  //  table = create_table(CAPACITY);
-    
+
+   // createSpeciesTable();
+   
     blastOutPut_iteration(f, mode);
 
     fprintf(output, "\t]\n}");
 
-   // createSpeciesTable();
 }

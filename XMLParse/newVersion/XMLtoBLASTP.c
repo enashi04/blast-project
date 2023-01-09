@@ -108,7 +108,7 @@ void query_Def(xmlNode *node, FILE *output)
     if (strcmp(name, (const char *)node->name) == 0)
     {
         // affichage
-        char content[512] = "Query:";
+        char content[512] = "Query: ";
         ;
         strcat(content, (char *)xmlNodeGetContent(node));
         int len = strlen(content);
