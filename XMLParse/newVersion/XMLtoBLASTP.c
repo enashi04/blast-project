@@ -1,8 +1,4 @@
-#include <string.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include "lib/libxml/parser.h"
-#include "lib/libxml/tree.h"
+#include "XMLtoBLASTP.h"
 
 char *replaceWord(const char *s, const char *oldW, const char *newW)
 {
@@ -89,7 +85,6 @@ void blast_db(xmlNode *node, FILE *output)
     name = "BlastOutput_db";
     if (strcmp(name, (const char *)node->name) == 0)
     {
-        // affichage
         fprintf(output, "DataBase: %s\n\n\n\n", xmlNodeGetContent(node));
     }
 }
@@ -139,10 +134,17 @@ void query_Length(xmlNode *node, FILE *output)
         // ici on met la query length pour le calcul de la query cover
     }
 }
-
+void hspNode(xmlNode *node, FILE *output) 
+{
+    xmlNode *childNode, *child;
+    childNode = node->children;
+    for (child = childNode; child; child = child->next)
+    {
+        printf("les enfants sont :%s\n", child->name);
+    }
+}
 void hitNode(xmlNode *node, FILE *output)
 {
-
     if (strcmp("Hit", (const char *)node->name) == 0)
     {
         //boucle puis on récupère la subject et la longueur
@@ -178,11 +180,20 @@ void hitNode(xmlNode *node, FILE *output)
                     }
                 }
                 fprintf(output, "\n");
-                //
             }
-            if(strcmp("Hit_len", (const char *)child->name) == 0){
+            else if(strcmp("Hit_len", (const char *)child->name) == 0){
                 char *len= (char *)xmlNodeGetContent(child);
                 fprintf(output, "\tLength=%s\n\n", len);
+            }
+            else if(strcmp("Hit_hsps",(const char *)child->name)==0){
+                //on entre dans la partie la plus importante du sujet !!!
+                xmlNode* hsp,*hspchild;
+                hsp=child->children;
+                for(hspchild=hsp; hspchild; hspchild=hspchild->next){
+                    if(strcmp("Hsp", (const char *)hspchild->name)==0){
+                        hspNode(hspchild, output);
+                    }
+                }
                 
             }
         }
@@ -247,18 +258,9 @@ int main(int argc, char **argv)
     // mettre la boucle ici
     blastInfo(xmlfile, output, child);
 
-    /*
-    <Iteration_iter-num>1</Iteration_iter-num>
-    <Iteration_query-ID>Query_808952</Iteration_query-ID>
-    <Iteration_query-def>sp|P96368|TRCS_MYCTU Sensor histidine kinase TrcS OS=Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv) OX=83332 GN=trcS PE=1 SV=1</Iteration_query-def>
-    <Iteration_query-len>509</Iteration_query-len>
-  */
-
     /*****************************************************************************/
     // verif du nombre de hit si y'en a deux alors on prend en compte le score en *2 et le reste des params en *2.
     // on rentre dans les hit
-    // récupération de hit_def
-    // récup de la longueur
     // récup du score, expect, Method
     // identitie, positives (en % et en normal)
 
