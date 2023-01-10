@@ -4,7 +4,6 @@
 #include "lib/libxml/parser.h"
 #include "lib/libxml/tree.h"
 
-// Method replacing a word by another word
 char *replaceWord(const char *s, const char *oldW, const char *newW)
 {
     char *result;
@@ -23,7 +22,6 @@ char *replaceWord(const char *s, const char *oldW, const char *newW)
     }
 
     result = (char *)malloc(i + cnt * (newWlen - oldWlen) + 1);
-
     i = 0;
     while (*s)
     {
@@ -40,7 +38,7 @@ char *replaceWord(const char *s, const char *oldW, const char *newW)
     result[i] = '\0';
     return result;
 }
-// method to retrieve and put the blast version
+
 void blast_version(xmlNode *node, FILE *output)
 {
     const char *name;
@@ -48,11 +46,10 @@ void blast_version(xmlNode *node, FILE *output)
 
     if (strcmp(name, (const char *)node->name) == 0)
     {
-        // affichage
         fprintf(output, "%s\n\n\n", xmlNodeGetContent(node));
     }
 }
-// method to get the reference of blast
+
 void blast_reference(xmlNode *node, FILE *output)
 {
     const char *name;
@@ -85,7 +82,7 @@ void blast_reference(xmlNode *node, FILE *output)
         fprintf(output, "\n\n\n\n");
     }
 }
-// method to get the db
+
 void blast_db(xmlNode *node, FILE *output)
 {
     const char *name;
@@ -97,9 +94,6 @@ void blast_db(xmlNode *node, FILE *output)
     }
 }
 
-/**
- *LE NOM DE LA QUERY
- */
 void query_Def(xmlNode *node, FILE *output)
 {
     const char *name;
@@ -109,7 +103,6 @@ void query_Def(xmlNode *node, FILE *output)
     {
         // affichage
         char content[512] = "Query: ";
-        ;
         strcat(content, (char *)xmlNodeGetContent(node));
         int len = strlen(content);
         for (int i = 0; i < len; i++)
@@ -131,9 +124,6 @@ void query_Def(xmlNode *node, FILE *output)
     }
 }
 
-/**
- * LONGUEUR DE LA QUERY
- */
 void query_Length(xmlNode *node, FILE *output)
 {
     const char *name;
@@ -143,35 +133,88 @@ void query_Length(xmlNode *node, FILE *output)
     {
         // affichage
         fprintf(output, "Length : %s\n\n", xmlNodeGetContent(node));
-        //ici on va mettre le sequences producting significant alignments parce que ballast doit le lire ! 
+        // ici on va mettre le sequences producting significant alignments parce que ballast doit le lire !
         fprintf(output, "                                                                 Score    E\n");
         fprintf(output, "Sequences producing significant alignments:                      (bits) Value\n\n");
         // ici on met la query length pour le calcul de la query cover
     }
 }
 
-void iterationNode(xmlNode *child, FILE *output) //fonction récursive ici a faire
+void hitNode(xmlNode *node, FILE *output)
 {
-    char *iteration = "Iteration";
-    if (strcmp(iteration, (const char *)child->name) == 0)
+
+    if (strcmp("Hit", (const char *)node->name) == 0)
     {
-        // printf("on est bien rentré je crois\n");
-        xmlNode *childnode = child->children;
-        for (childnode = child; childnode; childnode = childnode->next)
+        //boucle puis on récupère la subject et la longueur
+        xmlNode *childNode, *child;
+        childNode = node->children;
+        for (child = childNode; child; child = child->next)
         {
-            if (strcmp("Hit", (const char *)child->name) == 0)
-            {
-                printf("on est bien dans la section hit qu'on va itérer x fois\n");
+            if (strcmp("Hit_def", (const char *)child->name) == 0)
+            {                     
+                char *content = (char *)xmlNodeGetContent(child);
+                strcpy(content, replaceWord(content, ">", "& "));
+                char newcontent[2048];
+                memset(newcontent,0,sizeof(newcontent));
+                snprintf(newcontent,sizeof(newcontent),">%s", content);
+                //printf("content is %s\n", newcontent);
+
+                int j = 98;
+                int len = strlen(newcontent);
+                // formatage
+                for (int i = 0; i < len; i++)
+                {
+                    fprintf(output, "%c", newcontent[i]);
+                    if ((i + 1) % j == 0)
+                    {
+                        if (newcontent[i] == ' ' || newcontent[i+1]==' ')
+                        {
+                            fprintf(output, "\n\t");
+                        }
+                        else
+                        {
+                            j++;
+                        }
+                    }
+                }
+                fprintf(output, "\n");
+                //
+            }
+            if(strcmp("Hit_len", (const char *)child->name) == 0){
+                char *len= (char *)xmlNodeGetContent(child);
+                fprintf(output, "\tLength=%s\n\n", len);
+                
             }
         }
-        // on va essayer de récupérer les infos qu'on veut
     }
 }
-// récupération du blastoutput version
+
+void iterationNode(xmlNode *node, FILE *output) // fonction récursive ici a faire
+{
+    char *iteration = "Iteration";
+    if (strcmp(iteration, (const char *)node->name) == 0)
+    {
+        xmlNode *childNode, *child;
+        childNode = node->children;
+        for (child = childNode; child; child = child->next)
+        {
+            if (strcmp("Iteration_hits", (const char *)child->name) == 0)
+            {
+                // deuxième parcours pour enfin rentrer dans hit
+                xmlNode *hitChild;
+                hitChild = child->children;
+                for (childNode = hitChild; childNode; childNode = childNode->next)
+                {
+                    hitNode(childNode, output);
+                }
+            }
+        }
+    }
+}
+
 void blastInfo(xmlDoc *xmlfile, FILE *output, xmlNode *child)
 {
     xmlNode *node;
-
     for (node = child; node; node = node->next)
     {
         // récupérer la version, la référence, et la base de données
