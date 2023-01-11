@@ -1,4 +1,8 @@
-
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include "lib/libxml/parser.h"
+#include "lib/libxml/tree.h"
 
 
 char *replaceWord(const char *s, const char *oldW, const char *newW);
