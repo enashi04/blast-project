@@ -21,6 +21,8 @@ void hitNode(xmlNode *node, FILE *output);
 
 void hspNode(xmlNode *node, FILE *output);
 
+void blasting(xmlNode *node, FILE *output);
+
 void iterationNode(xmlNode *node, FILE *output);
 
 void blastInfo(xmlDoc *xmlfile, FILE *output, xmlNode *child);
