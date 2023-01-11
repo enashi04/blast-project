@@ -365,48 +365,61 @@ void blasting(xmlNode *node, FILE *output)
         }
     }
 /*****************************************INTIIALISATION DE NLLES VARIABLES *****************************************/
-
     int len = strlen(queryS); // qu'on prenne midline ou targetS la taille est la même
     int j = 60, debut =0, fin =60;
+    char qseq[128], tseq[128], mseq[128];
+
 /*****************************************FORMATAGE*****************************************/
     for (int i = 0; i < len; i++)
     {
         if ((i + 1) % j == 0)
         {
-            char newquery[60];
+            char newquery[60], newmidline[60], newtarget[60];
             int debinit=0;
             for(int k=debut; k<fin; k++){
                 newquery[debinit]=queryS[k];
+                newmidline[debinit]= midlineS[k];
+                newtarget[debinit]= targetS[k];
                 debinit++;
             }
             newquery[60]='\0';
+            newmidline[60]='\0';
+            newtarget[60]='\0';
+
+            strcpy(qseq, "Query: ");
+            strcpy(tseq, "Subject: ");
+            strcpy(mseq,"             ");
+            strcat(qseq, query_from);
+            strcat(tseq, target_from);
+            
+            // strcat(qseq, " ");
+            // strcat(tseq," ");
+            // strcat(qseq, strcat())
+
+            //ici on insère
+           printf("la query is : %s\n", newquery);
             debut = fin; 
             fin = fin+60;
-            printf("La query present est : %s\n", newquery);
-        }
+         }
         else if(i+1 ==len){
-            char newquery[len];
+            char newquery[len], newmidline[len], newtarget[len];
             int debinit=0;
             for(int k=debut; k<len; k++){
                 if(queryS[k]!='\0'){
                     newquery[debinit]=queryS[k];
+                    newmidline[debinit]= midlineS[k];
+                    newtarget[debinit]= targetS[k];
                     debinit++;
                 }
             }
             newquery[len]='\0';
-            printf("La query presenteeee est : %s\n", newquery);
+            newmidline[len]='\0';
+            newtarget[len]='\0';
           
         }
 //             printf("on entre ici ensuite");
 // /**************************sous format Query 25 : LRTPLAAIQGGGXXXXX********************************/
 
-//             strcpy(qseq, "Query: ");
-//             strcpy(tseq, "Subject: ");
-//             strcpy(mseq,"             ");
-//             strcat(qseq, query_from);
-//             strcat(tseq, target_from);
-//             strcat(qseq, " ");
-//             strcat(tseq," ");
 
 //             for (int j = strlen(qseq); j < 14; j++)
 //             {
