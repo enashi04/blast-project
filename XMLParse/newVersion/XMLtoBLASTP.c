@@ -145,7 +145,7 @@ void query_Def(xmlNode *node, FILE *output)
     if (strcmp(name, (const char *)node->name) == 0)
     {
         /*****************************************FORMATAGE*****************************************/
-        char content[512] = "Query: ";
+        char content[512] = "Query= ";
         strcat(content, (char *)xmlNodeGetContent(node));
         int len = strlen(content);
         for (int i = 0; i < len; i++)
@@ -175,7 +175,7 @@ void query_Length(xmlNode *node, FILE *output)
     if (strcmp(name, (const char *)node->name) == 0)
     {
         // affichage
-        fprintf(output, "Length : %s\n\n", xmlNodeGetContent(node));
+        fprintf(output, "Length=%s\n\n", xmlNodeGetContent(node));
         // ici on va mettre le sequences producting significant alignments parce que ballast doit le lire !
         fprintf(output, "                                                                 Score    E\n");
         fprintf(output, "Sequences producing significant alignments:                      (bits) Value\n\n");
@@ -417,28 +417,26 @@ void blasting(xmlNode *node, FILE *output)
             snprintf(ft, sizeof(ft)," %d", debuttarget+59);
 
             strcpy(qseq, "Query: ");
-            strcpy(tseq, "Subject: ");
-            strcpy(mseq, "             ");
+            strcpy(tseq, "Sbjct: ");
+            strcpy(mseq, "            ");
             strcat(qseq, dq);
             strcat(tseq, dt);
 
             /**********************On rajoute + 60*****************************/
 
-            for (int j = strlen(qseq); j < 13; j++)
+            for (int j = strlen(qseq); j < 12; j++)
             {
                 strcat(qseq, " ");
             }
-            for (int j = strlen(tseq); j < 13; j++)
+            for (int j = strlen(tseq); j < 12; j++)
             {
                 strcat(tseq, " ");
             }
 
             strcat(qseq, newquery);
-            strcat(qseq, " ");
             strcat(qseq, fq);
             strcat(mseq, newmidline);
             strcat(tseq, newtarget);
-            strcat(tseq, " ");
             strcat(tseq, ft);
 
             fprintf(output,"%s\n%s\n%s\n\n", qseq, mseq,tseq);
@@ -473,29 +471,32 @@ void blasting(xmlNode *node, FILE *output)
             snprintf(ft, sizeof(ft), "%d", fintarget); 
 
             strcpy(qseq, "Query: ");
-            strcpy(tseq, "Subject: ");
-            strcpy(mseq, "             ");
+            strcpy(tseq, "Sbjct: ");
+            strcpy(mseq, "            ");
             strcat(qseq, dq);
             strcat(tseq, dt);
 
             /**********************On rajoute + 60*****************************/
 
-            for (int j = strlen(qseq); j < 13; j++)
+            for (int j = strlen(qseq); j < 12; j++)
             {
                 strcat(qseq, " ");
             }
-            for (int j = strlen(tseq); j < 13; j++)
+            for (int j = strlen(tseq); j < 12; j++)
             {
                 strcat(tseq, " ");
             }
 
             strcat(qseq, newquery);
-            strcat(qseq, " ");
             strcat(qseq, fq);
             strcat(mseq, newmidline);
             strcat(tseq, newtarget);
-            strcat(tseq, " ");
             strcat(tseq, ft);
+
+            //mettre un \0 à la fin
+            qseq[strlen(qseq)]='\0';
+            mseq[strlen(qseq)]='\0';
+            tseq[strlen(qseq)]='\0';
 
             fprintf(output,"%s\n%s\n%s\n\n", qseq, mseq,tseq);
         }
