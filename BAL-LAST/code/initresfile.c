@@ -75,7 +75,6 @@ void blastVersion(BlastHeader *blhd, char *line)
  */
 void queryName(BlastHeader *blhd, char *line, FILE *file)
 {
-
     if (strstr(line, "Query=") != NULL && (blhd->query == NULL))
     {
         blhd->query = (char *)malloc(strlen(line) + 1);
@@ -108,6 +107,7 @@ void databaseName(BlastHeader *blhd, char *line, FILE *file)
 */
 void jumpAlignment(char *line, FILE *file)
 {
+
     while (strncmp(line, "Sequences producing", 19) != 0)
     {
         if (!fgets(line, 256, file))

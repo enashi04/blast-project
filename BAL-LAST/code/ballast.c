@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
 	BlastHeader blhd1;
 	BlastHeader blhd2;
 
-	int i, f;
+	int i;
 	int tblastnsearch = 0;
 
 	char *infilename;
@@ -239,7 +239,7 @@ int main(int argc, char *argv[])
     if (motif == NULL)
     {
         outfile = stdout;
-        printf(outfile, "\n *********************************");
+        fprintf(outfile, "\n *********************************");
         fprintf(outfile, "\n ***      FATAL Error          ***");
         fprintf(outfile, "\n ***                           ***");
         fprintf(outfile, "\n ***    Words too short        ***");
