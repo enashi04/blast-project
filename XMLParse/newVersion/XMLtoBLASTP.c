@@ -326,7 +326,7 @@ void hspNode(xmlNode *node, FILE *output)
         blasting(node, output);
     }
     else{
-        fprintf(output, "\n\n\n\n\n Score = %s bits, Expect = %s,\n", score, evalue);
+        fprintf(output, "\n\n Score = %s bits, Expect = %s,\n", score, evalue);
         fprintf(output, " Identities = %s/%s (%d%%), Positives = %s/%s (%d%%), Gaps = %s/%s (%d%%)\n\n", identity, align_len, identity_percent, positive, align_len, positive_percent, gaps, align_len, gaps_percent);
         blasting(node, output);
     }
@@ -380,6 +380,7 @@ void blasting(xmlNode *node, FILE *output)
     }
     /*****************************************INTIIALISATION DE NLLES VARIABLES *****************************************/
     int len = strlen(queryS); // qu'on prenne midline ou targetS la taille est la même
+    fprintf(stdout, "la longueur de l'alignement est %u\n", len);
     //initialisation des valeurs pour la découpe des séquences 60-60
     int j = 60, debut = 0, fin = 60;
     // on récupère le début des query/target sous format int
@@ -398,12 +399,20 @@ void blasting(xmlNode *node, FILE *output)
             char newquery[60], newmidline[60], newtarget[60];
             //compteur
             int debinit = 0;
+            int gaps_query=0, gaps_target=0;
+
             for (int k = debut; k < fin; k++)
             {
                 newquery[debinit] = queryS[k];
                 newmidline[debinit] = midlineS[k];
                 newtarget[debinit] = targetS[k];
                 debinit++;
+                 if(queryS[k]=='-'){
+                    gaps_query+=1;
+                }
+                if(targetS[k]=='-'){
+                    gaps_target+=1;
+                }
             }
             newquery[60] = '\0';
             newmidline[60] = '\0';
@@ -413,8 +422,8 @@ void blasting(xmlNode *node, FILE *output)
             //printf("la valeur de dq est : %s\n", dq);
             snprintf(dt,sizeof(dt), "%d", debuttarget);
           
-            snprintf(fq,sizeof(fq), " %d", debutquery+59);
-            snprintf(ft, sizeof(ft)," %d", debuttarget+59);
+            snprintf(fq,sizeof(fq), " %d", debutquery+59-gaps_query);
+            snprintf(ft, sizeof(ft)," %d", debuttarget+59-gaps_target);
 
             strcpy(qseq, "Query: ");
             strcpy(tseq, "Sbjct: ");
@@ -440,14 +449,15 @@ void blasting(xmlNode *node, FILE *output)
             strcat(tseq, ft);
 
             fprintf(output,"%s\n%s\n%s\n\n", qseq, mseq,tseq);
-            debutquery += 60;
-            debuttarget += 60;
+            debutquery = atoi(fq)+1;
+            debuttarget = atoi(ft)+1;
             //pour la boucle de remplissage de newquery/newtarget/newmidline
             debut = fin;
             fin = fin + 60;
         }
         else if (i + 1 == len)
         {
+            //printf("la longueur est :%u\n", len-debut);
             char newquery[len-debut], newmidline[len-debut], newtarget[len-debut];
             int debinit = 0;
             for (int k = debut; k < len; k++)
@@ -458,6 +468,7 @@ void blasting(xmlNode *node, FILE *output)
                     newmidline[debinit] = midlineS[k];
                     newtarget[debinit] = targetS[k];
                     debinit++;
+                   
                 }
             }
             newquery[len-debut] = '\0';
@@ -467,8 +478,8 @@ void blasting(xmlNode *node, FILE *output)
             snprintf(dq,sizeof(dq), "%d", debutquery);
             //printf("la valeur de dq est : %s\n", dq);
             snprintf(dt,sizeof(dt), "%d", debuttarget);
-            snprintf(fq, sizeof(fq), "%d", finquery);
-            snprintf(ft, sizeof(ft), "%d", fintarget); 
+            snprintf(fq, sizeof(fq), " %d", finquery);
+            snprintf(ft, sizeof(ft), " %d", fintarget); 
 
             strcpy(qseq, "Query: ");
             strcpy(tseq, "Sbjct: ");
@@ -490,6 +501,7 @@ void blasting(xmlNode *node, FILE *output)
             strcat(qseq, newquery);
             strcat(qseq, fq);
             strcat(mseq, newmidline);
+            //printf("la newmidline est %s\n", mseq);
             strcat(tseq, newtarget);
             strcat(tseq, ft);
 
