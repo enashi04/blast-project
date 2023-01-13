@@ -380,7 +380,6 @@ void blasting(xmlNode *node, FILE *output)
     }
     /*****************************************INTIIALISATION DE NLLES VARIABLES *****************************************/
     int len = strlen(queryS); // qu'on prenne midline ou targetS la taille est la même
-    fprintf(stdout, "la longueur de l'alignement est %u\n", len);
     //initialisation des valeurs pour la découpe des séquences 60-60
     int j = 60, debut = 0, fin = 60;
     // on récupère le début des query/target sous format int
@@ -407,7 +406,7 @@ void blasting(xmlNode *node, FILE *output)
                 newmidline[debinit] = midlineS[k];
                 newtarget[debinit] = targetS[k];
                 debinit++;
-                 if(queryS[k]=='-'){
+                if(queryS[k]=='-'){
                     gaps_query+=1;
                 }
                 if(targetS[k]=='-'){
@@ -458,22 +457,18 @@ void blasting(xmlNode *node, FILE *output)
         else if (i + 1 == len)
         {
             //printf("la longueur est :%u\n", len-debut);
-            char newquery[len-debut], newmidline[len-debut], newtarget[len-debut];
+            char newquery[60], newmidline[60], newtarget[60];
             int debinit = 0;
             for (int k = debut; k < len; k++)
-            {
-                if (queryS[k] != '\0')
-                {
+            {           
                     newquery[debinit] = queryS[k];
                     newmidline[debinit] = midlineS[k];
                     newtarget[debinit] = targetS[k];
                     debinit++;
-                   
-                }
             }
-            newquery[len-debut] = '\0';
-            newmidline[len-debut] = '\0';
-            newtarget[len-debut] = '\0';
+            newquery[ debinit] = '\0';
+            newmidline[debinit] = '\0';
+            newtarget[debinit] = '\0';
 
             snprintf(dq,sizeof(dq), "%d", debutquery);
             //printf("la valeur de dq est : %s\n", dq);
