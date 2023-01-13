@@ -212,7 +212,6 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
             /************************************dline qui correspond à la longueur qui *************************************/
             /************************************le début de la séquence (autour de 12)**************************************/
             /****************************************************************************************************************/
-            
             dline = strlen(line) - strlen(strpbrk(line +1, "ABCDEFGHIJKLMNOPQRSTUVWXYZ-"));
             /****************************************************************************************************************/
             /******************************************Copier la nouvelle valeur*********************************************/
@@ -459,7 +458,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
         enddb = simprf->enddb + 1;
         
         simprf->prf = (double *)malloc(sizeof(double) * (end - begin + 1));
-
+        
         p = simprf->p;
         if ((p >= maxp) || (p > 1))
         {
@@ -490,7 +489,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
             /*** Aligned Aas in Query sequence and Database sequence are ****/
             /*** identical                                               ****/
 
-            if ((*(seq + i - begin + 1) != '+') && (*(seq + i - begin + 1) != ' ') && (*(seq + i - begin + 1) != 'x') && (*(seq + i - begin + 1) != '-')) //ici ajout le minuscule et le x 
+            if ((*(seq + i - begin + 1) != '+') && (*(seq + i - begin + 1) != ' ') && (*(seq + i - begin + 1) != 'x') && (*(seq + i - begin + 1) != '-') && (*(seq + i - begin + 1) != 'X')) //ici ajout le minuscule et le x et majuscule aussi 
             {
                 *ptr = facteur * identique;
                 *simptr = ID * fctr;
@@ -516,7 +515,6 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
             }
         }
     }
-
 //    fprintf(stdout, "le smptr est de : %lf\n", *simptr);
     return profil;
 }

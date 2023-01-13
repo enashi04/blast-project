@@ -158,7 +158,6 @@ int main(int argc, char *argv[])
     ptrstr = (char *)(conserved + length);
     *ptrstr = '\0';
 
-
     /******************************************************************************/
 	/*************************Construction du profil blastp************************/
 	/******************************************************************************/
@@ -221,7 +220,6 @@ int main(int argc, char *argv[])
     }
     else
     {
-        
         smoothed = smoothprofil(profiltotal, length, conserved);
         if (getargbool("-noext") == 0)
         {
