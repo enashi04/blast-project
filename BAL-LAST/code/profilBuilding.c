@@ -213,12 +213,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
             /************************************le début de la séquence (autour de 12)**************************************/
             /****************************************************************************************************************/
             
-            size_t len_line=strlen(line);
-            size_t len_seq = strlen(strpbrk(line+1,"ABCDEFGHIJKLMNOPQRSTUVWXYZ-"));
-            dline = len_line - len_seq;
-            printf("la longueur de la séquence est %lu\n", dline);
-
-            //dline = strlen(line) - strlen(strpbrk(line +1, "ABCDEFGHIJKLMNOPQRSTUVWXYZ-"));
+            dline = strlen(line) - strlen(strpbrk(line +1, "ABCDEFGHIJKLMNOPQRSTUVWXYZ-"));
             /****************************************************************************************************************/
             /******************************************Copier la nouvelle valeur*********************************************/
             /**********************************de la ligne en ne laissant que la séquence************************************/
