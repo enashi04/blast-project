@@ -510,7 +510,7 @@ void blasting(xmlNode *node, FILE *output)
             mseq[strlen(qseq)]='\0';
             tseq[strlen(qseq)]='\0';
 
-            fprintf(output,"%s\n%s\n%s\n\n", qseq, mseq,tseq);
+            fprintf(output,"%s\n%s\n%s\n\n\n", qseq, mseq,tseq);
         }
     }
 }
