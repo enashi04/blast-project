@@ -1,13 +1,13 @@
 #include "lib/libxml/parser.h"
 #include "lib/libxml/tree.h"
-#include "readTaxonomy.h"
+#include "hashMap.h"
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
 
- FILE *output;
- int t_from, t_to, query_length;
- HashTable *table;
+extern FILE *output;
+extern int t_from, t_to, query_length;
+extern HashTable *table;
 
 
 void hit_enter(xmlNode *node);

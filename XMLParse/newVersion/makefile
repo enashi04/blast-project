@@ -5,7 +5,7 @@ EXEC=parsing
 
 # Les fichiers .o a générer si nécessaire
 
-DEP= options.o retrieveInfo.o readTaxonomy.o
+DEP= options.o retrieveInfo.o hashMap.o
 
 
 all: $(EXEC)
