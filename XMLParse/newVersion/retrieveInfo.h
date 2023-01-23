@@ -1,6 +1,6 @@
 #include "lib/libxml/parser.h"
 #include "lib/libxml/tree.h"
-#include "readTaxonomy.h"
+#include "hashMap.h"
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>

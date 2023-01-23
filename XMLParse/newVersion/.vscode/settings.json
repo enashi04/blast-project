@@ -2,6 +2,8 @@
     "files.associations": {
         "typeinfo": "c",
         "xmltoblastp.h": "c",
-        "functional": "c"
+        "functional": "c",
+        "retrieveinfo.h": "c",
+        "string.h": "c"
     }
 }

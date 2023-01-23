@@ -1,6 +1,6 @@
 #include "retrieveInfo.h"
 #define NUMCOLUMNS 3
-#define NUMROWS 2147397 //nombre d'espèce
+#define NUMROWS 2147398 //nombre d'espèce
 
 char name_hit[128];
 char name_species[30];
@@ -330,12 +330,12 @@ char (*createTableau())[3][128] {
     }
     int i =1;
     //on va d'abord remplir la première ligne !
-    sscanf(l, "%[^	]	%[^	]	%[^	]	%[^\n]", taxID, name, rank,parentID);
+    // sscanf(l, "%[^	]	%[^	]	%[^	]	%[^\n]", taxID, name, rank,parentID);
    
-    strcpy(tableau[0][0], name);
-    strcpy(tableau[0][1], taxID);
-    strcpy(tableau[0][2], rank);
-    strcpy(tableau[0][3], parentID);
+    // strcpy(tableau[0][0], name);
+    // strcpy(tableau[0][1], taxID);
+    // strcpy(tableau[0][2], rank);
+    // strcpy(tableau[0][3], parentID);
 
    while(fgets(l, BUFSIZE, f) != NULL){
     sscanf(l, "%[^	]	%[^	]	%[^	]	%[^\n]", taxID, name, rank,parentID);
