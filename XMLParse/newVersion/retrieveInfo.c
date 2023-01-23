@@ -5,7 +5,7 @@
 char name_hit[128];
 char name_species[30];
 static char tableau[NUMROWS][NUMCOLUMNS][128];
-char taxoID[128], parentspecies[128], ranks[128], espece[128];
+char taxoID[128], parentspecies[128], ranks[128], espece[128], lineage[1024];
 
 /// @brief Retrieve the definition of query
 /// @param node
@@ -225,8 +225,9 @@ void HSP_Enter(xmlNode *node, char *mode, char *hit_id, char *species)
                         // parent 3
                         fprintf(output, "\t\t\t\t\t\"parent\": \"%s\",\n", parentspecies);
                         // rang 2
-                        fprintf(output, "\t\t\t\t\t\"rank\": \"%s\"\n", ranks);
+                        fprintf(output, "\t\t\t\t\t\"rank\": \"%s\",\n", ranks);
                         // fermeture
+                        fprintf(output, "\t\t\t\t\t\"lineage\": \"%s\"\n", readTaxo(species));
                         fprintf(output, "\t\t\t\t}\n\t\t\t],\n");
                     }
                     else if (strcmp(species, espece) != 0)
@@ -247,8 +248,10 @@ void HSP_Enter(xmlNode *node, char *mode, char *hit_id, char *species)
                                 fprintf(output, "\t\t\t\t\t\"parent\": \"%s\",\n", tableau[i][3]);
                                 strcpy(parentspecies, tableau[i][3]);
                                 // rang 2
-                                fprintf(output, "\t\t\t\t\t\"rank\": \"%s\"\n", tableau[i][2]);
+                                fprintf(output, "\t\t\t\t\t\"rank\": \"%s\",\n", tableau[i][2]);
                                 strcpy(ranks, tableau[i][2]);
+                                fprintf(output, "\t\t\t\t\t\"lineage\": \"%s\"\n", readTaxo(species));
+                                strcpy(lineage, readTaxo(species));
                                 // fermeture
                                 fprintf(output, "\t\t\t\t}\n\t\t\t],\n");
                                 break;
@@ -373,14 +376,7 @@ char (*createTableau())[3][128]
         fprintf(stderr, "Empty taxo file");
     }
     int i = 1;
-    // on va d'abord remplir la première ligne !
-    //  sscanf(l, "%[^	]	%[^	]	%[^	]	%[^\n]", taxID, name, rank,parentID);
-
-    // strcpy(tableau[0][0], name);
-    // strcpy(tableau[0][1], taxID);
-    // strcpy(tableau[0][2], rank);
-    // strcpy(tableau[0][3], parentID);
-
+    rewind(f); //aller au début de la ligne
     while (fgets(l, BUFSIZE, f) != NULL)
     {
         sscanf(l, "%[^	]	%[^	]	%[^	]	%[^\n]", taxID, name, rank, parentID);
@@ -405,5 +401,60 @@ char (*createTableau())[3][128]
         }
         i++;
     }
+
     return tableau;
+}
+
+
+char *retrieveParent(char *speciesID, char *lineage)
+{
+
+    char lignee[1024];
+    //on revient au début du fichier
+    for(int i =0; i<NUMROWS; i++){
+        for(int j=0; j<NUMCOLUMNS; j++){
+            if (strcmp(speciesID, tableau[i][1]) == 0)
+            {
+                strcat(lignee, tableau[i][0]);
+                strcat(lignee,"/");
+                strcat(lignee, lineage);
+
+                strcpy(lineage, lignee);
+                retrieveParent(tableau[i][3], lineage);
+            }
+        }
+    }
+
+    return lineage;
+    //return lignee;    
+}
+
+char *readTaxo(char *species_name)
+{
+    char *lineage = (char *)malloc(1024);
+    char *finalResult = (char *)malloc(1024);
+    // récupération de la premiere ligne
+ 
+    for(int i =0; i<NUMROWS; i++){
+        for(int j=0; j<NUMCOLUMNS; j++){
+            //printf("name :%s\n", name);
+            if (strcmp(tableau[i][0], species_name) == 0)
+            {
+                if(strcmp(tableau[i][2], "superkingdom")==0){
+                    finalResult=species_name;
+                    break;
+                }
+                else{
+                    strcpy(lineage, species_name);
+                    //printf("on est là y le parent id est %s\n", tableau[3][j]);
+                    // //récupération du parent puis on cherche le parent à l'aide de son taxid
+                    finalResult = retrieveParent(tableau[i][3],lineage);
+                    // break;
+                }
+            
+            }
+        }
+    }
+        
+    return finalResult;
 }

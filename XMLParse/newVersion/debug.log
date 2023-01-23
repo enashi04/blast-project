@@ -1,27 +1,269 @@
-==7546== Memcheck, a memory error detector
-==7546== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==7546== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==7546== Command: ./testing
-==7546== Parent PID: 2052
-==7546== 
-==7546== 
-==7546== Process terminating with default action of signal 11 (SIGSEGV)
-==7546==  Bad permissions for mapped region at address 0x10A01C
-==7546==    at 0x483F0AC: strcpy (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
-==7546==    by 0x10946A: readTaxo (test.c:38)
-==7546==    by 0x109575: main (test.c:62)
-==7546== 
-==7546== HEAP SUMMARY:
-==7546==     in use at exit: 472 bytes in 1 blocks
-==7546==   total heap usage: 3 allocs, 2 frees, 5,592 bytes allocated
-==7546== 
-==7546== LEAK SUMMARY:
-==7546==    definitely lost: 0 bytes in 0 blocks
-==7546==    indirectly lost: 0 bytes in 0 blocks
-==7546==      possibly lost: 0 bytes in 0 blocks
-==7546==    still reachable: 472 bytes in 1 blocks
-==7546==         suppressed: 0 bytes in 0 blocks
-==7546== Rerun with --leak-check=full to see details of leaked memory
-==7546== 
-==7546== For lists of detected and suppressed errors, rerun with: -s
-==7546== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==29251== Memcheck, a memory error detector
+==29251== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==29251== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==29251== Command: ./parsing -m bronze -o output.json stdin.xml
+==29251== Parent PID: 20733
+==29251== 
+==29251== Warning: set address range perms: large range [0x110000, 0x31377000) (defined)
+==29251== Conditional jump or move depends on uninitialised value(s)
+==29251==    at 0x31BB5C2D: strcat (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==29251==    by 0x10B2AC: retrieveParent (retrieveInfo.c:417)
+==29251==    by 0x10B44F: readTaxo (retrieveInfo.c:449)
+==29251==    by 0x10A8AC: HSP_Enter (retrieveInfo.c:253)
+==29251==    by 0x10A2BA: hit_Iteration (retrieveInfo.c:108)
+==29251==    by 0x10A1B5: blastOutPut_iteration (retrieveInfo.c:75)
+==29251==    by 0x10957D: main (parsing.c:38)
+==29251== 
+==29251== Conditional jump or move depends on uninitialised value(s)
+==29251==    at 0x31BB5C2D: strcat (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==29251==    by 0x10B2AC: retrieveParent (retrieveInfo.c:417)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B44F: readTaxo (retrieveInfo.c:449)
+==29251==    by 0x10A8AC: HSP_Enter (retrieveInfo.c:253)
+==29251==    by 0x10A2BA: hit_Iteration (retrieveInfo.c:108)
+==29251==    by 0x10A1B5: blastOutPut_iteration (retrieveInfo.c:75)
+==29251==    by 0x10957D: main (parsing.c:38)
+==29251== 
+==29251== Conditional jump or move depends on uninitialised value(s)
+==29251==    at 0x31BB5C2D: strcat (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==29251==    by 0x10B2AC: retrieveParent (retrieveInfo.c:417)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B44F: readTaxo (retrieveInfo.c:449)
+==29251==    by 0x10A8AC: HSP_Enter (retrieveInfo.c:253)
+==29251==    by 0x10A2BA: hit_Iteration (retrieveInfo.c:108)
+==29251==    by 0x10A1B5: blastOutPut_iteration (retrieveInfo.c:75)
+==29251==    by 0x10957D: main (parsing.c:38)
+==29251== 
+==29251== Invalid write of size 1
+==29251==    at 0x31BB5C4C: strcat (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==29251==    by 0x10B2ED: retrieveParent (retrieveInfo.c:419)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==  Address 0x39071f90 is 0 bytes after a block of size 1,024 alloc'd
+==29251==    at 0x31BB27F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==29251==    by 0x10B230: retrieveParent (retrieveInfo.c:411)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251== 
+==29251== Invalid write of size 1
+==29251==    at 0x31BB5C5E: strcat (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==29251==    by 0x10B2ED: retrieveParent (retrieveInfo.c:419)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==  Address 0x39071f9c is 12 bytes after a block of size 1,024 alloc'd
+==29251==    at 0x31BB27F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==29251==    by 0x10B230: retrieveParent (retrieveInfo.c:411)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251== 
+==29251== Invalid read of size 1
+==29251==    at 0x31BB60B2: strcpy (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==29251==    by 0x10B300: retrieveParent (retrieveInfo.c:421)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==  Address 0x39071f90 is 0 bytes after a block of size 1,024 alloc'd
+==29251==    at 0x31BB27F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==29251==    by 0x10B230: retrieveParent (retrieveInfo.c:411)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251== 
+==29251== Invalid write of size 1
+==29251==    at 0x31BB60AC: strcpy (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==29251==    by 0x10B300: retrieveParent (retrieveInfo.c:421)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==  Address 0x390668d0 is 0 bytes after a block of size 1,024 alloc'd
+==29251==    at 0x31BB27F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==29251==    by 0x10B36E: readTaxo (retrieveInfo.c:432)
+==29251==    by 0x10A8AC: HSP_Enter (retrieveInfo.c:253)
+==29251==    by 0x10A2BA: hit_Iteration (retrieveInfo.c:108)
+==29251==    by 0x10A1B5: blastOutPut_iteration (retrieveInfo.c:75)
+==29251==    by 0x10957D: main (parsing.c:38)
+==29251== 
+==29251== Invalid write of size 1
+==29251==    at 0x31BB60BE: strcpy (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==29251==    by 0x10B300: retrieveParent (retrieveInfo.c:421)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==  Address 0x390668dc is 12 bytes after a block of size 1,024 alloc'd
+==29251==    at 0x31BB27F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==29251==    by 0x10B36E: readTaxo (retrieveInfo.c:432)
+==29251==    by 0x10A8AC: HSP_Enter (retrieveInfo.c:253)
+==29251==    by 0x10A2BA: hit_Iteration (retrieveInfo.c:108)
+==29251==    by 0x10A1B5: blastOutPut_iteration (retrieveInfo.c:75)
+==29251==    by 0x10957D: main (parsing.c:38)
+==29251== 
+==29251== Invalid read of size 1
+==29251==    at 0x31BB5C52: strcat (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==29251==    by 0x10B2ED: retrieveParent (retrieveInfo.c:419)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==  Address 0x390668d0 is 0 bytes after a block of size 1,024 alloc'd
+==29251==    at 0x31BB27F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==29251==    by 0x10B36E: readTaxo (retrieveInfo.c:432)
+==29251==    by 0x10A8AC: HSP_Enter (retrieveInfo.c:253)
+==29251==    by 0x10A2BA: hit_Iteration (retrieveInfo.c:108)
+==29251==    by 0x10A1B5: blastOutPut_iteration (retrieveInfo.c:75)
+==29251==    by 0x10957D: main (parsing.c:38)
+==29251== 
+
+valgrind: m_mallocfree.c:305 (get_bszB_as_is): Assertion 'bszB_lo == bszB_hi' failed.
+valgrind: Heap block lo/hi size mismatch: lo = 3636224, hi = 0.
+This is probably caused by your program erroneously writing past the
+end of a heap block and corrupting heap metadata.  If you fix any
+invalid writes reported by Memcheck, this assertion failure will
+probably go away.  Please try that before reporting this as a bug.
+
+
+host stacktrace:
+==29251==    at 0x58046FFA: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux)
+==29251==    by 0x58047127: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux)
+==29251==    by 0x580472CB: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux)
+==29251==    by 0x580519E2: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux)
+==29251==    by 0x58005BF7: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux)
+==29251==    by 0x580A7204: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux)
+==29251==    by 0x580F5FD4: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux)
+
+sched status:
+  running_tid=1
+
+Thread 1: status = VgTs_Runnable (lwpid 29251)
+==29251==    at 0x31BB27F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==29251==    by 0x10B230: retrieveParent (retrieveInfo.c:411)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B32F: retrieveParent (retrieveInfo.c:422)
+==29251==    by 0x10B44F: readTaxo (retrieveInfo.c:449)
+==29251==    by 0x10A8AC: HSP_Enter (retrieveInfo.c:253)
+==29251==    by 0x10A2BA: hit_Iteration (retrieveInfo.c:108)
+==29251==    by 0x10A1B5: blastOutPut_iteration (retrieveInfo.c:75)
+==29251==    by 0x10957D: main (parsing.c:38)
+client stack range: [0x1FFEFFC000 0x1FFF000FFF] client SP: 0x1FFEFFF150
+valgrind stack range: [0x1002BAA000 0x1002CA9FFF] top usage: 18696 of 1048576
+
+
+Note: see also the FAQ in the source distribution.
+It contains workarounds to several common problems.
+In particular, if Valgrind aborted or crashed after
+identifying problems in your program, there's a good chance
+that fixing those problems will prevent Valgrind aborting or
+crashing, especially if it happened in m_mallocfree.c.
+
+If that doesn't help, please report this bug to: www.valgrind.org
+
+In the bug report, send all the above text, the valgrind
+version, and what OS and version you are using.  Thanks.
+

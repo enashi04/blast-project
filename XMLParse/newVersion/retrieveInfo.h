@@ -5,9 +5,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-extern FILE *output;
-extern int t_from, t_to, query_length;
-extern HashTable *table;
+ FILE *output;
+ int t_from, t_to, query_length;
+ HashTable *table;
 
 
 void hit_enter(xmlNode *node);
@@ -20,3 +20,5 @@ void hit_Iteration(xmlNode *node, char *mode);
 char *getSpecies(xmlNode *node);
 void blastOutPut_iteration(xmlDoc *fichier, char *mode);
 char (*createTableau())[3][128];
+char *retriveParent(char *species_name, char *speciesID);
+char *readTaxo(char *species_name);

@@ -4,6 +4,7 @@
         "xmltoblastp.h": "c",
         "functional": "c",
         "retrieveinfo.h": "c",
-        "string.h": "c"
+        "string.h": "c",
+        "type_traits": "c"
     }
 }

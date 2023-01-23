@@ -1,0 +1,1110 @@
+{
+	"query-name" : "sp|P96368|TRCS_MYCTU Sensor histidine kinase TrcS OS=Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv) OX=83332 GN=trcS PE=1 SV=1",
+	"query-length" : "509",
+	"hits" :
+	[
+		{
+			"hit_accession" : "WP_052630949",
+			"species": [
+				{
+					"name":"Mycobacterium tuberculosis",
+					"taxid": "1773",
+					"parent": "Mycobacteroides chelonae",
+					"rank": "species",
+					"lineage": "Mycobacterium tuberculosis"
+				}
+			],
+			"number of hit" : "1",
+			"bitscore" : "798.119",
+			"score" : "2060",
+			"evalue" : "0",
+			"query_from" : "1",
+			"query_to" : "509",
+			"target_from" : "1",
+			"target_to" : "509",
+			"identity" : "508",
+			"positive" : "509",
+			"gaps" : "0",
+			"query-cover" : "0",
+			"align_len" : "509"
+		}
+		,{
+			"hit_accession" : "WP_057126492",
+			"species": [
+				{
+					"name":"Mycobacterium tuberculosis",
+					"taxid": "1773",
+					"parent": "Mycobacteroides chelonae",
+					"rank": "species",
+					"lineage": "Mycobacterium tuberculosis"
+				}
+			],
+			"number of hit" : "1",
+			"bitscore" : "798.119",
+			"score" : "2060",
+			"evalue" : "0",
+			"query_from" : "1",
+			"query_to" : "509",
+			"target_from" : "1",
+			"target_to" : "509",
+			"identity" : "508",
+			"positive" : "508",
+			"gaps" : "0",
+			"query-cover" : "0",
+			"align_len" : "509"
+		}
+		,{
+			"hit_accession" : "WP_031678289",
+			"species": [
+				{
+					"name":"Mycobacterium tuberculosis",
+					"taxid": "1773",
+					"parent": "Mycobacteroides chelonae",
+					"rank": "species",
+					"lineage": "Mycobacterium tuberculosis"
+				}
+			],
+			"number of hit" : "1",
+			"bitscore" : "796.193",
+			"score" : "2055",
+			"evalue" : "0",
+			"query_from" : "1",
+			"query_to" : "509",
+			"target_from" : "1",
+			"target_to" : "509",
+			"identity" : "508",
+			"positive" : "508",
+			"gaps" : "0",
+			"query-cover" : "0",
+			"align_len" : "509"
+		}
+		,{
+			"hit_accession" : "CNW31936",
+			"species": [
+				{
+					"name":"Mycobacterium tuberculosis",
+					"taxid": "1773",
+					"parent": "Mycobacteroides chelonae",
+					"rank": "species",
+					"lineage": "Mycobacterium tuberculosis"
+				}
+			],
+			"number of hit" : "1",
+			"bitscore" : "796.193",
+			"score" : "2055",
+			"evalue" : "0",
+			"query_from" : "1",
+			"query_to" : "509",
+			"target_from" : "1",
+			"target_to" : "509",
+			"identity" : "506",
+			"positive" : "507",
+			"gaps" : "0",
+			"query-cover" : "0",
+			"align_len" : "509"
+		}
+		,{
+			"hit_accession" : "WP_057319407",
+			"species": [
+				{
+					"name":"Mycobacterium tuberculosis",
+					"taxid": "1773",
+					"parent": "Mycobacteroides chelonae",
+					"rank": "species",
+					"lineage": "Mycobacterium tuberculosis"
+				}
+			],
+			"number of hit" : "1",
+			"bitscore" : "795.808",
+			"score" : "2054",
+			"evalue" : "0",
+			"query_from" : "1",
+			"query_to" : "509",
+			"target_from" : "1",
+			"target_to" : "509",
+			"identity" : "508",
+			"positive" : "509",
+			"gaps" : "0",
+			"query-cover" : "0",
+			"align_len" : "509"
+		}
+		,{
+			"hit_accession" : "WP_031651602",
+			"species": [
+				{
+					"name":"Mycobacterium tuberculosis",
+					"taxid": "1773",
+					"parent": "Mycobacteroides chelonae",
+					"rank": "species",
+					"lineage": "Mycobacterium tuberculosis"
+				}
+			],
+			"number of hit" : "1",
+			"bitscore" : "795.038",
+			"score" : "2052",
+			"evalue" : "0",
+			"query_from" : "1",
+			"query_to" : "509",
+			"target_from" : "1",
+			"target_to" : "509",
+			"identity" : "508",
+			"positive" : "509",
+			"gaps" : "0",
+			"query-cover" : "0",
+			"align_len" : "509"
+		}
+		,{
+			"hit_accession" : "WP_128886459",
+			"species": [
+				{
+					"name":"Mycobacterium tuberculosis",
+					"taxid": "1773",
+					"parent": "Mycobacteroides chelonae",
+					"rank": "species",
+					"lineage": "Mycobacterium tuberculosis"
+				}
+			],
+			"number of hit" : "1",
+			"bitscore" : "795.038",
+			"score" : "2052",
+			"evalue" : "0",
+			"query_from" : "1",
+			"query_to" : "509",
+			"target_from" : "1",
+			"target_to" : "509",
+			"identity" : "508",
+			"positive" : "508",
+			"gaps" : "0",
+			"query-cover" : "0",
+			"align_len" : "509"
+		}
+		,{
+			"hit_accession" : "WP_031703325",
+			"species": [
+				{
+					"name":"Mycobacterium tuberculosis",
+					"taxid": "1773",
+					"parent": "Mycobacteroides chelonae",
+					"rank": "species",
+					"lineage": "Mycobacterium tuberculosis"
+				}
+			],
+			"number of hit" : "1",
+			"bitscore" : "795.038",
+			"score" : "2052",
+			"evalue" : "0",
+			"query_from" : "1",
+			"query_to" : "509",
+			"target_from" : "1",
+			"target_to" : "509",
+			"identity" : "508",
+			"positive" : "509",
+			"gaps" : "0",
+			"query-cover" : "0",
+			"align_len" : "509"
+		}
+		,{
+			"hit_accession" : "WP_003405324",
+			"species": [
+				{
+					"name":"Mycobacterium tuberculosis complex",
+					"taxid": "77643",
+					"parent": "IncQ plasmid pIE1120",
+					"rank": "species group",
+					"lineage": ""
+				}
+			],
+			"number of hit" : "1",
+			"bitscore" : "795.038",
+			"score" : "2052",
+			"evalue" : "0",
+			"query_from" : "1",
+			"query_to" : "509",
+			"target_from" : "1",
+			"target_to" : "509",
+			"identity" : "509",
+			"positive" : "509",
+			"gaps" : "0",
+			"query-cover" : "0",
+			"align_len" : "509"
+		}
+		,{
+			"hit_accession" : "WP_107905105",
+			"species": [
+				{
+					"name":"Mycobacterium tuberculosis",
+					"taxid": "1773",
+					"parent": "Mycobacteroides chelonae",
+					"rank": "species",
+					"lineage": "Mycobacterium tuberculosis"
+				}
+			],
+			"number of hit" : "1",
+			"bitscore" : "795.038",
+			"score" : "2052",
+			"evalue" : "0",
+			"query_from" : "1",
+			"query_to" : "509",
+			"target_from" : "1",
+			"target_to" : "509",
+			"identity" : "508",
+			"positive" : "509",
+			"gaps" : "0",
+			"query-cover" : "0",
+			"align_len" : "509"
+		}
+		,{
+			"hit_accession" : "WP_031714251",
+			"species": [
+				{
+					"name":"Mycobacterium tuberculosis",
+					"taxid": "1773",
+					"parent": "Mycobacteroides chelonae",
+					"rank": "species",
+					"lineage": "Mycobacterium tuberculosis"
+				}
+			],
+			"number of hit" : "1",
+			"bitscore" : "795.038",
+			"score" : "2052",
+			"evalue" : "0",
+			"query_from" : "1",
+			"query_to" : "509",
+			"target_from" : "1",
+			"target_to" : "509",
+			"identity" : "508",
+			"positive" : "509",
+			"gaps" : "0",
+			"query-cover" : "0",
+			"align_len" : "509"
+		}
+		,{
+			"hit_accession" : "WP_057287989",
+			"species": [
+				{
+					"name":"Mycobacterium tuberculosis",
+					"taxid": "1773",
+					"parent": "Mycobacteroides chelonae",
+					"rank": "species",
+					"lineage": "Mycobacterium tuberculosis"
+				}
+			],
+			"number of hit" : "1",
+			"bitscore" : "794.653",
+			"score" : "2051",
+			"evalue" : "0",
+			"query_from" : "1",
+			"query_to" : "509",
+			"target_from" : "1",
+			"target_to" : "509",
+			"identity" : "508",
+			"positive" : "509",
+			"gaps" : "0",
+			"query-cover" : "0",
+			"align_len" : "509"
+		}
+		,{
+			"hit_accession" : "WP_157154880",
+			"species": [
+				{
+					"name":"Mycobacterium tuberculosis",
+					"taxid": "1773",
+					"parent": "Mycobacteroides chelonae",
+					"rank": "species",
+					"lineage": "Mycobacterium tuberculosis"
+				}
+			],
+			"number of hit" : "1",
+			"bitscore" : "794.653",
+			"score" : "2051",
+			"evalue" : "0",
+			"query_from" : "1",
+			"query_to" : "509",
+			"target_from" : "1",
+			"target_to" : "509",
+			"identity" : "507",
+			"positive" : "507",
+			"gaps" : "0",
+			"query-cover" : "0",
+			"align_len" : "509"
+		}
+		,{
+			"hit_accession" : "WP_252339338",
+			"species": [
+				{
+					"name":"Mycobacterium tuberculosis",
+					"taxid": "1773",
+					"parent": "Mycobacteroides chelonae",
+					"rank": "species",
+					"lineage": "Mycobacterium tuberculosis"
+				}
+			],
+			"number of hit" : "1",
+			"bitscore" : "794.267",
+			"score" : "2050",
+			"evalue" : "0",
+			"query_from" : "1",
+			"query_to" : "509",
+			"target_from" : "1",
+			"target_to" : "509",
+			"identity" : "508",
+			"positive" : "509",
+			"gaps" : "0",
+			"query-cover" : "0",
+			"align_len" : "509"
+		}
+		,{
+			"hit_accession" : "WP_031699159",
+			"species": [
+				{
+					"name":"Mycobacterium tuberculosis",
+					"taxid": "1773",
+					"parent": "Mycobacteroides chelonae",
+					"rank": "species",
+					"lineage": "Mycobacterium tuberculosis"
+				}
+			],
+			"number of hit" : "1",
+			"bitscore" : "794.267",
+			"score" : "2050",
+			"evalue" : "0",
+			"query_from" : "1",
+			"query_to" : "509",
+			"target_from" : "1",
+			"target_to" : "509",
+			"identity" : "508",
+			"positive" : "509",
+			"gaps" : "0",
+			"query-cover" : "0",
+			"align_len" : "509"
+		}
+		,{
+			"hit_accession" : "WP_050302961",
+			"species": [
+				{
+					"name":"Mycobacterium tuberculosis",
+					"taxid": "1773",
+					"parent": "Mycobacteroides chelonae",
+					"rank": "species",
+					"lineage": "Mycobacterium tuberculosis"
+				}
+			],
+			"number of hit" : "1",
+			"bitscore" : "794.267",
+			"score" : "2050",
+			"evalue" : "0",
+			"query_from" : "1",
+			"query_to" : "509",
+			"target_from" : "1",
+			"target_to" : "509",
+			"identity" : "508",
+			"positive" : "508",
+			"gaps" : "0",
+			"query-cover" : "0",
+			"align_len" : "509"
+		}
+		,{
+			"hit_accession" : "WP_057334707",
+			"species": [
+				{
+					"name":"Mycobacterium tuberculosis",
+					"taxid": "1773",
+					"parent": "Mycobacteroides chelonae",
+					"rank": "species",
+					"lineage": "Mycobacterium tuberculosis"
+				}
+			],
+			"number of hit" : "1",
+			"bitscore" : "794.267",
+			"score" : "2050",
+			"evalue" : "0",
+			"query_from" : "1",
+			"query_to" : "509",
+			"target_from" : "1",
+			"target_to" : "509",
+			"identity" : "508",
+			"positive" : "509",
+			"gaps" : "0",
+			"query-cover" : "0",
+			"align_len" : "509"
+		}
+		,{
+			"hit_accession" : "WP_055374382",
+			"species": [
+				{
+					"name":"Mycobacterium tuberculosis",
+					"taxid": "1773",
+					"parent": "Mycobacteroides chelonae",
+					"rank": "species",
+					"lineage": "Mycobacterium tuberculosis"
+				}
+			],
+			"number of hit" : "1",
+			"bitscore" : "794.267",
+			"score" : "2050",
+			"evalue" : "0",
+			"query_from" : "1",
+			"query_to" : "509",
+			"target_from" : "1",
+			"target_to" : "509",
+			"identity" : "508",
+			"positive" : "509",
+			"gaps" : "0",
+			"query-cover" : "0",
+			"align_len" : "509"
+		}
+		,{
+			"hit_accession" : "WP_055370806",
+			"species": [
+				{
+					"name":"Mycobacterium tuberculosis",
+					"taxid": "1773",
+					"parent": "Mycobacteroides chelonae",
+					"rank": "species",
+					"lineage": "Mycobacterium tuberculosis"
+				}
+			],
+			"number of hit" : "1",
+			"bitscore" : "793.882",
+			"score" : "2049",
+			"evalue" : "0",
+			"query_from" : "1",
+			"query_to" : "509",
+			"target_from" : "1",
+			"target_to" : "509",
+			"identity" : "508",
+			"positive" : "509",
+			"gaps" : "0",
+			"query-cover" : "0",
+			"align_len" : "509"
+		}
+		,{
+			"hit_accession" : "WP_070900366",
+			"species": [
+				{
+					"name":"Mycobacterium tuberculosis",
+					"taxid": "1773",
+					"parent": "Mycobacteroides chelonae",
+					"rank": "species",
+					"lineage": "Mycobacterium tuberculosis"
+				}
+			],
+			"number of hit" : "1",
+			"bitscore" : "793.882",
+			"score" : "2049",
+			"evalue" : "0",
+			"query_from" : "1",
+			"query_to" : "509",
+			"target_from" : "1",
+			"target_to" : "509",
+			"identity" : "508",
+			"positive" : "508",
+			"gaps" : "0",
+			"query-cover" : "0",
+			"align_len" : "509"
+		}
+		,{
+			"hit_accession" : "WP_075878440",
+			"species": [
+				{
+					"name":"Mycobacterium tuberculosis",
+					"taxid": "1773",
+					"parent": "Mycobacteroides chelonae",
+					"rank": "species",
+					"lineage": "Mycobacterium tuberculosis"
+				}
+			],
+			"number of hit" : "1",
+			"bitscore" : "793.882",
+			"score" : "2049",
+			"evalue" : "0",
+			"query_from" : "1",
+			"query_to" : "509",
+			"target_from" : "1",
+			"target_to" : "509",
+			"identity" : "508",
+			"positive" : "508",
+			"gaps" : "0",
+			"query-cover" : "0",
+			"align_len" : "509"
+		}
+		,{
+			"hit_accession" : "WP_031656161",
+			"species": [
+				{
+					"name":"Mycobacterium tuberculosis",
+					"taxid": "1773",
+					"parent": "Mycobacteroides chelonae",
+					"rank": "species",
+					"lineage": "Mycobacterium tuberculosis"
+				}
+			],
+			"number of hit" : "1",
+			"bitscore" : "793.882",
+			"score" : "2049",
+			"evalue" : "0",
+			"query_from" : "1",
+			"query_to" : "509",
+			"target_from" : "1",
+			"target_to" : "509",
+			"identity" : "508",
+			"positive" : "508",
+			"gaps" : "0",
+			"query-cover" : "0",
+			"align_len" : "509"
+		}
+		,{
+			"hit_accession" : "WP_072473478",
+			"species": [
+				{
+					"name":"Mycobacterium tuberculosis",
+					"taxid": "1773",
+					"parent": "Mycobacteroides chelonae",
+					"rank": "species",
+					"lineage": "Mycobacterium tuberculosis"
+				}
+			],
+			"number of hit" : "1",
+			"bitscore" : "793.882",
+			"score" : "2049",
+			"evalue" : "0",
+			"query_from" : "1",
+			"query_to" : "509",
+			"target_from" : "1",
+			"target_to" : "509",
+			"identity" : "508",
+			"positive" : "508",
+			"gaps" : "0",
+			"query-cover" : "0",
+			"align_len" : "509"
+		}
+		,{
+			"hit_accession" : "WP_003910257",
+			"species": [
+				{
+					"name":"Mycobacterium tuberculosis complex",
+					"taxid": "77643",
+					"parent": "IncQ plasmid pIE1120",
+					"rank": "species group",
+					"lineage": ""
+				}
+			],
+			"number of hit" : "1",
+			"bitscore" : "793.882",
+			"score" : "2049",
+			"evalue" : "0",
+			"query_from" : "1",
+			"query_to" : "509",
+			"target_from" : "1",
+			"target_to" : "509",
+			"identity" : "508",
+			"positive" : "508",
+			"gaps" : "0",
+			"query-cover" : "0",
+			"align_len" : "509"
+		}
+		,{
+			"hit_accession" : "WP_128896893",
+			"species": [
+				{
+					"name":"Mycobacterium tuberculosis",
+					"taxid": "1773",
+					"parent": "Mycobacteroides chelonae",
+					"rank": "species",
+					"lineage": "Mycobacterium tuberculosis"
+				}
+			],
+			"number of hit" : "1",
+			"bitscore" : "793.882",
+			"score" : "2049",
+			"evalue" : "0",
+			"query_from" : "1",
+			"query_to" : "509",
+			"target_from" : "1",
+			"target_to" : "509",
+			"identity" : "508",
+			"positive" : "509",
+			"gaps" : "0",
+			"query-cover" : "0",
+			"align_len" : "509"
+		}
+		,{
+			"hit_accession" : "WP_129368611",
+			"species": [
+				{
+					"name":"Mycobacterium tuberculosis",
+					"taxid": "1773",
+					"parent": "Mycobacteroides chelonae",
+					"rank": "species",
+					"lineage": "Mycobacterium tuberculosis"
+				}
+			],
+			"number of hit" : "1",
+			"bitscore" : "793.882",
+			"score" : "2049",
+			"evalue" : "0",
+			"query_from" : "1",
+			"query_to" : "509",
+			"target_from" : "1",
+			"target_to" : "509",
+			"identity" : "507",
+			"positive" : "507",
+			"gaps" : "0",
+			"query-cover" : "0",
+			"align_len" : "509"
+		}
+		,{
+			"hit_accession" : "WP_055374170",
+			"species": [
+				{
+					"name":"Mycobacterium tuberculosis",
+					"taxid": "1773",
+					"parent": "Mycobacteroides chelonae",
+					"rank": "species",
+					"lineage": "Mycobacterium tuberculosis"
+				}
+			],
+			"number of hit" : "1",
+			"bitscore" : "793.497",
+			"score" : "2048",
+			"evalue" : "0",
+			"query_from" : "1",
+			"query_to" : "509",
+			"target_from" : "1",
+			"target_to" : "509",
+			"identity" : "506",
+			"positive" : "506",
+			"gaps" : "0",
+			"query-cover" : "0",
+			"align_len" : "509"
+		}
+		,{
+			"hit_accession" : "WP_151220811",
+			"species": [
+				{
+					"name":"Mycobacterium tuberculosis",
+					"taxid": "1773",
+					"parent": "Mycobacteroides chelonae",
+					"rank": "species",
+					"lineage": "Mycobacterium tuberculosis"
+				}
+			],
+			"number of hit" : "1",
+			"bitscore" : "793.497",
+			"score" : "2048",
+			"evalue" : "0",
+			"query_from" : "1",
+			"query_to" : "509",
+			"target_from" : "1",
+			"target_to" : "509",
+			"identity" : "508",
+			"positive" : "508",
+			"gaps" : "0",
+			"query-cover" : "0",
+			"align_len" : "509"
+		}
+		,{
+			"hit_accession" : "WP_046622977",
+			"species": [
+				{
+					"name":"Mycobacterium tuberculosis",
+					"taxid": "1773",
+					"parent": "Mycobacteroides chelonae",
+					"rank": "species",
+					"lineage": "Mycobacterium tuberculosis"
+				}
+			],
+			"number of hit" : "1",
+			"bitscore" : "793.497",
+			"score" : "2048",
+			"evalue" : "0",
+			"query_from" : "1",
+			"query_to" : "509",
+			"target_from" : "1",
+			"target_to" : "509",
+			"identity" : "508",
+			"positive" : "508",
+			"gaps" : "0",
+			"query-cover" : "0",
+			"align_len" : "509"
+		}
+		,{
+			"hit_accession" : "WP_031737446",
+			"species": [
+				{
+					"name":"Mycobacterium tuberculosis",
+					"taxid": "1773",
+					"parent": "Mycobacteroides chelonae",
+					"rank": "species",
+					"lineage": "Mycobacterium tuberculosis"
+				}
+			],
+			"number of hit" : "1",
+			"bitscore" : "793.497",
+			"score" : "2048",
+			"evalue" : "0",
+			"query_from" : "1",
+			"query_to" : "509",
+			"target_from" : "1",
+			"target_to" : "509",
+			"identity" : "508",
+			"positive" : "508",
+			"gaps" : "0",
+			"query-cover" : "0",
+			"align_len" : "509"
+		}
+		,{
+			"hit_accession" : "WP_086159399",
+			"species": [
+				{
+					"name":"Mycobacterium tuberculosis",
+					"taxid": "1773",
+					"parent": "Mycobacteroides chelonae",
+					"rank": "species",
+					"lineage": "Mycobacterium tuberculosis"
+				}
+			],
+			"number of hit" : "1",
+			"bitscore" : "793.497",
+			"score" : "2048",
+			"evalue" : "0",
+			"query_from" : "1",
+			"query_to" : "509",
+			"target_from" : "1",
+			"target_to" : "509",
+			"identity" : "508",
+			"positive" : "509",
+			"gaps" : "0",
+			"query-cover" : "0",
+			"align_len" : "509"
+		}
+		,{
+			"hit_accession" : "WP_152280413",
+			"species": [
+				{
+					"name":"Mycobacterium tuberculosis",
+					"taxid": "1773",
+					"parent": "Mycobacteroides chelonae",
+					"rank": "species",
+					"lineage": "Mycobacterium tuberculosis"
+				}
+			],
+			"number of hit" : "1",
+			"bitscore" : "793.112",
+			"score" : "2047",
+			"evalue" : "0",
+			"query_from" : "1",
+			"query_to" : "509",
+			"target_from" : "1",
+			"target_to" : "509",
+			"identity" : "508",
+			"positive" : "508",
+			"gaps" : "0",
+			"query-cover" : "0",
+			"align_len" : "509"
+		}
+		,{
+			"hit_accession" : "WP_057173684",
+			"species": [
+				{
+					"name":"Mycobacterium tuberculosis",
+					"taxid": "1773",
+					"parent": "Mycobacteroides chelonae",
+					"rank": "species",
+					"lineage": "Mycobacterium tuberculosis"
+				}
+			],
+			"number of hit" : "1",
+			"bitscore" : "793.112",
+			"score" : "2047",
+			"evalue" : "0",
+			"query_from" : "1",
+			"query_to" : "509",
+			"target_from" : "1",
+			"target_to" : "509",
+			"identity" : "508",
+			"positive" : "508",
+			"gaps" : "0",
+			"query-cover" : "0",
+			"align_len" : "509"
+		}
+		,{
+			"hit_accession" : "WP_055391099",
+			"species": [
+				{
+					"name":"Mycobacterium tuberculosis",
+					"taxid": "1773",
+					"parent": "Mycobacteroides chelonae",
+					"rank": "species",
+					"lineage": "Mycobacterium tuberculosis"
+				}
+			],
+			"number of hit" : "1",
+			"bitscore" : "793.112",
+			"score" : "2047",
+			"evalue" : "0",
+			"query_from" : "1",
+			"query_to" : "509",
+			"target_from" : "1",
+			"target_to" : "509",
+			"identity" : "508",
+			"positive" : "508",
+			"gaps" : "0",
+			"query-cover" : "0",
+			"align_len" : "509"
+		}
+		,{
+			"hit_accession" : "WP_003903290",
+			"species": [
+				{
+					"name":"Mycobacterium tuberculosis",
+					"taxid": "1773",
+					"parent": "Mycobacteroides chelonae",
+					"rank": "species",
+					"lineage": "Mycobacterium tuberculosis"
+				}
+			],
+			"number of hit" : "1",
+			"bitscore" : "793.112",
+			"score" : "2047",
+			"evalue" : "0",
+			"query_from" : "1",
+			"query_to" : "509",
+			"target_from" : "1",
+			"target_to" : "509",
+			"identity" : "508",
+			"positive" : "508",
+			"gaps" : "0",
+			"query-cover" : "0",
+			"align_len" : "509"
+		}
+		,{
+			"hit_accession" : "WP_031700633",
+			"species": [
+				{
+					"name":"Mycobacterium tuberculosis",
+					"taxid": "1773",
+					"parent": "Mycobacteroides chelonae",
+					"rank": "species",
+					"lineage": "Mycobacterium tuberculosis"
+				}
+			],
+			"number of hit" : "1",
+			"bitscore" : "792.727",
+			"score" : "2046",
+			"evalue" : "0",
+			"query_from" : "1",
+			"query_to" : "509",
+			"target_from" : "1",
+			"target_to" : "509",
+			"identity" : "508",
+			"positive" : "508",
+			"gaps" : "0",
+			"query-cover" : "0",
+			"align_len" : "509"
+		}
+		,{
+			"hit_accession" : "WP_057346366",
+			"species": [
+				{
+					"name":"Mycobacterium tuberculosis",
+					"taxid": "1773",
+					"parent": "Mycobacteroides chelonae",
+					"rank": "species",
+					"lineage": "Mycobacterium tuberculosis"
+				}
+			],
+			"number of hit" : "1",
+			"bitscore" : "792.727",
+			"score" : "2046",
+			"evalue" : "0",
+			"query_from" : "1",
+			"query_to" : "509",
+			"target_from" : "1",
+			"target_to" : "509",
+			"identity" : "508",
+			"positive" : "508",
+			"gaps" : "0",
+			"query-cover" : "0",
+			"align_len" : "509"
+		}
+		,{
+			"hit_accession" : "WP_140027273",
+			"species": [
+				{
+					"name":"Mycobacterium tuberculosis",
+					"taxid": "1773",
+					"parent": "Mycobacteroides chelonae",
+					"rank": "species",
+					"lineage": "Mycobacterium tuberculosis"
+				}
+			],
+			"number of hit" : "1",
+			"bitscore" : "792.727",
+			"score" : "2046",
+			"evalue" : "0",
+			"query_from" : "1",
+			"query_to" : "509",
+			"target_from" : "1",
+			"target_to" : "509",
+			"identity" : "507",
+			"positive" : "508",
+			"gaps" : "0",
+			"query-cover" : "0",
+			"align_len" : "509"
+		}
+		,{
+			"hit_accession" : "WP_057133162",
+			"species": [
+				{
+					"name":"Mycobacterium tuberculosis",
+					"taxid": "1773",
+					"parent": "Mycobacteroides chelonae",
+					"rank": "species",
+					"lineage": "Mycobacterium tuberculosis"
+				}
+			],
+			"number of hit" : "1",
+			"bitscore" : "792.727",
+			"score" : "2046",
+			"evalue" : "0",
+			"query_from" : "1",
+			"query_to" : "509",
+			"target_from" : "1",
+			"target_to" : "509",
+			"identity" : "508",
+			"positive" : "508",
+			"gaps" : "0",
+			"query-cover" : "0",
+			"align_len" : "509"
+		}
+		,{
+			"hit_accession" : "WP_031738429",
+			"species": [
+				{
+					"name":"Mycobacterium tuberculosis",
+					"taxid": "1773",
+					"parent": "Mycobacteroides chelonae",
+					"rank": "species",
+					"lineage": "Mycobacterium tuberculosis"
+				}
+			],
+			"number of hit" : "1",
+			"bitscore" : "792.727",
+			"score" : "2046",
+			"evalue" : "0",
+			"query_from" : "1",
+			"query_to" : "509",
+			"target_from" : "1",
+			"target_to" : "509",
+			"identity" : "507",
+			"positive" : "508",
+			"gaps" : "0",
+			"query-cover" : "0",
+			"align_len" : "509"
+		}
+		,{
+			"hit_accession" : "WP_057351064",
+			"species": [
+				{
+					"name":"Mycobacterium tuberculosis",
+					"taxid": "1773",
+					"parent": "Mycobacteroides chelonae",
+					"rank": "species",
+					"lineage": "Mycobacterium tuberculosis"
+				}
+			],
+			"number of hit" : "1",
+			"bitscore" : "792.727",
+			"score" : "2046",
+			"evalue" : "0",
+			"query_from" : "1",
+			"query_to" : "509",
+			"target_from" : "1",
+			"target_to" : "509",
+			"identity" : "508",
+			"positive" : "508",
+			"gaps" : "0",
+			"query-cover" : "0",
+			"align_len" : "509"
+		}
+		,{
+			"hit_accession" : "WP_055367679",
+			"species": [
+				{
+					"name":"Mycobacterium tuberculosis",
+					"taxid": "1773",
+					"parent": "Mycobacteroides chelonae",
+					"rank": "species",
+					"lineage": "Mycobacterium tuberculosis"
+				}
+			],
+			"number of hit" : "1",
+			"bitscore" : "792.727",
+			"score" : "2046",
+			"evalue" : "0",
+			"query_from" : "1",
+			"query_to" : "509",
+			"target_from" : "1",
+			"target_to" : "509",
+			"identity" : "508",
+			"positive" : "508",
+			"gaps" : "0",
+			"query-cover" : "0",
+			"align_len" : "509"
+		}
+		,{
+			"hit_accession" : "WP_196110809",
+			"species": [
+				{
+					"name":"Mycobacterium tuberculosis",
+					"taxid": "1773",
+					"parent": "Mycobacteroides chelonae",
+					"rank": "species",
+					"lineage": "Mycobacterium tuberculosis"
+				}
+			],
+			"number of hit" : "1",
+			"bitscore" : "792.341",
+			"score" : "2045",
+			"evalue" : "0",
+			"query_from" : "1",
+			"query_to" : "509",
+			"target_from" : "1",
+			"target_to" : "509",
+			"identity" : "508",
+			"positive" : "508",
+			"gaps" : "0",
+			"query-cover" : "0",
+			"align_len" : "509"
+		}
+		,{
+			"hit_accession" : "WP_057331534",
+			"species": [
+				{
+					"name":"Mycobacterium tuberculosis",
+					"taxid": "1773",
+					"parent": "Mycobacteroides chelonae",
+					"rank": "species",
+					"lineage": "Mycobacterium tuberculosis"
+				}
+			],
+			"number of hit" : "1",
+			"bitscore" : "792.341",
+			"score" : "2045",
+			"evalue" : "0",
+			"query_from" : "1",
+			"query_to" : "509",
+			"target_from" : "1",
+			"target_to" : "509",
+			"identity" : "508",
+			"positive" : "508",
+			"gaps" : "0",
+			"query-cover" : "0",
+			"align_len" : "509"
+		}
+		,{
+			"hit_accession" : "WP_055376818",
+			"species": [
+				{
+					"name":"Mycobact
