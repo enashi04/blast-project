@@ -1,12 +1,29 @@
 #include "retrieveInfo.h"
-#define NUMCOLUMNS 3
-#define NUMROWS 2147398 // nombre d'espèce
 
 char name_hit[128];
 char name_species[30];
-static char tableau[NUMROWS][NUMCOLUMNS][128];
+char *buffer;
 char taxoID[128], parentspecies[128], ranks[128], espece[128], lineage[1024];
 
+
+char *makebuffer(){
+    long fileSize;
+    FILE *file = fopen("taxonomy.reduced", "r");
+    if (!file) {
+        printf("Unable to open file");
+        exit(1);
+    }
+    fseek(file, 0, SEEK_END);
+    fileSize = ftell(file);
+    rewind(file);
+
+    buffer = (char *) malloc((fileSize + 1) * sizeof(char));
+    fread(buffer, sizeof(char), fileSize, file);
+
+    buffer[fileSize] = '\0';
+    //fclose(file);
+    return buffer;
+}
 /// @brief Retrieve the definition of query
 /// @param node
 void query_Def(xmlNode *node)
@@ -40,9 +57,9 @@ void query_Length(xmlNode *node)
 /// @brief Browe the XML file to get elements we want
 /// @param fichier
 /// @param mode
-void blastOutPut_iteration(xmlDoc *fichier, char *mode)
+void blastOutPut_iteration(xmlDoc *fichier, char *mode) // ajout du file taxo
 {
-    createTableau();
+    buffer = makebuffer();
     xmlNode *node, *child, *root;
     /**********************************RECUP° DU PREMIER NOEUD******************************************/
     root = xmlDocGetRootElement(fichier);
@@ -181,7 +198,7 @@ char *getSpecies(xmlNode *node)
 /// @param mode
 /// @param hit_id
 /// @param species
-void HSP_Enter(xmlNode *node, char *mode, char *hit_id, char *species)
+void HSP_Enter(xmlNode *node, char *mode, char *hit_id, char *species) // ajout du file taxo
 {
 
     xmlNode *child;
@@ -212,7 +229,6 @@ void HSP_Enter(xmlNode *node, char *mode, char *hit_id, char *species)
                     {
                         fprintf(output, "\t\t,{\n\t\t\t\"hit_accession\" : \"%s\",\n", hit_id);
                     }
-
                     // mettre le lineage ici
                     fprintf(output, "\t\t\t\"species\": [\n\t\t\t\t{\n");
                     // vérifie d'abord que la donnée est déjà stocké (pour ne pas reparcourir le tableau)
@@ -227,38 +243,41 @@ void HSP_Enter(xmlNode *node, char *mode, char *hit_id, char *species)
                         // rang 2
                         fprintf(output, "\t\t\t\t\t\"rank\": \"%s\",\n", ranks);
                         // fermeture
-                        fprintf(output, "\t\t\t\t\t\"lineage\": \"%s\"\n", readTaxo(species));
+                        fprintf(output, "\t\t\t\t\t\"lineage\": \"%s\"\n", readTaxo(species)); // ajout du file
                         fprintf(output, "\t\t\t\t}\n\t\t\t],\n");
                     }
                     else if (strcmp(species, espece) != 0)
                     {
-                        int presence_species = 0;
-                        for (int i = 0; i < NUMROWS; i++)
+                        char *line = strtok(buffer, "\n");
+                        char id[255], name[255], rank[255], parent[255];
+                        int presence =0;
+                        while (line != NULL)
                         {
-                            if (strcmp(tableau[i][0], species) == 0)
+                            sscanf(line, "%[^	]	%[^	]	%[^	]	%[^\n]", id, name, rank, parent);
+                            if (strcmp(name, species) == 0)
                             {
-                                // name
-                                presence_species = 1;
-                                fprintf(output, "\t\t\t\t\t\"name\":\"%s\",\n", species);
-                                strcpy(espece, species);
+                                presence =1;
+                                fprintf(output, "\t\t\t\t\t\"name\":\"%s\",\n", name);
+                                strcpy(espece, name);
                                 // taxid 1
-                                fprintf(output, "\t\t\t\t\t\"taxid\": \"%s\",\n", tableau[i][1]);
-                                strcpy(taxoID, tableau[i][1]);
+                                fprintf(output, "\t\t\t\t\t\"taxid\": \"%s\",\n", id);
+                                strcpy(taxoID, id);
                                 // parent 3
-                                fprintf(output, "\t\t\t\t\t\"parent\": \"%s\",\n", tableau[i][3]);
-                                strcpy(parentspecies, tableau[i][3]);
+                                fprintf(output, "\t\t\t\t\t\"parent\": \"%s\",\n", parent);
+                                strcpy(parentspecies, parent);
                                 // rang 2
-                                fprintf(output, "\t\t\t\t\t\"rank\": \"%s\",\n", tableau[i][2]);
-                                strcpy(ranks, tableau[i][2]);
+                                fprintf(output, "\t\t\t\t\t\"rank\": \"%s\",\n", rank);
+                                strcpy(ranks, rank);
+                                printf("name is %s\n",species);
                                 fprintf(output, "\t\t\t\t\t\"lineage\": \"%s\"\n", readTaxo(species));
                                 strcpy(lineage, readTaxo(species));
                                 // fermeture
                                 fprintf(output, "\t\t\t\t}\n\t\t\t],\n");
                                 break;
                             }
+                            line = strtok(NULL, "\n");
                         }
-                        if (presence_species == 0)
-                        {
+                        if(presence ==0) {
                             fprintf(output, "\t\t\t\t\t\"name\":\"%s\"\n", species);
                             fprintf(output, "\t\t\t\t}\n\t\t\t],\n");
                         }
@@ -365,96 +384,61 @@ void getHSP(xmlNode *node, const char *name, char *label)
     }
 }
 
-/***********Remplir un tableau contenant les taxid et compagnie*************/
-char (*createTableau())[3][128]
-{
-    FILE *f = fopen("taxonomy.reduced", "r");
-    char taxID[128], name[128], rank[128], parentID[128];
-    char l[BUFSIZE];
-    if (fgets(l, BUFSIZE, f) == NULL)
-    {
-        fprintf(stderr, "Empty taxo file");
-    }
-    int i = 1;
-    rewind(f); //aller au début de la ligne
-    while (fgets(l, BUFSIZE, f) != NULL)
-    {
-        sscanf(l, "%[^	]	%[^	]	%[^	]	%[^\n]", taxID, name, rank, parentID);
-        for (int j = 0; j < NUMCOLUMNS; j++)
-        {
-            if (j == 0)
-            {
-                strcpy(tableau[i][j], name); // species
-            }
-            else if (j == 1)
-            {
-                strcpy(tableau[i][j], taxID);
-            }
-            else if (j == 2)
-            {
-                strcpy(tableau[i][j], rank);
-            }
-            else if (j == 3)
-            {
-                strcpy(tableau[i][j], parentID);
-            }
-        }
-        i++;
-    }
-
-    return tableau;
-}
-
-
 char *retrieveParent(char *speciesID, char *lineage)
 {
-
-    char lignee[1024];
-    //on revient au début du fichier
-    for(int i =0; i<NUMROWS; i++){
-        for(int j=0; j<NUMCOLUMNS; j++){
-            if (strcmp(speciesID, tableau[i][1]) == 0)
-            {
-                strcat(lignee, tableau[i][0]);
-                strcat(lignee,"/");
-                strcat(lignee, lineage);
-
-                strcpy(lineage, lignee);
-                retrieveParent(tableau[i][3], lineage);
-            }
+    char *line = strtok(strdup(buffer), "\n");
+    char taxID[128], name[128], rank[128], parentID[128];
+    char *lignee = (char *)malloc(2058);
+    // on revient au début du fichier
+    while (line != NULL)
+    {
+        sscanf(line, "%[^	]	%[^	]	%[^	]	%[^\n]", taxID, name, rank, parentID);
+        if (strcmp(speciesID, taxID) == 0)
+        {
+            strcat(lignee, name);
+            strcat(lignee, "/");
+            strcat(lignee, lineage);
+            strcpy(lineage, lignee);
+            retrieveParent(parentID, lineage);
         }
+        line = strtok(NULL, "\n");
     }
-
     return lineage;
-    //return lignee;    
+    // return lignee;
 }
 
 char *readTaxo(char *species_name)
 {
+    char *line = strtok(strdup(buffer), "\n");
+
+    char taxID[128], name[128], rank[128], parentID[128];
     char *lineage = (char *)malloc(1024);
     char *finalResult = (char *)malloc(1024);
+    
     // récupération de la premiere ligne
- 
-    for(int i =0; i<NUMROWS; i++){
-        for(int j=0; j<NUMCOLUMNS; j++){
-            //printf("name :%s\n", name);
-            if (strcmp(tableau[i][0], species_name) == 0)
+
+    while (line != NULL)
+    {
+        sscanf(line, "%[^	]	%[^	]	%[^	]	%[^\n]", taxID, name, rank, parentID);
+        //printf("on rentre ici \n");
+        if (strcmp(name, species_name) == 0)
+        {
+           // printf("name is %s\n", name);
+            if (strcmp(rank, "superkingdom") == 0)
             {
-                if(strcmp(tableau[i][2], "superkingdom")==0){
-                    finalResult=species_name;
-                    break;
-                }
-                else{
-                    strcpy(lineage, species_name);
-                    //printf("on est là y le parent id est %s\n", tableau[3][j]);
-                    // //récupération du parent puis on cherche le parent à l'aide de son taxid
-                    finalResult = retrieveParent(tableau[i][3],lineage);
-                    // break;
-                }
-            
+                finalResult = name;
+                break;
+            }
+            else
+            {
+                strcpy(lineage, name);
+                printf("on est là y le parent id est %s\n", parentID);
+                // //récupération du parent puis on cherche le parent à l'aide de son taxid
+                finalResult = retrieveParent(parentID, lineage);
+                // break;
             }
         }
+        line = strtok(NULL, "\n");
     }
-        
     return finalResult;
 }
