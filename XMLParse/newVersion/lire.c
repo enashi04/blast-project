@@ -23,15 +23,16 @@ int main() {
 
     buffer[fileSize] = '\0';
 
-    printf("%s", buffer);
-    char line[1024];
-    for(int i =0; i<fileSize; i++){
-        strcat(line, buffer[i]);
-        if(strcmp((const char *)buffer[i], "\n")==0){
-            sscanf(line, "%[^	]	%[^	]	%[^	]	%[^\n]", taxoID, espece, ranks, parentID);
-            printf("%u : %s %s %s %s\n",i, taxoID, espece, ranks, parentID);
-            strcpy(line, "\0");
-        }
+    //printf("%s", buffer);
+    char *line = strtok(buffer, "\n");
+    while (line != NULL) {
+        char id[255];
+        char name[255];
+        char rank[255];
+        char value[255];
+        sscanf(line, "%s    %s  %s  %s\n", id, name, rank,value);
+        printf("id: %s, name: %s, type: %s, value: %s\n", id, name, rank, value);
+        line = strtok(NULL, "\n");
     }
 
     free(buffer);

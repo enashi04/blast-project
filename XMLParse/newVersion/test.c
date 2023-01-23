@@ -93,6 +93,7 @@ char (*createTableau())[3][128]
             else if (j == 3)
             {
                 strcpy(tableau[i][j], parentID);
+                //fprintf(stdout, "ici on doit avoir : %s\n", parentID);
             }
         }
         i++;

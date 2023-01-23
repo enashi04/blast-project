@@ -17,7 +17,7 @@ CC=gcc
 
 CFLAGS=-Wall -g
 
-LDFLAGS=  -lxml2#lexpat pour expat
+LDFLAGS=  -lxm  l2#lexpat pour expat
 
 
 
