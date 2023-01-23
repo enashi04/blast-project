@@ -6,13 +6,9 @@ char *buffer;
 char taxoID[128], parentspecies[128], ranks[128], espece[128], lineage[1024];
 
 
-char *makebuffer(){
+char *makebuffer(FILE *file){
     long fileSize;
-    FILE *file = fopen("taxonomy.reduced", "r");
-    if (!file) {
-        printf("Unable to open file");
-        exit(1);
-    }
+   
     fseek(file, 0, SEEK_END);
     fileSize = ftell(file);
     rewind(file);
@@ -21,9 +17,9 @@ char *makebuffer(){
     fread(buffer, sizeof(char), fileSize, file);
 
     buffer[fileSize] = '\0';
-    //fclose(file);
     return buffer;
 }
+
 /// @brief Retrieve the definition of query
 /// @param node
 void query_Def(xmlNode *node)
@@ -57,9 +53,9 @@ void query_Length(xmlNode *node)
 /// @brief Browe the XML file to get elements we want
 /// @param fichier
 /// @param mode
-void blastOutPut_iteration(xmlDoc *fichier, char *mode) // ajout du file taxo
+void blastOutPut_iteration(xmlDoc *fichier, char *mode, FILE *file) // ajout du file taxo
 {
-    buffer = makebuffer();
+    makebuffer(file);
     xmlNode *node, *child, *root;
     /**********************************RECUP° DU PREMIER NOEUD******************************************/
     root = xmlDocGetRootElement(fichier);
@@ -201,6 +197,7 @@ char *getSpecies(xmlNode *node)
 void HSP_Enter(xmlNode *node, char *mode, char *hit_id, char *species) // ajout du file taxo
 {
 
+
     xmlNode *child;
     const char *name, *name2;
     /********************************CHILD = SOUS-NOEUD DU NODE ****************************************/
@@ -268,7 +265,6 @@ void HSP_Enter(xmlNode *node, char *mode, char *hit_id, char *species) // ajout 
                                 // rang 2
                                 fprintf(output, "\t\t\t\t\t\"rank\": \"%s\",\n", rank);
                                 strcpy(ranks, rank);
-                                printf("name is %s\n",species);
                                 fprintf(output, "\t\t\t\t\t\"lineage\": \"%s\"\n", readTaxo(species));
                                 strcpy(lineage, readTaxo(species));
                                 // fermeture
@@ -386,7 +382,8 @@ void getHSP(xmlNode *node, const char *name, char *label)
 
 char *retrieveParent(char *speciesID, char *lineage)
 {
-    char *line = strtok(strdup(buffer), "\n");
+
+     char *line = strtok(strdup(buffer), "\n");
     char taxID[128], name[128], rank[128], parentID[128];
     char *lignee = (char *)malloc(2058);
     // on revient au début du fichier
@@ -404,11 +401,14 @@ char *retrieveParent(char *speciesID, char *lineage)
         line = strtok(NULL, "\n");
     }
     return lineage;
-    // return lignee;
 }
 
+/// @brief Browse the buffer
+/// @param species_name 
+/// @return 
 char *readTaxo(char *species_name)
 {
+
     char *line = strtok(strdup(buffer), "\n");
 
     char taxID[128], name[128], rank[128], parentID[128];

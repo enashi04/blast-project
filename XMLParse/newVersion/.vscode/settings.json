@@ -5,6 +5,7 @@
         "functional": "c",
         "retrieveinfo.h": "c",
         "string.h": "c",
-        "type_traits": "c"
+        "type_traits": "c",
+        "stdio.h": "c"
     }
 }

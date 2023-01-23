@@ -1,6 +1,7 @@
 #include "options.h"
 #include "retrieveInfo.h"
-#include "fileInMemory.h"
+
+
 int main(int argc, char **argv){
 
     noArgument(argc);
@@ -28,8 +29,13 @@ int main(int argc, char **argv){
         return 1;
     }
 
-    
-    blastOutPut_iteration(f, mode);
+    FILE *taxo = fopen("taxonomy.reduced","r");
+    if (!taxo)
+    {
+        printf("Unable to open file");
+        exit(1);
+    }
+    blastOutPut_iteration(f, mode, taxo);
 
     fprintf(output, "\t]\n}");
 
