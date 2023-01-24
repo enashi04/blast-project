@@ -8,6 +8,7 @@ char *buffer;
 
 char *makebuffer()
 {
+    file = fopen("taxonomy.reduced", "r");
     long fileSize;
 
     if (!file)
@@ -82,9 +83,9 @@ char *readTaxo(char species_name[255])
 
 int main(int argc, char **argv)
 {
-    file = fopen("taxonomy.reduced", "r");
     makebuffer();
     printf("La lignee est %s\n", readTaxo("Mycobacterium tuberculosis"));
+    printf("La lignee est %s\n", readTaxo("Azorhizobium caulinodans"));
     fclose(file);
 }
 

@@ -1,0 +1,9 @@
+{
+	"query-name" : "sp|P96368|TRCS_MYCTU Sensor histidine kinase TrcS OS=Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv) OX=83332 GN=trcS PE=1 SV=1",
+	"query-length" : "509",
+	"hits" :
+	[
+		{
+			"hit_accession" : "WP_052630949",
+			"species": [
+				{

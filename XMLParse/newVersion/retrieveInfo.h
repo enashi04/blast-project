@@ -6,7 +6,7 @@
 #include <stdio.h>
 
  FILE *output;
- int t_from, t_to, query_length;
+int query_length, t_from, t_to;
  HashTable *table;
 
 
@@ -19,8 +19,3 @@ void HSP_Enter(xmlNode *node,  char *mode, char *hit_id, char *species);
 void hit_Iteration(xmlNode *node, char *mode);
 char *getSpecies(xmlNode *node);
 void blastOutPut_iteration(xmlDoc *fichier, char *mode, FILE *file);
-//char (*createTableau())[3][128];
-char *retrieveParent(char *speciesID, char *lineage);
-char *readTaxo(char species_name[255]);
-// void getInfoSpecies(char *species_name);
-char *makebuffer(FILE *file);

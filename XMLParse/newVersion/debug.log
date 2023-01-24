@@ -1,40 +1,44 @@
-==51717== Memcheck, a memory error detector
-==51717== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==51717== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==51717== Command: ./a.out
-==51717== Parent PID: 20733
-==51717== 
-==51717== Invalid read of size 1
-==51717==    at 0x483EFA6: __strlen_sse2 (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
-==51717==    by 0x48FD382: strdup (strdup.c:41)
-==51717==    by 0x1095BA: readTaxo (test.c:110)
-==51717==    by 0x10974B: main (test.c:150)
-==51717==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
-==51717== 
-==51717== 
-==51717== Process terminating with default action of signal 11 (SIGSEGV)
-==51717==  Access not within mapped region at address 0x0
-==51717==    at 0x483EFA6: __strlen_sse2 (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
-==51717==    by 0x48FD382: strdup (strdup.c:41)
-==51717==    by 0x1095BA: readTaxo (test.c:110)
-==51717==    by 0x10974B: main (test.c:150)
-==51717==  If you believe this happened as a result of a stack
-==51717==  overflow in your program's main thread (unlikely but
-==51717==  possible), you can try to increase the size of the
-==51717==  main thread stack using the --main-stacksize= flag.
-==51717==  The main thread stack size used in this run was 8388608.
-==51717== 
-==51717== HEAP SUMMARY:
-==51717==     in use at exit: 472 bytes in 1 blocks
-==51717==   total heap usage: 1 allocs, 0 frees, 472 bytes allocated
-==51717== 
-==51717== LEAK SUMMARY:
-==51717==    definitely lost: 0 bytes in 0 blocks
-==51717==    indirectly lost: 0 bytes in 0 blocks
-==51717==      possibly lost: 0 bytes in 0 blocks
-==51717==    still reachable: 472 bytes in 1 blocks
-==51717==         suppressed: 0 bytes in 0 blocks
-==51717== Rerun with --leak-check=full to see details of leaked memory
-==51717== 
-==51717== For lists of detected and suppressed errors, rerun with: -s
-==51717== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==11886== Memcheck, a memory error detector
+==11886== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==11886== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==11886== Command: ./parsing -m bronze -o output4.json
+==11886== Parent PID: 11393
+==11886== 
+==11886== Invalid read of size 1
+==11886==    at 0x483EFA6: __strlen_sse2 (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11886==    by 0x4AB7382: strdup (strdup.c:41)
+==11886==    by 0x10ACFA: HSP_Enter (retrieveInfo.c:208)
+==11886==    by 0x10A8A3: hit_Iteration (retrieveInfo.c:97)
+==11886==    by 0x10A79E: blastOutPut_iteration (retrieveInfo.c:66)
+==11886==    by 0x10967A: main (parsing.c:38)
+==11886==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==11886== 
+==11886== 
+==11886== Process terminating with default action of signal 11 (SIGSEGV)
+==11886==  Access not within mapped region at address 0x0
+==11886==    at 0x483EFA6: __strlen_sse2 (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11886==    by 0x4AB7382: strdup (strdup.c:41)
+==11886==    by 0x10ACFA: HSP_Enter (retrieveInfo.c:208)
+==11886==    by 0x10A8A3: hit_Iteration (retrieveInfo.c:97)
+==11886==    by 0x10A79E: blastOutPut_iteration (retrieveInfo.c:66)
+==11886==    by 0x10967A: main (parsing.c:38)
+==11886==  If you believe this happened as a result of a stack
+==11886==  overflow in your program's main thread (unlikely but
+==11886==  possible), you can try to increase the size of the
+==11886==  main thread stack using the --main-stacksize= flag.
+==11886==  The main thread stack size used in this run was 8388608.
+==11886== 
+==11886== HEAP SUMMARY:
+==11886==     in use at exit: 52,770,569 bytes in 419,478 blocks
+==11886==   total heap usage: 424,923 allocs, 5,445 frees, 53,835,962 bytes allocated
+==11886== 
+==11886== LEAK SUMMARY:
+==11886==    definitely lost: 598 bytes in 4 blocks
+==11886==    indirectly lost: 0 bytes in 0 blocks
+==11886==      possibly lost: 0 bytes in 0 blocks
+==11886==    still reachable: 52,769,971 bytes in 419,474 blocks
+==11886==         suppressed: 0 bytes in 0 blocks
+==11886== Rerun with --leak-check=full to see details of leaked memory
+==11886== 
+==11886== For lists of detected and suppressed errors, rerun with: -s
+==11886== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
