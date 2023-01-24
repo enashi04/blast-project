@@ -4,6 +4,7 @@
 char name_hit[128];
 char name_species[30];
 char taxoID[128], parentspecies[128], ranks[128], espece[128], lineage[1024];
+int query_length, t_from =0, t_to=0;
 
 void query_Def(xmlNode *node)
 {
@@ -313,13 +314,13 @@ void getHSP(xmlNode *node, const char *name, char *label)
         /******************************Ajout de la query cover **************************************/
        
         /********************************récupération du tfrom****************************/
-        if (strcmp(name, (const char *)"Hsp_hit_from") == 0)
+        if (strcmp(name, (const char *)"Hsp_hit-from") == 0)
         {
             t_from = atoi((const char* )xmlNodeGetContent(node));
             fprintf(output, "\t\t\t\"%s\" : \"%s\",\n", label, xmlNodeGetContent(node));
         }
         /********************************récupération du to****************************/
-       else if (strcmp(name, (const char *)"Hsp_hit_to") == 0)
+       else if (strcmp(name, (const char *)"Hsp_hit-to") == 0)
         {
             t_to = atoi((const char* )xmlNodeGetContent(node));
             fprintf(output, "\t\t\t\"%s\" : \"%s\",\n", label, xmlNodeGetContent(node));

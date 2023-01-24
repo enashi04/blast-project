@@ -5,10 +5,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 
- FILE *output;
-int query_length, t_from, t_to;
- HashTable *table;
 
+ //HashTable *table;
+
+FILE *output;
 
 void hit_enter(xmlNode *node);
 void query_Def(xmlNode *node);
