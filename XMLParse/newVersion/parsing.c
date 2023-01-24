@@ -29,13 +29,8 @@ int main(int argc, char **argv){
         return 1;
     }
 
-    FILE *taxo = fopen("taxonomy.reduced","r");
-    if (!taxo)
-    {
-        printf("Unable to open file");
-        exit(1);
-    }
-    blastOutPut_iteration(f, mode, taxo);
+
+    blastOutPut_iteration(f, mode);
 
     fprintf(output, "\t]\n}");
 

@@ -31,18 +31,28 @@ char *retrieveParent(char *speciesID, char *lineage)
 {
     char *line = strtok(strdup(buffer), "\n");
     char taxID[128], name[128], rank[128], parentID[128];
-    char *lignee = (char *)malloc(2058);
+    char lignee[2058];
+
+    //printf("le parent est %s\n", speciesID);
     // on revient au début du fichier
     while (line != NULL)
     {
         sscanf(line, "%[^	]	%[^	]	%[^	]	%[^\n]", taxID, name, rank, parentID);
         if (strcmp(speciesID, taxID) == 0)
         {
-            strcat(lignee, name);
+              //  printf("le name est %s\n", speciesID);
+
+            strcpy(lignee, name);
             strcat(lignee, "/");
             strcat(lignee, lineage);
             strcpy(lineage, lignee);
-            retrieveParent(parentID, lineage);
+            if(strcmp(rank, "superkingdom")==0 || strcmp(rank, "phylum")==0){
+                return lineage;
+            }
+            else{
+                retrieveParent(parentID, lineage);
+
+            }
         }
         line = strtok(NULL, "\n");
     }
@@ -65,6 +75,7 @@ char *getParentName(char *speciesID){
         }
         line = strtok(NULL, "\n");
     }
+
     return parentName;
 };
 
@@ -73,23 +84,25 @@ char *readTaxo(char *species_name)
     char *line = strtok(strdup(buffer), "\n");
 
     char taxID[128], name[128], rank[128], parentID[128];
-    char *lineage = (char *)malloc(1024);
-    char *finalResult = (char *)malloc(1024);
+    char lineage[1024];
+    char *finalResult = (char *)malloc(1024*sizeof(char));
 
     while (line != NULL)
     {
         sscanf(line, "%[^	]	%[^	]	%[^	]	%[^\n]", taxID, name, rank, parentID);
         if (strcmp(name, species_name) == 0)
         {
-            if (strcmp(rank, "superkingdom") == 0)
+            if (strcmp(rank, "superkingdom") == 0 || strcmp(rank, "phylum")==0)
             {
                 finalResult = name;
                 break;
             }
             else
             {
-                strcpy(lineage, name);
+                //strcpy(lineage, name);
+                //strcat(lineage, "/");
                 finalResult = retrieveParent(parentID, lineage);
+                break;
             }
         }
         line = strtok(NULL, "\n");

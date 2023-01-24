@@ -85,7 +85,7 @@ int main(int argc, char **argv)
 {
     makebuffer();
     printf("La lignee est %s\n", readTaxo("Mycobacterium tuberculosis"));
-    printf("La lignee est %s\n", readTaxo("Azorhizobium caulinodans"));
+    printf("La lignee est %s\n", readTaxo("Mycobacterium tuberculosis complex"));
     fclose(file);
 }
 

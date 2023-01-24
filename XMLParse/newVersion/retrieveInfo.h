@@ -8,7 +8,7 @@
 
  //HashTable *table;
 
-FILE *output;
+extern FILE *output;
 
 void hit_enter(xmlNode *node);
 void query_Def(xmlNode *node);
@@ -18,4 +18,4 @@ void getHSP(xmlNode *node, const char *name, char *label);
 void HSP_Enter(xmlNode *node,  char *mode, char *hit_id, char *species);
 void hit_Iteration(xmlNode *node, char *mode);
 char *getSpecies(xmlNode *node);
-void blastOutPut_iteration(xmlDoc *fichier, char *mode, FILE *file);
+void blastOutPut_iteration(xmlDoc *fichier, char *mode);

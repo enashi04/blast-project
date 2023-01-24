@@ -6,6 +6,8 @@
         "retrieveinfo.h": "c",
         "string.h": "c",
         "type_traits": "c",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "hashmap.h": "c",
+        "memory": "c"
     }
 }
