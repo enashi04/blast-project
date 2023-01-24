@@ -2,8 +2,8 @@
 #include "lineage.h"
 
 char name_hit[128];
-char name_species[30];
-char taxoID[128], parentspecies[128], ranks[128], espece[128], lineage[1024];
+char name_species[32];
+char taxoID[128], parentspecies[128], ranks[128], espece[128], lineage[4096];//mettre 4096 à lineage
 int query_length, t_from =0, t_to=0;
 
 void query_Def(xmlNode *node)
@@ -160,8 +160,6 @@ char *getSpecies(xmlNode *node)
 
 void HSP_Enter(xmlNode *node, char *mode, char *hit_id, char *species) // ajout du file taxo
 {
-
-
     xmlNode *child;
     const char *name, *name2;
     /********************************CHILD = SOUS-NOEUD DU NODE ****************************************/
@@ -203,7 +201,7 @@ void HSP_Enter(xmlNode *node, char *mode, char *hit_id, char *species) // ajout 
                         // rang 2
                         fprintf(output, "\t\t\t\t\t\"rank\": \"%s\",\n", ranks);
                         // fermeture
-                       fprintf(output, "\t\t\t\t\t\"lineage\": \"%s\"\n", lineage); // ajout du file
+                        fprintf(output, "\t\t\t\t\t\"lineage\": \"%s\"\n", lineage); // ajout du file
                         fprintf(output, "\t\t\t\t}\n\t\t\t],\n");
                     }
                     else if (strcmp(species, espece) != 0)
@@ -227,7 +225,6 @@ void HSP_Enter(xmlNode *node, char *mode, char *hit_id, char *species) // ajout 
                                 char * myParent = getParentName(parent);
                                 fprintf(output, "\t\t\t\t\t\"parent\": \"%s\",\n", myParent);
                                 strcpy(parentspecies, myParent);
-                                //free(myParent);
                                 // rang 2
                                 fprintf(output, "\t\t\t\t\t\"rank\": \"%s\",\n", rank);
                                 strcpy(ranks, rank);
@@ -235,7 +232,7 @@ void HSP_Enter(xmlNode *node, char *mode, char *hit_id, char *species) // ajout 
                                 char * myTaxo = readTaxo(espece);
                                 fprintf(output, "\t\t\t\t\t\"lineage\": \"%s\"\n", myTaxo);
                                 strcpy(lineage, myTaxo);
-                                //free(myTaxo);
+                                free(myTaxo);
                                 // fermeture
                                 fprintf(output, "\t\t\t\t}\n\t\t\t],\n");
                                 break; 

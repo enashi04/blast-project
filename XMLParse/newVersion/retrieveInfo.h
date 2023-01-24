@@ -1,6 +1,6 @@
 #include "lib/libxml/parser.h"
 #include "lib/libxml/tree.h"
-#include "hashMap.h"
+// #include "hashMap.h"
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -8,7 +8,7 @@
 
  //HashTable *table;
 
-extern FILE *output;
+ extern FILE *output;
 
 void hit_enter(xmlNode *node);
 void query_Def(xmlNode *node);

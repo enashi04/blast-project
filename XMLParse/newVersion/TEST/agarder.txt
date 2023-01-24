@@ -1,0 +1,28 @@
+
+else if (strcmp(species, espece) != 0)
+{
+    int presence_species = 0;
+    for (int i = 0; i < NUMROWS; i++)
+    {
+        if (strcmp(tableau[i][0], species) == 0)
+        {
+            // name
+            presence_species = 1;
+            fprintf(output, "\t\t\t\t\t\"name\":\"%s\",\n", species);
+            strcpy(espece, species);
+            // taxid 1
+            fprintf(output, "\t\t\t\t\t\"taxid\": \"%s\",\n", tableau[i][1]);
+            strcpy(taxoID, tableau[i][1]);
+            // parent 3
+            fprintf(output, "\t\t\t\t\t\"parent\": \"%s\",\n", tableau[i][3]);
+            strcpy(parentspecies, tableau[i][3]);
+            // rang 2
+            fprintf(output, "\t\t\t\t\t\"rank\": \"%s\"\n", tableau[i][2]);
+            strcpy(ranks, tableau[i][2]);
+            // fermeture
+            fprintf(output, "\t\t\t\t}\n\t\t\t],\n");
+            break;
+        }
+    }
+   
+}

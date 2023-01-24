@@ -31,7 +31,7 @@ char *retrieveParent(char *speciesID, char *lineage)
 {
     char *line = strtok(strdup(buffer), "\n");
     char taxID[128], name[128], rank[128], parentID[128];
-    char lignee[2058];
+    char lignee[4096];
 
     //printf("le parent est %s\n", speciesID);
     // on revient au début du fichier
@@ -84,8 +84,8 @@ char *readTaxo(char *species_name)
     char *line = strtok(strdup(buffer), "\n");
 
     char taxID[128], name[128], rank[128], parentID[128];
-    char lineage[1024];
-    char *finalResult = (char *)malloc(1024*sizeof(char));
+    char lineage[4096]; //pb de taille avec 4096 ca marche
+    char *finalResult = (char *)malloc(4096*sizeof(char)); //pb de taille
 
     while (line != NULL)
     {
@@ -99,9 +99,11 @@ char *readTaxo(char *species_name)
             }
             else
             {
-                //strcpy(lineage, name);
-                //strcat(lineage, "/");
-                finalResult = retrieveParent(parentID, lineage);
+               // strcpy(lineage, "/");
+                strcpy(lineage, name);
+                
+                char *tmpResult = retrieveParent(parentID, lineage);
+                strcpy(finalResult, tmpResult);
                 break;
             }
         }
