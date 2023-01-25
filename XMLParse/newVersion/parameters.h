@@ -5,4 +5,15 @@
 #define MAX_SIZE 4096
 #define FICHIER "taxonomy.reduced"
 
+//définir une structure
+typedef struct SpeciesInfo {
+    char *name;
+    char *rank;
+    char *id;
+    char *parent;
+    char *lineage;
+    struct SpeciesInfo *next;
+    struct SpeciesInfo *previous;
+}SpeciesInfo;
+
 #endif

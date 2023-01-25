@@ -9,6 +9,12 @@
         "stdio.h": "c",
         "hashmap.h": "c",
         "memory": "c",
-        "lineage.h": "c"
-    }
+        "lineage.h": "c",
+        "parser.h": "c",
+        "encoding.h": "c",
+        "options.h": "c",
+        "stdlib.h": "c",
+        "parameters.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "enabled"
 }
