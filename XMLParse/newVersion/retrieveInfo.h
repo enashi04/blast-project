@@ -7,16 +7,18 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-  FILE *output;
+extern  FILE *output;
 
 void hit_enter(xmlNode *node);
-void query_Def(xmlNode *node);
-void query_Length(xmlNode *node);
-char *hit_ID(xmlNode *node,char *mode);
+void getQueryDef(xmlNode *node);
+void getQueryLength(xmlNode *node);
+
+char *getHitAccession(xmlNode *node,char *mode);
 void getHSP(xmlNode *node, const char *name, char *label);
-void HSP_Enter(xmlNode *node,  char *mode, char *hit_id, char *species);
-void hit_Iteration(xmlNode *node, char *mode);
+void node_HSP(xmlNode *node,  char *mode, char *hit_id, char *species, char *buffer);
+void node_Iteration(xmlNode *node, char *mode, char *buffer);
 char *getSpecies(xmlNode *node);
-void blastOutPut_iteration(xmlDoc *fichier, char *mode);
+
+void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer);
 
 #endif

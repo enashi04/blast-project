@@ -33,7 +33,7 @@ int main(int argc, char **argv){
 
     char *buffer = makebuffer(FICHIER);
 
-    blastOutPut_iteration(f, mode);
+    blastOutPut_iteration(f, mode, buffer);
 
     fprintf(output, "\t]\n}");
 

@@ -17,4 +17,5 @@ void invalidOptions(int argc, char **argv);
 char *inputRecovery(int argc, char **argv, char *inputName);
 char *newname(char *name);
 void noArgument(int argc);
+
 #endif

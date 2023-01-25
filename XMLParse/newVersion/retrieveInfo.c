@@ -6,22 +6,22 @@ char name_species[32];
 char taxoID[128], parentspecies[128], ranks[128], espece[128], lineage[4096];//mettre 4096 à lineage
 int query_length, t_from =0, t_to=0;
 
-void query_Def(xmlNode *node)
+/// @brief get the Definition of query
+/// @param node 
+void getQueryDef(xmlNode *node)
 {
     const char *name = "BlastOutput_query-def";
-
     if (strcmp(name, (const char *)node->name) == 0)
     {
-        // affichage
         fprintf(output, "{\n\t\"query-name\" : \"%s\",\n", xmlNodeGetContent(node));
     }
 }
 
-
-void query_Length(xmlNode *node)
+/// @brief get the Length of the query
+/// @param node 
+void getQueryLength(xmlNode *node)
 {
     const char *name = "BlastOutput_query-len";
-
     if (strcmp(name, (const char *)node->name) == 0)
     {
         fprintf(output, "\t\"query-length\" : \"%s\",\n\t\"hits\" :\n\t[\n", xmlNodeGetContent(node));
@@ -29,81 +29,88 @@ void query_Length(xmlNode *node)
     }
 }
 
-
-void blastOutPut_iteration(xmlDoc *fichier, char *mode) // ajout du file taxo
+/// @brief Browse the XML FILE
+/// @param fichier 
+/// @param mode 
+/// @param buffer
+void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer) 
 {
-    makebuffer();
+    //Declare the three node allowing us to browse the XML FILE
     xmlNode *node, *child, *root;
-    /**********************************RECUP° DU PREMIER NOEUD******************************************/
+    /**********************************GET THE FIRST NODE******************************************/
     root = xmlDocGetRootElement(fichier);
-    /********************************CHILD = SOUS-NOEUD DU ROOT ****************************************/
+    /********************************CHILD = SUBNOD OF THE ROOT ****************************************/
     child = root->children;
-
+    /*******************************WE LOOK FOR EACH NODE TO GET ***************************************/
+    /******************************THE LENGTH AND THE DEF OF THE QUERY**********************************/
     for (node = child; node; node = node->next)
     {
-        query_Def(node);
-        query_Length(node);
+        getQueryDef(node);
+        getQueryLength(node);
     }
-    const char *nodeName, *iteration;
-    nodeName = "BlastOutput_iterations";
-    /**********************************PARCOURS DES SOUS-NOEUD******************************************/
+    //We initialize it to BlastOutput_iteration
+    const char *BLASTOUTPUT_NODE_NAME = "BlastOutput_iterations";
+    /**********************************PATH OF SUBNODES******************************************/
     for (node = child; node; node = node->next)
     {
-        /***************************SI ON EST DANS BlastOutput_iterations************************************/
-        if (strcmp(nodeName, (const char *)node->name) == 0)
+        /***************************CHECK IF WE'RE IN BLASTOUTPUT-ITERATIONS************************************/
+        if (strcmp(BLASTOUTPUT_NODE_NAME, (const char *)node->name) == 0)
         {
-            xmlNode *childnode;
-            /********************************SOUS-NOEUD DE BLASTOUPUT....***************************************/
-            childnode = node->children;
+            xmlNode *childnode= node->children;
+    /********************************BLASTOUTPUT SUBNODES***************************************/
             for (child = childnode; child; child = child->next)
             {
-                /********************************ON ENTRE DANS ITERATION POUR***************************************/
-                iteration = "Iteration";
-                if (strcmp(iteration, (const char *)child->name) == 0)
+    /********************************we initialize ITERATION :***********************************/
+    /********************it's the beginning of blast analysis***************************************/
+                const char *ITERATION = "Iteration";
+                if (strcmp(ITERATION, (const char *)child->name) == 0)
                 {
-                    /********************************PARCOURS SOUS-NOEUD ITERATION**************************************/
-                    hit_Iteration(child, mode);
+    /********************************ITERATION SUBNODES**************************************/
+                    node_Iteration(child, mode, buffer);
                 }
             }
         }
     }
-    free(buffer); //libération de la mémoire
-
+    free(buffer); 
 }
 
 
-void hit_Iteration(xmlNode *node, char *mode)
+/// @brief 
+/// @param node 
+/// @param mode 
+/// @param buffer 
+void node_Iteration(xmlNode *node, char *mode, char *buffer)
 {
     xmlNode *child;
-    const char *iteration, *hit;
+    const char *iteration= "Iteration_hits", *hit= "Hit";
     /********************************CHILD = SOUS-NOEUD DU NODE ****************************************/
     child = node->children;
-    iteration = "Iteration_hits";
-    hit = "Hit";
-    int i = 0;
     /***********************************PARCOURS DES SOUS-NOEUD*****************************************/
     for (node = child; node; node = node->next)
     {
+        //check if we're on the node "iteration_hits"
         if (strcmp(iteration, (const char *)node->name) == 0)
-        {
-            xmlNode *childNode;
-            /********************************CHILDNODE = SOUS-NOEUD DE CHILD************************************/
-            childNode = node->children;
+        { 
+            /********************************CHILDNODE = SUBNODES OF CHILD************************************/
+            xmlNode *childNode = node->children;
             for (child = childNode; child; child = child->next)
             {
+                //check if we're on the node "iteration_hits"
                 if (strcmp(hit, (const char *)child->name) == 0)
                 {
-                    i++;
                     /*************************************ENTRER DANS L'HSP*********************************************/
-                    HSP_Enter(child, mode, hit_ID(child, mode), getSpecies(child)); // ajouter un autre paramètres!
+                    node_HSP(child, mode, getHitAccession(child, mode), getSpecies(child), buffer); // ajouter un autre paramètres!
                 }
             }
         }
     }
 }
 
-
-char *hit_ID(xmlNode *node, char *mode)
+/// @brief get the hit accession
+/// @param node 
+/// @param mode 
+/// @return hit_id, the hit_accession of the target
+char *getHitAccession(xmlNode *node, char *mode)
 {
     char *hit_id = NULL;
     xmlNode *child;
@@ -119,12 +126,14 @@ char *hit_ID(xmlNode *node, char *mode)
     return hit_id;
 }
 
+/// @brief get the name of the species in the definition of the target (ici ca sera encore à modifier)
+/// @param node 
+/// @return 
 char *getSpecies(xmlNode *node)
 {
     char *content;
-    xmlNode *child;
     const char *name = "Hit_def";
-    child = node->children;
+    xmlNode *child = node->children;
     for (node = child; node; node = node->next)
     {
         if (strcmp(name, (const char *)node->name) == 0)
@@ -156,7 +165,7 @@ char *getSpecies(xmlNode *node)
 }
 
 
-void HSP_Enter(xmlNode *node, char *mode, char *hit_id, char *species) // ajout du file taxo
+void node_HSP(xmlNode *node, char *mode, char *hit_id, char *species, char *buffer) // ajout du file taxo
 {
     xmlNode *child;
     const char *name, *name2;
@@ -220,14 +229,14 @@ void HSP_Enter(xmlNode *node, char *mode, char *hit_id, char *species) // ajout 
                                 fprintf(output, "\t\t\t\t\t\"taxid\": \"%s\",\n", id);
                                 strcpy(taxoID, id);
                                 // parent 3
-                                char * myParent = getParentName(parent);
+                                char * myParent = getParentName(buffer,parent);
                                 fprintf(output, "\t\t\t\t\t\"parent\": \"%s\",\n", myParent);
                                 strcpy(parentspecies, myParent);
                                 // rang 2
                                 fprintf(output, "\t\t\t\t\t\"rank\": \"%s\",\n", rank);
                                 strcpy(ranks, rank);
                                 //lineage
-                                char * myTaxo = readTaxo(espece);
+                                char * myTaxo = readTaxoFile(buffer,espece);
                                 fprintf(output, "\t\t\t\t\t\"lineage\": \"%s\"\n", myTaxo);
                                 strcpy(lineage, myTaxo);
                                 free(myTaxo);
