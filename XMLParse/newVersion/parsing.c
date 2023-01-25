@@ -1,5 +1,7 @@
 #include "options.h"
 #include "retrieveInfo.h"
+#include "lineage.h"
+#include "parameters.h"
 
 
 int main(int argc, char **argv){
@@ -29,6 +31,7 @@ int main(int argc, char **argv){
         return 1;
     }
 
+    char *buffer = makebuffer(FICHIER);
 
     blastOutPut_iteration(f, mode);
 

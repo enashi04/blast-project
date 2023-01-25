@@ -8,8 +8,7 @@ int query_length, t_from =0, t_to=0;
 
 void query_Def(xmlNode *node)
 {
-    const char *name;
-    name = "BlastOutput_query-def";
+    const char *name = "BlastOutput_query-def";
 
     if (strcmp(name, (const char *)node->name) == 0)
     {
@@ -21,8 +20,7 @@ void query_Def(xmlNode *node)
 
 void query_Length(xmlNode *node)
 {
-    const char *name;
-    name = "BlastOutput_query-len";
+    const char *name = "BlastOutput_query-len";
 
     if (strcmp(name, (const char *)node->name) == 0)
     {
