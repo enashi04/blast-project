@@ -5,7 +5,7 @@ EXEC=parsing
 
 # Les fichiers .o a générer si nécessaire
 
-DEP= options.o lineage.o retrieveInfo.o 
+DEP= options.o blastInfo.o lineage.o retrieveInfo.o 
 
 
 all: $(EXEC)

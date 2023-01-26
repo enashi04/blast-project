@@ -14,7 +14,8 @@
         "encoding.h": "c",
         "options.h": "c",
         "stdlib.h": "c",
-        "parameters.h": "c"
+        "parameters.h": "c",
+        "blastinfo.h": "c"
     },
     "C_Cpp.errorSquiggles": "enabled"
 }

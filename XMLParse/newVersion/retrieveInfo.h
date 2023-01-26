@@ -8,11 +8,13 @@
 #include <stdio.h>
 #include "parameters.h"
 
-extern  FILE *output;
+FILE *output;
 
 void hit_enter(xmlNode *node);
-void getQueryDef(xmlNode *node);
-void getQueryLength(xmlNode *node);
+// void getBlastVersion(xmlNode *node);
+// void getBlastDB(xmlNode *node);
+// void getQueryDef(xmlNode *node, char *speciesName);
+// void getQueryLength(xmlNode *node,char *speciesName);
 
 char *getHitAccession(xmlNode *node,char *mode);
 void getHSP(xmlNode *node, const char *name, char *label);
