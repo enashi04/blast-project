@@ -37,28 +37,28 @@ void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer)
     }
     displayQuerySpecies(speciesName, buffer);
     // We initialize it to BlastOutput_iteration
-    // const char *BLASTOUTPUT_NODE_NAME = "BlastOutput_iterations";
-    // /**********************************PATH OF SUBNODES******************************************/
-    // for (node = child; node; node = node->next)
-    // {
-    //     /***************************CHECK IF WE'RE IN BLASTOUTPUT-ITERATIONS************************************/
-    //     if (strcmp(BLASTOUTPUT_NODE_NAME, (const char *)node->name) == 0)
-    //     {
-    //         xmlNode *childnode = node->children;
-    //         /********************************BLASTOUTPUT SUBNODES***************************************/
-    //         for (child = childnode; child; child = child->next)
-    //         {
-    //             /********************************we initialize ITERATION :***********************************/
-    //             /********************it's the beginning of blast analysis***************************************/
-    //             const char *ITERATION = "Iteration";
-    //             if (strcmp(ITERATION, (const char *)child->name) == 0)
-    //             {
-    //                 /********************************ITERATION SUBNODES**************************************/
-    //                 node_Iteration(child, mode, buffer);
-    //             }
-    //         }
-    //     }
-    // }
+    const char *BLASTOUTPUT_NODE_NAME = "BlastOutput_iterations";
+     /**********************************PATH OF SUBNODES******************************************/
+    for (node = child; node; node = node->next)
+    {
+        /***************************CHECK IF WE'RE IN BLASTOUTPUT-ITERATIONS************************************/
+        if (strcmp(BLASTOUTPUT_NODE_NAME, (const char *)node->name) == 0)
+        {
+            xmlNode *childnode = node->children;
+            /********************************BLASTOUTPUT SUBNODES***************************************/
+            for (child = childnode; child; child = child->next)
+            {
+                /********************************we initialize ITERATION :***********************************/
+                /********************it's the beginning of blast analysis***************************************/
+                const char *ITERATION = "Iteration";
+                if (strcmp(ITERATION, (const char *)child->name) == 0)
+                {
+                    /********************************ITERATION SUBNODES**************************************/
+                    node_Iteration(child, mode, buffer);
+                }
+            }
+        }
+    }
     free(buffer);
 }
 
