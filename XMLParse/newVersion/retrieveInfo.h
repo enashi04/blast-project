@@ -6,6 +6,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include "parameters.h"
 
 extern  FILE *output;
 
@@ -15,7 +16,7 @@ void getQueryLength(xmlNode *node);
 
 char *getHitAccession(xmlNode *node,char *mode);
 void getHSP(xmlNode *node, const char *name, char *label);
-void node_HSP(xmlNode *node,  char *mode, char *hit_id, char *species, char *buffer);
+void node_HSP(xmlNode *node,  char *mode, char *hit_id, char *species, char *buffer,SpeciesInfo *species_info);
 void node_Iteration(xmlNode *node, char *mode, char *buffer);
 char *getSpecies(xmlNode *node);
 

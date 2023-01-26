@@ -2078,22 +2078,5 @@
 			"query-cover" : "99",
 			"align_len" : "509"
 		}
-		,{
-			"hit_accession" : "WP_230865514",
-			"species": [
-				{
-					"name":"Mycobacterium canettii",
-					"taxid": "78331",
-					"parent": "Mycobacterium tuberculosis complex",
-					"rank": "species",
-					"lineage": "Actinobacteria/Actinomycetia/Corynebacteriales/Mycobacteriaceae/Mycobacterium/Mycobacterium tuberculosis complex/Mycobacterium canettii"
-				}
-			],
-			"number of hit" : "1",
-			"bitscore" : "789.645",
-			"score" : "2038",
-			"evalue" : "0",
-			"query_from" : "1",
-			"query_to" : "509",
-			"target_from" : "1",
-			"ta
+	]
+}
