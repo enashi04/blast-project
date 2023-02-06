@@ -15,7 +15,8 @@
         "options.h": "c",
         "stdlib.h": "c",
         "parameters.h": "c",
-        "blastinfo.h": "c"
+        "blastinfo.h": "c",
+        "taxo.C": "cpp"
     },
     "C_Cpp.errorSquiggles": "enabled"
 }

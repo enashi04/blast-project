@@ -7,7 +7,7 @@
 char name_hit[MIN_SIZE];
 char name_species[32];
 char taxoID[MIN_SIZE], parentspecies[MIN_SIZE], ranks[MIN_SIZE], espece[MIN_SIZE], lineage[MAX_SIZE]; // mettre 4096 à lineage
-int query_length, t_from = 0, t_to = 0;
+int query_length=0, t_from = 0, t_to = 0;
 
 
 
@@ -26,17 +26,20 @@ void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer)
     /*******************************WE LOOK FOR EACH NODE TO GET ***************************************/
     /******************************THE LENGTH AND THE DEF OF THE QUERY**********************************/
     char *speciesName=(char *)malloc(sizeof(char)*MIN_SIZE);
-    int query_length;
+    int query_length=0;
     for (node = child; node; node = node->next)
     {
+        //printf("Les noeuds sont %s\n", node->name);
         getBlastVersion(node);
         getBlastDB(node);
         getQueryDef(node);
         speciesName=retrieveDef(node);
-        getQueryLength(node, speciesName, query_length);
+        //printf("speciesName is %s \n", speciesName);
+        getQueryLength(node, query_length);
     }
+    //printf("l'espece est %s\n",getQuerySpeciesName(speciesName));
     displayQuerySpecies(speciesName, buffer);
-    // We initialize it to BlastOutput_iteration
+    fprintf(output, "\t\t\"hits\": [\n\t\t {\n");  // We initialize it to BlastOutput_iteration
     const char *BLASTOUTPUT_NODE_NAME = "BlastOutput_iterations";
      /**********************************PATH OF SUBNODES******************************************/
     for (node = child; node; node = node->next)
@@ -185,7 +188,7 @@ void node_HSP(xmlNode *node, char *mode, char *hit_id, char *species, char *buff
                     fprintf(output, "\t\t\t\"species\": [\n\t\t\t\t{\n");
                     // vérifie d'abord que la donnée est déjà stocké (pour ne pas reparcourir )
                     // parcourir la structure avec un while /if
-                    int find = 0;
+                    // int find = 0;
                     // SpeciesInfo *current = species_info;
                     // while (current != NULL)
                     // {
