@@ -166,6 +166,7 @@ void node_HSP(xmlNode *node, char *mode, char *hit_id, char *species, char *buff
     child = node->children;
     for (node = child; node; node = node->next)
     {
+        printf("les enfants sont :%s\n", node->name);
         if (strcmp(HIT_HSP_NAME, (const char *)node->name) == 0)
         {
             /*****************************CHILDNODE = SOUS-NOEUD DE NODE***************************************/
@@ -173,6 +174,7 @@ void node_HSP(xmlNode *node, char *mode, char *hit_id, char *species, char *buff
             childNode = node->children;
             for (child = childNode; child; child = child->next)
             {
+                printf("child->name is :%s\n", child->name);
                 if (strcmp(HSP_NAME, (const char *)child->name) == 0)
                 {
                     if (strcmp(name_hit, "") == 0)
@@ -188,73 +190,73 @@ void node_HSP(xmlNode *node, char *mode, char *hit_id, char *species, char *buff
                     fprintf(output, "\t\t\t\"species\": [\n\t\t\t\t{\n");
                     // vérifie d'abord que la donnée est déjà stocké (pour ne pas reparcourir )
                     // parcourir la structure avec un while /if
-                    // int find = 0;
-                    // SpeciesInfo *current = species_info;
-                    // while (current != NULL)
-                    // {
-                    //     if (strcmp(species, current->name) == 0)
-                    //     {
-                    //         fprintf(output, "\t\t\t\t\t\"name\":\"%s\",\n", current->name);
-                    //         // taxid 1
-                    //         fprintf(output, "\t\t\t\t\t\"taxid\": \"%s\",\n", current->id);
-                    //         // parent 3
-                    //         fprintf(output, "\t\t\t\t\t\"parent\": \"%s\",\n", current->parent);
-                    //         // rang 2
-                    //         fprintf(output, "\t\t\t\t\t\"rank\": \"%s\",\n", current->rank);
-                    //         // fermeture
-                    //         fprintf(output, "\t\t\t\t\t\"lineage\": \"%s\"\n", current->lineage); // ajout du file
-                    //         fprintf(output, "\t\t\t\t}\n\t\t\t],\n");
-                    //         // fprintf(output, "%s", current->displayInfo);
-                    //         find = 1;
-                    //         break;
-                    //     }
-                    //     current = current->next;
-                    // }
-                    // if (find == 0)
-                    // {
-                    //     char *line = strtok(strdup(buffer), "\n");
-                    //     char id[255], name[255], rank[255], parent[255];
-                    //     int presence = 0;
+                    int find = 0;
+                    SpeciesInfo *current = species_info;
+                    while (current != NULL)
+                    {
+                        if (strcmp(species, current->name) == 0)
+                        {
+                            fprintf(output, "\t\t\t\t\t\"name\":\"%s\",\n", current->name);
+                            // taxid 1
+                            fprintf(output, "\t\t\t\t\t\"taxid\": \"%s\",\n", current->id);
+                            // parent 3
+                            fprintf(output, "\t\t\t\t\t\"parent\": \"%s\",\n", current->parent);
+                            // rang 2
+                            fprintf(output, "\t\t\t\t\t\"rank\": \"%s\",\n", current->rank);
+                            // fermeture
+                            fprintf(output, "\t\t\t\t\t\"lineage\": \"%s\"\n", current->lineage); // ajout du file
+                            fprintf(output, "\t\t\t\t}\n\t\t\t],\n");
+                            // fprintf(output, "%s", current->displayInfo);
+                            find = 1;
+                            break;
+                        }
+                        current = current->next;
+                    }
+                    if (find == 0)
+                    {
+                        char *line = strtok(strdup(buffer), "\n");
+                        char id[255], name[255], rank[255], parent[255];
+                        int presence = 0;
 
-                    //     SpeciesInfo *fillInfo = (SpeciesInfo *)malloc(sizeof(SpeciesInfo));
+                        SpeciesInfo *fillInfo = (SpeciesInfo *)malloc(sizeof(SpeciesInfo));
 
-                    //     while (line != NULL)
-                    //     {
-                    //         sscanf(line, "%[^	]	%[^	]	%[^	]	%[^\n]", id, name, rank, parent);
-                    //         if (strcmp(name, species) == 0)
-                    //         {
-                    //             presence = 1;
-                    //             fillInfo->previous = species_info;
-                    //             fillInfo->next = NULL;
+                        while (line != NULL)
+                        {//ici pb
+                            sscanf(line, "%[^	]	%[^	]	%[^	]	%[^\n]", id, name, rank, parent);
+                            if (strcmp(name, species) == 0)
+                            {
+                                presence = 1;
+                                fillInfo->previous = species_info;
+                                fillInfo->next = NULL;
 
-                    //             strcpy(fillInfo->name, name);
-                    //             strcpy(fillInfo->id, id);
-                    //             strcpy(fillInfo->rank, rank);
-                    //             strcpy(fillInfo->parent, getParentName(buffer, parent));
-                    //             char *myTaxo = readTaxoFile(buffer, fillInfo->name);
-                    //             strcpy(fillInfo->lineage, myTaxo);
-                    //             free(myTaxo);
-                    //             fprintf(output, "\t\t\t\t\t\"name\":\"%s\",\n", fillInfo->name);
-                    //             // taxid 1
-                    //             fprintf(output, "\t\t\t\t\t\"taxid\": \"%s\",\n", fillInfo->id);
-                    //             // parent 3
-                    //             fprintf(output, "\t\t\t\t\t\"parent\": \"%s\",\n", fillInfo->parent);
-                    //             // rang 2
-                    //             fprintf(output, "\t\t\t\t\t\"rank\": \"%s\",\n", fillInfo->rank);
-                    //             // fermeture
-                    //             fprintf(output, "\t\t\t\t\t\"lineage\": \"%s\"\n", fillInfo->lineage); // ajout du file
-                    //             fprintf(output, "\t\t\t\t}\n\t\t\t],\n");
-                    //             species_info = fillInfo;
-                    //             break;
-                    //         }
-                    //         line = strtok(NULL, "\n");
-                    //     }
-                    //     if (presence == 0)
-                    //     {
-                    //         fprintf(output, "\t\t\t\t\t\"name\":\"%s\"\n", species);
-                    //         fprintf(output, "\t\t\t\t}\n\t\t\t],\n");
-                    //     }
-                    // }
+                                strcpy(fillInfo->name, name);
+                                strcpy(fillInfo->id, id);
+                                strcpy(fillInfo->rank, rank);
+                                strcpy(fillInfo->parent, getParentName(buffer, parent));
+                                char *myTaxo = readTaxoFile(buffer, fillInfo->name);
+                                strcpy(fillInfo->lineage, myTaxo);
+                                free(myTaxo);
+                                fprintf(output, "\t\t\t\t\t\"name\":\"%s\",\n", fillInfo->name);
+                                // taxid 1
+                                fprintf(output, "\t\t\t\t\t\"taxid\": \"%s\",\n", fillInfo->id);
+                                // parent 3
+                                fprintf(output, "\t\t\t\t\t\"parent\": \"%s\",\n", fillInfo->parent);
+                                // rang 2
+                                fprintf(output, "\t\t\t\t\t\"rank\": \"%s\",\n", fillInfo->rank);
+                                // fermeture
+                                fprintf(output, "\t\t\t\t\t\"lineage\": \"%s\"\n", fillInfo->lineage); // ajout du file
+                                fprintf(output, "\t\t\t\t}\n\t\t\t],\n");
+                                species_info = fillInfo;
+                                break;
+                            }
+                            line = strtok(NULL, "\n");
+                        }
+                        if (presence == 0)
+                        {
+                            fprintf(output, "\t\t\t\t\t\"name\":\"%s\"\n", species);
+                            fprintf(output, "\t\t\t\t}\n\t\t\t],\n");
+                        }
+                    }
 
                     /*****************************LASTCHILD = SOUS-NOEUD DE CHILD***************************************/
                     xmlNode *lastchild;
