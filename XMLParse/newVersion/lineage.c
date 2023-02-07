@@ -43,25 +43,59 @@ char *makebuffer(char *filename)
 char *getLineage(char *buffer, char *speciesID, char *lineage)
 {
     char *line = strtok(strdup(buffer), "\n");
-    //Declaration of the variables for taxid, name, rank and parents of the species
-    char id_species[MIN_SIZE], name_species[MIN_SIZE], rank_species[MIN_SIZE], id_parent_species[MIN_SIZE];
-    //Declare this variable to fill and copy paste lineage
+    char id_species[MIN_SIZE], name_species[MIN_SIZE], id_parent_species[MIN_SIZE];
     char lignee[MAX_SIZE];
 
-    //browse the buffer
     while (line != NULL)
     {
-        sscanf(line, "%[^	]	%[^	]	%[^	]	%[^\n]", id_species, name_species, rank_species, id_parent_species);
-        //check if the id in parameter is the same as the id in the file
+        sscanf(line, "%[^	] %*[^	] %[^	] %*[^	] %*[^	] %*[^	] %*[^	] %*[^	] %*[^	] %*[^\n]", id_species, name_species);
         if (strcmp(speciesID, id_species) == 0)
         {
-            strcpy(lignee, name_species);
-            strcat(lignee, "/");
+             
+            strcat(lignee, "\t\t\t\t {\n\t\t\t\t\t\"taxid\":\"");
+            strcat(lignee, id_species);
+            strcat(lignee,",\n\t\t\t\t\t\"name\":\"");
+            strcat(lignee, name_species);
+            strcat(lignee,"\n\t\t\t\t },\n");
+
             strcat(lignee, lineage);
             //fill lineage
             strcpy(lineage, lignee);
-            //check if the rank of the species is superkingdom or phylum => stop the recursive function
-            if(strcmp(rank_species, "superkingdom")==0 || strcmp(rank_species, "phylum")==0){
+           //récupération du parent id 
+            //récupérer le parent 
+            int len = strlen(line);
+            int iteration = 0;
+            for (int i = 0; i < len + 1; i++)
+            {
+                if (line[i] == '	')
+                {
+                    iteration++;
+                }
+                if (iteration == 9)
+                {
+                    int k = 0;
+                    for (int j = i + 1; j < len; j++)
+                    {
+                        if (line[j] == '	')
+                        {
+                            id_parent_species[k] = '\0';
+                            break;
+                        }
+                        else
+                        {
+                            id_parent_species[k] = line[j];
+                        }
+                        k++;
+                    }
+                    break;
+                }
+            }
+            if(strcmp(id_parent_species,"")==0){
+                char lignee2[MAX_SIZE];
+                strcat(lignee2, "\t\t\t\t {\n\t\t\t\t\t\"taxid\":\"1\"");
+                strcat(lignee2,",\n\t\t\t\t\t\"name\":\"root\"\n\t\t\t\t },\n");
+                strcat(lignee2, lineage);
+                strcpy(lineage, lignee2);
                 return lineage;
             }
             else{
@@ -71,34 +105,10 @@ char *getLineage(char *buffer, char *speciesID, char *lineage)
         }
         line = strtok(NULL, "\n");
     }
+   
     return lineage;
 }
 
-/// @brief get the parent Name of the species
-/// @param buffer 
-/// @param parentID 
-/// @return 
-// char *getParentName(char *buffer,char *parentID){
-//     //initialize the parentName to parentId if we could'nt find it.
-//     char *parentName=parentID;
-//     char *line = strtok(strdup(buffer), "\n");
-//     //Declaration of the variables for taxid, name, rank and parents of the species
-//     char id_species[MIN_SIZE], name_species[MIN_SIZE], rank_species[MIN_SIZE], id_parent_species[MIN_SIZE];
-//     //browse the buffer
-//     while (line != NULL)
-//     {
-//         sscanf(line, "%[^	]	%[^	]	%[^	]	%[^\n]", id_species, name_species, rank_species, id_parent_species);
-//         //check 
-//         if (strcmp(parentID, id_species) == 0)
-//         {
-//             //we copy the name of the parent we found
-//             strcpy(parentName, name_species);
-//             break;
-//         }
-//         line = strtok(NULL, "\n");
-//     }
-//     return parentName;
-// }
 
 /// @brief reading the taxonomy file to get the lineage
 /// @param buffer 
@@ -107,35 +117,65 @@ char *getLineage(char *buffer, char *speciesID, char *lineage)
 char *readTaxoFile(char *buffer,char *species)
 {
     char *line = strtok(strdup(buffer), "\n");
-    //déclaration des variables afin de récupérer chaque ligne de taxofile
-    char id_species[MIN_SIZE], name_species[MIN_SIZE], rank_species[MIN_SIZE], id_parent_species[MIN_SIZE];
-    //char lineage[4096]; //pb de taille avec 4096 ca marche
-    char *lineage = (char *)malloc(4096*sizeof(char)); //pb de taille
-    //browse the buffer
-    while (line != NULL)
+    char id_species[MIN_SIZE], name_species[MIN_SIZE], id_parent_species[MIN_SIZE];
+    char *lineage = (char *)malloc(4096*sizeof(char)); 
+    while(line!=NULL)
     {
-        sscanf(line, "%[^	]	%[^	]	%[^	]	%[^\n]", id_species, name_species, rank_species, id_parent_species);
-        //check if the name in parameter is the same as the name in the file
+       sscanf(line, "%[^	] %*[^	] %[^	] %*[^	] %*[^	] %*[^	] %*[^	] %*[^	] %*[^	] %*[^\n]", id_species, name_species);
         if (strcmp(name_species, species) == 0)
         {
-            //check the rank of the species
-            if (strcmp(rank_species, "superkingdom") == 0 || strcmp(rank_species, "phylum")==0)
+            
+            strcat(lineage, "\t\t\t\t {\n\t\t\t\t\t\"taxid\":\"");
+            strcat(lineage, id_species);
+            strcat(lineage,",\n\t\t\t\t\t\"name\":\"");
+            strcat(lineage, name_species);
+            strcat(lineage,"\n\t\t\t\t }");
+            //récupération du parent !!!
+             //récupérer le parent 
+            int len = strlen(line);
+            int iteration = 0;
+            for (int i = 0; i < len + 1; i++)
             {
-                lineage = name_species;
-                break;
+                if (line[i] == '	')
+                {
+                    iteration++;
+                }
+                if (iteration == 9)
+                {
+                    int k = 0;
+                    for (int j = i + 1; j < len; j++)
+                    {
+                        if (line[j] == '	')
+                        {
+                            id_parent_species[k] = '\0';
+                            break;
+                        }
+                        else
+                        {
+                            id_parent_species[k] = line[j];
+                        }
+                        k++;
+                    }
+                    break;
+                }
             }
-            else
-            {
-                //we copy the name of the species in lineage and it's the beginning of the lineage
-                strcpy(lineage, name_species);
-                //call the function getLineage to get the complete lineage of the species
-                char *tmpResult = getLineage(buffer, id_parent_species, lineage); 
-                //copy the result in lineage
-                memmove(lineage, tmpResult, strlen(tmpResult) + 1);
-                break;
-            }
+            char *tmpResult = getLineage(buffer, id_parent_species, lineage); 
+            memmove(lineage, tmpResult, strlen(tmpResult) + 1);
+            break;
         }
         line = strtok(NULL, "\n");
     }
     return lineage;
 }
+
+int main(int argc, char **argv){
+    char *buffer =makebuffer(FICHIER);
+    char *lignee = readTaxoFile(buffer, "Mycobacterium tuberculosis");
+    printf("La lignee est \n%s\n", lignee);
+    return 0;
+}
+
+                    // {
+                    //        "taxid":1,
+                    //        "name":"root"
+                    //     }, //5 \t et 4 +' ' pour {

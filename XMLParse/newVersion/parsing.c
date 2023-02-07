@@ -33,6 +33,7 @@ int main(int argc, char **argv){
 
     char *buffer = makebuffer(FICHIER);
     //ajout d'un  char pour tout mettre dedans et à la fin on copie tout dans le fichier.
+    //tout mettre dans la structure pour qu'ensuite on l'a parcourt
     blastOutPut_iteration(f, mode, buffer);
 
     fprintf(output, "\t]\n}");
