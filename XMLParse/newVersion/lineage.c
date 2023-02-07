@@ -57,12 +57,9 @@ char *getLineage(char *buffer, char *speciesID, char *lineage)
             strcat(lignee,",\n\t\t\t\t\t\"name\":\"");
             strcat(lignee, name_species);
             strcat(lignee,"\n\t\t\t\t },\n");
-
             strcat(lignee, lineage);
-            //fill lineage
             strcpy(lineage, lignee);
-           //récupération du parent id 
-            //récupérer le parent 
+
             int len = strlen(line);
             int iteration = 0;
             for (int i = 0; i < len + 1; i++)
@@ -130,8 +127,7 @@ char *readTaxoFile(char *buffer,char *species)
             strcat(lineage,",\n\t\t\t\t\t\"name\":\"");
             strcat(lineage, name_species);
             strcat(lineage,"\n\t\t\t\t }");
-            //récupération du parent !!!
-             //récupérer le parent 
+
             int len = strlen(line);
             int iteration = 0;
             for (int i = 0; i < len + 1; i++)
@@ -167,15 +163,3 @@ char *readTaxoFile(char *buffer,char *species)
     }
     return lineage;
 }
-
-int main(int argc, char **argv){
-    char *buffer =makebuffer(FICHIER);
-    char *lignee = readTaxoFile(buffer, "Mycobacterium tuberculosis");
-    printf("La lignee est \n%s\n", lignee);
-    return 0;
-}
-
-                    // {
-                    //        "taxid":1,
-                    //        "name":"root"
-                    //     }, //5 \t et 4 +' ' pour {

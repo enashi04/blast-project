@@ -3,12 +3,14 @@
 #include <stdio.h>
 #include "parameters.h"
 #include "blastInfo.h"
+#include "lineage.h"
 
 SpeciesInfo *fillStructure(char *buffer){
     SpeciesInfo *infos_espece = NULL;
     SpeciesInfo *head = NULL;
     SpeciesInfo *tail = NULL;
     char *line = strtok(strdup(buffer), "\n");
+    
     while (line != NULL) {
         SpeciesInfo *info_espece = (SpeciesInfo *)malloc(sizeof(SpeciesInfo));
         info_espece->next = NULL;
@@ -21,8 +23,6 @@ SpeciesInfo *fillStructure(char *buffer){
         info_espece->name = strdup(name_species);
         info_espece->id = strdup(id_species);
         info_espece->rank = strdup(getRank(line));
-
-        //récupérer le parent 
         int len = strlen(line);
         int iteration = 0;
         for (int i = 0; i < len + 1; i++)
@@ -51,7 +51,7 @@ SpeciesInfo *fillStructure(char *buffer){
             }
         }
         info_espece->parent = strdup(getParentName(id_parent_species, buffer));
-
+        info_espece->lineage = readTaxoFile(buffer, name_species);
         if (head == NULL) {
             head = info_espece;
             tail = info_espece;
@@ -64,5 +64,3 @@ SpeciesInfo *fillStructure(char *buffer){
     }
     return head;
 }
-
-//manque plus que lineage
