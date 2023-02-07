@@ -37,15 +37,7 @@ void getQueryDef(xmlNode *node, char species[MIN_SIZE]){ // ajouter une autre va
 
 /// @brief get the Length of the query
 /// @param node
-void getQueryLength(xmlNode *node, int query_length)
-{
-    const char *name = "BlastOutput_query-len";
-    if (strcmp(name, (const char *)node->name) == 0)
-    {
-        fprintf(output, "\t\t\"query-length\" : \"%s\",\n", xmlNodeGetContent(node));
-        query_length = atoi((const char *)xmlNodeGetContent(node));
-    }
-}
+
 
 /// @brief récupérer le nom de l'espèce
 /// @param species

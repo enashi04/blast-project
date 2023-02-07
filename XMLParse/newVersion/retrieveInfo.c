@@ -6,7 +6,7 @@
 char name_hit[MIN_SIZE];
 char name_species[32];
 char taxoID[MIN_SIZE], parentspecies[MIN_SIZE], ranks[MIN_SIZE], espece[MIN_SIZE], lineage[MAX_SIZE]; // mettre 4096 à lineage
-int query_length = 0, t_from = 0, t_to = 0;
+int t_from = 0, t_to = 0;
 
 /// @brief Browse the XML FILE
 /// @param fichier
@@ -29,8 +29,14 @@ void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer)
         getBlastVersion(node);
         getBlastDB(node);
         getQueryDef(node, speciesName);
-        getQueryLength(node, query_length);
+        if (strcmp("BlastOutput_query-len", (const char *)node->name) == 0)
+        {
+            fprintf(output, "\t\t\"query-length\" : \"%s\",\n", xmlNodeGetContent(node));
+            query_length = atoi((const char *)xmlNodeGetContent(node));
+        }
     }
+
+    printf("la query length est %d\n", query_length);
     printf("la query est %s\n", speciesName);
     displayQuerySpecies(speciesName, buffer);
     fprintf(output, "\t\t\"hits\": [\n\t\t"); // We initialize it to BlastOutput_iteration
@@ -51,7 +57,7 @@ void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer)
                 if (strcmp(ITERATION, (const char *)child->name) == 0)
                 {
                     /********************************ITERATION SUBNODES**************************************/
-                    node_Iteration(child, mode, buffer);
+                    node_Iteration(child, mode, buffer, query_length); // on ajoute la longueur de la query
                 }
             }
         }
@@ -63,7 +69,7 @@ void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer)
 /// @param node
 /// @param mode
 /// @param buffer
-void node_Iteration(xmlNode *node, char *mode, char *buffer)
+void node_Iteration(xmlNode *node, char *mode, char *buffer, int query_length)
 {
     xmlNode *child;
     const char *iteration = "Iteration_hits", *hit = "Hit";
@@ -87,7 +93,7 @@ void node_Iteration(xmlNode *node, char *mode, char *buffer)
                 if (strcmp(hit, (const char *)child->name) == 0)
                 {
                     /*************************************ENTRER DANS L'HSP*********************************************/
-                    node_HSP(child, mode, getHitAccession(child, mode), getSpecies(child), buffer); // ajouter un autre paramètre!
+                    node_HSP(child, mode, getHitAccession(child, mode), getSpecies(child), buffer, query_length); // ajouter un autre paramètre!
                 }
             }
         }
@@ -152,7 +158,7 @@ char *getSpecies(xmlNode *node)
     return name_species;
 }
 
-void node_HSP(xmlNode *node, char *mode, char *hit_id, char *species, char *buffer) // ajout du file taxo
+void node_HSP(xmlNode *node, char *mode, char *hit_id, char *species, char *buffer, int query_length) // ajout du file taxo
 {
     xmlNode *child;
     const char *name, *name2;
@@ -183,65 +189,26 @@ void node_HSP(xmlNode *node, char *mode, char *hit_id, char *species, char *buff
                         fprintf(output, "\t\t,{\n\t\t\t\"hit_accession\" : \"%s\",\n", hit_id);
                     }
                     fprintf(output, "\t\t\t\"species\": [\n\t\t\t\t{\n");
-                    
+
                     /*****************************LASTCHILD = SOUS-NOEUD DE CHILD***************************************/
-                    xmlNode *lastchild;
-                    lastchild = child->children;
+                    xmlNode *lastchild = child->children;
                     for (childNode = lastchild; childNode; childNode = childNode->next)
                     {
+                        printf("les enfants sont :%s\n", childNode->name);
                         /*****************************************MODE BRONZE***********************************************/
-                        if (strcmp(mode, "bronze") == 0)
-                        {
-                            getHSP(childNode, "Hsp_num", "number of hit");
-                            getHSP(childNode, "Hsp_identity", "identity");
-                            getHSP(childNode, "Hsp_align-len", "align_len");
-                            getHSP(childNode, "Hsp_gaps", "gaps");
-                            getHSP(childNode, "Hsp_query-from", "query_from");
-                            getHSP(childNode, "Hsp_query-to", "query_to");
-                            getHSP(childNode, "Hsp_hit-from", "target_from");
-                            getHSP(childNode, "Hsp_hit-to", "target_to");
-                            getHSP(childNode, "Hsp_positive", "positive");
-                            getHSP(childNode, "Hsp_evalue", "evalue");
-                            getHSP(childNode, "Hsp_score", "score");
-                            getHSP(childNode, "Hsp_bit-score", "bitscore");
-                        }
-                        /****************************************MODE SILVER************************************************/
-                        else if (strcmp(mode, "silver") == 0)
-                        {
-                            getHSP(childNode, "Hsp_num", "number of hit");
-                            getHSP(childNode, "Hsp_identity", "identity");
-                            getHSP(childNode, "Hsp_align-len", "align_len");
-                            getHSP(childNode, "Hsp_gaps", "gaps");
-                            getHSP(childNode, "Hsp_query-from", "query_from");
-                            getHSP(childNode, "Hsp_query-to", "query_to");
-                            getHSP(childNode, "Hsp_hit-from", "target_from");
-                            getHSP(childNode, "Hsp_hit-to", "target_to");
-                            getHSP(childNode, "Hsp_positive", "positive");
-                            getHSP(childNode, "Hsp_evalue", "evalue");
-                            getHSP(childNode, "Hsp_score", "score");
-                            getHSP(childNode, "Hsp_bit-score", "bitscore");
-                        }
-                        /*****************************************MODE GOLD*************************************************/
-                        else if (strcmp(mode, "gold") == 0)
-                        {
-                            getHSP(childNode, "Hsp_num", "number of hit");
-                            getHSP(childNode, "Hsp_identity", "identity");
-                            getHSP(childNode, "Hsp_align-len", "align_len");
-                            getHSP(childNode, "Hsp_gaps", "gaps");
-                            getHSP(childNode, "Hsp_query-from", "query_from");
-                            getHSP(childNode, "Hsp_query-to", "query_to");
-                            getHSP(childNode, "Hsp_hit-from", "target_from");
-                            getHSP(childNode, "Hsp_hit-to", "target_to");
-                            getHSP(childNode, "Hsp_positive", "positive");
-                            getHSP(childNode, "Hsp_evalue", "evalue");
-                            getHSP(childNode, "Hsp_score", "score");
-                            getHSP(childNode, "Hsp_bit-score", "bitscore");
-                        }
-                        /****************************************MODE PERSO*************************************************/
-                        else
-                        {
-                            printf("nothing\n");
-                        }
+
+                        getHSP(childNode, "Hsp_num", "number of hit", 0);
+                        getHSP(childNode, "Hsp_identity", "identity", 0);
+                        getHSP(childNode, "Hsp_align-len", "align_len", query_length);
+                        getHSP(childNode, "Hsp_gaps", "gaps", 0);
+                        getHSP(childNode, "Hsp_query-from", "query_from", 0);
+                        getHSP(childNode, "Hsp_query-to", "query_to", 0);
+                        getHSP(childNode, "Hsp_hit-from", "target_from", 0);
+                        getHSP(childNode, "Hsp_hit-to", "target_to", 0);
+                        getHSP(childNode, "Hsp_positive", "positive", 0);
+                        getHSP(childNode, "Hsp_evalue", "evalue", 0);
+                        getHSP(childNode, "Hsp_score", "score", 0);
+                        getHSP(childNode, "Hsp_bit-score", "bitscore", 0);
                     }
                     fprintf(output, "\n");
                 }
@@ -250,7 +217,7 @@ void node_HSP(xmlNode *node, char *mode, char *hit_id, char *species, char *buff
     }
 }
 
-void getHSP(xmlNode *node, const char *name, char *label)
+void getHSP(xmlNode *node, const char *name, char *label, int query_length)
 { // ajout d'un autre char *
     if (strcmp(name, (const char *)node->name) == 0)
     {
@@ -272,6 +239,7 @@ void getHSP(xmlNode *node, const char *name, char *label)
         else if (strcmp(name, (const char *)"Hsp_align-len") == 0)
         {
             // on met la query cover ici !
+            printf("query_length is %d\n", query_length);
             int querycover = 100 * (t_to - t_from) / query_length;
             fprintf(output, "\t\t\t\"query-cover\" : \"%d\",\n", querycover);
             fprintf(output, "\t\t\t\"%s\" : \"%s\"\n\t\t}", label, xmlNodeGetContent(node));

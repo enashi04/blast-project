@@ -14,7 +14,7 @@ void getBlastVersion(xmlNode *node);
 void getBlastDB(xmlNode *node);
 void getQueryDef(xmlNode *node, char species[MIN_SIZE]);
 //char *retrieveDef(xmlNode *node);
-void getQueryLength(xmlNode *node,int query_length);
+// int getQueryLength(xmlNode *node);
 char *getQuerySpeciesName(char *species);
 
 char *getRank(char *line);

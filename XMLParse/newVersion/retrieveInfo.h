@@ -14,9 +14,9 @@ void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer);
 void hit_enter(xmlNode *node);
 
 char *getHitAccession(xmlNode *node,char *mode);
-void getHSP(xmlNode *node, const char *name, char *label);
-void node_HSP(xmlNode *node,  char *mode, char *hit_id, char *species, char *buffer);
-void node_Iteration(xmlNode *node, char *mode, char *buffer);
+void getHSP(xmlNode *node, const char *name, char *label, int query_length);
+void node_HSP(xmlNode *node,  char *mode, char *hit_id, char *species, char *buffer, int query_length);
+void node_Iteration(xmlNode *node, char *mode, char *buffer, int query_length);
 char *getSpecies(xmlNode *node);
 
 #endif
