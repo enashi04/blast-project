@@ -24,27 +24,15 @@ void getBlastDB(xmlNode *node)
 
 /// @brief get the Definition of query
 /// @param node
-void getQueryDef(xmlNode *node){ // ajouter une autre variable pour récupérer le nom de la query
+void getQueryDef(xmlNode *node, char species[MIN_SIZE]){ // ajouter une autre variable pour récupérer le nom de la query
     const char *name = "BlastOutput_query-def";
+    char *query_def;
     if(strcmp(name, (const char *)node->name) == 0)
     {
+        query_def = (char *)xmlNodeGetContent(node);
+        strcpy(species, query_def);
         fprintf(output, "\t\"blast_output\":[\n\t {\n\t\t\"query-name\" : \"%s\",\n", xmlNodeGetContent(node));
     }
-}
-
-/// @brief
-/// @param node
-/// @return query def
-char *retrieveDef(xmlNode *node)
-{
-    char *query_def;
-    const char *name = "BlastOutput_query-def";
-    if (strcmp(name, (const char *)node->name) == 0)
-    {
-        query_def = (char *)xmlNodeGetContent(node);
-
-    }
-    return query_def;
 }
 
 /// @brief get the Length of the query
@@ -64,24 +52,23 @@ void getQueryLength(xmlNode *node, int query_length)
 /// @return species Name of the query
 char *getQuerySpeciesName(char *species)
 {
-    char *content = species;
-    int len = strlen(content);
+    char content[MIN_SIZE];
+    strcpy(content, species);
+    int len = strlen(content); //pb
     int start = 0, end = 0;
     for (int i = 0; i < len; i++)
     {
-        if (content[i] == 'O' && content[i + 1] == 'S')
+        if (content[i] == 'O' && content[i + 1] == 'S') //pb
         {
             start = i + 2;
         }
-        if ((content[i] == 'O' && content[i + 1] == 'X') )
+        if ((content[i] == 'O' && content[i + 1] == 'X') ) //pb
         {
             end = i - 1;
             break;
         }
     }
-
-    // int nameLen = end - start ;
-    char *name_species = (char *)malloc(sizeof(char) * MIN_SIZE);
+    char name_species[MIN_SIZE];
 
     int j = 0;
     for (int i = start + 1; i < end; i++)
@@ -90,8 +77,7 @@ char *getQuerySpeciesName(char *species)
         j++;
     }
     name_species[j] = '\0';
-
-    return name_species;
+    return strdup(name_species);
 }
 
 /// @brief
@@ -121,7 +107,6 @@ void displayQuerySpecies(char *species, char *buffer)
         sscanf(line, "%[^	] %*[^	] %[^	] %*[^	] %*[^	] %*[^	] %*[^	] %*[^	] %*[^	] %*[^\n]", id_species, name_species);
         if (strcmp(speciesName, name_species) == 0)
         {
-            printf("ou rar");
             fprintf(output, "\t\t\"species\": {\n");
             fprintf(output, "\t\t\t\"taxid\" : \"%s\",\n\t\t\t\"name\" : \"%s\"\n\t\t},\n", id_species, querySpeciesName);
 
@@ -130,6 +115,7 @@ void displayQuerySpecies(char *species, char *buffer)
         line = strtok(NULL, "\n");
     }
     free(querySpeciesName);
+    
 }
 
 char *getRank(char *line)
