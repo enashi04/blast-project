@@ -29,7 +29,6 @@ void getQueryDef(xmlNode *node){ // ajouter une autre variable pour récupérer 
     if(strcmp(name, (const char *)node->name) == 0)
     {
         fprintf(output, "\t\"blast_output\":[\n\t {\n\t\t\"query-name\" : \"%s\",\n", xmlNodeGetContent(node));
-        // speciesName =(char *)xmlNodeGetContent(node);
     }
 }
 
@@ -163,8 +162,7 @@ char *getRank(char *line)
             break;
         }
     }
-    // char *rank = rank_species;
-    // printf("rank is %s\n", rank);
+
     return strdup(rank_species);
 }
 /// @brief 

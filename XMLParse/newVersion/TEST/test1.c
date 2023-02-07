@@ -1,11 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-<<<<<<< HEAD
 #include <ctype.h>
-=======
->>>>>>> 225bd8963491a2c33ed10826fb17ff6196035380
-
 #include "parameters.h"
 
 char *makebuffer(char *filename)
@@ -34,7 +30,6 @@ char *makebuffer(char *filename)
     return buffer;
 }
 
-<<<<<<< HEAD
 // int main(int argc, char **argv)
 // {
 //     char *buffer = makebuffer(FICHIER);
@@ -132,13 +127,5 @@ int main(int argc, char **argv){
     char *parent= getParentName("77643", buffer);
   
     printf("le parent est %s \n", parent);
-=======
-
-int main(int argc, char **argv)
-{
-    char *buffer = makebuffer(FICHIER);
-    char *taxID = getQuerySpeciesId("Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)", buffer);
-    printf("l'id est%s\n", taxID);
->>>>>>> 225bd8963491a2c33ed10826fb17ff6196035380
     return 0;
 }
