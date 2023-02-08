@@ -49,60 +49,58 @@ char *getLineage(char *buffer, char *speciesID, char *lineage)
     while (line != NULL)
     {
         sscanf(line, "%[^	] %*[^	] %[^	] %*[^	] %*[^	] %*[^	] %*[^	] %*[^	] %*[^	] %*[^\n]", id_species, name_species);
-        if (strcmp(speciesID, id_species) == 0)
-        {
-             
-            strcat(lignee, "\t\t\t\t {\n\t\t\t\t\t\"taxid\":\"");
-            strcat(lignee, id_species);
-            strcat(lignee,",\n\t\t\t\t\t\"name\":\"");
-            strcat(lignee, name_species);
-            strcat(lignee,"\n\t\t\t\t },\n");
-            strcat(lignee, lineage);
-            strcpy(lineage, lignee);
-
-            int len = strlen(line);
-            int iteration = 0;
-            for (int i = 0; i < len + 1; i++)
-            {
-                if (line[i] == '	')
-                {
-                    iteration++;
-                }
-                if (iteration == 9)
-                {
-                    int k = 0;
-                    for (int j = i + 1; j < len; j++)
-                    {
-                        if (line[j] == '	')
-                        {
-                            id_parent_species[k] = '\0';
-                            break;
-                        }
-                        else
-                        {
-                            id_parent_species[k] = line[j];
-                        }
-                        k++;
-                    }
-                    break;
-                }
-            }
-            if(strcmp(id_parent_species,"")==0){
-                char lignee2[MAX_SIZE];
-                strcat(lignee2, "\t\t\t\t {\n\t\t\t\t\t\"taxid\":\"1\"");
-                strcat(lignee2,",\n\t\t\t\t\t\"name\":\"root\"\n\t\t\t\t },\n");
-                strcat(lignee2, lineage);
-                strcpy(lineage, lignee2);
-                return lineage;
-            }
-            else{
-                //recursivity
-                getLineage(buffer, id_parent_species, lineage);
-            }
-        }
+        // if (strcmp(speciesID, id_species) == 0)
+        // { 
+        //     strcat(lignee, "\t\t\t\t {\n\t\t\t\t\t\"taxid\":\"");
+        //     strcat(lignee, id_species);
+        //     strcat(lignee,",\n\t\t\t\t\t\"name\":\"");
+        //     strcat(lignee, name_species);
+        //     strcat(lignee,"\n\t\t\t\t },\n");
+        //     strcat(lignee, lineage);
+        //     strcpy(lineage, lignee);
+        //     int len = strlen(line);
+        //     int iteration = 0;
+        //     for (int i = 0; i < len + 1; i++)
+        //     {
+        //         if (line[i] == '	')
+        //         {
+        //             iteration++;
+        //         }
+        //         if (iteration == 9)
+        //         {
+        //             int k = 0;
+        //             for (int j = i + 1; j < len; j++)
+        //             {
+        //                 if (line[j] == '	')
+        //                 {
+        //                     id_parent_species[k] = '\0';
+        //                     break;
+        //                 }
+        //                 else
+        //                 {
+        //                     id_parent_species[k] = line[j];
+        //                 }
+        //                 k++;
+        //             }
+        //             break;
+        //         }
+        //     }
+        //     if(strcmp(id_parent_species,"")==0){
+        //         char lignee2[MAXI_SIZE];
+        //         strcat(lignee2, "\t\t\t\t {\n\t\t\t\t\t\"taxid\":\"1\"");
+        //         strcat(lignee2,",\n\t\t\t\t\t\"name\":\"root\"\n\t\t\t\t },\n");
+        //         strcat(lignee2, lineage);
+        //         strcpy(lineage, lignee2);
+        //         return lineage;
+        //     }
+        //     else{
+        //         //recursivity
+        //         getLineage(buffer, id_parent_species, lineage);
+        //     }
+        // }
         line = strtok(NULL, "\n");
     }
-   
+
     return lineage;
 }
 
@@ -121,7 +119,6 @@ char *readTaxoFile(char *buffer,char *species)
        sscanf(line, "%[^	] %*[^	] %[^	] %*[^	] %*[^	] %*[^	] %*[^	] %*[^	] %*[^	] %*[^\n]", id_species, name_species);
         if (strcmp(name_species, species) == 0)
         {
-            
             strcat(lineage, "\t\t\t\t {\n\t\t\t\t\t\"taxid\":\"");
             strcat(lineage, id_species);
             strcat(lineage,",\n\t\t\t\t\t\"name\":\"");

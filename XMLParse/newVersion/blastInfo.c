@@ -35,10 +35,6 @@ void getQueryDef(xmlNode *node, char species[MIN_SIZE]){ // ajouter une autre va
     }
 }
 
-/// @brief get the Length of the query
-/// @param node
-
-
 /// @brief récupérer le nom de l'espèce
 /// @param species
 /// @return species Name of the query
@@ -140,29 +136,31 @@ char *getRank(char *line)
             break;
         }
     }
-
     return strdup(rank_species);
 }
+
 /// @brief 
 /// @param id_parent_species 
 /// @param buffer 
-/// @return 
+/// @return parent
 char *getParentName(char *id_parent_species, char *buffer)
 {
     char *line = strtok(strdup(buffer), "\n");
-    char id_species[MIN_SIZE], name_species[MIN_SIZE];
-
 
     while (line != NULL)
     {
+        char id_species[MIN_SIZE], name_species[MIN_SIZE];
+
         sscanf(line, "%[^	] %*[^	] %[^	] %*[^	] %*[^	] %*[^	] %*[^	] %*[^	] %*[^	] %*[^\n]", id_species, name_species);
-        if (strcmp("77643", id_species) == 0)
+        if (strcmp(id_parent_species, id_species) == 0)
         {
+            //printf("le parent est %s\n", name_species);
             return strdup(name_species);
         }
         line = strtok(NULL, "\n");
     }
-    return "no parent";
+    return "";
+
 }
 //récupérer l'id de cette espèce
 char *getQuerySpeciesId(char *species, char *buffer)

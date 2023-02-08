@@ -16,7 +16,8 @@
         "stdlib.h": "c",
         "parameters.h": "c",
         "blastinfo.h": "c",
-        "taxo.C": "cpp"
+        "taxo.C": "cpp",
+        "fillstructure.h": "c"
     },
     "C_Cpp.errorSquiggles": "enabled"
 }
