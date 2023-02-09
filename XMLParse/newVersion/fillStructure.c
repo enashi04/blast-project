@@ -1,10 +1,9 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
-#include "parameters.h"
 #include "fillStructure.h"
 #include "blastInfo.h"
-#include "lineage.h"
+#include "parameters.h"
 
 SpeciesInfo *fillStructure(char *buffer)
 {
