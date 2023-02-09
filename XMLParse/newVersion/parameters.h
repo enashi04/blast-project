@@ -12,8 +12,8 @@
 typedef struct SpeciesInfo {
     char *name;
     char *rank;
-    char *id;
-    char *id_parent;
+    char *id;//indice du parent 
+    char *id_parent;//int
 }SpeciesInfo;
 
 #endif
