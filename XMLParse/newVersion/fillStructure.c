@@ -3,67 +3,8 @@
 #include <stdio.h>
 #include "parameters.h"
 #include "fillStructure.h"
-
-char *makebuffer(char *filename)
-{
-    char *buffer;
-    // Open the taxonomy file
-    FILE *file = fopen(filename, "r");
-    // check of the file existence
-    if (!file)
-    {
-        printf("Unable to open file");
-        exit(1);
-    }
-    // move to the end of the file
-    fseek(file, 0, SEEK_END);
-    // get the length of the file
-    long fileSize = ftell(file);
-    // return to the beginning of the file
-    rewind(file);
-    // initialize the buffer
-    buffer = (char *)malloc((fileSize + 1) * sizeof(char));
-    // fill the buffer with the contents of the file
-    fread(buffer, sizeof(char), fileSize, file);
-    // don't forget to put the '\0' at the end of the buffer
-    buffer[fileSize] = '\0';
-
-    return buffer;
-}
-
-char *getRank(char *line)
-{
-    char rank_species[MIN_SIZE];
-    int len = strlen(line);
-    int iteration = 0;
-    for (int i = 0; i < len + 1; i++)
-    {
-        if (line[i] == '	')
-        {
-            iteration++;
-        }
-        if (iteration == 8)
-        {
-            int k = 0;
-            for (int j = i + 1; j < len; j++)
-            {
-                if (line[j] == '	')
-                {
-                    rank_species[k] = '\0';
-                    break;
-                }
-                else
-                {
-                    rank_species[k] = line[j];
-                }
-                k++;
-            }
-            break;
-        }
-    }
-    // char *rank =rank_species;
-    return strdup(rank_species);
-}
+#include "blastInfo.h"
+#include "lineage.h"
 
 SpeciesInfo *fillStructure(char *buffer)
 {
@@ -105,16 +46,4 @@ SpeciesInfo *fillStructure(char *buffer)
     }
 
     return outInfo;
-}
-
-
-int main(int argc, char **argv)
-{
-    char *buffer = makebuffer(FICHIER);
-    SpeciesInfo *test = fillStructure(buffer);
-    for(int i =0; i<FILE_SIZE;i++){
-        printf("name + parent : %s %s\n", test[i].name, test[i].id_parent);
-    }
-    
-    
 }
