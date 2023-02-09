@@ -61,42 +61,34 @@ char *getRank(char *line)
             break;
         }
     }
-    char *rank =rank_species;
-    return rank;
+    // char *rank =rank_species;
+    return strdup(rank_species);
 }
 
 SpeciesInfo *fillStructure(char *buffer)
 {
-    struct SpeciesInfo *outInfo= NULL;
-    char *line = strtok(strdup(buffer), "\n");
-    int it=0;
-    while (line != NULL)
-    {
-        char id_species[MIN_SIZE], name_species[MIN_SIZE], id_parent_species[MIN_SIZE], parent_name[MIN_SIZE];
-        //récupération du taxId et du nom
-        sscanf(line, "%[^	] %*[^	] %[^	] %*[^	] %*[^	] %*[^	] %*[^	] %*[^	] %*[^	] %*[^\n]", id_species, name_species);
+    SpeciesInfo *outInfo = (SpeciesInfo *)malloc(FILE_SIZE * sizeof(SpeciesInfo));
 
-        //récupération du parent ID
+    char *line = strtok(strdup(buffer), "\n");
+    line = strtok(NULL, "\n");
+
+    for (int it = 0; it < FILE_SIZE && line != NULL; it++) {
+        char id_species[MIN_SIZE], name_species[MIN_SIZE], id_parent_species[MIN_SIZE];
+        sscanf(line, "%[^\t]\t%*[^\t]\t%[^\t]\t%*[^\n]", id_species, name_species);
+
         int len = strlen(line);
         int iteration = 0;
-        for (int i = 0; i < len + 1; i++)
-        {
-            if (line[i] == '	')
-            {
+        for (int i = 0; i < len + 1; i++) {
+            if (line[i] == '\t') {
                 iteration++;
             }
-            if (iteration == 9)
-            {
+            if (iteration == 9) {
                 int k = 0;
-                for (int j = i + 1; j < len; j++)
-                {
-                    if (line[j] == '	')
-                    {
+                for (int j = i + 1; j < len; j++) {
+                    if (line[j] == '\t') {
                         id_parent_species[k] = '\0';
                         break;
-                    }
-                    else
-                    {
+                    } else {
                         id_parent_species[k] = line[j];
                     }
                     k++;
@@ -104,48 +96,25 @@ SpeciesInfo *fillStructure(char *buffer)
                 break;
             }
         }
-        //reparcours du fichier pour récupérer son parent
-        char *line2 = strtok(strdup(buffer), "\n");
-        char id_species1[MIN_SIZE], name_species1[MIN_SIZE];
 
-        while (line2 != NULL)
-        {
-            sscanf(line2, "%[^	] %*[^	] %[^	] %*[^	] %*[^	] %*[^	] %*[^	] %*[^	] %*[^	] %*[^\n]", id_species1, name_species1);
-            if (strcmp(id_parent_species, id_species1) == 0)
-            {
-                //strcpy(parent_name, name_species1);
-                break;
-            }
-            line2 = strtok(NULL, "\n");
-        }
-
-      
-        outInfo=(SpeciesInfo *)malloc(sizeof(SpeciesInfo));
-        printf("on arrive ici?");
-        strcpy(outInfo[it].name, name_species);
-        strcpy(outInfo[it].id, id_species);
-        //récupération du rang
-        char *ranked = getRank(line);
-        strcpy(outInfo[it].rank, ranked);
-        free(ranked);
-
-        strcpy(outInfo[it].id_parent, id_parent_species);
-        strcpy(outInfo[it].parent, name_species1);
-        printf("value is %s\n", outInfo[it].parent);
-        it++;
-           
-
+        outInfo[it].id = strdup(id_species);
+        outInfo[it].name = strdup(name_species);
+        outInfo[it].rank = getRank(line);
+        outInfo[it].id_parent = strdup(id_parent_species);
         line = strtok(NULL, "\n");
     }
-    //free(outInfo);
+
     return outInfo;
 }
+
 
 int main(int argc, char **argv)
 {
     char *buffer = makebuffer(FICHIER);
     SpeciesInfo *test = fillStructure(buffer);
-    free(test);
-    free(buffer);
-    printf("on sort ");
+    for(int i =0; i<FILE_SIZE;i++){
+        printf("name + parent : %s %s\n", test[i].name, test[i].id_parent);
+    }
+    
+    
 }

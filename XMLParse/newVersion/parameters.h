@@ -10,13 +10,10 @@
 
 //définir une structure
 typedef struct SpeciesInfo {
-    char name[MIN_SIZE];
-    char rank[MIN_SIZE];
-    char id[MIN_SIZE];
-    char parent[MIN_SIZE];
-    char id_parent[MIN_SIZE];
-    char *lineage;
-    //struct SpeciesInfo *next;
+    char *name;
+    char *rank;
+    char *id;
+    char *id_parent;
 }SpeciesInfo;
 
 #endif
