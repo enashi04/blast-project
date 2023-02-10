@@ -1,7 +1,14 @@
+/**************************************************************************************************************/
+/*                                         BLASTINFO.C:                                                       */
+/** This file allows to get the information of BLAST                                                          */
+/**************************************************************************************************************/
+
 #include "blastInfo.h"
 
-/// @brief get the version of blast
-/// @param node
+/**************************************************************************************************************/
+/*                               getBlastVersion: version of blast                                            */
+/** Parameters : node : Node where we are now                                                                 */
+/**************************************************************************************************************/
 void getBlastVersion(xmlNode *node)
 {
     const char *name = "BlastOutput_version";
@@ -11,8 +18,10 @@ void getBlastVersion(xmlNode *node)
     }
 }
 
-/// @brief get the db of this blast
-/// @param node
+/**************************************************************************************************************/
+/*                               getBlastDB: the db of this blast                                             */
+/** Parameters : node : Node where we are now                                                                 */
+/**************************************************************************************************************/
 void getBlastDB(xmlNode *node)
 {
     const char *name = "BlastOutput_db";
@@ -22,8 +31,11 @@ void getBlastDB(xmlNode *node)
     }
 }
 
-/// @brief get the Definition of query
-/// @param node
+/**************************************************************************************************************/
+/*                              getQueryDef: the query definition                                             */
+/** Parameters : node : Node where we are now                                                                 */
+/**            : species : name of the query's species (complete name)                                        */
+/**************************************************************************************************************/
 void getQueryDef(xmlNode *node, char species[MIN_SIZE]){ // ajouter une autre variable pour récupérer le nom de la query
     const char *name = "BlastOutput_query-def";
     char *query_def;
@@ -35,9 +47,11 @@ void getQueryDef(xmlNode *node, char species[MIN_SIZE]){ // ajouter une autre va
     }
 }
 
-/// @brief récupérer le nom de l'espèce
-/// @param species
-/// @return species Name of the query
+
+/**************************************************************************************************************/
+/*                         getQuerySpeciesName: name of the query's species                                   */
+/** Parameters : species : name of the query's species                                                        */
+/**************************************************************************************************************/
 char *getQuerySpeciesName(char *species)
 {
     char content[MIN_SIZE];
@@ -71,6 +85,11 @@ char *getQuerySpeciesName(char *species)
 /// @brief
 /// @param species
 /// @param buffer
+/**************************************************************************************************************/
+/*                         displayQuerySpecies: display informations about the query                          */
+/** Parameters : species : name of the query's species                                                        */
+/**            : buffer : taxonomy.dat                                                                        */
+/**************************************************************************************************************/
 void displayQuerySpecies(char *species, char *buffer)
 {
     char *querySpeciesName = getQuerySpeciesName(species);

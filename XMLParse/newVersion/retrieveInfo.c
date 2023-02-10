@@ -5,7 +5,6 @@
 /**                   tfrom, tto :                                                                            */
 /**************************************************************************************************************/
 
-
 #include "retrieveInfo.h"
 #include "blastInfo.h"
 #include "lineage.h"
@@ -14,9 +13,12 @@
 
 char name_hit[MIN_SIZE];
 int t_from = 0, t_to = 0; //voir où on peut le mettre en local au lieu de glo
+char stockSPECIES[MAXI_SIZE];
+char name_species[MAX_SIZE];
+
 
 /**************************************************************************************************************/
-/*                            First method : allowing us to enter to the first node                           */
+/*                       blastOutPut_iteration: allowing us to enter to the first node                        */
 /** Parametre : fichier : XML FILE                                                                            */
 /**             mode : Bronze, Silver, Gold                                                                   */
 /**             buffer : taxonomy.dat                                                                         */
@@ -213,22 +215,28 @@ void node_HSP(xmlNode *node, char *mode, char *hit_id, char *species, char *buff
                     fprintf(output, "\t\t\t\t\"species\": [\n\t\t\t\t {\n");
                     //ici on va commencer le parcours de la structure 
                     //vérifier d'abord que l'information on l'avait pas déjà avant ? 
-        
-                    for(int i =0; i<FILE_SIZE; i++){
-                        if(strcmp(speciesInfo[i].name, species)==0){
-//c'est là qu'on va récupérer toutes les informations + stocker 
-                            char *stockage = "\t\t\t\t\t\"name\":\"";
-                            strcat(stockage, speciesInfo[i].name);
-                            strcat(stockage,"\",\n\t\t\t\t\t\"taxid\":\"" );
-                            strcat(stockage, speciesInfo[i].id);
-                            strcat(stockage,"\",\n\t\t\t\t\t\"parent\":\"" );
-                             //récupérer le parent depuis la lignée je crois !!!
-                            strcat(stockage, speciesInfo[i].id_parent);
-                            //
-                            strcat(stockage,"\",\n\t\t\t\t\t\"rank\":\"" );
-                            strcat(stockage, speciesInfo[i].rank);
+                    if(strcmp(species, name_species)==0){
+                        fprintf(output, "%s\n", stockSPECIES);
+                    }
+                    else{
+                        for(int i =0; i<FILE_SIZE-1; i++){
+                            if(strcmp(speciesInfo[i].name, species)==0){
+                                char stockage[MAXI_SIZE] = "";
+                                strcat(stockage, "\t\t\t\t\t\"name\":\"");
+                                strcat(stockage, speciesInfo[i].name);
+                                strcat(stockage,"\",\n\t\t\t\t\t\"taxid\":\"" );
+                                strcat(stockage, speciesInfo[i].id);
+                                strcat(stockage,"\",\n\t\t\t\t\t\"rank\":\"" );
+                                strcat(stockage, speciesInfo[i].rank);
+                                strcat(stockage, createLineage(speciesInfo, species));
+                                fprintf(output,"%s\n", stockage);
+                                strcpy(stockSPECIES, stockage);
+                                strcpy(name_species, species);
+
+                            }
                         }
                     }
+                   
                     //variable globale ici pour stocker ce qu'il y'a a stocker?                   
                     /*****************************LASTCHILD = SOUS-NOEUD DE CHILD***************************************/
                     xmlNode *lastchild = child->children;

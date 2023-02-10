@@ -7,6 +7,7 @@
 
 SpeciesInfo *fillStructure(char *buffer)
 {
+    
     SpeciesInfo *outInfo = (SpeciesInfo *)malloc(FILE_SIZE * sizeof(SpeciesInfo));
 
     char *line = strtok(strdup(buffer), "\n");

@@ -1,3 +1,4 @@
 *.reduced filter=lfs diff=lfs merge=lfs -text
 *.dat filter=lfs diff=lfs merge=lfs -text
 .reduced filter=lfs diff=lfs merge=lfs -text
+output.json filter=lfs diff=lfs merge=lfs -text
