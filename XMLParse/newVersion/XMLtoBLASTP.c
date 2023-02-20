@@ -1,17 +1,17 @@
 #include "XMLtoBLASTP.h"
+#include "parameters.h"
+#include <time.h>
 
 /*****************************************TEST*****************************************/
 int main(int argc, char **argv)
 {
     // ouvrir le fichier en mode lecture
     xmlDoc *xmlfile = xmlReadFile("stdin.xml", NULL, 0);
-    FILE *output = fopen("output.blastp", "w");
+    FILE *output = fopen("output4.blastp", "w");
     xmlNode *child, *root;
     root = xmlDocGetRootElement(xmlfile);
     child = root->children;
     blastInfo(xmlfile, output, child);
-
-    // à la fin on prends les blastoup_param
     //-> param : matrix / expect/gap_pen/ gap_extends/filter / on s'arretera là peut etre
 }
 
@@ -57,28 +57,30 @@ char *replaceWord(const char *s, const char *oldW, const char *newW)
 void blastInfo(xmlDoc *xmlfile, FILE *output, xmlNode *child)
 {
     xmlNode *node;
+    char *database = (char *)malloc(sizeof(char)*MIN_SIZE);
     for (node = child; node; node = node->next)
     {
-/*****************************************VERSION DE BLAST*****************************************/
+        /*****************************************VERSION DE BLAST*****************************************/
         blast_version(node, output);
-/*****************************************REFERENCE DE BLAST*****************************************/
+        /*****************************************REFERENCE DE BLAST*****************************************/
         blast_reference(node, output);
-/*****************************************BDD DE BLAST*****************************************/
-        blast_db(node, output);
-/*****************************************QUERY*****************************************/
+        /*****************************************BDD DE BLAST*****************************************/
+        blast_db(node, output, database);
+        /*****************************************QUERY*****************************************/
         query_Def(node, output);
-/*****************************************LONGUEUR DE LA QUERY*****************************************/
+        /*****************************************LONGUEUR DE LA QUERY*****************************************/
         query_Length(node, output);
-/*****************************************NOEUD CONTENANT LES ITERATIONS*****************************************/
+        /*****************************************NOEUD CONTENANT LES ITERATIONS*****************************************/
         if (strcmp("BlastOutput_iterations", (const char *)node->name) == 0)
         {
             xmlNode *childnode;
             childnode = node->children;
             for (child = childnode; child; child = child->next)
             {
-                iterationNode(child, output); 
+                iterationNode(child, output, database);
             }
         }
+       
     }
 }
 /*****************************************VERSION DE BLAST*****************************************/
@@ -101,13 +103,13 @@ void blast_reference(xmlNode *node, FILE *output)
     if (strcmp(name, (const char *)node->name) == 0)
     {
         char content[512] = "Reference: ";
-/*****************************************REMPLACEMENT DU CARACTERE HTML EN FR*****************************************/
+        /*****************************************REMPLACEMENT DU CARACTERE HTML EN FR*****************************************/
         strcat(content, (const char *)xmlNodeGetContent(node));
         strcpy(content, replaceWord(content, "&auml;", "ä"));
 
         int j = 62;
         int len = strlen(content);
-/*****************************************FORMATAGE*****************************************/
+        /*****************************************FORMATAGE*****************************************/
         for (int i = 0; i < len; i++)
         {
             fprintf(output, "%c", content[i]);
@@ -127,13 +129,15 @@ void blast_reference(xmlNode *node, FILE *output)
     }
 }
 /*****************************************BDD*****************************************/
-void blast_db(xmlNode *node, FILE *output)
+void blast_db(xmlNode *node, FILE *output, char *database)
 {
     const char *name;
     name = "BlastOutput_db";
     if (strcmp(name, (const char *)node->name) == 0)
     {
         fprintf(output, "DataBase: %s\n\n\n\n", xmlNodeGetContent(node));
+        strcpy(database, (char *)xmlNodeGetContent(node));
+
     }
 }
 /*****************************************QUERY*****************************************/
@@ -144,13 +148,8 @@ void query_Def(xmlNode *node, FILE *output)
     int j = 72;
     if (strcmp(name, (const char *)node->name) == 0)
     {
-<<<<<<< HEAD
         /*****************************************FORMATAGE*****************************************/
         char content[512] = "Query= ";
-=======
-/*****************************************FORMATAGE*****************************************/
-        char content[512] = "Query: ";
->>>>>>> parent of 1ef7e60... Xml to blastp almost done
         strcat(content, (char *)xmlNodeGetContent(node));
         int len = strlen(content);
         for (int i = 0; i < len; i++)
@@ -187,8 +186,9 @@ void query_Length(xmlNode *node, FILE *output)
         // ici on met la query length pour le calcul de la query cover
     }
 }
+
 /*****************************************NOEUD ITERATION*****************************************/
-void iterationNode(xmlNode *node, FILE *output)
+void iterationNode(xmlNode *node, FILE *output, char *database)
 {
     char *iteration = "Iteration";
     if (strcmp(iteration, (const char *)node->name) == 0)
@@ -197,7 +197,7 @@ void iterationNode(xmlNode *node, FILE *output)
         childNode = node->children;
         for (child = childNode; child; child = child->next)
         {
-/*****************************************NOUS ENTRONS DANS LE NOEUD CONTENANT LES HITS*****************************************/
+            /*****************************************NOUS ENTRONS DANS LE NOEUD CONTENANT LES HITS*****************************************/
             if (strcmp("Iteration_hits", (const char *)child->name) == 0)
             {
                 xmlNode *hitChild;
@@ -207,7 +207,49 @@ void iterationNode(xmlNode *node, FILE *output)
                     hitNode(childNode, output);
                 }
             }
+            else if(strcmp("Iteration_stat",(const char *)child->name) == 0){
+                xmlNode *hitChild;
+                hitChild = child->children;
+                for (childNode = hitChild; childNode; childNode = childNode->next)
+                {
+                    statNode(childNode, output, database);
+                }
+            }
         }
+    }
+}
+
+void statNode(xmlNode *node,FILE  *output, char *database){
+   
+    char kappa[6], lambda[6], entropy[6];
+    xmlNode *child,*childNode = node->children; 
+    for(child=childNode; child; child=child->next){
+        if(strcmp("Statistics_db-num", (const char *)child->name)==0){
+            fprintf(output, "  Database: %s\n", database);
+            //ajout de la date ici
+            time_t now;
+            time(&now);
+            fprintf(output,"\tPosted date : %s", ctime(&now));
+            fprintf(output, "  Number of letters: %s\n ", (char *)xmlNodeGetContent(child));
+        }
+        else if(strcmp("Statistics_db-len", (const char*)child->name)==0){
+            fprintf(output, " Number of sequences: %s\n ", (char *)xmlNodeGetContent(child));
+        }       
+        else if(strcmp("Statistics_kappa", (const char *)child->name)==0){
+            strcpy(kappa, (const char*)xmlNodeGetContent(child));
+            //kappa =xmlNodeGetContent(node);
+        }
+        else if(strcmp("Statistics_lambda", (const char *)child->name)==0){
+            strcpy(lambda, (const char*)xmlNodeGetContent(child));
+            //lambda = xmlNodeGetContent(node);
+        }
+        else if(strcmp("Statistics_entropy", (const char *)child->name)==0){
+            strcpy(entropy, (const char*)xmlNodeGetContent(child));
+            // entropy=xmlNodeGetContent(node);
+            fprintf(output,"Lambda     K     H\n   %s    %s    %s", lambda, kappa, entropy);
+            break;
+        }
+
     }
 }
 /*****************************************NOUS ENTRONS DANS LE NOEUD CONTENANT LES INFOS DU HIT*****************************************/
@@ -220,19 +262,19 @@ void hitNode(xmlNode *node, FILE *output)
 
         for (child = childNode; child; child = child->next)
         {
-/*****************************************DEF DU HIT*****************************************/
+            /*****************************************DEF DU HIT*****************************************/
             if (strcmp("Hit_def", (const char *)child->name) == 0)
             {
                 char *content = (char *)xmlNodeGetContent(child);
                 strcpy(content, replaceWord(content, ">", "& "));
                 char newcontent[2048];
                 memset(newcontent, 0, sizeof(newcontent));
-/*****************************************MISE EN PLACE DU > POUR QUE BALLAST RECONNAISSE LE HIT*****************************************/
+                /*****************************************MISE EN PLACE DU > POUR QUE BALLAST RECONNAISSE LE HIT*****************************************/
                 snprintf(newcontent, sizeof(newcontent), ">%s", content);
 
                 int j = 98;
                 int len = strlen(newcontent);
-/*****************************************FORMATAGE*****************************************/
+                /*****************************************FORMATAGE*****************************************/
                 for (int i = 0; i < len; i++)
                 {
                     fprintf(output, "%c", newcontent[i]);
@@ -250,13 +292,13 @@ void hitNode(xmlNode *node, FILE *output)
                 }
                 fprintf(output, "\n");
             }
-/*****************************************LONGUEUR DU HIT*****************************************/
+            /*****************************************LONGUEUR DU HIT*****************************************/
             else if (strcmp("Hit_len", (const char *)child->name) == 0)
             {
                 char *len = (char *)xmlNodeGetContent(child);
                 fprintf(output, "\tLength=%s\n\n", len);
             }
-/*****************************************NOEUD CONTENANT D'AUTRES INFOS IMPORTANTES DU HIT*****************************************/
+            /*****************************************NOEUD CONTENANT D'AUTRES INFOS IMPORTANTES DU HIT*****************************************/
             else if (strcmp("Hit_hsps", (const char *)child->name) == 0)
             {
                 // on entre dans la partie la plus importante du sujet !!!
@@ -266,7 +308,7 @@ void hitNode(xmlNode *node, FILE *output)
                 {
                     if (strcmp("Hsp", (const char *)hspchild->name) == 0)
                     {
-/*****************************************NOEUD HSP*****************************************/
+                        /*****************************************NOEUD HSP*****************************************/
                         hspNode(hspchild, output);
                     }
                 }
@@ -279,47 +321,52 @@ void hspNode(xmlNode *node, FILE *output)
 {
     xmlNode *childNode, *child;
     childNode = node->children;
-/*****************************************DECLA DES VALEURS À RÉCUPÉRER*****************************************/
+    /*****************************************DECLA DES VALEURS À RÉCUPÉRER*****************************************/
     char align_len[8], score[8], evalue[8], identity[8], positive[8], gaps[8];
+    int hsp_num;
 
     for (child = childNode; child; child = child->next)
     {
-/*****************************************SCORE*****************************************/
-        if (strcmp("Hsp_score", (const char *)child->name) == 0)
+        /***************************************HSP_NUM*****************************************/
+        if(strcmp("Hsp_num",(const char *)child->name)==0){
+            hsp_num=atoi((char *)xmlNodeGetContent(child));
+            //strcpy(hsp_num,(const char*)xmlNodeGetContent(child));
+        }
+        /*****************************************SCORE*****************************************/
+        else if (strcmp("Hsp_score", (const char *)child->name) == 0)
         {
             strcpy(score, (const char *)xmlNodeGetContent(child));
         }
-/*****************************************EVALUE*****************************************/
+        /*****************************************EVALUE*****************************************/
         else if (strcmp("Hsp_evalue", (const char *)child->name) == 0)
         {
             strcpy(evalue, (const char *)xmlNodeGetContent(child));
         }
-/*****************************************IDENTITY*****************************************/
+        /*****************************************IDENTITY*****************************************/
         else if (strcmp("Hsp_identity", (const char *)child->name) == 0)
         {
             strcpy(identity, (const char *)xmlNodeGetContent(child));
         }
-/*****************************************POSITIVE*****************************************/
+        /*****************************************POSITIVE*****************************************/
         else if (strcmp("Hsp_positive", (const char *)child->name) == 0)
         {
             strcpy(positive, (const char *)xmlNodeGetContent(child));
         }
-/*****************************************GAPS*****************************************/
+        /*****************************************GAPS*****************************************/
         else if (strcmp("Hsp_gaps", (const char *)child->name) == 0)
         {
             strcpy(gaps, (const char *)xmlNodeGetContent(child));
         }
-/*****************************************LONGUEUR DE L'ALIGNEMENT*****************************************/
+        /*****************************************LONGUEUR DE L'ALIGNEMENT*****************************************/
         else if (strcmp("Hsp_align-len", (const char *)child->name) == 0)
         {
             strcpy(align_len, (const char *)xmlNodeGetContent(child));
         }
     }
-/*****************************************PETIT CALCUL POUR RÉCUPÉRER LE % DE CES CHAMPS*****************************************/
+    /*****************************************PETIT CALCUL POUR RÉCUPÉRER LE % DE CES CHAMPS*****************************************/
     int identity_percent = atoi(identity) * 100 / atoi(align_len);
     int positive_percent = atoi(positive) * 100 / atoi(align_len);
     int gaps_percent = atoi(gaps) * 100 / atoi(align_len);
-<<<<<<< HEAD
     if(hsp_num==1){
         fprintf(output, " Score = %s bits, Expect = %s,\n", score, evalue);
         fprintf(output, " Identities = %s/%s (%d%%), Positives = %s/%s (%d%%), Gaps = %s/%s (%d%%)\n\n", identity, align_len, identity_percent, positive, align_len, positive_percent, gaps, align_len, gaps_percent);
@@ -331,20 +378,15 @@ void hspNode(xmlNode *node, FILE *output)
         blasting(node, output);
     }
    
-=======
-    fprintf(output, " Score = %s bits, Expect = %s,\n", score, evalue);
-    fprintf(output, " Identities = %s/%s (%d%%), Positives = %s/%s (%d%%), Gaps = %s/%s (%d%%)\n\n", identity, align_len, identity_percent, positive, align_len, positive_percent, gaps, align_len, gaps_percent);
-    blasting(node, output);
->>>>>>> parent of 1ef7e60... Xml to blastp almost done
 }
 /*****************************************RECUPERATION DES SEQUENCES*****************************************/
 void blasting(xmlNode *node, FILE *output)
 {
     xmlNode *childNode, *child;
     childNode = node->children;
-/*****************************************DEBUT/FIN DE QUERY & SUBJECT*****************************************/
+    /*****************************************DEBUT/FIN DE QUERY & SUBJECT*****************************************/
     char query_from[8], query_to[8], target_from[8], target_to[8];
-/*****************************************DECLARATION DES SEQUENCES À RÉCUPÉRER*****************************************/
+    /*****************************************DECLARATION DES SEQUENCES À RÉCUPÉRER*****************************************/
     char queryS[2048], targetS[2048], midlineS[2048];
 
     for (child = childNode; child; child = child->next)
@@ -365,36 +407,42 @@ void blasting(xmlNode *node, FILE *output)
         {
             strcpy(target_to, (const char *)xmlNodeGetContent(child));
         }
-/*****************************************QUERY SEQUENCE*****************************************/
+        /*****************************************QUERY SEQUENCE*****************************************/
         else if (strcmp("Hsp_qseq", (const char *)child->name) == 0)
         {
             strcpy(queryS, (const char *)xmlNodeGetContent(child));
-            printf("la query de base est :%s\n\n",queryS);
+            // printf("la query de base est :%s\n\n",queryS);
         }
-/*****************************************SUBJECT SEQUENCE*****************************************/
+        /*****************************************SUBJECT SEQUENCE*****************************************/
         else if (strcmp("Hsp_hseq", (const char *)child->name) == 0)
         {
             strcpy(targetS, (const char *)xmlNodeGetContent(child));
             // printf("hsp is : %s\n",target_from);
         }
-/*****************************************MIDLINE SEQUENCE*****************************************/
+        /*****************************************MIDLINE SEQUENCE*****************************************/
         else if (strcmp("Hsp_midline", (const char *)child->name) == 0)
         {
             strcpy(midlineS, (const char *)xmlNodeGetContent(child));
         }
     }
-/*****************************************INTIIALISATION DE NLLES VARIABLES *****************************************/
+    /*****************************************INTIIALISATION DE NLLES VARIABLES *****************************************/
     int len = strlen(queryS); // qu'on prenne midline ou targetS la taille est la même
-    int j = 60, debut =0, fin =60;
+    //initialisation des valeurs pour la découpe des séquences 60-60
+    int j = 60, debut = 0, fin = 60;
+    // on récupère le début des query/target sous format int
+    int debutquery = atoi(query_from), debuttarget = atoi(target_from), finquery = atoi(query_to), fintarget=atoi(target_to);
+    //qseq tseq mseq : séquences fragmenté de ces séquences
     char qseq[128], tseq[128], mseq[128];
 
-/*****************************************FORMATAGE*****************************************/
+    /*****************************************FORMATAGE*****************************************/
+    char dq[5], dt[5], fq[5], ft[5]; //début/ fin query - target en char * pour pouvoir le concaténer
+
     for (int i = 0; i < len; i++)
     {
         if ((i + 1) % j == 0)
         {
+            //initialisation des variables pour le remplissage des 60AA
             char newquery[60], newmidline[60], newtarget[60];
-<<<<<<< HEAD
             //compteur
             int debinit = 0;
             int gaps_query=0, gaps_target=0;
@@ -404,13 +452,6 @@ void blasting(xmlNode *node, FILE *output)
                 newquery[debinit] = queryS[k];
                 newmidline[debinit] = midlineS[k];
                 newtarget[debinit] = targetS[k];
-=======
-            int debinit=0;
-            for(int k=debut; k<fin; k++){
-                newquery[debinit]=queryS[k];
-                newmidline[debinit]= midlineS[k];
-                newtarget[debinit]= targetS[k];
->>>>>>> parent of 1ef7e60... Xml to blastp almost done
                 debinit++;
                 if(queryS[k]=='-'){
                     gaps_query+=1;
@@ -419,7 +460,6 @@ void blasting(xmlNode *node, FILE *output)
                     gaps_target+=1;
                 }
             }
-<<<<<<< HEAD
             newquery[60] = '\0';
             newmidline[60] = '\0';
             newtarget[60] = '\0';
@@ -471,38 +511,8 @@ void blasting(xmlNode *node, FILE *output)
                     newquery[debinit] = queryS[k];
                     newmidline[debinit] = midlineS[k];
                     newtarget[debinit] = targetS[k];
-=======
-            newquery[60]='\0';
-            newmidline[60]='\0';
-            newtarget[60]='\0';
-
-            strcpy(qseq, "Query: ");
-            strcpy(tseq, "Subject: ");
-            strcpy(mseq,"             ");
-            strcat(qseq, query_from);
-            strcat(tseq, target_from);
-            
-            // strcat(qseq, " ");
-            // strcat(tseq," ");
-            // strcat(qseq, strcat())
-
-            //ici on insère
-           printf("la query is : %s\n", newquery);
-            debut = fin; 
-            fin = fin+60;
-         }
-        else if(i+1 ==len){
-            char newquery[len], newmidline[len], newtarget[len];
-            int debinit=0;
-            for(int k=debut; k<len; k++){
-                if(queryS[k]!='\0'){
-                    newquery[debinit]=queryS[k];
-                    newmidline[debinit]= midlineS[k];
-                    newtarget[debinit]= targetS[k];
->>>>>>> parent of 1ef7e60... Xml to blastp almost done
                     debinit++;
             }
-<<<<<<< HEAD
             newquery[ debinit] = '\0';
             newmidline[debinit] = '\0';
             newtarget[debinit] = '\0';
@@ -518,18 +528,9 @@ void blasting(xmlNode *node, FILE *output)
             strcpy(mseq, "            ");
             strcat(qseq, dq);
             strcat(tseq, dt);
-=======
-            newquery[len]='\0';
-            newmidline[len]='\0';
-            newtarget[len]='\0';
-          
-        }
-//             printf("on entre ici ensuite");
-// /**************************sous format Query 25 : LRTPLAAIQGGGXXXXX********************************/
->>>>>>> parent of 1ef7e60... Xml to blastp almost done
 
+            /**********************On rajoute + 60*****************************/
 
-<<<<<<< HEAD
             for (int j = strlen(qseq); j < 12; j++)
             {
                 strcat(qseq, " ");
@@ -553,32 +554,5 @@ void blasting(xmlNode *node, FILE *output)
 
             fprintf(output,"%s\n%s\n%s\n\n\n", qseq, mseq,tseq);
         }
-=======
-//             for (int j = strlen(qseq); j < 14; j++)
-//             {
-//                 strcat(qseq, " ");
-//             }
-//             for (int j = strlen(tseq); j < 14; j++)
-//             {
-//                 strcat(tseq, " ");
-//             }
-// /*****************************************FORMATAGE*****************************************/
-//             strcat(qseq,fillQuery);
-//             strcat(mseq,fillMidline);
-//             strcat(tseq,fillTarget);
-
-//             // strcat(qseq,cquery);
-//             // strcat(mseq, ctarget);
-//             // strcat(tseq, cmidline);
-//             char *space = " ";
-//             strcat(qseq, strcat(space,query_to));
-//             strcat(tseq, strcat(space,target_to));
-//             // printf("qseq is %s\n", qseq);
-
-//             fprintf(output, "%s\n", qseq);
-//             fprintf(output, "%s\n", mseq);
-//             fprintf(output, "%s\n\n", tseq);  
-//         }
->>>>>>> parent of 1ef7e60... Xml to blastp almost done
     }
 }
