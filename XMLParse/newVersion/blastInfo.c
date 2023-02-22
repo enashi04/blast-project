@@ -132,28 +132,29 @@ char *getRank(char *line)
     int iteration = 0;
     for (int i = 0; i < len + 1; i++)
     {
-        if (line[i] == '	')
+        if (line[i] == '	') //change this part cause 2 bumps 
         {
             iteration++;
-        }
-        if (iteration == 8)
-        {
-            int k = 0;
-            for (int j = i + 1; j < len; j++)
+            if (iteration == 8)
             {
-                if (line[j] == '	')
+                int k = 0;
+                for (int j = i + 1; j < len; j++)
                 {
-                    rank_species[k] = '\0';
-                    break;
+                    if (line[j] == '	')
+                    {
+                        rank_species[k] = '\0';
+                        break;
+                    }
+                    else
+                    {
+                        rank_species[k] = line[j];
+                    }
+                    k++;
                 }
-                else
-                {
-                    rank_species[k] = line[j];
-                }
-                k++;
+                break;
             }
-            break;
         }
+       
     }
     return strdup(rank_species);
 }
@@ -198,13 +199,12 @@ char *getQuerySpeciesId(char *species, char *buffer)
             speciesN[i] = species[i];
         }
     }
-    printf("species is :%s\n", speciesN);
     char *line = strtok(strdup(buffer), "\n");
-    char id_species[MIN_SIZE], name_species[MIN_SIZE], rank_species[MIN_SIZE], id_parent_species[MIN_SIZE];
+    char id_species[MIN_SIZE], name_species[MIN_SIZE];
 
     while (line != NULL)
     {
-        sscanf(line, "%[^	]	%[^	]	%[^	]	%[^\n]", id_species, name_species, rank_species, id_parent_species);
+        sscanf(line, "%[^	]	%*[^	]	%[^	]	%*[^\n]", id_species, name_species);
         if(strcmp(speciesN,name_species) == 0)
         {
             taxid=id_species;
