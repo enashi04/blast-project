@@ -1,20 +1,43 @@
 #include "XMLtoBLASTP.h"
-#include "parameters.h"
 #include <time.h>
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include "parameters.h"
+#include "lib/libxml/parser.h"
+#include "lib/libxml/tree.h"
 
-/*****************************************TEST*****************************************/
-int main(int argc, char **argv)
+/*****************************************RÉCUPÉRATION DES INFOS DANS LE XML*****************************************/
+
+void blastInfo(xmlDoc *xmlfile, FILE *output, xmlNode *child)
 {
-    // ouvrir le fichier en mode lecture
-    xmlDoc *xmlfile = xmlReadFile("stdin.xml", NULL, 0);
-    FILE *output = fopen("output4.blastp", "w");
-    xmlNode *child, *root;
-    root = xmlDocGetRootElement(xmlfile);
-    child = root->children;
-    blastInfo(xmlfile, output, child);
-    //-> param : matrix / expect/gap_pen/ gap_extends/filter / on s'arretera là peut etre
+    xmlNode *node;
+    char *database = (char *)malloc(sizeof(char)*MIN_SIZE);
+    for (node = child; node; node = node->next)
+    {
+        /*****************************************VERSION DE BLAST*****************************************/
+        blast_version(node, output);
+        /*****************************************REFERENCE DE BLAST*****************************************/
+        blast_reference(node, output);
+        /*****************************************BDD DE BLAST*****************************************/
+        blast_db(node, output, database);
+        /*****************************************QUERY*****************************************/
+        query_Def(node, output);
+        /*****************************************LONGUEUR DE LA QUERY*****************************************/
+        query_Length(node, output);
+        /*****************************************NOEUD CONTENANT LES ITERATIONS*****************************************/
+        if (strcmp("BlastOutput_iterations", (const char *)node->name) == 0)
+        {
+            xmlNode *childnode;
+            childnode = node->children;
+            for (child = childnode; child; child = child->next)
+            {
+                iterationNode(child, output, database);
+            }
+        }
+       
+    }
 }
-
 /*****************************************REMPLACER LES MOTS DANS UNE CHAINE*****************************************/
 
 char *replaceWord(const char *s, const char *oldW, const char *newW)
@@ -52,37 +75,7 @@ char *replaceWord(const char *s, const char *oldW, const char *newW)
     return result;
 }
 
-/*****************************************RÉCUPÉRATION DES INFOS DANS LE XML*****************************************/
 
-void blastInfo(xmlDoc *xmlfile, FILE *output, xmlNode *child)
-{
-    xmlNode *node;
-    char *database = (char *)malloc(sizeof(char)*MIN_SIZE);
-    for (node = child; node; node = node->next)
-    {
-        /*****************************************VERSION DE BLAST*****************************************/
-        blast_version(node, output);
-        /*****************************************REFERENCE DE BLAST*****************************************/
-        blast_reference(node, output);
-        /*****************************************BDD DE BLAST*****************************************/
-        blast_db(node, output, database);
-        /*****************************************QUERY*****************************************/
-        query_Def(node, output);
-        /*****************************************LONGUEUR DE LA QUERY*****************************************/
-        query_Length(node, output);
-        /*****************************************NOEUD CONTENANT LES ITERATIONS*****************************************/
-        if (strcmp("BlastOutput_iterations", (const char *)node->name) == 0)
-        {
-            xmlNode *childnode;
-            childnode = node->children;
-            for (child = childnode; child; child = child->next)
-            {
-                iterationNode(child, output, database);
-            }
-        }
-       
-    }
-}
 /*****************************************VERSION DE BLAST*****************************************/
 void blast_version(xmlNode *node, FILE *output)
 {

@@ -1,8 +1,8 @@
 #include "options.h"
 #include "retrieveInfo.h"
 #include "lineage.h"
+#include "XMLtoBLASTP.h"
 #include "parameters.h"
-
 
 int main(int argc, char **argv){
 
@@ -36,5 +36,15 @@ int main(int argc, char **argv){
     blastOutPut_iteration(f, mode, buffer);
 
     fprintf(output, "\t]\n}");
+    //XMLBLAST
+    xmlDoc *xmlfile = xmlReadFile("stdin.xml", NULL, 0);
+    FILE *output1 = fopen("output.blastp", "w");
+    xmlNode  *root= xmlDocGetRootElement(xmlfile),*child = root->children;
+    blastInfo(xmlfile, output1, child);
+    //faire appel au ballast
+
+    //Récupération des motifs
+
+    //bingo fin! 
 
 }

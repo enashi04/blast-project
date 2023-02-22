@@ -1,10 +1,8 @@
-#include <string.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include "lib/libxml/parser.h"
-#include "lib/libxml/tree.h"
+#ifndef XMLTOBLAST_H
+#define XMLTOBLAST_H
 
 
+void blastInfo(xmlDoc *xmlfile, FILE *output, xmlNode *child);
 
 char *replaceWord(const char *s, const char *oldW, const char *newW);
 
@@ -28,4 +26,5 @@ void blasting(xmlNode *node, FILE *output);
 
 void iterationNode(xmlNode *node, FILE *output, char *database);
 
-void blastInfo(xmlDoc *xmlfile, FILE *output, xmlNode *child);
+#endif
+

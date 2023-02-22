@@ -26,11 +26,10 @@ char name_species[MAX_SIZE];
 void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer)
 {
 // Declare the three node allowing us to browse the XML FILE
-    xmlNode *node, *child, *root;
 //GET THE FIRST NODE
-    root = xmlDocGetRootElement(fichier);
 //CHILD = SUBNOD OF THE ROOT 
-    child = root->children;
+    xmlNode *node, *root= xmlDocGetRootElement(fichier),*child= root->children;
+
 //WE LOOK FOR EACH NODE TO GET THE LENGTH, THE DEF OF THE QUERY, THE DEFINITION OF BLAST
     char speciesName[MIN_SIZE];
     int query_length = 0;
@@ -102,7 +101,9 @@ void node_Iteration(xmlNode *node, char *mode, char *buffer, int query_length)
                 if (strcmp(hit, (const char *)child->name) == 0)
                 {
 //ENTRER DANS L'HSP
-                    node_HSP(child, mode, getHitAccession(child, mode), getSpecies(child), buffer, query_length, speciesInfo); 
+                    char *hitAccession = getHitAccession(child);
+                    char *espece= getSpecies(child);
+                    node_HSP(child, mode, hitAccession, espece, query_length, speciesInfo); //essayer de réduire à 4 arguments!
                 }
             }
         }
@@ -114,17 +115,17 @@ void node_Iteration(xmlNode *node, char *mode, char *buffer, int query_length)
 /** Parametre : node : XML FILE                                                                               */
 /**             mode : Bronze, Silver, Gold                                                                   */
 /**************************************************************************************************************/
-char *getHitAccession(xmlNode *node, char *mode)
+char *getHitAccession(xmlNode *node)
 {
     char *hit_id = NULL;
-    xmlNode *child;
     const char *name = "Hit_accession";
-    child = node->children;
+    xmlNode *child = node->children;
     for (node = child; node; node = node->next)
     {
         if (strcmp(name, (const char *)node->name) == 0)
         {
             hit_id = (char *)xmlNodeGetContent(node);
+            return hit_id;
         }
     }
     return hit_id;
@@ -156,7 +157,7 @@ char *getSpecies(xmlNode *node)
         {
             debut = i;
         }
-        if (content[i] == ']')
+        else if (content[i] == ']')
         {
             fin = i;
             break;
@@ -184,20 +185,16 @@ char *getSpecies(xmlNode *node)
 /**************************************************************************************************************/
 void node_HSP(xmlNode *node, char *mode, char *hit_id, char *species, int query_length, SpeciesInfo *speciesInfo) // ajout du file taxo
 {
-    xmlNode *child;
-    const char *name, *name2;
-//CHILD = SOUS-NOEUD DU NODE 
-    child = node->children;
-    name = "Hit_hsps";
-    name2 = "Hsp";
+    //CHILD = SOUS-NOEUD DU NODE 
+    xmlNode *child = node->children;
+    const char *name = "Hit_hsps", *name2= "Hsp";
 
     for (node = child; node; node = node->next)
     {
         if (strcmp(name, (const char *)node->name) == 0)
         {
 //CHILDNODE = SOUS-NOEUD DE NODE
-            xmlNode *childNode;
-            childNode = node->children;
+            xmlNode *childNode = node->children;
             for (child = childNode; child; child=child->next)
             {
 //NOEUD DANS LEQUEL ON SE TROUVE = HSP 
