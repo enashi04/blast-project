@@ -182,7 +182,7 @@ char *getSpecies(xmlNode *node)
 /**           : buffer : taxonomy.dat                                                                         */
 /**           : query_length : length of the query                                                            */
 /**************************************************************************************************************/
-void node_HSP(xmlNode *node, char *mode, char *hit_id, char *species, char *buffer, int query_length, SpeciesInfo *speciesInfo) // ajout du file taxo
+void node_HSP(xmlNode *node, char *mode, char *hit_id, char *species, int query_length, SpeciesInfo *speciesInfo) // ajout du file taxo
 {
     xmlNode *child;
     const char *name, *name2;
