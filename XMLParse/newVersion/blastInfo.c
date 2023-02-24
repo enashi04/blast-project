@@ -14,7 +14,7 @@ void getBlastVersion(xmlNode *node)
     const char *name = "BlastOutput_version";
     if (strcmp(name, (const char *)node->name) == 0)
     {
-        fprintf(output, "{\t\"blast-version\" : \"%s\",\n", xmlNodeGetContent(node));
+        fprintf(output, "{\n\t\"blast-version\" : \"%s\",\n", xmlNodeGetContent(node));
     }
 }
 

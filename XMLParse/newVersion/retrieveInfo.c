@@ -26,10 +26,7 @@ char name_species[MAX_SIZE];
 void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer)
 {
 // Declare the three node allowing us to browse the XML FILE
-//GET THE FIRST NODE
-//CHILD = SUBNOD OF THE ROOT 
     xmlNode *node, *root= xmlDocGetRootElement(fichier),*child= root->children;
-
 //WE LOOK FOR EACH NODE TO GET THE LENGTH, THE DEF OF THE QUERY, THE DEFINITION OF BLAST
     char speciesName[MIN_SIZE];
     int query_length = 0;
@@ -64,7 +61,7 @@ void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer)
                 if (strcmp(ITERATION, (const char *)child->name) == 0)
                 {
 //ITERATION SUBNODES
-                    node_Iteration(child, mode, buffer, query_length); // on ajoute la longueur de la query
+                    node_Iteration(child, mode, buffer, query_length); 
                 }
             }
         }
@@ -202,7 +199,7 @@ void node_HSP(xmlNode *node, char *mode, char *hit_id, char *species, int query_
                 {
                     if (strcmp(name_hit, "") == 0)
                     {
-                        fprintf(output, "\t{\n\t\t\t\t\"hit_accession\" : \"%s\",\n", hit_id);
+                        fprintf(output, "\t\t{\n\t\t\t\t\"hit_accession\" : \"%s\",\n", hit_id);
                         strcpy(name_hit, hit_id);
                     }
                     else
@@ -210,21 +207,26 @@ void node_HSP(xmlNode *node, char *mode, char *hit_id, char *species, int query_
                         fprintf(output, "\t\t,{\n\t\t\t\t\"hit_accession\" : \"%s\",\n", hit_id);
                     }
                     fprintf(output, "\t\t\t\t\"species\": [\n\t\t\t\t {\n");
-                    //ici on va commencer le parcours de la structure 
-                    //vérifier d'abord que l'information on l'avait pas déjà avant ? 
                     if(strcmp(species, name_species)==0){
+                        //printf("on passe ici ? %s \n", name_species);
                         fprintf(output, "%s\n", stockSPECIES);
+                        
                     }
                     else{
-                        for(int i =0; i<FILE_SIZE-1; i++){
+                        for(int i =0; i<SPECIES_SIZE-1; i++){
                             if(strcmp(speciesInfo[i].name, species)==0){
+                                //printf("%s\n", speciesInfo[i].name);
                                 char stockage[MAXI_SIZE] = "";
                                 strcat(stockage, "\t\t\t\t\t\"name\":\"");
                                 strcat(stockage, speciesInfo[i].name);
                                 strcat(stockage,"\",\n\t\t\t\t\t\"taxid\":\"" );
-                                strcat(stockage, speciesInfo[i].id);
+                                //mettre en string 
+                                char str_id[4];
+                                sprintf(str_id, "%d", i);
+                                strcat(stockage, str_id);
                                 strcat(stockage,"\",\n\t\t\t\t\t\"rank\":\"" );
                                 strcat(stockage, speciesInfo[i].rank);
+                             //   printf("avant/Apres\n");
                                 strcat(stockage, createLineage(speciesInfo, species));
                                 fprintf(output,"%s\n", stockage);
                                 strcpy(stockSPECIES, stockage);
@@ -232,15 +234,12 @@ void node_HSP(xmlNode *node, char *mode, char *hit_id, char *species, int query_
 
                             }
                         }
-                    }
-                   
-                    //variable globale ici pour stocker ce qu'il y'a a stocker?                   
+                    }                
                     /*****************************LASTCHILD = SOUS-NOEUD DE CHILD***************************************/
                     xmlNode *lastchild = child->children;
                     for (childNode = lastchild; childNode; childNode = childNode->next)
                     {
                         /*****************************************MODE BRONZE***********************************************/
-
                         getHSP(childNode, "Hsp_num", "number of hit", 0);
                         getHSP(childNode, "Hsp_identity", "identity", 0);
                         getHSP(childNode, "Hsp_align-len", "align_len", query_length);

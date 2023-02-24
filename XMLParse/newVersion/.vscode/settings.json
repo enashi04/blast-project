@@ -17,7 +17,11 @@
         "parameters.h": "c",
         "blastinfo.h": "c",
         "taxo.C": "cpp",
-        "fillstructure.h": "c"
+        "fillstructure.h": "c",
+        "extractmotifs.h": "c",
+        "test.C": "cpp",
+        "tree.h": "c",
+        "ucnv.h": "c"
     },
     "C_Cpp.errorSquiggles": "enabled"
 }

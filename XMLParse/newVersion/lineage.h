@@ -3,6 +3,6 @@
 #include "parameters.h"
 char *makebuffer(char *filename);
 char *getParent(SpeciesInfo *speciesInfo, char *id);
-char *getLineage(SpeciesInfo *speciesInfo, char *id, char lineage[MAX_SIZE], char *parentTarget);
+char *getLineage(SpeciesInfo *speciesInfo, int id, char lineage[MAX_SIZE], int parentTarget);
 char *createLineage(SpeciesInfo *speciesInfo,char *id_parent);
 #endif

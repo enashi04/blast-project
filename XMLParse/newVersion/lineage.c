@@ -35,71 +35,86 @@ char *makebuffer(char *filename)
     return buffer;
 }
 
-char *getParent(SpeciesInfo *speciesInfo, char *id){
-    char *parent =NULL;
-    for(int i =0; i<FILE_SIZE -1; i++){
-        if(strcmp(speciesInfo[i].id, id)==0){
-            return speciesInfo[i].name;
-        }
-    }
-    return parent; 
-}
+// char *getParent(SpeciesInfo *speciesInfo, int id){
+//     char *parent =NULL;
+//     for(int i =0; i<FILE_SIZE -1; i++){
+//         if(strcmp(speciesInfo[i].id, id)==0){
+//             return speciesInfo[i].name;
+//         }
+//     }
+//     return parent; 
+// }
 
-char *getLineage(SpeciesInfo *speciesInfo, char *id, char lineage[MAX_SIZE], char *parentTarget){
+char *getLineage(SpeciesInfo *speciesInfo, int id, char lineage[MAX_SIZE], int parentTarget)
+{
     char lignee[MAX_SIZE];
-    lignee[0] = '\0';
-    for(int i=0; i<FILE_SIZE-1; i++){
-        if(strcmp(id, speciesInfo[i].id)==0){
-            strcpy(lignee, "\t\t\t\t\t {\n\t\t\t\t\t\t\"taxid\":\"");
-            strcat(lignee, speciesInfo[i].id);
-            strcat(lignee,"\",\n\t\t\t\t\t\t\"name\":\"");
-            strcat(lignee, speciesInfo[i].name);
-            strcat(lignee,"\"\n\t\t\t\t\t },\n");
-            strcat(lignee, lineage);
-            strcpy(lineage, lignee);
+    //lignee[0] = '\0';
 
-            if(strcmp(speciesInfo[i].id_parent, "")==0){
-                char lignee2[MAXI_SIZE]="\",\n\t\t\t\t\t\"parent\":\"";
-                strcat(lignee2,parentTarget);
-                strcat(lignee2, "\",\n\t\t\t\t\t\"lineage\":[\n\t\t\t\t\t {\n\t\t\t\t\t\t\"taxid\":\"1\"");
-                strcat(lignee2,",\n\t\t\t\t\t\t\"name\":\"root\"\n\t\t\t\t\t },\n");
-                strcat(lignee2, lineage);
-                strcpy(lineage, lignee2);
-                break;
-            }
-            else{
-                lineage = getLineage(speciesInfo, speciesInfo[i].id_parent, lineage, parentTarget);
-            }
-        }
+    strcpy(lignee, "\t\t\t\t\t {\n\t\t\t\t\t\t\"taxid\":\"");
+    char str_id[MIN_SIZE];
+    sprintf(str_id, "%d", id);
+    strcat(lignee, str_id);
+    strcat(lignee, "\",\n\t\t\t\t\t\t\"name\":\"");
+    strcat(lignee, speciesInfo[id].name);
+    strcat(lignee, "\"\n\t\t\t\t\t },\n");
+    strcat(lignee, lineage);
+    strcpy(lineage, lignee);
+
+    if (speciesInfo[id].parentid == 0)
+    {
+        char lignee2[MAXI_SIZE] = "\",\n\t\t\t\t\t\"parent\":\"";
+        strcat(lignee2, speciesInfo[parentTarget].name);
+        strcat(lignee2, "\",\n\t\t\t\t\t\"lineage\":[\n\t\t\t\t\t {\n\t\t\t\t\t\t\"taxid\":\"1\"");
+        strcat(lignee2, ",\n\t\t\t\t\t\t\"name\":\"root\"\n\t\t\t\t\t },\n");
+        strcat(lignee2, lineage);
+        strcpy(lineage, lignee2);
     }
-    //ajout du lineage
+    else
+    {
+        lineage = getLineage(speciesInfo, speciesInfo[id].parentid, lineage, parentTarget);
+    }
 
     return strdup(lineage);
 }
 
-/// @brief reading the taxonomy file to get the lineage
-/// @param buffer 
-/// @param species 
-/// @return 
-char *createLineage(SpeciesInfo *speciesInfo,char *species)
+char *createLineage(SpeciesInfo *speciesInfo, char *species)
 {
-    char lineage[MAX_SIZE];
-  //  printf("l'espèce est %s\n", species);
-    for(int i =0; i<FILE_SIZE-1;i++){
-       // 
-
-        if(strcmp(species, speciesInfo[i].name)==0){
-           // printf("on arrive là? %s\n",speciesInfo[i].name);
-            strcpy(lineage, "\t\t\t\t\t {\n\t\t\t\t\t\t\"taxid\":\"");
-            strcat(lineage, speciesInfo[i].id);
-            strcat(lineage,"\",\n\t\t\t\t\t\t\"name\":\"");
-            strcat(lineage, speciesInfo[i].name);
-            strcat(lineage,"\"\n\t\t\t\t\t }\n\t\t\t\t\t]\n\t\t\t\t}],");
-            char *parent =getParent(speciesInfo, speciesInfo[i].id_parent);
-            strcpy(lineage,getLineage(speciesInfo, speciesInfo[i].id_parent , lineage, parent));//ajout du parent 
-            //il faut qu'on récupère le parent depuis la lignée
-            break;
-        }
-    }  
+    char *lineage = malloc(sizeof(char) * MAX_SIZE);
+    for(int i =0; i<SPECIES_SIZE; i++) {
+            char *espece = (char *)malloc(sizeof(char)*MIN_SIZE);
+            strcpy(espece, species);
+            strcat(espece,",");
+            char *check_string = strstr(speciesInfo[i].othername,espece);
+            if (strcmp(species, speciesInfo[i].name) == 0)
+            { 
+                //printf("on rentre ici au moins une fois\n");
+                strcpy(lineage, "\t\t\t\t\t {\n\t\t\t\t\t\t\"taxid\":\"");
+                char str_i[MIN_SIZE];
+                sprintf(str_i, "%d", i);
+                strcat(lineage, str_i);
+                strcat(lineage, "\",\n\t\t\t\t\t\t\"name\":\"");
+                strcat(lineage, speciesInfo[i].name);
+                strcat(lineage, "\"\n\t\t\t\t\t }\n\t\t\t\t\t]\n\t\t\t\t}],");
+                char *returnLineage = getLineage(speciesInfo, speciesInfo[i].parentid, lineage, speciesInfo[i].parentid);
+                strcpy(lineage, returnLineage);
+                // il faut qu'on récupère le parent depuis la lignée
+                break;
+            }
+            else if (check_string != NULL)
+            {
+                printf("%s -> %s\n", species, check_string);
+                strcpy(lineage, "\t\t\t\t\t {\n\t\t\t\t\t\t\"taxid\":\"");
+                char str_i[MIN_SIZE];
+                sprintf(str_i, "%d", i);
+                strcat(lineage, str_i);
+                strcat(lineage, "\",\n\t\t\t\t\t\t\"name\":\"");
+                strcat(lineage, speciesInfo[i].name);
+                strcat(lineage, "\"\n\t\t\t\t\t }\n\t\t\t\t\t]\n\t\t\t\t}],");
+                // char *parent =getParent(speciesInfo, speciesInfo[i].id_parent); //2nd parameter : int
+                char *returnLineage = getLineage(speciesInfo, speciesInfo[i].parentid, lineage, speciesInfo[i].parentid);
+                strcpy(lineage, returnLineage); // ajout du parent //Second parameter : int
+                break;
+            }
+    }
     return strdup(lineage);
 }

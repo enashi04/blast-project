@@ -1,14 +1,13 @@
 #include "XMLtoBLASTP.h"
-#include <time.h>
-#include <string.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include "parameters.h"
-#include "lib/libxml/parser.h"
-#include "lib/libxml/tree.h"
+
 
 /*****************************************RÉCUPÉRATION DES INFOS DANS LE XML*****************************************/
-
+// int main(int argc, char **argv){
+//        xmlDoc *xmlfile = xmlReadFile("stdin.xml", NULL, 0);
+//     FILE *output1 = fopen("output2.blastp", "w");
+//     xmlNode  *root= xmlDocGetRootElement(xmlfile),*child = root->children;
+//     blastInfo(xmlfile, output1, child);
+// }
 void blastInfo(xmlDoc *xmlfile, FILE *output, xmlNode *child)
 {
     xmlNode *node;
@@ -463,7 +462,6 @@ void blasting(xmlNode *node, FILE *output)
           
             snprintf(fq,sizeof(fq), " %d", debutquery+59-gaps_query);
             snprintf(ft, sizeof(ft)," %d", debuttarget+59-gaps_target);
-
             strcpy(qseq, "Query: ");
             strcpy(tseq, "Sbjct: ");
             strcpy(mseq, "            ");
@@ -485,7 +483,8 @@ void blasting(xmlNode *node, FILE *output)
             strcat(qseq, fq);
             strcat(mseq, newmidline);
             strcat(tseq, newtarget);
-            strcat(tseq, ft);
+           // printf("tseq : %s\n", tseq);
+          //  strcat(tseq, ft);
 
             fprintf(output,"%s\n%s\n%s\n\n", qseq, mseq,tseq);
             debutquery = atoi(fq)+1;

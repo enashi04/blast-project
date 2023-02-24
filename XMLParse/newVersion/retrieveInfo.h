@@ -8,7 +8,7 @@
 #include <stdio.h>
 #include "parameters.h"
 
-extern FILE *output;
+FILE *output;
 
 void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer);
 void hit_enter(xmlNode *node);

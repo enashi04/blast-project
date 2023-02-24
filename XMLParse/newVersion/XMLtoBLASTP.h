@@ -1,6 +1,12 @@
 #ifndef XMLTOBLAST_H
 #define XMLTOBLAST_H
-
+#include <time.h>
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include "parameters.h"
+#include "lib/libxml/parser.h"
+#include "lib/libxml/tree.h"
 
 void blastInfo(xmlDoc *xmlfile, FILE *output, xmlNode *child);
 
