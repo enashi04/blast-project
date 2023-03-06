@@ -10,15 +10,6 @@
 
 #define FICHIER "taxonomy.dat" //fichier taxonomy
 
-//structure contenant les infos de l'espèce trouvé
-// typedef struct SpeciesInfo {
-//     char *name;
-//     char *rank;
-//     char *id;//indice du parent 
-//     char *id_parent;//int
-//     //ajout de la lignée 
-//     char *lineage;
-// }SpeciesInfo;
 
 typedef struct SpeciesInfo
 {
@@ -29,10 +20,11 @@ typedef struct SpeciesInfo
 } SpeciesInfo;
 
 typedef struct FillSpeciesInfo{
-    char *name; 
-    int parentid;
-    char *rank;
-    char *lineage;
+    char name[MIN_SIZE]; 
+    char parent[MIN_SIZE];
+    char rank[MIN_SIZE];
+    char lineage[MAXI_SIZE];
+    int id;
 } FillSpeciesInfo;
 
 #endif

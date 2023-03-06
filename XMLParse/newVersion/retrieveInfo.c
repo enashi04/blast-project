@@ -11,9 +11,9 @@
 #include "fillStructure.h"
 
 char name_hit[MIN_SIZE];
-int t_from = 0, t_to = 0; // voir où on peut le mettre en local au lieu de glo
-char stockSPECIES[MAXI_SIZE];
-char name_species[MAX_SIZE];
+int t_from = 0, t_to = 0, size_struct=0; // voir où on peut le mettre en local au lieu de glo
+// char stockSPECIES[MAXI_SIZE];
+// char name_species[MAX_SIZE];
 
 /**************************************************************************************************************/
 /*                       blastOutPut_iteration: allowing us to enter to the first node                        */
@@ -192,7 +192,6 @@ void node_HSP(xmlNode *node, char *mode,int query_length, SpeciesInfo *speciesIn
     // CHILD = SOUS-NOEUD DU NODE
     xmlNode *child = node->children;
     const char *name = "Hit_hsps", *name2 = "Hsp";
-
     for (node = child; node; node = node->next)
     {
         if (strcmp(name, (const char *)node->name) == 0)
@@ -213,34 +212,71 @@ void node_HSP(xmlNode *node, char *mode,int query_length, SpeciesInfo *speciesIn
                     {
                         fprintf(output, "\t\t\t,{\n\t\t\t\t\"hit_accession\" : \"%s\",\n", hit_id);
                     }
-                    // if(strcmp(species, name_species)==0){
-                    //     //printf("on passe ici ? %s \n", name_species);
-                    //     fprintf(output, "%s\n", stockSPECIES);
-                    // }
-                    // else{
-                    // for (int i = 0; i < SPECIES_SIZE - 1; i++)
-                    // {
-                    //     if (strcmp(speciesInfo[i].name, species) == 0)
-                    //     {
-                    //         // printf("%s\n", speciesInfo[i].name);
-                    //         char stockage[MAXI_SIZE] = "";
-                    //         strcpy(stockage, "\t\t\t\t\t\"name\":\"");
-                    //         strcat(stockage, speciesInfo[i].name);
-                    //         strcat(stockage, "\",\n\t\t\t\t\t\"taxid\":\"");
-                    //         // mettre en string
-                    //         char str_id[4];
-                    //         sprintf(str_id, "%d", i);
-                    //         strcat(stockage, str_id);
-                    //         strcat(stockage, "\",\n\t\t\t\t\t\"rank\":\"");
-                    //         strcat(stockage, speciesInfo[i].rank);
-                    //         strcat(stockage, "\"\n\t\t\t\t},");
-                    // //         strcat(stockage, createLineage(speciesInfo, species));
-                    //         fprintf(output, "%s\n", stockage);
-                    //         strcpy(stockSPECIES, stockage);
-                    // //         strcpy(name_species, species);
-                    //     }
-                    // }
-                    // }
+
+                    fprintf(output, "\t\t\t\t\"species\" : {\n");
+                    //ajout d'un check:
+                    int check=0;
+                    //d'abord on vérifie que l'information se trouve bien dans la nouvelle structure
+                    if(size_struct>0){
+                        //parcourir
+                        for(int i =0; i<size_struct; i++){
+                            if(strcmp(fillInfo[i].name,species)){
+                                //ajout des valeurs avant de les afficher
+                                fprintf(output, "\t\t\t\t\t\"name\":\"%s\",\n",fillInfo[i].name);
+                                fprintf(output, "\t\t\t\t\t\"taxid\":\"%u\",\n",fillInfo[i].id);
+                                fprintf(output,"\t\t\t\t\t\"rank\":\"%s\",\n",fillInfo[i].rank);
+                                fprintf(output, "\t\t\t\t\t\"parent\":\"%s\"\n\t\t\t\t},\n", fillInfo[speciesInfo[i].parentid].name);
+                                //ajouter la lignée ici
+                                check=1;
+                                break;
+                            }
+                        }
+                        if(check == 0){
+                            size_struct+=1;
+                            //on ajoute les infos à la position size_struct +1 et on modifie la valeur de size_struct
+                            for (int i = 0; i < SPECIES_SIZE - 1; i++)
+                            {
+                                if (strcmp(speciesInfo[i].name, species) == 0)
+                                {
+                                    // printf("%s\n", speciesInfo[i].name);
+                                    strcpy(fillInfo[size_struct].name,speciesInfo[i].name);
+                                    fillInfo[size_struct].id=i;
+                                    strcpy(fillInfo[size_struct].rank,speciesInfo[i].rank);
+                                    strcpy(fillInfo[size_struct].parent,speciesInfo[speciesInfo[i].parentid].name);
+                                    strcpy(fillInfo[size_struct].lineage,"en cours");
+
+                                    fprintf(output, "\t\t\t\t\t\"name\":\"%s\",\n",speciesInfo[i].name);
+                                    fprintf(output, "\t\t\t\t\t\"taxid\":\"%u\",\n", i);
+                                    fprintf(output,"\t\t\t\t\t\"rank\":\"%s\",\n",speciesInfo[i].rank);
+                                    fprintf(output, "\t\t\t\t\t\"parent\":\"%s\"\n\t\t\t\t},\n", speciesInfo[speciesInfo[i].parentid].name);
+                                }
+                            }
+                        }
+                    }
+                    else{
+                        for (int i = 0; i < SPECIES_SIZE - 1; i++)
+                        {
+                            if (strcmp(speciesInfo[i].name, species) == 0)
+                            {
+                                printf("spseices is %s\n", species);
+
+                                // printf("%s\n", speciesInfo[i].name);
+                                strcpy(fillInfo[0].name,speciesInfo[i].name);
+                                printf("id is %s\n", fillInfo[0].name);
+                                fillInfo[0].id=i;
+                                strcpy(fillInfo[0].rank,speciesInfo[i].rank);
+                                strcpy(fillInfo[0].parent,speciesInfo[speciesInfo[i].parentid].name);
+                                strcpy(fillInfo[0].lineage,"en cours");
+                                
+                                fprintf(output, "\t\t\t\t\t\"name\":\"%s\",\n",speciesInfo[i].name);
+                                fprintf(output, "\t\t\t\t\t\"taxid\":\"%u\",\n", i);
+                                fprintf(output,"\t\t\t\t\t\"rank\":\"%s\",\n",speciesInfo[i].rank);
+                                fprintf(output, "\t\t\t\t\t\"parent\":\"%s\"\n\t\t\t\t},\n", speciesInfo[speciesInfo[i].parentid].name);
+                                size_struct +=1;
+                            
+                            }
+                        }
+                    }
                 }
                 /*****************************LASTCHILD = SOUS-NOEUD DE CHILD***************************************/
                 xmlNode *lastchild = child->children;
@@ -259,6 +295,8 @@ void node_HSP(xmlNode *node, char *mode,int query_length, SpeciesInfo *speciesIn
                     getHSP(childNode, "Hsp_evalue", "evalue", 0);
                     getHSP(childNode, "Hsp_score", "score", 0);
                     getHSP(childNode, "Hsp_bit-score", "bitscore", 0);
+                    /*****************************************MODE SILVER***********************************************/
+                    /*****************************************MODE GOLD***********************************************/
                 }
             }
             fprintf(output, "\n");
@@ -278,7 +316,6 @@ void getHSP(xmlNode *node, const char *name, char *label, int query_length)
 { // ajout d'un autre char *
     if (strcmp(name, (const char *)node->name) == 0)
     {
-
         // récupération du tfrom
         if (strcmp(name, (const char *)"Hsp_hit-from") == 0)
         {

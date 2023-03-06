@@ -42,7 +42,6 @@ void getQueryDef(xmlNode *node, char species[MIN_SIZE]){ // ajouter une autre va
     if(strcmp(name, (const char *)node->name) == 0)
     {
         query_def = (char *)xmlNodeGetContent(node);
-        printf("la query est %s\n", query_def);
         strcpy(species, query_def);
         fprintf(output, "{\n\t\t\"query-name\" : \"%s\",\n", xmlNodeGetContent(node));
     }
@@ -129,21 +128,7 @@ void displayQuerySpecies(char *query_species)
 {
     char *querySpeciesName = getQuerySpeciesName(query_species);
     char *id_Species = getQuerySpeciesID(query_species);
-    printf("le nom est %s et id est %s\n", querySpeciesName, id_Species);
-
-    char speciesName[MIN_SIZE];
-    int queryNameLen= strlen(querySpeciesName);
-    int j =0;
-    for(int i =0; i<queryNameLen; i++){
-        if(querySpeciesName[i]=='('){
-            j=i-1;
-            break;
-        }
-    }
-    for(int i =0; i<j;i++){
-        speciesName[i]=querySpeciesName[i];
-    }
-    speciesName[j]='\0';
+    
     fprintf(output, "\t\t\"species\": {\n");
     fprintf(output, "\t\t\t\"taxid\" : \"%s\",\n\t\t\t\"name\" : \"%s\"\n\t\t},\n", id_Species, querySpeciesName);
     free(querySpeciesName);
