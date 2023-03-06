@@ -4,7 +4,6 @@
 /** Global variable : name_hit                                                                                */
 /**                   tfrom, tto :                                                                            */
 /**************************************************************************************************************/
-
 #include "retrieveInfo.h"
 #include "blastInfo.h"
 #include "lineage.h"
@@ -12,10 +11,9 @@
 #include "fillStructure.h"
 
 char name_hit[MIN_SIZE];
-int t_from = 0, t_to = 0; //voir où on peut le mettre en local au lieu de glo
+int t_from = 0, t_to = 0; // voir où on peut le mettre en local au lieu de glo
 char stockSPECIES[MAXI_SIZE];
 char name_species[MAX_SIZE];
-
 
 /**************************************************************************************************************/
 /*                       blastOutPut_iteration: allowing us to enter to the first node                        */
@@ -25,9 +23,9 @@ char name_species[MAX_SIZE];
 /**************************************************************************************************************/
 void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer)
 {
-// Declare the three node allowing us to browse the XML FILE
-    xmlNode *node, *root= xmlDocGetRootElement(fichier),*child= root->children;
-//WE LOOK FOR EACH NODE TO GET THE LENGTH, THE DEF OF THE QUERY, THE DEFINITION OF BLAST
+    // Declare the three node allowing us to browse the XML FILE
+    xmlNode *node, *root = xmlDocGetRootElement(fichier), *child = root->children;
+    // WE LOOK FOR EACH NODE TO GET THE LENGTH, THE DEF OF THE QUERY, THE DEFINITION OF BLAST
     char speciesName[MIN_SIZE];
     int query_length = 0;
     for (node = child; node; node = node->next)
@@ -41,27 +39,28 @@ void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer)
             query_length = atoi((const char *)xmlNodeGetContent(node));
         }
     }
-//WE DISPLAY THE INFOS OF THE SPECIES
+    // WE DISPLAY THE INFOS OF THE SPECIES
     displayQuerySpecies(speciesName, buffer);
-    fprintf(output, "\t\t\"hits\": [\n\t\t"); 
-// We initialize it to BlastOutput_iteration
+    fprintf(output, "\t\t\"hits\": [\n");
+    // We initialize it to BlastOutput_iteration
     const char *BLASTOUTPUT_NODE_NAME = "BlastOutput_iterations";
-//PATH OF SUBNODES
+    // PATH OF SUBNODES
+    // ici on remplit la structure pour diminuer le nombre d'argument!
     for (node = child; node; node = node->next)
     {
-//CHECK IF WE'RE IN BLASTOUTPUT-ITERATIONS
+        // CHECK IF WE'RE IN BLASTOUTPUT-ITERATIONS
         if (strcmp(BLASTOUTPUT_NODE_NAME, (const char *)node->name) == 0)
         {
             xmlNode *childnode = node->children;
-//BLASTOUTPUT SUBNODES
+            // BLASTOUTPUT SUBNODES
             for (child = childnode; child; child = child->next)
             {
-//we initialize ITERATION :it's the beginning of blast analysis
+                // we initialize ITERATION :it's the beginning of blast analysis
                 const char *ITERATION = "Iteration";
                 if (strcmp(ITERATION, (const char *)child->name) == 0)
                 {
-//ITERATION SUBNODES
-                    node_Iteration(child, mode, buffer, query_length); 
+                    // ITERATION SUBNODES
+                    node_Iteration(child, mode, buffer, query_length);
                 }
             }
         }
@@ -80,27 +79,30 @@ void node_Iteration(xmlNode *node, char *mode, char *buffer, int query_length)
 {
     xmlNode *child;
     const char *iteration = "Iteration_hits", *hit = "Hit";
-//CHILD = SOUS-NOEUD DU NODE
+    // CHILD = SOUS-NOEUD DU NODE
     child = node->children;
-//PARCOURS DES SOUS-NOEUD
+    // PARCOURS DES SOUS-NOEUD
     for (node = child; node; node = node->next)
     {
-// check if we're on the node "iteration_hits"
+        // check if we're on the node "iteration_hits"
         if (strcmp(iteration, (const char *)node->name) == 0)
         {
-//CHILDNODE = SUBNODES OF CHILD
+            // CHILDNODE = SUBNODES OF CHILD
             xmlNode *childNode = node->children;
-//Initialisation de la structure
+            // Initialisation de la structure
             SpeciesInfo *speciesInfo = fillStructure(buffer);
+            //créer une autre structure avec la lignée mais vide
+            FillSpeciesInfo *fillInfo = NULL; 
+           //récupérer la taille du tableau de structure printf("size de fillInfo est %ld", sizeof(fillInfo) / sizeof(struct FillSpeciesInfo));
             for (child = childNode; child; child = child->next)
             {
-// check if we're on the node "iteration_hits"
+                // check if we're on the node "iteration_hits"
                 if (strcmp(hit, (const char *)child->name) == 0)
                 {
-//ENTRER DANS L'HSP
+                    // ENTRER DANS L'HSP
                     char *hitAccession = getHitAccession(child);
-                    char *espece= getSpecies(child);
-                    node_HSP(child, mode, hitAccession, espece, query_length, speciesInfo); //essayer de réduire à 4 arguments!
+                    char *espece = getSpecies(child);
+                    node_HSP(child, mode, hitAccession, espece, query_length, speciesInfo, fillInfo); // essayer de réduire à 4 arguments!
                 }
             }
         }
@@ -145,8 +147,8 @@ char *getSpecies(xmlNode *node)
             content = (char *)xmlNodeGetContent(node);
         }
     }
-//we're getting just the name of the species (between [ ])
-//optionnal : add for loop if the species name is after 'OS'
+    // we're getting just the name of the species (between [ ])
+    // optionnal : add for loop if the species name is after 'OS'
     int debut = 0, fin = 0;
     for (int i = 0; i < strlen(content); i++)
     {
@@ -180,86 +182,96 @@ char *getSpecies(xmlNode *node)
 /**           : buffer : taxonomy.dat                                                                         */
 /**           : query_length : length of the query                                                            */
 /**************************************************************************************************************/
-void node_HSP(xmlNode *node, char *mode, char *hit_id, char *species, int query_length, SpeciesInfo *speciesInfo) // ajout du file taxo
+void node_HSP(xmlNode *node, char *mode, char *hit_id, char *species, int query_length, SpeciesInfo *speciesInfo, FillSpeciesInfo *fillInfo) // ajout du file taxo
 {
-    //CHILD = SOUS-NOEUD DU NODE 
+    // CHILD = SOUS-NOEUD DU NODE
     xmlNode *child = node->children;
-    const char *name = "Hit_hsps", *name2= "Hsp";
+    const char *name = "Hit_hsps", *name2 = "Hsp";
 
     for (node = child; node; node = node->next)
     {
         if (strcmp(name, (const char *)node->name) == 0)
         {
-//CHILDNODE = SOUS-NOEUD DE NODE
+            // CHILDNODE = SOUS-NOEUD DE NODE
             xmlNode *childNode = node->children;
-            for (child = childNode; child; child=child->next)
+            for (child = childNode; child; child = child->next)
             {
-//NOEUD DANS LEQUEL ON SE TROUVE = HSP 
+                // NOEUD DANS LEQUEL ON SE TROUVE = HSP
                 if (strcmp(name2, (char *)child->name) == 0)
                 {
                     if (strcmp(name_hit, "") == 0)
                     {
-                        fprintf(output, "\t\t{\n\t\t\t\t\"hit_accession\" : \"%s\",\n", hit_id);
+                        fprintf(output, "\t\t\t{\n\t\t\t\t\"hit_accession\" : \"%s\",\n", hit_id);
                         strcpy(name_hit, hit_id);
                     }
                     else
                     {
-                        fprintf(output, "\t\t,{\n\t\t\t\t\"hit_accession\" : \"%s\",\n", hit_id);
+                        fprintf(output, "\t\t\t,{\n\t\t\t\t\"hit_accession\" : \"%s\",\n", hit_id);
                     }
-                    fprintf(output, "\t\t\t\t\"species\": [\n\t\t\t\t {\n");
+                    fprintf(output, "\t\t\t\t\"species\":\n\t\t\t\t {\n");
+                    //vérifier dans le fillInfo
+                    if(fillInfo==NULL){
+                        
+            
+                    }
+                    else{
+                        //trouver la taille de fillInfo
+                    }
                     if(strcmp(species, name_species)==0){
                         //printf("on passe ici ? %s \n", name_species);
                         fprintf(output, "%s\n", stockSPECIES);
-                        
                     }
                     else{
-                        for(int i =0; i<SPECIES_SIZE-1; i++){ //test
-                            if(strcmp(speciesInfo[i].name, species)==0){
-                                //printf("%s\n", speciesInfo[i].name);
+                        for (int i = 0; i < SPECIES_SIZE - 1; i++)
+                        {
+                            if (strcmp(speciesInfo[i].name, species) == 0)
+                            {
+                                // printf("%s\n", speciesInfo[i].name);
                                 char stockage[MAXI_SIZE] = "";
                                 strcat(stockage, "\t\t\t\t\t\"name\":\"");
                                 strcat(stockage, speciesInfo[i].name);
-                                strcat(stockage,"\",\n\t\t\t\t\t\"taxid\":\"" );
-                                //mettre en string 
+                                strcat(stockage, "\",\n\t\t\t\t\t\"taxid\":\"");
+                                // mettre en string
                                 char str_id[4];
                                 sprintf(str_id, "%d", i);
                                 strcat(stockage, str_id);
-                                strcat(stockage,"\",\n\t\t\t\t\t\"rank\":\"" );
+                                strcat(stockage, "\",\n\t\t\t\t\t\"rank\":\"");
                                 strcat(stockage, speciesInfo[i].rank);
-                             //   printf("avant/Apres\n");
-                                strcat(stockage, createLineage(speciesInfo, species));
-                                fprintf(output,"%s\n", stockage);
+                                strcat(stockage, "\"\n\t\t\t\t},");
+                        //         //   printf("avant/Apres\n");
+                        //         strcat(stockage, createLineage(speciesInfo, species));
+                                fprintf(output, "%s\n", stockage);
                                 strcpy(stockSPECIES, stockage);
-                                strcpy(name_species, species);
-
+                        //         strcpy(name_species, species);
                             }
                         }
-                    }                
-                    /*****************************LASTCHILD = SOUS-NOEUD DE CHILD***************************************/
-                    xmlNode *lastchild = child->children;
-                    for (childNode = lastchild; childNode; childNode = childNode->next)
-                    {
-                        /*****************************************MODE BRONZE***********************************************/
-                        getHSP(childNode, "Hsp_num", "number of hit", 0);
-                        getHSP(childNode, "Hsp_identity", "identity", 0);
-                        getHSP(childNode, "Hsp_align-len", "align_len", query_length);
-                        getHSP(childNode, "Hsp_gaps", "gaps", 0);
-                        getHSP(childNode, "Hsp_query-from", "query_from", 0);
-                        getHSP(childNode, "Hsp_query-to", "query_to", 0);
-                        getHSP(childNode, "Hsp_hit-from", "target_from", 0);
-                        getHSP(childNode, "Hsp_hit-to", "target_to", 0);
-                        getHSP(childNode, "Hsp_positive", "positive", 0);
-                        getHSP(childNode, "Hsp_evalue", "evalue", 0);
-                        getHSP(childNode, "Hsp_score", "score", 0);
-                        getHSP(childNode, "Hsp_bit-score", "bitscore", 0);
                     }
-                    fprintf(output, "\n");
+                }
+                /*****************************LASTCHILD = SOUS-NOEUD DE CHILD***************************************/
+                xmlNode *lastchild = child->children;
+                for (childNode = lastchild; childNode; childNode = childNode->next)
+                {
+                    /*****************************************MODE BRONZE***********************************************/
+                    getHSP(childNode, "Hsp_num", "number of hit", 0);
+                    getHSP(childNode, "Hsp_identity", "identity", 0);
+                    getHSP(childNode, "Hsp_align-len", "align_len", query_length);
+                    getHSP(childNode, "Hsp_gaps", "gaps", 0);
+                    getHSP(childNode, "Hsp_query-from", "query_from", 0);
+                    getHSP(childNode, "Hsp_query-to", "query_to", 0);
+                    getHSP(childNode, "Hsp_hit-from", "target_from", 0);
+                    getHSP(childNode, "Hsp_hit-to", "target_to", 0);
+                    getHSP(childNode, "Hsp_positive", "positive", 0);
+                    getHSP(childNode, "Hsp_evalue", "evalue", 0);
+                    getHSP(childNode, "Hsp_score", "score", 0);
+                    getHSP(childNode, "Hsp_bit-score", "bitscore", 0);
                 }
             }
+            fprintf(output, "\n");
         }
     }
     free(species);
 }
+
 /**************************************************************************************************************/
 /*                              getHSP: get the Info in the XML file                                          */
 /** Parametre : node : Node where we are now                                                                  */
@@ -272,13 +284,13 @@ void getHSP(xmlNode *node, const char *name, char *label, int query_length)
     if (strcmp(name, (const char *)node->name) == 0)
     {
 
-//récupération du tfrom
+        // récupération du tfrom
         if (strcmp(name, (const char *)"Hsp_hit-from") == 0)
         {
             t_from = atoi((const char *)xmlNodeGetContent(node));
             fprintf(output, "\t\t\t\t\"%s\" : \"%s\",\n", label, xmlNodeGetContent(node));
         }
-//récupération du tto
+        // récupération du tto
         else if (strcmp(name, (const char *)"Hsp_hit-to") == 0)
         {
             t_to = atoi((const char *)xmlNodeGetContent(node));
@@ -286,14 +298,14 @@ void getHSP(xmlNode *node, const char *name, char *label, int query_length)
         }
         else if (strcmp(name, (const char *)"Hsp_align-len") == 0)
         {
-//Ajout de la query cover
+            // Ajout de la query cover
             int querycover = 100 * (t_to - t_from) / query_length;
             fprintf(output, "\t\t\t\t\"query-cover\" : \"%d\",\n", querycover);
-            fprintf(output, "\t\t\t\t\"%s\" : \"%s\"\n\t\t}", label, xmlNodeGetContent(node));
+            fprintf(output, "\t\t\t\t\"%s\" : \"%s\"\n\t\t\t}", label, xmlNodeGetContent(node));
         }
         else
         {
-//élément habituel
+            // élément habituel
             fprintf(output, "\t\t\t\t\"%s\" : \"%s\",\n", label, xmlNodeGetContent(node));
         }
     }

@@ -28,4 +28,11 @@ typedef struct SpeciesInfo
     char *othername; // on en a besoin car il y'a des espèces qui ont d'autres noms !
 } SpeciesInfo;
 
+typedef struct FillSpeciesInfo{
+    char *name; 
+    int parentid;
+    char *rank;
+    char *lineage;
+} FillSpeciesInfo;
+
 #endif
