@@ -213,7 +213,7 @@ void node_HSP(xmlNode *node, char *mode, char *hit_id, char *species, int query_
                         
                     }
                     else{
-                        for(int i =0; i<SPECIES_SIZE-1; i++){
+                        for(int i =0; i<SPECIES_SIZE-1; i++){ //test
                             if(strcmp(speciesInfo[i].name, species)==0){
                                 //printf("%s\n", speciesInfo[i].name);
                                 char stockage[MAXI_SIZE] = "";
