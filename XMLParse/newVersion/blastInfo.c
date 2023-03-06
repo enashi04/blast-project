@@ -37,13 +37,14 @@ void getBlastDB(xmlNode *node)
 /**            : species : name of the query's species (complete name)                                        */
 /**************************************************************************************************************/
 void getQueryDef(xmlNode *node, char species[MIN_SIZE]){ // ajouter une autre variable pour récupérer le nom de la query
-    const char *name = "BlastOutput_query-def";
+    const char *name = "Iteration_query-def";
     char *query_def;
     if(strcmp(name, (const char *)node->name) == 0)
     {
         query_def = (char *)xmlNodeGetContent(node);
+        printf("la query est %s\n", query_def);
         strcpy(species, query_def);
-        fprintf(output, "\t\"blast_output\":[\n\t {\n\t\t\"query-name\" : \"%s\",\n", xmlNodeGetContent(node));
+        fprintf(output, "{\n\t\t\"query-name\" : \"%s\",\n", xmlNodeGetContent(node));
     }
 }
 
@@ -52,10 +53,10 @@ void getQueryDef(xmlNode *node, char species[MIN_SIZE]){ // ajouter une autre va
 /*                         getQuerySpeciesName: name of the query's species                                   */
 /** Parameters : species : name of the query's species                                                        */
 /**************************************************************************************************************/
-char *getQuerySpeciesName(char *species)
+char *getQuerySpeciesName(char *query_Species)
 {
     char content[MIN_SIZE];
-    strcpy(content, species);
+    strcpy(content, query_Species);
     int len = strlen(content); //pb
     int start = 0, end = 0;
     for (int i = 0; i < len; i++)
@@ -82,6 +83,40 @@ char *getQuerySpeciesName(char *species)
     return strdup(name_species);
 }
 
+/**************************************************************************************************************/
+/*                         getQuerySpeciesName: id of the query's species                                     */
+/** Parameters : species : query's species                                                                    */
+/**************************************************************************************************************/
+char *getQuerySpeciesID(char *query_Species){
+    char content[MIN_SIZE];
+    strcpy(content, query_Species);
+    int len = strlen(content); //pb
+    int start = 0, end = 0;
+    for (int i = 0; i < len; i++)
+    {
+
+        if ((content[i] == 'O' && content[i + 1] == 'X') ) //pb
+        {
+            start = i + 2;
+        }
+
+         if ((content[i] == 'G' && content[i + 1] == 'N') ) //pb
+        {
+            end = i - 1;
+            break;
+        }
+    }
+    char id[MIN_SIZE];
+    int j = 0;
+    for (int i = start + 1; i < end; i++)
+    {
+        id[j] = content[i];
+        j++;
+    }
+    id[j] = '\0';
+    return strdup(id);
+}
+
 /// @brief
 /// @param species
 /// @param buffer
@@ -90,9 +125,12 @@ char *getQuerySpeciesName(char *species)
 /** Parameters : species : name of the query's species                                                        */
 /**            : buffer : taxonomy.dat                                                                        */
 /**************************************************************************************************************/
-void displayQuerySpecies(char *species, char *buffer)
+void displayQuerySpecies(char *query_species)
 {
-    char *querySpeciesName = getQuerySpeciesName(species);
+    char *querySpeciesName = getQuerySpeciesName(query_species);
+    char *id_Species = getQuerySpeciesID(query_species);
+    printf("le nom est %s et id est %s\n", querySpeciesName, id_Species);
+
     char speciesName[MIN_SIZE];
     int queryNameLen= strlen(querySpeciesName);
     int j =0;
@@ -106,21 +144,8 @@ void displayQuerySpecies(char *species, char *buffer)
         speciesName[i]=querySpeciesName[i];
     }
     speciesName[j]='\0';
-    char *line = strtok(strdup(buffer), "\n");
-    char id_species[MIN_SIZE], name_species[MIN_SIZE];
-
-    while (line != NULL)
-    {
-        sscanf(line, "%[^	] %*[^	] %[^	] %*[^	] %*[^	] %*[^	] %*[^	] %*[^	] %*[^	] %*[^\n]", id_species, name_species);
-        if (strcmp(speciesName, name_species) == 0)
-        {
-            fprintf(output, "\t\t\"species\": {\n");
-            fprintf(output, "\t\t\t\"taxid\" : \"%s\",\n\t\t\t\"name\" : \"%s\"\n\t\t},\n", id_species, querySpeciesName);
-
-            break;
-        }
-        line = strtok(NULL, "\n");
-    }
+    fprintf(output, "\t\t\"species\": {\n");
+    fprintf(output, "\t\t\t\"taxid\" : \"%s\",\n\t\t\t\"name\" : \"%s\"\n\t\t},\n", id_Species, querySpeciesName);
     free(querySpeciesName);
     
 }

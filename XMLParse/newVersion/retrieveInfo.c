@@ -32,20 +32,14 @@ void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer)
     {
         getBlastVersion(node);
         getBlastDB(node);
-        getQueryDef(node, speciesName);
-        if (strcmp("BlastOutput_query-len", (const char *)node->name) == 0)
-        {
-            fprintf(output, "\t\t\"query-length\" : \"%s\",\n", xmlNodeGetContent(node));
-            query_length = atoi((const char *)xmlNodeGetContent(node));
-        }
-    }
+    }  
+    //remplissage de la structure speciesInfo
+    SpeciesInfo *speciesInfo = fillStructure(buffer);
+
+    fprintf(output, "\t\"blast_output\":[\n\t ");
     // WE DISPLAY THE INFOS OF THE SPECIES
-    displayQuerySpecies(speciesName, buffer);
-    fprintf(output, "\t\t\"hits\": [\n");
-    // We initialize it to BlastOutput_iteration
     const char *BLASTOUTPUT_NODE_NAME = "BlastOutput_iterations";
     // PATH OF SUBNODES
-    // ici on remplit la structure pour diminuer le nombre d'argument!
     for (node = child; node; node = node->next)
     {
         // CHECK IF WE'RE IN BLASTOUTPUT-ITERATIONS
@@ -59,8 +53,21 @@ void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer)
                 const char *ITERATION = "Iteration";
                 if (strcmp(ITERATION, (const char *)child->name) == 0)
                 {
+                    xmlNode *childrenNode = child->children;
+                    for(childnode=childrenNode; childnode; childnode=childnode->next){
+                        getQueryDef(childnode, speciesName);
+                        if (strcmp("Iteration_query-len", (const char *)childnode->name) == 0)
+                        {
+                            fprintf(output, "\t\t\"query-length\" : \"%s\",\n", xmlNodeGetContent(childnode));
+                            query_length = atoi((const char *)xmlNodeGetContent(childnode));
+                        }
+                    }
+                    //ici qu'on récupère les informations et non blastoutout
+                    displayQuerySpecies(speciesName);
                     // ITERATION SUBNODES
-                    node_Iteration(child, mode, buffer, query_length);
+                    fprintf(output, "\t\t\"hits\": [\n");
+                    // We initialize it to BlastOutput_iteration
+                    node_Iteration(child, mode, speciesInfo, query_length);
                 }
             }
         }
@@ -75,7 +82,7 @@ void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer)
 /**             query_length :get the length                                                                  */
 /**             buffer : taxonomy.dat                                                                         */
 /**************************************************************************************************************/
-void node_Iteration(xmlNode *node, char *mode, char *buffer, int query_length)
+void node_Iteration(xmlNode *node, char *mode, SpeciesInfo *speciesInfo, int query_length)
 {
     xmlNode *child;
     const char *iteration = "Iteration_hits", *hit = "Hit";
@@ -89,20 +96,16 @@ void node_Iteration(xmlNode *node, char *mode, char *buffer, int query_length)
         {
             // CHILDNODE = SUBNODES OF CHILD
             xmlNode *childNode = node->children;
-            // Initialisation de la structure
-            SpeciesInfo *speciesInfo = fillStructure(buffer);
+           
             //créer une autre structure avec la lignée mais vide
             FillSpeciesInfo *fillInfo = NULL; 
-           //récupérer la taille du tableau de structure printf("size de fillInfo est %ld", sizeof(fillInfo) / sizeof(struct FillSpeciesInfo));
             for (child = childNode; child; child = child->next)
             {
                 // check if we're on the node "iteration_hits"
                 if (strcmp(hit, (const char *)child->name) == 0)
                 {
                     // ENTRER DANS L'HSP
-                    char *hitAccession = getHitAccession(child);
-                    char *espece = getSpecies(child);
-                    node_HSP(child, mode, hitAccession, espece, query_length, speciesInfo, fillInfo); // essayer de réduire à 4 arguments!
+                    node_HSP(child, mode, query_length, speciesInfo, fillInfo); // essayer de réduire à 4 arguments!
                 }
             }
         }
@@ -182,8 +185,10 @@ char *getSpecies(xmlNode *node)
 /**           : buffer : taxonomy.dat                                                                         */
 /**           : query_length : length of the query                                                            */
 /**************************************************************************************************************/
-void node_HSP(xmlNode *node, char *mode, char *hit_id, char *species, int query_length, SpeciesInfo *speciesInfo, FillSpeciesInfo *fillInfo) // ajout du file taxo
+void node_HSP(xmlNode *node, char *mode,int query_length, SpeciesInfo *speciesInfo, FillSpeciesInfo *fillInfo) // ajout du file taxo
 {
+    char *hit_id = getHitAccession(node);
+    char *species = getSpecies(node);
     // CHILD = SOUS-NOEUD DU NODE
     xmlNode *child = node->children;
     const char *name = "Hit_hsps", *name2 = "Hsp";
@@ -208,44 +213,34 @@ void node_HSP(xmlNode *node, char *mode, char *hit_id, char *species, int query_
                     {
                         fprintf(output, "\t\t\t,{\n\t\t\t\t\"hit_accession\" : \"%s\",\n", hit_id);
                     }
-                    fprintf(output, "\t\t\t\t\"species\":\n\t\t\t\t {\n");
-                    //vérifier dans le fillInfo
-                    if(fillInfo==NULL){
-                        
-            
-                    }
-                    else{
-                        //trouver la taille de fillInfo
-                    }
-                    if(strcmp(species, name_species)==0){
-                        //printf("on passe ici ? %s \n", name_species);
-                        fprintf(output, "%s\n", stockSPECIES);
-                    }
-                    else{
-                        for (int i = 0; i < SPECIES_SIZE - 1; i++)
-                        {
-                            if (strcmp(speciesInfo[i].name, species) == 0)
-                            {
-                                // printf("%s\n", speciesInfo[i].name);
-                                char stockage[MAXI_SIZE] = "";
-                                strcat(stockage, "\t\t\t\t\t\"name\":\"");
-                                strcat(stockage, speciesInfo[i].name);
-                                strcat(stockage, "\",\n\t\t\t\t\t\"taxid\":\"");
-                                // mettre en string
-                                char str_id[4];
-                                sprintf(str_id, "%d", i);
-                                strcat(stockage, str_id);
-                                strcat(stockage, "\",\n\t\t\t\t\t\"rank\":\"");
-                                strcat(stockage, speciesInfo[i].rank);
-                                strcat(stockage, "\"\n\t\t\t\t},");
-                        //         //   printf("avant/Apres\n");
-                        //         strcat(stockage, createLineage(speciesInfo, species));
-                                fprintf(output, "%s\n", stockage);
-                                strcpy(stockSPECIES, stockage);
-                        //         strcpy(name_species, species);
-                            }
-                        }
-                    }
+                    // if(strcmp(species, name_species)==0){
+                    //     //printf("on passe ici ? %s \n", name_species);
+                    //     fprintf(output, "%s\n", stockSPECIES);
+                    // }
+                    // else{
+                    // for (int i = 0; i < SPECIES_SIZE - 1; i++)
+                    // {
+                    //     if (strcmp(speciesInfo[i].name, species) == 0)
+                    //     {
+                    //         // printf("%s\n", speciesInfo[i].name);
+                    //         char stockage[MAXI_SIZE] = "";
+                    //         strcpy(stockage, "\t\t\t\t\t\"name\":\"");
+                    //         strcat(stockage, speciesInfo[i].name);
+                    //         strcat(stockage, "\",\n\t\t\t\t\t\"taxid\":\"");
+                    //         // mettre en string
+                    //         char str_id[4];
+                    //         sprintf(str_id, "%d", i);
+                    //         strcat(stockage, str_id);
+                    //         strcat(stockage, "\",\n\t\t\t\t\t\"rank\":\"");
+                    //         strcat(stockage, speciesInfo[i].rank);
+                    //         strcat(stockage, "\"\n\t\t\t\t},");
+                    // //         strcat(stockage, createLineage(speciesInfo, species));
+                    //         fprintf(output, "%s\n", stockage);
+                    //         strcpy(stockSPECIES, stockage);
+                    // //         strcpy(name_species, species);
+                    //     }
+                    // }
+                    // }
                 }
                 /*****************************LASTCHILD = SOUS-NOEUD DE CHILD***************************************/
                 xmlNode *lastchild = child->children;

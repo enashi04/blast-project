@@ -16,10 +16,11 @@ void getQueryDef(xmlNode *node, char species[MIN_SIZE]);
 //char *retrieveDef(xmlNode *node);
 // int getQueryLength(xmlNode *node);
 char *getQuerySpeciesName(char *species);
+char *getQuerySpeciesID(char *species);
 
 char *getRank(char *line);
 
-void displayQuerySpecies(char *species, char *buffer);
+void displayQuerySpecies(char *species);
 char *getParentName(char *id_parent_species, char *buffer);
 
 #endif
