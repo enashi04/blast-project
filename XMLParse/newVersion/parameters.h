@@ -21,7 +21,7 @@ typedef struct SpeciesInfo
 
 typedef struct FillSpeciesInfo{
     char *name; 
-    char *parent;
+   //char *parent;
     char *rank;
     char *lineage;
     int id;

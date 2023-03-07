@@ -61,7 +61,7 @@ char *getLineage(SpeciesInfo *speciesInfo, int id, char lineage[MAX_SIZE], int p
 
     if (speciesInfo[id].parentid == 0)
     {
-        char lignee2[MAXI_SIZE] = "\",\n\t\t\t\t\t\"parent\":\"";
+        char lignee2[MAXI_SIZE] = "\t\t\t\t\t\"parent\":\"";
         strcat(lignee2, speciesInfo[parentTarget].name);
         strcat(lignee2, "\",\n\t\t\t\t\t\"lineage\":[\n\t\t\t\t\t {\n\t\t\t\t\t\t\"taxid\":\"1\"");
         strcat(lignee2, ",\n\t\t\t\t\t\t\"name\":\"root\"\n\t\t\t\t\t },\n");

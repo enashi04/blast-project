@@ -43,7 +43,7 @@ void getQueryDef(xmlNode *node, char species[MIN_SIZE]){ // ajouter une autre va
     {
         query_def = (char *)xmlNodeGetContent(node);
         strcpy(species, query_def);
-        fprintf(output, "{\n\t\t\"query-name\" : \"%s\",\n", xmlNodeGetContent(node));
+        fprintf(output, "\t {\n\t\t\"query-name\" : \"%s\",\n", xmlNodeGetContent(node));
     }
 }
 
