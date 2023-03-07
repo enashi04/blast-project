@@ -1,0 +1,2580 @@
+{
+	"blast-version" : "BLASTP 2.13.0+",
+	"db" : "nr",
+	"blast_output":[
+	 {
+		"query-name" : "sp|P69905|HBA_HUMAN Hemoglobin subunit alpha OS=Homo sapiens OX=9606 GN=HBA2 PE=1 SV=2",
+		"query-length" : "142",
+		"species": {
+			"taxid" : "9606",
+			"name" : "Homo sapiens"
+		},
+		"hits": [
+{
+		"query-name" : "sp|P68871|HBB_HUMAN Hemoglobin subunit beta OS=Homo sapiens OX=9606 GN=HBB PE=1 SV=2",
+		"query-length" : "147",
+		"species": {
+			"taxid" : "9606",
+			"name" : "Homo sapiens"
+		},
+		"hits": [
+			{
+				"hit_accession" : "AAX37051",
+				"species" : {
+					"name":"synthetic construct",
+					"taxid":"32630",
+					"rank":"species",
+					"parent":"artificial sequences"
+				},
+				"number of hit" : "1",
+				"bitscore" : "301.597",
+				"score" : "771",
+				"evalue" : "4.64373e-103",
+				"query_from" : "1",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "147",
+				"identity" : "147",
+				"positive" : "147",
+				"gaps" : "0",
+				"query-cover" : "99",
+				"align_len" : "147"
+			}
+			,{
+				"hit_accession" : "AAX29557",
+				"species" : {
+					"name":"synthetic construct",
+					"taxid":"32630",
+					"rank":"species",
+					"parent":"artificial sequences"
+				},
+				"number of hit" : "1",
+				"bitscore" : "301.597",
+				"score" : "771",
+				"evalue" : "5.01458e-103",
+				"query_from" : "1",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "147",
+				"identity" : "147",
+				"positive" : "147",
+				"gaps" : "0",
+				"query-cover" : "99",
+				"align_len" : "147"
+			}
+			,{
+				"hit_accession" : "NP_000509",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "301.212",
+				"score" : "770",
+				"evalue" : "6.51638e-103",
+				"query_from" : "1",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "147",
+				"identity" : "147",
+				"positive" : "147",
+				"gaps" : "0",
+				"query-cover" : "99",
+				"align_len" : "147"
+			}
+			,{
+				"hit_accession" : "XP_018891709",
+				"species" : {
+					"name":"Gorilla gorilla gorilla",
+					"taxid":"9595",
+					"rank":"subspecies",
+					"parent":"Gorilla gorilla"
+				},
+				"number of hit" : "1",
+				"bitscore" : "300.056",
+				"score" : "767",
+				"evalue" : "2.27734e-102",
+				"query_from" : "1",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "147",
+				"identity" : "146",
+				"positive" : "147",
+				"gaps" : "0",
+				"query-cover" : "99",
+				"align_len" : "147"
+			}
+			,{
+				"hit_accession" : "AAN84548",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "299.671",
+				"score" : "766",
+				"evalue" : "2.43237e-102",
+				"query_from" : "1",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "147",
+				"identity" : "146",
+				"positive" : "147",
+				"gaps" : "0",
+				"query-cover" : "99",
+				"align_len" : "147"
+			}
+			,{
+				"hit_accession" : "ACU56984",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "299.671",
+				"score" : "766",
+				"evalue" : "2.43237e-102",
+				"query_from" : "1",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "147",
+				"identity" : "146",
+				"positive" : "147",
+				"gaps" : "0",
+				"query-cover" : "99",
+				"align_len" : "147"
+			}
+			,{
+				"hit_accession" : "AAZ39780",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "299.671",
+				"score" : "766",
+				"evalue" : "2.43237e-102",
+				"query_from" : "1",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "147",
+				"identity" : "146",
+				"positive" : "147",
+				"gaps" : "0",
+				"query-cover" : "99",
+				"align_len" : "147"
+			}
+			,{
+				"hit_accession" : "AAD19696",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "299.671",
+				"score" : "766",
+				"evalue" : "3.16543e-102",
+				"query_from" : "1",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "147",
+				"identity" : "146",
+				"positive" : "146",
+				"gaps" : "0",
+				"query-cover" : "99",
+				"align_len" : "147"
+			}
+			,{
+				"hit_accession" : "AKI70610",
+				"species" : {
+					"name":"synthetic construct",
+					"taxid":"32630",
+					"rank":"species",
+					"parent":"artificial sequences"
+				},
+				"number of hit" : "1",
+				"bitscore" : "299.671",
+				"score" : "766",
+				"evalue" : "3.16543e-102",
+				"query_from" : "1",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "147",
+				"identity" : "146",
+				"positive" : "146",
+				"gaps" : "0",
+				"query-cover" : "99",
+				"align_len" : "147"
+			}
+			,{
+				"hit_accession" : "AKI70611",
+				"species" : {
+					"name":"synthetic construct",
+					"taxid":"32630",
+					"rank":"species",
+					"parent":"artificial sequences"
+				},
+				"number of hit" : "1",
+				"bitscore" : "299.286",
+				"score" : "765",
+				"evalue" : "4.59731e-102",
+				"query_from" : "1",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "147",
+				"identity" : "146",
+				"positive" : "146",
+				"gaps" : "0",
+				"query-cover" : "99",
+				"align_len" : "147"
+			}
+			,{
+				"hit_accession" : "1A3N_B",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "298.901",
+				"score" : "764",
+				"evalue" : "4.6927e-102",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "146",
+				"positive" : "146",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "QBH68124",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "298.901",
+				"score" : "764",
+				"evalue" : "6.11562e-102",
+				"query_from" : "1",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "147",
+				"identity" : "146",
+				"positive" : "146",
+				"gaps" : "0",
+				"query-cover" : "99",
+				"align_len" : "147"
+			}
+			,{
+				"hit_accession" : "AKI70608",
+				"species" : {
+					"name":"synthetic construct",
+					"taxid":"32630",
+					"rank":"species",
+					"parent":"artificial sequences"
+				},
+				"number of hit" : "1",
+				"bitscore" : "298.901",
+				"score" : "764",
+				"evalue" : "6.25135e-102",
+				"query_from" : "1",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "147",
+				"identity" : "146",
+				"positive" : "146",
+				"gaps" : "0",
+				"query-cover" : "99",
+				"align_len" : "147"
+			}
+			,{
+				"hit_accession" : "AAA88054",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "298.901",
+				"score" : "764",
+				"evalue" : "6.25135e-102",
+				"query_from" : "1",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "147",
+				"identity" : "146",
+				"positive" : "146",
+				"gaps" : "0",
+				"query-cover" : "99",
+				"align_len" : "147"
+			}
+			,{
+				"hit_accession" : "7K4M_B",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "298.901",
+				"score" : "764",
+				"evalue" : "6.32938e-102",
+				"query_from" : "1",
+				"query_to" : "147",
+				"target_from" : "2",
+				"target_to" : "148",
+				"identity" : "146",
+				"positive" : "146",
+				"gaps" : "0",
+				"query-cover" : "99",
+				"align_len" : "147"
+			}
+			,{
+				"hit_accession" : "AKI70609",
+				"species" : {
+					"name":"synthetic construct",
+					"taxid":"32630",
+					"rank":"species",
+					"parent":"artificial sequences"
+				},
+				"number of hit" : "1",
+				"bitscore" : "298.516",
+				"score" : "763",
+				"evalue" : "8.40769e-102",
+				"query_from" : "1",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "147",
+				"identity" : "146",
+				"positive" : "146",
+				"gaps" : "0",
+				"query-cover" : "99",
+				"align_len" : "147"
+			}
+			,{
+				"hit_accession" : "2YRS_B",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "298.516",
+				"score" : "763",
+				"evalue" : "9.06635e-102",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "145",
+				"positive" : "146",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "1A0U_B",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "297.745",
+				"score" : "761",
+				"evalue" : "1.33128e-101",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "145",
+				"positive" : "146",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "4MQG_B",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "297.745",
+				"score" : "761",
+				"evalue" : "1.33128e-101",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "145",
+				"positive" : "146",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "1HDB_B",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "297.745",
+				"score" : "761",
+				"evalue" : "1.37585e-101",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "145",
+				"positive" : "145",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "1DXV_B",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "297.745",
+				"score" : "761",
+				"evalue" : "1.42191e-101",
+				"query_from" : "3",
+				"query_to" : "147",
+				"target_from" : "2",
+				"target_to" : "146",
+				"identity" : "145",
+				"positive" : "145",
+				"gaps" : "0",
+				"query-cover" : "97",
+				"align_len" : "145"
+			}
+			,{
+				"hit_accession" : "5E29_B",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "297.745",
+				"score" : "761",
+				"evalue" : "1.56737e-101",
+				"query_from" : "3",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "145",
+				"identity" : "145",
+				"positive" : "145",
+				"gaps" : "0",
+				"query-cover" : "97",
+				"align_len" : "145"
+			}
+			,{
+				"hit_accession" : "AAL68978",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "297.745",
+				"score" : "761",
+				"evalue" : "1.66041e-101",
+				"query_from" : "1",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "147",
+				"identity" : "146",
+				"positive" : "146",
+				"gaps" : "0",
+				"query-cover" : "99",
+				"align_len" : "147"
+			}
+			,{
+				"hit_accession" : "1NQP_B",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "297.36",
+				"score" : "760",
+				"evalue" : "1.91238e-101",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "145",
+				"positive" : "146",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "1K1K_B",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "297.36",
+				"score" : "760",
+				"evalue" : "1.91238e-101",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "145",
+				"positive" : "146",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "AAN11320",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "296.975",
+				"score" : "759",
+				"evalue" : "3.03657e-101",
+				"query_from" : "1",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "147",
+				"identity" : "145",
+				"positive" : "146",
+				"gaps" : "0",
+				"query-cover" : "99",
+				"align_len" : "147"
+			}
+			,{
+				"hit_accession" : "XP_002822173",
+				"species" : {
+					"name":"Pongo abelii",
+					"taxid":"9601",
+					"rank":"species",
+					"parent":"Pongo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "296.975",
+				"score" : "759",
+				"evalue" : "3.38884e-101",
+				"query_from" : "1",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "147",
+				"identity" : "145",
+				"positive" : "145",
+				"gaps" : "0",
+				"query-cover" : "99",
+				"align_len" : "147"
+			}
+			,{
+				"hit_accession" : "1Y85_B",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "296.975",
+				"score" : "759",
+				"evalue" : "3.45448e-101",
+				"query_from" : "2",
+				"query_to" : "146",
+				"target_from" : "1",
+				"target_to" : "145",
+				"identity" : "145",
+				"positive" : "145",
+				"gaps" : "0",
+				"query-cover" : "97",
+				"align_len" : "145"
+			}
+			,{
+				"hit_accession" : "1Y22_B",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "296.975",
+				"score" : "759",
+				"evalue" : "3.73549e-101",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "144",
+				"positive" : "145",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "1O1O_B",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "296.59",
+				"score" : "758",
+				"evalue" : "3.81839e-101",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "144",
+				"positive" : "146",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "AAA35966",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "296.59",
+				"score" : "758",
+				"evalue" : "4.55775e-101",
+				"query_from" : "1",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "147",
+				"identity" : "145",
+				"positive" : "145",
+				"gaps" : "0",
+				"query-cover" : "99",
+				"align_len" : "147"
+			}
+			,{
+				"hit_accession" : "1Y35_B",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "296.204",
+				"score" : "757",
+				"evalue" : "5.54561e-101",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "144",
+				"positive" : "146",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "1Y5F_B",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "296.204",
+				"score" : "757",
+				"evalue" : "6.25725e-101",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "144",
+				"positive" : "145",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "1A00_B",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "296.204",
+				"score" : "757",
+				"evalue" : "6.39612e-101",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "144",
+				"positive" : "146",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "1HBS_B",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "296.204",
+				"score" : "757",
+				"evalue" : "7.5408e-101",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "145",
+				"positive" : "145",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "5SW7_B",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "295.819",
+				"score" : "756",
+				"evalue" : "8.05411e-101",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "144",
+				"positive" : "145",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "1ABW_B",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "295.819",
+				"score" : "756",
+				"evalue" : "9.28934e-101",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "144",
+				"positive" : "145",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "1CMY_B",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "295.819",
+				"score" : "756",
+				"evalue" : "9.39186e-101",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "145",
+				"positive" : "145",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "AAK29639",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "295.819",
+				"score" : "756",
+				"evalue" : "1.01559e-100",
+				"query_from" : "1",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "147",
+				"identity" : "145",
+				"positive" : "145",
+				"gaps" : "0",
+				"query-cover" : "99",
+				"align_len" : "147"
+			}
+			,{
+				"hit_accession" : "1Y7C_B",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "295.434",
+				"score" : "755",
+				"evalue" : "1.10727e-100",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "144",
+				"positive" : "145",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "1Y45_B",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "295.434",
+				"score" : "755",
+				"evalue" : "1.10727e-100",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "144",
+				"positive" : "145",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "6HBW_B",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "295.434",
+				"score" : "755",
+				"evalue" : "1.14433e-100",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "145",
+				"positive" : "145",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "1O1I_B",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "295.434",
+				"score" : "755",
+				"evalue" : "1.16973e-100",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "144",
+				"positive" : "145",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "5JDO_F",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "295.434",
+				"score" : "755",
+				"evalue" : "1.19247e-100",
+				"query_from" : "3",
+				"query_to" : "146",
+				"target_from" : "1",
+				"target_to" : "144",
+				"identity" : "144",
+				"positive" : "144",
+				"gaps" : "0",
+				"query-cover" : "97",
+				"align_len" : "144"
+			}
+			,{
+				"hit_accession" : "1Y2Z_B",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "295.434",
+				"score" : "755",
+				"evalue" : "1.19569e-100",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "144",
+				"positive" : "145",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "3QJC_B",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "295.434",
+				"score" : "755",
+				"evalue" : "1.24935e-100",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "145",
+				"positive" : "145",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "1HBA_B",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "295.434",
+				"score" : "755",
+				"evalue" : "1.31983e-100",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "145",
+				"positive" : "145",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "2HHE_B",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "295.434",
+				"score" : "755",
+				"evalue" : "1.36216e-100",
+				"query_from" : "4",
+				"query_to" : "147",
+				"target_from" : "2",
+				"target_to" : "145",
+				"identity" : "144",
+				"positive" : "144",
+				"gaps" : "0",
+				"query-cover" : "97",
+				"align_len" : "144"
+			}
+			,{
+				"hit_accession" : "1BUW_B",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "295.434",
+				"score" : "755",
+				"evalue" : "1.47294e-100",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "145",
+				"positive" : "145",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "1Y5J_B",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "295.434",
+				"score" : "755",
+				"evalue" : "1.52225e-100",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "144",
+				"positive" : "145",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "1Y4R_B",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "295.049",
+				"score" : "754",
+				"evalue" : "1.53905e-100",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "144",
+				"positive" : "145",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "1Y4Q_B",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "295.049",
+				"score" : "754",
+				"evalue" : "1.53905e-100",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "144",
+				"positive" : "145",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "3NL7_B",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "295.049",
+				"score" : "754",
+				"evalue" : "1.55603e-100",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "145",
+				"positive" : "145",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "1Y4V_B",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "295.049",
+				"score" : "754",
+				"evalue" : "1.62587e-100",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "144",
+				"positive" : "145",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "1Y5K_B",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "295.049",
+				"score" : "754",
+				"evalue" : "1.68029e-100",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "144",
+				"positive" : "145",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "1O1K_B",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "295.049",
+				"score" : "754",
+				"evalue" : "1.71759e-100",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "144",
+				"positive" : "145",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "1Y7Z_B",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "295.049",
+				"score" : "754",
+				"evalue" : "1.73654e-100",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "144",
+				"positive" : "145",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "1Y7G_B",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "295.049",
+				"score" : "754",
+				"evalue" : "1.73654e-100",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "144",
+				"positive" : "145",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "1Y31_B",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "295.049",
+				"score" : "754",
+				"evalue" : "2.06991e-100",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "144",
+				"positive" : "145",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "ACD39349",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "294.664",
+				"score" : "753",
+				"evalue" : "2.21081e-100",
+				"query_from" : "1",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "146",
+				"positive" : "146",
+				"gaps" : "1",
+				"query-cover" : "98",
+				"align_len" : "147"
+			}
+			,{
+				"hit_accession" : "XP_004090697",
+				"species" : {
+					"name":"Nomascus leucogenys",
+					"taxid":"61853",
+					"rank":"species",
+					"parent":"Nomascus"
+				},
+				"number of hit" : "1",
+				"bitscore" : "295.049",
+				"score" : "754",
+				"evalue" : "2.23827e-100",
+				"query_from" : "1",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "147",
+				"identity" : "144",
+				"positive" : "144",
+				"gaps" : "0",
+				"query-cover" : "99",
+				"align_len" : "147"
+			}
+			,{
+				"hit_accession" : "1GBV_B",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "294.664",
+				"score" : "753",
+				"evalue" : "2.3613e-100",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "145",
+				"positive" : "145",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "XP_033062959",
+				"species" : {
+					"name":"Trachypithecus francoisi",
+					"taxid":"54180",
+					"rank":"species",
+					"parent":"Trachypithecus"
+				},
+				"number of hit" : "1",
+				"bitscore" : "294.664",
+				"score" : "753",
+				"evalue" : "2.66795e-100",
+				"query_from" : "1",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "147",
+				"identity" : "143",
+				"positive" : "145",
+				"gaps" : "0",
+				"query-cover" : "99",
+				"align_len" : "147"
+			}
+			,{
+				"hit_accession" : "1Y7D_B",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "294.278",
+				"score" : "752",
+				"evalue" : "3.14112e-100",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "144",
+				"positive" : "145",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "P02025",
+				"species" : {
+					"name":"Hylobates lar",
+					"taxid":"9580",
+					"rank":"species",
+					"parent":"Hylobates"
+				},
+				"number of hit" : "1",
+				"bitscore" : "294.278",
+				"score" : "752",
+				"evalue" : "3.31831e-100",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "144",
+				"positive" : "144",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "1A01_B",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "294.278",
+				"score" : "752",
+				"evalue" : "3.35493e-100",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "144",
+				"positive" : "145",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "1J7W_B",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "294.278",
+				"score" : "752",
+				"evalue" : "3.70326e-100",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "143",
+				"positive" : "144",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "1Y83_B",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "294.278",
+				"score" : "752",
+				"evalue" : "3.95534e-100",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "144",
+				"positive" : "145",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "1RQA_B",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "294.278",
+				"score" : "752",
+				"evalue" : "4.2712e-100",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "144",
+				"positive" : "145",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "0404170B",
+				"species" : {
+					"name":"Pongo pygmaeus",
+					"taxid":"9600",
+					"rank":"species",
+					"parent":"Pongo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "293.893",
+				"score" : "751",
+				"evalue" : "4.41417e-100",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "144",
+				"positive" : "144",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "1Y4G_B",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "293.893",
+				"score" : "751",
+				"evalue" : "4.71465e-100",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "144",
+				"positive" : "145",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "1Y4B_B",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "293.893",
+				"score" : "751",
+				"evalue" : "5.87193e-100",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "144",
+				"positive" : "145",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "AAR96398",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "293.508",
+				"score" : "750",
+				"evalue" : "8.53948e-100",
+				"query_from" : "1",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "147",
+				"identity" : "144",
+				"positive" : "144",
+				"gaps" : "0",
+				"query-cover" : "99",
+				"align_len" : "147"
+			}
+			,{
+				"hit_accession" : "1O1P_B",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "293.123",
+				"score" : "749",
+				"evalue" : "1.21164e-99",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "143",
+				"positive" : "144",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "XP_017717110",
+				"species" : {
+					"name":"Rhinopithecus bieti",
+					"taxid":"61621",
+					"rank":"species",
+					"parent":"Rhinopithecus"
+				},
+				"number of hit" : "1",
+				"bitscore" : "293.123",
+				"score" : "749",
+				"evalue" : "1.22666e-99",
+				"query_from" : "1",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "147",
+				"identity" : "142",
+				"positive" : "145",
+				"gaps" : "0",
+				"query-cover" : "99",
+				"align_len" : "147"
+			}
+			,{
+				"hit_accession" : "6NBC_B",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "291.967",
+				"score" : "746",
+				"evalue" : "2.63089e-99",
+				"query_from" : "2",
+				"query_to" : "144",
+				"target_from" : "1",
+				"target_to" : "143",
+				"identity" : "143",
+				"positive" : "143",
+				"gaps" : "0",
+				"query-cover" : "96",
+				"align_len" : "143"
+			}
+			,{
+				"hit_accession" : "1GBU_B",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "291.967",
+				"score" : "746",
+				"evalue" : "2.64119e-99",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "144",
+				"positive" : "144",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "P02032",
+				"species" : {
+					"name":"Semnopithecus entellus",
+					"taxid":"88029",
+					"rank":"species",
+					"parent":"Semnopithecus"
+				},
+				"number of hit" : "1",
+				"bitscore" : "291.967",
+				"score" : "746",
+				"evalue" : "2.7296e-99",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "142",
+				"positive" : "144",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "NP_001316847",
+				"species" : {
+					"name":"Chlorocebus sabaeus",
+					"taxid":"60711",
+					"rank":"species",
+					"parent":"Chlorocebus"
+				},
+				"number of hit" : "1",
+				"bitscore" : "291.967",
+				"score" : "746",
+				"evalue" : "3.01701e-99",
+				"query_from" : "1",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "147",
+				"identity" : "141",
+				"positive" : "144",
+				"gaps" : "0",
+				"query-cover" : "99",
+				"align_len" : "147"
+			}
+			,{
+				"hit_accession" : "XP_011818991",
+				"species" : {
+					"name":"Colobus angolensis palliatus",
+					"taxid":"336983",
+					"rank":"subspecies",
+					"parent":"Colobus angolensis"
+				},
+				"number of hit" : "1",
+				"bitscore" : "291.582",
+				"score" : "745",
+				"evalue" : "4.78373e-99",
+				"query_from" : "1",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "147",
+				"identity" : "141",
+				"positive" : "145",
+				"gaps" : "0",
+				"query-cover" : "99",
+				"align_len" : "147"
+			}
+			,{
+				"hit_accession" : "XP_010361646",
+				"species" : {
+					"name":"Rhinopithecus roxellana",
+					"taxid":"61622",
+					"rank":"species",
+					"parent":"Rhinopithecus"
+				},
+				"number of hit" : "1",
+				"bitscore" : "290.812",
+				"score" : "743",
+				"evalue" : "9.34365e-99",
+				"query_from" : "1",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "147",
+				"identity" : "141",
+				"positive" : "144",
+				"gaps" : "0",
+				"query-cover" : "99",
+				"align_len" : "147"
+			}
+			,{
+				"hit_accession" : "AYO89363",
+				"species" : {
+					"name":"Erythrocebus patas",
+					"taxid":"9538",
+					"rank":"species",
+					"parent":"Erythrocebus"
+				},
+				"number of hit" : "1",
+				"bitscore" : "290.426",
+				"score" : "742",
+				"evalue" : "1.07765e-98",
+				"query_from" : "1",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "147",
+				"identity" : "140",
+				"positive" : "143",
+				"gaps" : "0",
+				"query-cover" : "99",
+				"align_len" : "147"
+			}
+			,{
+				"hit_accession" : "Q6WN22",
+				"species" : {
+					"name":"Ateles paniscus",
+					"taxid":"9510",
+					"rank":"species",
+					"parent":"Ateles"
+				},
+				"number of hit" : "1",
+				"bitscore" : "290.041",
+				"score" : "741",
+				"evalue" : "1.7087e-98",
+				"query_from" : "1",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "147",
+				"identity" : "141",
+				"positive" : "143",
+				"gaps" : "0",
+				"query-cover" : "99",
+				"align_len" : "147"
+			}
+			,{
+				"hit_accession" : "AYO89367",
+				"species" : {
+					"name":"Miopithecus talapoin",
+					"taxid":"36231",
+					"rank":"species",
+					"parent":"Miopithecus"
+				},
+				"number of hit" : "1",
+				"bitscore" : "290.041",
+				"score" : "741",
+				"evalue" : "1.72756e-98",
+				"query_from" : "1",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "147",
+				"identity" : "140",
+				"positive" : "143",
+				"gaps" : "0",
+				"query-cover" : "99",
+				"align_len" : "147"
+			}
+			,{
+				"hit_accession" : "P68232",
+				"species" : {
+					"name":"Ateles geoffroyi",
+					"taxid":"9509",
+					"rank":"species",
+					"parent":"Ateles"
+				},
+				"number of hit" : "1",
+				"bitscore" : "289.656",
+				"score" : "740",
+				"evalue" : "2.9579e-98",
+				"query_from" : "1",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "147",
+				"identity" : "141",
+				"positive" : "143",
+				"gaps" : "0",
+				"query-cover" : "99",
+				"align_len" : "147"
+			}
+			,{
+				"hit_accession" : "NP_001292888",
+				"species" : {
+					"name":"Cercocebus atys",
+					"taxid":"9531",
+					"rank":"species",
+					"parent":"Cercocebus"
+				},
+				"number of hit" : "1",
+				"bitscore" : "289.271",
+				"score" : "739",
+				"evalue" : "3.26498e-98",
+				"query_from" : "1",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "147",
+				"identity" : "140",
+				"positive" : "143",
+				"gaps" : "0",
+				"query-cover" : "99",
+				"align_len" : "147"
+			}
+			,{
+				"hit_accession" : "Q6WN27",
+				"species" : {
+					"name":"Pithecia pithecia",
+					"taxid":"43777",
+					"rank":"species",
+					"parent":"Pithecia"
+				},
+				"number of hit" : "1",
+				"bitscore" : "289.271",
+				"score" : "739",
+				"evalue" : "3.52569e-98",
+				"query_from" : "1",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "147",
+				"identity" : "141",
+				"positive" : "143",
+				"gaps" : "0",
+				"query-cover" : "99",
+				"align_len" : "147"
+			}
+			,{
+				"hit_accession" : "Q6WN25",
+				"species" : {
+					"name":"Lagothrix lagotricha",
+					"taxid":"9519",
+					"rank":"species",
+					"parent":"Lagothrix"
+				},
+				"number of hit" : "1",
+				"bitscore" : "289.271",
+				"score" : "739",
+				"evalue" : "3.5646e-98",
+				"query_from" : "1",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "147",
+				"identity" : "141",
+				"positive" : "143",
+				"gaps" : "0",
+				"query-cover" : "99",
+				"align_len" : "147"
+			}
+			,{
+				"hit_accession" : "P02028",
+				"species" : {
+					"name":"Chlorocebus aethiops",
+					"taxid":"9534",
+					"rank":"species",
+					"parent":"Chlorocebus"
+				},
+				"number of hit" : "1",
+				"bitscore" : "289.271",
+				"score" : "739",
+				"evalue" : "3.67913e-98",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "140",
+				"positive" : "143",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "XP_002754937",
+				"species" : {
+					"name":"Callithrix jacchus",
+					"taxid":"9483",
+					"rank":"species",
+					"parent":"Callithrix"
+				},
+				"number of hit" : "1",
+				"bitscore" : "288.5",
+				"score" : "737",
+				"evalue" : "7.19536e-98",
+				"query_from" : "1",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "147",
+				"identity" : "142",
+				"positive" : "142",
+				"gaps" : "0",
+				"query-cover" : "99",
+				"align_len" : "147"
+			}
+			,{
+				"hit_accession" : "AYO89361",
+				"species" : {
+					"name":"Lophocebus albigena",
+					"taxid":"75567",
+					"rank":"species",
+					"parent":"Lophocebus"
+				},
+				"number of hit" : "1",
+				"bitscore" : "288.5",
+				"score" : "737",
+				"evalue" : "7.76992e-98",
+				"query_from" : "1",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "147",
+				"identity" : "140",
+				"positive" : "144",
+				"gaps" : "0",
+				"query-cover" : "99",
+				"align_len" : "147"
+			}
+			,{
+				"hit_accession" : "5HU6_B",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "288.115",
+				"score" : "736",
+				"evalue" : "8.60655e-98",
+				"query_from" : "3",
+				"query_to" : "143",
+				"target_from" : "1",
+				"target_to" : "141",
+				"identity" : "141",
+				"positive" : "141",
+				"gaps" : "0",
+				"query-cover" : "95",
+				"align_len" : "141"
+			}
+			,{
+				"hit_accession" : "NP_001157900",
+				"species" : {
+					"name":"Macaca mulatta",
+					"taxid":"9544",
+					"rank":"species",
+					"parent":"Macaca"
+				},
+				"number of hit" : "1",
+				"bitscore" : "288.115",
+				"score" : "736",
+				"evalue" : "9.3636e-98",
+				"query_from" : "1",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "147",
+				"identity" : "139",
+				"positive" : "143",
+				"gaps" : "0",
+				"query-cover" : "99",
+				"align_len" : "147"
+			}
+			,{
+				"hit_accession" : "XP_032096415",
+				"species" : {
+					"name":"Sapajus apella",
+					"taxid":"9515",
+					"rank":"species",
+					"parent":"Sapajus"
+				},
+				"number of hit" : "1",
+				"bitscore" : "288.115",
+				"score" : "736",
+				"evalue" : "1.07995e-97",
+				"query_from" : "1",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "147",
+				"identity" : "140",
+				"positive" : "141",
+				"gaps" : "0",
+				"query-cover" : "99",
+				"align_len" : "147"
+			}
+			,{
+				"hit_accession" : "ACA53486",
+				"species" : {
+					"name":"Plecturocebus moloch",
+					"taxid":"9523",
+					"rank":"species",
+					"parent":"Plecturocebus"
+				},
+				"number of hit" : "1",
+				"bitscore" : "288.115",
+				"score" : "736",
+				"evalue" : "1.23197e-97",
+				"query_from" : "1",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "147",
+				"identity" : "140",
+				"positive" : "143",
+				"gaps" : "0",
+				"query-cover" : "99",
+				"align_len" : "147"
+			}
+			,{
+				"hit_accession" : "XP_012312232",
+				"species" : {
+					"name":"Aotus nancymaae",
+					"taxid":"37293",
+					"rank":"species",
+					"parent":"Aotus"
+				},
+				"number of hit" : "1",
+				"bitscore" : "288.115",
+				"score" : "736",
+				"evalue" : "1.23197e-97",
+				"query_from" : "1",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "147",
+				"identity" : "140",
+				"positive" : "143",
+				"gaps" : "0",
+				"query-cover" : "99",
+				"align_len" : "147"
+			}
+			,{
+				"hit_accession" : "Q6WN21",
+				"species" : {
+					"name":"Callimico goeldii",
+					"taxid":"9495",
+					"rank":"species",
+					"parent":"Callimico"
+				},
+				"number of hit" : "1",
+				"bitscore" : "287.73",
+				"score" : "735",
+				"evalue" : "1.5684e-97",
+				"query_from" : "1",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "147",
+				"identity" : "140",
+				"positive" : "141",
+				"gaps" : "0",
+				"query-cover" : "99",
+				"align_len" : "147"
+			}
+			,{
+				"hit_accession" : "XP_023065381",
+				"species" : {
+					"name":"Piliocolobus tephrosceles",
+					"taxid":"591936",
+					"rank":"species",
+					"parent":"Piliocolobus"
+				},
+				"number of hit" : "1",
+				"bitscore" : "286.96",
+				"score" : "733",
+				"evalue" : "3.16586e-97",
+				"query_from" : "1",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "147",
+				"identity" : "139",
+				"positive" : "143",
+				"gaps" : "0",
+				"query-cover" : "99",
+				"align_len" : "147"
+			}
+			,{
+				"hit_accession" : "AYO89360",
+				"species" : {
+					"name":"Alouatta sara",
+					"taxid":"121123",
+					"rank":"species",
+					"parent":"Alouatta"
+				},
+				"number of hit" : "1",
+				"bitscore" : "286.96",
+				"score" : "733",
+				"evalue" : "3.23612e-97",
+				"query_from" : "1",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "147",
+				"identity" : "140",
+				"positive" : "142",
+				"gaps" : "0",
+				"query-cover" : "99",
+				"align_len" : "147"
+			}
+			,{
+				"hit_accession" : "C24693",
+				"species" : {
+					"name":"Macaca arctoides",
+					"taxid":"9540",
+					"rank":"species",
+					"parent":"Macaca"
+				},
+				"number of hit" : "1",
+				"bitscore" : "286.574",
+				"score" : "732",
+				"evalue" : "3.98136e-97",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "139",
+				"positive" : "142",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "NP_001162318",
+				"species" : {
+					"name":"Papio anubis",
+					"taxid":"9555",
+					"rank":"species",
+					"parent":"Papio"
+				},
+				"number of hit" : "1",
+				"bitscore" : "286.189",
+				"score" : "731",
+				"evalue" : "5.13102e-97",
+				"query_from" : "1",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "147",
+				"identity" : "139",
+				"positive" : "143",
+				"gaps" : "0",
+				"query-cover" : "99",
+				"align_len" : "147"
+			}
+			,{
+				"hit_accession" : "P02033",
+				"species" : {
+					"name":"Piliocolobus badius",
+					"taxid":"164648",
+					"rank":"species",
+					"parent":"Piliocolobus"
+				},
+				"number of hit" : "1",
+				"bitscore" : "286.189",
+				"score" : "731",
+				"evalue" : "6.31266e-97",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "139",
+				"positive" : "143",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "P02036",
+				"species" : {
+					"name":"Saimiri sciureus",
+					"taxid":"9521",
+					"rank":"species",
+					"parent":"Saimiri"
+				},
+				"number of hit" : "1",
+				"bitscore" : "286.189",
+				"score" : "731",
+				"evalue" : "6.75083e-97",
+				"query_from" : "1",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "147",
+				"identity" : "139",
+				"positive" : "143",
+				"gaps" : "0",
+				"query-cover" : "99",
+				"align_len" : "147"
+			}
+			,{
+				"hit_accession" : "AYO89368",
+				"species" : {
+					"name":"Leontocebus fuscicollis",
+					"taxid":"9487",
+					"rank":"species",
+					"parent":"Leontocebus"
+				},
+				"number of hit" : "1",
+				"bitscore" : "286.189",
+				"score" : "731",
+				"evalue" : "6.97679e-97",
+				"query_from" : "1",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "147",
+				"identity" : "139",
+				"positive" : "142",
+				"gaps" : "0",
+				"query-cover" : "99",
+				"align_len" : "147"
+			}
+			,{
+				"hit_accession" : "XP_017362775",
+				"species" : {
+					"name":"Cebus imitator",
+					"taxid":"2715852",
+					"rank":"species",
+					"parent":"Cebus"
+				},
+				"number of hit" : "1",
+				"bitscore" : "285.804",
+				"score" : "730",
+				"evalue" : "7.28987e-97",
+				"query_from" : "1",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "147",
+				"identity" : "139",
+				"positive" : "140",
+				"gaps" : "0",
+				"query-cover" : "99",
+				"align_len" : "147"
+			}
+			,{
+				"hit_accession" : "P18985",
+				"species" : {
+					"name":"Mico argentatus",
+					"taxid":"9482",
+					"rank":"species",
+					"parent":"Mico"
+				},
+				"number of hit" : "1",
+				"bitscore" : "285.804",
+				"score" : "730",
+				"evalue" : "8.39718e-97",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "141",
+				"positive" : "141",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "P08259",
+				"species" : {
+					"name":"Mandrillus sphinx",
+					"taxid":"9561",
+					"rank":"species",
+					"parent":"Mandrillus"
+				},
+				"number of hit" : "1",
+				"bitscore" : "285.804",
+				"score" : "730",
+				"evalue" : "8.87083e-97",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "138",
+				"positive" : "142",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "Q6WN29",
+				"species" : {
+					"name":"Alouatta belzebul",
+					"taxid":"30590",
+					"rank":"species",
+					"parent":"Alouatta"
+				},
+				"number of hit" : "1",
+				"bitscore" : "285.804",
+				"score" : "730",
+				"evalue" : "9.5912e-97",
+				"query_from" : "1",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "147",
+				"identity" : "140",
+				"positive" : "142",
+				"gaps" : "0",
+				"query-cover" : "99",
+				"align_len" : "147"
+			}
+			,{
+				"hit_accession" : "XP_011818992",
+				"species" : {
+					"name":"Colobus angolensis palliatus",
+					"taxid":"336983",
+					"rank":"subspecies",
+					"parent":"Colobus angolensis"
+				},
+				"number of hit" : "1",
+				"bitscore" : "285.419",
+				"score" : "729",
+				"evalue" : "1.1184e-96",
+				"query_from" : "1",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "147",
+				"identity" : "138",
+				"positive" : "143",
+				"gaps" : "0",
+				"query-cover" : "99",
+				"align_len" : "147"
+			}
+			,{
+				"hit_accession" : "XP_001162045",
+				"species" : {
+					"name":"Pan troglodytes",
+					"taxid":"9598",
+					"rank":"species",
+					"parent":"Pan"
+				},
+				"number of hit" : "1",
+				"bitscore" : "285.419",
+				"score" : "729",
+				"evalue" : "1.13074e-96",
+				"query_from" : "1",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "147",
+				"identity" : "138",
+				"positive" : "142",
+				"gaps" : "0",
+				"query-cover" : "99",
+				"align_len" : "147"
+			}
+			,{
+				"hit_accession" : "P02026",
+				"species" : {
+					"name":"Macaca mulatta",
+					"taxid":"9544",
+					"rank":"species",
+					"parent":"Macaca"
+				},
+				"number of hit" : "1",
+				"bitscore" : "285.419",
+				"score" : "729",
+				"evalue" : "1.19303e-96",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "138",
+				"positive" : "142",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "610523A",
+				"species" : {
+					"name":"Homo sapiens",
+					"taxid":"9606",
+					"rank":"species",
+					"parent":"Homo"
+				},
+				"number of hit" : "1",
+				"bitscore" : "285.419",
+				"score" : "729",
+				"evalue" : "1.33141e-96",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "137",
+				"positive" : "146",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "P02039",
+				"species" : {
+					"name":"Leontocebus fuscicollis",
+					"taxid":"9487",
+					"rank":"species",
+					"parent":"Leontocebus"
+				},
+				"number of hit" : "1",
+				"bitscore" : "285.419",
+				"score" : "729",
+				"evalue" : "1.40651e-96",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "139",
+				"positive" : "142",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "P02035",
+				"species" : {
+					"name":"Aotus trivirgatus",
+					"taxid":"9505",
+					"rank":"species",
+					"parent":"Aotus"
+				},
+				"number of hit" : "1",
+				"bitscore" : "285.034",
+				"score" : "728",
+				"evalue" : "1.6582e-96",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "139",
+				"positive" : "142",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "P02031",
+				"species" : {
+					"name":"Cercocebus atys",
+					"taxid":"9531",
+					"rank":"species",
+					"parent":"Cercocebus"
+				},
+				"number of hit" : "1",
+				"bitscore" : "285.034",
+				"score" : "728",
+				"evalue" : "1.69499e-96",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "139",
+				"positive" : "140",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "P02040",
+				"species" : {
+					"name":"Cebus albifrons",
+					"taxid":"9514",
+					"rank":"species",
+					"parent":"Cebus"
+				},
+				"number of hit" : "1",
+				"bitscore" : "285.034",
+				"score" : "728",
+				"evalue" : "1.73261e-96",
+				"query_from" : "2",
+				"query_to" : "147",
+				"target_from" : "1",
+				"target_to" : "146",
+				"identity" : "139",
+				"positive" : "140",
+				"gaps" : "0",
+				"query-cover" : "98",
+				"align_len" : "146"
+			}
+			,{
+				"hit_accession" : "XP_025213811",
+				"species" : {
+					"name":"Theropithecus gelada",
+					"taxid":"9565",
+					"rank":"species",
+					"parent":"Theropithecus"
+	

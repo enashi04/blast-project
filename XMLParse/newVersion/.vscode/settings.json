@@ -21,7 +21,11 @@
     "extractmotifs.h": "c",
     "test.C": "cpp",
     "tree.h": "c",
-    "ucnv.h": "c"
+    "ucnv.h": "c",
+    "array": "c",
+    "string_view": "c",
+    "initializer_list": "c",
+    "utility": "c"
   },
   "C_Cpp.errorSquiggles": "disabled",
   "C_Cpp_Runner.cCompilerPath": "gcc",

@@ -20,10 +20,10 @@ typedef struct SpeciesInfo
 } SpeciesInfo;
 
 typedef struct FillSpeciesInfo{
-    char name[MIN_SIZE]; 
-    char parent[MIN_SIZE];
-    char rank[MIN_SIZE];
-    char lineage[MAXI_SIZE];
+    char *name; 
+    char *parent;
+    char *rank;
+    char *lineage;
     int id;
 } FillSpeciesInfo;
 
