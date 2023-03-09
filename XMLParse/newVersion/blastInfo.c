@@ -43,7 +43,7 @@ void getQueryDef(xmlNode *node, char species[MIN_SIZE]){ // ajouter une autre va
     {
         query_def = (char *)xmlNodeGetContent(node);
         strcpy(species, query_def);
-        fprintf(output, "\t {\n\t\t\"query-name\" : \"%s\",\n", xmlNodeGetContent(node));
+        fprintf(output, " \t{\n\t\t\"query-name\" : \"%s\",\n", xmlNodeGetContent(node));
     }
 }
 
@@ -201,27 +201,3 @@ char *getQuerySpeciesId(char *species, char *buffer)
     }
     return taxid;
 }
-
-
-// /// @brief 
-// /// @param id_parent_species 
-// /// @param buffer 
-// /// @return parent
-// char *getParentName(char *id_parent_species, char *buffer)
-// {
-//     char *line = strtok(strdup(buffer), "\n");
-
-//     while (line != NULL)
-//     {
-//         char id_species[MIN_SIZE], name_species[MIN_SIZE];
-
-//         sscanf(line, "%[^	] %*[^	] %[^	] %*[^	] %*[^	] %*[^	] %*[^	] %*[^	] %*[^	] %*[^\n]", id_species, name_species);
-//         if (strcmp(id_parent_species, id_species) == 0)
-//         {
-//             //printf("le parent est %s\n", name_species);
-//             return strdup(name_species);
-//         }
-//         line = strtok(NULL, "\n");
-//     }
-//     return "";
-// }

@@ -37,7 +37,7 @@ int main(int argc, char **argv){
 
     blastOutPut_iteration(f, mode, buffer);
 
-    fprintf(output, "\t],\n");
+    // //fprintf(output, "\t],\n");
     // if(strcmp(mode, "gold")==0){
     //     //XMLBLAST
     //     printf("Here we go");
@@ -45,9 +45,8 @@ int main(int argc, char **argv){
     //     FILE *output1 = fopen("output.blastp", "w");
     //     xmlNode  *root= xmlDocGetRootElement(xmlfile),*child = root->children;
     //     blastInfo(xmlfile, output1, child);
-    //     printf("on arrive ic ??\n");
-    //     //faire appel au ballast
-    //     //system("../../BAL-LAST/code/./ballast -p output.blastp -o outputTest");
+    //      //faire appel au ballast
+    //     system("../../BAL-LAST/code/./ballast -p output.blastp -o outputTest");
         
     // // //Récupération des motifs depuis le fichier puis l'afficher dans le fichier initial
     //     char *blastFile = makebuffer("outputTest.motifs");
@@ -55,6 +54,5 @@ int main(int argc, char **argv){
     //     fprintf(output,"%s\n\t\t}\n\t]\n}",extractmotif);
     // }
  
-    //bingo fin! 
 
 }

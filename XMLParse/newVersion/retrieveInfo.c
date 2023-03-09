@@ -106,7 +106,7 @@ void node_Iteration(xmlNode *node, char *mode, SpeciesInfo *speciesInfo, int que
             }
         }
     }
-    fprintf(output, "\t\t]\n},\n\t");
+    fprintf(output, "\t\t]\n\t },\n");
 }
 
 /**************************************************************************************************************/
@@ -264,6 +264,7 @@ void node_HSP(xmlNode *node, char *mode,int query_length, SpeciesInfo *speciesIn
                             }
                         }
                     }
+                    fprintf(output,"\n\t\t\t\t},\n");
                 }
                 /*****************************LASTCHILD = SOUS-NOEUD DE CHILD***************************************/
                 xmlNode *lastchild = child->children;
