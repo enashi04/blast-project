@@ -169,29 +169,6 @@ char *getRank(char *line)
     return strdup(rank_species);
 }
 
-/// @brief 
-/// @param id_parent_species 
-/// @param buffer 
-/// @return parent
-char *getParentName(char *id_parent_species, char *buffer)
-{
-    char *line = strtok(strdup(buffer), "\n");
-
-    while (line != NULL)
-    {
-        char id_species[MIN_SIZE], name_species[MIN_SIZE];
-
-        sscanf(line, "%[^	] %*[^	] %[^	] %*[^	] %*[^	] %*[^	] %*[^	] %*[^	] %*[^	] %*[^\n]", id_species, name_species);
-        if (strcmp(id_parent_species, id_species) == 0)
-        {
-            //printf("le parent est %s\n", name_species);
-            return strdup(name_species);
-        }
-        line = strtok(NULL, "\n");
-    }
-    return "";
-
-}
 //récupérer l'id de cette espèce
 char *getQuerySpeciesId(char *species, char *buffer)
 {
@@ -224,3 +201,27 @@ char *getQuerySpeciesId(char *species, char *buffer)
     }
     return taxid;
 }
+
+
+// /// @brief 
+// /// @param id_parent_species 
+// /// @param buffer 
+// /// @return parent
+// char *getParentName(char *id_parent_species, char *buffer)
+// {
+//     char *line = strtok(strdup(buffer), "\n");
+
+//     while (line != NULL)
+//     {
+//         char id_species[MIN_SIZE], name_species[MIN_SIZE];
+
+//         sscanf(line, "%[^	] %*[^	] %[^	] %*[^	] %*[^	] %*[^	] %*[^	] %*[^	] %*[^	] %*[^\n]", id_species, name_species);
+//         if (strcmp(id_parent_species, id_species) == 0)
+//         {
+//             //printf("le parent est %s\n", name_species);
+//             return strdup(name_species);
+//         }
+//         line = strtok(NULL, "\n");
+//     }
+//     return "";
+// }

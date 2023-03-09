@@ -5,6 +5,7 @@
 #include "blastInfo.h"
 #include "fillStructure.h"
 
+
 /// @brief Stock the taxonomy file in memory
 /// @param buffer
 /// @param filename
@@ -34,7 +35,6 @@ char *makebuffer(char *filename)
     buffer[fileSize] = '\0';
     return buffer;
 }
-
 // char *getParent(SpeciesInfo *speciesInfo, int id){
 //     char *parent =NULL;
 //     for(int i =0; i<FILE_SIZE -1; i++){
@@ -75,10 +75,24 @@ char *getLineage(SpeciesInfo *speciesInfo, int id, char lineage[MAX_SIZE], int p
     return strdup(lineage);
 }
 
-char *createLineage(SpeciesInfo *speciesInfo, char *species)
+char *createLineage(SpeciesInfo *speciesInfo, char *species, Hashmap *hashmap)//faire appel à la hashmap ici
 {
     char *lineage = malloc(sizeof(char) * MAXI_SIZE);
-    for (int i = 0; i < SPECIES_SIZE; i++)
+    int index = get(hashmap, species);
+    strcpy(lineage, "\t\t\t\t\t {\n\t\t\t\t\t\t\"taxid\":\"");
+    char str_i[MIN_SIZE];
+    sprintf(str_i, "%d", index);
+    strcat(lineage, str_i);
+    strcat(lineage, "\",\n\t\t\t\t\t\t\"name\":\"");
+    strcat(lineage, speciesInfo[index].name);
+    strcat(lineage, "\"\n\t\t\t\t\t }\n\t\t\t\t\t]\n\t\t\t\t}],");
+    char *returnLineage = getLineage(speciesInfo, speciesInfo[index].parentid, lineage, speciesInfo[index].parentid);
+    strcpy(lineage, returnLineage);
+    return strdup(lineage);
+}
+
+/*
+ for (int i = 0; i < SPECIES_SIZE; i++)
     {
         char *espece = (char *)malloc(sizeof(char) * MIN_SIZE);
         strcpy(espece, species);
@@ -115,5 +129,4 @@ char *createLineage(SpeciesInfo *speciesInfo, char *species)
             break;
         }
     }
-    return strdup(lineage);
-}
+*/

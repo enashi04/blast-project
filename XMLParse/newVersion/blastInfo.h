@@ -8,7 +8,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "parameters.h"
-#include "lineage.h"
 
 void getBlastVersion(xmlNode *node);
 void getBlastDB(xmlNode *node);
@@ -21,6 +20,6 @@ char *getQuerySpeciesID(char *species);
 char *getRank(char *line);
 
 void displayQuerySpecies(char *species);
-char *getParentName(char *id_parent_species, char *buffer);
+//char *getParentName(char *id_parent_species, char *buffer);
 
 #endif

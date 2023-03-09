@@ -25,7 +25,13 @@
     "array": "c",
     "string_view": "c",
     "initializer_list": "c",
-    "utility": "c"
+    "utility": "c",
+    "optional": "c",
+    "istream": "c",
+    "ostream": "c",
+    "system_error": "c",
+    "tuple": "c",
+    "buffer.h": "c"
   },
   "C_Cpp.errorSquiggles": "disabled",
   "C_Cpp_Runner.cCompilerPath": "gcc",
