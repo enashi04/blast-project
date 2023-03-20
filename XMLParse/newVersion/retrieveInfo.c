@@ -20,7 +20,7 @@ int t_from = 0, t_to = 0, size_struct=0; // voir où on peut le mettre en local 
 /**             mode : Bronze, Silver, Gold                                                                   */
 /**             buffer : taxonomy.dat                                                                         */
 /**************************************************************************************************************/
-void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer)
+void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer, char tabInfo[13][2][20])
 {
     // Declare the three node allowing us to browse the XML FILE
     xmlNode *node, *root = xmlDocGetRootElement(fichier), *child = root->children;
@@ -65,7 +65,7 @@ void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer)
                         }
                     }
                     displayQuerySpecies(speciesName);
-                    node_Iteration(child, mode, speciesInfo, query_length, fillInfo, hashmap); //ajout de la hashmap
+                    node_Iteration(child, mode, speciesInfo, query_length, fillInfo, hashmap,tabInfo ); //ajout de la table d'information
                 }
             }
         }
@@ -81,7 +81,7 @@ void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer)
 /**             query_length :get the length                                                                  */
 /**             buffer : taxonomy.dat                                                                         */
 /**************************************************************************************************************/
-void node_Iteration(xmlNode *node, char *mode, SpeciesInfo *speciesInfo, int query_length, FillSpeciesInfo *fillInfo, Hashmap *hashmap)
+void node_Iteration(xmlNode *node, char *mode, SpeciesInfo *speciesInfo, int query_length, FillSpeciesInfo *fillInfo, Hashmap *hashmap, char tabInfo[13][2][20])
 {
     fprintf(output, "\t\t\"hits\": [\n");
     // CHILD = SOUS-NOEUD DU NODE
@@ -101,7 +101,7 @@ void node_Iteration(xmlNode *node, char *mode, SpeciesInfo *speciesInfo, int que
                 if (strcmp(hit, (const char *)child->name) == 0)
                 {
                     //HSP NODE
-                    node_HSP(child, mode, query_length, speciesInfo, fillInfo, hashmap); //ajout de la hashmap ici
+                    node_HSP(child, mode, query_length, speciesInfo, fillInfo, hashmap, tabInfo); //ajout de la hashmap ici
                 }
             }
         }
@@ -181,7 +181,7 @@ char *getSpecies(xmlNode *node)
 /**           : buffer : taxonomy.dat                                                                         */
 /**           : query_length : length of the query                                                            */
 /**************************************************************************************************************/
-void node_HSP(xmlNode *node, char *mode,int query_length, SpeciesInfo *speciesInfo, FillSpeciesInfo *fillInfo, Hashmap *hashmap) // ajout de la hashmap
+void node_HSP(xmlNode *node, char *mode,int query_length, SpeciesInfo *speciesInfo, FillSpeciesInfo *fillInfo, Hashmap *hashmap, char tabInfo[13][2][20]) // ajout de la hashmap
 {
     char *hit_id = getHitAccession(node),*species = getSpecies(node);
     // CHILD = SOUS-NOEUD DU NODE
@@ -207,7 +207,7 @@ void node_HSP(xmlNode *node, char *mode,int query_length, SpeciesInfo *speciesIn
                     {
                         fprintf(output, "\t\t\t,{\n\t\t\t\t\"hit_accession\" : \"%s\",\n", hit_id);
                     }
-
+                    //pour l'affichace de l'espèce
                     fprintf(output, "\t\t\t\t\"species\" : {\n");
                     //1e ajout dans la deuxieme structure
                     if(size_struct==0){
@@ -222,9 +222,10 @@ void node_HSP(xmlNode *node, char *mode,int query_length, SpeciesInfo *speciesIn
 
                                 fprintf(output, "\t\t\t\t\t\"name\":\"%s\",\n",fillInfo[0].name);
                                 fprintf(output, "\t\t\t\t\t\"taxid\":\"%u\",\n", fillInfo[0].id);
-                                fprintf(output,"\t\t\t\t\t\"rank\":\"%s\",\n",fillInfo[0].rank);
-                                fprintf(output,"%s\n",fillInfo[0].lineage);
-                            
+                                fprintf(output,"\t\t\t\t\t\"rank\":\"%s\"",fillInfo[0].rank);
+                                if(strcmp(tabInfo[0][1], "1")==0){
+                                    fprintf(output,",\n%s\n",fillInfo[0].lineage);
+                                }
                                 size_struct=1;
                                 break;
                             }
@@ -234,13 +235,16 @@ void node_HSP(xmlNode *node, char *mode,int query_length, SpeciesInfo *speciesIn
                    else if(size_struct>0){
                         int check=0;
                         for(int i=0; i<size_struct; i++){
-                                if(strcmp(fillInfo[i].name,species)==0){
-                                    fprintf(output, "\t\t\t\t\t\"name\":\"%s\",\n",fillInfo[i].name);
-                                    fprintf(output, "\t\t\t\t\t\"taxid\":\"%u\",\n",fillInfo[i].id);
-                                    fprintf(output,"\t\t\t\t\t\"rank\":\"%s\",\n",fillInfo[i].rank);
-                                    fprintf(output,"%s",fillInfo[i].lineage );
-                                check=1;
-                                break;
+                            if(strcmp(fillInfo[i].name,species)==0){
+                                fprintf(output, "\t\t\t\t\t\"name\":\"%s\",\n",fillInfo[i].name);
+                                fprintf(output, "\t\t\t\t\t\"taxid\":\"%u\",\n",fillInfo[i].id);
+                                fprintf(output,"\t\t\t\t\t\"rank\":\"%s\"",fillInfo[i].rank);
+                                if(strcmp(tabInfo[0][1], "1")==0){
+                                    fprintf(output,",\n%s",fillInfo[i].lineage );
+                                }
+                                
+                            check=1;
+                            break;
                             }
                         }
                         if(check == 0){
@@ -256,8 +260,10 @@ void node_HSP(xmlNode *node, char *mode,int query_length, SpeciesInfo *speciesIn
 
                                     fprintf(output, "\t\t\t\t\t\"name\":\"%s\",\n",fillInfo[size_struct].name);
                                     fprintf(output, "\t\t\t\t\t\"taxid\":\"%u\",\n", fillInfo[size_struct].id);
-                                    fprintf(output,"\t\t\t\t\t\"rank\":\"%s\",\n", fillInfo[size_struct].rank);
-                                   fprintf(output,"%s",fillInfo[size_struct].lineage ); //parent+lignée
+                                    fprintf(output,"\t\t\t\t\t\"rank\":\"%s\"", fillInfo[size_struct].rank);
+                                    if(strcmp(tabInfo[0][1], "1")==0){
+                                        fprintf(output,",\n%s",fillInfo[size_struct].lineage ); //parent+lignée
+                                    }
                                     size_struct++;
                                     break;
                                 }
@@ -267,24 +273,39 @@ void node_HSP(xmlNode *node, char *mode,int query_length, SpeciesInfo *speciesIn
                     fprintf(output,"\n\t\t\t\t},\n");
                 }
                 /*****************************LASTCHILD = SOUS-NOEUD DE CHILD***************************************/
+                //////ICI PARCOURS DE TABINFO
                 xmlNode *lastchild = child->children;
-                for (childNode = lastchild; childNode; childNode = childNode->next)
-                {  
-                    /*****************************************MODE BRONZE && GOLD***********************************************/
-                    getHSP(childNode, "Hsp_num", "number of hit", 0);
-                    getHSP(childNode, "Hsp_identity", "identity", 0);
-                    getHSP(childNode, "Hsp_align-len", "align_len", query_length);
-                    getHSP(childNode, "Hsp_gaps", "gaps", 0);
-                    getHSP(childNode, "Hsp_query-from", "query_from", 0);
-                    getHSP(childNode, "Hsp_query-to", "query_to", 0);
-                    getHSP(childNode, "Hsp_hit-from", "target_from", 0);
-                    getHSP(childNode, "Hsp_hit-to", "target_to", 0);
-                    getHSP(childNode, "Hsp_positive", "positive", 0);
-                    getHSP(childNode, "Hsp_evalue", "evalue", 0);
-                    getHSP(childNode, "Hsp_score", "score", 0);
-                    getHSP(childNode, "Hsp_bit-score", "bitscore", 0);
-                    /*****************************************MODE SILVER***********************************************/
+                if(strcmp(mode, "bronze")==0 || strcmp(mode, "gold")==0){   
+                    for (childNode = lastchild; childNode; childNode = childNode->next)
+                    {  
+                        for(int i =1; i<13; i++){
+                            if(strcmp(tabInfo[i][0], "Hsp_align-len")==0){
+                                getHSP(childNode,tabInfo[i][0],strstr(tabInfo[i][0],"Hsp_"),query_length);
+                            }
+                            else{
+                                getHSP(childNode,tabInfo[i][0],strstr(tabInfo[i][0],"Hsp_"),0);
+                            };
+                        }
+                    }
                 }
+                else if (strcmp(mode, "silver")==0){
+                    for (childNode = lastchild; childNode; childNode = childNode->next)
+                    {  
+                        for(int i =1; i<13; i++){
+                            if(strcmp(tabInfo[i][1],"1")==0){
+                                if(strcmp(tabInfo[i][0], "Hsp_align-len")==0){
+                                    getHSP(childNode,tabInfo[i][0],strstr(tabInfo[i][0],"Hsp_"),query_length);
+                                }
+                                else{
+                                    getHSP(childNode,tabInfo[i][0],strstr(tabInfo[i][0],"Hsp_"),0);
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+                
+               
             }
             fprintf(output, "\n");
         }
