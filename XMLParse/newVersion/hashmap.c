@@ -51,6 +51,10 @@ Hashmap *createHashMap(char *buffer)
     while (line != NULL)
     {
         sscanf(line, "%[^	]	%*[^	]	%[^	]	%*[^\n]", id_species, name_species);
+        //insertion des othernames
+        
+        // strcat(name_species, ", ");
+        // strcat(name_species, other_name_species); //on va ajouter le nom de base et les autres noms ensemble séparées par une virgule.
         insert(hashmap, name_species, atoi(id_species));
         line = strtok(NULL, "\n");
     }
@@ -65,8 +69,10 @@ int get(Hashmap *hashmap, const char *key)
     // récupérer l'élément correspondant dans le tableau
     Entry *entry = hashmap->entries[index];
     // parcourir la liste chaînée pour trouver l'élément correspondant à la clé donnée
+    //char *name_species = strtok(strdup(entry->key), ", ");
     while (entry != NULL)
     {
+        
         if (strcmp(entry->key, key) == 0)
         {
             // si l'élément correspondant est trouvé, retourner sa valeur

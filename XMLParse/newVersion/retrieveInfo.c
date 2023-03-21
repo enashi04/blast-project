@@ -83,7 +83,7 @@ void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer, char tabIn
 /**************************************************************************************************************/
 void node_Iteration(xmlNode *node, char *mode, SpeciesInfo *speciesInfo, int query_length, FillSpeciesInfo *fillInfo, Hashmap *hashmap, char tabInfo[13][2][20])
 {
-    fprintf(output, "\t\t\"hits\": [\n");
+    fprintf(output, "\t\t\"hits\": [\n ");
     // CHILD = SOUS-NOEUD DU NODE
     xmlNode *child = node->children;
     const char *iteration = "Iteration_hits", *hit = "Hit";
@@ -102,11 +102,18 @@ void node_Iteration(xmlNode *node, char *mode, SpeciesInfo *speciesInfo, int que
                 {
                     //HSP NODE
                     node_HSP(child, mode, query_length, speciesInfo, fillInfo, hashmap, tabInfo); //ajout de la hashmap ici
+                    strcpy(name_hit,"");
                 }
             }
         }
     }
-    fprintf(output, "\t\t]\n\t },\n");
+    fseek(output, -2, SEEK_END);    
+    fprintf(output, "\n\t\t]\n\t },\n");
+
+    //ajout des motifs ici si jamais on utilise le mode gold
+    if(strcmp(mode, "gold")==0){
+        printf("good");
+    }
 }
 
 /**************************************************************************************************************/
@@ -195,121 +202,124 @@ void node_HSP(xmlNode *node, char *mode,int query_length, SpeciesInfo *speciesIn
             xmlNode *childNode = node->children;
             for (child = childNode; child; child = child->next)
             {
+                if(strcmp((char *)child->name, "text")!=0){
                 // NOEUD DANS LEQUEL ON SE TROUVE = HSP
-                if (strcmp(name2, (char *)child->name) == 0)
-                {
-                    if (strcmp(name_hit, "") == 0)
+                    if (strcmp(name2, (char *)child->name) == 0)
                     {
-                        fprintf(output, "\t\t\t{\n\t\t\t\t\"hit_accession\" : \"%s\",\n", hit_id);
-                        strcpy(name_hit, hit_id);
-                    }
-                    else
-                    {
-                        fprintf(output, "\t\t\t,{\n\t\t\t\t\"hit_accession\" : \"%s\",\n", hit_id);
-                    }
-                    //pour l'affichace de l'espèce
-                    fprintf(output, "\t\t\t\t\"species\" : {\n");
-                    //1e ajout dans la deuxieme structure
-                    if(size_struct==0){
-                        for (int i = 0; i < SPECIES_SIZE - 1; i++)
+                        if (strcmp(name_hit, "") == 0)
                         {
-                            if (strcmp(speciesInfo[i].name, species) == 0)
-                            {
-                                fillInfo[0].name=speciesInfo[i].name;
-                                fillInfo[0].id=i;
-                                fillInfo[0].rank=speciesInfo[i].rank;
-                                fillInfo[0].lineage=createLineage(speciesInfo, species, hashmap);
-
-                                fprintf(output, "\t\t\t\t\t\"name\":\"%s\",\n",fillInfo[0].name);
-                                fprintf(output, "\t\t\t\t\t\"taxid\":\"%u\",\n", fillInfo[0].id);
-                                fprintf(output,"\t\t\t\t\t\"rank\":\"%s\"",fillInfo[0].rank);
-                                if(strcmp(tabInfo[0][1], "1")==0){
-                                    fprintf(output,",\n%s\n",fillInfo[0].lineage);
-                                }
-                                size_struct=1;
-                                break;
-                            }
+                            strcpy(name_hit, hit_id);
                         }
-                    }
-                    //parcours de la deuxieme structure
-                   else if(size_struct>0){
-                        int check=0;
-                        for(int i=0; i<size_struct; i++){
-                            if(strcmp(fillInfo[i].name,species)==0){
-                                fprintf(output, "\t\t\t\t\t\"name\":\"%s\",\n",fillInfo[i].name);
-                                fprintf(output, "\t\t\t\t\t\"taxid\":\"%u\",\n",fillInfo[i].id);
-                                fprintf(output,"\t\t\t\t\t\"rank\":\"%s\"",fillInfo[i].rank);
-                                if(strcmp(tabInfo[0][1], "1")==0){
-                                    fprintf(output,",\n%s",fillInfo[i].lineage );
-                                }
-                                
-                            check=1;
-                            break;
-                            }
-                        }
-                        if(check == 0){
-                            //on ajoute les infos à la position size_struct et on modifie la valeur de size_struct
+                       fprintf(output, "\t\t\t{\n\t\t\t\t\"hit_accession\" : \"%s\",\n", hit_id);
+                        //pour l'affichace de l'espèce
+                        fprintf(output, "\t\t\t\t\"species\" : {\n");
+                        //1e ajout dans la deuxieme structure
+                        if(size_struct==0){
                             for (int i = 0; i < SPECIES_SIZE - 1; i++)
                             {
                                 if (strcmp(speciesInfo[i].name, species) == 0)
                                 {
-                                    fillInfo[size_struct].name=speciesInfo[i].name;
-                                    fillInfo[size_struct].id=i;
-                                    fillInfo[size_struct].rank=speciesInfo[i].rank;
-                                    fillInfo[size_struct].lineage=createLineage(speciesInfo, species, hashmap); //ici on met la hashmap
-
-                                    fprintf(output, "\t\t\t\t\t\"name\":\"%s\",\n",fillInfo[size_struct].name);
-                                    fprintf(output, "\t\t\t\t\t\"taxid\":\"%u\",\n", fillInfo[size_struct].id);
-                                    fprintf(output,"\t\t\t\t\t\"rank\":\"%s\"", fillInfo[size_struct].rank);
+                                    fillInfo[0].name=speciesInfo[i].name;
+                                    fillInfo[0].id=i;
+                                    fillInfo[0].rank=speciesInfo[i].rank;
+                                    
+                                    fprintf(output, "\t\t\t\t\t\"name\":\"%s\",\n",fillInfo[0].name);
+                                    fprintf(output, "\t\t\t\t\t\"taxid\":\"%u\",\n", fillInfo[0].id);
+                                    fprintf(output,"\t\t\t\t\t\"rank\":\"%s\"",fillInfo[0].rank);
                                     if(strcmp(tabInfo[0][1], "1")==0){
-                                        fprintf(output,",\n%s",fillInfo[size_struct].lineage ); //parent+lignée
+                                        fillInfo[0].lineage=createLineage(speciesInfo, species, hashmap);
+                                        fprintf(output,",\n%s\n",fillInfo[0].lineage);
                                     }
-                                    size_struct++;
+                                    size_struct=1;
                                     break;
                                 }
                             }
                         }
-                    }
-                    fprintf(output,"\n\t\t\t\t},\n");
-                }
-                /*****************************LASTCHILD = SOUS-NOEUD DE CHILD***************************************/
-                //////ICI PARCOURS DE TABINFO
-                xmlNode *lastchild = child->children;
-                if(strcmp(mode, "bronze")==0 || strcmp(mode, "gold")==0){   
-                    for (childNode = lastchild; childNode; childNode = childNode->next)
-                    {  
-                        for(int i =1; i<13; i++){
-                            if(strcmp(tabInfo[i][0], "Hsp_align-len")==0){
-                                getHSP(childNode,tabInfo[i][0],strstr(tabInfo[i][0],"Hsp_"),query_length);
+                        //parcours de la deuxieme structure
+                    else if(size_struct>0){
+                            int check=0;
+                            for(int i=0; i<size_struct; i++){
+                                if(strcmp(fillInfo[i].name,species)==0){
+                                    fprintf(output, "\t\t\t\t\t\"name\":\"%s\",\n",fillInfo[i].name);
+                                    fprintf(output, "\t\t\t\t\t\"taxid\":\"%u\",\n",fillInfo[i].id);
+                                    fprintf(output,"\t\t\t\t\t\"rank\":\"%s\"",fillInfo[i].rank);
+                                    if(strcmp(tabInfo[0][1], "1")==0){
+                                        fprintf(output,",\n%s",fillInfo[i].lineage );
+                                    }
+                                    
+                                check=1;
+                                break;
+                                }
                             }
-                            else{
-                                getHSP(childNode,tabInfo[i][0],strstr(tabInfo[i][0],"Hsp_"),0);
-                            };
+                            if(check == 0){
+                                //on ajoute les infos à la position size_struct et on modifie la valeur de size_struct
+                                for (int i = 0; i < SPECIES_SIZE - 1; i++)
+                                {
+                                    if (strcmp(speciesInfo[i].name, species) == 0)
+                                    {
+                                        fillInfo[size_struct].name=speciesInfo[i].name;
+                                        fillInfo[size_struct].id=i;
+                                        fillInfo[size_struct].rank=speciesInfo[i].rank;
+
+                                        fprintf(output, "\t\t\t\t\t\"name\":\"%s\",\n",fillInfo[size_struct].name);
+                                        fprintf(output, "\t\t\t\t\t\"taxid\":\"%u\",\n", fillInfo[size_struct].id);
+                                        fprintf(output,"\t\t\t\t\t\"rank\":\"%s\"", fillInfo[size_struct].rank);
+                                        if(strcmp(tabInfo[0][1], "1")==0){
+                                            fillInfo[size_struct].lineage=createLineage(speciesInfo, species, hashmap); //ici on met la hashmap
+                                            fprintf(output,",\n%s",fillInfo[size_struct].lineage ); //parent+lignée
+                                        }
+                                        size_struct++;
+                                        break;
+                                    }
+                                }
+                            }
                         }
+                        fprintf(output,"\n\t\t\t\t},");
                     }
-                }
-                else if (strcmp(mode, "silver")==0){
-                    for (childNode = lastchild; childNode; childNode = childNode->next)
-                    {  
-                        for(int i =1; i<13; i++){
-                            if(strcmp(tabInfo[i][1],"1")==0){
+                    /*****************************LASTCHILD = SOUS-NOEUD DE CHILD***************************************/
+                    //////ICI PARCOURS DE TABINFO
+                    xmlNode *lastchild = child->children;
+                    if(strcmp(mode, "bronze")==0 || strcmp(mode, "gold")==0){   
+                        for (childNode = lastchild; childNode; childNode = childNode->next)
+                        {  
+                            for(int i =1; i<13; i++){
                                 if(strcmp(tabInfo[i][0], "Hsp_align-len")==0){
-                                    getHSP(childNode,tabInfo[i][0],strstr(tabInfo[i][0],"Hsp_"),query_length);
+                                    getHSP(childNode,tabInfo[i][0],query_length);
                                 }
                                 else{
-                                    getHSP(childNode,tabInfo[i][0],strstr(tabInfo[i][0],"Hsp_"),0);
+                                    getHSP(childNode,tabInfo[i][0],0);
                                 }
                             }
-                            
+                        
                         }
                     }
+                    else if (strcmp(mode, "silver")==0){
+                        for (childNode = lastchild; childNode; childNode = childNode->next)
+                        {  
+                            for(int i =1; i<13; i++){
+                                if(strcmp(tabInfo[i][0], (char *)childNode->name)==0){
+                                    if(strcmp(tabInfo[i][1],"1")==0){
+                                        if(strcmp(tabInfo[i][1], "Hsp_align-len")==0){
+                                            getHSP(childNode,tabInfo[i][0],query_length);
+                                        }
+                                        else{
+                                            getHSP(childNode,tabInfo[i][0],0);
+                                        }
+                                    }
+                                }
+                            }
+                        } 
+                    }
+                    fseek(output, -1, SEEK_END);
+                    fprintf(output,"\n\t\t\t},\n");
                 }
-                
-               
+
             }
-            fprintf(output, "\n");
+            
         }
     }
+    //vérifier le caractère qu'on a avant 
+
     free(species);
 }
 
@@ -320,33 +330,36 @@ void node_HSP(xmlNode *node, char *mode,int query_length, SpeciesInfo *speciesIn
 /**           : label : name we put in the json file                                                          */
 /**           : query_length : length of the query                                                            */
 /**************************************************************************************************************/
-void getHSP(xmlNode *node, const char *name, char *label, int query_length)
+void getHSP(xmlNode *node, const char *name, int query_length)
 { // ajout d'un autre char *
+    char label[MIN_SIZE];
+    strcpy(label, name+4);
+  
     if (strcmp(name, (const char *)node->name) == 0)
     {
         // récupération du tfrom
         if (strcmp(name, (const char *)"Hsp_hit-from") == 0)
         {
             t_from = atoi((const char *)xmlNodeGetContent(node));
-            fprintf(output, "\t\t\t\t\"%s\" : \"%s\",\n", label, xmlNodeGetContent(node));
+            fprintf(output, "\n\t\t\t\t\"%s\" : \"%s\",", label, xmlNodeGetContent(node));
         }
         // récupération du tto
         else if (strcmp(name, (const char *)"Hsp_hit-to") == 0)
         {
             t_to = atoi((const char *)xmlNodeGetContent(node));
-            fprintf(output, "\t\t\t\t\"%s\" : \"%s\",\n", label, xmlNodeGetContent(node));
+            fprintf(output, "\n\t\t\t\t\"%s\" : \"%s\",", label, xmlNodeGetContent(node));
         }
         else if (strcmp(name, (const char *)"Hsp_align-len") == 0)
         {
             // Ajout de la query cover
             int querycover = 100 * (t_to - t_from) / query_length;
-            fprintf(output, "\t\t\t\t\"query-cover\" : \"%d\",\n", querycover);
-            fprintf(output, "\t\t\t\t\"%s\" : \"%s\"\n\t\t\t}", label, xmlNodeGetContent(node));
+            fprintf(output, "\n\t\t\t\t\"query-cover\" : \"%d\",\n", querycover);
+            fprintf(output, "\t\t\t\t\"%s\" : \"%s\",", label, xmlNodeGetContent(node));
         }
         else
         {
             // élément habituel
-            fprintf(output, "\t\t\t\t\"%s\" : \"%s\",\n", label, xmlNodeGetContent(node));
+            fprintf(output, "\n\t\t\t\t\"%s\" : \"%s\",", label, xmlNodeGetContent(node));
         }
     }
 }

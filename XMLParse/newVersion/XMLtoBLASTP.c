@@ -8,7 +8,7 @@
 //     xmlNode  *root= xmlDocGetRootElement(xmlfile),*child = root->children;
 //     blastInfo(xmlfile, output1, child);
 // }
-void blastInfo(xmlDoc *xmlfile, FILE *output, xmlNode *child)
+void convertToBlastP(xmlDoc *xmlfile, FILE *output, xmlNode *child)
 {
     xmlNode *node;
     char *database = (char *)malloc(sizeof(char)*MIN_SIZE);

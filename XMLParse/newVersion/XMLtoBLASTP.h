@@ -8,7 +8,7 @@
 #include "lib/libxml/parser.h"
 #include "lib/libxml/tree.h"
 
-void blastInfo(xmlDoc *xmlfile, FILE *output, xmlNode *child);
+void convertToBlastP(xmlDoc *xmlfile, FILE *output, xmlNode *child);
 
 char *replaceWord(const char *s, const char *oldW, const char *newW);
 

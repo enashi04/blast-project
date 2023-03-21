@@ -69,8 +69,6 @@ int main(int argc, char **argv){
         }
     }
 
-  
-
    blastOutPut_iteration(f, mode, buffer, tabInfo); //ajout d'un autre élément
 
     // //fprintf(output, "\t],\n");
@@ -80,7 +78,7 @@ int main(int argc, char **argv){
     //     xmlDoc *xmlfile = xmlReadFile("stdin.xml", NULL, 0);
     //     FILE *output1 = fopen("output.blastp", "w");
     //     xmlNode  *root= xmlDocGetRootElement(xmlfile),*child = root->children;
-    //     blastInfo(xmlfile, output1, child);
+    //     convertToBlastP(xmlfile, output1, child);
     //      //faire appel au ballast
     //     system("../../BAL-LAST/code/./ballast -p output.blastp -o outputTest");
         
@@ -90,5 +88,4 @@ int main(int argc, char **argv){
     //     fprintf(output,"%s\n\t\t}\n\t]\n}",extractmotif);
     // }
  
-
 }
