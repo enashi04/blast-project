@@ -1,9 +1,18 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
+#include "parameters.h"
 
 int main(int argc, char *argv[])
 {
+
+    FILE *fichierXML = fopen("doubleBlast.xml", "r");
+    if(fichierXML ==NULL){
+        fprintf("le fichier n'existe pas");
+        exit(1);
+    }
+
+    //parcours du fichier XML
     //ouvrir le fichier XML
     //parcours du fichier XML
     //d'abord on récupère les informations de blast : version | référence | db

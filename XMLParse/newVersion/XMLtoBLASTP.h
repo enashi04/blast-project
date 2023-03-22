@@ -12,11 +12,9 @@ void convertToBlastP(xmlDoc *xmlfile, FILE *output, xmlNode *child);
 
 char *replaceWord(const char *s, const char *oldW, const char *newW);
 
-void blast_version(xmlNode *node, FILE *output);
+void blast_reference(xmlNode *node, char *content);
 
-void blast_reference(xmlNode *node, FILE *output);
-
-void blast_db(xmlNode *node, FILE *output, char *database);
+char *getInfoBlast(xmlNode *node, char *database);
 
 void query_Def(xmlNode *node, FILE *output);
 

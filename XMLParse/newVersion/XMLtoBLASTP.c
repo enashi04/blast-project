@@ -2,26 +2,48 @@
 
 
 /*****************************************RÉCUPÉRATION DES INFOS DANS LE XML*****************************************/
-// int main(int argc, char **argv){
-//        xmlDoc *xmlfile = xmlReadFile("stdin.xml", NULL, 0);
-//     FILE *output1 = fopen("output2.blastp", "w");
-//     xmlNode  *root= xmlDocGetRootElement(xmlfile),*child = root->children;
-//     blastInfo(xmlfile, output1, child);
-// }
+int main(int argc, char **argv){
+    xmlDoc *xmlfile = xmlReadFile("doubleBlast.xml", NULL, 0);
+    //FILE *output1 = fopen("output2.blastp", "w");
+    xmlNode  *root= xmlDocGetRootElement(xmlfile);
+    xmlNode *child = root->children;
+
+    char *database =(char *)malloc(sizeof(char));
+    char *blastInfo=getInfoBlast(child, database);
+    //convertToBlastP(xmlfile, output1, child);
+}
+
+char *getInfoBlast(xmlNode *node, char *database){
+    char *content=(char *)malloc(sizeof(char));
+
+    for(xmlNode *child=node; child; child=child->next){
+
+        if (strcmp("BlastOutput_version", ( char *)child->name) == 0)
+        {
+            strcpy(content, (char *)xmlNodeGetContent(child));
+            strcat(content,"\n\n\n");
+        }
+        if(strcmp("BlastOutput_reference",(const char *)child->name)==0){
+            blast_reference(child,content);
+        }
+       if(strcmp("BlastOutput_db", (const char *)child->name)==0){
+            strcat(content,"Database: ");
+            strcat(content, (char *)xmlNodeGetContent(child));
+            strcpy(database, (char *)xmlNodeGetContent(child));
+            strcat(content, "\n\n\n\n");
+            break;
+        }
+    }
+    return content;
+}
 void convertToBlastP(xmlDoc *xmlfile, FILE *output, xmlNode *child)
 {
     xmlNode *node;
     char *database = (char *)malloc(sizeof(char)*MIN_SIZE);
     for (node = child; node; node = node->next)
     {
-        /*****************************************VERSION DE BLAST*****************************************/
-        blast_version(node, output);
-        /*****************************************REFERENCE DE BLAST*****************************************/
-        blast_reference(node, output);
-        /*****************************************BDD DE BLAST*****************************************/
-        blast_db(node, output, database);
         /*****************************************QUERY*****************************************/
-        query_Def(node, output);
+        query_Def(node, output); //la query def c'est autre part
         /*****************************************LONGUEUR DE LA QUERY*****************************************/
         query_Length(node, output);
         /*****************************************NOEUD CONTENANT LES ITERATIONS*****************************************/
@@ -38,7 +60,6 @@ void convertToBlastP(xmlDoc *xmlfile, FILE *output, xmlNode *child)
     }
 }
 /*****************************************REMPLACER LES MOTS DANS UNE CHAINE*****************************************/
-
 char *replaceWord(const char *s, const char *oldW, const char *newW)
 {
     char *result;
@@ -75,68 +96,45 @@ char *replaceWord(const char *s, const char *oldW, const char *newW)
 }
 
 
-/*****************************************VERSION DE BLAST*****************************************/
-void blast_version(xmlNode *node, FILE *output)
-{
-    const char *name;
-    name = "BlastOutput_version";
-
-    if (strcmp(name, (const char *)node->name) == 0)
-    {
-        fprintf(output, "%s\n\n\n", xmlNodeGetContent(node));
-    }
-}
 /*****************************************REF DE BLAST*****************************************/
-void blast_reference(xmlNode *node, FILE *output)
+void blast_reference(xmlNode *node, char *content)
 {
-    const char *name;
-    name = "BlastOutput_reference";
+    
+    char var[512] = "Reference: ";
+    /*****************************************REMPLACEMENT DU CARACTERE HTML EN FR*****************************************/
+    strcat(var, (const char *)xmlNodeGetContent(node));
+    strcpy(var, replaceWord(var, "&auml;", "ä"));
 
-    if (strcmp(name, (const char *)node->name) == 0)
+    int j = 62;
+    int len = strlen(var);
+    char *ncontent=(char *)malloc(sizeof(char)*len);
+    /*****************************************FORMATAGE*****************************************/
+    for (int i = 0; i < len; i++)
     {
-        char content[512] = "Reference: ";
-        /*****************************************REMPLACEMENT DU CARACTERE HTML EN FR*****************************************/
-        strcat(content, (const char *)xmlNodeGetContent(node));
-        strcpy(content, replaceWord(content, "&auml;", "ä"));
-
-        int j = 62;
-        int len = strlen(content);
-        /*****************************************FORMATAGE*****************************************/
-        for (int i = 0; i < len; i++)
+        ncontent[i]=var[i];
+        //fprintf(content , "%c", var[i]);
+        if ((i + 1) % j == 0)
         {
-            fprintf(output, "%c", content[i]);
-            if ((i + 1) % j == 0)
+            if (var[i] == ' ')
             {
-                if (content[i] == ' ')
-                {
-                    fprintf(output, "\n");
-                }
-                else
-                {
-                    j++;
-                }
+                //fprintf(content, "\n");
+                ncontent[i]='\n';
+            }
+            else
+            {
+                j++;
             }
         }
-        fprintf(output, "\n\n\n\n");
     }
+    strcat(ncontent, "\n\n\n\n");
+    strcat(content, ncontent);
+    free(ncontent);
 }
-/*****************************************BDD*****************************************/
-void blast_db(xmlNode *node, FILE *output, char *database)
-{
-    const char *name;
-    name = "BlastOutput_db";
-    if (strcmp(name, (const char *)node->name) == 0)
-    {
-        fprintf(output, "DataBase: %s\n\n\n\n", xmlNodeGetContent(node));
-        strcpy(database, (char *)xmlNodeGetContent(node));
 
-    }
-}
 /*****************************************QUERY*****************************************/
 void query_Def(xmlNode *node, FILE *output)
 {
-    const char *name;
-    name = "BlastOutput_query-def";
+    const char *name= "BlastOutput_query-def";
     int j = 72;
     if (strcmp(name, (const char *)node->name) == 0)
     {
