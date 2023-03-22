@@ -1,17 +1,17 @@
 #include "XMLtoBLASTP.h"
 
 /*****************************************RÉCUPÉRATION DES INFOS DANS LE XML*****************************************/
-int main(int argc, char **argv)
-{
-    xmlDoc *xmlfile = xmlReadFile("doubleBlast.xml", NULL, 0);
-    xmlNode *root = xmlDocGetRootElement(xmlfile);
-    xmlNode *child = root->children;
+// int main(int argc, char **argv)
+// {
+//     xmlDoc *xmlfile = xmlReadFile("doubleBlast.xml", NULL, 0);
+//     xmlNode *root = xmlDocGetRootElement(xmlfile);
+//     xmlNode *child = root->children;
 
-    char *database = (char *)malloc(sizeof(char));
-    char blastInfo[MAXI_SIZE];
-    strcpy(blastInfo,getInfoBlast(child, database));
-    convertToBlastP(xmlfile, child, blastInfo, database);
-}
+//     char *database = (char *)malloc(sizeof(char));
+//     char blastInfo[MAXI_SIZE];
+//     strcpy(blastInfo,getInfoBlast(child, database));
+//     convertToBlastP(xmlfile, child, blastInfo, database);
+// }
 
 char *getInfoBlast(xmlNode *node, char *database)
 {
@@ -54,7 +54,7 @@ void convertToBlastP(xmlDoc *xmlfile, xmlNode *child, char *blastInfo, char *dat
                 {
                     // création du nom de fichier
                     char *filename = (char *)malloc(sizeof(char)+1);
-                    strcpy(filename,"outblast");
+                    strcpy(filename, BLAST_FILE);
                     filename[8] = i + '0';
                     filename[9]='\0';
                     strcat(filename, ".blastp");

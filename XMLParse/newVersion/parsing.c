@@ -68,8 +68,16 @@ int main(int argc, char **argv){
             strcpy(tabInfo[i][1],"1");  
         }
     }
+    //mettre les fichiers outputblastp
+    xmlNode *root =xmlDocGetRootElement(f), *child=root->children;
+    char *database = (char*)malloc(sizeof(char));
+    char blastInfo[MAXI_SIZE];
+    strcpy(blastInfo,getInfoBlast(child, database));
+    convertToBlastP(f, child, blastInfo, database);
 
-   blastOutPut_iteration(f, mode, buffer, tabInfo); //ajout d'un autre élément
+    blastOutPut_iteration(f, mode, buffer, tabInfo); //ajout d'un autre élément
+
+    //supprimer les fichiers ensuite 
 
     // //fprintf(output, "\t],\n");
     // if(strcmp(mode, "gold")==0){
@@ -84,7 +92,7 @@ int main(int argc, char **argv){
         
     // // //Récupération des motifs depuis le fichier puis l'afficher dans le fichier initial
     //     char *blastFile = makebuffer("outputTest.motifs");
-    //     char *extractmotif=getMotifs(blastFile);
+     //   char *extractmotif=getMotifs(blastFile);
     //     fprintf(output,"%s\n\t\t}\n\t]\n}",extractmotif);
     // }
  
