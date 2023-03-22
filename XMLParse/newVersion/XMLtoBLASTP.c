@@ -1,33 +1,36 @@
 #include "XMLtoBLASTP.h"
 
-
 /*****************************************RÉCUPÉRATION DES INFOS DANS LE XML*****************************************/
-int main(int argc, char **argv){
-    xmlDoc *xmlfile = xmlReadFile("doubleBlast.xml", NULL, 0);
-    //FILE *output1 = fopen("output2.blastp", "w");
-    xmlNode  *root= xmlDocGetRootElement(xmlfile);
+int main(int argc, char **argv)
+{
+    xmlDoc *xmlfile = xmlReadFile("1G8H3Y9301N-Alignment.xml", NULL, 0);
+    // FILE *output1 = fopen("output2.blastp", "w");
+    xmlNode *root = xmlDocGetRootElement(xmlfile);
     xmlNode *child = root->children;
 
-    char *database =(char *)malloc(sizeof(char));
-    char *blastInfo=getInfoBlast(child, database);
-    //convertToBlastP(xmlfile, output1, child);
+    char *database = (char *)malloc(sizeof(char));
+    char *blastInfo = getInfoBlast(child, database);
+    convertToBlastP(xmlfile, child, blastInfo, database);
 }
 
-char *getInfoBlast(xmlNode *node, char *database){
-    char *content=(char *)malloc(sizeof(char));
+char *getInfoBlast(xmlNode *node, char *database)
+{
+    char *content = (char *)malloc(sizeof(char));
 
-    for(xmlNode *child=node; child; child=child->next){
-
-        if (strcmp("BlastOutput_version", ( char *)child->name) == 0)
+    for (xmlNode *child = node; child; child = child->next)
+    {
+        if (strcmp("BlastOutput_version", (char *)child->name) == 0)
         {
             strcpy(content, (char *)xmlNodeGetContent(child));
-            strcat(content,"\n\n\n");
+            strcat(content, "\n\n\n");
         }
-        if(strcmp("BlastOutput_reference",(const char *)child->name)==0){
-            blast_reference(child,content);
+        if (strcmp("BlastOutput_reference", (const char *)child->name) == 0)
+        {
+            blast_reference(child, content);
         }
-       if(strcmp("BlastOutput_db", (const char *)child->name)==0){
-            strcat(content,"Database: ");
+        if (strcmp("BlastOutput_db", (const char *)child->name) == 0)
+        {
+            strcat(content, "Database: ");
             strcat(content, (char *)xmlNodeGetContent(child));
             strcpy(database, (char *)xmlNodeGetContent(child));
             strcat(content, "\n\n\n\n");
@@ -36,27 +39,35 @@ char *getInfoBlast(xmlNode *node, char *database){
     }
     return content;
 }
-void convertToBlastP(xmlDoc *xmlfile, FILE *output, xmlNode *child)
+
+void convertToBlastP(xmlDoc *xmlfile, xmlNode *child, char *blastInfo, char *database)
 {
-    xmlNode *node;
-    char *database = (char *)malloc(sizeof(char)*MIN_SIZE);
-    for (node = child; node; node = node->next)
+    int i = 1;
+    // char *database = (char *)malloc(sizeof(char)*MIN_SIZE);
+    for (xmlNode *node = child; node; node = node->next)
     {
-        /*****************************************QUERY*****************************************/
-        query_Def(node, output); //la query def c'est autre part
-        /*****************************************LONGUEUR DE LA QUERY*****************************************/
-        query_Length(node, output);
-        /*****************************************NOEUD CONTENANT LES ITERATIONS*****************************************/
         if (strcmp("BlastOutput_iterations", (const char *)node->name) == 0)
         {
-            xmlNode *childnode;
-            childnode = node->children;
+            xmlNode *childnode = node->children;
             for (child = childnode; child; child = child->next)
             {
-                iterationNode(child, output, database);
+                if (strcmp("Iteration", (const char *)child->name) == 0)
+                {
+                    // création du nom de fichier
+                    char *filename = (char *)malloc(sizeof(char)+1);
+                    strcpy(filename,"outblast");
+                    filename[8] = i + '0';
+                    filename[9]='\0';
+                    strcat(filename, ".blastp");
+
+                    FILE *output = fopen(filename,"w");
+                    fprintf(output,"%s", blastInfo);
+                    iterationNode(child, output, database);
+
+                    i++;
+                }
             }
         }
-       
     }
 }
 /*****************************************REMPLACER LES MOTS DANS UNE CHAINE*****************************************/
@@ -95,11 +106,10 @@ char *replaceWord(const char *s, const char *oldW, const char *newW)
     return result;
 }
 
-
 /*****************************************REF DE BLAST*****************************************/
 void blast_reference(xmlNode *node, char *content)
 {
-    
+
     char var[512] = "Reference: ";
     /*****************************************REMPLACEMENT DU CARACTERE HTML EN FR*****************************************/
     strcat(var, (const char *)xmlNodeGetContent(node));
@@ -107,18 +117,18 @@ void blast_reference(xmlNode *node, char *content)
 
     int j = 62;
     int len = strlen(var);
-    char *ncontent=(char *)malloc(sizeof(char)*len);
+    char *ncontent = (char *)malloc(sizeof(char) * len);
     /*****************************************FORMATAGE*****************************************/
     for (int i = 0; i < len; i++)
     {
-        ncontent[i]=var[i];
-        //fprintf(content , "%c", var[i]);
+        ncontent[i] = var[i];
+        // fprintf(content , "%c", var[i]);
         if ((i + 1) % j == 0)
         {
             if (var[i] == ' ')
             {
-                //fprintf(content, "\n");
-                ncontent[i]='\n';
+                // fprintf(content, "\n");
+                ncontent[i] = '\n';
             }
             else
             {
@@ -134,9 +144,8 @@ void blast_reference(xmlNode *node, char *content)
 /*****************************************QUERY*****************************************/
 void query_Def(xmlNode *node, FILE *output)
 {
-    const char *name= "BlastOutput_query-def";
     int j = 72;
-    if (strcmp(name, (const char *)node->name) == 0)
+    if (strcmp("Iteration_query-def", (const char *)node->name) == 0)
     {
         /*****************************************FORMATAGE*****************************************/
         char content[512] = "Query= ";
@@ -163,10 +172,8 @@ void query_Def(xmlNode *node, FILE *output)
 /*****************************************LONGUEUR DE LA QUERY*****************************************/
 void query_Length(xmlNode *node, FILE *output)
 {
-    const char *name;
-    name = "BlastOutput_query-len";
-
-    if (strcmp(name, (const char *)node->name) == 0)
+  
+    if (strcmp("Iteration_query-len", (const char *)node->name) == 0)
     {
         // affichage
         fprintf(output, "Length=%s\n\n", xmlNodeGetContent(node));
@@ -197,14 +204,14 @@ void iterationNode(xmlNode *node, FILE *output, char *database)
                     hitNode(childNode, output);
                 }
             }
-            else if(strcmp("Iteration_stat",(const char *)child->name) == 0){
-                xmlNode *hitChild;
-                hitChild = child->children;
-                for (childNode = hitChild; childNode; childNode = childNode->next)
-                {
-                    statNode(childNode, output, database);
-                }
-            }
+            // else if(strcmp("Iteration_stat",(const char *)child->name) == 0){
+            //     xmlNode *hitChild;
+            //     hitChild = child->children;
+            //     for (childNode = hitChild; childNode; childNode = childNode->next)
+            //     {
+            //         statNode(childNode, output, database);
+            //     }
+            // }
         }
     }
 }
@@ -377,7 +384,7 @@ void blasting(xmlNode *node, FILE *output)
     /*****************************************DEBUT/FIN DE QUERY & SUBJECT*****************************************/
     char query_from[8], query_to[8], target_from[8], target_to[8];
     /*****************************************DECLARATION DES SEQUENCES À RÉCUPÉRER*****************************************/
-    char queryS[2048], targetS[2048], midlineS[2048];
+    char queryS[MAXI_SIZE], targetS[MAXI_SIZE], midlineS[MAXI_SIZE];
 
     for (child = childNode; child; child = child->next)
     {

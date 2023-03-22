@@ -8,11 +8,12 @@
 #include "lib/libxml/parser.h"
 #include "lib/libxml/tree.h"
 
-void convertToBlastP(xmlDoc *xmlfile, FILE *output, xmlNode *child);
 
 char *replaceWord(const char *s, const char *oldW, const char *newW);
 
 void blast_reference(xmlNode *node, char *content);
+
+void convertToBlastP(xmlDoc *xmlfile, xmlNode *child, char *blastInfo, char *database);
 
 char *getInfoBlast(xmlNode *node, char *database);
 
@@ -32,3 +33,8 @@ void iterationNode(xmlNode *node, FILE *output, char *database);
 
 #endif
 
+// /*****************************************QUERY*****************************************/
+// query_Def(node, output); //la query def c'est autre part
+// /*****************************************LONGUEUR DE LA QUERY*****************************************/
+// query_Length(node, output);
+/*****************************************NOEUD CONTENANT LES ITERATIONS*****************************************/
