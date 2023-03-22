@@ -3,19 +3,19 @@
 /*****************************************RÉCUPÉRATION DES INFOS DANS LE XML*****************************************/
 int main(int argc, char **argv)
 {
-    xmlDoc *xmlfile = xmlReadFile("1G8H3Y9301N-Alignment.xml", NULL, 0);
-    // FILE *output1 = fopen("output2.blastp", "w");
+    xmlDoc *xmlfile = xmlReadFile("doubleBlast.xml", NULL, 0);
     xmlNode *root = xmlDocGetRootElement(xmlfile);
     xmlNode *child = root->children;
 
     char *database = (char *)malloc(sizeof(char));
-    char *blastInfo = getInfoBlast(child, database);
+    char blastInfo[MAXI_SIZE];
+    strcpy(blastInfo,getInfoBlast(child, database));
     convertToBlastP(xmlfile, child, blastInfo, database);
 }
 
 char *getInfoBlast(xmlNode *node, char *database)
 {
-    char *content = (char *)malloc(sizeof(char));
+    char *content = (char *)malloc(sizeof(char)*MAXI_SIZE);
 
     for (xmlNode *child = node; child; child = child->next)
     {
@@ -28,7 +28,7 @@ char *getInfoBlast(xmlNode *node, char *database)
         {
             blast_reference(child, content);
         }
-        if (strcmp("BlastOutput_db", (const char *)child->name) == 0)
+         if (strcmp("BlastOutput_db", (const char *)child->name) == 0)
         {
             strcat(content, "Database: ");
             strcat(content, (char *)xmlNodeGetContent(child));
@@ -43,7 +43,6 @@ char *getInfoBlast(xmlNode *node, char *database)
 void convertToBlastP(xmlDoc *xmlfile, xmlNode *child, char *blastInfo, char *database)
 {
     int i = 1;
-    // char *database = (char *)malloc(sizeof(char)*MIN_SIZE);
     for (xmlNode *node = child; node; node = node->next)
     {
         if (strcmp("BlastOutput_iterations", (const char *)node->name) == 0)
@@ -109,7 +108,6 @@ char *replaceWord(const char *s, const char *oldW, const char *newW)
 /*****************************************REF DE BLAST*****************************************/
 void blast_reference(xmlNode *node, char *content)
 {
-
     char var[512] = "Reference: ";
     /*****************************************REMPLACEMENT DU CARACTERE HTML EN FR*****************************************/
     strcat(var, (const char *)xmlNodeGetContent(node));
@@ -138,7 +136,7 @@ void blast_reference(xmlNode *node, char *content)
     }
     strcat(ncontent, "\n\n\n\n");
     strcat(content, ncontent);
-    free(ncontent);
+
 }
 
 /*****************************************QUERY*****************************************/
@@ -147,9 +145,11 @@ void query_Def(xmlNode *node, FILE *output)
     int j = 72;
     if (strcmp("Iteration_query-def", (const char *)node->name) == 0)
     {
+
         /*****************************************FORMATAGE*****************************************/
         char content[512] = "Query= ";
         strcat(content, (char *)xmlNodeGetContent(node));
+
         int len = strlen(content);
         for (int i = 0; i < len; i++)
         {
@@ -194,6 +194,8 @@ void iterationNode(xmlNode *node, FILE *output, char *database)
         childNode = node->children;
         for (child = childNode; child; child = child->next)
         {
+            query_Def(child,output);
+            query_Length(child, output);
             /*****************************************NOUS ENTRONS DANS LE NOEUD CONTENANT LES HITS*****************************************/
             if (strcmp("Iteration_hits", (const char *)child->name) == 0)
             {
@@ -204,14 +206,14 @@ void iterationNode(xmlNode *node, FILE *output, char *database)
                     hitNode(childNode, output);
                 }
             }
-            // else if(strcmp("Iteration_stat",(const char *)child->name) == 0){
-            //     xmlNode *hitChild;
-            //     hitChild = child->children;
-            //     for (childNode = hitChild; childNode; childNode = childNode->next)
-            //     {
-            //         statNode(childNode, output, database);
-            //     }
-            // }
+            else if(strcmp("Iteration_stat",(const char *)child->name) == 0){
+                xmlNode *hitChild;
+                hitChild = child->children;
+                for (childNode = hitChild; childNode; childNode = childNode->next)
+                {
+                    statNode(childNode, output, database);
+                }
+            }
         }
     }
 }
@@ -384,7 +386,7 @@ void blasting(xmlNode *node, FILE *output)
     /*****************************************DEBUT/FIN DE QUERY & SUBJECT*****************************************/
     char query_from[8], query_to[8], target_from[8], target_to[8];
     /*****************************************DECLARATION DES SEQUENCES À RÉCUPÉRER*****************************************/
-    char queryS[MAXI_SIZE], targetS[MAXI_SIZE], midlineS[MAXI_SIZE];
+    char queryS[2048], targetS[2048], midlineS[4096];
 
     for (child = childNode; child; child = child->next)
     {
@@ -432,7 +434,7 @@ void blasting(xmlNode *node, FILE *output)
     char qseq[128], tseq[128], mseq[128];
 
     /*****************************************FORMATAGE*****************************************/
-    char dq[5], dt[5], fq[5], ft[5]; //début/ fin query - target en char * pour pouvoir le concaténer
+    char dq[5], dt[5], fq[5], ft[8]; //début/ fin query - target en char * pour pouvoir le concaténer
 
     for (int i = 0; i < len; i++)
     {
@@ -489,7 +491,7 @@ void blasting(xmlNode *node, FILE *output)
             strcat(mseq, newmidline);
             strcat(tseq, newtarget);
            // printf("tseq : %s\n", tseq);
-          //  strcat(tseq, ft);
+            strcat(tseq, ft);
 
             fprintf(output,"%s\n%s\n%s\n\n", qseq, mseq,tseq);
             debutquery = atoi(fq)+1;
@@ -505,10 +507,10 @@ void blasting(xmlNode *node, FILE *output)
             int debinit = 0;
             for (int k = debut; k < len; k++)
             {           
-                    newquery[debinit] = queryS[k];
-                    newmidline[debinit] = midlineS[k];
-                    newtarget[debinit] = targetS[k];
-                    debinit++;
+                newquery[debinit] = queryS[k];
+                newmidline[debinit] = midlineS[k];
+                newtarget[debinit] = targetS[k];
+                debinit++;
             }
             newquery[ debinit] = '\0';
             newmidline[debinit] = '\0';
@@ -543,11 +545,12 @@ void blasting(xmlNode *node, FILE *output)
             //printf("la newmidline est %s\n", mseq);
             strcat(tseq, newtarget);
             strcat(tseq, ft);
+            
 
             //mettre un \0 à la fin
-            qseq[strlen(qseq)]='\0';
-            mseq[strlen(qseq)]='\0';
-            tseq[strlen(qseq)]='\0';
+            qseq[strlen(qseq)+1]='\0';
+            mseq[strlen(qseq)+1]='\0';
+            tseq[strlen(qseq)+1]='\0';
 
             fprintf(output,"%s\n%s\n%s\n\n\n", qseq, mseq,tseq);
         }
