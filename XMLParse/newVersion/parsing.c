@@ -4,6 +4,7 @@
 #include "XMLtoBLASTP.h"
 #include "parameters.h"
 #include "extractMotifs.h"
+#include<unistd.h>
 
 int main(int argc, char **argv){
 
@@ -74,7 +75,7 @@ int main(int argc, char **argv){
     char blastInfo[MAXI_SIZE];
     strcpy(blastInfo,getInfoBlast(child, database));
     convertToBlastP(f, child, blastInfo, database);
-
+    sleep(0.1);
     blastOutPut_iteration(f, mode, buffer, tabInfo); //ajout d'un autre élément
 
     //supprimer les fichiers ensuite 

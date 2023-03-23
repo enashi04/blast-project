@@ -5,34 +5,35 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "(gdb) Attach",
+            "name": "(gdb) Lancer",
             "type": "cppdbg",
-            "request": "attach",
-            "program": "${workspaceFolder}/XMLBLAST",
+            "request": "launch",
+            "program": "${workspaceFolder}/parsing",
+            "args": ["-m", "gold", "-o", "output55.json", "stdin.xml"],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
             "MIMode": "gdb",
+            "miDebuggerPath": "/path/to/gdb",
             "setupCommands": [
                 {
-                    "description": "Enable pretty-printing for gdb",
+                    "description": "Activer l'impression en mode Pretty pour gdb",
                     "text": "-enable-pretty-printing",
                     "ignoreFailures": true
                 },
                 {
-                    "description": "Set Disassembly Flavor to Intel",
+                    "description": "Définir la version désassemblage sur Intel",
                     "text": "-gdb-set disassembly-flavor intel",
                     "ignoreFailures": true
                 }
             ]
         },
         {
-            "name": "(gdb) Launch",
+            "name": "(gdb) Attach",
             "type": "cppdbg",
-            "request": "launch",
-            "program": "${workspaceFolder}/XMLBLAST",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${fileDirname}",
-            "environment": [],
-            "externalConsole": false,
+            "request": "attach",
+            "program": "${workspaceFolder}/parsing",
             "MIMode": "gdb",
             "setupCommands": [
                 {
@@ -47,6 +48,5 @@
                 }
             ]
         }
-
     ]
 }

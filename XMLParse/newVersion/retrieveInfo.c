@@ -59,7 +59,7 @@ void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer, char tabIn
                     xmlNode *childrenNode = child->children;
                     for(childnode=childrenNode; childnode; childnode=childnode->next){
                         getQueryDef(childnode, speciesName);
-                        if(strcmp("Iteration_num", (const char *)childnode->name) == 0){
+                        if(strcmp("Iteration_iter-num", (const char *)childnode->name) == 0){
                             strcpy(iteration_num, (char *)xmlNodeGetContent(childnode));
                         }
                         if (strcmp("Iteration_query-len", (const char *)childnode->name) == 0)
@@ -69,7 +69,7 @@ void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer, char tabIn
                         }
                     }
                     displayQuerySpecies(speciesName);
-                    node_Iteration(child, mode, speciesInfo, query_length, fillInfo, hashmap,tabInfo, strdup(iteration_num)); //ajout de la table d'information
+                    node_Iteration(child, mode, speciesInfo, query_length, fillInfo, hashmap,tabInfo,iteration_num); //ajout de la table d'information
                 }
             }
         }
@@ -116,22 +116,22 @@ void node_Iteration(xmlNode *node, char *mode, SpeciesInfo *speciesInfo, int que
 
     //ajout des motifs ici si jamais on utilise le mode gold
     if(strcmp(mode, "gold")==0){
-        char *blastp = BLAST_FILE;
+        char blastp[] = BLAST_FILE;
         strcat(blastp,iteration_num);
         char *_result_file = blastp;
         strcat(blastp,".blastp");
-        if(fopen(blastp, "r")!=NULL){
-            printf("good");
-            char *command = BALLAST_ACCESS;
-            strcat(command," -p ");
-            strcat(command, blastp);
-            strcat(command, " -o ");
-            strcat(command, _result_file);
-            system(command);
-            char *blastFile = makebuffer("outputTest.motifs");
-            char *extractmotif=getMotifs(blastFile);
-            fprintf(output,"%s\n\t\t}\n\t],\n",extractmotif);
-        }
+        printf("blastp is %s\n", blastp);
+    
+        char *command = BALLAST_ACCESS;
+        strcat(command," -p ");
+        strcat(command, blastp);
+        strcat(command, " -o ");
+        strcat(command, _result_file);
+        printf("la commande est %s\n", command);
+        system(command);
+        char *blastFile = makebuffer("outblast1.motifs");
+        char *extractmotif=getMotifs(blastFile);
+        fprintf(output,"%s\n\t\t}\n\t],\n",extractmotif);
     }
 }
 

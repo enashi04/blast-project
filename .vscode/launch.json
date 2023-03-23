@@ -2,14 +2,45 @@
   "version": "1.13.0",
   "configurations": [
     {
+      "name": "(gdb) Lancer",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/XMLParse/newVersion/parsing",
+      "args": [
+        "-m",
+        "gold",
+        "-o",
+        "output55.json",
+        "stdin.xml"
+      ],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "miDebuggerPath": "/path/to/gdb",
+      "setupCommands": [
+        {
+          "description": "Activer l'impression en mode Pretty pour gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        },
+        {
+          "description": "Définir la version désassemblage sur Intel",
+          "text": "-gdb-set disassembly-flavor intel",
+          "ignoreFailures": true
+        }
+      ]
+    },
+    {
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/ihsan/Desktop/ALTERNANTE/blast-project",
-      "program": "c:/Users/ihsan/Desktop/ALTERNANTE/blast-project/build/Debug/outDebug",
+      "cwd": "c:/Users/ihsan/Desktop/ALTERNANTE/blast-project/XMLParse",
+      "program": "c:/Users/ihsan/Desktop/ALTERNANTE/blast-project/XMLParse/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
