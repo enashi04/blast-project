@@ -1,5 +1,20 @@
 #include "XMLtoBLASTP.h"
 
+<<<<<<< HEAD
+=======
+// /*****************************************RÉCUPÉRATION DES INFOS DANS LE XML*****************************************/
+// int main(int argc, char **argv)
+// {
+//     xmlDoc *xmlfile = xmlReadFile("stdin.xml", NULL, 0);
+//     xmlNode *root = xmlDocGetRootElement(xmlfile);
+//     xmlNode *child = root->children;
+
+//     char *database = (char *)malloc(sizeof(char));
+//     char blastInfo[MAXI_SIZE];
+//     strcpy(blastInfo,getInfoBlast(child, database));
+//     convertToBlastP(xmlfile, child, blastInfo, database);
+// }
+>>>>>>> 481466a682146874a098ded042caa384c41c0b67
 
 char *getInfoBlast(xmlNode *node, char *database)
 {
@@ -41,10 +56,15 @@ void convertToBlastP(xmlDoc *xmlfile, xmlNode *child, char *blastInfo, char *dat
                 if (strcmp("Iteration", (const char *)child->name) == 0)
                 {
                     // création du nom de fichier
-                    char *filename = (char *)malloc(sizeof(char)+1);
-                    strcpy(filename, BLAST_FILE);
+                    char filename[] = BLAST_FILE;
                     filename[8] = i + '0';
+<<<<<<< HEAD
                     //filename[9]='\0';
+=======
+                    filename[9]='\0';
+                    //printf("blastinfo is %s\n", blastInfo);
+
+>>>>>>> 481466a682146874a098ded042caa384c41c0b67
                     strcat(filename, ".blastp");
 
                     FILE *output = fopen(filename,"w");
@@ -247,7 +267,6 @@ void hitNode(xmlNode *node, FILE *output)
     {
         xmlNode *childNode, *child;
         childNode = node->children;
-
         for (child = childNode; child; child = child->next)
         {
             /*****************************************DEF DU HIT*****************************************/
@@ -279,12 +298,14 @@ void hitNode(xmlNode *node, FILE *output)
                     }
                 }
                 fprintf(output, "\n");
+
             }
             /*****************************************LONGUEUR DU HIT*****************************************/
             else if (strcmp("Hit_len", (const char *)child->name) == 0)
             {
                 char *len = (char *)xmlNodeGetContent(child);
                 fprintf(output, "\tLength=%s\n\n", len);
+
             }
             /*****************************************NOEUD CONTENANT D'AUTRES INFOS IMPORTANTES DU HIT*****************************************/
             else if (strcmp("Hit_hsps", (const char *)child->name) == 0)
@@ -370,12 +391,13 @@ void hspNode(xmlNode *node, FILE *output)
 /*****************************************RECUPERATION DES SEQUENCES*****************************************/
 void blasting(xmlNode *node, FILE *output)
 {
+
     xmlNode *childNode, *child;
     childNode = node->children;
     /*****************************************DEBUT/FIN DE QUERY & SUBJECT*****************************************/
     char query_from[8], query_to[8], target_from[8], target_to[8];
     /*****************************************DECLARATION DES SEQUENCES À RÉCUPÉRER*****************************************/
-    char queryS[2048], targetS[2048], midlineS[4096];
+    char queryS[MAXI_SIZE], targetS[MAXI_SIZE], midlineS[MAXI_SIZE];
 
     for (child = childNode; child; child = child->next)
     {
@@ -399,7 +421,7 @@ void blasting(xmlNode *node, FILE *output)
         else if (strcmp("Hsp_qseq", (const char *)child->name) == 0)
         {
             strcpy(queryS, (const char *)xmlNodeGetContent(child));
-            // printf("la query de base est :%s\n\n",queryS);
+            //printf("la query de base est :%s\n\n",queryS);
         }
         /*****************************************SUBJECT SEQUENCE*****************************************/
         else if (strcmp("Hsp_hseq", (const char *)child->name) == 0)
@@ -411,8 +433,11 @@ void blasting(xmlNode *node, FILE *output)
         else if (strcmp("Hsp_midline", (const char *)child->name) == 0)
         {
             strcpy(midlineS, (const char *)xmlNodeGetContent(child));
+
         }
     }
+    //printf("on entre icifa ?\n");
+
     /*****************************************INTIIALISATION DE NLLES VARIABLES *****************************************/
     int len = strlen(queryS); // qu'on prenne midline ou targetS la taille est la même
     //initialisation des valeurs pour la découpe des séquences 60-60
@@ -531,12 +556,10 @@ void blasting(xmlNode *node, FILE *output)
             strcat(qseq, newquery);
             strcat(qseq, fq);
             strcat(mseq, newmidline);
-            //printf("la newmidline est %s\n", mseq);
             strcat(tseq, newtarget);
             strcat(tseq, ft);
             
 
-            //mettre un \0 à la fin
             qseq[strlen(qseq)+1]='\0';
             mseq[strlen(qseq)+1]='\0';
             tseq[strlen(qseq)+1]='\0';

@@ -5,27 +5,39 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "(gdb) Attach",
+            "name": "(gdb) Lancer",
             "type": "cppdbg",
+<<<<<<< HEAD
             "request": "attach",
             "program": "${workspaceFolder}/parsing",
+=======
+            "request": "launch",
+            "program": "${workspaceFolder}/parsing",
+            "args": ["-m", "gold", "-o", "output55.json", "stdin.xml"],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+>>>>>>> 481466a682146874a098ded042caa384c41c0b67
             "MIMode": "gdb",
+            "miDebuggerPath": "/path/to/gdb",
             "setupCommands": [
                 {
-                    "description": "Enable pretty-printing for gdb",
+                    "description": "Activer l'impression en mode Pretty pour gdb",
                     "text": "-enable-pretty-printing",
                     "ignoreFailures": true
                 },
                 {
-                    "description": "Set Disassembly Flavor to Intel",
+                    "description": "Définir la version désassemblage sur Intel",
                     "text": "-gdb-set disassembly-flavor intel",
                     "ignoreFailures": true
                 }
             ]
         },
         {
-            "name": "(gdb) Launch",
+            "name": "(gdb) Attach",
             "type": "cppdbg",
+<<<<<<< HEAD
             "request": "launch",
             "program": "${workspaceFolder}/parsing",
             "args": ["-m","gold", "-o", "output55.json","${workspaceFolder}/doubleBlast.xml"],
@@ -33,6 +45,10 @@
             "cwd": "${fileDirname}",
             "environment": [],
             "externalConsole": false,
+=======
+            "request": "attach",
+            "program": "${workspaceFolder}/parsing",
+>>>>>>> 481466a682146874a098ded042caa384c41c0b67
             "MIMode": "gdb",
             "setupCommands": [
                 {
@@ -47,6 +63,5 @@
                 }
             ]
         }
-
     ]
 }

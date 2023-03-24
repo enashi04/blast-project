@@ -64,9 +64,14 @@ void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer, char tabIn
 
                     for(childnode=child->children; childnode; childnode=childnode->next){
                         getQueryDef(childnode, speciesName);
+<<<<<<< HEAD
 
                         if(strcmp("Iteration_iter-num", (const char *)childnode->name) == 0){
                             iteration_num=(char *)xmlNodeGetContent(childnode);
+=======
+                        if(strcmp("Iteration_iter-num", (const char *)childnode->name) == 0){
+                            strcpy(iteration_num, (char *)xmlNodeGetContent(childnode));
+>>>>>>> 481466a682146874a098ded042caa384c41c0b67
                         }
                         else if (strcmp("Iteration_query-len", (const char *)childnode->name) == 0)
                         {
@@ -75,7 +80,11 @@ void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer, char tabIn
                         }
                     }
                     displayQuerySpecies(speciesName);
+<<<<<<< HEAD
                     node_Iteration(child, mode, speciesInfo, query_length, fillInfo, hashmap,tabInfo, iteration_num); //ajout de la table d'information
+=======
+                    node_Iteration(child, mode, speciesInfo, query_length, fillInfo, hashmap,tabInfo,iteration_num); //ajout de la table d'information
+>>>>>>> 481466a682146874a098ded042caa384c41c0b67
                 }
             }
         }
