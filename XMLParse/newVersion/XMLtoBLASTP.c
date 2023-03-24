@@ -1,17 +1,5 @@
 #include "XMLtoBLASTP.h"
 
-/*****************************************RÉCUPÉRATION DES INFOS DANS LE XML*****************************************/
-// int main(int argc, char **argv)
-// {
-//     xmlDoc *xmlfile = xmlReadFile("doubleBlast.xml", NULL, 0);
-//     xmlNode *root = xmlDocGetRootElement(xmlfile);
-//     xmlNode *child = root->children;
-
-//     char *database = (char *)malloc(sizeof(char));
-//     char blastInfo[MAXI_SIZE];
-//     strcpy(blastInfo,getInfoBlast(child, database));
-//     convertToBlastP(xmlfile, child, blastInfo, database);
-// }
 
 char *getInfoBlast(xmlNode *node, char *database)
 {
@@ -56,12 +44,13 @@ void convertToBlastP(xmlDoc *xmlfile, xmlNode *child, char *blastInfo, char *dat
                     char *filename = (char *)malloc(sizeof(char)+1);
                     strcpy(filename, BLAST_FILE);
                     filename[8] = i + '0';
-                    filename[9]='\0';
+                    //filename[9]='\0';
                     strcat(filename, ".blastp");
 
                     FILE *output = fopen(filename,"w");
                     fprintf(output,"%s", blastInfo);
                     iterationNode(child, output, database);
+                    fclose(output);
 
                     i++;
                 }
@@ -115,7 +104,7 @@ void blast_reference(xmlNode *node, char *content)
 
     int j = 62;
     int len = strlen(var);
-    char *ncontent = (char *)malloc(sizeof(char) * len);
+    char *ncontent = (char *)malloc(sizeof(char) * len+1);
     /*****************************************FORMATAGE*****************************************/
     for (int i = 0; i < len; i++)
     {

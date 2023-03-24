@@ -8,7 +8,7 @@
             "name": "(gdb) Attach",
             "type": "cppdbg",
             "request": "attach",
-            "program": "${workspaceFolder}/XMLBLAST",
+            "program": "${workspaceFolder}/parsing",
             "MIMode": "gdb",
             "setupCommands": [
                 {
@@ -27,8 +27,8 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/XMLBLAST",
-            "args": [],
+            "program": "${workspaceFolder}/parsing",
+            "args": ["-m","gold", "-o", "output55.json","${workspaceFolder}/doubleBlast.xml"],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
             "environment": [],

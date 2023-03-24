@@ -10,6 +10,7 @@
 #include "parameters.h"
 #include "fillStructure.h"
 #include "extractMotifs.h"
+#include "XMLtoBLASTP.h"
 
 char name_hit[MIN_SIZE];
 int t_from = 0, t_to = 0, size_struct=0; // voir où on peut le mettre en local au lieu de glo
@@ -24,6 +25,10 @@ void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer, char tabIn
 {
     // Declare the three node allowing us to browse the XML FILE
     xmlNode *node, *root = xmlDocGetRootElement(fichier), *child = root->children;
+    char *database = (char*)malloc(sizeof(char));
+    char blastInfo[MAXI_SIZE];
+    strcpy(blastInfo,getInfoBlast(child, database));
+    convertToBlastP(fichier, child, blastInfo, database);
     // WE LOOK FOR EACH NODE TO GET THE LENGTH, THE DEF OF THE QUERY, THE DEFINITION OF BLAST
     char speciesName[MIN_SIZE];
     int query_length = 0;
@@ -41,7 +46,6 @@ void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer, char tabIn
     // WE DISPLAY THE INFOS OF THE SPECIES
     const char *BLASTOUTPUT_NODE_NAME = "BlastOutput_iterations";
     // PATH OF SUBNODES
-    char iteration_num[MIN_SIZE];
     for (node = child; node; node = node->next)
     {
         // CHECK IF WE'RE IN BLASTOUTPUT-ITERATIONS
@@ -56,20 +60,22 @@ void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer, char tabIn
                 if (strcmp(ITERATION, (const char *)child->name) == 0)
                 {
                     // ITERATION SUBNODES
-                    xmlNode *childrenNode = child->children;
-                    for(childnode=childrenNode; childnode; childnode=childnode->next){
+                    char *iteration_num;
+
+                    for(childnode=child->children; childnode; childnode=childnode->next){
                         getQueryDef(childnode, speciesName);
-                        if(strcmp("Iteration_num", (const char *)childnode->name) == 0){
-                            strcpy(iteration_num, (char *)xmlNodeGetContent(childnode));
+
+                        if(strcmp("Iteration_iter-num", (const char *)childnode->name) == 0){
+                            iteration_num=(char *)xmlNodeGetContent(childnode);
                         }
-                        if (strcmp("Iteration_query-len", (const char *)childnode->name) == 0)
+                        else if (strcmp("Iteration_query-len", (const char *)childnode->name) == 0)
                         {
                             fprintf(output, "\t\t\"query-length\" : \"%s\",\n", xmlNodeGetContent(childnode));
                             query_length = atoi((const char *)xmlNodeGetContent(childnode));
                         }
                     }
                     displayQuerySpecies(speciesName);
-                    node_Iteration(child, mode, speciesInfo, query_length, fillInfo, hashmap,tabInfo, strdup(iteration_num)); //ajout de la table d'information
+                    node_Iteration(child, mode, speciesInfo, query_length, fillInfo, hashmap,tabInfo, iteration_num); //ajout de la table d'information
                 }
             }
         }
@@ -80,8 +86,7 @@ void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer, char tabIn
 
 /**************************************************************************************************************/
 /*                           Node_Iteration: allowing us to enter to the first node                           */
-/** Parametre : fichier : XML FILE                                                                            */
-/**             node : Node where we are now                                                                  */
+/** Parametre : node : Node where we are now                                                                  */
 /**             query_length :get the length                                                                  */
 /**             buffer : taxonomy.dat                                                                         */
 /**************************************************************************************************************/
@@ -116,22 +121,33 @@ void node_Iteration(xmlNode *node, char *mode, SpeciesInfo *speciesInfo, int que
 
     //ajout des motifs ici si jamais on utilise le mode gold
     if(strcmp(mode, "gold")==0){
-        char *blastp = BLAST_FILE;
+        printf("on arrive ici ?");
+        char blastp[MIN_SIZE] = BLAST_FILE;
         strcat(blastp,iteration_num);
-        char *_result_file = blastp;
-        strcat(blastp,".blastp");
-        if(fopen(blastp, "r")!=NULL){
-            printf("good");
-            char *command = BALLAST_ACCESS;
-            strcat(command," -p ");
-            strcat(command, blastp);
-            strcat(command, " -o ");
-            strcat(command, _result_file);
-            system(command);
-            char *blastFile = makebuffer("outputTest.motifs");
-            char *extractmotif=getMotifs(blastFile);
-            fprintf(output,"%s\n\t\t}\n\t],\n",extractmotif);
+        char result_file[MIN_SIZE];
+        strcpy(result_file,blastp);
+        strcat(blastp,".blastp\0");
+        printf("le fichier est %s\n", blastp);
+        FILE *f = fopen(blastp, "r");
+        if(f!=NULL){
+            fclose(f);
         }
+        else{
+            fprintf(stdout, "No motifs\n");
+        }
+        char command[MIN_SIZE] = BALLAST_ACCESS ;
+        strcat(command," -p ");
+        strcat(command, blastp);
+        strcat(command, " -o ");
+        strcat(command, result_file);
+        printf("la commande est %s\n", command);
+        system(command);
+        strcat(result_file,".motifs");
+        char *blastBuffer = makebuffer(result_file);
+        char *extractmotif=getMotifs(blastBuffer);
+        fprintf(output,"%s\n\t\t}\n\t],\n",extractmotif);
+        // free(blastBuffer);
+        
     }
 }
 

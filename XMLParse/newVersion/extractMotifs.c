@@ -3,7 +3,7 @@
 
 char *getMotifs(char *file){
     char *line=strtok(strdup(file),"\n");
-    char *createJSON =(char *)malloc(sizeof(char*)*MAX_SIZE);
+    char *createJSON =(char *)malloc(sizeof(char*)*MAX_SIZE);//changer ca
     strcpy(createJSON,"\t\t\"motifs\":[\n");
     line=strtok(NULL, "\n");
     while(line!=NULL){

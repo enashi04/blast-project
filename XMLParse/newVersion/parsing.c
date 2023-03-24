@@ -4,6 +4,8 @@
 #include "XMLtoBLASTP.h"
 #include "parameters.h"
 #include "extractMotifs.h"
+#include "unistd.h"
+#include <sys/wait.h>
 
 int main(int argc, char **argv){
 
@@ -68,12 +70,7 @@ int main(int argc, char **argv){
             strcpy(tabInfo[i][1],"1");  
         }
     }
-    //mettre les fichiers outputblastp
-    xmlNode *root =xmlDocGetRootElement(f), *child=root->children;
-    char *database = (char*)malloc(sizeof(char));
-    char blastInfo[MAXI_SIZE];
-    strcpy(blastInfo,getInfoBlast(child, database));
-    convertToBlastP(f, child, blastInfo, database);
+
 
     blastOutPut_iteration(f, mode, buffer, tabInfo); //ajout d'un autre élément
 

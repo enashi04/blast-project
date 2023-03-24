@@ -55,6 +55,7 @@ $(EXEC): %: %.c $(DEP)
 clean:
 
 	rm -rf *.o 
+	rm outblast*
 
 
 #supprimer les fichiers *.o et les exécutables et *.csv
@@ -62,5 +63,6 @@ clean:
 mrproper: clean
 
 	rm -rf $(EXEC) 
+	rm outblast*
 
 
