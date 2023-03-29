@@ -1,5 +1,13 @@
 #include "XMLtoBLASTP.h"
 
+int main(int argc, char **argv){
+    xmlDoc *fichier = xmlReadFile("1G8H3Y9301N-Alignment.xml", NULL, 0);
+    xmlNode *root = xmlDocGetRootElement(fichier);
+    xmlNode *child = root->children;
+    char *database = (char*)malloc(sizeof(char));
+    convertToBlastP(fichier, child, getInfoBlast(child,database), database);
+    printf("on affiche le fichier final!\n");
+}
 
 char *getInfoBlast(xmlNode *node, char *database)
 {
@@ -14,7 +22,7 @@ char *getInfoBlast(xmlNode *node, char *database)
         }
         if (strcmp("BlastOutput_reference", (const char *)child->name) == 0)
         {
-            blast_reference(child, content);
+            strcat(content, blast_reference(child));
         }
          if (strcmp("BlastOutput_db", (const char *)child->name) == 0)
         {
@@ -30,7 +38,6 @@ char *getInfoBlast(xmlNode *node, char *database)
 
 void convertToBlastP(xmlDoc *xmlfile, xmlNode *child, char *blastInfo, char *database)
 {
-    int i = 1;
     for (xmlNode *node = child; node; node = node->next)
     {
         if (strcmp("BlastOutput_iterations", (const char *)node->name) == 0)
@@ -41,18 +48,23 @@ void convertToBlastP(xmlDoc *xmlfile, xmlNode *child, char *blastInfo, char *dat
                 if (strcmp("Iteration", (const char *)child->name) == 0)
                 {
                     // création du nom de fichier
-                    char *filename = (char *)malloc(sizeof(char)+1);
-                    strcpy(filename, BLAST_FILE);
-                    filename[8] = i + '0';
-                    //filename[9]='\0';
-                    strcat(filename, ".blastp");
-
+                    char *filename = (char *)malloc(sizeof(char)+64);
+                    for(childnode = child->children; childnode; childnode = childnode->next){
+                        //printf("Les enfants sont : %s\n", (char *)childnode->name);
+                        if(strcmp("Iteration_iter-num", (const char *)childnode->name) == 0){
+                            strcpy(filename, BLAST_FILE);
+                            printf("l'itération est %s\n", xmlNodeGetContent(childnode));
+                            strcat(filename, (char *)xmlNodeGetContent(childnode));
+                            strcat(filename, ".blastp");
+                            break;
+                        }
+                    }
+                    printf("on arrive ici ?");
                     FILE *output = fopen(filename,"w");
                     fprintf(output,"%s", blastInfo);
+                    printf("on arrive ici ?");
                     iterationNode(child, output, database);
                     fclose(output);
-
-                    i++;
                 }
             }
         }
@@ -95,7 +107,7 @@ char *replaceWord(const char *s, const char *oldW, const char *newW)
 }
 
 /*****************************************REF DE BLAST*****************************************/
-void blast_reference(xmlNode *node, char *content)
+char *blast_reference(xmlNode *node)
 {
     char var[512] = "Reference: ";
     /*****************************************REMPLACEMENT DU CARACTERE HTML EN FR*****************************************/
@@ -123,8 +135,9 @@ void blast_reference(xmlNode *node, char *content)
             }
         }
     }
+  
     strcat(ncontent, "\n\n\n\n");
-    strcat(content, ncontent);
+    return ncontent;
 
 }
 

@@ -19,7 +19,10 @@
     "argstype.C": "cpp",
     "xmlparser.h": "c",
     "argstype.h": "c",
-    "readxml.h": "c"
+    "readxml.h": "c",
+    "xmltoblastp.h": "c",
+    "blastinfo.h": "c",
+    "retrieveinfo.h": "c"
   },
   "C_Cpp_Runner.cCompilerPath": "/mnt/c/usr/bin/gcc",
   "C_Cpp_Runner.cppCompilerPath": "g++",

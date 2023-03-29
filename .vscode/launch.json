@@ -1,6 +1,7 @@
 {
   "version": "1.13.0",
   "configurations": [
+
     {
       "name": "(gdb) Lancer",
       "type": "cppdbg",
@@ -11,7 +12,7 @@
         "gold",
         "-o",
         "output55.json",
-        "stdin.xml"
+        "1G8H3Y9301N-Alignment.xml"
       ],
       "stopAtEntry": false,
       "cwd": "${fileDirname}",
@@ -39,8 +40,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/ihsan/Desktop/ALTERNANTE/blast-project/XMLParse",
-      "program": "c:/Users/ihsan/Desktop/ALTERNANTE/blast-project/XMLParse/build/Debug/outDebug",
+      "cwd": "c:/Users/ihsan/Desktop/ALTERNANTE/blast-project/XMLParse/newVersion",
+      "program": "c:/Users/ihsan/Desktop/ALTERNANTE/blast-project/XMLParse/newVersion/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

@@ -11,7 +11,7 @@
 
 char *replaceWord(const char *s, const char *oldW, const char *newW);
 
-void blast_reference(xmlNode *node, char *content);
+char *blast_reference(xmlNode *node);
 
 void convertToBlastP(xmlDoc *xmlfile, xmlNode *child, char *blastInfo, char *database);
 

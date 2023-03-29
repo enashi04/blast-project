@@ -28,7 +28,7 @@ void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer, char tabIn
     char *database = (char*)malloc(sizeof(char));
     char blastInfo[MAXI_SIZE];
     strcpy(blastInfo,getInfoBlast(child, database));
-    convertToBlastP(fichier, child, blastInfo, database);
+    
     // WE LOOK FOR EACH NODE TO GET THE LENGTH, THE DEF OF THE QUERY, THE DEFINITION OF BLAST
     char speciesName[MIN_SIZE];
     int query_length = 0;
@@ -45,6 +45,7 @@ void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer, char tabIn
     fprintf(output, "\t\"blast_output\":[\n");
     // WE DISPLAY THE INFOS OF THE SPECIES
     const char *BLASTOUTPUT_NODE_NAME = "BlastOutput_iterations";
+    convertToBlastP(fichier, child, blastInfo, database);
     // PATH OF SUBNODES
     for (node = child; node; node = node->next)
     {
