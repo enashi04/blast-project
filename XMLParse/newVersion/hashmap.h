@@ -7,8 +7,10 @@
 typedef struct Entry
 {
     char *key;          // la clé
+    char *key2;
     int value;          // la valeur associée à la clé
     struct Entry *next; // le pointeur vers l'élément suivant dans la liste chaînée
+
 } Entry;
 
 // la structure de la hashmap
@@ -18,10 +20,9 @@ typedef struct Hashmap
 } Hashmap;
 
 unsigned int hash(const char *key);
-void insert(Hashmap *hashmap, const char *key, int value);
+void insert(Hashmap *hashmap, const char *key, int value, char *key2);
 Hashmap *createHashMap(char *buffer);
 int get(Hashmap *hashmap, const char *key);
-
 
 
 #endif

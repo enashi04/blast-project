@@ -22,7 +22,9 @@
     "readxml.h": "c",
     "xmltoblastp.h": "c",
     "blastinfo.h": "c",
-    "retrieveinfo.h": "c"
+    "retrieveinfo.h": "c",
+    "lineage.h": "c",
+    "hashmap.h": "c"
   },
   "C_Cpp_Runner.cCompilerPath": "/mnt/c/usr/bin/gcc",
   "C_Cpp_Runner.cppCompilerPath": "g++",

@@ -26,6 +26,7 @@ void statNode(xmlNode *node,FILE  *output, char *database);
 void hitNode(xmlNode *node, FILE *output);
 
 void hspNode(xmlNode *node, FILE *output);
+void hit_Def(xmlNode *node, FILE *output);
 
 void blasting(xmlNode *node, FILE *output);
 
