@@ -26,8 +26,7 @@ void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer, char tabIn
     // Declare the three node allowing us to browse the XML FILE
     xmlNode *node, *root = xmlDocGetRootElement(fichier), *child = root->children;
     char *database = (char*)malloc(sizeof(char));
-    char blastInfo[MAXI_SIZE];
-    strcpy(blastInfo,getInfoBlast(child, database));
+    char *blastInfo=getInfoBlast(child, database);
     
     // WE LOOK FOR EACH NODE TO GET THE LENGTH, THE DEF OF THE QUERY, THE DEFINITION OF BLAST
     char speciesName[MIN_SIZE];
@@ -45,7 +44,11 @@ void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer, char tabIn
     fprintf(output, "\t\"blast_output\":[\n");
     // WE DISPLAY THE INFOS OF THE SPECIES
     const char *BLASTOUTPUT_NODE_NAME = "BlastOutput_iterations";
-    convertToBlastP(fichier, child, blastInfo, database);
+    if(strcmp(mode, "gold")==0){
+        convertToBlastP(fichier, child, blastInfo, database);
+    }
+    free(database);
+    free(blastInfo);
     // PATH OF SUBNODES
     for (node = child; node; node = node->next)
     {
@@ -77,13 +80,14 @@ void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer, char tabIn
                     }
                     displayQuerySpecies(speciesName);
                     node_Iteration(child, mode, speciesInfo, query_length, fillInfo, hashmap,tabInfo, iteration_num); //ajout de la table d'information
-                    printf("on entre une fois ici\n");
+                    //printf("on entre une fois ici\n");
 
                 }
             }
         }
     }
     free(hashmap);
+    free(fillInfo);
     free(buffer);
 }
 
@@ -112,9 +116,11 @@ void node_Iteration(xmlNode *node, char *mode, SpeciesInfo *speciesInfo, int que
                 // check if we're on the node "iteration_hits"
                 if (strcmp(hit, (const char *)child->name) == 0)
                 {
+                    printf("hit \n");
                     //HSP NODE
                     node_HSP(child, mode, query_length, speciesInfo, fillInfo, hashmap, tabInfo); //ajout de la hashmap ici
-                    strcpy(name_hit,"");
+                    name_hit[0]='\0';
+                    //strcpy(name_hit,"");
                 }
             }
         }
@@ -143,11 +149,11 @@ void node_Iteration(xmlNode *node, char *mode, SpeciesInfo *speciesInfo, int que
         system(command);
         strcat(result_file,".motifs");
         char *blastBuffer = makebuffer(result_file);
+        //on entre ici
         char *extractmotif=getMotifs(blastBuffer);
         fprintf(output,"%s\n\t\t}\n\t],\n",extractmotif);
         // free(blastBuffer);
     }
-   
 }
 
 /**************************************************************************************************************/
@@ -371,16 +377,12 @@ void node_HSP(xmlNode *node, char *mode,int query_length, SpeciesInfo *speciesIn
                             }
                         } 
                     }
-                    fseek(output, -1, SEEK_END);
+                   // fseek(output, -1, SEEK_END);
                     fprintf(output,"\n\t\t\t},\n");
                 }
-
-            }
-            
+            }   
         }
     }
-    //vérifier le caractère qu'on a avant 
-
     free(species);
 }
 
@@ -415,7 +417,7 @@ void getHSP(xmlNode *node, const char *name, int query_length)
             // Ajout de la query cover
             int querycover = 100 * (t_to - t_from) / query_length;
             fprintf(output, "\n\t\t\t\t\"query-cover\" : \"%d\",\n", querycover);
-            fprintf(output, "\t\t\t\t\"%s\" : \"%s\",", label, xmlNodeGetContent(node));
+            fprintf(output, "\t\t\t\t\"%s\" : \"%s\"", label, xmlNodeGetContent(node));
         }
         else
         {

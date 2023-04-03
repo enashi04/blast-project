@@ -116,7 +116,7 @@ void invalidOptions(int argc, char **argv)
             if (strncmp(argv[i], "-a", 2) != 0 && strncmp(argv[i], "-m", 2) != 0 && strncmp(argv[i], "-h", 2) != 0 && strncmp(argv[i], "-o", 2) != 0)
             {
                 fprintf(stderr, "The option %s is invalid.\n", argv[i]);
-                fprintf(stderr, "See ./parsingv2 -h for more help.\n");
+                fprintf(stderr, "See ./parsing -h for more help.\n");
                 exit(1);
             }
         }
