@@ -77,6 +77,8 @@ void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer, char tabIn
                     }
                     displayQuerySpecies(speciesName);
                     node_Iteration(child, mode, speciesInfo, query_length, fillInfo, hashmap,tabInfo, iteration_num); //ajout de la table d'information
+                    printf("on entre une fois ici\n");
+
                 }
             }
         }
@@ -118,17 +120,14 @@ void node_Iteration(xmlNode *node, char *mode, SpeciesInfo *speciesInfo, int que
         }
     }
     fseek(output, -2, SEEK_END);    
-    fprintf(output, "\n\t\t]\n\t },\n");
-
+    fprintf(output, "\n\t\t],\n");
     //ajout des motifs ici si jamais on utilise le mode gold
     if(strcmp(mode, "gold")==0){
-        printf("on arrive ici ?");
         char blastp[MIN_SIZE] = BLAST_FILE;
         strcat(blastp,iteration_num);
         char result_file[MIN_SIZE];
         strcpy(result_file,blastp);
         strcat(blastp,".blastp\0");
-        printf("le fichier est %s\n", blastp);
         FILE *f = fopen(blastp, "r");
         if(f!=NULL){
             fclose(f);
@@ -141,15 +140,14 @@ void node_Iteration(xmlNode *node, char *mode, SpeciesInfo *speciesInfo, int que
         strcat(command, blastp);
         strcat(command, " -o ");
         strcat(command, result_file);
-        printf("la commande est %s\n", command);
         system(command);
         strcat(result_file,".motifs");
         char *blastBuffer = makebuffer(result_file);
         char *extractmotif=getMotifs(blastBuffer);
         fprintf(output,"%s\n\t\t}\n\t],\n",extractmotif);
         // free(blastBuffer);
-        
     }
+   
 }
 
 /**************************************************************************************************************/
@@ -180,6 +178,7 @@ char *getHitAccession(xmlNode *node)
 /**************************************************************************************************************/
 char *getSpecies(xmlNode *node)
 {
+
     char *content;
     const char *name = "Hit_def";
     xmlNode *child = node->children;
@@ -188,9 +187,9 @@ char *getSpecies(xmlNode *node)
         if (strcmp(name, (const char *)node->name) == 0)
         {
             content = (char *)xmlNodeGetContent(node);
+            break;
         }
     }
-    
     int debut = 0, fin = 0;
     for (int i = 0; i < strlen(content); i++)
     {
@@ -204,16 +203,43 @@ char *getSpecies(xmlNode *node)
             break;
         }
     }
-    int j = 0;
-    char name_species[MIN_SIZE];
-    for (int i = debut + 1; i < fin; i++)
-    {
-        name_species[j] = content[i];
-        j++;
+    if(debut!=0 && fin!=0){
+         int j = 0;
+        char name_species[MIN_SIZE];
+        for (int i = debut + 1; i < fin; i++)
+        {
+            name_species[j] = content[i];
+            j++;
+        }
+        name_species[j] = '\0';
+        return strdup(name_species);
     }
-    name_species[j] = '\0';
-    return strdup(name_species);
-}
+    else{
+        fin =0;
+        for (int i = 0; i < strlen(content); i++)
+        {
+            if (content[i] == 'O' && content[i+1] == 'S')
+            {
+                debut = i+2;
+            }
+            else if (content[i] == 'O' && content[i+1] == 'X')
+            {
+                fin = i-1;
+                break;
+            }
+        }
+        char name_species[MAX_SIZE];
+        int k = 0;
+        for (int j = debut + 1; j < fin; ++j)
+        {
+            name_species[k] = content[j];
+            k++;
+        }        
+        name_species[k] = '\0';
+        
+        return strdup(name_species);
+    }
+}     
 
 /**************************************************************************************************************/
 /*                              Node_HSP: Filling the JSON file                                               */
@@ -282,7 +308,6 @@ void node_HSP(xmlNode *node, char *mode,int query_length, SpeciesInfo *speciesIn
                                     if(strcmp(tabInfo[0][1], "1")==0){
                                         fprintf(output,",\n%s",fillInfo[i].lineage );
                                     }
-                                    
                                 check=1;
                                 break;
                                 }

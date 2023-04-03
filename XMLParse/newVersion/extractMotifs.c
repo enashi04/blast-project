@@ -17,9 +17,10 @@ char *getMotifs(char *file){
         strcat(createJSON,motifs);
         strcat(createJSON,"\",\n\t\t\t\"score\":\"");
         strcat(createJSON,score);
-        strcat(createJSON,"\"\n\t\t },");  
+        strcat(createJSON,"\"\n\t\t },\n");  
         line=strtok(NULL, "\n"); 
     }
-    createJSON[strlen(createJSON)-1]=']';
+    createJSON[strlen(createJSON)-2]='\n';
+    strcat(createJSON,"\t\t]\n");
     return createJSON;
 }
