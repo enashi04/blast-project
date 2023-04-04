@@ -41,7 +41,7 @@ void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer, char tabIn
     FillSpeciesInfo *fillInfo = (FillSpeciesInfo *)malloc(sizeof(FillSpeciesInfo)*MAXI_SIZE); //~8000
     //faire appel a la hashmap ici (remplissage une fois)
     Hashmap *hashmap = createHashMap(buffer);
-    fprintf(output, "\t\"blast_output\":[\n");
+    fprintf(output, "\t\"blast_output\":[\n"); //ajouter le dict au lieu de cette HashMap
     // WE DISPLAY THE INFOS OF THE SPECIES
     const char *BLASTOUTPUT_NODE_NAME = "BlastOutput_iterations";
     if(strcmp(mode, "gold")==0){
@@ -81,13 +81,13 @@ void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer, char tabIn
                     displayQuerySpecies(speciesName);
                     node_Iteration(child, mode, speciesInfo, query_length, fillInfo, hashmap,tabInfo, iteration_num); //ajout de la table d'information
                     //printf("on entre une fois ici\n");
-
                 }
             }
         }
     }
     free(hashmap);
     free(fillInfo);
+    free(speciesInfo);
     free(buffer);
 }
 
@@ -116,7 +116,6 @@ void node_Iteration(xmlNode *node, char *mode, SpeciesInfo *speciesInfo, int que
                 // check if we're on the node "iteration_hits"
                 if (strcmp(hit, (const char *)child->name) == 0)
                 {
-                    printf("hit \n");
                     //HSP NODE
                     node_HSP(child, mode, query_length, speciesInfo, fillInfo, hashmap, tabInfo); //ajout de la hashmap ici
                     name_hit[0]='\0';
@@ -182,7 +181,7 @@ char *getHitAccession(xmlNode *node)
 /*                                  in the definition of the target                                           */
 /** Parametre : node : Node where we are now                                                                  */
 /**************************************************************************************************************/
-char *getSpecies(xmlNode *node)
+char *getSpecies(xmlNode *node, char *fragment)
 {
 
     char *content;
@@ -196,6 +195,12 @@ char *getSpecies(xmlNode *node)
             break;
         }
     }
+    //vérifier si content contient le mot "fragment" ou le mot "partial"
+    if (strstr(content, "fragment") != NULL || strstr(content, "partial") != NULL)
+    {
+        strcpy(fragment, "yes");
+    }
+
     int debut = 0, fin = 0;
     for (int i = 0; i < strlen(content); i++)
     {
@@ -258,7 +263,8 @@ char *getSpecies(xmlNode *node)
 /**************************************************************************************************************/
 void node_HSP(xmlNode *node, char *mode,int query_length, SpeciesInfo *speciesInfo, FillSpeciesInfo *fillInfo, Hashmap *hashmap, char tabInfo[13][2][20]) // ajout de la hashmap
 {
-    char *hit_id = getHitAccession(node),*species = getSpecies(node);
+    char *fragment ="no";
+    char *hit_id = getHitAccession(node),*species = getSpecies(node, fragment);
     // CHILD = SOUS-NOEUD DU NODE
     xmlNode *child = node->children;
     const char *name = "Hit_hsps", *name2 = "Hsp";
@@ -279,6 +285,7 @@ void node_HSP(xmlNode *node, char *mode,int query_length, SpeciesInfo *speciesIn
                             strcpy(name_hit, hit_id);
                         }
                        fprintf(output, "\t\t\t{\n\t\t\t\t\"hit_accession\" : \"%s\",\n", hit_id);
+                       fprintf(output, "\t\t\t\t\"fragment\" : \"%s\",\n", fragment);
                         //pour l'affichace de l'espèce
                         fprintf(output, "\t\t\t\t\"species\" : {\n");
                         //1e ajout dans la deuxieme structure

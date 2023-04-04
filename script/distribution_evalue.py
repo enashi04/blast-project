@@ -17,4 +17,3 @@ plt.ylabel('Numéro de hit')
 plt.title('Distribution des evalues')
 plt.savefig('Distribution_evalues_ARL6.jpg')
 plt.show()
-

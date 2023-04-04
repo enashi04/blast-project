@@ -1,0 +1,16 @@
+Species              Occurrences              Percentage
+Craniata             1865                     37,2%
+Spermatophyta        1149                     22.9%
+Panarthropoda        471                      9.4%
+leotiomyceta         421                      8.5% 
+Saccharomycetes      206                      4.2%
+Nematoda             170                      3.4%
+Lophotrochozoa       74                       1.5%
+Gnathifera           57                       1.1%
+Agaricomycetidae     51                       1%
+others               539                      10.8%
+
+
+
+
+
