@@ -422,7 +422,9 @@ void getHSP(xmlNode *node, const char *name, int query_length)
         else if (strcmp(name, (const char *)"Hsp_align-len") == 0)
         {
             // Ajout de la query cover
+
             int querycover = 100 * (t_to - t_from) / query_length;
+            printf("on essaie de récupérer la valeur de la query\n");
             fprintf(output, "\n\t\t\t\t\"query-cover\" : \"%d\",\n", querycover);
             fprintf(output, "\t\t\t\t\"%s\" : \"%s\"", label, xmlNodeGetContent(node));
         }
