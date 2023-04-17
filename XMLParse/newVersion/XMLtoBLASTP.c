@@ -24,7 +24,7 @@ char *getInfoBlast(xmlNode *node, char *database)
         {
             strcat(content, blast_reference(child));
         }
-         if (strcmp("BlastOutput_db", (const char *)child->name) == 0)
+        if (strcmp("BlastOutput_db", (const char *)child->name) == 0)
         {
             strcat(content, "Database: ");
             strcat(content, (char *)xmlNodeGetContent(child));
@@ -47,20 +47,20 @@ void convertToBlastP(xmlDoc *xmlfile, xmlNode *child, char *blastInfo, char *dat
             {
                 if (strcmp("Iteration", (const char *)child->name) == 0)
                 {
-                    for(childnode = child->children; childnode; childnode = childnode->next)
+                    for(childnode = child->children; childnode; childnode = childnode->next){
                     // création du nom de fichier
-                    if(strcmp("Iteration_iter-num", (const char *)childnode->name) == 0){
-                        //create a file with the name of the iteration
-                        char *filename = (char *)malloc(sizeof(char)+32);
-                        strcpy(filename, BLAST_FILE);
-                        strcat(filename, (char *)xmlNodeGetContent(childnode));
-                        strcat(filename, ".blastp");
-                        FILE *output = fopen(filename,"w");
-                        fprintf(output,"%s", blastInfo);
-                        iterationNode(child, output, database);
-                        fclose(output);
+                        if(strcmp("Iteration_iter-num", (const char *)childnode->name) == 0){
+                            //create a file with the name of the iteration
+                            char *filename = (char *)malloc(sizeof(char)+32);
+                            strcpy(filename, BLAST_FILE);
+                            strcat(filename, (char *)xmlNodeGetContent(childnode));
+                            strcat(filename, ".blastp");
+                            FILE *output = fopen(filename,"w");
+                            fprintf(output,"%s", blastInfo);
+                            iterationNode(child, output, database);
+                            fclose(output);
+                        }
                     }
-                        
                 }
             }
         }
