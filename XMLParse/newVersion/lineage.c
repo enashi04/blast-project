@@ -35,7 +35,13 @@ char *makebuffer(char *filename)
     buffer[fileSize] = '\0';
     return buffer;
 }
-
+/**************************************************************************************************************/
+/*                           getLineage : get the lineage of the species                                      */
+/** Parametre : speciesInfo : structure of informations of species                                            */
+/**             id : taxid of the species                                                                     */
+/**             lineage : stock the lineage of the species (return value)                                     */
+/**             parentTarget : taxId of the parent                                                            */
+/**************************************************************************************************************/
 char *getLineage(SpeciesInfo *speciesInfo, int id, char lineage[MAX_SIZE], int parentTarget)
 {
     char lignee[MAXI_SIZE];
@@ -65,7 +71,13 @@ char *getLineage(SpeciesInfo *speciesInfo, int id, char lineage[MAX_SIZE], int p
     }
     return strdup(lineage);
 }
-
+/**************************************************************************************************************/
+/*                           createLineage:create the lineage of the species                                  */
+/** Parametre : speciesInfo : structure of informations of species                                            */
+/**             species : name of the species                                                                 */
+/**             hashmap : hashmap containing informations about the taxid and name of the species             */
+/** Return : lineage                                                                                          */
+/**************************************************************************************************************/
 char *createLineage(SpeciesInfo *speciesInfo, char *species, Hashmap *hashmap)//faire appel à la hashmap ici
 {
     char *lineage = malloc(sizeof(char) * MAXI_SIZE);

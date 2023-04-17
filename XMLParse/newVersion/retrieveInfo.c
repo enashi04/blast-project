@@ -65,9 +65,11 @@ void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer, char tabIn
                 if (strcmp(ITERATION, (const char *)child->name) == 0)
                 {
                     // ITERATION SUBNODES
-                    char *iteration_num;
+                    fprintf(stdout,"on arrive ic .");
+                    char *iteration_num="";
                     //fonction pour récupérer les infos de la query
-                    getQueryInfo(child, speciesName, query_length, iteration_num);   
+                    getQueryInfo(child, speciesName, query_length, iteration_num);  
+                    //printf("iteration %s, length %u, species %s", iteration_num, query_length, speciesName); 
                     displayQuerySpecies(speciesName);
                     node_Iteration(child, mode, speciesInfo, query_length, fillInfo, hashmap,tabInfo, iteration_num); //ajout de la table d'information
                 }
