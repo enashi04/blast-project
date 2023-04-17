@@ -126,9 +126,6 @@ char *getQuerySpeciesID(char *query_Species){
     return strdup(id);
 }
 
-/// @brief
-/// @param species
-/// @param buffer
 /**************************************************************************************************************/
 /*                         displayQuerySpecies: display informations about the query                          */
 /** Parameters : species : name of the query's species                                                        */
@@ -145,6 +142,10 @@ void displayQuerySpecies(char *query_species)
     
 }
 
+/**************************************************************************************************************/
+/*                         getRank: get the Rank of the species                                               */
+/** Parameters : line : line of the XMLFile                                                                   */
+/**************************************************************************************************************/
 char *getRank(char *line)
 {
     char rank_species[MIN_SIZE];
@@ -152,7 +153,7 @@ char *getRank(char *line)
     int iteration = 0;
     for (int i = 0; i < len + 1; i++)
     {
-        if (line[i] == '	') //change this part cause 2 bumps 
+        if (line[i] == '	')
         {
             iteration++;
             if (iteration == 8)
@@ -179,21 +180,25 @@ char *getRank(char *line)
     return strdup(rank_species);
 }
 
-//récupérer l'id de cette espèce
+/**************************************************************************************************************/
+/*                         getQuerySpecieID: get the taxid of the species                                     */
+/** Parameters : species : name of the query's species                                                        */
+/**            : buffer : taxonomy.dat                                                                        */
+/**************************************************************************************************************/
 char *getQuerySpeciesId(char *species, char *buffer)
 {
     char *taxid = "";
-    char speciesN[70];
+    char speciesName[MIN_SIZE];
     for (int i = 0; i < strlen(species); i++)
     {
         if (species[i] == '(')
         {
-            speciesN[i-1] = '\0';
+            speciesName[i-1] = '\0';
             break;
         }
         else
         {
-            speciesN[i] = species[i];
+            speciesName[i] = species[i];
         }
     }
     char *line = strtok(strdup(buffer), "\n");
@@ -202,7 +207,7 @@ char *getQuerySpeciesId(char *species, char *buffer)
     while (line != NULL)
     {
         sscanf(line, "%[^	]	%*[^	]	%[^	]	%*[^\n]", id_species, name_species);
-        if(strcmp(speciesN,name_species) == 0)
+        if(strcmp(speciesName,name_species) == 0)
         {
             taxid=id_species;
             break;
