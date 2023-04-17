@@ -1,0 +1,77 @@
+Query: BBS1_HUMAN
+Espèce              ;Occurrences;Pourcentage
+Mammalia            ;535       ;36.27     %
+Arthropoda          ;299       ;20.27     %
+Insecta             ;238       ;16.14     %
+Primates            ;181       ;12.27     %
+Nematoda            ;180       ;12.20     %
+Viridiplantae       ;36        ;2.44      %
+Fungi               ;6         ;0.41      %
+
+
+Query: BBS2_HUMAN
+Espèce              ;Occurrences;Pourcentage
+Mammalia            ;356       ;27.47     %
+Arthropoda          ;301       ;23.23     %
+Nematoda            ;237       ;18.29     %
+Insecta             ;233       ;17.98     %
+Primates            ;119       ;9.18      %
+Viridiplantae       ;44        ;3.40      %
+Fungi               ;6         ;0.46      %
+
+
+Query: BBS4_HUMAN
+Espèce              ;Occurrences;Pourcentage
+Mammalia            ;393       ;31.80     %
+Arthropoda          ;286       ;23.14     %
+Insecta             ;231       ;18.69     %
+Nematoda            ;151       ;12.22     %
+Primates            ;86        ;6.96      %
+Viridiplantae       ;74        ;5.99      %
+Fungi               ;15        ;1.21      %
+
+
+Query: BBS5_HUMAN
+Espèce              ;Occurrences;Pourcentage
+Mammalia            ;333       ;28.91     %
+Arthropoda          ;283       ;24.57     %
+Insecta             ;226       ;19.62     %
+Nematoda            ;176       ;15.28     %
+Primates            ;89        ;7.73      %
+Viridiplantae       ;37        ;3.21      %
+Fungi               ;8         ;0.69      %
+
+
+Query: BBS7_HUMAN
+Espèce              ;Occurrences;Pourcentage
+Mammalia            ;314       ;27.07     %
+Arthropoda          ;310       ;26.72     %
+Insecta             ;238       ;20.52     %
+Nematoda            ;199       ;17.16     %
+Primates            ;49        ;4.22      %
+Viridiplantae       ;43        ;3.71      %
+Fungi               ;7         ;0.60      %
+
+
+Query: TTC8_HUMAN
+Espèce              ;Occurrences;Pourcentage
+Mammalia            ;719       ;39.23     %
+Arthropoda          ;333       ;18.17     %
+Primates            ;254       ;13.86     %
+Insecta             ;251       ;13.69     %
+Nematoda            ;204       ;11.13     %
+Viridiplantae       ;59        ;3.22      %
+Fungi               ;13        ;0.71      %
+
+
+Query: PTHB1_HUMAN
+Espèce              ;Occurrences;Pourcentage
+Mammalia            ;580       ;37.98     %
+Arthropoda          ;327       ;21.41     %
+Insecta             ;259       ;16.96     %
+Primates            ;175       ;11.46     %
+Nematoda            ;134       ;8.78      %
+Viridiplantae       ;46        ;3.01      %
+Fungi               ;6         ;0.39      %
+
+

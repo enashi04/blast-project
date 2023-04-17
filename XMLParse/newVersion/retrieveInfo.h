@@ -9,7 +9,7 @@
 #include "parameters.h"
 #include "hashmap.h"
 
-FILE *output;
+  FILE *output;
 
 void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer, char tabInfo[13][2][20]);
 void hit_enter(xmlNode *node);

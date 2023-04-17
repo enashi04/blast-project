@@ -38,7 +38,6 @@ char *getInfoBlast(xmlNode *node, char *database)
 
 void convertToBlastP(xmlDoc *xmlfile, xmlNode *child, char *blastInfo, char *database)
 {
-
     for (xmlNode *node = child; node; node = node->next)
     {
         if (strcmp("BlastOutput_iterations", (const char *)node->name) == 0)

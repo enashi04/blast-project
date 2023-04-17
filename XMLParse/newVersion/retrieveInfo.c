@@ -23,32 +23,33 @@ int t_from = 0, t_to = 0, size_struct=0; // voir où on peut le mettre en local 
 /**************************************************************************************************************/
 void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer, char tabInfo[13][2][20])
 {
-    // Declare the three node allowing us to browse the XML FILE
     xmlNode *node, *root = xmlDocGetRootElement(fichier), *child = root->children;
-    char *database = (char*)malloc(sizeof(char));
-    char *blastInfo=getInfoBlast(child, database);
-    
-    // WE LOOK FOR EACH NODE TO GET THE LENGTH, THE DEF OF THE QUERY, THE DEFINITION OF BLAST
+
     char speciesName[MIN_SIZE];
     int query_length = 0;
+
     for (node = child; node; node = node->next)
     {
         getBlastVersion(node);
         getBlastDB(node);
     }  
-    //remplissage de la structure speciesInfo
+    //remplissage de la structure speciesInfo et intialisation de la hashmap
     SpeciesInfo *speciesInfo = fillStructure(buffer);
-    FillSpeciesInfo *fillInfo = (FillSpeciesInfo *)malloc(sizeof(FillSpeciesInfo)*MAXI_SIZE); //~8000
-    //faire appel a la hashmap ici (remplissage une fois)
+    FillSpeciesInfo *fillInfo = (FillSpeciesInfo *)malloc(sizeof(FillSpeciesInfo)*MAXI_SIZE);
     Hashmap *hashmap = createHashMap(buffer);
-    fprintf(output, "\t\"blast_output\":[\n"); //ajouter le dict au lieu de cette HashMap
-    // WE DISPLAY THE INFOS OF THE SPECIES
-    const char *BLASTOUTPUT_NODE_NAME = "BlastOutput_iterations";
+
+   //mode gold : charger
     if(strcmp(mode, "gold")==0){
+        char *database = (char*)malloc(sizeof(char));
+        char *blastInfo=getInfoBlast(child, database);
         convertToBlastP(fichier, child, blastInfo, database);
+        free(database);
+        free(blastInfo);
     }
-    free(database);
-    free(blastInfo);
+  
+   fprintf(output, "\t\"blast_output\":[\n"); 
+
+    const char *BLASTOUTPUT_NODE_NAME = "BlastOutput_iterations";
     // PATH OF SUBNODES
     for (node = child; node; node = node->next)
     {
@@ -422,9 +423,7 @@ void getHSP(xmlNode *node, const char *name, int query_length)
         else if (strcmp(name, (const char *)"Hsp_align-len") == 0)
         {
             // Ajout de la query cover
-
             int querycover = 100 * (t_to - t_from) / query_length;
-            printf("on essaie de récupérer la valeur de la query\n");
             fprintf(output, "\n\t\t\t\t\"query-cover\" : \"%d\",\n", querycover);
             fprintf(output, "\t\t\t\t\"%s\" : \"%s\"", label, xmlNodeGetContent(node));
         }

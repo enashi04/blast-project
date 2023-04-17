@@ -23,7 +23,7 @@ plt.axhline(lengths[0], color='r', linestyle='--')
 # afficher sur le graphe la valeur de lengths[0] 
 plt.text(i-10, lengths[0]+1, lengths[0])
 # Ajouter un titre
-plt.title('Histogram of lengths')
+plt.title('Distribution of lengths')
 # enregistrer le graphe
 plt.savefig('Distribution_longueur_ARL6.jpg')
 # afficher le graphe
