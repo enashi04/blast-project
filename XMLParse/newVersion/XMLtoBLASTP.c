@@ -1,13 +1,5 @@
 #include "XMLtoBLASTP.h"
 
-// int main(int argc, char **argv){
-//     xmlDoc *fichier = xmlReadFile("1G8H3Y9301N-Alignment.xml", NULL, 0);
-//     xmlNode *root = xmlDocGetRootElement(fichier);
-//     xmlNode *child = root->children;
-//     char *database = (char*)malloc(sizeof(char));
-//     char *infoBlast = getInfoBlast(child, database);
-//     convertToBlastP(fichier, child, infoBlast, database);
-// }
 
 char *getInfoBlast(xmlNode *node, char *database)
 {
@@ -35,7 +27,13 @@ char *getInfoBlast(xmlNode *node, char *database)
     }
     return content;
 }
-
+/**************************************************************************************************************/
+/*                           convertToBlastP: convert the file to BlastP for ballast                          */
+/** Parametre : xmlfile : the blastp in xmlformat                                                             */
+/**             child :the node                                                                               */
+/**             blastInfo : informations of blast                                                             */
+/**             database : the name of the database of blast                                                  */
+/**************************************************************************************************************/
 void convertToBlastP(xmlDoc *xmlfile, xmlNode *child, char *blastInfo, char *database)
 {
     for (xmlNode *node = child; node; node = node->next)
@@ -66,7 +64,7 @@ void convertToBlastP(xmlDoc *xmlfile, xmlNode *child, char *blastInfo, char *dat
         }
     }
 }
-/*****************************************REMPLACER LES MOTS DANS UNE CHAINE*****************************************/
+/*****************************************Replace words in a string*****************************************/
 char *replaceWord(const char *s, const char *oldW, const char *newW)
 {
     char *result;
@@ -117,12 +115,10 @@ char *blast_reference(xmlNode *node)
     for (int i = 0; i < len; i++)
     {
         ncontent[i] = var[i];
-        // fprintf(content , "%c", var[i]);
         if ((i + 1) % j == 0)
         {
             if (var[i] == ' ')
             {
-                // fprintf(content, "\n");
                 ncontent[i] = '\n';
             }
             else
@@ -205,10 +201,8 @@ void iterationNode(xmlNode *node, FILE *output, char *database)
                 if(strcmp("Statistics", (const char *)childs->name) == 0)
                 {
                     statNode(childs, output, database);
-                }
-               
-            }
-            
+                } 
+            }   
         }
     }
 }
@@ -220,7 +214,6 @@ void statNode(xmlNode *node,FILE  *output, char *database){
     for(child=childNode; child; child=child->next){
         if(strcmp("Statistics_db-num", (const char *)child->name)==0){
             fprintf(output, "  Database: %s\n", database);
-            //ajout de la date ici
             time_t now;
             time(&now);
             fprintf(output,"\tPosted date : %s", ctime(&now));
@@ -316,7 +309,6 @@ void hit_Def(xmlNode *node, FILE *output)
                 {
                     /*****************************************NOEUD HSP*****************************************/
                     hspNode(hspchild, output);
-                    
                 }
             }
         }
@@ -390,8 +382,7 @@ void hspNode(xmlNode *node, FILE *output)
 }
 /*****************************************RECUPERATION DES SEQUENCES*****************************************/
 void blasting(xmlNode *node, FILE *output)
-{
-  
+{  
     /*****************************************DEBUT/FIN DE QUERY & SUBJECT*****************************************/
     char query_from[8], query_to[8], target_from[8], target_to[8];
     /*****************************************DECLARATION DES SEQUENCES À RÉCUPÉRER*****************************************/
@@ -554,7 +545,6 @@ void blasting(xmlNode *node, FILE *output)
             //printf("la newmidline est %s\n", mseq);
             strcat(tseq, newtarget);
             strcat(tseq, ft);
-            
 
             //mettre un \0 à la fin
             qseq[strlen(qseq)+1]='\0';

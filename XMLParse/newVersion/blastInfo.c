@@ -38,25 +38,10 @@ void blastDB(xmlNode *node)
 /**            : query_length : length of the query                                                           */
 /**            : iteration_num : number of the blast_iteration                                                */
 /**************************************************************************************************************/
-void getQueryInfo(xmlNode *child, char species[MIN_SIZE], int query_length, char* iteration_num){ 
-    for(xmlNode *childnode=child->children; childnode; childnode=childnode->next){
-        if(strcmp("Iteration_query-def", (const char *)childnode->name) == 0)
-        {
-            char *query_def = (char *)xmlNodeGetContent(childnode);
-            strcpy(species, query_def);
-            fprintf(output, " \t{\n\t\t\"query-name\" : \"%s\",\n", query_def);
-        }
-        if(strcmp("Iteration_iter-num", (const char *)childnode->name) == 0){
-            iteration_num=(char *)xmlNodeGetContent(childnode);
-            printf("iteration est %s\n", iteration_num);
-        }
-        if (strcmp("Iteration_query-len", (const char *)childnode->name) == 0)
-        {
-            fprintf(output, "\t\t\"query-length\" : \"%s\",\n", xmlNodeGetContent(childnode));
-            query_length = atoi((const char *)xmlNodeGetContent(childnode));
-        }
-    }
-}
+// void getQueryInfo(xmlNode *child, char species[MIN_SIZE], int query_length, char* iteration_num){ 
+
+  
+// }
 
 /**************************************************************************************************************/
 /*                         getQuerySpeciesName: name of the query's species                                   */

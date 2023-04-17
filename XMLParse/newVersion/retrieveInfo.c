@@ -65,10 +65,25 @@ void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer, char tabIn
                 if (strcmp(ITERATION, (const char *)child->name) == 0)
                 {
                     // ITERATION SUBNODES
-                    fprintf(stdout,"on arrive ic .");
-                    char *iteration_num="";
+                    char *iteration_num;
                     //fonction pour récupérer les infos de la query
-                    getQueryInfo(child, speciesName, query_length, iteration_num);  
+                    //getQueryInfo(child, speciesName, query_length, iteration_num);  
+                    for(xmlNode *childnode=child->children; childnode; childnode=childnode->next){
+                        if(strcmp("Iteration_query-def", (const char *)childnode->name) == 0)
+                        {
+                            char *query_def = (char *)xmlNodeGetContent(childnode);
+                            strcpy(speciesName, query_def);
+                            fprintf(output, " \t{\n\t\t\"query-name\" : \"%s\",\n", query_def);
+                        }
+                        else if(strcmp("Iteration_iter-num", (const char *)childnode->name) == 0){
+                            iteration_num=(char *)xmlNodeGetContent(childnode);
+                        }
+                        else if (strcmp("Iteration_query-len", (const char *)childnode->name) == 0)
+                        {
+                            fprintf(output, "\t\t\"query-length\" : \"%s\",\n", xmlNodeGetContent(childnode));
+                            query_length = atoi((const char *)xmlNodeGetContent(childnode));
+                        }
+                    }
                     //printf("iteration %s, length %u, species %s", iteration_num, query_length, speciesName); 
                     displayQuerySpecies(speciesName);
                     node_Iteration(child, mode, speciesInfo, query_length, fillInfo, hashmap,tabInfo, iteration_num); //ajout de la table d'information
@@ -80,6 +95,8 @@ void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer, char tabIn
     free(fillInfo);
     free(speciesInfo);
     free(buffer);
+    fseek(output,-2, SEEK_END);
+    fprintf(output, "\n ]\n}");
 }
 
 /**************************************************************************************************************/
@@ -144,6 +161,10 @@ void node_Iteration(xmlNode *node, char *mode, SpeciesInfo *speciesInfo, int que
         fprintf(output,"%s\n\t\t}\n\t],\n",extractmotif);
         // free(blastBuffer);
     }
+    else{
+        fseek(output, -2,SEEK_END);
+        fprintf(output,"\n\t},\n");
+    }
 }
 
 /**************************************************************************************************************/
@@ -189,7 +210,7 @@ char *getSpecies(xmlNode *node, char *fragment)
     //vérifier si content contient le mot "fragment" ou le mot "partial"
     if (strstr(content, "fragment") != NULL || strstr(content, "partial") != NULL)
     {
-        strcpy(fragment, "yes");
+       fragment="yes";
     }
 
     int debut = 0, fin = 0;
@@ -350,6 +371,7 @@ void node_HSP(xmlNode *node, char *mode,int query_length, SpeciesInfo *speciesIn
                             for(int i =1; i<13; i++){
                                 if(strcmp(tabInfo[i][0], "Hsp_align-len")==0){
                                     getHSP(childNode,tabInfo[i][0],query_length);
+
                                 }
                                 else{
                                     getHSP(childNode,tabInfo[i][0],0);

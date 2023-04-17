@@ -11,7 +11,7 @@
 
 void blastVersion(xmlNode *node);
 void blastDB(xmlNode *node);
-void getQueryInfo(xmlNode *child, char species[MIN_SIZE], int query_length, char* iteration_num);
+// void getQueryInfo(xmlNode *child, char species[MIN_SIZE], int query_length, char* iteration_num);
 char *getQuerySpeciesName(char *species);
 char *getQuerySpeciesID(char *species);
 char *getRank(char *line);
