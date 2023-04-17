@@ -9,7 +9,7 @@
 /*                               getBlastVersion: version of blast                                            */
 /** Parameters : node : Node where we are now                                                                 */
 /**************************************************************************************************************/
-void getBlastVersion(xmlNode *node)
+void blastVersion(xmlNode *node)
 {
     const char *name = "BlastOutput_version";
     if (strcmp(name, (const char *)node->name) == 0)
@@ -22,7 +22,7 @@ void getBlastVersion(xmlNode *node)
 /*                               getBlastDB: the db of this blast                                             */
 /** Parameters : node : Node where we are now                                                                 */
 /**************************************************************************************************************/
-void getBlastDB(xmlNode *node)
+void blastDB(xmlNode *node)
 {
     const char *name = "BlastOutput_db";
     if (strcmp(name, (const char *)node->name) == 0)
@@ -32,21 +32,31 @@ void getBlastDB(xmlNode *node)
 }
 
 /**************************************************************************************************************/
-/*                              getQueryDef: the query definition                                             */
+/*                              getQueryInfo: getQueryInfo                                                    */
 /** Parameters : node : Node where we are now                                                                 */
 /**            : species : name of the query's species (complete name)                                        */
+/**            : query_length : length of the query                                                           */
+/**            : iteration_num : number of the blast_iteration                                                */
 /**************************************************************************************************************/
-void getQueryDef(xmlNode *node, char species[MIN_SIZE]){ // ajouter une autre variable pour récupérer le nom de la query
-    const char *name = "Iteration_query-def";
-    char *query_def;
-    if(strcmp(name, (const char *)node->name) == 0)
-    {
-        query_def = (char *)xmlNodeGetContent(node);
-        strcpy(species, query_def);
-        fprintf(output, " \t{\n\t\t\"query-name\" : \"%s\",\n", xmlNodeGetContent(node));
+
+void getQueryInfo(xmlNode *child, char species[MIN_SIZE], int query_length, char* iteration_num){ 
+     for(xmlNode *childnode=child->children; childnode; childnode=childnode->next){
+        if(strcmp("Iteration_query-def", (const char *)node->name) == 0)
+        {
+            query_def = (char *)xmlNodeGetContent(node);
+            strcpy(species, query_def);
+            fprintf(output, " \t{\n\t\t\"query-name\" : \"%s\",\n", xmlNodeGetContent(node));
+        }
+        else if(strcmp("Iteration_iter-num", (const char *)childnode->name) == 0){
+            iteration_num=(char *)xmlNodeGetContent(childnode);
+        }
+        else if (strcmp("Iteration_query-len", (const char *)childnode->name) == 0)
+        {
+            fprintf(output, "\t\t\"query-length\" : \"%s\",\n", xmlNodeGetContent(childnode));
+            query_length = atoi((const char *)xmlNodeGetContent(childnode));
+        }
     }
 }
-
 
 /**************************************************************************************************************/
 /*                         getQuerySpeciesName: name of the query's species                                   */

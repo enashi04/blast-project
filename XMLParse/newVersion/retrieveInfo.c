@@ -30,8 +30,8 @@ void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer, char tabIn
 
     for (node = child; node; node = node->next)
     {
-        getBlastVersion(node);
-        getBlastDB(node);
+        blastVersion(node);
+        blastDB(node);
     }  
     //remplissage de la structure speciesInfo et intialisation de la hashmap
     SpeciesInfo *speciesInfo = fillStructure(buffer);
@@ -66,22 +66,10 @@ void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer, char tabIn
                 {
                     // ITERATION SUBNODES
                     char *iteration_num;
-
-                    for(childnode=child->children; childnode; childnode=childnode->next){
-                        getQueryDef(childnode, speciesName);
-
-                        if(strcmp("Iteration_iter-num", (const char *)childnode->name) == 0){
-                            iteration_num=(char *)xmlNodeGetContent(childnode);
-                        }
-                        else if (strcmp("Iteration_query-len", (const char *)childnode->name) == 0)
-                        {
-                            fprintf(output, "\t\t\"query-length\" : \"%s\",\n", xmlNodeGetContent(childnode));
-                            query_length = atoi((const char *)xmlNodeGetContent(childnode));
-                        }
-                    }
+                    //fonction pour récupérer les infos de la query
+                    getQueryInfo(child, speciesName, query_length, iteration_num);   
                     displayQuerySpecies(speciesName);
                     node_Iteration(child, mode, speciesInfo, query_length, fillInfo, hashmap,tabInfo, iteration_num); //ajout de la table d'information
-                    //printf("on entre une fois ici\n");
                 }
             }
         }
