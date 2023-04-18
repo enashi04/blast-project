@@ -18,7 +18,7 @@ char *makebuffer(char *filename)
     // check of the file existence
     if (!file)
     {
-        printf("Unable to open file");
+        printf("Unable to open file taxonomy.dat");
         exit(1);
     }
     // move to the end of the file
