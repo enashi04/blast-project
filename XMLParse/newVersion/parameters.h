@@ -8,7 +8,7 @@
 #define SPECIES_SIZE 2996753 //le taxid maximal
 #define EXTRA_SIZE 16777216 //nombre maximal de caractère dans le fichier de sortie 2^24
 
-#define FICHIER "taxonomy12.dat" //fichier taxonomy
+#define FICHIER "taxonomy.dat" //fichier taxonomy
 #define BLAST_FILE "outblast"
 #define BALLAST_ACCESS "../../BAL-LAST/code/./ballast"
 
