@@ -7,11 +7,13 @@ void help(char **argv)
 {
     if (strncmp(argv[1], "-h", 2) == 0 || strncmp(argv[1], "help", 4) == 0)
     {
-        fprintf(stderr, "XMLParser\n\n");
+        fprintf(stderr, "BRISTOOL\n\n");
         fprintf(stderr, "Usage:\n");
         fprintf(stderr, "\r -h \t Show this screen.\n");
         fprintf(stderr, "\r -m \t Choose mode [bronze, silver or gold].\n");
         fprintf(stderr, "\r -o \t Put an output file\n");
+        fprintf(stderr, "Example of execution:\n");
+        fprintf(stderr,"./parsing -m bronze -o output.json stdin.xml\n\n");
         exit(1);
     }
 }

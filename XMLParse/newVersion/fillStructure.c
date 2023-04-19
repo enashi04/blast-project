@@ -20,7 +20,7 @@ SpeciesInfo *fillStructure(char *buffer)
     for (int i = 0; i < SPECIES_SIZE && line != NULL; i++)
     {
         //initialize variables for the structure
-        char id_species[MIN_SIZE], name_species[MIN_SIZE], other_name_species[MAXI_SIZE], id_parent_species[MIN_SIZE];
+        char id_species[MIN_SIZE], name_species[MIN_SIZE], id_parent_species[MIN_SIZE];
         //get variables from the line
         sscanf(line, "%[^	]	%*[^	]	%[^	]	%*[^\n]", id_species, name_species);
         //convert the id_species from char to int
@@ -34,26 +34,8 @@ SpeciesInfo *fillStructure(char *buffer)
                 if (line[j] == '\t')
                 {
                     iteration++;
-                    //get the other name of the species
-                    if (iteration == 5)
-                    {
-                        int k = 0;
-                        for (int l = j + 1; l < len; l++)
-                        {
-                            if (line[l] == '\t')
-                            {
-                                other_name_species[k] = '\0';
-                                break;
-                            }
-                            else
-                            {
-                                other_name_species[k] = line[l];
-                            }
-                            k++;
-                        }
-                    }
                     //get the taxid of the parent of the species
-                    else if (iteration == 9)
+                    if (iteration == 9)
                     {
                         int k = 0;
                         for (int l = j + 1; l < len; l++)
@@ -76,7 +58,6 @@ SpeciesInfo *fillStructure(char *buffer)
             //fill the structure
             outInfo[i].name = strdup(name_species);
             outInfo[i].rank = getRank(line);
-            outInfo[i].othername = strdup(other_name_species);
             outInfo[i].parentid = atoi(id_parent_species);
             //get the next line
             line = strtok(NULL, "\n");
@@ -85,7 +66,6 @@ SpeciesInfo *fillStructure(char *buffer)
         {
             outInfo[i].name = "\0";
             outInfo[i].rank = "\0";
-            outInfo[i].othername = "\0";
             outInfo[i].parentid = 0;
         }
     }
