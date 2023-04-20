@@ -69,5 +69,6 @@ SpeciesInfo *fillStructure(char *buffer)
             outInfo[i].parentid = 0;
         }
     }
+    INFO("Structure filled");
     return outInfo;
 }
