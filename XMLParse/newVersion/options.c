@@ -1,4 +1,5 @@
 #include "options.h"
+#include "log.h"
 
 
 /// @brief Display help 
@@ -7,13 +8,13 @@ void help(char **argv)
 {
     if (strncmp(argv[1], "-h", 2) == 0 || strncmp(argv[1], "help", 4) == 0)
     {
-        fprintf(stderr, "BRISTOOL\n\n");
-        fprintf(stderr, "Usage:\n");
-        fprintf(stderr, "\r -h \t Show this screen.\n");
-        fprintf(stderr, "\r -m \t Choose mode [bronze, silver or gold].\n");
-        fprintf(stderr, "\r -o \t Put an output file\n");
-        fprintf(stderr, "Example of execution:\n");
-        fprintf(stderr,"./parsing -m bronze -o output.json stdin.xml\n\n");
+        INFO("BRISTOOL\n");
+        INFO("Usage:");
+        INFO("\r -h \t Show this screen.");
+        INFO("\r -m \t Choose mode [bronze, silver or gold].");
+        INFO("\r -o \t Put an output file");
+        INFO("Example of execution:");
+        INFO("./parsing -m bronze -o output.json stdin.xml");
         exit(1);
     }
 }
@@ -33,28 +34,31 @@ char *modeChoice(int argc, char **argv, char *name)
             // faut que ca retourne un char ici pour que le mode soit choisi;
             if (argv[i + 1] == NULL)
             {
-                fprintf(stderr, "You need to put an argument after -m.\n");
-                fprintf(stderr, "Please choose a mode between : bronze, silver and gold;\n");
+                ERROR("You need to put an argument after -m.\n");
+                ERROR("Please choose a mode between : bronze, silver and gold;\n");
                 exit(1);
             }
             else
             {
                 if (strcmp("bronze", argv[i + 1]) == 0)
                 {
+                    INFO("Mode bronze choosen");
                     name = argv[i + 1];
                 }
                 else if (strcmp("silver", argv[i + 1]) == 0)
                 {
+                    INFO("Mode silver choosen");
                     return name = argv[i + 1];
                 }
                 else if (strcmp("gold", argv[i + 1]) == 0)
                 {
+                    INFO("Mode gold choosen");
                     return name = argv[i + 1];
                 }
                 else
                 {
-                    fprintf(stderr, "The mode argument is not valid.\n");
-                    fprintf(stderr, "Please choose a mode between : bronze, silver and gold;\n");
+                    ERROR("You need to put an argument after -m.\n");
+                    ERROR("Please choose a mode between : bronze, silver and gold;\n");
                     exit(1);
                 }
             }
@@ -86,18 +90,19 @@ char *outputName(int argc, char **argv, char *name)
                     {
                         name = argv[i + 1];
                     }
+                    INFO("The output name is %s", name);
                 }
                 else
                 {
-                    fprintf(stderr, "The output name is not valid. You need to add the json extension\n");
-                    fprintf(stderr, "Like output.json\n");
+                    ERROR("The output name is not valid. You need to add the json extension\n");
+                    ERROR("Like output.json\n");
                     exit(1);
                 }
             }
             else
             {
-                fprintf(stderr, "The output name is empty. Please add an output file\n");
-                fprintf(stderr, "Like output.json\n");
+                ERROR("The output name is not valid. You need to add the json extension\n");
+                ERROR("Like output.json\n");
                 exit(1);
             }
         }
@@ -117,8 +122,8 @@ void invalidOptions(int argc, char **argv)
             // fprintf(stdout, "%s %u\n", argv[i], i);
             if (strncmp(argv[i], "-a", 2) != 0 && strncmp(argv[i], "-m", 2) != 0 && strncmp(argv[i], "-h", 2) != 0 && strncmp(argv[i], "-o", 2) != 0)
             {
-                fprintf(stderr, "The option %s is invalid.\n", argv[i]);
-                fprintf(stderr, "See ./parsing -h for more help.\n");
+                ERROR("The option %s is invalid.\n", argv[i]);
+                ERROR("See ./parsing -h for more help.\n");
                 exit(1);
             }
         }
@@ -142,25 +147,25 @@ char *inputRecovery(int argc, char **argv, char *inputName)
             FILE *f = fopen(inputName, "r");
             if (!f)
             {
-                fprintf(stderr, "Can't open blast file\n");
+                FATAL("Can't open blast file'");
                 exit(1);
             }
             return inputName;
         }
         else if (strcmp(inputName, ".json") == 0)
         {
-            printf("You didn't put an input file. The input will be : stdin.xml\n");
+            WARNING("The input file is a json file. The program will convert it to xml.\n");
             return inputName = "stdin.xml";
         }
         else
         {
-            fprintf(stderr, "the extension is not right\n");
+            FATAL("The extension is not right. Please put a xml file.\n");
             exit(1);
         }
     }
     else
     {
-        printf("You didn't put an input file. The input will be : stdin.xml\n");
+        WARNING("You didn't put an input file. The input will be : stdin.xml\n");
         return inputName = "stdin.xml";
     }
 }
@@ -207,7 +212,6 @@ int displayResults(int argc, char **argv)
         if (strncmp(argv[i], "-a", 2) == 0)
 
         {
-            // affichage du résultat sur la console.
             results = 1;
         }
         else
@@ -221,9 +225,8 @@ int displayResults(int argc, char **argv)
 void noArgument(int argc){
     if (argc == 1)
     {
-        fprintf(stderr, "Usage:\n");
-        fprintf(stderr, "\t./parsing -option <argument>\n\n");
-        fprintf(stderr, "-h or help to see options\n");
+        FATAL("You need to put an argument.\n");
+        FATAL("See ./parsing -h for more help.\n");
         exit(1);
     }
 
