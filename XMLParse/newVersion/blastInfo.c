@@ -159,8 +159,7 @@ char *getRank(char *line)
                 }
                 break;
             }
-        }
-       
+        } 
     }
     return strdup(rank_species);
 }

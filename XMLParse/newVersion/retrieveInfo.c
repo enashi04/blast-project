@@ -13,7 +13,7 @@
 #include "XMLtoBLASTP.h"
 
 char name_hit[MIN_SIZE];
-int t_from = 0, t_to = 0, size_struct=0; // voir où on peut le mettre en local au lieu de glo
+int size_struct=0; // voir où on peut le mettre en local au lieu de glo
 
 /**************************************************************************************************************/
 /*                       blastOutPut_iteration: allowing us to enter to the first node                        */
@@ -51,6 +51,7 @@ void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer, char tabIn
 
     const char *BLASTOUTPUT_NODE_NAME = "BlastOutput_iterations";
     // PATH OF SUBNODES
+    INFO("We begin to parse the XML file...");
     for (node = child; node; node = node->next)
     {
         // CHECK IF WE'RE IN BLASTOUTPUT-ITERATIONS
@@ -86,6 +87,7 @@ void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer, char tabIn
                         }
                     }
                     //display the species name
+                    INFO("Iteration : %s", iteration_num, speciesName);
                     displayQuerySpecies(speciesName);
                     node_Iteration(child, mode, speciesInfo, query_length, fillInfo, hashmap,tabInfo, iteration_num); //ajout de la table d'information
                 }
@@ -113,7 +115,6 @@ void node_Iteration(xmlNode *node, char *mode, SpeciesInfo *speciesInfo, int que
     // CHILD = SOUS-NOEUD DU NODE
     xmlNode *child = node->children;
     const char *iteration = "Iteration_hits", *hit = "Hit";
-
     for (node = child; node; node = node->next)
     {
         // check if we're on the node "iteration_hits"
@@ -129,14 +130,13 @@ void node_Iteration(xmlNode *node, char *mode, SpeciesInfo *speciesInfo, int que
                     //HSP NODE
                     node_HSP(child, mode, query_length, speciesInfo, fillInfo, hashmap, tabInfo); //ajout de la hashmap ici
                     name_hit[0]='\0';
-                    //strcpy(name_hit,"");
                 }
             }
         }
     }
     fseek(output, -2, SEEK_END);    
     fprintf(output, "\n\t\t],\n");
-    //ajout des motifs ici si jamais on utilise le mode gold
+    //add motifs if the mode is gold
     if(strcmp(mode, "gold")==0){
         char blastp[MIN_SIZE] = BLAST_FILE;
         strcat(blastp,iteration_num);
@@ -158,12 +158,11 @@ void node_Iteration(xmlNode *node, char *mode, SpeciesInfo *speciesInfo, int que
         system(command);
         strcat(result_file,".motifs");
         char *blastBuffer = makebuffer(result_file);
-        //on entre ici
         char *extractmotif=getMotifs(blastBuffer);
         fprintf(output,"%s\n\t\t}\n\t],\n",extractmotif);
-        // free(blastBuffer);
     }
     else{
+        //end of the iteration)
         fseek(output, -2,SEEK_END);
         fprintf(output,"\n\t},\n");
     }
@@ -194,6 +193,7 @@ char *getHitAccession(xmlNode *node)
 /*                              getSpecies: get the name of the species                                       */
 /*                                  in the definition of the target                                           */
 /** Parametre : node : Node where we are now                                                                  */
+/**             fragment : if the content is a fragment or not                                                */
 /**************************************************************************************************************/
 char *getSpecies(xmlNode *node, char *fragment)
 {
@@ -286,24 +286,26 @@ void node_HSP(xmlNode *node, char *mode,int query_length, SpeciesInfo *speciesIn
     {
         if (strcmp(nameHitHspNode, (const char *)node->name) == 0)
         {
-            // CHILDNODE = SOUS-NOEUD DE NODE
             xmlNode *childNode = node->children;
             for (child = childNode; child; child = child->next)
             {
                 if(strcmp((char *)child->name, "text")!=0){
-                // NOEUD DANS LEQUEL ON SE TROUVE = HSP
+                    //compare the name of the node
                     if (strcmp(nameHspNode, (char *)child->name) == 0)
                     {
+                        //verify if we haven't the species
                         if (strcmp(name_hit, "") == 0)
                         {
                             strcpy(name_hit, hit_id);
                         }
+
                        fprintf(output, "\t\t\t{\n\t\t\t\t\"hit_accession\" : \"%s\",\n\t\t\t\t\"fragment\" : \"%s\",\n\t\t\t\t\"species\" : {\n", hit_id, fragment);
 
-                        //faire appel à la hashmap pour récupérer l'id de l'espèce
+                        //we got the id of the species
                         int taxId = get(hashmap, species);
-                        //1e ajout dans la deuxieme structure
+                        //we verify if the second structure is empty
                         if(size_struct==0){
+                            //we add the first species and its informations
                             fillInfo[0].name=speciesInfo[taxId].name;
                             fillInfo[0].id=taxId;
                             fillInfo[0].rank=speciesInfo[taxId].rank;
@@ -311,14 +313,16 @@ void node_HSP(xmlNode *node, char *mode,int query_length, SpeciesInfo *speciesIn
                             fprintf(output, "\t\t\t\t\t\"name\":\"%s\",\n",fillInfo[0].name);
                             fprintf(output, "\t\t\t\t\t\"taxid\":\"%u\",\n", fillInfo[0].id);
                             fprintf(output,"\t\t\t\t\t\"rank\":\"%s\"",fillInfo[0].rank);
+                            //we add the lineage of the species 
                             if(strcmp(tabInfo[0][1], "1")==0){
                                 fillInfo[0].lineage=createLineage(speciesInfo, species, hashmap);
                                 fprintf(output,",\n%s\n",fillInfo[0].lineage);
                             }
                             size_struct=1;
                         }
-                        //parcours de la deuxieme structure
+                        //if the structure is not empty
                         else if(size_struct>0){
+                            //first we check if we already have the species and its informations
                             int check=0;
                             for(int i=0; i<size_struct; i++){
                                 if(fillInfo[i].id==taxId){
@@ -333,11 +337,10 @@ void node_HSP(xmlNode *node, char *mode,int query_length, SpeciesInfo *speciesIn
                                 }
                             }
                             if(check == 0){
-                                //on ajoute les infos à la position size_struct et on modifie la valeur de size_struct
+                                //if we don't have the species and its informations
                                 if(taxId!=-1){
                                     for (int i = 0; i < SPECIES_SIZE - 1; i++)
                                     {
-                                        printf("le taxid est %d et species %s\n", taxId, species);
                                         fillInfo[size_struct].name=speciesInfo[taxId].name;
                                         fillInfo[size_struct].id=taxId;
                                         fillInfo[size_struct].rank=speciesInfo[taxId].rank;
@@ -353,50 +356,72 @@ void node_HSP(xmlNode *node, char *mode,int query_length, SpeciesInfo *speciesIn
                                         break;
                                     }
                                 }
+                                //if the species is not in the taxonomy.dat
                                 else{
-                                    //on n'affiche que le nom de l'espèce
+                                    //we display just the name of the species.
                                     fprintf(output, "\t\t\t\t\t\"name\":\"%s\"",species);
+                                    WARNING("Species : %s not found in taxonomy.dat", species);
                                 }
                             }
                         }
                         fprintf(output,"\n\t\t\t\t},");
                     }
                     /*****************************LASTCHILD = SOUS-NOEUD DE CHILD***************************************/
-                    //////ICI PARCOURS DE TABINFO
+
                     xmlNode *lastchild = child->children;
+                    int t_from=0, t_to=0;
+                    //verify the mode we choose to display informations
+                    //the mode bronze display the same informations than the mode gold
                     if(strcmp(mode, "bronze")==0 || strcmp(mode, "gold")==0){   
                         for (childNode = lastchild; childNode; childNode = childNode->next)
                         {  
-                            for(int i =1; i<13; i++){
-                                if(strcmp(tabInfo[i][0], "Hsp_align-len")==0){
-                                    getHSP(childNode,tabInfo[i][0],query_length);
-
+                            for(int i =1; i<14; i++){
+                                getHSP(childNode,tabInfo[i][0]);
+                                //get the value of t_from
+                                 if(strcmp("Hsp_hit-from", (char *)childNode->name)==0){
+                                    t_from=atoi((char *)xmlNodeGetContent(childNode));
                                 }
-                                else{
-                                    getHSP(childNode,tabInfo[i][0],0);
-                                }
+                                //get the value of t_to
+                                if(strcmp("Hsp_hit-to", (char *)childNode->name)==0){
+                                    t_to=atoi((char *)xmlNodeGetContent(childNode));
+                                }                                           
                             }
-                        
                         }
+                        //display the query cover 
+                         if(strcmp(tabInfo[13][0], "Query_cover")==0 ){
+                            int querycover = 100 * (t_to-t_from)/query_length;
+                            fprintf(output, "\n\t\t\t\t\"query-cover\" : \"%d\",", querycover);
+                        }   
                     }
+                    //the mode silver 
                     else if (strcmp(mode, "silver")==0){
                         for (childNode = lastchild; childNode; childNode = childNode->next)
                         {  
-                            for(int i =1; i<13; i++){
+                            //we brows the tabInfo to display the informations
+                            for(int i =1; i<14; i++){
                                 if(strcmp(tabInfo[i][0], (char *)childNode->name)==0){
                                     if(strcmp(tabInfo[i][1],"1")==0){
-                                        if(strcmp(tabInfo[i][1], "Hsp_align-len")==0){
-                                            getHSP(childNode,tabInfo[i][0],query_length);
-                                        }
-                                        else{
-                                            getHSP(childNode,tabInfo[i][0],0);
-                                        }
+                                        getHSP(childNode,tabInfo[i][0]);
+                                    }
+                                    if(strcmp("Hsp_hit-from", (char *)childNode->name)==0){
+                                        t_from=atoi((char *)xmlNodeGetContent(childNode));
+                                    }
+                                    if(strcmp("Hsp_hit-to", (char *)childNode->name)==0){
+                                        t_to=atoi((char *)xmlNodeGetContent(childNode));
                                     }
                                 }
+                                
                             }
-                        } 
+                        }   
+                        //display the query cover if the user has specified it
+                        if(strcmp(tabInfo[13][0], "Query_cover")==0 && strcmp(tabInfo[14][1], "1")){
+                            int querycover = 100 * (t_to-t_from)/query_length;
+                            fprintf(output, "\n\t\t\t\t\"query-cover\" : \"%d\",", querycover);
+                        }
+                        
                     }
-                   // fseek(output, -1, SEEK_END);
+                    //we delete the last comma
+                    fseek(output,-1,SEEK_END);
                     fprintf(output,"\n\t\t\t},\n");
                 }
             }   
@@ -410,38 +435,13 @@ void node_HSP(xmlNode *node, char *mode,int query_length, SpeciesInfo *speciesIn
 /** Parametre : node : Node where we are now                                                                  */
 /**           : name :name of the element                                                                     */
 /**           : label : name we put in the json file                                                          */
-/**           : query_length : length of the query                                                            */
 /**************************************************************************************************************/
-void getHSP(xmlNode *node, const char *name, int query_length)
-{ // ajout d'un autre char *
+void getHSP(xmlNode *node, const char *name)
+{ 
     char label[MIN_SIZE];
-    strcpy(label, name+4);
-  
+    strcpy(label, name+4);  
     if (strcmp(name, (const char *)node->name) == 0)
     {
-        // récupération du tfrom
-        if (strcmp(name, (const char *)"Hsp_hit-from") == 0)
-        {
-            t_from = atoi((const char *)xmlNodeGetContent(node));
-            fprintf(output, "\n\t\t\t\t\"%s\" : \"%s\",", label, xmlNodeGetContent(node));
-        }
-        // récupération du tto
-        else if (strcmp(name, (const char *)"Hsp_hit-to") == 0)
-        {
-            t_to = atoi((const char *)xmlNodeGetContent(node));
-            fprintf(output, "\n\t\t\t\t\"%s\" : \"%s\",", label, xmlNodeGetContent(node));
-        }
-        else if (strcmp(name, (const char *)"Hsp_align-len") == 0)
-        {
-            // Ajout de la query cover
-            int querycover = 100 * (t_to - t_from) / query_length;
-            fprintf(output, "\n\t\t\t\t\"query-cover\" : \"%d\",\n", querycover);
-            fprintf(output, "\t\t\t\t\"%s\" : \"%s\"", label, xmlNodeGetContent(node));
-        }
-        else
-        {
-            // élément habituel
-            fprintf(output, "\n\t\t\t\t\"%s\" : \"%s\",", label, xmlNodeGetContent(node));
-        }
+        fprintf(output, "\n\t\t\t\t\"%s\" : \"%s\",", label, xmlNodeGetContent(node));
     }
 }
