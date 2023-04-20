@@ -1,5 +1,19 @@
 {
     "files.associations": {
-        "expat.h": "c"
+        "expat.h": "c",
+        "blastinfo.h": "c",
+        "parameters.h": "c",
+        "*.rh": "c",
+        "compare": "c",
+        "ostream": "c",
+        "system_error": "c",
+        "xlocale": "c",
+        "xlocinfo": "c",
+        "xlocnum": "c",
+        "xmemory": "c",
+        "xstddef": "c",
+        "xstring": "c",
+        "xutility": "c",
+        "log.h": "c"
     }
 }

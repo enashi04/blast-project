@@ -77,7 +77,9 @@ int main(int argc, char **argv){
             strcpy(tabInfo[i][1],"1");  
         }
     }
-   blastOutPut_iteration(f, mode, buffer, tabInfo); 
-   fseek(output, -2, SEEK_END);
-   fprintf(output,"\n}");
+    INFO("Writing in progress...");
+    blastOutPut_iteration(f, mode, buffer, tabInfo); 
+    fseek(output, -2, SEEK_END);
+    fprintf(output,"\n}");
+    INFO("Writing done");
 }
