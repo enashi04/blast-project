@@ -1,8 +1,38 @@
 #include "hashmap.h"
 #include "lineage.h"
+#include "log.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
+
+// char *makebuffer(char *filename)
+// {
+//     char *buffer;
+//     // Open the taxonomy file
+//     FILE *file = fopen(filename, "r");
+//     // check of the file existence
+//     if (!file)
+//     {
+//         printf("Unable to open file taxonomy.dat");
+//         exit(1);
+//     }
+//     // move to the end of the file
+//     fseek(file, 0, SEEK_END);
+//     // get the length of the file
+//     long fileSize = ftell(file);
+//     // return to the beginning of the file
+//     rewind(file);
+//     // initialize the buffer
+//     buffer = (char *)malloc((fileSize + 1) * sizeof(char));
+//     // fill the buffer with the contents of the file
+//     fread(buffer, sizeof(char), fileSize, file);
+//     // don't forget to put the '\0' at the end of the buffer
+//     buffer[fileSize] = '\0';   
+//     // close the file
+//     fclose(file);
+//     return buffer;
+// }
 
 unsigned int hash(const char *key)
 {
@@ -46,21 +76,45 @@ void insert(Hashmap *hashmap, const char *key, int value)
 }
 
 void insert_othername(Hashmap *hashmap, const char *name, const char *value){
-    //parcourir la chaine de caractère name
+    char new_str[MAXI_SIZE];
     int len = strlen(name);
-    char *new_name;
-    for(int i = 0; i < len; i++){
-        if(name[i] == ',' && name[i+1]==' '){
-            new_name = (char *)malloc((i+1) * sizeof(char));
-            for(int j = 0; j < i; j++){
-                new_name[j] = name[j];
+    int k = 0;
+    int debut = 0;
+    // Boucle pour récupérer les noms séparés par une virgule
+    for (int i = 0; i < len; i++)
+    {
+        //si on trouve une virgule
+        if(name[i] == ',' && name[i+1] == ' '){
+            //on remplit de k à i le mot
+            for(int j =debut; j<i; j++){
+                new_str[k] = name[j];
+                k++;
             }
-            new_name[i] = '\0';
-            insert(hashmap, new_name, atoi(value));
-            free(new_name);
+            //vérifions que le mot ne contient pas de parenthèse ou contient les deux parenthèses
+            if( (strpbrk(new_str, "(")!=NULL && strpbrk(new_str, ")")!=NULL )|| strpbrk(new_str, "(")==NULL){
+                new_str[k] = '\0';
+                //ici on ajoute à la hashmap
+                insert(hashmap, (const char *)new_str, atoi(value));
+                k=0;
+                debut =i+2;
+                strcpy(new_str, "");
+            }
+            else{
+                debut = i;
+            }
+        }
+        if(i==len-1){
+            for(int j =debut; j<i+1; j++){
+                new_str[k] = name[j];
+                k++;
+            }
+            new_str[k] = '\0';
+            insert(hashmap, (const char *)new_str, atoi(value));
+            strcpy(new_str, "");
         }
     }
 }
+
 
 // fonction pour créer une nouvelle hashmap
 Hashmap *createHashMap(char *buffer)
@@ -85,6 +139,7 @@ Hashmap *createHashMap(char *buffer)
                         {
                             othername_species[j] = '\0';
                             //faire appel à une autre fonction ici 
+                            //printf("on arrive làààààà\n");
                             insert_othername(hashmap, othername_species, id_species);
                             break;
                         }
@@ -100,6 +155,7 @@ Hashmap *createHashMap(char *buffer)
         insert(hashmap, name_species, atoi(id_species));
         line = strtok(NULL, "\n");
     }
+    INFO("Hashmap created");
     return hashmap;
 }
 
@@ -120,10 +176,43 @@ int get(Hashmap *hashmap, const char *key)
 }
 
 // int main(int argc, char **argv){
-//     // // créer la hashmap
-//     Hashmap *hashmap = createHashMap(makebuffer("taxonomy.dat"));
-//     // récupérer la valeur de Anser cygnoides
-//     int value = get(hashmap, "Anser cygnoides");
-//     printf("Anser cygnoides: %d\n", value);
- 
-// } 
+//     char *str = "Streptomyces sp. NEAU-TXT10, Streptomyces bryophytorum Li et al. 2016, Streptomyces sp. NEAU-HZ10, CGMCC 4.7151, DSM 42138, strain NEAU-HZ10, Actinacidiphila bryophytorum (Li et al. 2016) Madhaiyan et al. 2022, Streptomyces bryophytorum";
+//     char new_str[MAXI_SIZE];
+//     int len = strlen(str);
+//     int k = 0;
+//     int debut = 0;
+//     // Boucle pour récupérer les noms séparés par une virgule
+//     for (int i = 0; i < len; i++)
+//     {
+//         //si on trouve une virgule
+//         if(str[i] == ',' && str[i+1] == ' '){
+//             //on remplit de k à i le mot
+//             for(int j =debut; j<i; j++){
+//                 new_str[k] = str[j];
+//                 k++;
+//             }
+//             //vérifions que le mot ne contient pas de parenthèse ou contient les deux parenthèses
+//             if( (strpbrk(new_str, "(")!=NULL && strpbrk(new_str, ")")!=NULL )|| strpbrk(new_str, "(")==NULL){
+//                 new_str[k] = '\0';
+//                 printf("mot : %s\n", new_str);
+//                 strcpy(new_str, "");
+//                 //ici on ajoute à la hashmap
+//                 k=0;
+//                 debut =i+2;
+//             }
+//             else{
+//                 //on recommence la boucle
+//                 debut = i;
+//             }
+//         }
+//         if(i==len-1){
+//             for(int j =debut; j<i+1; j++){
+//                 new_str[k] = str[j];
+//                 k++;
+//             }
+//             new_str[k] = '\0';
+//             printf("mot : %s\n", new_str);
+//             strcpy(new_str, "");
+//         }
+//     }
+// }

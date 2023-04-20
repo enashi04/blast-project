@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include "log.h"
 #include "lineage.h"
 #include "blastInfo.h"
 #include "fillStructure.h"
@@ -32,7 +33,7 @@ char *makebuffer(char *filename)
     // fill the buffer with the contents of the file
     fread(buffer, sizeof(char), fileSize, file);
     // don't forget to put the '\0' at the end of the buffer
-    buffer[fileSize] = '\0';
+    buffer[fileSize] = '\0';   
     // close the file
     fclose(file);
     return buffer;
@@ -50,7 +51,7 @@ char *getLineage(SpeciesInfo *speciesInfo, char lineage[MAX_SIZE], int id)
     strcpy(lignee, "\t\t\t\t\t {\n\t\t\t\t\t\t\"taxid\":\"");
 
     char str_id[MIN_SIZE];
-    sprintf(str_id, "%d", id); //convertiru en int
+    sprintf(str_id, "%d", id); //convertir en int
 
     strcat(lignee, str_id);
     strcat(lignee, "\",\n\t\t\t\t\t\t\"name\":\"");
