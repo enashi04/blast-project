@@ -11,6 +11,7 @@
 #define FICHIER "taxonomy.dat" //fichier taxonomy
 #define BLAST_FILE "outblast"
 #define BALLAST_ACCESS "../../BAL-LAST/code/./ballast"
+#include "log.h"
 
 typedef struct SpeciesInfo
 {
