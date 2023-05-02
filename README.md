@@ -14,7 +14,7 @@ To be able to compile this program, you have to be on Linux or MacOS operating s
 
 > The libxml library and unicode library are included in the project. 
 
-## Resume 
+## Summary 
 
 The blast-project contains two programs : 
 - BALLAST : Blast Post-Processing based on locally conserved segments.
