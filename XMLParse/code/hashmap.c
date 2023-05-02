@@ -6,104 +6,84 @@
 #include <string.h>
 
 
-// char *makebuffer(char *filename)
-// {
-//     char *buffer;
-//     // Open the taxonomy file
-//     FILE *file = fopen(filename, "r");
-//     // check of the file existence
-//     if (!file)
-//     {
-//         printf("Unable to open file taxonomy.dat");
-//         exit(1);
-//     }
-//     // move to the end of the file
-//     fseek(file, 0, SEEK_END);
-//     // get the length of the file
-//     long fileSize = ftell(file);
-//     // return to the beginning of the file
-//     rewind(file);
-//     // initialize the buffer
-//     buffer = (char *)malloc((fileSize + 1) * sizeof(char));
-//     // fill the buffer with the contents of the file
-//     fread(buffer, sizeof(char), fileSize, file);
-//     // don't forget to put the '\0' at the end of the buffer
-//     buffer[fileSize] = '\0';   
-//     // close the file
-//     fclose(file);
-//     return buffer;
-// }
 
 unsigned int hash(const char *key)
 {
+    //hash function used to calculate the index of the array
     unsigned int hash = 0;
     for (int i = 0; key[i] != '\0'; i++)
     {
         if(key[i] == ','){
             break;
         }
-        // La multiplication par 31 est utilisée car peut être implémentée efficacement à l'aide d'un simple décalage de bits.
+        //the multiplication by 31 is used because it can be implemented efficiently using a simple bit shift.
         hash = hash * 31 + key[i]; 
     }
     return hash % SPECIES_SIZE;
 }
 
-// fonction pour insérer une nouvelle paire clé-valeur dans la hashmap
+//fnction to insert a new key-value pair into the hashmap
 void insert(Hashmap *hashmap, const char *key, int value)
 {
-    // calculer l'index dans le tableau en utilisant la fonction de hachage
+    //get the index of the key 
     unsigned int index = hash(key);
-    // récupérer l'élément correspondant dans le tableau
+    //get the element corresponding to the index
     Entry *entry = hashmap->entries[index];
-    // parcourir la liste chaînée pour trouver l'élément correspondant à la clé donnée
+    //browse the linked list to find the element corresponding to the given key
     while (entry != NULL)
     {
+        //if the key already exists, update its value and return
         if (strcmp(entry->key, key) == 0)
         {
-            // si la clé existe déjà, mettre à jour sa valeur et retourner
             entry->value = value;
             return;
         }
         entry = entry->next;
     }
-    // si la clé n'existe pas, créer un nouvel élément et l'ajouter à la liste chaînée
+    //otherwise, create a new element and add it to the linked list
     Entry *new_entry = (Entry *)malloc(sizeof(Entry));
     new_entry->key = strdup(key);
     new_entry->value = value;
     new_entry->next = hashmap->entries[index];
     hashmap->entries[index] = new_entry;
-    
 }
 
+//function to insert a new key-value pair into the hashmap (othername of the species)
 void insert_othername(Hashmap *hashmap, const char *name, const char *value){
     char new_str[MAXI_SIZE];
     int len = strlen(name);
     int k = 0;
     int debut = 0;
-    // Boucle pour récupérer les noms séparés par une virgule
+    // loop to get the name of the species
     for (int i = 0; i < len; i++)
     {
-        //si on trouve une virgule
+        //there is a comma and a space
         if(name[i] == ',' && name[i+1] == ' '){
-            //on remplit de k à i le mot
+            //fill the word from k to i
             for(int j =debut; j<i; j++){
                 new_str[k] = name[j];
                 k++;
             }
-            //vérifions que le mot ne contient pas de parenthèse ou contient les deux parenthèses
+            printf("%s: \n",new_str);
+
+            //verify that the word does not contain parentheses or contains both parentheses
             if( (strpbrk(new_str, "(")!=NULL && strpbrk(new_str, ")")!=NULL )|| strpbrk(new_str, "(")==NULL){
                 new_str[k] = '\0';
-                //ici on ajoute à la hashmap
+                //add the key-value pair to the hashmap
                 insert(hashmap, (const char *)new_str, atoi(value));
                 k=0;
                 debut =i+2;
+                //empty the string
                 strcpy(new_str, "");
             }
+            //the word contains one parenthesis, so we need to continue the filling of the word
             else{
                 debut = i;
             }
         }
+        //the last caracter of the string
         if(i==len-1){
+            //fill the word from k to i
             for(int j =debut; j<i+1; j++){
                 new_str[k] = name[j];
                 k++;
@@ -115,36 +95,61 @@ void insert_othername(Hashmap *hashmap, const char *name, const char *value){
     }
 }
 
-
-// fonction pour créer une nouvelle hashmap
+//function to create a new hashmap
 Hashmap *createHashMap(char *buffer)
 {
+    //initialize the hashmap
     Hashmap *hashmap = (Hashmap *)malloc(sizeof(Hashmap));
+    //initialize the entries
     char id_species[MIN_SIZE], name_species[MAX_SIZE], othername_species[MAXI_SIZE];
+    //get the first line of the file 
     char *line = strtok(strdup(buffer), "\n");
     line = strtok(NULL, "\n");
+    //loop to get the names and value of the species 
     while (line != NULL)
     {
+        //get the id and the name of the species
         sscanf(line, "%[^	]	%*[^	]	%[^	]	%*[^\n]", id_species, name_species);
         int len = strlen(line), iteration=0;
-        // Boucle pour récupérer le other name
+        // loop to get the other names of the species
         for (int i = 0; i < len; i++)
         {
             if(line[i]=='\t'){
                 iteration ++;
-                if(iteration==5){
+                //position of the other names in the line
+                if(iteration == 4){
                     int j=0;
+                    //loop to get the other names
                     for(int k=i+1; k<len; k++){
                         if (line[k] == '\t')
                         {
                             othername_species[j] = '\0';
-                            //faire appel à une autre fonction ici 
-                            //printf("on arrive làààààà\n");
+                            //add the key-value pair to the hashmap
                             insert_othername(hashmap, othername_species, id_species);
                             break;
                         }
                         else
                         {
+                            // fill the othername_species string
+                            othername_species[j] = line[k];
+                        }
+                        j++;
+                    }
+                }
+                else if(iteration==5){
+                    int j=0;
+                    //loop to get the other names
+                    for(int k=i+1; k<len; k++){
+                        if (line[k] == '\t')
+                        {
+                            othername_species[j] = '\0';
+                            //add the key-value pair to the hashmap
+                            insert_othername(hashmap, othername_species, id_species);
+                            break;
+                        }
+                        else
+                        {
+                            // fill the othername_species string
                             othername_species[j] = line[k];
                         }
                         j++;
@@ -152,18 +157,23 @@ Hashmap *createHashMap(char *buffer)
                 }
             }  
         }
+        // insert the key-value pair into the hashmap
         insert(hashmap, name_species, atoi(id_species));
+        //get the next line
         line = strtok(NULL, "\n");
     }
     INFO("Hashmap created");
     return hashmap;
 }
 
-// fonction pour récupérer la valeur associée à une clé donnée
+//function to get the value of a given key
 int get(Hashmap *hashmap, const char *key)
 {
+    //get the index of the key
     unsigned int index = hash(key);
+    //get the element corresponding to the index
     Entry *entry = hashmap->entries[index];
+    //browse the linked list to find the element corresponding to the given key
     while (entry != NULL)
     {
         if (strcmp(entry->key, key) == 0)
@@ -172,6 +182,7 @@ int get(Hashmap *hashmap, const char *key)
         }
         entry = entry->next;
      }
+    //if the key does not exist, return -1
     return -1;
 }
 

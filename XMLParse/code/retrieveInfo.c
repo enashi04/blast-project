@@ -86,7 +86,7 @@ void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer, char tabIn
                         }
                     }
                     //display the species name
-                    INFO("Iteration : %s", iteration_num, speciesName);
+                    INFO("Iteration : %s", iteration_num);
                     displayQuerySpecies(speciesName);
                     node_Iteration(child, mode, speciesInfo, query_length, fillInfo, hashmap,tabInfo, iteration_num); //ajout de la table d'information
                 }

@@ -32,18 +32,6 @@ void blastDB(xmlNode *node)
 }
 
 /**************************************************************************************************************/
-/*                              getQueryInfo: getQueryInfo                                                    */
-/** Parameters : node : Node where we are now                                                                 */
-/**            : species : name of the query's species (complete name)                                        */
-/**            : query_length : length of the query                                                           */
-/**            : iteration_num : number of the blast_iteration                                                */
-/**************************************************************************************************************/
-// void getQueryInfo(xmlNode *child, char species[MIN_SIZE], int query_length, char* iteration_num){ 
-
-  
-// }
-
-/**************************************************************************************************************/
 /*                         getQuerySpeciesName: name of the query's species                                   */
 /** Parameters : species : name of the query's species                                                        */
 /**************************************************************************************************************/

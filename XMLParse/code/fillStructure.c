@@ -12,11 +12,13 @@
 /**************************************************************************************************************/
 SpeciesInfo *fillStructure(char *buffer)
 {
+    //initialize the structure
     SpeciesInfo *outInfo = (SpeciesInfo *)malloc(SPECIES_SIZE * sizeof(SpeciesInfo));
 
+    //get the first line
     char *line = strtok(strdup(buffer), "\n");
     line = strtok(NULL, "\n");
-
+    //fill the structure
     for (int i = 0; i < SPECIES_SIZE && line != NULL; i++)
     {
         //initialize variables for the structure
@@ -64,6 +66,7 @@ SpeciesInfo *fillStructure(char *buffer)
         }
         else
         {
+            //fill the structure with empty values
             outInfo[i].name = "\0";
             outInfo[i].rank = "\0";
             outInfo[i].parentid = 0;
