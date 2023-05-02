@@ -74,7 +74,7 @@ void insert_othername(Hashmap *hashmap, const char *name, const char *value){
                 k=0;
                 debut =i+2;
                 //empty the string
-                strcpy(new_str, "");
+                new_str[0]='\0';
             }
             //the word contains one parenthesis, so we need to continue the filling of the word
             else{
