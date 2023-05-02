@@ -7,6 +7,7 @@
 #include "retrieveInfo.h"
 #include "blastInfo.h"
 #include "lineage.h"
+#include "makebuffer.h"
 #include "parameters.h"
 #include "fillStructure.h"
 #include "extractMotifs.h"

@@ -1,10 +1,11 @@
 #include "options.h"
 #include "retrieveInfo.h"
-#include "lineage.h"
+// #include "lineage.h"
 #include "XMLtoBLASTP.h"
 #include "parameters.h"
 #include "extractMotifs.h"
 #include "log.h"
+#include "makebuffer.h"
 #include "unistd.h"
 #include <sys/wait.h>
 
