@@ -1,5 +1,5 @@
 /**
- * @file loadHSP.c
+ * @file addprofils.c
  * @author J.Thompson
  * @brief
  * @version 0.1
