@@ -12,7 +12,6 @@
 #define BLAST_FILE "outblast"
 #define BALLAST_ACCESS "../../BAL-LAST/code/./ballast"
 #include "log.h"
-
 typedef struct SpeciesInfo
 {
     char *name;//tableau de nom de l'espèce
