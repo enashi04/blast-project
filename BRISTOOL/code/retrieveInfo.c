@@ -210,49 +210,27 @@ char *getSpecies(xmlNode *node, char *fragment)
         }
     }
     //vérifier si content contient le mot "fragment" ou le mot "partial"
-    if (strstr(content, "fragment") != NULL || strstr(content, "partial") != NULL)
+    if (strstr(content, "fragment") != NULL || strstr(content, "partial") != NULL ||strstr(content, "Fragment")!=NULL)
     {
        fragment="yes";
     }
 
     int debut = 0, fin = 0;
+    //d'abord avec OS et OX
     for (int i = 0; i < strlen(content); i++)
     {
-        if (content[i] == '[')
+        if (content[i] == 'O' && content[i+1] == 'S' && content[i+2] == '=')
         {
-            debut = i;
+            debut = i+2;
         }
-        else if (content[i] == ']')
+        else if (content[i] == 'O' && content[i+1] == 'X' && content[i+2] == '=')
         {
-            fin = i;
+            fin = i-1;
             break;
         }
+       
     }
-    if(debut!=0 && fin!=0){
-         int j = 0;
-        char name_species[MIN_SIZE];
-        for (int i = debut + 1; i < fin; i++)
-        {
-            name_species[j] = content[i];
-            j++;
-        }
-        name_species[j] = '\0';
-        return strdup(name_species);
-    }
-    else{
-        fin =0;
-        for (int i = 0; i < strlen(content); i++)
-        {
-            if (content[i] == 'O' && content[i+1] == 'S')
-            {
-                debut = i+2;
-            }
-            else if (content[i] == 'O' && content[i+1] == 'X')
-            {
-                fin = i-1;
-                break;
-            }
-        }
+    if(debut !=0 && fin !=0){
         char name_species[MAX_SIZE];
         int k = 0;
         for (int j = debut + 1; j < fin; ++j)
@@ -261,7 +239,30 @@ char *getSpecies(xmlNode *node, char *fragment)
             k++;
         }        
         name_species[k] = '\0';
-        
+        return strdup(name_species);
+    }
+    else {
+        fin =0;
+        for (int i = 0; i < strlen(content); i++)
+        {
+            if (content[i] == '[')
+            {
+                debut = i;
+            }
+            else if (content[i] == ']')
+            {
+                fin = i;
+                break;
+            }
+        }
+         int j = 0;
+        char name_species[MIN_SIZE];
+        for (int i = debut + 1; i < fin; i++)
+        {
+            name_species[j] = content[i];
+            j++;
+        }
+        name_species[j] = '\0';
         return strdup(name_species);
     }
 }     
