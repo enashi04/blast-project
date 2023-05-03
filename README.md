@@ -10,6 +10,7 @@ The objective of this project is to develop a program to enrich blast data and f
 To be able to compile this program, you have to be on Linux or MacOS operating system. 
 
 * If you are on Window, you can install WSL by following this [tutorial](https://learn.microsoft.com/en-us/windows/wsl/install).
+  * You will need a C compiler installed on your computer, like GCC (GNU Compiler Collection)
 * You need the taxonomy.dat file.
 
 > The libxml library and unicode library are included in the project. 
