@@ -63,6 +63,12 @@ char *modeChoice(int argc, char **argv, char *name)
                 }
             }
         }
+        else{
+            name = "bronze";
+            INFO("The mode will be : Bronze");
+            return name;
+
+        }
     }
     return name;
 }
