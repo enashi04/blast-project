@@ -34,7 +34,7 @@ char *makebuffer(char *filename){
         char id_species[MIN_SIZE];
         sscanf(last_line, "%[^	] %*[^	]", id_species);
  
-        INFO("en mode int %d\n", atoi(id_species));
+        INFO("SPECIES_SIZE %d", atoi(id_species));
     }
     // close the file
     fclose(file);

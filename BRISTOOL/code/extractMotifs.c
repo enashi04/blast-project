@@ -9,7 +9,7 @@ char *getMotifs(char *file) {
     line = strtok(NULL, "\n");
     while (line != NULL) {
         char pdebut[MIN_SIZE], pfin[MIN_SIZE], motifs[MIN_SIZE], score[MIN_SIZE];
-        sscanf(line, " %[^ -] - %[^ :]:%[^:]:%s", pdebut, pfin, motifs, score);
+        sscanf(line, " %[^ -] - %[^:]:%[^:]:%s", pdebut, pfin, motifs, score);
         int entrySize = snprintf(NULL, 0, "\t\t {\n\t\t\t\"position\":\"%s-%s\",\n\t\t\t\"motif\":\"%s\",\n\t\t\t\"score\":\"%s\"\n\t\t},\n", pdebut, pfin, motifs, score) + 1;
         createJSONSize += entrySize;
         createJSON = realloc(createJSON, createJSONSize * sizeof(char));
