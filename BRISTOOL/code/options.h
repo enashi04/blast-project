@@ -6,12 +6,12 @@
 #include <stdlib.h>
 
 void help(char **argv);
-char *modeChoice(int argc, char **argv, char *name);
-char *outputName(int argc, char **argv, char *name);
+char *modeChoice(int argc, char **argv);
+char *outputName(int argc, char **argv);
  
 int displayResults(int argc, char **argv);
 void invalidOptions(int argc, char **argv);
-char *inputRecovery(int argc, char **argv, char *inputName);
+char *inputRecovery(int argc, char **argv);
 char *newname(char *name);
 void noArgument(int argc);
 

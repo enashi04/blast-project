@@ -25,8 +25,9 @@ void help(char **argv)
 /// @param argv 
 /// @param name 
 /// @return mode name
-char *modeChoice(int argc, char **argv, char *name)
+char *modeChoice(int argc, char **argv)
 {
+    char *mode;
     for (int i = 0; i < argc; i++)
     {
         if (strncmp(argv[i], "-m", 2) == 0)
@@ -43,17 +44,17 @@ char *modeChoice(int argc, char **argv, char *name)
                 if (strcmp("bronze", argv[i + 1]) == 0)
                 {
                     INFO("Mode bronze choosen");
-                    name = argv[i + 1];
+                    mode = argv[i + 1];
                 }
                 else if (strcmp("silver", argv[i + 1]) == 0)
                 {
                     INFO("Mode silver choosen");
-                    return name = argv[i + 1];
+                    return mode = argv[i + 1];
                 }
                 else if (strcmp("gold", argv[i + 1]) == 0)
                 {
                     INFO("Mode gold choosen");
-                    return name = argv[i + 1];
+                    return mode = argv[i + 1];
                 }
                 else
                 {
@@ -64,13 +65,13 @@ char *modeChoice(int argc, char **argv, char *name)
             }
         }
         else{
-            name = "bronze";
+            mode = "bronze";
             INFO("The mode will be : Bronze");
-            return name;
+            return mode;
 
         }
     }
-    return name;
+    return mode;
 }
 
 /// @brief 
@@ -78,8 +79,9 @@ char *modeChoice(int argc, char **argv, char *name)
 /// @param argv 
 /// @param name 
 /// @return the outputName
-char *outputName(int argc, char **argv, char *name)
+char *outputName(int argc, char **argv)
 {
+    char *name=NULL;
     char *extension;
     for (int i = 0; i < argc; i++)
     {
@@ -141,8 +143,9 @@ void invalidOptions(int argc, char **argv)
 /// @param argv 
 /// @param inputName 
 /// @return the name of the input
-char *inputRecovery(int argc, char **argv, char *inputName)
+char *inputRecovery(int argc, char **argv)
 {
+    char *inputName;
     if (argv[argc - 1] != NULL && strchr(argv[argc - 1], '.'))
     {
         inputName = strrchr(argv[argc - 1], '.');

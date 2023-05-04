@@ -13,14 +13,11 @@ int main(int argc, char **argv){
     noArgument(argc);
     help(argv);
 
-    char *inputName = NULL;
-    inputName = inputRecovery(argc, argv, inputName);
+    char *inputName =inputRecovery(argc, argv);
 
-    char *mode = '\0';
-    mode = modeChoice(argc, argv, mode);
+    char *mode = modeChoice(argc, argv);
   
-    char *outName = NULL;
-    outName = outputName(argc, argv, outName);
+    char *outName = outputName(argc, argv);
     invalidOptions(argc, argv);
 
     xmlDoc *f = xmlReadFile(inputName, NULL,0);
