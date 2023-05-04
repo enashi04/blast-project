@@ -76,7 +76,5 @@ int main(int argc, char **argv){
     }
     INFO("Writing in progress...");
     blastOutPut_iteration(f, mode, buffer, tabInfo); 
-    fseek(output, -2, SEEK_END);
-    fprintf(output,"\n}");
     INFO("Writing done");
 }

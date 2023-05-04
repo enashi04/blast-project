@@ -5,8 +5,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-
-
 unsigned int hash(const char *key)
 {
     //hash function used to calculate the index of the array
@@ -22,7 +20,7 @@ unsigned int hash(const char *key)
     return hash % SPECIES_SIZE;
 }
 
-//fnction to insert a new key-value pair into the hashmap
+//function to insert a new key-value pair into the hashmap
 void insert(Hashmap *hashmap, const char *key, int value)
 {
     //get the index of the key 

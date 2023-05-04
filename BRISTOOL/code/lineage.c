@@ -76,6 +76,8 @@ char *createLineage(SpeciesInfo *speciesInfo, char *species, Hashmap *hashmap)//
     strcpy(lineage, "\"parent\":\"");
     strcat(lineage, speciesInfo[parentTaxId].name);
     strcat(lineage, returnLineage);
+    // int len = strlen(lineage);
+    // lineage[len-1] = '\0';
     // return the lineage and the parent.
     return strdup(lineage);
 }

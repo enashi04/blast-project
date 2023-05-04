@@ -5,7 +5,7 @@ EXEC=parsing
 
 # Les fichiers .o a générer si nécessaire
 
-DEP= options.o blastInfo.o lineage.o retrieveInfo.o fillStructure.o XMLtoBLASTP.o extractMotifs.o hashmap.o makebuffer.o
+DEP= options.o blastInfo.o lineage.o retrieveInfo.o fillStructure.o XMLtoBLASTP.o extractMotifs.o hashmap.o makebuffer.o pretty.o
 
 
 all: $(EXEC)

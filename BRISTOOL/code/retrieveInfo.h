@@ -16,8 +16,8 @@ void hit_enter(xmlNode *node);
 
 char *getHitAccession(xmlNode *node);
 char *getHSP(xmlNode *node, const char *name);
-void node_HSP(xmlNode *node,  char *mode, int query_length, SpeciesInfo *speciesInfo, FillSpeciesInfo *fillInfo, Hashmap *hashmap, char tabInfo[13][2][20], char *json_content);
-void node_Iteration(xmlNode *node, char *mode, SpeciesInfo *speciesInfo, int query_length,FillSpeciesInfo *fillInfo, Hashmap *hashmap,char tabInfo[13][2][20], char *iteration_num, char *json_content);
+char *node_HSP(xmlNode *node,  char *mode, int query_length, SpeciesInfo *speciesInfo, FillSpeciesInfo *fillInfo, Hashmap *hashmap, char tabInfo[13][2][20]);
+char *node_Iteration(xmlNode *node, char *mode, SpeciesInfo *speciesInfo, int query_length,FillSpeciesInfo *fillInfo, Hashmap *hashmap,char tabInfo[13][2][20], char *iteration_num);
 char *getSpecies(xmlNode *node, char *fragment);
 
 #endif
