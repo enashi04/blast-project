@@ -1,0 +1,1037 @@
+
+BALLAST on the following BLAST jobs : 
+-------------------------------------------------------------------------------
+BLASTP 2.14.0+
+Query= sp|P04386|GAL4_YEAST Regulatory protein GAL4 OS=Saccharomyces cerevisiae 
+	(strain ATCC 204508 / S288c) OX=559292 GN=GAL4 PE=1 SV=2
+Database: nr
+
+
+-------------------------------------------------------------------------------
+The 'profile' derived from blastp search is in file ../results/outblast2.prof
+
+Only sequences with E(N) < 0.100000 were used to build the 'profile'
+
+
+Only sequences with threshold > 0.000000 are presented below
+
+HSPs are sorted for every Subject Sequence by ascending start position
+
+===============================================================================
+
+Contributions to 'profile' :
+----------------------------------------------------------
+                   |    n    | Total Cont. | Average Cont.
+----------------------------------------------------------
+       P(N) ~ 0.00 |   584   |  584.000    |    1.000
+0.00 < P(N) < .0001|    27   |   27.000    |    1.000
+.0001< P(N) < 0.01 |    17   |   16.982    |    0.999
+0.01 < P(N) < 0.05 |     3   |    2.909    |    0.970
+0.05 < P(N) < 0.07 |     0   |    0.000
+0.07 < P(N) < 0.1  |     0   |    0.000
+0.1  < P(N) < 0.5  |     0   |    0.000
+0.5  < P(N) < 0.75 |     0   |    0.000
+0.75 < P(N)        |     0   |    0.000
+----------------------------------------------------------
+
+===============================================================================
+
+      21121222222222222222222222222222222224243332243444
+   1  MKLLSSIEQACDICRLKKLKCSKEKPKCAKCLKNNWECRYSPKTKRSPLT  50
+
+      42344244233223323222223223331232222222222222122222
+  51  RAHLTEVESRLERLEQLFLLIFPREDLDMILKMDSLQDIKALLTGLFVQD 100
+
+      22222222222222222222222222222200000002222222222222
+ 101  NVNKDAVTDRLASVETDMPLTLRQHRISATSSSEESSNKGQRQLTVSIDS 150
+
+      22222222232222322322344434333335531252233222532522
+ 151  AAHHDNSTIPLDFMPRDALHGFDWSEEDDMSDGLPFLKTDPNNNGFFGDG 200
+
+      52223553432243323332323343232423353543233465259333
+ 201  SLLCILRSIGFKPENYTNSNVNRLPTMITDRYTLASRSTTSRLLQSYLNN 250
+
+      48432966724622226333433243438347361758786633234435
+ 251  FHPYCPIVHSPTLMMLYNNQIEIASKDQWQILFNCILAIGAWCIEGESTD 300
+
+      35426742855473335475766259177296628272526295466422
+ 301  IDVFYYQNAKSHLTSKVFESGSIILVTALHLLSRYTQWRQKTNTSYNFHS 350
+
+      15597965999675454323433339398959956844621465249935
+ 351  FSIRMAISLGLNRDLPSSFSDSSILEQRRRIWWSVYSWEIQLSLLYGRSI 400
+
+      25333363273465633243336645234533544334233552223233
+ 401  QLSQNTISFPSSVDDVQRTTTGPTIYHGIIETARLLQVFTKIYELDKTVT 450
+
+      22234313322423233433223326233323232233222222233333
+ 451  AEKSPICAKKCLMICNEIEEVSRQAPKFLQMDISTTALTNLLKEHPWLSF 500
+
+      25225363223525242613212223333332332232332333452222
+ 501  TRFELKWKQLSLIIYVLRDFFTNFTQKKSQLEQDQNDHQSYEVKRCSIML 550
+
+      23453254244334323322322236212545626255531253322232
+ 551  SDAAQRTVMSVSSYMDNHNVTPYFAWNCSYYLFNAVLVPIKTLLSNSKSN 600
+
+      22223223223342323233223322222222222233222322220211
+ 601  AENNETAQLLQQINTVLMLLKKLATFKIQTCEKYIQVLEEVCAPFLLSQC 650
+
+      21111111111111111111111111111111111111111111111111
+ 651  AIPLPHISYNNSNGSAIKNIVGSATIAQYPTLPEENVNNISVKYVSPGSV 700
+
+      11111111111111111111111111111111111111111111111111
+ 701  GPSPVPLKSGASFSDLVKLLSNRPPSRNSPVTIPRSTPSHRSVTPFLGQQ 750
+
+      11111111111111111111111111111111111111111111111011
+ 751  QQLQSLVPLTPSALFGGANFNQSGNIADSSLSFTFTNSSNGPNLITTQTN 800
+
+      11111111111111011111111111111111111111111111111111
+ 801  SQALSQPIASSNVHDNFMNNEITASKIDDGNNSKPLSPGWTDQTAYNAFG 850
+
+      1111111111111111111111111111111
+ 851  ITTGMFNTTTMDDVYNYLFDDEDTPPNPKKE 881
+
+==============================================================================
+
+        121222222222222222222222222222222224243332243444
+   1  mkLLSSIEQACDICRLKKLKCSKEKPKCAKCLKNNWECRYSPKTKRSPLT  50
+
+      42344244233223323222223223331232222222222222122222
+  51  RAHLTEVESRLERLEQLFLLIFPREDLDMILKMDSLQDIKALLTGLFVQD 100
+
+      22222222       2222222222               2222222222
+ 101  NVNKDAVTdrlasveTDMPLTLRQHrisatssseessnkgQRQLTVSIDS 150
+
+      22222222232222322322344434333335531252233     252 
+ 151  AAHHDNSTIPLDFMPRDALHGFDWSEEDDMSDGLPFLKTDPnnngfFGDg 200
+
+      52  355343224          343232423353543233465259333
+ 201  SLlcILRSIGFKPenytnsnvnrLPTMITDRYTLASRSTTSRLLQSYLNN 250
+
+      48432966724622226          38347361758786         
+ 251  FHPYCPIVHSPTLMMLYnnqieiaskdQWQILFNCILAIGAwciegestd 300
+
+          6742855473335475766259177296628272            
+ 301  idvfYYQNAKSHLTSKVFESGSIILVTALHLLSRYTQWrqktntsynfhs 350
+
+       5597965999675           9398959956844621465249935
+ 351  fSIRMAISLGLNRDlpssfsdssilEQRRRIWWSVYSWEIQLSLLYGRSI 400
+
+      25333363    656       6645234533544334233552      
+ 401  QLSQNTISfpssVDDvqrtttgPTIYHGIIETARLLQVFTKIYEldktvt 450
+
+             332242323343322332623332323223        33333
+ 451  aekspicAKKCLMICNEIEEVSRQAPKFLQMDISTTAltnllkehPWLSF 500
+
+      252253632 3525242613212223333    32232332333452222
+ 501  TRFELKWKQlSLIIYVLRDFFTNFTQKKSqleqDQNDHQSYEVKRCSIML 550
+
+      234532542443343          621254562625553125       
+ 551  SDAAQRTVMSVSSYMdnhnvtpyfaWNCSYYLFNAVLVPIKTLlsnsksn 600
+
+         23    23342323233223          22233222322220211
+ 601  aenNEtaqlLQQINTVLMLLKKLatfkiqtcekYIQVLEEVCAPFLLSQC 650
+
+      21111111111           1111111111111111            
+ 651  AIPLPHISYNNsngsaiknivgSATIAQYPTLPEENVNnisvkyvspgsv 700
+
+         1111111111111111111                            
+ 701  gpsPVPLKSGASFSDLVKLLSNrppsrnspvtiprstpshrsvtpflgqq 750
+
+             11111111111111111111111111111             1
+ 751  qqlqslvPLTPSALFGGANFNQSGNIADSSLSFTFTnssngpnlittqtN 800
+
+      111111111111              111111111111111111111111
+ 801  SQALSQPIASSNvhdnfmnneitaskIDDGNNSKPLSPGWTDQTAYNAFG 850
+
+      11111111111111111111           
+ 851  ITTGMFNTTTMDDVYNYLFDdedtppnpkke 881
+
+==============================================================================
+
+
+
+Sequences producing High-scoring Segment Pairs:                 rank [blast rank]   Score         n   E(N)
+
+galactose-responsive transcription factor GAL4 [Saccharomyces cerevisiae S288C] & sp|P0438 *     1 [   1]  220406.49 (100.0%)  24  0.0     
+CBM_HP2_G0043680.mRNA.1.CDS.1 [Saccharomyces cerevisiae] & emb|CAI6660901.1| CBM_HP2_G0043 *     2 [   5]  220154.50 ( 99.9%)  24  0.0     
+Gal4p [Saccharomyces cerevisiae YJM1478] & gb|AJV93449.1| Gal4p [Saccharomyces cerevisiae  *     3 [   2]  220045.62 ( 99.8%)  24  0.0     
+galactose-responsive transcription factor [Saccharomyces cerevisiae] & gb|KAJ1539474.1| ga *     4 [   3]      "        "     24  0.0     
+BDN_1c_G0052580.mRNA.1.CDS.1 [Saccharomyces cerevisiae]                                    *     5 [   4]      "        "     24  0.0     
+Gal4p [Saccharomyces cerevisiae YJM1133]                                                   *     6 [   9]      "        "     24  0.0     
+Gal4 [Cloning vector pUAShsp70Gal4-UAShid-PUbDsRed-attB]                                   *     7 [   6]  219962.49 ( 99.8%)  24  0.0     
+positive regulator of galactose inducible genes [Saccharomyces cerevisiae]                 *     8 [  20]  219940.62 ( 99.8%)  24  0.0     
+CCQ_1a_G0052630.mRNA.1.CDS.1 [Saccharomyces cerevisiae]                                    *     9 [  21]      "        "     24  0.0     
+Gal4p [Saccharomyces cerevisiae YJM1418] & emb|CAD6651591.1| HLJ1_G0021850.mRNA.1.CDS.1 [S *    10 [  25]      "        "     24  0.0     
+BAI_1a_G0052710.mRNA.1.CDS.1 [Saccharomyces cerevisiae]                                    *    11 [  30]      "        "     24  0.0     
+Gal4p [Saccharomyces cerevisiae YJM1199] & gb|AJW12378.1| Gal4p [Saccharomyces cerevisiae  *    12 [  33]      "        "     24  0.0     
+Gal4p [Saccharomyces cerevisiae YJM993] & gb|AJP41904.1| Gal4p [Saccharomyces cerevisiae Y *    13 [   7]  219793.62 ( 99.7%)  24  0.0     
+Gal4p [Saccharomyces cerevisiae JAY291] & emb|CAE6529056.1| Gal4p [Saccharomyces cerevisia *    14 [   8]      "        "     24  0.0     
+Gal4p [Saccharomyces cerevisiae P301]                                                      *    15 [  10]      "        "     24  0.0     
+Gal4p [Saccharomyces cerevisiae YJM1549]                                                   *    16 [  35]  219767.82 ( 99.7%)  24  0.0     
+Regulatory protein GAL4 [Saccharomyces cerevisiae]                                         *    17 [  37]  219693.12 ( 99.7%)  24  0.0     
+Gal4p [Saccharomyces cerevisiae YJM450] & emb|CAI4747031.1| AMM_1a_G0053250.mRNA.1.CDS.1 [ *    18 [  66]  219670.62 ( 99.7%)  24  0.0     
+BBL_G0052750.mRNA.1.CDS.1 [Saccharomyces cerevisiae] & emb|CAI4837358.1| CDA_G0053100.mRNA *    19 [  26]  219647.27 ( 99.7%)  24  0.0     
+Gal4p [Saccharomyces cerevisiae YJM555]                                                    *    20 [  34]      "        "     24  0.0     
+CIC_HP2_G0047540.mRNA.1.CDS.1 [Saccharomyces cerevisiae]                                   *    21 [  27]  219600.12 ( 99.6%)  24  0.0     
+Gal4p [Saccharomyces cerevisiae YJM1434] & gb|AJW15401.1| Gal4p [Saccharomyces cerevisiae  *    22 [  28]      "        "     24  0.0     
+Gal4p [Saccharomyces cerevisiae YJM693]                                                    *    23 [  39]      "        "     24  0.0     
+transcription factor [Saccharomyces cerevisiae]                                            *    24 [  44]      "        "     24  0.0     
+ALH_1c_G0053090.mRNA.1.CDS.1 [Saccharomyces cerevisiae] & emb|CAI4845896.1| ALH_1b_G005336 *    25 [  62]  219588.12 ( 99.6%)  24  0.0     
+positive regulator of galactose inducible genes [Saccharomyces cerevisiae]                 *    26 [  63]      "        "     24  0.0     
+Gal4p [Saccharomyces cerevisiae YJM1463]                                                   *    27 [  64]      "        "     24  0.0     
+Gal4p [Saccharomyces cerevisiae YJM1460] & emb|CAI4903626.1| AFH_G0053450.mRNA.1.CDS.1 [Sa *    28 [  65]      "        "     24  0.0     
+CEL_1a_G0053170.mRNA.1.CDS.1 [Saccharomyces cerevisiae]                                    *    29 [  74]      "        "     24  0.0     
+GAL4p DNA-binding transcription factor [Saccharomyces boulardii (nom. inval.)] & gb|KQC403 *    30 [  11]  219564.12 ( 99.6%)  24  0.0     
+ATV_HP_G0065770.mRNA.1.CDS.1 [Saccharomyces cerevisiae]                                    *    31 [  12]  219539.82 ( 99.6%)  24  0.0     
+AEL_HP2_G0050620.mRNA.1.CDS.1 [Saccharomyces cerevisiae]                                   *    32 [  16]      "        "     24  0.0     
+AAC_HP2_G0051990.mRNA.1.CDS.1 [Saccharomyces cerevisiae]                                   *    33 [  46]  219524.82 ( 99.6%)  24  0.0     
+Gal4p [Saccharomyces cerevisiae YJM1479] & gb|AJW04245.1| Gal4p [Saccharomyces cerevisiae  *    34 [  72]  219418.92 ( 99.6%)  24  0.0     
+BAQ_1a_G0052970.mRNA.1.CDS.1 [Saccharomyces cerevisiae] & emb|CAI4829866.1| BAM_G0052780.m *    35 [  38]  219418.62 ( 99.6%)  24  0.0     
+hypothetical protein SCEPF1_0068002300 [Saccharomyces cerevisiae]                          *    36 [  18]  219411.77 ( 99.5%)  24  0.0     
+BBF_HP2_G0052410.mRNA.1.CDS.1 [Saccharomyces cerevisiae]                                   *    37 [  31]  219395.27 ( 99.5%)  24  0.0     
+BBT_HP_G0023830.mRNA.1.CDS.1 [Saccharomyces cerevisiae] & emb|CAI4986146.1| BBT_HP_G006825 *    38 [  68]  219321.12 ( 99.5%)  24  0.0     
+Gal4p [Saccharomyces cerevisiae YJM1307]                                                   *    39 [  32]  219306.77 ( 99.5%)  24  0.0     
+regulatory protein GAL4 [Saccharomyces cerevisiae] & dbj|GFP71056.1| regulatory protein GA *    40 [  56]      "        "     24  0.0     
+Gal4p [Saccharomyces cerevisiae YJM1385]                                                   *    41 [  70]  219294.77 ( 99.5%)  24  0.0     
+Gal4p [Saccharomyces cerevisiae YJM1615] & gb|AJW07303.1| Gal4p [Saccharomyces cerevisiae  *    42 [  76]      "        "     24  0.0     
+BJ4_G0024500.mRNA.1.CDS.1 [Saccharomyces cerevisiae]                                       *    43 [  60]  219294.12 ( 99.5%)  24  0.0     
+Gal4p [Saccharomyces cerevisiae YJM1419]                                                   *    44 [  41]  219263.27 ( 99.5%)  24  0.0     
+Gal4p [Saccharomyces cerevisiae YJM320] & gb|AJV99490.1| Gal4p [Saccharomyces cerevisiae Y *    45 [  14]  219261.12 ( 99.5%)  24  0.0     
+Gal4p [Saccharomyces cerevisiae R103]                                                      *    46 [  13]  219172.62 ( 99.4%)  24  0.0     
+positive regulator of galactose inducible genes [Saccharomyces pastorianus] & emb|CUW00889 *    47 [  59]  219141.12 ( 99.4%)  24  0.0     
+CFC_HP_G0035200.mRNA.1.CDS.1 [Saccharomyces cerevisiae]                                    *    48 [  19]  219133.62 ( 99.4%)  24  0.0     
+BDM_1a_G0053160.mRNA.1.CDS.1 [Saccharomyces cerevisiae]                                    *    49 [  53]  219111.12 ( 99.4%)  24  0.0     
+CLN_G0053360.mRNA.1.CDS.1 [Saccharomyces cerevisiae]                                       *    50 [  52]  219109.62 ( 99.4%)  24  0.0     
+Gal4p [Saccharomyces cerevisiae YJM1399] & emb|CAI4799234.1| CPI_1c_G0052650.mRNA.1.CDS.1  *    51 [  47]  219100.92 ( 99.4%)  24  0.0     
+BBM_1a_G0052580.mRNA.1.CDS.1 [Saccharomyces cerevisiae]                                    *    52 [  55]      "        "     24  0.0     
+Gal4p [Saccharomyces cerevisiae YJM1447] & emb|CAI4747833.1| BMC_2a_G0053210.mRNA.1.CDS.1  *    53 [  57]  219076.64 ( 99.4%)  24  0.0     
+ADM_HP2_G0048170.mRNA.1.CDS.1 [Saccharomyces cerevisiae]                                   *    54 [  17]  219072.12 ( 99.4%)  24  0.0     
+Gal4p [Saccharomyces cerevisiae YJM326] & gb|AJW15843.1| Gal4p [Saccharomyces cerevisiae Y *    55 [  71]  219042.77 ( 99.4%)  24  0.0     
+Gal4p [Saccharomyces cerevisiae YJM451]                                                    *    56 [  75]      "        "     24  0.0     
+Gal4p [Saccharomyces cerevisiae YJM1387]                                                   *    57 [  40]  219039.47 ( 99.4%)  24  0.0     
+Gal4p [Saccharomyces cerevisiae YJM470]                                                    *    58 [  51]  219035.27 ( 99.4%)  24  0.0     
+Gal4p [Saccharomyces cerevisiae YJM1573] & gb|AJW05115.1| Gal4p [Saccharomyces cerevisiae  *    59 [  81]  218995.62 ( 99.4%)  24  0.0     
+Gal4p [Saccharomyces cerevisiae YJM1443] & emb|CAI4835733.1| CDN_1a_G0052810.mRNA.1.CDS.1  *    60 [  79]  218890.32 ( 99.3%)  24  0.0     
+CFA_G0052940.mRNA.1.CDS.1 [Saccharomyces cerevisiae] & emb|CAI5007467.1| CPS_HP_G0082390.m *    61 [  80]  218846.57 ( 99.3%)  24  0.0     
+BAF_HP2_G0053270.mRNA.1.CDS.1 [Saccharomyces cerevisiae]                                   *    62 [  82]      "        "     24  0.0     
+CPA_1a_G0053530.mRNA.1.CDS.1 [Saccharomyces cerevisiae]                                    *    63 [  48]  218803.92 ( 99.3%)  24  0.0     
+Gal4p [Saccharomyces cerevisiae YJM195]                                                    *    64 [  22]  218792.27 ( 99.3%)  24  0.0     
+Gal4p [Saccharomyces cerevisiae YJM1401]                                                   *    65 [  49]  218790.44 ( 99.3%)  24  0.0     
+BTE_HP_G0144830.mRNA.1.CDS.1 [Saccharomyces cerevisiae]                                    *    66 [  24]  218778.77 ( 99.3%)  24  0.0     
+BTE_HP_G0023100.mRNA.1.CDS.1 [Saccharomyces cerevisiae] & emb|CAI4973677.1| BTE_HP_G003639 *    67 [  45]  218673.77 ( 99.2%)  24  0.0     
+unnamed protein product [Saccharomyces cerevisiae]                                         *    68 [  36]  218596.07 ( 99.2%)  24  0.0     
+ADQ_G0052830.mRNA.1.CDS.1 [Saccharomyces cerevisiae] & emb|CAI5329819.1| CMF_HP2_G0048450. *    69 [  50]  218564.27 ( 99.2%)  24  0.0     
+CQI_4a_G0052680.mRNA.1.CDS.1 [Saccharomyces cerevisiae]                                    *    70 [  83]  218500.62 ( 99.1%)  24  0.0     
+CDG_1a_G0053280.mRNA.1.CDS.1 [Saccharomyces cerevisiae]                                    *    71 [  77]  218420.27 ( 99.1%)  24  0.0     
+CGH_3_HP_G0009350.mRNA.1.CDS.1 [Saccharomyces cerevisiae] & emb|CAI6717074.1| CGH_3_HP_G00 *    72 [  43]  218400.12 ( 99.1%)  24  0.0     
+CFC_HP_G0072650.mRNA.1.CDS.1 [Saccharomyces cerevisiae] & emb|CAI4998668.1| CFC_HP_G009995 *    73 [  42]  218390.82 ( 99.1%)  24  0.0     
+Gal4p [Saccharomyces cerevisiae YJM1083] & emb|CAI4903039.1| CHS_3a_G0053170.mRNA.1.CDS.1  *    74 [  29]  218332.62 ( 99.1%)  24  0.0     
+BAK_1a_G0052580.mRNA.1.CDS.1 [Saccharomyces cerevisiae]                                    *    75 [  69]  218288.52 ( 99.0%)  24  0.0     
+BCN_G0052740.mRNA.1.CDS.1 [Saccharomyces cerevisiae] & emb|CAI4825415.1| BCE_3a_G0052890.m *    76 [  78]  218275.62 ( 99.0%)  24  0.0     
+AKH_1a_G0052240.mRNA.1.CDS.1 [Saccharomyces cerevisiae]                                    *    77 [  85]  218273.27 ( 99.0%)  24  0.0     
+ALI_HP2_G0052220.mRNA.1.CDS.1 [Saccharomyces cerevisiae]                                   *    78 [  84]  218263.62 ( 99.0%)  24  0.0     
+Gal4p [Saccharomyces cerevisiae YJM189] & emb|CAI4902753.1| ADS_G0052550.mRNA.1.CDS.1 [Sac *    79 [  23]  218083.62 ( 98.9%)  24  0.0     
+GAL4 [Drosophila melanogaster]                                                             *    80 [  15]  218014.68 ( 98.9%)  24  0.0     
+CCT_1a_G0053920.mRNA.1.CDS.1 [Saccharomyces cerevisiae]                                    *    81 [  58]  217998.12 ( 98.9%)  24  0.0     
+Gal4p [Saccharomyces cerevisiae YJM1439] & gb|AJW14120.1| Gal4p [Saccharomyces cerevisiae  *    82 [  87]  217650.80 ( 98.7%)  24  0.0     
+ASN_HP2_G0050880.mRNA.1.CDS.1 [Saccharomyces cerevisiae]                                   *    83 [  73]  217555.62 ( 98.7%)  24  0.0     
+BGP_1a_G0053020.mRNA.1.CDS.1 [Saccharomyces cerevisiae] & emb|CAI5336781.1| BFH_HP2_G00525 *    84 [  67]  217388.22 ( 98.6%)  24  0.0     
+BGN_3a_G0053040.mRNA.1.CDS.1 [Saccharomyces cerevisiae]                                    *    85 [  54]  217375.34 ( 98.6%)  24  0.0     
+SX2_G0017400.mRNA.1.CDS.1 [Saccharomyces cerevisiae] & emb|CAI4786252.1| BAH_G0052360.mRNA *    86 [  61]  217254.72 ( 98.6%)  24  0.0     
+HN1_G0021880.mRNA.1.CDS.1 [Saccharomyces cerevisiae] & emb|CAI4785604.1| BAL_1a_G0052630.m *    87 [  86]  217097.12 ( 98.5%)  24  0.0     
+Gal4p [Saccharomyces cerevisiae YJM1342]                                                   *    88 [  88]  216984.12 ( 98.4%)  24  0.0     
+EM14S01-3B_G0016930.mRNA.1.CDS.1 [Saccharomyces cerevisiae] & emb|CAI4813867.1| CEI_1a_G00 *    89 [  89]  215571.63 ( 97.8%)  24  0.0     
+XXYS1_4_G0019460.mRNA.1.CDS.1 [Saccharomyces cerevisiae]                                   *    90 [  90]  215225.13 ( 97.6%)  24  0.0     
+galactose-responsive transcription factor GAL4 [Saccharomyces cerevisiae]                  *    91 [  91]  212664.69 ( 96.5%)  24  0.0     
+galactose-responsive transcription factor GAL4 [Saccharomyces cerevisiae]                  *    92 [  92]  212223.69 ( 96.3%)  24  0.0     
+galactose-responsive transcription factor [Saccharomyces cerevisiae]                       *    93 [  94]  208927.74 ( 94.8%)  24  0.0     
+galactose-responsive transcription factor GAL4 [Saccharomyces cerevisiae]                  *    94 [ 105]  208750.53 ( 94.7%)  23  0.0     
+CRL_G0023250.mRNA.1.CDS.1 [Saccharomyces cerevisiae]                                       *    95 [  95]  204001.62 ( 92.6%)  21  0.0     
+CCN_G0052800.mRNA.1.CDS.1 [Saccharomyces cerevisiae]                                       *    96 [  93]  197228.08 ( 89.5%)  24  0.0     
+K7_Gal4ap [Saccharomyces cerevisiae Kyokai no. 7]                                          *    97 [ 100]  192957.08 ( 87.5%)  19  0.0     
+transcription factor [Saccharomyces pastorianus]                                           *    98 [  97]  190889.10 ( 86.6%)  21  0.0     
+Gal4p [Saccharomyces cerevisiae x Saccharomyces kudriavzevii VIN7] & emb|CAI4513282.1| AFI *    99 [ 102]  190684.96 ( 86.5%)  18  0.0     
+BEM_HP_G0095440.mRNA.1.CDS.1 [Saccharomyces cerevisiae]                                    *   100 [ 103]      "        "     18  0.0     
+Gal4 [Saccharomyces paradoxus] & gb|QHS76494.1| Gal4 [Saccharomyces paradoxus]             *   101 [  96]  190615.15 ( 86.5%)  24  0.0     
+truncated transcription factor [Saccharomyces cerevisiae]                                  *   102 [ 104]  186669.34 ( 84.7%)  17  0.0     
+hypothetical protein SMKI_06G3550 [Saccharomyces mikatae IFO 1815]                         *   103 [  98]  172818.60 ( 78.4%)  23  0.0     
+positive regulator of galactose inducible genes [Saccharomyces mikatae]                    *   104 [ 101]  172622.40 ( 78.3%)  23  0.0     
+YPL248Cp-like protein [Saccharomyces cerevisiae AWRI1631]                                  *   105 [  99]  164621.08 ( 74.7%)  19  0.0     
+Gal4p [Saccharomyces cerevisiae AWRI796]                                                   *   106 [ 116]  163458.05 ( 74.2%)  15  0.0     
+hypothetical protein SUVZ_16G0380 [Saccharomyces uvarum]                                   *   107 [ 111]  162274.53 ( 73.6%)  24  0.0     
+hypothetical protein N7582_005467 [Saccharomyces uvarum] & emb|CAI4052501.1| hypothetical  *   108 [ 106]  162044.83 ( 73.5%)  24  0.0     
+positive regulator of galactose inducible genes [Saccharomyces bayanus] & emb|CCI88209.1|  *   109 [ 107]  161433.96 ( 73.2%)  24  0.0     
+GAL4-like protein [Saccharomyces eubayanus] & gb|KOG96075.1| GAL4-like protein [Saccharomy *   110 [ 112]  160072.06 ( 72.6%)  24  0.0     
+BEM_HP_G0126560.mRNA.1.CDS.1 [Saccharomyces cerevisiae]                                    *   111 [ 117]  159716.81 ( 72.5%)  14  0.0     
+GAL4p [Saccharomyces kudriavzevii] & gb|EJT41239.1| GAL4-like protein [Saccharomyces kudri *   112 [ 110]  157641.44 ( 71.5%)  23  0.0     
+gal4p [Saccharomyces arboricola H-6] & emb|CUW00886.1| positive regulator of galactose ind *   113 [ 108]  157119.74 ( 71.3%)  24  0.0     
+positive regulator of galactose inducible genes [Saccharomyces arboricola]                 *   114 [ 109]  156846.74 ( 71.2%)  24  0.0     
+hypothetical protein SEUBUCD650_0P00440 [Saccharomyces eubayanus]                          *   115 [ 114]  155763.11 ( 70.7%)  24  0.0     
+               hypothetical protein SEUBUCD646_0P00430 [Sacch
+positive regulator of galactose inducible genes [Saccharomyces bayanus]                    *   116 [ 113]  153736.38 ( 69.8%)  24  0.0     
+CQS_1a_G0053010.mRNA.1.CDS.1 [Saccharomyces cerevisiae]                                    *   117 [ 118]  149762.03 ( 67.9%)  13  0.0     
+Gal4p [Saccharomyces cerevisiae Vin13]                                                     *   118 [ 122]  145730.04 ( 66.1%)  13  0.0     
+Fungal specific transcription factor domain family protein [Saccharomyces cerevisiae]      *   119 [ 123]  144298.53 ( 65.5%)  12  0.0     
+positive regulator of galactose inducible genes [Saccharomyces bayanus]                    *   120 [ 119]  144284.88 ( 65.5%)  19  0.0     
+               positive regulator of galactose inducible gene
+Gal4p, partial [Saccharomyces cerevisiae x Saccharomyces kudriavzevii VIN7]                *   121 [ 121]  144102.94 ( 65.4%)  18  0.0     
+ANL_HP_G0045620.mRNA.1.CDS.1 [Saccharomyces cerevisiae] & emb|CAI5122873.1| ANL_HP_G011288 *   122 [ 124]  133718.52 ( 60.7%)  14  0.0     
+AVN_HP_G0026490.mRNA.1.CDS.1 [Saccharomyces cerevisiae] & emb|CAI5012285.1| AVN_HP_G005418 *   123 [ 126]  127593.03 ( 57.9%)  10  0.0     
+hypothetical protein NCAS_0G01100 [Naumovozyma castellii CBS 4309] & emb|CCC70997.1| hypot *   124 [ 129]  101401.71 ( 46.0%)  22  0.0     
+-------------------------------------------------------------------------------------------------------
+hypothetical protein TBLA_0G01800 [Tetrapisispora blattae CBS 6284] & emb|CCH62123.1| hypo *^  125 [ 141]  96255.00 ( 43.7%)  20  0.0     
+hypothetical protein ZYGR_0AN00710 [Zygosaccharomyces rouxii]                              *^  126 [ 130]  90670.48 ( 41.1%)  22  0.0     
+GAL4 (YPL248C) [Zygosaccharomyces parabailii] & emb|CDH14913.1| related to Regulatory prot *^  127 [ 137]  86939.44 ( 39.4%)  21  0.0     
+hypothetical protein ZYGM_001526 [Zygosaccharomyces mellis]                                *^  128 [ 139]  78257.97 ( 35.5%)  22  0.0     
+AVN_HP_G0026480.mRNA.1.CDS.1 [Saccharomyces cerevisiae] & emb|CAI5012273.1| AVN_HP_G005417 *^  129 [ 125]  73730.58 ( 33.5%)  12  0.0     
+Regulatory protein GAL4 [Cyberlindnera fabianii]                                           *^  130 [ 186]  69955.37 ( 31.7%)  18  0.0     
+putative regulatory protein [Wickerhamomyces ciferrii] & emb|CCH44874.1| putative regulato *^  131 [ 185]  68418.53 ( 31.0%)  18  0.0     
+Regulatory protein GAL4 domain protein [Saccharomyces cerevisiae]                          *^  132 [ 127]  67143.58 ( 30.5%)  12  0.0     
+uncharacterized protein SAPINGB_P001200 [Saprochaete ingens] & emb|VVT46411.1| unnamed pro *^  133 [ 400]  66875.93 ( 30.3%)  16  0.0     
+CQS_1a_G0053000.mRNA.1.CDS.1 [Saccharomyces cerevisiae]                                    *^  134 [ 128]  66870.58 ( 30.3%)  12  0.0     
+uncharacterized protein LALA0_S05e07426g [Lachancea lanzarotensis] & emb|CEP62518.1| LALA0 *^  135 [ 194]  63754.93 ( 28.9%)  18  0.0     
+hypothetical protein SCDLUD_001171 [Saccharomycodes ludwigii] & gb|KAH3903530.1| hypotheti *^  136 [ 260]  60625.34 ( 27.5%)  16  0.0005  
+uncharacterized protein SCODWIG_01236 [Saccharomycodes ludwigii]                           *^  137 [ 263]  60512.34 ( 27.5%)  16  0.0006  
+Gal4, partial [Saccharomyces cerevisiae] & gb|AQN77046.1| Gal4, partial [Saccharomyces cer *^  138 [ 145]  59829.80 ( 27.1%)   6  0.0     
+Gal4, partial [Saccharomyces cerevisiae]                                                   *^  139 [ 159]  59323.31 ( 26.9%)   6  0.0     
+Gal4, partial [Saccharomyces cerevisiae]                                                   *^  140 [ 148]  59285.31 ( 26.9%)   6  0.0     
+BA75_04282T0 [Komagataella pastoris]                                                       *^  141 [ 777]  59173.53 ( 26.8%)  15  4.2e-45 
+hypothetical protein BVG19_g1166 [[Candida] boidinii] & gb|OWB50537.1| DNA binding protein *^  142 [ 812]  57777.22 ( 26.2%)  15  0.0     
+RNA polymerase II transcription factor activity, sequence-specific DNA binding protein [[C *^  143 [ 806]  57492.29 ( 26.1%)  15  0.0001  
+               RNA polymerase II transcription factor activit
+RNA polymerase II transcription factor activity, sequence-specific DNA binding protein [[C *^  144 [ 805]  57338.79 ( 26.0%)  15  0.0001  
+RNA polymerase II transcription factor activity, sequence-specific DNA binding protein [[C *^  145 [ 807]  57311.69 ( 26.0%)  15  0.0001  
+hypothetical protein N7503_007176 [Penicillium pulvis]                                     *^  146 [ 339]  57258.89 ( 26.0%)  16  0.0     
+unnamed protein product [Aspergillus oryzae RIB40] & dbj|BAE63525.1| unnamed protein produ *^  147 [ 528]  57037.16 ( 25.9%)  16  0.0     
+hypothetical protein N7510_000841 [Penicillium lagena]                                     *^  148 [ 529]  56816.94 ( 25.8%)  15  0.0007  
+hypothetical protein N7456_000560 [Penicillium angulare]                                   *^  149 [ 514]  56638.85 ( 25.7%)  16  0.0010  
+C6 transcription factor [Penicillium brasilianum] & emb|CEJ57182.1| Putative C6 transcript *^  150 [ 515]  56638.25 ( 25.7%)  16  0.0     
+hypothetical protein N7496_004866 [Penicillium cataractarum]                               *^  151 [ 491]  55583.13 ( 25.2%)  16  0.0009  
+hypothetical protein KL920_004527 [Ogataea angusta]                                        *^  152 [ 778]  55546.31 ( 25.2%)  12  0.0     
+               hypothetical protein KL909_004015 [Ogataea ang
+DNA-binding transcription factor, partial [Saccharomyces cerevisiae x Saccharomyces kudria *^  153 [ 166]  55526.41 ( 25.2%)   6  0.0     
+hypothetical protein KL921_005358 [Ogataea angusta]                                        *^  154 [ 795]  55475.81 ( 25.2%)  12  0.0     
+hypothetical protein KL939_004591 [Ogataea angusta]                                        *^  155 [ 801]      "        "     12  1.4e-45 
+hypothetical protein N7491_010589 [Penicillium cf. griseofulvum]                           *^  156 [ 598]  55421.48 ( 25.1%)  15  0.0     
+DNA-binding transcription factor, partial [Saccharomyces cerevisiae x Saccharomyces kudria *^  157 [ 167]  55365.31 ( 25.1%)   6  0.0     
+fungal specific transcription factor, putative [Aspergillus fischeri NRRL 181] & gb|EAW218 *^  158 [ 259]  54581.77 ( 24.8%)  17  0.0     
+hypothetical protein PENCOP_c008G01742 [Penicillium coprophilum]                           *^  159 [ 312]  54490.39 ( 24.7%)  17  0.0     
+C6 transcription factor [Aspergillus ibericus CBS 121593] & gb|RAK96533.1| C6 transcriptio *^  160 [ 308]  54391.46 ( 24.7%)  17  0.0     
+hypothetical protein N7530_006983 [Penicillium desertorum]                                 *^  161 [ 368]  54318.05 ( 24.6%)  18  0.0     
+hypothetical protein N7511_004469 [Penicillium nucicola]                                   *^  162 [ 477]  53869.72 ( 24.4%)  19  0.0     
+unnamed protein product [Penicillium nalgiovense] & emb|CAG8048337.1| unnamed protein prod *^  163 [ 421]  53640.11 ( 24.3%)  18  0.0     
+Regulatory protein GAL4 [Penicillium rolfsii]                                              *^  164 [ 344]  53446.23 ( 24.2%)  16  0.0     
+unnamed protein product [Penicillium nalgiovense]                                          *^  165 [ 429]  53419.91 ( 24.2%)  18  0.0     
+uncharacterized protein KUCA_T00003059001 [Kuraishia capsulata CBS 1993] & emb|CDK27082.1| *^  166 [ 462]  52932.32 ( 24.0%)  16  0.0     
+C6 transcription factor [Aspergillus costaricaensis CBS 115574] & gb|RAK92587.1| C6 transc *^  167 [ 471]  52855.11 ( 24.0%)  17  0.0     
+fungal-specific transcription factor domain-containing protein [Fusarium avenaceum]        *^  168 [ 472]  52516.95 ( 23.8%)  16  0.0     
+putative C6 transcription factor [Hyaloscypha sp. PMI_1271]                                *^  169 [ 508]  52379.76 ( 23.8%)  15  0.0     
+hypothetical protein ASPBRDRAFT_656649 [Aspergillus brasiliensis CBS 101740]               *^  170 [ 530]  51945.27 ( 23.6%)  15  0.0     
+fungal specific transcription factor domain-containing protein [Histoplasma capsulatum H88 *^  171 [ 423]  51879.55 ( 23.5%)  18  0.0     
+putative fungal-specific transcription factor [Leotiomycetes sp. MPI-SDFR-AT-0126]         *^  172 [ 539]  51786.85 ( 23.5%)  16  0.0     
+transcriptional regulator family: Fungal Specific TF [Aspergillus niger] & gb|KAI3039501.1 *^  173 [ 567]  51720.74 ( 23.5%)  16  0.0     
+uncharacterized protein CGMCC3_g11567 [Colletotrichum fructicola] & gb|KAE9572192.1| hypot *^  174 [ 841]  51446.98 ( 23.3%)  15  0.0005  
+hypothetical protein AJ79_07775 [Helicocarpus griseus UAMH5409]                            *^  175 [ 521]  50746.71 ( 23.0%)  18  0.0     
+fungal-specific transcription factor domain-containing protein [Delphinella strobiligena]  *^  176 [ 535]  50301.98 ( 22.8%)  16  0.0     
+uncharacterized protein KUCA_T00002035001 [Kuraishia capsulata CBS 1993] & emb|CDK26064.1| *^  177 [1072]  50242.37 ( 22.8%)  13  6.6e-43 
+transcriptional regulatory protein GAL4 [Blastomyces dermatitidis ATCC 18188]              *^  178 [ 498]  49858.02 ( 22.6%)  18  0.0     
+DEKNAAC101505 [Brettanomyces naardenensis]                                                 *^  179 [1512]  49552.35 ( 22.5%)  15  0.0     
+transcriptional regulatory protein GAL4 [Blastomyces dermatitidis ER-3] & gb|EEQ85517.2| t *^  180 [ 506]  49392.17 ( 22.4%)  18  0.0     
+fungal specific transcription factor [Histoplasma capsulatum H143]                         *^  181 [ 551]  49198.69 ( 22.3%)  13  0.0     
+GAL4-Transcription factor [Fusarium proliferatum ET1] & emb|CZR48054.1| GAL4-Transcription *^  182 [ 624]  48489.32 ( 22.0%)  17  0.0     
+lactose regulatory protein LAC9 [Mariannaea sp. PMI_226]                                   *^  183 [ 710]  48414.16 ( 22.0%)  17  0.0     
+GAL4Delta [Cloning vector Tc-hsp-GAL4Delta]                                                *^  184 [ 212]  48095.33 ( 21.8%)   6  0.0     
+uncharacterized protein FOYG_11849 [Fusarium oxysporum NRRL 32931] & gb|EWY84389.1| hypoth *^  185 [ 642]  47895.23 ( 21.7%)  17  0.0     
+transcriptional regulatory protein GAL4 [Exophiala dermatitidis NIH/UT8656] & gb|EHY53553. *^  186 [ 644]  47795.94 ( 21.7%)  17  0.0     
+lactose regulatory protein lac9 and GAL4-like protein [Pseudogymnoascus destructans] & gb| *^  187 [ 921]  47644.49 ( 21.6%)  18  0.0     
+conserved hypothetical protein [Aspergillus terreus NIH2624] & gb|EAU30878.1| conserved hy *^  188 [ 481]  47460.20 ( 21.5%)  16  0.0     
+hypothetical protein DV451_001213 [Geotrichum candidum]                                    *^  189 [ 609]  47305.25 ( 21.5%)  15  0.0     
+               hypothetical protein DV454_001105 [Geotrichum 
+hypothetical protein FVER53590_10975 [Fusarium verticillioides]                            *^  190 [ 662]  47238.63 ( 21.4%)  15  0.0     
+hypothetical protein PENNAL_c0011G05515 [Penicillium nalgiovense]                          *^  191 [ 513]  47104.59 ( 21.4%)  17  0.0     
+hypothetical protein VE04_03271 [Pseudogymnoascus sp. 24MN13]                              *^  192 [ 858]  46975.76 ( 21.3%)  17  0.0     
+Regulatory protein GAL4 [Tolypocladium paradoxum]                                          *^  193 [ 618]  46889.61 ( 21.3%)  13  0.0     
+Gal4 [Kluyveromyces lactis]                                                                *^  194 [1535]  46856.64 ( 21.3%)  11  0.0     
+hypothetical protein NM208_g2962 [Fusarium decemcellulare]                                 *^  195 [ 869]  46683.63 ( 21.2%)  17  0.0     
+lactose regulatory protein lac9 and GAL4-like protein [Pseudogymnoascus verrucosus]        *^  196 [ 874]  46673.47 ( 21.2%)  17  0.0     
+               hypothetical protein VE01_09029 [Pseudogymnoas
+hypothetical protein C6P43_004000 [Kluyveromyces marxianus]                                *^  197 [ 966]  46494.96 ( 21.1%)  13  7.8e-40 
+fungal specific transcription factor domain-containing protein [Colletotrichum abscissum]  *^  198 [1422]  46212.76 ( 21.0%)  17  0.0     
+uncharacterized protein J4E79_007943 [Alternaria viburni] & gb|KAI4656390.1| hypothetical  *^  199 [ 872]  46061.91 ( 20.9%)  15  0.0     
+hypothetical protein PICMEDRAFT_15821 [Pichia membranifaciens NRRL Y-2026] & gb|ODQ47953.1 *^  200 [1411]  46005.38 ( 20.9%)  12  2.0e-44 
+lactose regulatory protein LAC9 [Xylariomycetidae sp. FL2044]                              *^  201 [ 656]  45935.99 ( 20.8%)  17  0.0     
+hypothetical protein BM1_09061 [Bipolaris maydis]                                          *^  202 [ 980]  45542.21 ( 20.7%)  13  0.0     
+hypothetical protein NX059_010870 [Plenodomus lindquistii]                                 *^  203 [ 788]  45040.89 ( 20.4%)  14  0.0     
+hypothetical protein IQ07DRAFT_140472 [Pyrenochaeta sp. DS3sAY3a]                          *^  204 [ 752]  44895.01 ( 20.4%)  16  0.0     
+uncharacterized protein FOYG_11849 [Fusarium oxysporum NRRL 32931] & gb|EWY84390.1| hypoth *^  205 [ 864]  44646.80 ( 20.3%)  15  0.0     
+GAL4-Transcription factor [Fusarium fujikuroi]                                             *^  206 [1026]  44599.85 ( 20.2%)  17  0.0     
+hypothetical protein KNAG_0D00690 [Kazachstania naganishii CBS 8797] & emb|CCK69821.1| hyp *^  207 [ 650]  44502.69 ( 20.2%)  13  0.0     
+Lactose regulatory protein LAC9 [Penicillium argentinense]                                 *^  208 [1900]  44475.60 ( 20.2%)  14  0.0     
+hypothetical protein H072_1519 [Dactylellina haptotyla CBS 200.50]                         *^  209 [ 928]  44412.91 ( 20.2%)  11  0.0     
+fungal-specific transcription factor domain-containing protein [Xylaria arbuscula]         *^  210 [ 789]  44401.73 ( 20.1%)  16  0.0     
+uncharacterized protein ASPWEDRAFT_174161 [Aspergillus wentii DTO 134E9] & gb|OJJ32714.1|  *^  211 [1752]  43820.00 ( 19.9%)  12  0.0     
+Regulatory protein GAL4 [Talaromyces marneffei PM1]                                        *^  212 [2038]  43769.72 ( 19.9%)  15  0.0     
+fungal-specific transcription factor domain-containing protein [Pseudomassariella vexata]  *^  213 [ 922]  43569.39 ( 19.8%)  19  0.0     
+hypothetical protein CANINC_003378 [[Candida] inconspicua]                                 *^  214 [ 818]  43455.54 ( 19.7%)  13  0.0     
+hypothetical protein IFR04_005327 [Cadophora malorum]                                      *^  215 [1633]  43342.47 ( 19.7%)  15  0.0     
+hypothetical protein HYALB_00012849 [Hymenoscyphus albidus]                                *^  216 [1407]  43287.51 ( 19.6%)  14  0.0     
+hypothetical protein FVER53263_10975 [Fusarium verticillioides]                            *^  217 [ 929]  43218.45 ( 19.6%)  14  0.0     
+hypothetical protein N7505_003390 [Penicillium chrysogenum] & gb|KAJ5285333.1| hypothetica *^  218 [ 724]  43208.03 ( 19.6%)  15  0.0     
+hypothetical protein COL922a_002447 [Colletotrichum nupharicola]                           *^  219 [ 803]  43149.48 ( 19.6%)  14  0.0     
+Fungal-trans multi-domain protein [Pyrenophora tritici-repentis]                           *^  220 [ 941]  42288.45 ( 19.2%)  13  0.0     
+               lactose regulatory protein LAC9 [Pyrenophora t
+               lactose regulatory protein LAC9 [Pyrenophora t
+hypothetical protein I302_08852 [Kwoniella bestiolae CBS 10118] & gb|OCF22071.1| hypotheti *^  221 [1204]  42242.57 ( 19.2%)  17  0.0     
+Regulatory protein GAL4 [Colletotrichum siamense]                                          *^  222 [ 734]  42011.26 ( 19.1%)  15  0.0     
+fungal-specific transcription factor domain-containing protein [Aspergillus tamarii]       *^  223 [ 690]  41881.36 ( 19.0%)  16  0.0     
+hypothetical protein PTT_20179 [Pyrenophora teres f. teres 0-1]                            *^  224 [ 888]  41814.97 ( 19.0%)  13  0.0     
+nuclear protein [Cryptococcus gattii VGIV IND107]                                          *^  225 [1810]  41731.13 ( 18.9%)  14  0.0     
+transcriptional regulatory protein C1F7.11c [Penicillium angulare]                         *^  226 [1796]  41688.56 ( 18.9%)  16  0.0     
+Zn(II)2Cys6 transcription factor [Penicillium atrosanguineum]                              *^  227 [ 863]  41034.55 ( 18.6%)  17  0.0     
+               Zn(II)2Cys6 transcription factor [Penicillium 
+hypothetical protein ASPBRDRAFT_112951 [Aspergillus brasiliensis CBS 101740]               *^  228 [1162]  41004.75 ( 18.6%)  14  0.0     
+fungal-specific transcription factor domain-containing protein [Xylaria flabelliformis]    *^  229 [1135]  40980.74 ( 18.6%)  18  0.0     
+fungal-specific transcription factor domain-containing protein [Aspergillus novoparasiticu *^  230 [ 683]  40779.00 ( 18.5%)  15  0.0     
+Regulatory protein GAL4 [Colletotrichum sp. SAR11_59]                                      *^  231 [1123]  40645.05 ( 18.4%)  12  0.0     
+nucleus protein, putative [Cryptococcus neoformans var. neoformans JEC21] & gb|AAW46365.1| *^  232 [1336]  40631.83 ( 18.4%)  14  0.0     
+               hypothetical protein CNBK0620 [Cryptococcus ne
+hypothetical protein COCHEDRAFT_1183130 [Bipolaris maydis C5] & gb|KAJ6206953.1| fungal-sp *^  233 [1283]  40609.43 ( 18.4%)  14  0.0     
+Regulatory protein GAL4 [Tolypocladium paradoxum]                                          *^  234 [1878]  40568.84 ( 18.4%)  15  0.0     
+uncharacterized protein G4B84_007864 [Aspergillus flavus NRRL3357] & gb|QMW32433.1| hypoth *^  235 [ 691]  40503.65 ( 18.4%)  15  0.0     
+hypothetical protein BP5796_07071 [Coleophoma crateriformis]                               *^  236 [1838]  40410.53 ( 18.3%)  13  0.0     
+hypothetical protein N7447_010073 [Penicillium robsamsonii]                                *^  237 [2588]  40334.46 ( 18.3%)  15  0.0     
+hypothetical protein BDZ45DRAFT_45899 [Acephala macrosclerotiorum]                         *^  238 [1208]  40327.30 ( 18.3%)  12  0.0     
+hypothetical protein KL908_003315 [Ogataea polymorpha]                                     *^  239 [2094]  40285.22 ( 18.3%)  16  0.0     
+regulatory protein GAL4 [Aspergillus udagawae] & dbj|GFF87013.1| regulatory protein GAL4 [ *^  240 [1663]  39573.77 ( 18.0%)  14  0.0     
+MAG: hypothetical protein FE78DRAFT_90192 [Acidomyces sp. 'richmondensis'] & gb|KYG49892.1 *^  241 [1010]  39550.33 ( 17.9%)  14  0.0     
+hypothetical protein PV11_08917 [Exophiala sideris]                                        *^  242 [1571]  39549.57 ( 17.9%)  16  0.0     
+hypothetical protein KC358_g2908 [Hortaea werneckii] & gb|OTA28854.1| hypothetical protein *^  243 [1952]  39448.83 ( 17.9%)  16  0.0     
+               hypothetical protein KC342_g3975 [Hortaea wern
+               hypothetical protein KC351_g4211 [Hortaea wern
+fungal-specific transcription factor domain-containing protein [Xylariaceae sp. FL0662B]   *^  244 [1106]  39419.77 ( 17.9%)  13  0.0     
+hypothetical protein CLAIMM_04004 isoform 1 [Cladophialophora immunda]                     *^  245 [1509]  39283.30 ( 17.8%)  14  0.0     
+hypothetical protein KCU87_g1542, partial [Aureobasidium melanogenum]                      *^  246 [1113]  39253.35 ( 17.8%)  15  0.0     
+hypothetical protein D0859_00225 [Hortaea werneckii]                                       *^  247 [1977]  39239.83 ( 17.8%)  16  0.0     
+Acetamidase regulatory protein [Colletotrichum gloeosporioides] & gb|KAF3801578.1| Acetami *^  248 [1439]  39178.17 ( 17.8%)  15  0.0     
+Regulatory protein GAL4 [Colletotrichum sp. SAR11_59]                                      *^  249 [1460]      "        "     15  0.0     
+               hypothetical protein COL922a_009441 [Colletotr
+               Regulatory protein GAL4 [Colletotrichum sp. SA
+hypothetical protein G647_08275 [Cladophialophora carrionii CBS 160.54] & gb|ETI20241.1| h *^  250 [1432]  39161.11 ( 17.8%)  12  0.0     
+hypothetical protein N7499_012134 [Penicillium canescens] & gb|KAJ6175385.1| hypothetical  *^  251 [1217]  39160.56 ( 17.8%)  15  0.0     
+hypothetical protein J3458_000804 [Metarhizium acridum]                                    *^  252 [1618]  39145.03 ( 17.8%)  14  0.0     
+hypothetical protein FOMG_16057 [Fusarium oxysporum f. sp. melonis 26406]                  *^  253 [1362]  39133.70 ( 17.8%)  16  0.0     
+fungal-specific transcription factor domain-containing protein [Aspergillus leporis]       *^  254 [1529]  39116.07 ( 17.7%)  12  0.0     
+hypothetical protein V493_01016 [Pseudogymnoascus sp. VKM F-4281 (FW-2241)]                *^  255 [1138]  39088.77 ( 17.7%)  14  0.0     
+fungal-specific transcription factor domain-containing protein [Xylaria grammica]          *^  256 [2500]  38924.72 ( 17.7%)  16  0.0     
+hypothetical protein KC334_g11049 [Hortaea werneckii]                                      *^  257 [1943]  38865.63 ( 17.6%)  17  0.0     
+Lactose regulatory protein LAC9 [Colletotrichum siamense] & gb|KAF4860692.1| Lactose regul *^  258 [1527]  38721.87 ( 17.6%)  15  0.0     
+transcriptional regulator family: Fungal Specific TF [Aspergillus niger]                   *^  259 [1730]  38441.81 ( 17.4%)  12  0.0     
+fungal-specific transcription factor domain-containing protein [Aspergillus bertholletiae] *^  260 [2642]  38361.28 ( 17.4%)  13  0.0004  
+hypothetical protein KXX29_005131 [Aspergillus fumigatus] & gb|KAH2228344.1| hypothetical  *^  261 [1386]  38270.35 ( 17.4%)  14  0.0     
+               hypothetical protein KXV25_004201 [Aspergillus
+hypothetical protein N7462_007114 [Penicillium macrosclerotiorum]                          *^  262 [1990]  38107.40 ( 17.3%)  13  0.0     
+hypothetical protein ASPFODRAFT_126513 [Aspergillus luchuensis CBS 106.47]                 *^  263 [1500]  38106.84 ( 17.3%)  12  0.0     
+hypothetical protein OIDMADRAFT_173803 [Oidiodendron maius Zn]                             *^  264 [1458]  38072.74 ( 17.3%)  15  0.0     
+unnamed protein product [Penicillium olsonii] & emb|CAG7922686.1| unnamed protein product  *^  265 [1501]  37990.62 ( 17.2%)  11  0.0     
+hypothetical protein N7537_010976 [Penicillium hordei]                                     *^  266 [1970]  37985.90 ( 17.2%)  12  0.0     
+hypothetical protein KC345_g528 [Hortaea werneckii]                                        *^  267 [2325]  37913.82 ( 17.2%)  16  0.0     
+hypothetical protein KXX38_006822 [Aspergillus fumigatus] & gb|KAH1325941.1| hypothetical  *^  268 [1537]  37887.19 ( 17.2%)  13  0.0     
+               hypothetical protein KXX59_007539 [Aspergillus
+               hypothetical protein KXV19_001014 [Aspergillus
+c6 zinc finger domain-containing protein [Xylariaceae sp. FL0016]                          *^  269 [ 828]  37802.96 ( 17.2%)  12  0.0     
+hypothetical protein KCU93_g9575, partial [Aureobasidium melanogenum]                      *^  270 [1178]  37731.08 ( 17.1%)  17  0.0     
+hypothetical protein V501_01952 [Pseudogymnoascus sp. VKM F-4519 (FW-2642)]                *^  271 [1019]  37683.94 ( 17.1%)  14  0.0     
+hypothetical protein AbraCBS73388_001170 [Aspergillus brasiliensis]                        *^  272 [1410]  37682.69 ( 17.1%)  12  0.0     
+               hypothetical protein AbraIFM66951_011224 [Aspe
+hypothetical protein N7481_001081 [Penicillium waksmanii]                                  *^  273 [1991]  37679.69 ( 17.1%)  12  0.0     
+hypothetical protein M752DRAFT_279352 [Aspergillus phoenicis ATCC 13157]                   *^  274 [1902]  37618.61 ( 17.1%)  12  0.0     
+               hypothetical protein AnigIFM63326_008156 [Aspe
+hypothetical protein D6D22_10683 [Aureobasidium pullulans] & gb|TIA33624.1| hypothetical p *^  275 [1286]  37597.26 ( 17.1%)  15  0.0     
+               Uncharacterized protein AUREO_036630 [Aureobas
+hypothetical protein NW762_008065 [Fusarium torreyae]                                      *^  276 [1763]  37545.23 ( 17.0%)  10  0.0     
+C6 transcription factor [Colletotrichum tofieldiae] & dbj|GKT75983.1| C6 transcription fac *^  277 [2010]  37494.91 ( 17.0%)  12  0.0     
+hypothetical protein F4820DRAFT_333817 [Hypoxylon rubiginosum]                             *^  278 [1538]  37452.15 ( 17.0%)  16  0.0     
+hypothetical protein IQ06DRAFT_311388 [Stagonospora sp. SRC1lsM3a]                         *^  279 [2262]  37432.31 ( 17.0%)  15  0.0     
+hypothetical protein N7443_002135 [Penicillium atrosanguineum]                             *^  280 [2112]  37418.67 ( 17.0%)  13  0.0     
+uncharacterized protein KVR01_001012 [Diaporthe batatas] & gb|KAG8170267.1| hypothetical p *^  281 [1493]  37416.15 ( 17.0%)  15  0.0     
+uncharacterized protein NECHADRAFT_85473 [Fusarium vanettenii 77-13-4] & gb|EEU34218.1| hy *^  282 [1765]  37339.69 ( 16.9%)  10  0.0     
+hypothetical protein K440DRAFT_181659 [Wilcoxina mikolae CBS 423.85]                       *^  283 [2310]  37326.24 ( 16.9%)  14  0.0     
+Uncharacterized protein AUREO_032630 [Aureobasidium pullulans]                             *^  284 [1269]  37244.76 ( 16.9%)  15  0.0     
+               hypothetical protein D6C94_05774 [Aureobasidiu
+unnamed protein product [Penicillium nalgiovense]                                          *^  285 [1349]  37142.24 ( 16.9%)  11  0.0     
+uncharacterized protein J7T55_005254 [Diaporthe amygdali] & gb|KAJ0108277.1| hypothetical  *^  286 [2304]  37042.65 ( 16.8%)  13  0.0     
+fungal transcription factor regulatory middle homology region [Aspergillus parasiticus SU- *^  287 [1263]  36948.42 ( 16.8%)  13  0.0     
+               fungal-specific transcription factor domain-co
+hypothetical protein Vi05172_g10471 [Venturia inaequalis]                                  *^  288 [2263]  36942.76 ( 16.8%)  11  0.0     
+               hypothetical protein EG327_000663 [Venturia in
+hypothetical protein FOTG_13813 [Fusarium oxysporum f. sp. vasinfectum 25433]              *^  289 [1660]  36758.79 ( 16.7%)  14  0.0     
+               regulatory GAL4 [Fusarium tjaetaba] & gb|KAF56
+               regulatory GAL4 [Fusarium sp. NRRL 25303]     
+               regulatory GAL4 [Fusarium napiforme]          
+               Regulatory protein GAL4 [Fusarium oxysporum f.
+               regulatory GAL4 [Fusarium coicis]             
+               uncharacterized protein Y057_1629 [Fusarium fu
+               Regulatory GAL4 [Fusarium acutatum]           
+               hypothetical protein FOVG_05454 [Fusarium oxys
+               fungal-specific transcription factor domain-co
+               uncharacterized protein LW93_4963 [Fusarium fu
+               uncharacterized protein FFUJ_05278 [Fusarium f
+               hypothetical protein CEK25_003783 [Fusarium fu
+               uncharacterized protein LW94_928 [Fusarium fuj
+               hypothetical protein NW753_013872 [Fusarium ox
+               hypothetical protein NW769_013924 [Fusarium ox
+               uncharacterized protein FOIG_12428 [Fusarium o
+               hypothetical protein FOTG_13813 [Fusarium oxys
+               hypothetical protein FOXG_08830 [Fusarium oxys
+               regulatory GAL4 [Fusarium pseudoanthophilum]  
+               Regulatory protein GAL4 [Fusarium oxysporum f.
+               fungal-specific transcription factor domain-co
+               hypothetical protein H9Q70_011668 [Fusarium xy
+               hypothetical protein LB503_004129 [Fusarium ch
+               hypothetical protein LB505_008938 [Fusarium ch
+hypothetical protein FNYG_14000 [Fusarium nygamai]                                         *^  290 [1745]      "        "     14  0.0     
+regulatory protein GAL4 [Fusarium bulbicola]                                               *^  291 [1787]  36650.08 ( 16.6%)  13  0.0     
+fungal specific transcription factor domain-containing protein [Diaporthe helianthi]       *^  292 [1550]  36645.95 ( 16.6%)  14  0.0     
+uncharacterized protein P170DRAFT_450591 [Aspergillus steynii IBT 23096] & gb|PLB44509.1|  *^  293 [1167]  36496.81 ( 16.6%)  14  0.0     
+Zn(II)2Cys6 transcription factor [Aspergillus tubingensis] & dbj|GAQ46630.1| Zn(II)2Cys6 t *^  294 [1761]  36296.72 ( 16.5%)  14  0.0     
+putative c6 transcription protein [Eutypa lata UCREL1]                                     *^  295 [2095]  36157.33 ( 16.4%)  13  0.0     
+hypothetical protein N7522_009492 [Penicillium canescens]                                  *^  296 [1849]  36132.49 ( 16.4%)   9  0.0     
+fungal-specific transcription factor domain-containing protein [Pyronema omphalodes]       *^  297 [2532]  36041.08 ( 16.4%)  13  0.0     
+hypothetical protein ASPTUDRAFT_76389 [Aspergillus tubingensis CBS 134.48]                 *^  298 [1976]  35737.38 ( 16.2%)  10  0.0     
+hypothetical protein ASPBRDRAFT_75396 [Aspergillus brasiliensis CBS 101740]                *^  299 [1563]  35720.72 ( 16.2%)  12  0.0     
+hypothetical protein KCU81_g6854, partial [Aureobasidium melanogenum]                      *^  300 [2680]  35534.06 ( 16.1%)  16  0.0     
+hypothetical protein FPRO05_02999 [Fusarium proliferatum]                                  *^  301 [2504]  35407.24 ( 16.1%)  15  0.0     
+hypothetical protein KXX13_005133 [Aspergillus fumigatus] & gb|KAH3334673.1| hypothetical  *^  302 [1829]  35292.09 ( 16.0%)  13  0.0     
+DEHA2E24266p [Debaryomyces hansenii CBS767] & emb|CAG88647.2| DEHA2E24266p [Debaryomyces h *^  303 [2123]  35148.97 ( 15.9%)  10  0.0     
+fungal-specific transcription factor domain-containing protein [Hypoxylon crocopeplum]     *^  304 [2292]  35127.45 ( 15.9%)  10  0.0     
+hypothetical protein E4T50_07308 [Aureobasidium sp. EXF-12298]                             *^  305 [1374]  35091.28 ( 15.9%)  14  0.0     
+fungal-specific transcription factor domain-containing protein [Phaeosphaeria sp. MPI-PUGE *^  306 [1916]  35084.92 ( 15.9%)  15  0.0     
+NAD(P)-binding protein, partial [Aureobasidium melanogenum] & gb|KAH0330017.1| NAD(P)-bind *^  307 [2157]  34860.50 ( 15.8%)  12  0.0     
+unnamed protein product [Fusarium fujikuroi]                                               *^  308 [2591]  34707.46 ( 15.7%)  15  0.0     
+Sugar/inositol transporter [Botryosphaeria dothidea]                                       *^  309 [1464]  34543.34 ( 15.7%)  14  0.0     
+AUG-less Gal4-VP16, partial [Gene trap vector pDB783] & gb|AWX64027.1| Gal4-VP16, partial  *^  310 [ 215]  34538.03 ( 15.7%)   3  0.0     
+hypothetical protein NM208_g5168 [Fusarium decemcellulare]                                 *^  311 [2199]  34338.61 ( 15.6%)  12  0.0     
+hypothetical protein PV09_05733 [Verruconis gallopava] & gb|KIW03088.1| hypothetical prote *^  312 [2305]  34267.22 ( 15.5%)  10  0.0     
+fungal-specific transcription factor domain-containing protein, partial [Morchella snyderi *^  313 [1351]  33978.73 ( 15.4%)  14  0.0     
+uncharacterized protein EURHEDRAFT_500644 [Aspergillus ruber CBS 135680] & gb|EYE95195.1|  *^  314 [2566]  33840.29 ( 15.4%)  12  0.0     
+uncharacterized protein AKAW2_80297A [Aspergillus luchuensis] & dbj|BCS04496.1| hypothetic *^  315 [1637]  33640.80 ( 15.3%)   9  0.0     
+               hypothetical protein ALUC_80286A [Aspergillus 
+               hypothetical protein AKAW_02034 [Aspergillus l
+hypothetical protein KCU59_g13951, partial [Aureobasidium melanogenum]                     *^  316 [2702]  33544.44 ( 15.2%)  15  0.0     
+               hypothetical protein KCV02_g14494, partial [Au
+hypothetical protein TRIVIDRAFT_163407 [Trichoderma virens Gv29-8] & gb|EHK16318.1| hypoth *^  317 [ 954]  33509.82 ( 15.2%)  14  0.0     
+Zn(2)-C6 fungal-type domain-containing protein [Fusarium falciforme] & gb|WAO96081.1| Zn(2 *^  318 [2182]  33464.17 ( 15.2%)  11  0.0     
+hypothetical protein NW755_012237 [Fusarium falciforme]                                    *^  319 [2224]      "        "     11  0.0     
+hypothetical protein CJJ07_000938 [[Candida] auris] & gb|QEL58786.1| hypothetical protein  *^  320 [2631]  33463.75 ( 15.2%)   9  0.0     
+hypothetical protein KCU97_g451, partial [Aureobasidium melanogenum]                       *^  321 [2624]  33431.88 ( 15.2%)  11  0.0     
+hypothetical protein FT662_05187 [[Candida] haemuloni var. vulneris] & gb|KAF3993364.1| hy *^  322 [2630]  33371.02 ( 15.1%)  10  0.0     
+               hypothetical protein CXQ85_003324 [[Candida] h
+hypothetical protein TI39_contig298g00018 [Zymoseptoria brevis]                            *^  323 [2997]  33339.84 ( 15.1%)  11  0.0     
+Transcription factor [Penicillium griseofulvum] & gb|KXG52778.1| Transcription factor [Pen *^  324 [2540]  33262.75 ( 15.1%)   9  0.0     
+ERT2-PhoCl-Gal4VP16-PhoCl-ERT2 [Expression vector pCAG-ERT2-PhoCl-Gal4VP16-PhoCl-ERT2]     *^  325 [ 272]  32953.33 ( 15.0%)   3  0.0     
+hypothetical protein KC356_g5246 [Hortaea werneckii]                                       *^  326 [2071]  32941.84 ( 14.9%)  11  0.0     
+fungal specific transcription factor domain-containing protein [Trichoderma gamsii] & gb|P *^  327 [ 854]  32745.83 ( 14.9%)  14  0.0     
+fungal-specific transcription factor domain-containing protein [Xylaria cubensis]          *^  328 [2541]  32718.27 ( 14.8%)  11  0.0     
+hypothetical protein D0860_04577 [Hortaea werneckii]                                       *^  329 [2203]  32693.34 ( 14.8%)  11  0.0     
+hypothetical protein CIB48_g7807 [Xylaria polymorpha]                                      *^  330 [2520]  32672.64 ( 14.8%)  13  0.0     
+unnamed protein product [Clonostachys byssicola]                                           *^  331 [2707]  32519.02 ( 14.8%)  12  0.0     
+hypothetical protein N7510_000704 [Penicillium lagena]                                     *^  332 [2649]  32497.26 ( 14.7%)  10  0.0     
+hypothetical protein PENSTE_c010G05924 [Penicillium steckii]                               *^  333 [1915]  32491.33 ( 14.7%)  12  0.0     
+hypothetical protein N7475_006765, partial [Penicillium sp. IBT 31633x]                    *^  334 [2479]  32389.20 ( 14.7%)   7  0.0     
+uncharacterized protein RCC_04864 [Ramularia collo-cygni] & emb|CZT19019.1| uncharacterize *^  335 [3116]  32341.31 ( 14.7%)  12  0.0     
+hypothetical protein CDV31_009734 [Fusarium ambrosium]                                     *^  336 [2959]  32152.57 ( 14.6%)  11  0.0     
+hypothetical protein D6D17_06843, partial [Aureobasidium pullulans]                        *^  337 [2015]  32106.35 ( 14.6%)  13  0.0     
+unnamed protein product, partial [Clonostachys rosea]                                      *^  338 [2833]  32087.94 ( 14.6%)  11  0.0     
+hypothetical protein B0A54_11183 [Friedmanniomyces endolithicus]                           *^  339 [3361]  31896.70 ( 14.5%)  13  0.0     
+glycoside hydrolase family 2 protein [Alternaria burnsii] & gb|KAF7675565.1| glycoside hyd *^  340 [2774]  31742.96 ( 14.4%)  10  0.0     
+Fungal trans [Geosmithia morbida] & gb|KAF4126771.1| Fungal trans [Geosmithia morbida]     *^  341 [2022]  31713.25 ( 14.4%)  10  0.0     
+hypothetical protein CEP54_013566 [Fusarium duplospermum]                                  *^  342 [3050]  31442.89 ( 14.3%)  10  0.0     
+fungal specific transcription factor domain containing protein [Pyrenophora tritici-repent *^  343 [2823]  31434.88 ( 14.3%)   8  0.0     
+               hypothetical protein Alg130_00677 [Pyrenophora
+               fungal specific transcription factor domain co
+hypothetical protein PFICI_04524 [Pestalotiopsis fici W106-1] & gb|ETS82648.1| hypothetica *^  344 [2317]  31352.48 ( 14.2%)  10  0.0     
+hypothetical protein BS50DRAFT_31132 [Corynespora cassiicola Philippines]                  *^  345 [3009]  31300.62 ( 14.2%)   9  0.0     
+unnamed protein product [Clonostachys byssicola]                                           *^  346 [2054]  31178.61 ( 14.1%)  11  0.0     
+fungal-specific transcription factor domain-containing protein [Boeremia exigua] & gb|KAH6 *^  347 [3061]  31131.00 ( 14.1%)   9  0.0     
+hypothetical protein D6C93_04065 [Aureobasidium pullulans]                                 *^  348 [2087]  31119.35 ( 14.1%)  13  0.0     
+uncharacterized protein M421DRAFT_421937 [Didymella exigua CBS 183.55] & gb|KAF1927067.1|  *^  349 [3519]  31002.31 ( 14.1%)   8  0.0     
+hypothetical protein CH063_15522, partial [Colletotrichum higginsianum]                    *^  350 [2360]  30922.70 ( 14.0%)   5  0.0     
+hypothetical protein CDV55_104814 [Aspergillus turcosus] & gb|RLL99118.1| hypothetical pro *^  351 [2903]  30821.34 ( 14.0%)  10  0.0     
+Lactose regulatory protein LAC9 [Pseudocercospora fuligena]                                *^  352 [3107]  30737.09 ( 13.9%)  12  0.0     
+hypothetical protein D6D10_09545 [Aureobasidium pullulans] & gb|THZ35546.1| hypothetical p *^  353 [4141]  30730.41 ( 13.9%)  10  0.0     
+hypothetical protein D6D28_08146 [Aureobasidium pullulans]                                 *^  354 [4261]      "        "     10  0.0     
+fungal-specific transcription factor domain-containing protein [Dendryphion nanum]         *^  355 [2860]  30567.11 ( 13.9%)  12  0.0     
+hypothetical protein EAF04_004421 [Stromatinia cepivora]                                   *^  356 [3238]  30535.66 ( 13.9%)  11  0.0     
+transcriptional regulatory protein GAL4 [Rhodotorula toruloides NP11] & gb|EMS21428.1| tra *^  357 [2654]  30237.03 ( 13.7%)  12  0.0     
+               RHTO0S18e01486g1_1 [Rhodotorula toruloides]   
+hypothetical protein D6D02_09517, partial [Aureobasidium pullulans]                        *^  358 [4216]  30208.46 ( 13.7%)  11  0.0     
+unnamed protein product [Aureobasidium mustum]                                             *^  359 [2409]  30117.03 ( 13.7%)  12  0.0     
+hypothetical protein IFR04_015851 [Cadophora malorum]                                      *^  360 [2898]  29924.46 ( 13.6%)  13  0.0     
+hypothetical protein N7533_002386 [Penicillium manginii]                                   *^  361 [3043]  29899.77 ( 13.6%)  11  0.0     
+hypothetical protein D6C92_06221 [Aureobasidium pullulans]                                 *^  362 [4851]  29873.61 ( 13.6%)  10  0.0     
+Fungal-specific transcription factor domain-containing protein [Fusarium sp. LHS14.1]      *^  363 [2906]  29853.50 ( 13.5%)   7  0.0     
+hypothetical protein EIK77_009245 [Talaromyces pinophilus]                                 *^  364 [2981]  29813.34 ( 13.5%)   8  0.0     
+               Transcription factor [Penicillium occitanis (n
+               Lactose regulatory protein LAC9 [Talaromyces p
+fungal specific transcription factor domain-containing protein [Botryosphaeria dothidea] & *^  365 [2735]  29799.85 ( 13.5%)  10  0.0     
+hypothetical protein TrAtP1_005248 [Trichoderma atroviride]                                *^  366 [1480]  29531.29 ( 13.4%)  10  0.0     
+hypothetical protein KXX44_009835 [Aspergillus fumigatus] & gb|KAH1939949.1| hypothetical  *^  367 [3159]  29441.34 ( 13.4%)  10  0.0     
+nuclear protein [Cryptococcus neoformans var. grubii Bt1] & gb|OXG17109.1| nuclear protein *^  368 [2564]  29440.60 ( 13.4%)   6  0.0     
+               nuclear protein [Cryptococcus neoformans var. 
+               nuclear protein [Cryptococcus neoformans var. 
+               nuclear protein [Cryptococcus neoformans var. 
+               nuclear protein [Cryptococcus neoformans var. 
+               nuclear protein [Cryptococcus neoformans var. 
+               nuclear protein [Cryptococcus neoformans var. 
+nuclear protein [Cryptococcus neoformans var. grubii Bt63]                                 *^  369 [2584]      "        "      6  0.0     
+hypothetical protein EAE99_006402 [Botrytis elliptica]                                     *^  370 [2962]  29437.52 ( 13.4%)  15  0.0     
+hypothetical protein CNMCM6805_002139 [Aspergillus fumigatiaffinis] & gb|KAF4239320.1| hyp *^  371 [3836]  29363.11 ( 13.3%)  12  0.0     
+hypothetical protein KXV87_001197 [Aspergillus fumigatus] & gb|KAH3444771.1| hypothetical  *^  372 [3174]  29316.64 ( 13.3%)  11  0.0     
+               hypothetical protein CDV57_03550 [Aspergillus 
+               hypothetical protein KXW14_003211 [Aspergillus
+               hypothetical protein KXW63_001417 [Aspergillus
+               hypothetical protein KXX14_005873 [Aspergillus
+hypothetical protein CEP52_004536 [Fusarium oligoseptatum]                                 *^  373 [2135]  29272.50 ( 13.3%)   9  0.0     
+hypothetical protein N7540_000727 [Penicillium herquei]                                    *^  374 [2852]  29231.73 ( 13.3%)   9  0.0     
+hypothetical protein MFRU_011g00220 [Monilinia fructicola]                                 *^  375 [3245]  29164.79 ( 13.2%)  12  0.0     
+Fungal specific transcription factor domain-containing protein 3 [Elsinoe fawcettii]       *^  376 [2446]  29163.00 ( 13.2%)   5  0.0     
+hypothetical protein CNMCM5793_003114 [Aspergillus hiratsukae]                             *^  377 [2862]  29154.10 ( 13.2%)   9  0.0     
+               hypothetical protein CNMCM6106_003586 [Aspergi
+C6 transcription factor [Aspergillus ibericus CBS 121593] & gb|RAL04265.1| C6 transcriptio *^  378 [2783]  29129.10 ( 13.2%)  10  0.0     
+hypothetical protein TsFJ059_000500 [Trichoderma semiorbis]                                *^  379 [3938]  28991.69 ( 13.2%)  12  0.0     
+uncharacterized protein EAF01_006644 [Botrytis porri] & gb|KAF7903595.1| hypothetical prot *^  380 [3037]  28650.28 ( 13.0%)  13  0.0     
+similar to fungal specific transcription factor [Botrytis cinerea T4]                      *^  381 [2946]  28578.94 ( 13.0%)  12  0.0     
+hypothetical protein D6C83_02556 [Aureobasidium pullulans]                                 *^  382 [2258]  28554.00 ( 13.0%)   9  0.0     
+               hypothetical protein D6D12_07478 [Aureobasidiu
+hypothetical protein FSARC_2637 [Fusarium sarcochroum]                                     *^  383 [2613]  28529.40 ( 12.9%)   8  0.0     
+hypothetical protein PCG10_001930 [Penicillium crustosum]                                  *^  384 [3145]  28456.50 ( 12.9%)   8  0.0     
+hypothetical protein L3040_004970 [Drepanopeziza brunnea f. sp. 'multigermtubi']           *^  385 [2971]  28438.52 ( 12.9%)  15  0.0     
+hypothetical protein THARTR1_09869 [Trichoderma harzianum]                                 *^  386 [4037]  28437.29 ( 12.9%)  12  0.0     
+hypothetical protein D6C95_08887 [Aureobasidium pullulans]                                 *^  387 [2294]  28419.00 ( 12.9%)   9  0.0     
+               hypothetical protein D6D01_03810 [Aureobasidiu
+fungal-specific transcription factor [Xylogone sp. PMI_703]                                *^  388 [2989]  28387.94 ( 12.9%)  11  0.0     
+hypothetical protein D6D22_06961 [Aureobasidium pullulans]                                 *^  389 [2179]  28369.20 ( 12.9%)   9  0.0     
+hypothetical protein E4T49_03690 [Aureobasidium sp. EXF-10728]                             *^  390 [2531]  28222.26 ( 12.8%)  10  0.0     
+uncharacterized protein ASPACDRAFT_39089 [Aspergillus aculeatus ATCC 16872] & gb|OJK03469. *^  391 [1548]  28163.20 ( 12.8%)  15  0.0     
+hypothetical protein PV08_02813 [Exophiala spinifera] & gb|KIW18525.1| hypothetical protei *^  392 [2887]  28009.59 ( 12.7%)   9  0.0     
+unnamed protein product [Penicillium salamii] & emb|CAG7981942.1| unnamed protein product  *^  393 [2170]  27911.90 ( 12.7%)   5  0.0     
+fungal-specific transcription factor domain-containing protein [Aspergillus avenaceus]     *^  394 [2617]  27888.52 ( 12.7%)   9  0.0     
+hypothetical protein N7467_010878 [Penicillium canescens]                                  *^  395 [3237]  27447.30 ( 12.5%)  10  0.0     
+fungal-specific transcription factor domain-containing protein [Rhodotorula diobovata]     *^  396 [2788]  27327.91 ( 12.4%)  11  0.0     
+hypothetical protein BTUL_0130g00140 [Botrytis tulipae]                                    *^  397 [2884]  27325.48 ( 12.4%)  13  0.0     
+hypothetical protein TrVGV298_009732 [Trichoderma virens] & gb|UKZ81657.1| hypothetical pr *^  398 [1857]  27242.30 ( 12.4%)  10  0.0     
+transcriptional regulatory protein GAL4 [Exophiala dermatitidis NIH/UT8656] & gb|KAJ452529 *^  399 [3318]  27183.49 ( 12.3%)  11  0.0     
+hypothetical protein N0V86_006781 [Didymella sp. IMI 355093]                               *^  400 [3001]  27040.90 ( 12.3%)   5  0.0     
+unnamed protein product [Fusarium graminearum]                                             *^  401 [3707]  27036.85 ( 12.3%)  12  0.0     
+               hypothetical protein FG05_04680 [Fusarium gram
+hypothetical protein PV07_00932 [Cladophialophora immunda] & gb|KIW34136.1| hypothetical p *^  402 [2869]  26920.60 ( 12.2%)   7  0.0     
+Lactose permease [Talaromyces pinophilus]                                                  *^  403 [4196]  26914.97 ( 12.2%)   9  0.0     
+hypothetical protein IFM61606_07893 [Aspergillus udagawae]                                 *^  404 [3622]  26681.80 ( 12.1%)   5  0.0     
+unnamed protein product [Penicillium olsonii] & emb|CAG7929767.1| unnamed protein product  *^  405 [3204]  26638.12 ( 12.1%)  11  0.0     
+               unnamed protein product [Penicillium olsonii] 
+uncharacterized protein P170DRAFT_376303 [Aspergillus steynii IBT 23096] & gb|PLB53444.1|  *^  406 [2701]  26418.10 ( 12.0%)   7  0.0     
+fungal-specific transcription factor domain-containing protein [Ilyonectria destructans]   *^  407 [3861]  26410.50 ( 12.0%)   5  0.0     
+hypothetical protein NA56DRAFT_598789 [Hyaloscypha hepaticicola]                           *^  408 [3455]  26018.31 ( 11.8%)   8  0.0     
+hypothetical protein BT63DRAFT_437770 [Microthyrium microscopicum]                         *^  409 [4075]  25992.47 ( 11.8%)  10  0.0     
+hypothetical protein N7474_003628 [Penicillium riverlandense]                              *^  410 [3380]  25935.15 ( 11.8%)   8  0.0     
+Activator of stress genes 1 [Colletotrichum sidae]                                         *^  411 [2851]  25912.62 ( 11.8%)   9  0.0     
+regulatory protein GAL4 [Aspergillus udagawae]                                             *^  412 [2538]  25710.70 ( 11.7%)   6  0.0     
+hypothetical protein KCU64_g468, partial [Aureobasidium melanogenum]                       *^  413 [4643]  25696.00 ( 11.7%)   5  0.0     
+uncharacterized protein ASPACDRAFT_1906562 [Aspergillus aculeatus ATCC 16872] & gb|OJJ9621 *^  414 [2637]  25355.34 ( 11.5%)  10  0.0     
+hypothetical protein EPUS_05676 [Endocarpon pusillum Z07020] & gb|ERF72622.1| hypothetical *^  415 [3080]  25144.70 ( 11.4%)   5  0.0     
+unnamed protein product, partial [Aureobasidium pullulans]                                 *^  416 [4857]  25128.90 ( 11.4%)   5  0.0     
+Transcription factorfungi [Penicillium sp. IBT 31633x]                                     *^  417 [3138]  25119.62 ( 11.4%)   9  0.0     
+hypothetical protein B0A54_13569 [Friedmanniomyces endolithicus]                           *^  418 [4681]  25097.00 ( 11.4%)   6  0.0     
+ANM_HP_G0100180.mRNA.1.CDS.1 [Saccharomyces cerevisiae] & emb|CAI4981736.1| ANM_HP_G000750 *^  419 [ 967]  25087.43 ( 11.4%)   1  0.0     
+hypothetical protein CONLIGDRAFT_597555 [Coniochaeta ligniaria NRRL 30616]                 *^  420 [3087]  25059.12 ( 11.4%)   9  0.0     
+hypothetical protein B0A54_10911 [Friedmanniomyces endolithicus]                           *^  421 [4884]  24884.50 ( 11.3%)   5  0.0     
+hypothetical protein N7456_001357 [Penicillium angulare]                                   *^  422 [3896]  24586.02 ( 11.2%)   8  0.0     
+C6 transcription factor [Aspergillus caelatus] & gb|KAE8366240.1| C6 transcription factor  *^  423 [4122]  24447.05 ( 11.1%)   7  0.0     
+fungal-specific transcription factor domain-containing protein [Leptodontidium sp. MPI-SDF *^  424 [2826]  24278.00 ( 11.0%)   6  0.0     
+               fungal-specific transcription factor domain-co
+hypothetical protein N7467_008335 [Penicillium canescens]                                  *^  425 [3686]  24146.70 ( 11.0%)   7  0.0     
+C6 transcription factor [Aspergillus bombycis] & gb|OGM43822.1| C6 transcription factor [A *^  426 [4272]  24141.25 ( 11.0%)   7  0.0     
+unnamed protein product [Clonostachys byssicola]                                           *^  427 [3453]  24103.80 ( 10.9%)  10  0.0     
+hypothetical protein N7479_010032 [Penicillium vulpinum] & gb|OQE00003.1| hypothetical pro *^  428 [3294]  24054.65 ( 10.9%)   9  0.0     
+hypothetical protein L873DRAFT_1579347, partial [Choiromyces venosus 120613-1]             *^  429 [2787]  24017.20 ( 10.9%)   5  0.0     
+hypothetical protein BBP40_006565 [Aspergillus hancockii]                                  *^  430 [4105]  23984.70 ( 10.9%)   6  0.0     
+hypothetical protein N7540_010519 [Penicillium herquei]                                    *^  431 [4131]  23940.79 ( 10.9%)   9  0.0     
+hypothetical protein PENFLA_c006G05512 [Penicillium flavigenum]                            *^  432 [3310]  23939.22 ( 10.9%)   8  0.0     
+proline utilization trans-activator [Exophiala dermatitidis NIH/UT8656] & gb|EHY52211.1| p *^  433 [2947]  23917.10 ( 10.9%)   5  0.0     
+hypothetical protein A1O9_00686 [Exophiala aquamarina CBS 119918] & gb|KEF62713.1| hypothe *^  434 [2913]  23897.30 ( 10.8%)   6  0.0     
+hypothetical protein Ao3042_11478 [Aspergillus oryzae 3.042] & gb|KDE81162.1| hypothetical *^  435 [2772]  23894.80 ( 10.8%)   9  0.0     
+uncharacterized protein BDR25DRAFT_314987 [Lindgomyces ingoldianus] & gb|KAF2469731.1| hyp *^  436 [3534]  23803.30 ( 10.8%)   6  0.0     
+unnamed protein product [Parascedosporium putredinis]                                      *^  437 [3149]  23759.40 ( 10.8%)   8  0.0     
+hypothetical protein E4T47_04054 [Aureobasidium subglaciale]                               *^  438 [3585]  23651.21 ( 10.7%)  10  0.0     
+fungal-specific transcription factor [Coniochaeta sp. 2T2.1]                               *^  439 [4394]  23592.81 ( 10.7%)   8  0.0     
+unnamed protein product [Clonostachys chloroleuca]                                         *^  440 [3592]  23534.90 ( 10.7%)   5  0.0     
+hypothetical protein D0869_05635 [Hortaea werneckii] & gb|RMY18849.1| hypothetical protein *^  441 [2612]  23464.00 ( 10.6%)   5  0.0     
+hypothetical protein EKO05_0004363 [Ascochyta rabiei]                                      *^  442 [3232]  23443.07 ( 10.6%)   7  0.0     
+Zn(2)-C6 fungal-type DNA-binding domain [Lasallia pustulata]                               *^  443 [4534]  23413.15 ( 10.6%)   6  0.0     
+hypothetical protein N7528_005084 [Penicillium herquei]                                    *^  444 [4513]  23319.79 ( 10.6%)   9  0.0     
+               Transcription factor [Penicillium malachiteum]
+Proline utilization trans-activator [Colletotrichum orbiculare MAFF 240422]                *^  445 [4985]  23282.27 ( 10.6%)   7  0.0     
+Transcription factor [Penicillium malachiteum]                                             *^  446 [4496]  23183.19 ( 10.5%)   9  0.0     
+Hypothetical protein NCS54_00887600 [Fusarium falciforme] & gb|WAO91408.1| Hypothetical pr *^  447 [4810]  23133.80 ( 10.5%)   7  0.0     
+hypothetical protein CEP51_015047 [Fusarium floridanum]                                    *^  448 [4018]  23133.10 ( 10.5%)   6  0.0     
+transcriptional regulator family: Fungal Specific TF [Penicillium sp. IBT 35674x]          *^  449 [3978]  22995.70 ( 10.4%)   5  0.0     
+hypothetical protein PENDEC_c020G02195 [Penicillium decumbens]                             *^  450 [3537]  22898.17 ( 10.4%)   5  0.0     
+hypothetical protein N7447_006090 [Penicillium robsamsonii]                                *^  451 [4922]  22597.29 ( 10.3%)   6  0.0     
+hypothetical protein KC331_g10805 [Hortaea werneckii]                                      *^  452 [2648]  22592.00 ( 10.3%)   7  0.0     
+hypothetical protein N7444_006474 [Penicillium canescens] & gb|KAJ6062794.1| hypothetical  *^  453 [3423]  22499.40 ( 10.2%)   6  0.0     
+               hypothetical protein N7499_011653 [Penicillium
+hypothetical protein N7540_010708 [Penicillium herquei]                                    *^  454 [3956]  22492.97 ( 10.2%)   5  0.0     
+hypothetical protein N7478_011624 [Penicillium angulare]                                   *^  455 [4447]  22491.20 ( 10.2%)   5  0.0     
+Fungal transcriptional regulatory protein, N-terminal [Penicillium digitatum]              *^  456 [3555]  22463.80 ( 10.2%)   6  0.0     
+hypothetical protein N7493_004688 [Penicillium malachiteum]                                *^  457 [3158]  22423.80 ( 10.2%)   6  0.0     
+hypothetical protein N7522_001182 [Penicillium canescens] & gb|KAJ6033455.1| hypothetical  *^  458 [3126]  22398.70 ( 10.2%)   5  0.0     
+               hypothetical protein N7460_000628 [Penicillium
+Proline utilization trans-activator [Diaporthe amygdali] & gb|KAJ0104007.1| Proline utiliz *^  459 [4173]  22281.34 ( 10.1%)  10  0.0     
+hypothetical protein N7475_002632 [Penicillium sp. IBT 31633x]                             *^  460 [3654]  22157.30 ( 10.1%)   6  0.0     
+C6 transcription factor [Aspergillus homomorphus CBS 101889] & gb|RAL15567.1| C6 transcrip *^  461 [3558]  22101.70 ( 10.0%)   7  0.0     
+unnamed protein product [Penicillium salamii] & emb|CAG8412404.1| unnamed protein product  *^  462 [3747]  22083.01 ( 10.0%)   7  0.0     
+hypothetical protein N7516_001952 [Penicillium verrucosum]                                 *^  463 [4213]  22072.93 ( 10.0%)   8  0.0     
+hypothetical protein N7469_006523 [Penicillium citrinum]                                   *^  464 [3765]  22061.50 ( 10.0%)   5  0.0     
+putative C6 transcription factor [Paecilomyces variotii] & gb|RWQ99307.1| putative C6 tran *^  465 [3284]  21938.00 ( 10.0%)   5  0.0     
+C6 transcription factor, putative [Paecilomyces variotii No. 5]                            *^  466 [3298]  21810.50 (  9.9%)   5  0.0     
+hypothetical protein N7455_003381 [Penicillium solitum]                                    *^  467 [3792]  21766.60 (  9.9%)   5  0.0     
+Positive regulator of purine utilization [Beauveria bassiana] & gb|KAH8718353.1| Positive  *^  468 [4887]  21581.10 (  9.8%)   6  0.0     
+hypothetical protein D6D08_02845, partial [Aureobasidium pullulans]                        *^  469 [4462]  21575.80 (  9.8%)   5  0.0     
+hypothetical protein BDZ85DRAFT_25779 [Elsinoe ampelina]                                   *^  470 [3385]  21302.70 (  9.7%)   5  2.9e-44 
+hypothetical protein N7488_000576 [Penicillium malachiteum]                                *^  471 [3599]  21295.50 (  9.7%)   6  0.0     
+hypothetical protein EMCG_03874 [Emmonsia crescens UAMH 3008]                              *^  472 [3943]  21244.30 (  9.6%)   5  0.0     
+hypothetical protein E4T43_08909 [Aureobasidium subglaciale]                               *^  473 [3286]  21219.70 (  9.6%)   5  0.0     
+hypothetical protein N7500_008094 [Penicillium coprophilum]                                *^  474 [3114]  21196.30 (  9.6%)   6  0.0     
+hypothetical protein PENPOL_c019G10362 [Penicillium polonicum]                             *^  475 [4254]  21173.40 (  9.6%)   6  0.0     
+hypothetical protein NW766_001805 [Fusarium irregulare]                                    *^  476 [4530]  21149.40 (  9.6%)   5  0.0     
+hypothetical protein AC578_7671 [Pseudocercospora eumusae]                                 *^  477 [4703]  21032.90 (  9.5%)   5  0.0     
+hypothetical protein N7486_003224 [Penicillium sp. IBT 16267x]                             *^  478 [4734]  20949.20 (  9.5%)   4  0.0     
+hypothetical protein JCM24511_04232 [Saitozyma sp. JCM 24511]                              *^  479 [3175]  20896.40 (  9.5%)   5  0.0     
+hypothetical protein N7522_007614 [Penicillium canescens] & gb|KAJ6045225.1| hypothetical  *^  480 [3820]  20861.40 (  9.5%)   4  0.0     
+hypothetical protein N7508_009702 [Penicillium antarcticum]                                *^  481 [3272]  20797.00 (  9.4%)   5  0.0     
+fungal-specific transcription factor domain-containing protein [Ilyonectria sp. MPI-CAGE-A *^  482 [4096]  20783.60 (  9.4%)   4  1.2e-40 
+hypothetical protein N7540_005815 [Penicillium herquei]                                    *^  483 [3436]  20774.80 (  9.4%)   5  0.0     
+hypothetical protein PMG11_00999 [Penicillium brasilianum]                                 *^  484 [3362]  20758.50 (  9.4%)   5  0.0     
+related to transcription factor, SIN3 binding [Phialocephala subalpina]                    *^  485 [3125]  20661.66 (  9.4%)   9  0.0     
+hypothetical protein PVAR5_4370 [Paecilomyces variotii No. 5]                              *^  486 [3115]  20614.30 (  9.4%)   4  0.0     
+hypothetical protein N7462_006493 [Penicillium macrosclerotiorum]                          *^  487 [3370]  20493.70 (  9.3%)   4  0.0     
+hypothetical protein PCG10_000308 [Penicillium crustosum] & gb|KAJ5419029.1| hypothetical  *^  488 [3274]  20345.10 (  9.2%)   6  0.0     
+fungal-specific transcription factor domain-domain-containing protein [Aspergillus taichun *^  489 [3303]  20327.90 (  9.2%)   6  0.0     
+fungal-specific transcription factor domain-containing protein [Paecilomyces variotii] & g *^  490 [3595]  20309.00 (  9.2%)   4  0.0     
+Transcriptional activator [Metarhizium acridum]                                            *^  491 [3344]  20136.40 (  9.1%)   5  1.8e-39 
+               Transcriptional activator, variant 3 [Metarhiz
+               Transcriptional activator, variant 2 [Metarhiz
+               Transcriptional activator [Metarhizium acridum
+putative C6 transcription factor [Talaromyces proteolyticus] & gb|KAH8695363.1| putative C *^  492 [3601]  20120.70 (  9.1%)   4  0.0     
+unnamed protein product [Aureobasidium pullulans]                                          *^  493 [4055]  20106.01 (  9.1%)   8  0.0     
+Transcriptional activator [Penicillium rubens]                                             *^  494 [3561]  19935.70 (  9.0%)   3  1.0e-42 
+               hypothetical protein N7534_007430, partial [Pe
+               hypothetical protein N7525_009597, partial [Pe
+               hypothetical protein N7505_009406 [Penicillium
+               unnamed protein product [Penicillium egyptiacu
+               Pc20g12130 [Penicillium rubens Wisconsin 54-12
+               hypothetical protein N7497_011159 [Penicillium
+               hypothetical protein N7524_011237 [Penicillium
+               Transcriptional activator [Penicillium rubens]
+               hypothetical protein N7530_008454 [Penicillium
+hypothetical protein KCU75_g8181, partial [Aureobasidium melanogenum] & gb|KAG9840356.1| h *^  495 [4488]  19793.90 (  9.0%)   4  0.0     
+               hypothetical protein KCU59_g11670, partial [Au
+               hypothetical protein KCU79_g8802, partial [Aur
+               hypothetical protein KCU64_g9100, partial [Aur
+               hypothetical protein KCU92_g7662, partial [Aur
+               hypothetical protein KCU85_g4444, partial [Aur
+               hypothetical protein KCU87_g5982, partial [Aur
+hypothetical protein N7477_010269 [Penicillium maclennaniae]                               *^  496 [4092]  19748.80 (  9.0%)   4  0.0     
+uncharacterized protein ACHE_30737A [Aspergillus chevalieri] & dbj|BCR86750.1| hypothetica *^  497 [4453]  19641.10 (  8.9%)   4  0.0     
+hypothetical protein [Parasitella parasitica]                                              *^  498 [4900]  19569.70 (  8.9%)   7  0.0     
+fungal-specific transcription factor domain-containing protein [Rhexocercosporidium sp. MP *^  499 [3712]  19444.39 (  8.8%)   9  0.0     
+fungal-specific transcription factor domain-containing protein [Tricharina praecox] & gb|K *^  500 [4273]  19418.70 (  8.8%)   4  0.0     
+transcriptional regulator family: Fungal Specific TF [Penicillium verhagenii]              *^  501 [4274]  19329.80 (  8.8%)   5  0.0     
+transcriptional regulator family: Fungal Specific TF [Penicillium roqueforti] & gb|KAI3139 *^  502 [3438]  19318.50 (  8.8%)   5  0.0     
+               transcriptional regulator family: Fungal Speci
+Transcriptional activator [Pseudogymnoascus verrucosus]                                    *^  503 [4914]  19202.50 (  8.7%)   4  1.2e-42 
+transcriptional regulator family: Fungal Specific TF [Penicillium roqueforti] & gb|KAF9252 *^  504 [3392]  19158.10 (  8.7%)   4  0.0     
+unnamed protein product [Clonostachys rosea]                                               *^  505 [4296]  19139.50 (  8.7%)   3  2.1e-37 
+hypothetical protein IFM51744_05883 [Aspergillus udagawae]                                 *^  506 [4516]  18914.60 (  8.6%)   5  0.0     
+hypothetical protein PMG11_01376 [Penicillium brasilianum]                                 *^  507 [4329]  18881.70 (  8.6%)   5  0.0     
+MAG: hypothetical protein M1834_001247 [Cirrosporium novae-zelandiae]                      *^  508 [3750]  18668.40 (  8.5%)   7  0.0     
+hypothetical protein K458DRAFT_51601 [Lentithecium fluviatile CBS 122367]                  *^  509 [4327]  18613.70 (  8.4%)   5  0.0     
+hypothetical protein N7498_007004 [Penicillium cinerascens]                                *^  510 [4582]  18585.10 (  8.4%)   5  0.0     
+uncharacterized protein ACHE_20986S [Aspergillus chevalieri] & dbj|BCR85528.1| hypothetica *^  511 [3345]  18576.70 (  8.4%)   5  0.0     
+hypothetical protein N7474_008433 [Penicillium riverlandense]                              *^  512 [4633]  18459.71 (  8.4%)   8  0.0     
+hypothetical protein POX_b03222 [Penicillium oxalicum] & gb|KAI2793172.1| hypothetical pro *^  513 [3736]  18407.20 (  8.4%)   5  0.0     
+hypothetical protein BHE90_007941 [Fusarium euwallaceae]                                   *^  514 [4608]  18367.90 (  8.3%)   3  5.3e-38 
+uncharacterized protein K452DRAFT_336513 [Aplosporella prunicola CBS 121167] & gb|KAF21397 *^  515 [2965]  18251.80 (  8.3%)   5  0.0     
+related to transcription factor, SIN3 binding [Rhynchosporium secalis]                     *^  516 [3600]  18186.88 (  8.3%)   8  0.0     
+hypothetical protein D6C79_02993 [Aureobasidium pullulans]                                 *^  517 [4570]  17934.20 (  8.1%)   6  0.0     
+               hypothetical protein D6C99_06172, partial [Aur
+               hypothetical protein D6D08_07855 [Aureobasidiu
+hypothetical protein CNMCM5878_003928 [Aspergillus fumigatiaffinis]                        *^  518 [4951]  17482.30 (  7.9%)   6  0.0     
+transcriptional activator protein acu-15 [Aspergillus awamori]                             *^  519 [4569]  17281.00 (  7.8%)   7  0.0     
+fungal-specific transcription factor domain-domain-containing protein [Absidia repens]     *^  520 [4882]  16844.30 (  7.6%)   5  0.0     
+uncharacterized protein SETTUDRAFT_46320 [Exserohilum turcica Et28A] & gb|EOA88685.1| hypo *^  521 [3912]  16201.80 (  7.4%)   4  0.0     
+C6 transcription factor [Stagonosporopsis vannaccii]                                       *^  522 [4209]  16048.60 (  7.3%)   4  0.0     
+hypothetical protein PENSTE_c011G09746 [Penicillium steckii]                               *^  523 [4722]  15406.20 (  7.0%)   3  7.6e-30 
+hypothetical protein CDV55_102357 [Aspergillus turcosus]                                   *^  524 [4547]  15248.40 (  6.9%)   5  0.0     
+               hypothetical protein CFD26_108625 [Aspergillus
+fungal-specific transcription factor domain-containing protein [Sporodiniella umbellata]   *^  525 [4861]  15180.00 (  6.9%)   7  0.0     
+C6 transcription factor [Fusarium globosum]                                                *^  526 [4130]  13338.80 (  6.1%)   4  1.3e-43 
+C6 transcription factor [Fusarium denticulatum]                                            *^  527 [4936]      "        "      4  1.3e-42 
+-------------------------------------------------------------------------------------------------------
+hypothetical protein NDAI_0F01220 [Naumovozyma dairenensis CBS 421] & emb|CCD25441.1| hypo     528 [ 133]  101304.37 ( 46.0%)  21    inf  
+hypothetical protein ZYGR_0P03360 [Zygosaccharomyces rouxii]                                   529 [ 131]  88942.39 ( 40.4%)  20    inf  
+uncharacterized protein ZYRO0E08272g [Zygosaccharomyces rouxii] & gb|KAH9198114.1| fungal-     530 [ 132]      "        "     20    inf  
+BN860_04324g1_1 [Zygosaccharomyces bailii CLIB 213]                                            531 [ 135]  87563.64 ( 39.7%)  21    inf  
+related to Regulatory protein GAL4 [Zygosaccharomyces bailii]                                  532 [ 136]  87465.24 ( 39.7%)  21    inf  
+GAL4 (YPL248C) [Zygosaccharomyces parabailii] & emb|CDH12872.1| related to Regulatory prot     533 [ 134]  87215.22 ( 39.6%)  21    inf  
+uncharacterized protein HG535_0F02810 [Zygotorulaspora mrakii] & gb|QLG73770.1| hypothetic     534 [ 140]  82972.99 ( 37.6%)  18    inf  
+hypothetical protein TPHA_0H01980 [Tetrapisispora phaffii CBS 4417] & emb|CCE64403.1| hypo     535 [ 175]  81589.39 ( 37.0%)  21    inf  
+hypothetical protein NCAS_0D04190 [Naumovozyma castellii CBS 4309] & emb|CCC70000.1| hypot     536 [ 174]  81366.54 ( 36.9%)  20    inf  
+hypothetical protein TDEL_0E00160 [Torulaspora delbrueckii] & emb|CCE92259.1| hypothetical     537 [ 143]  78623.98 ( 35.7%)  17    inf  
+hypothetical protein WICMUC_002085 [Wickerhamomyces mucosus]                                   538 [ 179]  75113.42 ( 34.1%)  18    inf  
+CYFA0S04e04456g1_1 [Cyberlindnera fabianii]                                                    539 [ 180]  74329.23 ( 33.7%)  18    inf  
+hypothetical protein WICPIJ_008363 [Wickerhamomyces pijperi]                                   540 [ 184]  73019.77 ( 33.1%)  17    inf  
+hypothetical protein NDAI_0I00740 [Naumovozyma dairenensis CBS 421] & emb|CCD26643.1| hypo     541 [ 182]  71298.32 ( 32.3%)  18    inf  
+Lactose regulatory protein LAC9 [Cyberlindnera jadinii]                                        542 [ 183]  69164.94 ( 31.4%)  17    inf  
+LAFE_0C03070g1_1 [Lachancea fermentati]                                                        543 [ 178]  69094.95 ( 31.3%)  18    inf  
+hypothetical protein CYBJADRAFT_110139, partial [Cyberlindnera jadinii NRRL Y-1542] & gb|O     544 [ 187]  68548.01 ( 31.1%)  17    inf  
+similar to Saccharomyces cerevisiae YPL248C GAL4 DNA-binding transcription factor required     545 [ 198]  65961.84 ( 29.9%)  18    inf  
+hypothetical protein WICANDRAFT_15973, partial [Wickerhamomyces anomalus NRRL Y-366-8] & g     546 [ 181]  65835.31 ( 29.9%)  16    inf  
+KLTH0H02684p [Lachancea thermotolerans CBS 6340] & emb|CAR30135.1| KLTH0H02684p [Lachancea     547 [ 188]  62951.06 ( 28.6%)  16    inf  
+LAFA_0G22056g1_1 [Lachancea sp. CBS 6924]                                                      548 [ 189]  62874.83 ( 28.5%)  15    inf  
+LAQU0S08e02520g1_1 [Lachancea quebecensis]                                                     549 [ 190]  61523.45 ( 27.9%)  16    inf  
+Gal4, partial [Saccharomyces cerevisiae] & gb|AQN76969.1| Gal4, partial [Saccharomyces cer     550 [ 142]  60170.30 ( 27.3%)   6    inf  
+hypothetical protein LIPSTDRAFT_6987 [Lipomyces starkeyi NRRL Y-11557]                         551 [ 320]  60156.80 ( 27.3%)  15    inf  
+Gal4, partial [Saccharomyces cerevisiae] & gb|AQN77000.1| Gal4, partial [Saccharomyces cer     552 [ 151]  59963.30 ( 27.2%)   6    inf  
+Gal4, partial [Saccharomyces cerevisiae]                                                       553 [ 144]  59918.31 ( 27.2%)   6    inf  
+Gal4, partial [Saccharomyces cerevisiae] & gb|AQN76975.1| Gal4, partial [Saccharomyces cer     554 [ 146]      "        "      6    inf  
+Gal4, partial [Saccharomyces cerevisiae]                                                       555 [ 153]  59817.80 ( 27.1%)   6    inf  
+Gal4, partial [Saccharomyces cerevisiae]                                                       556 [ 155]      "        "      6    inf  
+Gal4, partial [Saccharomyces cerevisiae]                                                       557 [ 154]  59610.80 ( 27.0%)   6    inf  
+Gal4, partial [Saccharomyces cerevisiae] & gb|AQN76973.1| Gal4, partial [Saccharomyces cer     558 [ 156]  59565.81 ( 27.0%)   6    inf  
+Gal4, partial [Saccharomyces cerevisiae] & gb|AQN77040.1| Gal4, partial [Saccharomyces cer     559 [ 147]  59429.30 ( 27.0%)   6    inf  
+Gal4, partial [Saccharomyces cerevisiae]                                                       560 [ 163]  59366.01 ( 26.9%)   6    inf  
+Gal4, partial [Saccharomyces cerevisiae] & gb|AQN76982.1| Gal4, partial [Saccharomyces cer     561 [ 149]  59196.80 ( 26.9%)   6    inf  
+hypothetical protein KL908_004444 [Ogataea polymorpha]                                         562 [ 743]  59048.26 ( 26.8%)  12    inf  
+hypothetical protein MAP00_008275 [Monascus purpureus]                                         563 [ 255]  58799.37 ( 26.7%)  15    inf  
+hypothetical protein OGATHE_003935 [Ogataea polymorpha]                                        564 [ 764]  58664.26 ( 26.6%)  12    inf  
+hypothetical protein KL937_004119 [Ogataea polymorpha] & gb|KAG7898734.1| hypothetical pro     565 [ 766]      "        "     12    inf  
+               hypothetical protein KL905_003782 [Ogataea pol
+               uncharacterized protein OGAPODRAFT_16940 [Ogat
+hypothetical protein LJB42_001675 [Komagataella kurtzmanii]                                    566 [ 765]  58474.48 ( 26.5%)  14    inf  
+Regulatory protein GAL4 [Hanseniaspora osmophila]                                              567 [ 286]  58371.67 ( 26.5%)  16    inf  
+Gal4, partial [Saccharomyces cerevisiae] & gb|AQN76985.1| Gal4, partial [Saccharomyces cer     568 [ 152]  58256.80 ( 26.4%)   6    inf  
+DNA binding protein [[Candida] boidinii]                                                       569 [ 755]  58212.82 ( 26.4%)  15    inf  
+hypothetical protein KL936_000218 [Ogataea polymorpha]                                         570 [ 792]  58207.96 ( 26.4%)  12    inf  
+hypothetical protein N7478_001876 [Penicillium angulare]                                       571 [ 319]  58160.63 ( 26.4%)  15    inf  
+DNA-binding transcription factor, partial [Saccharomyces cerevisiae] & gb|AFK74324.1| DNA-     572 [ 158]  58071.25 ( 26.3%)   6    inf  
+LAME_0B05644g1_1 [Lachancea meyersii CBS 8951]                                                 573 [ 191]  58064.01 ( 26.3%)  14    inf  
+Lactose regulatory protein [Komagataella phaffii GS115] & gb|AOA61444.1| GQ67_01423T0 [Kom     574 [ 779]  58005.18 ( 26.3%)  13    inf  
+DNA-binding transcription factor, partial [Saccharomyces cerevisiae]                           575 [ 160]  57848.95 ( 26.2%)   6    inf  
+DNA-binding transcription factor, partial [Saccharomyces cerevisiae] & gb|AFK74251.1| DNA-     576 [ 165]  57819.26 ( 26.2%)   6    inf  
+DNA binding protein [[Candida] boidinii]                                                       577 [ 823]  57777.22 ( 26.2%)  15    inf  
+Gal4, partial [Saccharomyces cerevisiae]                                                       578 [ 150]  57734.30 ( 26.2%)   6    inf  
+DNA-binding transcription factor, partial [Saccharomyces cerevisiae] & gb|AFK74288.1| DNA-     579 [ 171]  57718.75 ( 26.2%)   6    inf  
+hypothetical protein N7540_002228 [Penicillium herquei]                                        580 [ 293]  57472.93 ( 26.1%)  16    inf  
+DNA-binding transcription factor, partial [Saccharomyces cerevisiae] & gb|AFK74254.1| DNA-     581 [ 172]  57466.76 ( 26.1%)   6    inf  
+hypothetical protein N7486_000591 [Penicillium sp. IBT 16267x]                                 582 [ 290]  57345.32 ( 26.0%)  16    inf  
+hypothetical protein N7494_007775 [Penicillium glabrum]                                        583 [ 268]  57287.04 ( 26.0%)  16    inf  
+hypothetical protein N7513_006246 [Penicillium glabrum]                                        584 [ 340]      "        "     16    inf  
+hypothetical protein N7483_007542 [Penicillium malachiteum]                                    585 [ 283]  57189.29 ( 25.9%)  16    inf  
+hypothetical protein N7493_001693 [Penicillium malachiteum]                                    586 [ 345]  57180.39 ( 25.9%)  16    inf  
+               hypothetical protein N7488_005196 [Penicillium
+DNA-binding transcription factor, partial [Saccharomyces cerevisiae] & gb|AFK74326.1| DNA-     587 [ 170]  57097.75 ( 25.9%)   6    inf  
+hypothetical protein N7484_007377 [Penicillium longicatenatum]                                 588 [ 332]  57022.19 ( 25.9%)  16    inf  
+hypothetical protein N7451_006691 [Penicillium sp. IBT 35674x]                                 589 [ 358]      "        "     16    inf  
+DNA-binding transcription factor, partial [Saccharomyces cerevisiae]                           590 [ 169]  56982.26 ( 25.9%)   6    inf  
+uncharacterized protein ASPWEDRAFT_52449 [Aspergillus wentii DTO 134E9] & gb|OJJ34169.1| h     591 [ 291]  56958.05 ( 25.8%)  16    inf  
+hypothetical protein KL938_004017 [Ogataea parapolymorpha]                                     592 [ 816]  56954.79 ( 25.8%)  12    inf  
+hypothetical protein KL918_004349 [Ogataea parapolymorpha] & gb|KAG7872011.1| hypothetical     593 [ 811]  56885.21 ( 25.8%)  12    inf  
+fungal specific transcription factor domain protein [Aspergillus clavatus NRRL 1] & gb|EAW     594 [ 273]  56874.50 ( 25.8%)  18    inf  
+hypothetical protein N7528_007408 [Penicillium herquei]                                        595 [ 370]  56862.74 ( 25.8%)  16    inf  
+DNA-binding transcription factor, partial [Saccharomyces cerevisiae]                           596 [ 173]  56743.76 ( 25.7%)   6    inf  
+hypothetical protein N7504_004550 [Penicillium tannophilum]                                    597 [ 316]  56729.48 ( 25.7%)  16    inf  
+transcriptional regulator family: Fungal Specific TF [Penicillium roqueforti] & emb|CDM318     598 [ 299]  56716.35 ( 25.7%)  17    inf  
+               transcriptional regulator family: Fungal Speci
+transcriptional regulator family: Fungal Specific TF [Penicillium roqueforti]                  599 [ 301]      "        "     17    inf  
+               transcriptional regulator family: Fungal Speci
+transcriptional regulator family: Fungal Specific TF [Penicillium roqueforti] & gb|KAI3108     600 [ 313]      "        "     17    inf  
+hypothetical protein KL945_003550 [Ogataea haglerorum] & gb|KAG7793851.1| hypothetical pro     601 [ 838]  56598.55 ( 25.7%)  13    inf  
+               hypothetical protein KL915_004309 [Ogataea hag
+               uncharacterized protein KL911_001331 [Ogataea 
+               hypothetical protein KL944_004039 [Ogataea hag
+uncharacterized protein OGAPHI_001305 [Ogataea philodendri] & gb|KAH3670789.1| hypothetica     602 [1008]  56560.35 ( 25.7%)  13    inf  
+galactose-responsive transcription factor GAL4 [Sugiyamaella lignohabitans] & gb|ANB15131.     603 [ 280]  56538.40 ( 25.7%)  18    inf  
+putative C6 transcription factor [Paecilomyces variotii] & gb|RWQ98955.1| putative C6 tran     604 [ 341]  56459.58 ( 25.6%)  15    inf  
+hypothetical protein CANARDRAFT_186355, partial [[Candida] arabinofermentans NRRL YB-2248]     605 [ 709]  56454.74 ( 25.6%)  12    inf  
+C6 transcription factor [Aspergillus ellipticus CBS 707.79]                                    606 [ 407]  56452.96 ( 25.6%)  17    inf  
+hypothetical protein VF21_02912 [Pseudogymnoascus sp. 05NY08]                                  607 [ 437]  56135.91 ( 25.5%)  17    inf  
+hypothetical protein N7507_009615 [Penicillium longicatenatum]                                 608 [ 369]  56121.47 ( 25.5%)  16    inf  
+hypothetical protein N7443_007810 [Penicillium atrosanguineum]                                 609 [ 389]  56081.91 ( 25.4%)  16    inf  
+               hypothetical protein N7448_010587 [Penicillium
+               hypothetical protein N7526_010517 [Penicillium
+hypothetical protein N7482_009740 [Penicillium canariense]                                     610 [ 426]  56071.97 ( 25.4%)  16    inf  
+DNA-binding transcription factor, partial [Saccharomyces cerevisiae x Saccharomyces kudria     611 [ 157]  56058.30 ( 25.4%)   6    inf  
+hypothetical protein N7452_007265 [Penicillium brevicompactum] & gb|KAJ5336525.1| hypothet     612 [ 383]  56000.56 ( 25.4%)  17    inf  
+hypothetical protein N7520_003693 [Penicillium odoratum]                                       613 [ 274]  55922.40 ( 25.4%)  16    inf  
+hypothetical protein N7490_011718 [Penicillium lividum]                                        614 [ 292]      "        "     16    inf  
+hypothetical protein ASPZODRAFT_74508 [Penicilliopsis zonata CBS 506.65] & gb|OJJ43461.1|      615 [ 380]  55890.80 ( 25.4%)  19    inf  
+hypothetical protein NUU61_000504 [Penicillium alfredii]                                       616 [ 403]  55810.22 ( 25.3%)  16    inf  
+DNA-binding transcription factor, partial [Saccharomyces cerevisiae x Saccharomyces kudria     617 [ 164]  55806.31 ( 25.3%)   6    inf  
+hypothetical protein N7529_006605 [Penicillium soppii]                                     *   618 [ 509]  55776.26 ( 25.3%)  15  0.0024  
+hypothetical protein N7461_003559 [Penicillium sp. DV-2018c] & gb|KAJ5565896.1| hypothetic     619 [ 398]  55708.93 ( 25.3%)  18    inf  
+C6 transcription factor (Gal4), putative [Talaromyces marneffei ATCC 18224]                    620 [ 217]  55640.42 ( 25.2%)  16    inf  
+DNA-binding transcription factor, partial [Saccharomyces cerevisiae x Saccharomyces kudria     621 [ 161]  55617.30 ( 25.2%)   6    inf  
+DNA-binding transcription factor, partial [Saccharomyces cerevisiae x Saccharomyces kudria     622 [ 162]      "        "      6    inf  
+fungal-specific transcription factor domain-domain-containing protein [Aspergillus taichun     623 [ 306]  55535.74 ( 25.2%)  16    inf  
+hypothetical protein N7466_005929 [Penicillium verhagenii]                                     624 [ 485]  55527.37 ( 25.2%)  14    inf  
+hypothetical protein N7517_004625 [Penicillium concentricum]                                   625 [ 365]  55480.88 ( 25.2%)  17    inf  
+hypothetical protein KL941_004536 [Ogataea angusta]                                            626 [ 790]  55475.81 ( 25.2%)  12    inf  
+               hypothetical protein KL943_004792 [Ogataea ang
+               hypothetical protein KL919_004782 [Ogataea ang
+               uncharacterized protein KL928_004957 [Ogataea 
+               hypothetical protein KL942_004556 [Ogataea ang
+DNA-binding transcription factor, partial [Saccharomyces cerevisiae x Saccharomyces kudria     627 [ 168]  55442.71 ( 25.2%)   6    inf  
+hypothetical protein HRR74_002858 [Exophiala dermatitidis] & gb|KAJ4529600.1| hypothetical     628 [ 347]  55422.24 ( 25.1%)  17    inf  
+hypothetical protein BP5796_01468 [Coleophoma crateriformis]                                   629 [ 441]  55380.64 ( 25.1%)  17    inf  
+Transcription factor [Penicillium occitanis (nom. inval.)] & gb|PCH01068.1| hypothetical p     630 [ 235]  55366.92 ( 25.1%)  15    inf  
+               Regulatory protein GAL4 [Talaromyces pinophilu
+               hypothetical protein TCE0_060f18993 [Talaromyc
+hypothetical protein N7450_009539 [Penicillium hetheringtonii]                                 631 [ 446]  55363.08 ( 25.1%)  16    inf  
+Fungal Zn(2)-Cys(6) binuclear cluster domain-containing protein [Penicillium ucsense] & gb     632 [ 371]  55362.72 ( 25.1%)  16    inf  
+hypothetical protein N7539_007735 [Penicillium diatomitis]                                     633 [ 387]      "        "     16    inf  
+fungal-specific transcription factor domain-containing protein [Aspergillus alliaceus] & g     634 [ 419]  55332.97 ( 25.1%)  17    inf  
+hypothetical protein V496_05116 [Pseudogymnoascus sp. VKM F-4515 (FW-2607)]                    635 [ 388]  55317.10 ( 25.1%)  16    inf  
+hypothetical protein N7522_004356 [Penicillium canescens] & gb|KAJ6027148.1| hypothetical      636 [ 386]  55307.49 ( 25.1%)  18    inf  
+hypothetical protein MAP00_008275 [Monascus purpureus]                                         637 [ 361]  55269.76 ( 25.1%)  14    inf  
+hypothetical protein PENARI_c006G03237 [Penicillium arizonense] & gb|OGE54465.1| hypotheti     638 [ 404]  55244.48 ( 25.1%)  17    inf  
+hypothetical protein N7532_001660 [Penicillium argentinense]                                   639 [ 470]  55240.43 ( 25.1%)  17    inf  
+hypothetical protein N7454_010618, partial [Penicillium verhagenii]                            640 [ 490]  55238.30 ( 25.1%)  15    inf  
+C6 transcription factor (Gal4), putative [Talaromyces stipitatus ATCC 10500] & gb|EED13842     641 [ 232]  55174.15 ( 25.0%)  14    inf  
+hypothetical protein ASPGLDRAFT_25713 [Aspergillus glaucus CBS 516.65] & gb|OJJ84252.1| hy     642 [ 236]  55151.54 ( 25.0%)  17    inf  
+hypothetical protein V499_00100 [Pseudogymnoascus sp. VKM F-103]                               643 [ 430]  55125.25 ( 25.0%)  17    inf  
+putative fungal-specific transcription factor [Aspergillus novofumigatus IBT 16806] & gb|P     644 [ 258]  55123.57 ( 25.0%)  17    inf  
+uncharacterized protein FOA43_002735 [Brettanomyces nanus] & gb|QPG75381.1| hypothetical p     645 [1159]  55082.36 ( 25.0%)  15    inf  
+hypothetical protein N7475_010158 [Penicillium sp. IBT 31633x] & gb|KAJ5464313.1| hypothet     646 [ 300]  55079.26 ( 25.0%)  18    inf  
+hypothetical protein N7515_008031 [Penicillium bovifimosum]                                    647 [ 376]  55047.76 ( 25.0%)  18    inf  
+hypothetical protein N7537_009362 [Penicillium hordei]                                         648 [ 303]  54975.38 ( 24.9%)  17    inf  
+C6 transcription factor [Aspergillus heteromorphus CBS 117.55] & gb|PWY82209.1| C6 transcr     649 [ 463]  54964.57 ( 24.9%)  17    inf  
+hypothetical protein N7463_000562 [Penicillium fimorum]                                        650 [ 310]  54848.59 ( 24.9%)  17    inf  
+hypothetical protein O988_04298 [Pseudogymnoascus sp. VKM F-3808]                              651 [ 422]  54833.83 ( 24.9%)  17    inf  
+C6 transcription factor (Gal4), putative [Aspergillus fumigatus Af293] & gb|KAF4257208.1|      652 [ 257]  54831.24 ( 24.9%)  17    inf  
+               hypothetical protein KXW63_004088 [Aspergillus
+hypothetical protein N7533_000886 [Penicillium manginii]                                       653 [ 450]  54826.68 ( 24.9%)  15    inf  
+lactose regulatory protein lac9 and GAL4-like protein [Aspergillus wentii]                     654 [ 390]  54797.26 ( 24.9%)  16    inf  
+hypothetical protein BP6252_04317 [Coleophoma cylindrospora]                                   655 [ 431]  54794.72 ( 24.9%)  16    inf  
+similar to Saccharomyces cerevisiae YPL248C GAL4 DNA-binding transcription factor required     656 [ 397]  54783.21 ( 24.9%)  17    inf  
+hypothetical protein DL98DRAFT_591528 [Cadophora sp. DSE1049]                                  657 [ 512]  54766.35 ( 24.8%)  16    inf  
+hypothetical protein CNMCM5623_010086 [Aspergillus felis] & gb|KAF7179779.1| hypothetical      658 [ 294]  54740.56 ( 24.8%)  17    inf  
+hypothetical protein N7457_005637 [Penicillium paradoxum]                                      659 [ 342]  54732.14 ( 24.8%)  18    inf  
+lactose regulatory protein lac9 and GAL4-like protein [Aspergillus chevalieri] & dbj|BCR91     660 [ 244]  54711.84 ( 24.8%)  15    inf  
+               hypothetical protein SI65_06349 [Aspergillus c
+putative C6 transcription factor [Aspergillus ruber CBS 135680] & gb|EYE96156.1| putative      661 [ 234]  54705.94 ( 24.8%)  17    inf  
+hypothetical protein CDV56_106223 [Aspergillus thermomutatus] & gb|RHZ56014.1| hypothetica     662 [ 295]  54685.78 ( 24.8%)  18    inf  
+hypothetical protein HRR77_005493 [Exophiala dermatitidis] & gb|KAJ4610286.1| hypothetical     663 [ 420]  54673.80 ( 24.8%)  17    inf  
+hypothetical protein N7501_004067 [Penicillium viridicatum]                                    664 [ 325]  54642.05 ( 24.8%)  18    inf  
+               hypothetical protein PENPOL_c002G09354 [Penici
+               hypothetical protein N7465_001115 [Penicillium
+hypothetical protein N7527_004048 [Penicillium freii] & gb|KUM65728.1| hypothetical protei     665 [ 336]      "        "     18    inf  
+hypothetical protein CNMCM5793_003736 [Aspergillus hiratsukae]                                 666 [ 264]  54631.07 ( 24.8%)  17    inf  
+hypothetical protein CNMCM6106_003963 [Aspergillus hiratsukae]                                 667 [ 266]      "        "     17    inf  
+hypothetical protein N7479_000564 [Penicillium vulpinum] & gb|OQE09128.1| hypothetical pro     668 [ 381]  54625.26 ( 24.8%)  18    inf  
+unnamed protein product [Penicillium salamii] & emb|CAG8373383.1| unnamed protein product      669 [ 315]  54621.56 ( 24.8%)  17    inf  
+uncharacterized protein BHQ10_008857 [Talaromyces amestolkiae] & gb|RAO72845.1| hypothetic     670 [ 218]  54589.99 ( 24.8%)  15    inf  
+fungal-specific transcription factor domain-containing protein [Aspergillus caelatus] & gb     671 [ 415]  54562.43 ( 24.8%)  16    inf  
+               fungal-specific transcription factor domain-co
+fungal-specific transcription factor domain-containing protein [Aspergillus tamarii]           672 [ 416]      "        "     16    inf  
+fungal-specific transcription factor domain-containing protein [Aspergillus parasiticus] &     673 [ 424]      "        "     16    inf  
+               fungal-specific transcription factor domain-co
+hypothetical protein Ao3042_01355 [Aspergillus oryzae 3.042] & gb|KDE75187.1| hypothetical     674 [ 440]      "        "     16    inf  
+               uncharacterized protein G4B84_009298 [Aspergil
+               fungal-specific transcription factor domain-co
+C6 transcription factor (Gal4) [Aspergillus flavus]                                            675 [ 449]      "        "     16    inf  
+hypothetical protein HAV15_004566 [Penicillium sp. str. #12] & gb|KAJ5857131.1| hypothetic     676 [ 321]  54555.98 ( 24.8%)  17    inf  
+hypothetical protein PCG10_005280 [Penicillium crustosum] & gb|KAJ5395939.1| hypothetical      677 [ 327]      "        "     17    inf  
+hypothetical protein N7449_008595 [Penicillium cf. viridicatum]                                678 [ 331]      "        "     17    inf  
+Fungal transcriptional regulatory protein, N-terminal [Penicillium camemberti]                 679 [ 335]      "        "     17    inf  
+hypothetical protein N7471_008553 [Penicillium samsonianum]                                    680 [ 343]      "        "     17    inf  
+uncharacterized protein PENSOL_c014G04667 [Penicillium solitum] & gb|KAJ5680886.1| hypothe     681 [ 355]      "        "     17    inf  
+unnamed protein product [Penicillium olsonii] & emb|CAG8292206.1| unnamed protein product      682 [ 318]  54509.06 ( 24.7%)  17    inf  
+fungal-specific transcription factor domain-containing protein [Aspergillus pseudonomiae]      683 [ 432]  54507.98 ( 24.7%)  16    inf  
+Zn(II)2Cys6 transcription factor [Aspergillus bombycis] & gb|OGM46350.1| Zn(II)2Cys6 trans     684 [ 434]      "        "     16    inf  
+hypothetical protein N7447_008622 [Penicillium robsamsonii]                                    685 [ 307]  54490.39 ( 24.7%)  17    inf  
+hypothetical protein N7500_010009 [Penicillium coprophilum]                                    686 [ 314]      "        "     17    inf  
+hypothetical protein N7473_009396 [Penicillium subrubescens]                                   687 [ 391]  54475.12 ( 24.7%)  16    inf  
+hypothetical protein N7462_001795 [Penicillium macrosclerotiorum]                              688 [ 367]  54466.98 ( 24.7%)  15    inf  
+hypothetical protein IFR05_015181 [Cadophora sp. M221]                                         689 [ 586]  54458.83 ( 24.7%)  16    inf  
+hypothetical protein N7498_007213 [Penicillium cinerascens]                                    690 [ 435]  54454.61 ( 24.7%)  16    inf  
+unnamed protein product [Penicillium salamii] & emb|CAG8002176.1| unnamed protein product      691 [ 329]  54413.49 ( 24.7%)  17    inf  
+               unnamed protein product [Penicillium salamii] 
+fungal-specific transcription factor domain-containing protein [Aspergillus bertholletiae]     692 [ 445]  54391.39 ( 24.7%)  17    inf  
+hypothetical protein N7453_002432 [Penicillium expansum]                                       693 [ 399]  54387.73 ( 24.7%)  17    inf  
+hypothetical protein N7477_006827 [Penicillium maclennaniae]                                   694 [ 457]  54340.14 ( 24.7%)  16    inf  
+hypothetical protein N7519_009362 [Penicillium mononematosum]                                  695 [ 353]  54318.05 ( 24.6%)  18    inf  
+lactose regulatory protein lac9 and GAL4-like protein [Penicillium rubens] & gb|KAJ5048121     696 [ 356]      "        "     18    inf  
+               Pc20g03000 [Penicillium rubens Wisconsin 54-12
+hypothetical protein PENFLA_c010G00759 [Penicillium flavigenum]                                697 [ 357]      "        "     18    inf  
+unnamed protein product [Penicillium nalgiovense] & emb|CAG8103982.1| unnamed protein prod     698 [ 377]      "        "     18    inf  
+               unnamed protein product [Penicillium nalgioven
+unnamed protein product [Penicillium nalgiovense]                                              699 [ 379]      "        "     18    inf  
+lactose regulatory protein lac9 and GAL4-like protein [Aspergillus tanneri] & gb|KAA864569     700 [ 382]  54316.97 ( 24.6%)  17    inf  
+lactose regulatory protein lac9 and GAL4-like protein [Aspergillus pseudoviridinutans] & d     701 [ 408]  54295.72 ( 24.6%)  17    inf  
+hypothetical protein N7523_007992 [Penicillium sp. IBT 18751x]                                 702 [ 522]  54281.70 ( 24.6%)  16    inf  
+hypothetical protein N7472_000917 [Penicillium cf. griseofulvum] & gb|KAJ5428329.1| hypoth *   703 [ 497]  54266.82 ( 24.6%)  17  0.0034  
+Zn(II)2Cys6 transcription factor [Aspergillus nomiae NRRL 13137] & gb|KNG84473.1| Zn(II)2C     704 [ 439]  54255.13 ( 24.6%)  16    inf  
+hypothetical protein N7508_005302 [Penicillium antarcticum] & gb|OQD83210.1| hypothetical      705 [ 364]  54232.33 ( 24.6%)  16    inf  
+hypothetical protein PDIDSM_1447 [Penicillium digitatum]                                       706 [ 309]  54206.18 ( 24.6%)  17    inf  
+               Fungal transcriptional regulatory protein, N-t
+lactose regulatory protein LAC9 [Aspergillus lentulus] & gb|KAF4153972.1| hypothetical pro     707 [ 265]  54203.77 ( 24.6%)  17    inf  
+hypothetical protein N7495_009664 [Penicillium taxi]                                           708 [ 414]  54186.25 ( 24.6%)  16    inf  
+unnamed protein product [Penicillium nalgiovense]                                              709 [ 385]  54097.85 ( 24.5%)  18    inf  
+fungal-specific transcription factor domain-containing protein [Aspergillus leporis]           710 [ 464]  54093.07 ( 24.5%)  17    inf  
+fungal-specific transcription factor domain-containing protein [Fusarium tricinctum]           711 [ 455]  54086.82 ( 24.5%)  16    inf  
+hypothetical protein N7516_009850 [Penicillium verrucosum]                                     712 [ 270]  54082.58 ( 24.5%)  17    inf  
+hypothetical protein ACN38_g4043 [Penicillium nordicum]                                        713 [ 275]      "        "     17    inf  
+C6 transcription factor [Aspergillus sclerotiicarbonarius CBS 121057]                          714 [ 326]  54055.01 ( 24.5%)  16    inf  
+putative fungal-specific transcription factor [Chalara longipes BDJ]                           715 [ 466]  54036.33 ( 24.5%)  17    inf  
+hypothetical protein PDE_01826 [Penicillium oxalicum 114-2]                                    716 [ 373]  53968.22 ( 24.5%)  17    inf  
+C6 transcription factor [Aspergillus candidus] & gb|PLB39247.1| C6 transcription factor [A     717 [ 461]  53953.48 ( 24.5%)  17    inf  
+LADA_0F13080g1_1 [Lachancea dasiensis]                                                         718 [ 201]  53894.46 ( 24.5%)  16    inf  
+uncharacterized protein P175DRAFT_0435167 [Aspergillus ochraceoroseus IBT 24754] & gb|KKK1     719 [ 402]  53822.45 ( 24.4%)  17    inf  
+hypothetical protein V501_05342 [Pseudogymnoascus sp. VKM F-4519 (FW-2642)]                    720 [ 438]  53791.20 ( 24.4%)  16    inf  
+hypothetical protein N7469_005728 [Penicillium citrinum]                                       721 [ 447]  53759.71 ( 24.4%)  16    inf  
+C6 transcription factor [Aspergillus campestris IBT 28561] & gb|PKY07824.1| C6 transcripti     722 [ 474]  53660.13 ( 24.3%)  17    inf  
+unnamed protein product [Penicillium olsonii] & emb|CAG7926279.1| unnamed protein product      723 [ 410]  53647.70 ( 24.3%)  18    inf  
+hypothetical protein N7467_006243 [Penicillium canescens]                                      724 [ 406]  53641.10 ( 24.3%)  17    inf  
+hypothetical protein N7522_013532 [Penicillium canescens] & gb|KAJ6034181.1| hypothetical      725 [ 478]  53621.27 ( 24.3%)  17    inf  
+hypothetical protein N7460_007674 [Penicillium canescens] & gb|KAJ6045319.1| hypothetical      726 [ 550]  53620.15 ( 24.3%)  16    inf  
+lactose regulatory protein LAC9 [Thozetella sp. PMI_491]                                       727 [ 494]  53452.76 ( 24.3%)  15    inf  
+lactose regulatory protein lac9 and GAL4-like protein [Aspergillus puulaauensis] & dbj|BCS     728 [ 278]  53445.37 ( 24.2%)  17    inf  
+hypothetical protein H634G_05421 [Metarhizium anisopliae BRIP 53293] & gb|KJK86909.1| hypo     729 [ 566]  53425.91 ( 24.2%)  15    inf  
+hypothetical protein BO86DRAFT_61495 [Aspergillus japonicus CBS 114.51] & gb|PYI17105.1| h     730 [ 372]  53404.26 ( 24.2%)  16    inf  
+lactose regulatory protein lac9 and GAL4-like protein [Aspergillus udagawae] & dbj|GFF2208     731 [ 277]  53402.43 ( 24.2%)  17    inf  
+hypothetical protein V498_05803 [Pseudogymnoascus sp. VKM F-4517 (FW-2822)]                    732 [ 484]  53369.31 ( 24.2%)  16    inf  
+lactose regulatory protein LAC9 [Pochonia chlamydosporia 170] & gb|OAQ62825.1| lactose reg     733 [ 602]  53351.08 ( 24.2%)  15    inf  
+hypothetical protein BO82DRAFT_102522 [Aspergillus uvarum CBS 121591] & gb|PYH80731.1| hyp     734 [ 348]  53319.31 ( 24.2%)  16    inf  
+               hypothetical protein BP00DRAFT_17041 [Aspergil
+putative C6 transcription factor [Aspergillus brunneoviolaceus CBS 621.78] & gb|RAH43427.1     735 [ 366]      "        "     16    inf  
+uncharacterized protein ASPACDRAFT_42227 [Aspergillus aculeatus ATCC 16872] & gb|OJK00737.     736 [ 374]      "        "     16    inf  
+putative C6 transcription factor [Aspergillus aculeatinus CBS 121060] & ref|XP_040800665.1     737 [ 375]      "        "     16    inf  
+C6 transcription factor [Aspergillus saccharolyticus JOP 1030-1] & gb|PYH44915.1| C6 trans     738 [ 350]  53318.50 ( 24.2%)  16    inf  
+hypothetical protein CDV55_103795 [Aspergillus turcosus] & gb|RLL96575.1| hypothetical pro     739 [ 302]  53301.91 ( 24.2%)  17    inf  
+hypothetical protein N7458_001389 [Penicillium daleae]                                         740 [ 458]  53281.56 ( 24.2%)  15    inf  
+lactose regulatory protein lac9 and GAL4-like protein [Aspergillus nanangensis]                741 [ 395]  53258.11 ( 24.2%)  14    inf  
+hypothetical protein KXX42_006273 [Aspergillus fumigatus] & gb|KEY76399.1| transcription f     742 [ 256]  53252.45 ( 24.2%)  17    inf  
+lactose regulatory protein lac9 and GAL4-like protein [Aspergillus viridinutans] & dbj|GIK     743 [ 287]  53251.77 ( 24.2%)  17    inf  
+hypothetical protein VE03_04009 [Pseudogymnoascus sp. 23342-1-I1]                              744 [ 576]  53250.06 ( 24.2%)  18    inf  
+hypothetical protein IFR04_013201 [Cadophora malorum]                                          745 [ 546]  53232.15 ( 24.2%)  16    inf  
+hypothetical protein V490_06240 [Pseudogymnoascus sp. VKM F-3557]                              746 [ 453]  53172.05 ( 24.1%)  16    inf  
+hypothetical protein V495_05890 [Pseudogymnoascus sp. VKM F-4514 (FW-929)] & gb|KFY56080.1     747 [ 454]      "        "     16    inf  
+regulatory protein GAL4 [Aspergillus udagawae]                                                 748 [ 281]  53132.43 ( 24.1%)  16    inf  
+hypothetical protein HFD88_005397 [Aspergillus terreus]                                        749 [ 425]  53085.36 ( 24.1%)  17    inf  
+hypothetical protein ASPCADRAFT_204390 [Aspergillus carbonarius ITEM 5010]                     750 [ 351]  53070.06 ( 24.1%)  16    inf  
+putative C6 transcription factor [Hyaloscypha bicolor E] & gb|PMD49302.1| putative C6 tran     751 [ 532]  53058.18 ( 24.1%)  16    inf  
+lactose regulatory protein LAC9 [Metarhizium robertsii ARSEF 23] & gb|EFY96389.2| lactose      752 [ 570]  52929.41 ( 24.0%)  15    inf  
+C6 transcription factor (Gal4) [Metarhizium anisopliae] & gb|KID70636.1| C6 transcription      753 [ 572]      "        "     15    inf  
+C6 transcription factor [Aspergillus neoniger CBS 115656] & gb|PYH33018.1| C6 transcriptio     754 [ 469]  52909.56 ( 24.0%)  17    inf  
+C6 transcription factor [Aspergillus tubingensis] & gb|OJI83310.1| hypothetical protein AS     755 [ 473]  
