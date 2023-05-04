@@ -389,7 +389,7 @@ void node_HSP(xmlNode *node, char *mode,int query_length, SpeciesInfo *speciesIn
                             }
                         }
                         //display the query cover 
-                         if(strcmp(tabInfo[13][0], "Query_cover")==0 ){
+                         if(strcmp(tabInfo[12][0], "Query_cover")==0 ){
                             int querycover = 100 * (t_to-t_from)/query_length;
                             fprintf(output, "\n\t\t\t\t\"query-cover\" : \"%d\",", querycover);
                         }   
@@ -411,11 +411,10 @@ void node_HSP(xmlNode *node, char *mode,int query_length, SpeciesInfo *speciesIn
                                         t_to=atoi((char *)xmlNodeGetContent(childNode));
                                     }
                                 }
-                                
                             }
                         }   
                         //display the query cover if the user has specified it
-                        if(strcmp(tabInfo[13][0], "Query_cover")==0 && strcmp(tabInfo[14][1], "1")){
+                        if(strcmp(tabInfo[12][0], "Query_cover")==0 && strcmp(tabInfo[12][1], "1")){
                             int querycover = 100 * (t_to-t_from)/query_length;
                             fprintf(output, "\n\t\t\t\t\"query-cover\" : \"%d\",", querycover);
                         }
