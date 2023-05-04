@@ -114,9 +114,11 @@ void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer, char tabIn
     free(buffer);
     int json_len = strlen(json_content);
     json_content[json_len-1]='\0';
-    strcat(json_content, "]}");
+    strcat(json_content, "]}\n");
 
     prettier(json_content);
+
+    free(json_content);
    
 }
 
