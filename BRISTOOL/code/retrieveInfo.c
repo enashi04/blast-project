@@ -300,7 +300,7 @@ void node_HSP(xmlNode *node, char *mode,int query_length, SpeciesInfo *speciesIn
                             strcpy(name_hit, hit_id);
                         }
 
-                       fprintf(output, "\t\t\t{\n\t\t\t\t\"hit_accession\" : \"%s\",\n\t\t\t\t\"fragment\" : \"%s\",\n\t\t\t\t\"species\" : {\n", hit_id, fragment);
+                       fprintf(output, "\t\t\t{\n\t\t\t\t\"hit-accession\" : \"%s\",\n\t\t\t\t\"fragment\" : \"%s\",\n\t\t\t\t\"species\" : {\n", hit_id, fragment);
 
                         //we got the id of the species
                         int taxId = get(hashmap, species);
@@ -376,7 +376,7 @@ void node_HSP(xmlNode *node, char *mode,int query_length, SpeciesInfo *speciesIn
                     if(strcmp(mode, "bronze")==0 || strcmp(mode, "gold")==0){   
                         for (childNode = lastchild; childNode; childNode = childNode->next)
                         {  
-                            for(int i =1; i<14; i++){
+                            for(int i =1; i<13; i++){
                                 getHSP(childNode,tabInfo[i][0]);
                                 //get the value of t_from
                                  if(strcmp("Hsp_hit-from", (char *)childNode->name)==0){
@@ -399,7 +399,7 @@ void node_HSP(xmlNode *node, char *mode,int query_length, SpeciesInfo *speciesIn
                         for (childNode = lastchild; childNode; childNode = childNode->next)
                         {  
                             //we brows the tabInfo to display the informations
-                            for(int i =1; i<14; i++){
+                            for(int i =1; i<13; i++){
                                 if(strcmp(tabInfo[i][0], (char *)childNode->name)==0){
                                     if(strcmp(tabInfo[i][1],"1")==0){
                                         getHSP(childNode,tabInfo[i][0]);

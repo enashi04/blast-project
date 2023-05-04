@@ -35,25 +35,24 @@ int main(int argc, char **argv){
 
     char *buffer = makebuffer(FICHIER);
     //création d'un tableau pour le mode silver
-    char tabInfo[14][2][20];
+    char tabInfo[13][2][20];
     strcpy(tabInfo[0][0], "Lineage");
-    strcpy(tabInfo[1][0], "Hsp_num");
-    strcpy(tabInfo[2][0], "Hsp_identity");
-    strcpy(tabInfo[3][0], "Hsp_align-len");
-    strcpy(tabInfo[4][0], "Hsp_gaps");
-    strcpy(tabInfo[5][0], "Hsp_query-from");
-    strcpy(tabInfo[6][0], "Hsp_query-to");
-    strcpy(tabInfo[7][0], "Hsp_hit-from");
-    strcpy(tabInfo[8][0], "Hsp_hit-to");
-    strcpy(tabInfo[9][0], "Hsp_positive");
-    strcpy(tabInfo[10][0], "Hsp_evalue");
-    strcpy(tabInfo[11][0], "Hsp_score");
-    strcpy(tabInfo[12][0], "Hsp_bit-score");
-    strcpy(tabInfo[13][0], "Query_cover");
+    strcpy(tabInfo[1][0], "Hsp_identity");
+    strcpy(tabInfo[2][0], "Hsp_align-len");
+    strcpy(tabInfo[3][0], "Hsp_gaps");
+    strcpy(tabInfo[4][0], "Hsp_query-from");
+    strcpy(tabInfo[5][0], "Hsp_query-to");
+    strcpy(tabInfo[6][0], "Hsp_hit-from");
+    strcpy(tabInfo[7][0], "Hsp_hit-to");
+    strcpy(tabInfo[8][0], "Hsp_positive");
+    strcpy(tabInfo[9][0], "Hsp_evalue");
+    strcpy(tabInfo[10][0], "Hsp_score");
+    strcpy(tabInfo[11][0], "Hsp_bit-score");
+    strcpy(tabInfo[12][0], "Query_cover");
 
     if(strcmp(mode, "silver")==0){
         printf("Which informations do you want to display?\n");
-        for(int i=0; i<14; i++){
+        for(int i=0; i<13; i++){
             char answer[2];
             printf("%s ? (y or n)", tabInfo[i][0]);
             scanf("%s", answer);
