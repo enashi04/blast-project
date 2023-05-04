@@ -19,13 +19,13 @@ char *getLineage(SpeciesInfo *speciesInfo, char lineage[MAX_SIZE], int id)
     //initialize another string to stock the lineage
     char lignee[MAXI_SIZE];
     //stock the taxid and the name of the species
-    strcpy(lignee, "\t\t\t\t\t {\n\t\t\t\t\t\t\"taxid\":\"");
+    strcpy(lignee, "\t\t\t\t\t {\n\t\t\t\t\t\t\"taxid\":");
     char str_id[MIN_SIZE];
     //convert the string to int
     sprintf(str_id, "%d", id); 
     // concatenate the string
     strcat(lignee, str_id);
-    strcat(lignee, "\",\n\t\t\t\t\t\t\"name\":\"");
+    strcat(lignee, ",\n\t\t\t\t\t\t\"name\":\"");
     strcat(lignee, speciesInfo[id].name);
     strcat(lignee, "\"\n\t\t\t\t\t },\n");
     strcat(lignee, lineage);
@@ -34,7 +34,7 @@ char *getLineage(SpeciesInfo *speciesInfo, char lineage[MAX_SIZE], int id)
     if (speciesInfo[id].parentid == 0)
     {
         // initialize another string to stock the lineage
-        char lignee2[MAXI_SIZE] ="\",\n\t\t\t\t\t\"lineage\":[\n\t\t\t\t\t {\n\t\t\t\t\t\t\"taxid\":\"1\"";
+        char lignee2[MAXI_SIZE] ="\",\n\t\t\t\t\t\"lineage\":[\n\t\t\t\t\t {\n\t\t\t\t\t\t\"taxid\":1";
         strcat(lignee2, ",\n\t\t\t\t\t\t\"name\":\"root\"\n\t\t\t\t\t },\n");
         strcat(lignee2, lineage);
         strcpy(lineage, lignee2);
@@ -61,11 +61,11 @@ char *createLineage(SpeciesInfo *speciesInfo, char *species, Hashmap *hashmap)//
     //get the index of the species in the hashmap
     int index = get(hashmap, species);
     //we add the first information in lineage (taxid and name) of the species
-    strcpy(lineage, "\t\t\t\t\t {\n\t\t\t\t\t\t\"taxid\":\"");
+    strcpy(lineage, "\t\t\t\t\t {\n\t\t\t\t\t\t\"taxid\":");
     char str_i[MIN_SIZE];
     sprintf(str_i, "%d", index);
     strcat(lineage, str_i);
-    strcat(lineage, "\",\n\t\t\t\t\t\t\"name\":\"");
+    strcat(lineage, ",\n\t\t\t\t\t\t\"name\":\"");
     strcat(lineage, species); 
     strcat(lineage, "\"\n\t\t\t\t\t }\n\t\t\t\t\t]");
     //get the taxid of the parent

@@ -110,7 +110,7 @@ void displayQuerySpecies(char *query_species)
     char *id_Species = getQuerySpeciesID(query_species);
     
     fprintf(output, "\t\t\"species\": {\n");
-    fprintf(output, "\t\t\t\"taxid\" : \"%s\",\n\t\t\t\"name\" : \"%s\"\n\t\t},\n", id_Species, querySpeciesName);
+    fprintf(output, "\t\t\t\"taxid\" : %s,\n\t\t\t\"name\" : \"%s\"\n\t\t},\n", id_Species, querySpeciesName);
     free(querySpeciesName);
     
 }
