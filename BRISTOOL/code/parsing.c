@@ -64,13 +64,13 @@ int main(int argc, char **argv){
             }
         }
         INFO("The following elements will be displayed:");
-        for(int i=0; i<14; i++){
+        for(int i=0; i<13; i++){
             if(strcmp(tabInfo[i][1],"1")==0){
                 INFO("%s", tabInfo[i][0]);
             }
         }
     }else{
-        for(int i=0; i<14; i++){
+        for(int i=0; i<13; i++){
             strcpy(tabInfo[i][1],"1");  
         }
     }
