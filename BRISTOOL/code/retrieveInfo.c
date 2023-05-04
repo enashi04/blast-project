@@ -317,7 +317,9 @@ void node_HSP(xmlNode *node, char *mode,int query_length, SpeciesInfo *speciesIn
                             fprintf(output,"\t\t\t\t\t\"rank\":\"%s\"",fillInfo[0].rank);
                             //we add the lineage of the species 
                             if(strcmp(tabInfo[0][1], "1")==0){
+
                                 fillInfo[0].lineage=createLineage(speciesInfo, species, hashmap);
+                                fprintf(output,",\n%s",fillInfo[0].lineage);
                             }
                             size_struct=1;
                         }
@@ -354,6 +356,7 @@ void node_HSP(xmlNode *node, char *mode,int query_length, SpeciesInfo *speciesIn
                                         fprintf(output,"\t\t\t\t\t\"rank\":\"%s\"", fillInfo[size_struct].rank);
                                         if(strcmp(tabInfo[0][1], "1")==0){
                                             fillInfo[size_struct].lineage=createLineage(speciesInfo, species, hashmap); //ici on met la hashmap
+                                            fprintf(output,",\n%s",fillInfo[size_struct].lineage);
                                         }
                                         size_struct++;
                                         break;
@@ -364,7 +367,7 @@ void node_HSP(xmlNode *node, char *mode,int query_length, SpeciesInfo *speciesIn
                                     //we display just the name of the species.
                                     fprintf(output, "\t\t\t\t\t\"name\":\"%s\",\n",species);
                                     //ajouter le null ici
-                                     fprintf(output, "\t\t\t\t\t\"taxid\": null");
+                                     fprintf(output, "\t\t\t\t\t\"taxid\": null,\n\t\t\t\t\t\"rank\": null,\n\t\t\t\t\t\"parent\": null");
                                     WARNING("Species : %s not found in taxonomy.dat", species);
                                 }
                             }
