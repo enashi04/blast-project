@@ -64,9 +64,8 @@ void insert_othername(Hashmap *hashmap, const char *name, const char *value){
                 new_str[k] = name[j];
                 k++;
             }
-
             //verify that the word does not contain parentheses or contains both parentheses
-            if( (strpbrk(new_str, "(")!=NULL && strpbrk(new_str, ")")!=NULL )|| strpbrk(new_str, "(")==NULL){
+            if((strpbrk(new_str, "(")!=NULL && strpbrk(new_str, ")")!=NULL )|| strpbrk(new_str, "(")==NULL){
                 new_str[k] = '\0';
                 //add the key-value pair to the hashmap
                 insert(hashmap, (const char *)new_str, atoi(value));

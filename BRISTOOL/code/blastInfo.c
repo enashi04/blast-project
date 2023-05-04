@@ -9,12 +9,15 @@
 /*                               getBlastVersion: version of blast                                            */
 /** Parameters : node : Node where we are now                                                                 */
 /**************************************************************************************************************/
-void blastVersion(xmlNode *node)
+void blastVersion(xmlNode *node, char *json_content)
 {
     const char *name = "BlastOutput_version";
     if (strcmp(name, (const char *)node->name) == 0)
     {
         fprintf(output, "{\n\t\"blast-version\" : \"%s\",\n", xmlNodeGetContent(node));
+        strcpy(json_content,"{\"blast-version\" : \"");
+        strcat(json_content, (char *)xmlNodeGetContent(node));
+        strcat(json_content, "\",");
     }
 }
 
@@ -22,12 +25,15 @@ void blastVersion(xmlNode *node)
 /*                               getBlastDB: the db of this blast                                             */
 /** Parameters : node : Node where we are now                                                                 */
 /**************************************************************************************************************/
-void blastDB(xmlNode *node)
+void blastDB(xmlNode *node, char *json_content)
 {
     const char *name = "BlastOutput_db";
     if (strcmp(name, (const char *)node->name) == 0)
     {
         fprintf(output, "\t\"db\" : \"%s\",\n", xmlNodeGetContent(node));
+        strcat(json_content,"\"db\" : \"");
+        strcat(json_content, (char *)xmlNodeGetContent(node));
+        strcat(json_content, "\",");
     }
 }
 
@@ -104,13 +110,18 @@ char *getQuerySpeciesID(char *query_Species){
 /** Parameters : species : name of the query's species                                                        */
 /**            : buffer : taxonomy.dat                                                                        */
 /**************************************************************************************************************/
-void displayQuerySpecies(char *query_species)
+void displayQuerySpecies(char *query_species, char *json_content)
 {
     char *querySpeciesName = getQuerySpeciesName(query_species);
     char *id_Species = getQuerySpeciesID(query_species);
     
     fprintf(output, "\t\t\"species\": {\n");
     fprintf(output, "\t\t\t\"taxid\" : %s,\n\t\t\t\"name\" : \"%s\"\n\t\t},\n", id_Species, querySpeciesName);
+    strcat(json_content, "\"species\": {\"taxid\" : ");
+    strcat(json_content, id_Species);
+    strcat(json_content, ",\"name\" : \"");
+    strcat(json_content, querySpeciesName);
+    strcat(json_content, "\"},");
     free(querySpeciesName);
     
 }

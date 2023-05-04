@@ -7,6 +7,7 @@
 #define FILE_SIZE 2429416 //taille du fichier taxonomy.dat
 #define SPECIES_SIZE 2996753 //le taxid maximal
 #define EXTRA_SIZE 16777216 //nombre maximal de caractère dans le fichier de sortie 2^24
+#define SIZE_PLUS 16384
 
 #define FICHIER "taxonomy.dat" //fichier taxonomy
 #define BLAST_FILE "outblast"

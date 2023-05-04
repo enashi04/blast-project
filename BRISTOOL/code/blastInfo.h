@@ -9,12 +9,12 @@
 #include <stdio.h>
 #include "parameters.h"
 
-void blastVersion(xmlNode *node);
-void blastDB(xmlNode *node);
+void blastVersion(xmlNode *node, char *json_content);
+void blastDB(xmlNode *node, char *json_content);
 // void getQueryInfo(xmlNode *child, char species[MIN_SIZE], int query_length, char* iteration_num);
 char *getQuerySpeciesName(char *species);
 char *getQuerySpeciesID(char *species);
 char *getRank(char *line);
-void displayQuerySpecies(char *species);
+void displayQuerySpecies(char *species, char *json_content);
 
 #endif
