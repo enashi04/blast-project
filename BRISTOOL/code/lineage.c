@@ -34,7 +34,7 @@ char *getLineage(SpeciesInfo *speciesInfo, char lineage[MAX_SIZE], int id)
     if (speciesInfo[id].parentid == 0)
     {
         // initialize another string to stock the lineage
-        char lignee2[MAXI_SIZE] ="\",\"lineage\":[{\"taxid\":1";
+        char lignee2[MAXI_SIZE] ="\"lineage\":[{\"taxid\":1";
         strcat(lignee2, ",\"name\":\"root\"},");
         strcat(lignee2, lineage);
         strcpy(lineage, lignee2);
@@ -68,18 +68,25 @@ char *createLineage(SpeciesInfo *speciesInfo, char *species, Hashmap *hashmap)//
     strcat(lineage, ",\"name\":\"");
     strcat(lineage, species); 
     strcat(lineage, "\"}]");
+
     //get the taxid of the parent
     int parentTaxId = speciesInfo[index].parentid;
     // add the information of the parent in lineage by calling a recursive function
     char *returnLineage = getLineage(speciesInfo, lineage, parentTaxId);
-    // add the information of the parent before the lineage
-    strcpy(lineage, "\"parent\":\"");
-    strcat(lineage, speciesInfo[parentTaxId].name);
-    strcat(lineage, returnLineage);
-    // int len = strlen(lineage);
-    // lineage[len-1] = '\0';
-    // return the lineage and the parent.
-    return strdup(lineage);
+    // return the lineage.
+    return strdup(returnLineage);
+}
+
+char *getParent(SpeciesInfo *speciesInfo, int species_id){
+    //get the taxid of the parent
+    int parentTaxId = speciesInfo[species_id].parentid;
+    //initialize the parent
+    char parent[MIN_SIZE] = "\"";
+    //add the name of the parent
+    strcat(parent, speciesInfo[parentTaxId].name);
+    strcat(parent, "\"");
+    //return the parent
+    return strdup(parent);
 }
 
 /*
