@@ -1,5 +1,6 @@
 #include "options.h"
 #include "log.h"
+#include "parameters.h"
 
 
 /// @brief Display help 
@@ -56,50 +57,61 @@ char *modeChoice(int argc, char **argv, char tabInfo[13][2][20] ) //rajouter le 
                 else if (strcmp("silver", argv[i + 1]) == 0)
                 {
                     INFO("Mode silver choosen");
-                    //voir les arguments choisies après le silver
                     if(strcmp(argv[i +2],"-f")==0 && strchr(argv[i + 3], '.') == NULL){
-                        //lire chaque caractère de argv[i-3]
                         int len = strlen(argv[i + 3]);
-
+                        char argument[MAX_SIZE];
                         for(int j=0; j<len ; ++j){
                             if(argv[i + 3][j] == 'l'){ //lineage
-                                INFO("lineage");
                                 strcpy(tabInfo[0][1],"1");
+                                strcat(argument,"\n- Lineage");
                             }
                             if(argv[i + 3][j] == 'i'){ //identity
                                 strcpy(tabInfo[1][1],"1");
+                                strcat(argument,"\n- Identity");
                             }
                             if(argv[i + 3][j] == 'a'){ //align-len
                                 strcpy(tabInfo[2][1],"1");
+                                strcat(argument,"\n- Align-Length");
                             }
                             if(argv[i + 3][j] == 'g'){ //gaps
                                 strcpy(tabInfo[3][1],"1");
+                                strcat(argument,"\n- Gaps");
                             }
                             if(argv[i + 3][j] == 'q'){ //query-from/to
                                 strcpy(tabInfo[4][1],"1");
                                 strcpy(tabInfo[5][1],"1");
+                                strcat(argument,"\n- Query-from\n- Query-to");
                             }
                             if(argv[i + 3][j] == 'h'){ //hit-from/to
                                 strcpy(tabInfo[6][1],"1");
                                 strcpy(tabInfo[7][1],"1");
+                                strcat(argument,"\n- Hit-from\n- Hit-to");
                             }
                             if(argv[i + 3][j] == 'p'){ //positive
                                 strcpy(tabInfo[8][1],"1");
+                                strcat(argument,"\n- Positive");
                             }
                             if(argv[i + 3][j] == 'e'){ //evalue
                                 strcpy(tabInfo[9][1],"1");
+                                strcat(argument,"\n- E-value");
                             }
                             if(argv[i + 3][j] == 's'){ //score
                                 strcpy(tabInfo[10][1],"1");
+                                strcat(argument,"\n- Score");
                             }
                             if(argv[i + 3][j] == 'b'){//bitscore
                                 strcpy(tabInfo[11][1],"1");
+                                strcat(argument,"\n- Bit-score");
                             }
                             if(argv[i + 3][j] == 'c'){ //query-cover
-                                INFO("query-cover");
                                 strcpy(tabInfo[12][1],"1");
+                                strcat(argument,"\n- Query-cover");
                             }
                         }
+                        INFO("The following arguments were passed to the script: %s", argument);
+                    }
+                    else{
+                        WARNING("You didn't specify any parameters for the silver mode. The default parameters will be used");
                     }
                     return mode = argv[i + 1];
                 }
