@@ -29,7 +29,7 @@
 #define D2MAX -0.1
 #define DEFSEUIL 0.3//0.3
 #define SEUIL seuil
-#define DEMIFEN 6
+#define DEMIFEN 4
 
 double *trimprofilext(double *profiltotal, double *profil, int length, char *cons)
 {

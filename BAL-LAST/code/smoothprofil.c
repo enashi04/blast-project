@@ -19,7 +19,7 @@ double *smoothprofil(double *profil, int length, char *cons)
 
 	//printf("le profil est %lf \n", *profil);
 	if (getargint("-smooth", &demifen) == NULL)
-		demifen = 6;
+		demifen = 4;
 
 	/*****************************************************************/
 	/*** Smooth 'profile'                                         ****/
