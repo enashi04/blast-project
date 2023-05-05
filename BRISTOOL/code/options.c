@@ -49,7 +49,7 @@ char *modeChoice(int argc, char **argv, char tabInfo[13][2][20] ) //rajouter le 
                 if (strcmp("bronze", argv[i + 1]) == 0)
                 {
                     INFO("Mode bronze choosen");
-                    for(int i=0; i<13; i++){
+                    for(int i=0; i<14; i++){
                         strcpy(tabInfo[i][1],"1"); 
                     }
                     return mode = argv[i + 1];

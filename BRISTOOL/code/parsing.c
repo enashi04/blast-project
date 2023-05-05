@@ -12,7 +12,7 @@
 int main(int argc, char **argv){
 
     //create a table
-    char tabInfo[13][2][20];
+    char tabInfo[14][2][20];
     strcpy(tabInfo[0][0], "Lineage"); // L
     strcpy(tabInfo[1][0], "Hsp_identity"); //I
     strcpy(tabInfo[2][0], "Hsp_align-len"); //A
@@ -26,6 +26,7 @@ int main(int argc, char **argv){
     strcpy(tabInfo[10][0], "Hsp_score"); //S
     strcpy(tabInfo[11][0], "Hsp_bit-score"); //B
     strcpy(tabInfo[12][0], "Query_cover"); //C
+    strcpy(tabInfo[13][0], "Hsp_num"); //N
 
     noArgument(argc);
     help(argv);

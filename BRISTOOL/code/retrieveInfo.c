@@ -99,7 +99,7 @@ void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer, char tabIn
                     displayQuerySpecies(speciesName, json_content);
                     char *content = node_Iteration(child, mode, speciesInfo, query_length, fillInfo, hashmap,tabInfo, iteration_num); //ajout de la table d'information
                     int len = strlen(content);
-                    //printf("la longeuur de node iteration est %u\n",len);
+
                     json_content = (char *)realloc(json_content, sizeof(char) * (len + strlen(json_content) + 2));
                     strcat(json_content, content);
                 }
@@ -107,7 +107,6 @@ void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer, char tabIn
         }
     }
     //free the memory
-    //free(json_content);
     free(hashmap);
     free(fillInfo);
     free(speciesInfo);
@@ -147,7 +146,7 @@ char *node_Iteration(xmlNode *node, char *mode, SpeciesInfo *speciesInfo, int qu
             xmlNode *childNode = node->children;
             for (child = childNode; child; child = child->next)
             {
-                // check if we're on the node "iteration_hits"
+                // check if we're on the node "Hit"
                 if (strcmp(hit, (const char *)child->name) == 0)
                 {
                     //HSP NODE
@@ -325,10 +324,11 @@ char *node_HSP(xmlNode *node, char *mode,int query_length, SpeciesInfo *speciesI
     char contentHSP[SIZE_PLUS];
     for (node = child; node; node = node->next)
     {
+        //NODE HIT HSP
         if (strcmp(nameHitHspNode, (const char *)node->name) == 0)
         {
             xmlNode *childNode = node->children;
-
+            //NODE HSP
             for (child = childNode; child; child = child->next)
             {
                 if(strcmp((char *)child->name, "text")!=0){
@@ -342,7 +342,7 @@ char *node_HSP(xmlNode *node, char *mode,int query_length, SpeciesInfo *speciesI
                         }
 
                         strcpy(contentHSP,"{\"hit-accession\" : \"");
-                        strcat(contentHSP, hit_id);
+                        strcat(contentHSP, name_hit);
                         strcat(contentHSP, "\",\"fragment\" : ");
                         strcat(contentHSP, fragment);
                         strcat(contentHSP, ",\"species\" : {");
@@ -403,8 +403,8 @@ char *node_HSP(xmlNode *node, char *mode,int query_length, SpeciesInfo *speciesI
                                         strcat(contentHSP, ",");
                                         strcat(contentHSP, fillInfo[i].lineage);
                                     }
-                                check=1;
-                                break;
+                                    check=1;
+                                    break;
                                 }
                             }
                             if(check == 0){
@@ -446,11 +446,14 @@ char *node_HSP(xmlNode *node, char *mode,int query_length, SpeciesInfo *speciesI
                                     strcat(contentHSP, "\",\"taxid\": null,\"rank\": null,\"parent\": null");
                                     WARNING("Species : %s not found in taxonomy.dat", species);
                                 }
+                                
+
                             }
                         }
                         strcat(contentHSP, "},");
+                        //ajouter aussi la longueur de la séquence
                     }
-                    /*****************************LASTCHILD = SOUS-NOEUD DE CHILD***************************************/
+                    /*****************************HSP***************************************/
                     xmlNode *lastchild = child->children;
                     int t_from=0, t_to=0;
                     //verify the mode we choose to display informations
@@ -458,7 +461,7 @@ char *node_HSP(xmlNode *node, char *mode,int query_length, SpeciesInfo *speciesI
                     if(strcmp(mode, "bronze")==0 || strcmp(mode, "gold")==0){   
                         for (childNode = lastchild; childNode; childNode = childNode->next)
                         {  
-                            for(int i =1; i<13; i++){
+                            for(int i =1; i<14; i++){
                                 strcat(contentHSP,getHSP(childNode,tabInfo[i][0]));
                                 //get the value of t_from
                                 if(strcmp("Hsp_hit-from", (char *)childNode->name)==0){
