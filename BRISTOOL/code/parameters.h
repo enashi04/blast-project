@@ -25,6 +25,7 @@ typedef struct FillSpeciesInfo{
     char *rank; //rang de l'espèce
     char *lineage; //lignée de l'espèce
     int id; //taxid de l'espèce
+    char *parent; //nom du parent de l'espèce
 } FillSpeciesInfo;
 
 #endif
