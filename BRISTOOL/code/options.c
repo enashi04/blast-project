@@ -25,12 +25,16 @@ void help(char **argv)
 /// @param argv 
 /// @param name 
 /// @return mode name
-char *modeChoice(int argc, char **argv)
+char *modeChoice(int argc, char **argv, char tabInfo[13][2][20] ) //rajouter le tableau en argument
 {
-    char *mode;
+    char *mode= "bronze";
+    for(int i=0; i<13; i++){
+        strcpy(tabInfo[i][1],"0"); 
+    }
+    
     for (int i = 0; i < argc; i++)
     {
-        if (strncmp(argv[i], "-m", 2) == 0)
+        if (strcmp(argv[i], "-m") == 0)
         {
             // faut que ca retourne un char ici pour que le mode soit choisi;
             if (argv[i + 1] == NULL)
@@ -44,16 +48,67 @@ char *modeChoice(int argc, char **argv)
                 if (strcmp("bronze", argv[i + 1]) == 0)
                 {
                     INFO("Mode bronze choosen");
-                    mode = argv[i + 1];
+                    for(int i=0; i<13; i++){
+                        strcpy(tabInfo[i][1],"1"); 
+                    }
+                    return mode = argv[i + 1];
                 }
                 else if (strcmp("silver", argv[i + 1]) == 0)
                 {
                     INFO("Mode silver choosen");
+                    //voir les arguments choisies après le silver
+                    if(strcmp(argv[i +2],"-f")==0 && strchr(argv[i + 3], '.') == NULL){
+                        //lire chaque caractère de argv[i-3]
+                        int len = strlen(argv[i + 3]);
+
+                        for(int j=0; j<len ; ++j){
+                            if(argv[i + 3][j] == 'l'){ //lineage
+                                INFO("lineage");
+                                strcpy(tabInfo[0][1],"1");
+                            }
+                            if(argv[i + 3][j] == 'i'){ //identity
+                                strcpy(tabInfo[1][1],"1");
+                            }
+                            if(argv[i + 3][j] == 'a'){ //align-len
+                                strcpy(tabInfo[2][1],"1");
+                            }
+                            if(argv[i + 3][j] == 'g'){ //gaps
+                                strcpy(tabInfo[3][1],"1");
+                            }
+                            if(argv[i + 3][j] == 'q'){ //query-from/to
+                                strcpy(tabInfo[4][1],"1");
+                                strcpy(tabInfo[5][1],"1");
+                            }
+                            if(argv[i + 3][j] == 'h'){ //hit-from/to
+                                strcpy(tabInfo[6][1],"1");
+                                strcpy(tabInfo[7][1],"1");
+                            }
+                            if(argv[i + 3][j] == 'p'){ //positive
+                                strcpy(tabInfo[8][1],"1");
+                            }
+                            if(argv[i + 3][j] == 'e'){ //evalue
+                                strcpy(tabInfo[9][1],"1");
+                            }
+                            if(argv[i + 3][j] == 's'){ //score
+                                strcpy(tabInfo[10][1],"1");
+                            }
+                            if(argv[i + 3][j] == 'b'){//bitscore
+                                strcpy(tabInfo[11][1],"1");
+                            }
+                            if(argv[i + 3][j] == 'c'){ //query-cover
+                                INFO("query-cover");
+                                strcpy(tabInfo[12][1],"1");
+                            }
+                        }
+                    }
                     return mode = argv[i + 1];
                 }
                 else if (strcmp("gold", argv[i + 1]) == 0)
                 {
                     INFO("Mode gold choosen");
+                    for(int i=0; i<13; i++){
+                        strcpy(tabInfo[i][1],"1");  
+                    }
                     return mode = argv[i + 1];
                 }
                 else
@@ -64,12 +119,12 @@ char *modeChoice(int argc, char **argv)
                 }
             }
         }
-        else{
-            mode = "bronze";
-            INFO("The mode will be : Bronze");
-            return mode;
+        // else{
+        //     mode = "bronze";
+        //     INFO("The mode will be : Bronze");
+        //     return mode;
 
-        }
+        // }
     }
     return mode;
 }
@@ -128,7 +183,7 @@ void invalidOptions(int argc, char **argv)
         if (strncmp(argv[i], "-", 1) == 0)
         {
             // fprintf(stdout, "%s %u\n", argv[i], i);
-            if (strncmp(argv[i], "-a", 2) != 0 && strncmp(argv[i], "-m", 2) != 0 && strncmp(argv[i], "-h", 2) != 0 && strncmp(argv[i], "-o", 2) != 0)
+            if (strncmp(argv[i], "-a", 2) != 0 && strncmp(argv[i], "-m", 2) != 0 && strncmp(argv[i], "-h", 2) != 0 && strncmp(argv[i], "-o", 2) != 0 && strncmp(argv[i], "-f", 2) != 0)
             {
                 ERROR("The option %s is invalid.\n", argv[i]);
                 ERROR("See ./parsing -h for more help.\n");

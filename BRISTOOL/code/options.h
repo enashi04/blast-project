@@ -6,7 +6,7 @@
 #include <stdlib.h>
 
 void help(char **argv);
-char *modeChoice(int argc, char **argv);
+char *modeChoice(int argc, char **argv, char tabInfo[13][2][20]);
 char *outputName(int argc, char **argv);
  
 int displayResults(int argc, char **argv);

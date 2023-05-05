@@ -81,12 +81,9 @@ char *getParent(SpeciesInfo *speciesInfo, int species_id){
     //get the taxid of the parent
     int parentTaxId = speciesInfo[species_id].parentid;
     //initialize the parent
-    char parent[MIN_SIZE] = "\"";
-    //add the name of the parent
-    strcat(parent, speciesInfo[parentTaxId].name);
-    strcat(parent, "\"");
+    char *parent = speciesInfo[parentTaxId].name;
     //return the parent
-    return strdup(parent);
+    return parent;
 }
 
 /*

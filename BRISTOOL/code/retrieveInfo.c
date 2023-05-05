@@ -328,6 +328,7 @@ char *node_HSP(xmlNode *node, char *mode,int query_length, SpeciesInfo *speciesI
         if (strcmp(nameHitHspNode, (const char *)node->name) == 0)
         {
             xmlNode *childNode = node->children;
+
             for (child = childNode; child; child = child->next)
             {
                 if(strcmp((char *)child->name, "text")!=0){
@@ -339,11 +340,13 @@ char *node_HSP(xmlNode *node, char *mode,int query_length, SpeciesInfo *speciesI
                         {
                             strcpy(name_hit, hit_id);
                         }
+
                         strcpy(contentHSP,"{\"hit-accession\" : \"");
                         strcat(contentHSP, hit_id);
                         strcat(contentHSP, "\",\"fragment\" : ");
                         strcat(contentHSP, fragment);
                         strcat(contentHSP, ",\"species\" : {");
+
                         //we got the id of the species
                         int taxId = get(hashmap, species);
 
@@ -353,7 +356,9 @@ char *node_HSP(xmlNode *node, char *mode,int query_length, SpeciesInfo *speciesI
                             fillInfo[0].name=speciesInfo[taxId].name;
                             fillInfo[0].id=taxId;
                             fillInfo[0].rank=speciesInfo[taxId].rank;
-                             char string_id[MIN_SIZE];
+                            fillInfo[0].parent=getParent(speciesInfo, fillInfo[0].id);
+                            
+                            char string_id[MIN_SIZE];
                             sprintf(string_id, "%d", taxId);
 
                             strcat(contentHSP, "\"name\": \"");
@@ -362,23 +367,26 @@ char *node_HSP(xmlNode *node, char *mode,int query_length, SpeciesInfo *speciesI
                             strcat(contentHSP, string_id);
                             strcat(contentHSP, ",\"rank\":\"");
                             strcat(contentHSP, fillInfo[0].rank);
-                            strcat(contentHSP, "\",");
+                            strcat(contentHSP, "\",\"parent\":\"");
+                            strcat(contentHSP,fillInfo[0].parent);
+                            strcat(contentHSP, "\"");
 
                             //we add the lineage of the species 
-                            if(strcmp(tabInfo[0][1], "1")==0){
-                                
+                            if(strcmp(tabInfo[0][1], "1")==0){    
                                 fillInfo[0].lineage=createLineage(speciesInfo, species, hashmap);
+                                strcat(contentHSP, ",");
                                 strcat(contentHSP, fillInfo[0].lineage);
                             }
                             size_struct=1;
                         }
+
                         //if the structure is not empty
                         else if(size_struct>0){
                             //first we check if we already have the species and its informations
                             int check=0;
                             for(int i=0; i<size_struct; i++){
                                 if(fillInfo[i].id==taxId){
-                                     char string_id[MIN_SIZE];
+                                    char string_id[MIN_SIZE];
                                     sprintf(string_id, "%d", fillInfo[i].id);
 
                                     strcat(contentHSP, "\"name\": \"");
@@ -387,8 +395,12 @@ char *node_HSP(xmlNode *node, char *mode,int query_length, SpeciesInfo *speciesI
                                     strcat(contentHSP, string_id);
                                     strcat(contentHSP, ",\"rank\":\"");
                                     strcat(contentHSP, fillInfo[i].rank);
-                                    strcat(contentHSP, "\",");
+                                    strcat(contentHSP, "\",\"parent\":\"");
+                                    strcat(contentHSP,fillInfo[i].parent);
+                                    strcat(contentHSP, "\"");
+
                                     if(strcmp(tabInfo[0][1], "1")==0){
+                                        strcat(contentHSP, ",");
                                         strcat(contentHSP, fillInfo[i].lineage);
                                     }
                                 check=1;
@@ -403,6 +415,7 @@ char *node_HSP(xmlNode *node, char *mode,int query_length, SpeciesInfo *speciesI
                                         fillInfo[size_struct].name=speciesInfo[taxId].name;
                                         fillInfo[size_struct].id=taxId;
                                         fillInfo[size_struct].rank=speciesInfo[taxId].rank;
+                                        fillInfo[size_struct].parent=getParent(speciesInfo, fillInfo[size_struct].id);
                                         char string_id[MIN_SIZE];
                                         sprintf(string_id, "%d", taxId);
 
@@ -412,9 +425,13 @@ char *node_HSP(xmlNode *node, char *mode,int query_length, SpeciesInfo *speciesI
                                         strcat(contentHSP, string_id);
                                         strcat(contentHSP, ",\"rank\":\"");
                                         strcat(contentHSP, fillInfo[size_struct].rank);
-                                        strcat(contentHSP, "\",");
+                                        strcat(contentHSP, "\",\"parent\":\"");
+                                        strcat(contentHSP, fillInfo[size_struct].parent);
+                                        strcat(contentHSP, "\"");
+
                                         if(strcmp(tabInfo[0][1], "1")==0){
                                             fillInfo[size_struct].lineage=createLineage(speciesInfo, species, hashmap); //ici on met la hashmap
+                                            strcat(contentHSP, ",");
                                             strcat(contentHSP, fillInfo[size_struct].lineage);
                                         }
                                         size_struct++;
@@ -444,7 +461,7 @@ char *node_HSP(xmlNode *node, char *mode,int query_length, SpeciesInfo *speciesI
                             for(int i =1; i<13; i++){
                                 strcat(contentHSP,getHSP(childNode,tabInfo[i][0]));
                                 //get the value of t_from
-                                 if(strcmp("Hsp_hit-from", (char *)childNode->name)==0){
+                                if(strcmp("Hsp_hit-from", (char *)childNode->name)==0){
                                     t_from=atoi((char *)xmlNodeGetContent(childNode));
                                 }
                                 //get the value of t_to
@@ -482,19 +499,20 @@ char *node_HSP(xmlNode *node, char *mode,int query_length, SpeciesInfo *speciesI
                                 }
                             }
                         }   
+                        //INFO("query cover : %s", tabInfo[12][1]);
                         //display the query cover if the user has specified it
-                        if(strcmp(tabInfo[12][0], "Query_cover")==0 && strcmp(tabInfo[12][1], "1")){
+                        if(strcmp(tabInfo[12][1], "1")==0){
                             int querycover = 100 * (t_to-t_from)/query_length;
                             char string_query_cover[MIN_SIZE];
                             sprintf(string_query_cover, "%d", querycover);
+                            strcat(contentHSP, "\"query-cover\" : ");
                             strcat(contentHSP, string_query_cover);
                             strcat(contentHSP, ",");
                         }
-                        
                     }
                     //we delete the last comma
                     int len_content = strlen(contentHSP);
-                    contentHSP[len_content - 2] = '\0';
+                    contentHSP[len_content-1] = '\0';
                     strcat(contentHSP,"},");
                 }
             }   
