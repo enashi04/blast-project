@@ -41,10 +41,10 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
     /*************************************************************************************************************************************************/
     /************************************************************Déclaration des variables************************************************************/
     /************************************************************************************************************************************************/
-    double maxp = 0, p, facteur, fctr;
+    double maxp = 0, p=0, facteur, fctr;
     double *profil, *ptr, *simptr;
     SimPrf *simprf;
-    char *outtext = NULL, *ptrstr, *begline, *queryseq, *seq, *seqhsp, *startline;
+    char *outtext = NULL, *ptrstr=NULL, *begline, *queryseq, *seq, *seqhsp, *startline;
     int endofdbseq = 0, ok = 0, okhsp = 0, gapped, taux, naas, begin, end, debut, dline, n;
     int debdb, enddb, begdb, dline2, dline1;
     int identique=1;

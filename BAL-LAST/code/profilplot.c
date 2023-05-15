@@ -47,7 +47,7 @@ double profilplot(double *profil, double *profil2, int length, char *filename, c
     int both;
     int at_least_one = 0;
 
-    double delta, ddelta;
+    //double delta, ddelta;
 
     both = getargbool("-both");
 
@@ -181,8 +181,8 @@ double profilplot(double *profil, double *profil2, int length, char *filename, c
     /*** Do an ASCII plot in plotfile                             ****/
     /*****************************************************************/
 
-    delta = *profil;
-    ddelta = 0;
+    // delta = *profil;
+    // ddelta = 0;
 
     for (i = 0; i < length; i++)
     {
