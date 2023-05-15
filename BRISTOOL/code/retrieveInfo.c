@@ -321,7 +321,8 @@ char *node_HSP(xmlNode *node, char *mode,int query_length, SpeciesInfo *speciesI
     char *hit_id = getHitAccession(node),*species = getSpecies(node, fragment);
     xmlNode *child = node->children;
     const char *nameHitHspNode = "Hit_hsps", *nameHspNode = "Hsp";
-    char contentHSP[SIZE_PLUS];
+    char contentHSP[SIZE_PLUS*5]="";
+    strcpy(contentHSP," ");
     for (node = child; node; node = node->next)
     {
         //NODE HIT HSP
@@ -341,7 +342,7 @@ char *node_HSP(xmlNode *node, char *mode,int query_length, SpeciesInfo *speciesI
                             strcpy(name_hit, hit_id);
                         }
 
-                        strcpy(contentHSP,"{\"hit-accession\" : \"");
+                        strcat(contentHSP,"{\"hit-accession\" : \"");
                         strcat(contentHSP, name_hit);
                         strcat(contentHSP, "\",\"fragment\" : ");
                         strcat(contentHSP, fragment);
