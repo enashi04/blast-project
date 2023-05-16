@@ -17,24 +17,8 @@
 #include "readargs.h"
 #include "types.h"
 #include <ctype.h>
+#include "prototypes.h"
 #define NETRA 0
-
-extern int filter(char *seqhsp, char *seq);
-extern SimPrf *handlegaps(SimPrf *simprf);
-
-/*****************************************************************************/
-/**************************Méthodes dont j'ai besoin**************************/
-/*****************************************************************************/
-void verifLine(char *line);
-double getMaxP(double maxp, char type);
-char *getOuttext(char *line, char *outtext);
-char *getDesc(char *line, SeqHSP *seqres);
-char *getName(char *line, char *ptrstr, SeqHSP *seqres);
-char *getAccess(char *line, char *ptrstr, SeqHSP *seqres);
-char *firstScoreRecovery(char *line, char *outtext, char *begline, FILE *file);
-double eValueRecovery(char *line, char *ptrstr, double p);
-void fixeValue(double p, double maxp);
-char *getText(char *line, SimPrf *simprf);
 
 double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char *conserved, double *maxprofile, char type)
 {
@@ -199,7 +183,6 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
         /************************************************************************************************************************************************/
         if (strncmp(line, "Query", 5) == 0)
         {
-            //printf("nous allons dans la query\n");
             /****************************************************************************************************************/
             /*****************************************Recherche du numéro****************************************************/
             /*****************************************du début et fin de la**************************************************/
@@ -341,13 +324,11 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
                 }
                 okhsp = 1;
             }
-            //printf("fin de la target\n");
         }
         // go à la partie qui ne marchait pas de base !
 
         if (*line=='>' || (strncmp(line, "WARNING:", 8) == 0) || (strncmp(line, "  Database:", 11) == 0) || (strncmp(line, "Score", 5) == 0) || (strncmp(line, " Score", 6) == 0) || (strncmp(line, "Parameters:", 11) == 0))
         {
-            //printf("On va là\n");
             /**************************************************************************/
             /**** Let's check that the current database sequence doesn't contain   ****/
             /**** too many low complexity subsequences in the region where the HSP ****/

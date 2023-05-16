@@ -9,7 +9,6 @@
 #define HELPDIR "/ballast/Help"
 #define MSFSEUIL 0.001
 #define DEFANCHORSEUIL 0.20
-extern double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char *conserved, double *maxprofile, char type);
 
 int main(int argc, char *argv[])
 {
@@ -231,9 +230,10 @@ int main(int argc, char *argv[])
         }
     }
 
+	printf("Affichage motifs?\n");
     // on passe à l'extraction du motif
     motif = extractmotifs(trimmed, length, conserved);
-
+	printf("Fin de l'affichage motifs\n");
     if (motif == NULL)
     {
         outfile = stdout;
@@ -275,7 +275,6 @@ int main(int argc, char *argv[])
         printf("Cannot write %s file, printing suggested words to Standard Output\n\n", motifsfilename);
         printf("*******************************************************\n");
     }
-
     fprintf(motifsfile, "\nSuggested Words : \n\n");
 
     motifptr = motif;
@@ -305,7 +304,6 @@ int main(int argc, char *argv[])
 
     maxvalue = profilplot(profiltotal, trimmed, length, outfilename, conserved, first, maxprofile);
 
-  /*****************************************************************/
 
 	/*****************************************************************/
 	/*** Plots 'profile' from TBlastN if required                 ****/
@@ -319,7 +317,6 @@ int main(int argc, char *argv[])
 		profilplot(profiltotal2, trimmed2, length2, outfilename2, conserved2, first, maxprofile2);
 	}
 
-	/*****************************************************************/
 
 	/*****************************************************************/
 	/*** Writes consensus sequence in FastA format                ****/
@@ -328,7 +325,6 @@ int main(int argc, char *argv[])
 	if (getargbool("-s") == 1)
 		consseq(profiltotal, length, outfilename, conserved);
 
-	/*****************************************************************/
 
 	/*****************************************************************/
 	/*** Rescores each of the sequences producing HSPs            ****/
@@ -577,8 +573,6 @@ int main(int argc, char *argv[])
 	printf("Done...\n");
 
 	/*****************************************************************/
-
-
 
     return 0;
 }

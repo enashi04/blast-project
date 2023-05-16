@@ -34,5 +34,15 @@ Sbjmot *getsbjmotifs(Motif *motif, SimPrf *sim, double *trimmed, char type);
 void riseup(SeqHSP **first);
 void consmotif(Motif *motif, char *ptrstr, int begin, float weight, float maxweight);
 void showmotifs(Motif *motif, char type, float thr1, float thr2);
-
 void printusage(char *program, char *path);
+void verifLine(char *line);
+double getMaxP(double maxp, char type);
+char *getOuttext(char *line, char *outtext);
+char *getDesc(char *line, SeqHSP *seqres);
+char *getName(char *line, char *ptrstr, SeqHSP *seqres);
+char *getAccess(char *line, char *ptrstr, SeqHSP *seqres);
+char *firstScoreRecovery(char *line, char *outtext, char *begline, FILE *file);
+double eValueRecovery(char *line, char *ptrstr, double p);
+void fixeValue(double p, double maxp);
+char *getText(char *line, SimPrf *simprf);
+double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char *conserved, double *maxprofile, char type);
