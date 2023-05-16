@@ -96,6 +96,8 @@ Hashmap *createHashMap(char *buffer)
 {
     //initialize the hashmap
     Hashmap *hashmap = (Hashmap *)malloc(sizeof(Hashmap));
+    const int HASH_SIZE = SPECIES_SIZE;
+    hashmap->entries=(Entry **)malloc(sizeof(Entry*)*HASH_SIZE);
     //initialize the entries
     char id_species[MIN_SIZE], name_species[MAX_SIZE], othername_species[MAXI_SIZE];
     //get the first line of the file 

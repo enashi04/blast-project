@@ -2,7 +2,6 @@
 #define HASHMAP_H
 #include "parameters.h"
 
-
 // la structure pour chaque élément de la hashmap
 typedef struct Entry
 {
@@ -15,7 +14,8 @@ typedef struct Entry
 // la structure de la hashmap
 typedef struct Hashmap
 {
-    Entry *entries[SPECIES_SIZE];
+    //Entry *entries[SPECIES_SIZE];
+    Entry **entries;
 } Hashmap;
 
 unsigned int hash(const char *key);

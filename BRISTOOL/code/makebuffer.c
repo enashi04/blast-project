@@ -4,6 +4,7 @@
 #include "log.h"
 #include "parameters.h"
 
+// int SPECIES_SIZE; //taille du tableau d'espèce
 char *makebuffer(char *filename){
     
     char *buffer=NULL;
@@ -33,8 +34,8 @@ char *makebuffer(char *filename){
     if(last_line != NULL){
         char id_species[MIN_SIZE];
         sscanf(last_line, "%[^	] %*[^	]", id_species);
- 
-        INFO("SPECIES_SIZE %d", atoi(id_species));
+        SPECIES_SIZE = atoi(id_species);
+        INFO("SPECIES_SIZE %d", SPECIES_SIZE);
     }
     // close the file
     fclose(file);
