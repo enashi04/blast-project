@@ -1,11 +1,11 @@
 #include "pretty.h"
 
 //ajout d'un argument ici (le i à incrémenter)
-void prettier(char *json) {
-    int i, level = 0;
+void prettier(char *json, int iteration) {
+    int level = iteration;
     int len = strlen(json);
 
-    for (i = 0; i < len; i++) {
+    for (int i = 0; i < len; i++) {
         char c = json[i];
 
         switch (c) {

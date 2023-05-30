@@ -8,5 +8,5 @@
 
 
 //fonction prettier pour mettre en forme le fichier JSON
-void prettier(char *json);
+void prettier(char *json, int iteration);
 #endif
