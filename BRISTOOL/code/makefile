@@ -1,6 +1,6 @@
 # L'exécutable à générer :
 
-EXEC=parsing
+EXEC=bristool
 
 
 # Les fichiers .o a générer si nécessaire
