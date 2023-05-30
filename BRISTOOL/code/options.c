@@ -13,9 +13,10 @@ void help(char **argv)
         INFO("Usage:");
         INFO("\r -h \t Show this screen.");
         INFO("\r -m \t Choose mode [bronze, silver or gold].");
+        INFO("\r Arguments for silver mode : \n\t -l : Lineage\n\t -i : Identity\n\t -a : Align-Length\n\t -g : Gaps\n\t -q : Query-from\n\t -h : Hit-from\n\t -p : Positive\n\t -e : Evalue\n\t -s : Score\n\t -b : Bit-score\n\t -c : Query-cover\n\t -n : Hsp-num");
         INFO("\r -o \t Put an output file");
-        INFO("Example of execution:");
-        INFO("./parsing -m bronze -o output.json stdin.xml");
+        INFO("\rExample of execution:");
+        INFO("\r./parsing -m bronze -o output.json stdin.xml\n");
         exit(1);
     }
 }
