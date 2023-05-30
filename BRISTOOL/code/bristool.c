@@ -51,32 +51,17 @@ int main(int argc, char **argv){
         return 1;
     }
 
-    char *buffer = makebuffer(FICHIER);
+    char *fichiertaxo = getenv("TAXOFILE"); 
+    if(fichiertaxo!=NULL){
+        INFO("Taxonomy file found");
+    }
+    else{
+        ERROR("Taxonomy file not found");
+        return 1;
+    }
+    char *buffer = makebuffer(fichiertaxo);
 
     INFO("Writing in progress...");
     blastOutPut_iteration(f, mode, buffer, tabInfo); 
     INFO("Writing done");
 }
-
-   
-    // if(strcmp(mode, "silver")==0){
-    //     for(int i=0; i<13; i++){
-    //         char answer[2];
-    //         if(strcmp(answer, "y")==0 || strcmp(answer, "Y")==0){
-    //             strcpy(tabInfo[i][1],"1");
-    //         }
-    //         else{
-    //             strcpy(tabInfo[i][1],"0");
-    //         }
-    //     }
-    //     INFO("The following elements will be displayed:");
-    //     for(int i=0; i<13; i++){
-    //         if(strcmp(tabInfo[i][1],"1")==0){
-    //             INFO("%s", tabInfo[i][0]);
-    //         }
-    //     }
-    // }else{
-    //     for(int i=0; i<13; i++){
-    //         strcpy(tabInfo[i][1],"1");  
-    //     }
-    // }

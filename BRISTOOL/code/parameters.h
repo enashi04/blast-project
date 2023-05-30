@@ -7,8 +7,6 @@
 #define EXTRA_SIZE 16777216 //nombre maximal de caractère dans le fichier de sortie 2^24
 #define SIZE_PLUS 16384
 
-
-#define FICHIER "taxonomy.dat" //fichier taxonomy
 #define BLAST_FILE "outblast"
 #define BALLAST_ACCESS "../../BAL-LAST/code/./ballast"
 #include "log.h"

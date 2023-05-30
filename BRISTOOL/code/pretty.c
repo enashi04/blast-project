@@ -1,5 +1,6 @@
 #include "pretty.h"
 
+//ajout d'un argument ici (le i à incrémenter)
 void prettier(char *json) {
     int i, level = 0;
     int len = strlen(json);

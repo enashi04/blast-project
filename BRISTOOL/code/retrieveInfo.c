@@ -51,7 +51,7 @@ void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer, char tabIn
         free(blastInfo);
     }
   
-   strcat(json_content,"\"blast-output\":[");
+    strcat(json_content,"\"blast-output\":[");
 
     const char *BLASTOUTPUT_NODE_NAME = "BlastOutput_iterations";
     // PATH OF SUBNODES
