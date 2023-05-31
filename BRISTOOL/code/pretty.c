@@ -7,9 +7,12 @@ void prettier(char *json, int iteration) {
 
     for (int i = 0; i < len; i++) {
         char c = json[i];
-
         switch (c) {
-            case '{':
+            case '{': 
+               if((isalpha(json[i-1]) || isdigit(json[i-1])) && (isalpha(json[i+1]) || isdigit(json[i+1]))){
+                    fprintf(output, "%c", c);
+                    break;
+               }
             case '[':
                 level++;
                 fprintf(output,"%c\n", c);
@@ -19,6 +22,15 @@ void prettier(char *json, int iteration) {
                 break;
 
             case '}':
+                if(json[i+1]=='\"'){
+                    fprintf(output, "%c",c);
+                    break;
+                }
+                else if((isalpha(json[i-1]) || isdigit(json[i-1])) && (isalpha(json[i+1]) || isdigit(json[i+1])) ){
+                    fprintf(output, "%c", c);
+                    break;
+            }
+               
             case ']':
                 level--;
                 fprintf(output,"\n");
@@ -41,3 +53,4 @@ void prettier(char *json, int iteration) {
         }
     }
 }
+
