@@ -38,11 +38,10 @@ Motif *extractmotifs(double *profil, int length, char *conserved)
     firstmotif = NULL;
     motif = NULL;
 
-// #ifndef WWW
-//     printf("\nSuggested Words : \n\n");
-// #endif
-    printf("\nSuggested Words : \n\n");
+    //printf("\nSuggested Words : \n\n");
     i = 0;
+    //créer une chaine de caractère pour stocker les motifs
+    char *stock_motifs = (char *)malloc(length * sizeof(char));
 
     while (i < length)
     {
@@ -58,13 +57,11 @@ Motif *extractmotifs(double *profil, int length, char *conserved)
         while ((i < length) && (*(profil + i) != 0))
         {
             score += *(profil + i) * ID;
-           // printf("le score est de %f\n", score);
             if (*(profil + i) > maxprofvalue)
             {
                 maxpos = i + 1;
                 maxprofvalue = *(profil + i);
             }
-           // printf(" %d %8.2f (%8.2f)\n", i, *(profil + i), score);
 #ifdef DEBUG
             printf(" %d %8.2f (%8.2f)\n", i, *(profil + i), score);
 #endif
@@ -97,16 +94,38 @@ Motif *extractmotifs(double *profil, int length, char *conserved)
             motif->peak = maxpos;
 
 #ifndef WWW
-            printf("\t%4d - %4d\t: ", begin + 1, end);
+            char s_begin[5], s_end[5];
+            sprintf(s_begin,"%4d",begin + 1);
+            sprintf(s_end,"%4d",end);
+            strcat(stock_motifs,s_begin);
+            strcat(stock_motifs,"-");
+            strcat(stock_motifs,s_end);
+            strcat(stock_motifs,": ");
+            //printf("\t%4d - %4d\t: ", begin + 1, end);
+            char *conserved_motifs = (char *)malloc((end - begin) * sizeof(char)+1);
+            int k=0;
             for (j = begin; j < end; j++)
             {
-                printf("%c", *(conserved + j));
+                conserved_motifs[k] = *(conserved + j);
+                k++;
+                //printf("%c", *(conserved + j));
             }
-            printf("  \t:%8.2f\n", score);
-            printf("\n");
+            conserved_motifs[k] = '\0';
+            strcat(stock_motifs,conserved_motifs);
+            char *s_score[10];
+            sprintf(s_score," %8.2f",score);
+            strcat(stock_motifs,":");
+            strcat(stock_motifs,s_score);
+            strcat(stock_motifs,"\n\n");
+            // printf("  \t:%8.2f\n", score);
+            // printf("\n");
+
+            free(conserved_motifs);
+
 #endif
         }
     }
+    free(stock_motifs);
     return firstmotif;
 }
 /*****************************************************************/
