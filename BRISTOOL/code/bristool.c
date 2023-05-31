@@ -1,6 +1,5 @@
 #include "options.h"
 #include "retrieveInfo.h"
-// #include "lineage.h"
 #include "XMLtoBLASTP.h"
 #include "parameters.h"
 #include "extractMotifs.h"
