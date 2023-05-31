@@ -13,9 +13,7 @@
 int main(int argc, char *argv[])
 {
 
-	/******************************************************************************/
-	/***************************Déclaration des variables**************************/
-	/******************************************************************************/
+	/*Déclaration des variables*/
   	SeqHSP *seqres, *first;
 	Motif *motif, *motifptr;
 	Sbjmot *motifdb, *firstmotdb, *firstalnmotdb;
@@ -72,9 +70,7 @@ int main(int argc, char *argv[])
 
 #define NUMARGS 20
 
-	/******************************************************************************/
-	/***************************Définitions des arguments**************************/
-	/******************************************************************************/
+	/*Définitions des arguments*/
     ARGDEF arg_def[NUMARGS] = {
         {"-anchors", 'b', 0, '\0'},
         {"-both", 'b', 0, '\0'},
@@ -95,8 +91,8 @@ int main(int argc, char *argv[])
         {"-sens", 'f', 1, '\0'},
         {"-smooth", 'd', 1, '\0'},
         {"-t", 'f', 1, '\0'},
-        {"-table", 'b', 0, '\0'}};
-
+        {"-table", 'b', 0, '\0'}
+	};
 
     if (initargs(argv, argc, arg_def, NUMARGS) == -1)
     {
@@ -107,7 +103,7 @@ int main(int argc, char *argv[])
     tablefile = NULL;
     anchorfile = NULL;
 
-    getargchar("-o", &outfilename);
+   // getargchar("-o", &outfilename);
 
     if (getargfloat("-maxp", &msfseuil) == NULL)
     {
