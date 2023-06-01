@@ -13,7 +13,7 @@ void help(char **argv)
         INFO("Usage:");
         INFO("\r -h \t Show this screen.");
         INFO("\r -m \t Choose mode [bronze, silver or gold].");
-        INFO("\r Arguments for silver mode : \n\t -l : Lineage\n\t -i : Identity\n\t -a : Align-Length\n\t -g : Gaps\n\t -q : Query-from\n\t -h : Hit-from\n\t -p : Positive\n\t -e : Evalue\n\t -s : Score\n\t -b : Bit-score\n\t -c : Query-cover\n\t -n : Hsp-num");
+        INFO("\r Arguments for silver mode with -f: \n\t l : Lineage\n\t i : Identity\n\t a : Align-Length\n\t g : Gaps\n\t q : Query-from-to\n\t h : Hit-from-to\n\t p : Positive\n\t e : Evalue\n\t s : Score\n\t b : Bit-score\n\t c : Query-cover\n\t n : Hsp-num");
         INFO("\r -o \t Put an output file");
         INFO("\rExample of execution:");
         INFO("\r./bristool -m bronze -o output.json stdin.xml\n");
