@@ -94,33 +94,33 @@ Motif *extractmotifs(double *profil, int length, char *conserved)
             motif->peak = maxpos;
 
 #ifndef WWW
-            char s_begin[5], s_end[5];
-            sprintf(s_begin,"%4d",begin + 1);
-            sprintf(s_end,"%4d",end);
-            strcat(stock_motifs,s_begin);
-            strcat(stock_motifs,"-");
-            strcat(stock_motifs,s_end);
-            strcat(stock_motifs,": ");
-            //printf("\t%4d - %4d\t: ", begin + 1, end);
-            char *conserved_motifs = (char *)malloc((end - begin) * sizeof(char)+1);
-            int k=0;
+            // char s_begin[5], s_end[5];
+            // sprintf(s_begin,"%4d",begin + 1);
+            // sprintf(s_end,"%4d",end);
+            // strcat(stock_motifs,s_begin);
+            // strcat(stock_motifs,"-");
+            // strcat(stock_motifs,s_end);
+            // strcat(stock_motifs,": ");
+            printf("\t%4d - %4d\t: ", begin + 1, end);
+           //char *conserved_motifs = (char *)malloc((end - begin) * sizeof(char)+1);
+            // int k=0;
             for (j = begin; j < end; j++)
             {
-                conserved_motifs[k] = *(conserved + j);
-                k++;
-                //printf("%c", *(conserved + j));
+                // conserved_motifs[k] = *(conserved + j);
+                // k++;
+                printf("%c", *(conserved + j));
             }
-            conserved_motifs[k] = '\0';
-            strcat(stock_motifs,conserved_motifs);
-            char *s_score[10];
-            sprintf(s_score," %8.2f",score);
-            strcat(stock_motifs,":");
-            strcat(stock_motifs,s_score);
-            strcat(stock_motifs,"\n\n");
-            // printf("  \t:%8.2f\n", score);
-            // printf("\n");
+            // conserved_motifs[k] = '\0';
+            // strcat(stock_motifs,conserved_motifs);
+            // char *s_score[10];
+            // sprintf(s_score," %8.2f",score);
+            // strcat(stock_motifs,":");
+            // strcat(stock_motifs,s_score);
+            // strcat(stock_motifs,"\n\n");
+            printf("  \t:%8.2f\n", score);
+            printf("\n");
 
-            free(conserved_motifs);
+            // free(conserved_motifs);
 
 #endif
         }

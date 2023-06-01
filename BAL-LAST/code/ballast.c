@@ -12,7 +12,6 @@
 
 int main(int argc, char *argv[])
 {
-
 	/*Déclaration des variables*/
   	SeqHSP *seqres, *first;
 	Motif *motif, *motifptr;
@@ -216,7 +215,7 @@ int main(int argc, char *argv[])
     else
     {
         smoothed = smoothprofil(profiltotal, length, conserved);
-        if (getargbool("-noext") == 0)
+        if (getargbool("-noext") == 0) //pas de -noext
         {
             trimmed = trimprofilext(profiltotal, smoothed, length, conserved);
         }
@@ -274,20 +273,14 @@ int main(int argc, char *argv[])
     fprintf(motifsfile, "\nSuggested Words : \n\n");
 
     motifptr = motif;
-    // printf("mots conservés %s\n", *conserved);
-    // ici a lieu l'écriture dans le fichier .motif
     while (motifptr != NULL)
     {
-        // ici on écrit direct dans le motifsfile fichier .motif (j'ai ajouté le +1 de end parce que pas trop cohérent)
         fprintf(motifsfile, "\t%4d - %4d\t: ", motifptr->begin + 1, motifptr->end + 1);
         for (i = motifptr->begin; i < motifptr->end + 1; i++)
         {
             fprintf(motifsfile, "%c", *(conserved + i));
-            // on va afficher ici ce qu'il y'a dans conserved
-            //  et d'ici on peut avoir les positions de chaque acide aminé conservé
         }
         fprintf(motifsfile, "  \t:%8.2f\n\n", motifptr->maxscore);
-        // fprintf(stdout,"Le max score est : %lf\n", motifptr->maxscore);
         motifptr = motifptr->next;
     }
 
