@@ -13,9 +13,10 @@ void help(char **argv)
         INFO("Usage:");
         INFO("\r -h \t Show this screen.");
         INFO("\r -m \t Choose mode [bronze, silver or gold].");
+        INFO("\r Arguments for silver mode with -f: \n\t l : Lineage\n\t i : Identity\n\t a : Align-Length\n\t g : Gaps\n\t q : Query-from-to\n\t h : Hit-from-to\n\t p : Positive\n\t e : Evalue\n\t s : Score\n\t b : Bit-score\n\t c : Query-cover\n\t n : Hsp-num");
         INFO("\r -o \t Put an output file");
-        INFO("Example of execution:");
-        INFO("./parsing -m bronze -o output.json stdin.xml");
+        INFO("\rExample of execution:");
+        INFO("\r./bristool -m bronze -o output.json stdin.xml\n");
         exit(1);
     }
 }
@@ -198,7 +199,7 @@ void invalidOptions(int argc, char **argv)
             if (strncmp(argv[i], "-a", 2) != 0 && strncmp(argv[i], "-m", 2) != 0 && strncmp(argv[i], "-h", 2) != 0 && strncmp(argv[i], "-o", 2) != 0 && strncmp(argv[i], "-f", 2) != 0)
             {
                 ERROR("The option %s is invalid.\n", argv[i]);
-                ERROR("See ./parsing -h for more help.\n");
+                ERROR("See ./bristool -h for more help.\n");
                 exit(1);
             }
         }
@@ -302,7 +303,7 @@ void noArgument(int argc){
     if (argc == 1)
     {
         FATAL("You need to put an argument.\n");
-        FATAL("See ./parsing -h for more help.\n");
+        FATAL("See ./bristool -h for more help.\n");
         exit(1);
     }
 

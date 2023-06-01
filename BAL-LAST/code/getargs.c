@@ -13,6 +13,7 @@ int initargs(char *argv[], int argc, ARGDEF *arg_def, int numargs)
     if (args != NULL)
         free(args);
     args = NULL;
+   
 
     for (i = 0; i < numargs; i++)
     {
@@ -22,6 +23,7 @@ int initargs(char *argv[], int argc, ARGDEF *arg_def, int numargs)
             if (strcmp(argv[j], arg_def[i].flag) == 0)
             {
                 found = 1;
+
                 if (args == NULL)
                 {
                     args = (Argument *)malloc(sizeof(Argument));
@@ -49,9 +51,11 @@ int initargs(char *argv[], int argc, ARGDEF *arg_def, int numargs)
                 }
             }
         }
-        if ((arg_def[i].compulsory != 0) && (found == 0))
+        if ((arg_def[i].compulsory != 0) && (found == 0)){
             return (-1);
+        }
     }   
+
     return (1);
 }
 

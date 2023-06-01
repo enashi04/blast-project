@@ -9,19 +9,17 @@
  *
  */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 #include "global.h"
 #include "macros.h"
 #include "readargs.h"
-#include "types.h"
 #include <ctype.h>
 #include "prototypes.h"
 #define NETRA 0
 
 double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char *conserved, double *maxprofile, char type)
 {
+    /*Déclaration des variables*/
     /*Déclaration des variables*/
     double maxp = 0, p=0, facteur, fctr;
     double *profil, *ptr, *simptr;
@@ -30,9 +28,9 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
     int endofdbseq = 0, ok = 0, okhsp = 0, gapped, taux, naas, begin, end, debut, dline, n;
     int debdb, enddb, begdb, dline2, dline1;
     int identique=1;
-
-    /*Initialisation de maxp***/
+    /*Initialisation de maxp*/
     maxp = getMaxP(maxp, type);
+    /*Initialisation du profil*/
         /*Initialisation du profil*/
     profil = (double *)malloc(sizeof(double) * length);
 
@@ -41,6 +39,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
         ptr = (double *)(profil + i); // typecasting double adresse de profil+i
         *ptr = 0;                     // valeur de p de base mais changer en 0
     }
+    /*Initialisation de seqres et simprf*/
 
     /*Initialisation de seqres et simprf**/
     seqres->sc = 0;
@@ -57,14 +56,20 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
     seqres->prob = maxp;
 
     /*Récupération de la ligne où on se trouve (1rst line)****/
+    /*Récupération de la ligne où on se trouve (1rst line)*/
     outtext = getOuttext(line, outtext);
 
     /**Condition vérifiant la line****/
+    /*Condition vérifiant la line*/
     verifLine(line);
     /*Récupération de desc****/
     seqres->desc = getDesc(line, seqres);
     /*Récupération de name*/
+    /*Récupération de desc*/
+    seqres->desc = getDesc(line, seqres);
+    /*Récupération de name*/
     seqres->name = getName(line, ptrstr, seqres);
+    /*Récupération de access*/
     /*Récupération de access*/
     seqres->access = getAccess(line, ptrstr, seqres);
 
@@ -76,7 +81,9 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
         begline++;
     }
     /*Mise à jour de l'outtext (de > jusqu'à la longueur)*/
+    /*Mise à jour de l'outtext (de > jusqu'à la longueur)*/
     seqres->outtext = firstScoreRecovery(line, outtext, begline, file);
+    /*On est positionné à la ligne commençant par score et on cherche la e-value*/
     /*On est positionné à la ligne commençant par score et on cherche la e-value*/
     p = eValueRecovery(line, ptrstr, p);
     seqres->prob = p;
@@ -87,7 +94,9 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
     facteur = (1.0) * p;
     fctr = 1;
     /*Récupération de la ligne de score*/
+    /*Récupération de la ligne de score*/
     simprf->text = getText(line, simprf);
+    /*On parcourt le résultat de l'analyse*/
     /*On parcourt le résultat de l'analyse*/
     while (endofdbseq == 0)
     {
@@ -117,6 +126,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
                 gapped = 0;
             }
             /*MAJ simprf->text ajout d'identities*/
+            /*MAJ simprf->text ajout d'identities*/
             simprf->text = (char *)realloc(simprf->text, strlen(simprf->text) + strlen(line) + 1); // 14 
             // strcat(simprf->text, "             "); //il vient d'ici le 14 mmh
             strcat(simprf->text, line);
@@ -125,9 +135,11 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
             sscanf((char *)(strchr(line, '(') + 1), "%d", &taux);
             sscanf((char *)(strchr(line, '=') + 1), "%d", &naas);
             /*Initialisation de pcid et nid*/
+            /*Initialisation de pcid et nid*/
             simprf->pcid = taux;
             simprf->nid = naas;
         }
+        /*Query*/
         /*Query*/
         if (strncmp(line, "Query", 5) == 0)
         {
@@ -147,6 +159,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
             *ptrstr = '\0';
             memmove(line, (char *)(line + dline), strlen(line));
             /*Condition permettant de vérifier si nous sommes à la première partie de la séquence de la query ou non*/
+            /*Condition permettant de vérifier si nous sommes à la première partie de la séquence de la query ou non*/
             if (ok == 0)
             {
                 queryseq = (char *)malloc(strlen(line) + 1);
@@ -158,6 +171,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
             }
             strcat(queryseq, strtok(line, " "));
 
+            /*MidLine*/
             /*MidLine*/
             fgets(line, 256, file);
             line[strlen(line) - 1] = '\0';
@@ -176,12 +190,10 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
                 begin = debut;
                 seq = (char *)malloc(strlen(line) + 1);
                 *seq = '\0';
-                // strcpy(seq, line);
             }
             else
             {
                 seq = (char *)realloc(seq, strlen(line) + strlen(seq) + 1); // pb ici
-                // strcat(seq, line);
             }
             strcat(seq, (char *)(line + dline));
 
@@ -189,8 +201,10 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
             fgets(line, 256, file);
         }
         /*Sbjct*/
+        /*Sbjct*/
         if (strncmp(line, "Sbjct", 5) == 0)
         {
+            /*Recherche du numéro du début et fin de la subject*/
             /*Recherche du numéro du début et fin de la subject*/
             sscanf((char *)(strpbrk(line, "0123456789")), "%d", &debdb);
             sscanf((char *)(strrchr(line, ' ')), "%d", &enddb);
@@ -217,6 +231,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
                     *ptrstr = '\0';
                 }
                 /*Condition permettant de vérifier si nous sommes à la première partie de la séquence de la subject ou non*/
+                /*Condition permettant de vérifier si nous sommes à la première partie de la séquence de la subject ou non*/
                 if (okhsp == 0)
                 {
                     begdb = debdb;
@@ -237,8 +252,6 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
                 okhsp = 1;
             }
         }
-        // go à la partie qui ne marchait pas de base !
-
         if (*line=='>' || (strncmp(line, "WARNING:", 8) == 0) || (strncmp(line, "  Database:", 11) == 0) || (strncmp(line, "Score", 5) == 0) || (strncmp(line, " Score", 6) == 0) || (strncmp(line, "Parameters:", 11) == 0))
         {
             //
@@ -333,8 +346,6 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
 
         }
     }
-
-// printf("desc is : %s\n", seqres->desc);
 
     for (simprf = seqres->sim; simprf != NULL; simprf = simprf->next)
     {
@@ -435,7 +446,6 @@ void verifLine(char *line)
     {
         memmove(line, &line[1], strlen(line));
     }
-    // taille de la target (non de la séquence mais de l'identification)
     if (strlen(line) <= 90)
     {
         for (int i = strlen(line) - 1; i < 90; i++)
@@ -517,7 +527,7 @@ char *getAccess(char *line, char *ptrstr, SeqHSP *seqres)
 }
 
 
-/** @brief retrieve the first score
+/** @brief get the first score
  *  @param line 
  *  @param outtext 
  *  @param begline 
@@ -544,7 +554,7 @@ char *firstScoreRecovery(char *line, char *outtext, char *begline, FILE *file)
 }
 
 /**
- *  @brief retrieve the e value
+ *  @brief get the e value
  *  @param line 
  *  @param ptrstr 
  *  @param p 
@@ -576,10 +586,13 @@ void fixeValue(double p, double maxp)
     }
 }
 
+/// @brief get the line
+/// @param line 
+/// @param simprf 
+/// @return simprf->text
 char *getText(char *line, SimPrf *simprf)
 {
     simprf->text = (char *)malloc(strlen(line) + 1);
     strcpy(simprf->text, line);
-   // printf("simprf->text = %s\n", simprf->text);
     return simprf->text;
 }

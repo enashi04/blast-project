@@ -12,10 +12,7 @@
 
 int main(int argc, char *argv[])
 {
-
-	/******************************************************************************/
-	/***************************Déclaration des variables**************************/
-	/******************************************************************************/
+	/*Déclaration des variables*/
   	SeqHSP *seqres, *first;
 	Motif *motif, *motifptr;
 	Sbjmot *motifdb, *firstmotdb, *firstalnmotdb;
@@ -72,9 +69,7 @@ int main(int argc, char *argv[])
 
 #define NUMARGS 20
 
-	/******************************************************************************/
-	/***************************Définitions des arguments**************************/
-	/******************************************************************************/
+	/*Définitions des arguments*/
     ARGDEF arg_def[NUMARGS] = {
         {"-anchors", 'b', 0, '\0'},
         {"-both", 'b', 0, '\0'},
@@ -95,8 +90,8 @@ int main(int argc, char *argv[])
         {"-sens", 'f', 1, '\0'},
         {"-smooth", 'd', 1, '\0'},
         {"-t", 'f', 1, '\0'},
-        {"-table", 'b', 0, '\0'}};
-
+        {"-table", 'b', 0, '\0'}
+	};
 
     if (initargs(argv, argc, arg_def, NUMARGS) == -1)
     {
@@ -107,7 +102,7 @@ int main(int argc, char *argv[])
     tablefile = NULL;
     anchorfile = NULL;
 
-    getargchar("-o", &outfilename);
+   // getargchar("-o", &outfilename);
 
     if (getargfloat("-maxp", &msfseuil) == NULL)
     {
@@ -220,7 +215,7 @@ int main(int argc, char *argv[])
     else
     {
         smoothed = smoothprofil(profiltotal, length, conserved);
-        if (getargbool("-noext") == 0)
+        if (getargbool("-noext") == 0) //pas de -noext
         {
             trimmed = trimprofilext(profiltotal, smoothed, length, conserved);
         }
@@ -278,20 +273,14 @@ int main(int argc, char *argv[])
     fprintf(motifsfile, "\nSuggested Words : \n\n");
 
     motifptr = motif;
-    // printf("mots conservés %s\n", *conserved);
-    // ici a lieu l'écriture dans le fichier .motif
     while (motifptr != NULL)
     {
-        // ici on écrit direct dans le motifsfile fichier .motif (j'ai ajouté le +1 de end parce que pas trop cohérent)
         fprintf(motifsfile, "\t%4d - %4d\t: ", motifptr->begin + 1, motifptr->end + 1);
         for (i = motifptr->begin; i < motifptr->end + 1; i++)
         {
             fprintf(motifsfile, "%c", *(conserved + i));
-            // on va afficher ici ce qu'il y'a dans conserved
-            //  et d'ici on peut avoir les positions de chaque acide aminé conservé
         }
         fprintf(motifsfile, "  \t:%8.2f\n\n", motifptr->maxscore);
-        // fprintf(stdout,"Le max score est : %lf\n", motifptr->maxscore);
         motifptr = motifptr->next;
     }
 

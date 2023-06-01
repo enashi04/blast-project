@@ -3,8 +3,6 @@
 #include <string.h>
 #include "log.h"
 #include "parameters.h"
-
-// int SPECIES_SIZE; //taille du tableau d'espèce
 char *makebuffer(char *filename){
     
     char *buffer=NULL;
@@ -29,6 +27,7 @@ char *makebuffer(char *filename){
     // don't forget to put the '\0' at the end of the buffer
     buffer[fileSize-1] = '\0';   
     //find the last occurence of \n
+    
     char *last_line =strrchr(buffer, '\n');
 
     if(last_line != NULL){
