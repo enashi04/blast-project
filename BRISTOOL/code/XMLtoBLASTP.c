@@ -64,6 +64,7 @@ void convertToBlastP(xmlDoc *xmlfile, xmlNode *child, char *blastInfo, char *dat
         }
     }
 }
+
 /*****************************************Replace words in a string*****************************************/
 char *replaceWord(const char *s, const char *oldW, const char *newW)
 {

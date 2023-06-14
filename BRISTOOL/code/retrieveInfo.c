@@ -52,13 +52,12 @@ void blastOutPut_iteration(xmlDoc *fichier, char *mode, char *buffer, char tabIn
     }
     strcat(json_content,"\"blast-output\":[");
     prettier(json_content,0);
-
     //on alloue de la mémoire 
     json_content = (char *)malloc(sizeof(char) * MAXI_SIZE+1);
 
     const char *BLASTOUTPUT_NODE_NAME = "BlastOutput_iterations";
     // PATH OF SUBNODES
-    int comma =0;
+    int comma =0; 
     for (node = child; node; node = node->next)
     {
         // CHECK IF WE'RE IN BLASTOUTPUT-ITERATIONS
@@ -140,7 +139,6 @@ char *node_Iteration(xmlNode *node, char *mode, SpeciesInfo *speciesInfo, int qu
     char *json_content = (char *)malloc(sizeof(char) * MAXI_SIZE+1);
     strcat(json_content,"\"hits \":[ ");
 
-
     // CHILD = SOUS-NOEUD DU NODE
     xmlNode *child = node->children;
     const char *iteration = "Iteration_hits", *hit = "Hit";
@@ -175,8 +173,8 @@ char *node_Iteration(xmlNode *node, char *mode, SpeciesInfo *speciesInfo, int qu
     int len_content = strlen(json_content);
     json_content[len_content - 1] = '\0';
     strcat(json_content,"],");
+
     //fseek(output, -2, SEEK_END);    
-    //add motifs if the mode is gold
     if(strcmp(mode, "gold")==0){
         char blastp[MIN_SIZE] = BLAST_FILE;
         strcat(blastp,iteration_num);
