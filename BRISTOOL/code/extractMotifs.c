@@ -10,21 +10,23 @@ char *getMotifs(char *file) {
     while (line != NULL) {
         char pdebut[MIN_SIZE], pfin[MIN_SIZE], motifs[MIN_SIZE], score[MIN_SIZE];
         sscanf(line, " %[^ -] - %[^:]:%[^:]:%s", pdebut, pfin, motifs, score);
-        int entrySize = snprintf(NULL, 0, "\t\t {\n\t\t\t\"position\":\"%s-%s\",\n\t\t\t\"motif\":\"%s\",\n\t\t\t\"score\":\"%s\"\n\t\t},\n", pdebut, pfin, motifs, score) + 1;
+        motifs[strlen(motifs)-3]='\0';
+        pfin[strlen(pfin)-1]='\0';
+        int entrySize = snprintf(NULL, 0, "{\"position\":\"%s-%s\",\"motif\":\"%s\",\"score\":%s},", pdebut, pfin, motifs, score) + 1;
         createJSONSize += entrySize;
         createJSON = realloc(createJSON, createJSONSize * sizeof(char));
-        strcat(createJSON, "\t\t {\n\t\t\t\"position\":\"");
+        strcat(createJSON, "{\"position\":\"");
         strcat(createJSON, pdebut);
         strcat(createJSON, "-");
         strcat(createJSON, pfin);
-        strcat(createJSON, "\",\n\t\t\t\"motif\":\"");
+        strcat(createJSON, "\",\"motif\":\"");
         strcat(createJSON, motifs);
-        strcat(createJSON, "\",\n\t\t\t\"score\":\"");
+        strcat(createJSON, "\",\"score\":");
         strcat(createJSON, score);
-        strcat(createJSON, "\"\n\t\t},\n");
+        strcat(createJSON, "},");
         line = strtok(NULL, "\n");
     }
     createJSON[createJSONSize - 3] = '\n';
-    strcat(createJSON, "\t\t]\n");
+    strcat(createJSON, "]");
     return createJSON;
 }
