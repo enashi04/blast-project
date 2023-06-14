@@ -102,7 +102,7 @@ int main(int argc, char *argv[])
     tablefile = NULL;
     anchorfile = NULL;
 
-   // getargchar("-o", &outfilename);
+   getargchar("-o", &outfilename);
 
     if (getargfloat("-maxp", &msfseuil) == NULL)
     {
