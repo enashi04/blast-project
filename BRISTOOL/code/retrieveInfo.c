@@ -195,9 +195,12 @@ char *node_Iteration(xmlNode *node, char *mode, SpeciesInfo *speciesInfo, int qu
         strcat(command, result_file);
         system(command);
         strcat(result_file,".motifs");
+        printf("result file is %s\n",result_file);
         char *blastBuffer = makebuffer(result_file);
         char *extractmotif=getMotifs(blastBuffer);
-        fprintf(output,"%s\n\t\t}\n\t],\n",extractmotif);
+        json_content= realloc(json_content, sizeof(char) * (strlen(json_content) +strlen(extractmotif) + 1));
+        strcat(json_content,extractmotif);
+        //fprintf(output,"%s\n\t\t}\n\t],\n",extractmotif);
     }
     else{
         //end of the iteration)

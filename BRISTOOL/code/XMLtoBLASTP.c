@@ -27,6 +27,7 @@ char *getInfoBlast(xmlNode *node, char *database)
     }
     return content;
 }
+
 /**************************************************************************************************************/
 /*                           convertToBlastP: convert the file to BlastP for ballast                          */
 /** Parametre : xmlfile : the blastp in xmlformat                                                             */
@@ -174,7 +175,6 @@ void query_Length(xmlNode *node, FILE *output)
         // ici on va mettre le sequences producting significant alignments parce que ballast doit le lire !
         fprintf(output, "                                                                 Score    E\n");
         fprintf(output, "Sequences producing significant alignments:                      (bits) Value\n\n");
-        // ici on met la query length pour le calcul de la query cover
     }
 }
 
