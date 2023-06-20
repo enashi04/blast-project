@@ -27,7 +27,7 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
     int endofdbseq = 0, ok = 0, okhsp = 0, gapped, taux, naas, begin, end, debut, dline, n;
     int debdb, enddb, begdb, dline2, dline1;
     int identique=1;
-
+    //printf("line is %s\n", line);
     /*Initialisation de maxp*/
     maxp = getMaxP(maxp, type);
     /*Initialisation du profil*/
@@ -59,9 +59,6 @@ double *profilBuilding(SeqHSP *seqres, FILE *file, char *line, int length, char 
     /*Condition vérifiant la line*/
     verifLine(line);
     /*Récupération de desc****/
-    seqres->desc = getDesc(line, seqres);
-    /*Récupération de name*/
-    /*Récupération de desc*/
     seqres->desc = getDesc(line, seqres);
     /*Récupération de name*/
     seqres->name = getName(line, ptrstr, seqres);
